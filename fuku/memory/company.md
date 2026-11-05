@@ -8,6 +8,7 @@
 
 ## Meta ad footprint (2026-11-05)
 - 36 ad accounts across businesses: Karnivall (Incess Ads, Kari Ads, Venue, Rental), Incess Dress, Travell Fi (TF, FeverAlert, Uniso, Roketso, Giantso, Bikeso, Kitchenso, Babyso), The North Case Indonesia (Warehouse Storage, Sumobaby, Sumo2), GudangHub (Ghub, OMO, OMOrental, OMO AlatBerat), Jinhe Korean BBQ (Jinhe, DapurHub accounts, Kemitraan), Alvian Lim's Business.
+- **"Fab ad account" = Meta "Warehouse Storage" `484578521394893`** (Alvian's name for it, 2026-11-05). This is what `fab_advertising/` is about.
 - Active spenders: Incess Ads `2017038114993984` (campaign "OMO ADVLeads", website leads) and Warehouse Storage `484578521394893` (lead-gen; ad names PEIKIRA/AKIRA/KENJI-FAB-…, likely the fab_advertising workflow).
 - Disabled by Meta: Alv Ads, WooCore Ads, For App in Audience Network Ads, Babyso Rp.
 - Unknown: which businesses are ours vs clients; what a lead is worth.
