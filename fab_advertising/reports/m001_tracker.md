@@ -16,5 +16,5 @@ Numbers come from Rudi MCP (read-only). *(calc)* = Fuku's arithmetic. Proposed c
 | Date | Change | By | Effect read on |
 |---|---|---|---|
 | 2026-10-26 | PEIKIRA campaign budget Rp 5,000,000 → Rp 300,000/day | Markus Reynaldo (from activity log) | n/a (before mission) |
-| 2026-11-05 14:40 WIB | New ad set **AKIRA-FAB-20261031-WAVE-PEIKIRA2** (`120254276298070572`) in PEIKIRA-BID-CAP-LEADS-CAMPAIGN; 23 image ads created (8 approved/active, 15 inactive after review). CBO budget unchanged at Rp 300k/day. | "Rudi MCP" app, actor id 61594758338050 (NOT Fuku; who? asked Alvian) | 2026-11-10 (5 days) |
+| 2026-11-05 14:40 WIB | New ad set **AKIRA-FAB-20261031-WAVE-PEIKIRA2** (`120254276298070572`) in PEIKIRA-BID-CAP-LEADS-CAMPAIGN; 23 image ads created (8 approved/active, 15 inactive after review). CBO budget unchanged at Rp 300k/day. | **Markus Reynaldo** via the "Rudi MCP" app (actor id 61594758338050; confirmed by Alvian) | 2026-11-10 (5 days) |
 | 2026-11-05 17:06 WIB | Meta set ad **ImageAd 201B** (in winner ad set BCbatch201 Manny5) to "Update Required" (issue 4469003) → it stopped delivering | Meta (system) | next heartbeat |

@@ -45,6 +45,13 @@ Your targeting = hard filter → RETRIEVAL (Andromeda) → RANKING (GEM / Lattic
 | R11 | **Advantage+ creative / GenAI: use the enhancements, not AI-made scenes.** Meta reports +11% CTR and +7.6% CVR averages, from sales/catalog contexts. | STATED (averages) | ⚠️ In Fab, polished AI-looking renders lose 3–10× to real phone photos. Test GenAI *enhancements* on real photos; never replace real photos. |
 | R12 | **Platform lift numbers are averages, not promises.** Examples: GEM +18.9% conversions, Lattice +6%, Andromeda +2.4% FB. Several are "selected segments" or cumulative. | STATED | Never quote them as an expected result for a client. |
 
+## 2b. Prospecting vs remarketing: what the docs say
+- **No doc discusses remarketing/retargeting, custom audiences or lookalikes as campaign types.** Not addressed.
+- **Remarketing is built into every ad set's ranking.** Every ranking decision uses each person's own history of ad views, clicks and **conversions** (plus organic activity), across surfaces, refreshed within hours. [STATED: Sequence learning, GEM, LLaTTE] So someone who already engaged with Fab is scored higher in *any* broad ad set, with no separate remarketing ad set needed for Meta to reach warm people. [INFERRED]
+- **The prospecting lever is creative.** Diverse creative "even finding new audiences they might not have realized would be interested in their product." [STATED: Creative Advantage]
+- **Last-click attribution isn't discussed.** The models train on several conversion windows and serve the longest one. [STATED: Lattice/LLaTTE] How Ads Manager credits a lead to one ad is not addressed.
+- → For Fab, a warm/cold split is still a valid **account test** (different message per stage, cleaner measurement), but not because the algorithm needs it. Judge by blended account CPL. (E5)
+
 ## 3. What the docs do *not* cover, so Fab data and tests decide
 Learning phase / the "50 conversions" rule · bid caps & cost caps · the auction formula · attribution *settings* · retargeting vs prospecting · CBO vs ABO · budget-change speed · creative fatigue · frequency caps · lead forms vs website · dayparting · CAPI by name.
 
@@ -65,3 +72,4 @@ For these, treat any rule as **[FOLKLORE]** until our own account proves it. Obs
 - E2 · One consolidated BC ad set, no bid cap, the winners only → R5
 - E3 · Send closed deals back to Meta as an offline/CRM conversion → R6
 - E4 · Landing page + WhatsApp flow audit → R7
+- E5 · Warm (site visitors/engagers, price creative) vs cold (broad excl. warm, pain/Reels creative), judged on blended CPL → §2b
