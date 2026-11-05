@@ -11,7 +11,7 @@
   3. **BC: keep 5 winner ad sets** (087 Copy 7, 201 Manny5, BC4-08 Usir, BC204 Manny6, batch101 Copy 21) **and pause the other ~44** (< Rp 30k each, 0 leads).
   4. **Raise the bid cap Rp 94,250 → Rp 105,000 on 087 Copy 7 and BC204 Manny6** (confirmed caps Rp 80k/94.25k choke delivery to ~1.4% of budget). Revert if 7d CPL > Rp 95k after 5 days.
   5. **Pause 5 dead PEIKIRA ads** (KENJI-019-001 v03, Ad003/004/005/008: Rp 237k, 0 leads).
-  → My recommendation: apply 1–5 today. Reply with the numbers you applied (e.g. "applied 1,2,3") and I'll measure on 11/10.
+  → My recommendation: apply 1–5 today. Reply with the numbers you applied (e.g. "applied 1,2,3") and I'll measure on Fri 13 Nov (7 full days).
 - **[DECISION] 2026-11-05 23:30 · Fab creatives: get real phone photos, then launch.** Visual review of 13 ads: **raw phone photos + IG-story stickers = Rp 18–68k CPL; polished/AI-look renders = Rp 200–372k.** Copy is ready (`fab_advertising/creatives/2026-11-05_creative_batch_01.md`) and concepts are briefed (`2026-11-05_creative_brief.md`). Both need **real unit photos**.
   → Ask: ~30 min of phone shooting at Kuningan/Sudirman this week + 3 facts: (a) price Rp750rb (FAB750) or Rp800rb? (b) minimum rental period? (c) close rate and average months stayed (lead value).
 - **[RISK] 2026-11-05 · 4 ad accounts disabled by Meta** ("unusual activity"): Alv Ads, WooCore Ads, For App in Audience Network Ads, Babyso Rp. If any still matter, they need an appeal from you. Also: Incess "OMO ADVLeads" has a Rp 5.95M/day budget but spends ~Rp 725k/day. Is that expected?

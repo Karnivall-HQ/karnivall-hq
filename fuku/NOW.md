@@ -2,13 +2,13 @@
 _Last updated: 2026-11-05 23:30 WIB (local session, merged with cloud heartbeats)_
 
 ## Current focus
-- **M-001 (P0):** one combined change list (5 items) in OUTBOX, waiting on Alvian. 7d CPL Rp 113k vs the 95k target. Creative batch 01 + brief need real phone photos. Markus launched ad set PEIKIRA2 (23 ads) at 14:40 WIB; read it 11/10. Batch 01 stays on hold until then so the two creative tests don't overlap.
+- **M-001 (P0):** one combined change list (5 items) in OUTBOX, waiting on Alvian. 7d CPL Rp 113k vs the 95k target. Creative batch 01 + brief need real phone photos. Markus launched ad set PEIKIRA2 (23 ads) at 14:40 WIB; early check Tue 10 Nov, decision Fri 13 Nov (7 full days). Batch 01 stays on hold until the decision so the two creative tests don't overlap.
 
 ## Next actions
 0. **Read `fuku/memory/playbooks/meta-ads-algorithm.md` before any ads work.** Open experiments E1–E4 are listed there.
 1. Each heartbeat: check OUTBOX/INBOX for "applied 1,2,…", the photo shoot and the 3 facts. Log applied changes in `fab_advertising/reports/m001_tracker.md`.
 2. Daily (first heartbeat after 07:00 WIB): tracker readout row + activity log (limit ≤ 40).
-3. 2026-11-10: read PEIKIRA2 vs the old PEIKIRA ad set, plus the effect of any applied changes.
+3. Tue 10 Nov: early check of PEIKIRA2 (only to flag clear losers: ≥ Rp 190k spent with 0 leads). **Fri 13 Nov: decision read** on 7 full days (6–12 Nov): PEIKIRA2 vs the old PEIKIRA ad set, plus the effect of any applied changes. Write dates as "10 Nov", never "11/10" (Alvian reads 11/10 as 11 Oct/Nov).
 4. Check that ImageAd 201B ("Update Required") is fixed.
 5. Landing page + WhatsApp flow audit (playbook E4). Network was set to Full on 2026-11-05, so `fabwarehouses.com` should now be reachable from the cloud. Try it.
 6. View BC Image087 (the #1 lead source) at full size via IG media.
