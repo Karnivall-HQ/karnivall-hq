@@ -5,6 +5,7 @@ _Last updated: 2026-11-05 18:51 WIB (local session)_
 - M-001 (P0): breakdown done → 3 fixes waiting on Alvian (OUTBOX [DECISION]). 7d CPL Rp 112.9k, ~Rp 355k/day.
 
 ## Next actions
+0. Meta algorithm playbook ready (`fuku/memory/playbooks/meta-ads-algorithm.md`). Apply its checklist to every ads proposal. Open experiments E1–E4 are listed there.
 1. ✅ Creative brief done (`fab_advertising/creatives/2026-11-05_creative_brief.md`). Waiting on Alvian for a phone shoot. Still to do: view BC Image087 at full size via IG media.
 2. Once Alvian confirms the fixes are applied: log them in `m001_tracker.md`, re-read the 7d CPL on 2026-11-09, and propose PEIKIRA budget +25% only if the 7d CPL ≤ Rp 95k.
 3. BC campaign: verify the bid-cap hypothesis (the "Bid80/Bid94" names; it spends ~1.4% of its Rp 5M budget). Read the ad set bid settings if a read tool exposes them.
