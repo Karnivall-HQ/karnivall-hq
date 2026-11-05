@@ -25,7 +25,7 @@
 - **Priority:** P0
 - **Deadline:** 2026-12-05 (30 days from 2026-11-05)
 - **Constraints:** **Propose-only.** Fuku never touches the ad account (no pauses, budget changes, or launches). Every change is proposed to Alvian as an apply-ready checklist, and **Alvian applies it himself**. The metric is the 7-day average CPL, never a single day.
-- **Status:** in progress
+- **Status:** in progress (diagnosis ✅, waiting on Alvian to apply proposals)
 - **Strategy (Fuku, 2026-11-05):**
   1. *Diagnose* (now): ad-set/ad/placement/audience breakdown; find which ads, audiences, and placements produce leads ≤ Rp 95k.
   2. *Cut waste*: propose to Alvian which CTR-collapsed FAB ads and losing ad sets to pause, so spend concentrates in the winners (BC CBObass005-type setups at ~Rp 83k).
@@ -33,6 +33,7 @@
   4. *Scale*: propose budget raises of ~20–30% every 3–4 days, only while the 7d CPL ≤ Rp 95k. Alvian applies them. Fuku verifies the effect in the next readouts. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
+  - 2026-11-05 19:09: Diagnosis done → `fab_advertising/reports/2026-11-05_m001_diagnosis.md`. 7d (10/29–11/04): Rp 355k/day, 22 leads, **CPL Rp 113k** (gate ≤95k closed). PEIKIRA (highest volume, Rp 300k/day) = volume @Rp 105k. BC CBO bid-cap = cheapest (Rp 60k CPL 10/19–28) but stalled to ~Rp 70k/day. 3 proposals sent to OUTBOX (consolidate BC ad sets, raise bid cap on 2 winners to Rp 105k, hold PEIKIRA). Tracker started: `m001_tracker.md`.
   - 2026-11-05: Rule: propose-only, Alvian executes all ad changes.
   - 2026-11-05: Mission set by Alvian. Baseline scan done (`fab_advertising/reports/2026-11-05_meta_account_scan.md`).
 

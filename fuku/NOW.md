@@ -1,24 +1,25 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-05 18:23 WIB (cloud heartbeat)_
+_Last updated: 2026-11-05 19:09 WIB (cloud heartbeat)_
 
 ## Current focus
-- No missions approved yet. Proposed M-001 (cut Warehouse Storage CPL) and M-002 (weekly ads health report) in OUTBOX.
+- **M-001 (P0):** diagnosis done. 3 apply-ready changes are waiting for Alvian in OUTBOX. 7d CPL Rp 113k vs. 95k target; Rp 355k/day vs. 1M.
 
 ## Next actions
-1. If M-001 is approved: ad-set and ad-level breakdown of Warehouse Storage (audience, placements, creatives) → prepare a "ready to fire" change list.
-2. Draft new creative angles for BC CBObass005 (it's fatigued at frequency 7.98). Allowed now as a draft, but first I need to know the product (warehouse storage? The North Case Indonesia).
-3. Find out why Incess "OMO ADVLeads" spends ~12% of its daily budget (ad-set delivery / learning stage).
-4. Fill `memory/company.md` as Alvian answers the business questions.
+1. Each heartbeat: check OUTBOX/INBOX for "applied 1,2,…". Once changes are applied, log them in `fab_advertising/reports/m001_tracker.md` and read the effect after 3–5 days.
+2. Daily (first heartbeat after 07:00 WIB): add a tracker readout row (7d spend, leads, CPL). Pull the activity log to catch edits by others (Markus Reynaldo).
+3. Draft a fresh creative angle batch for PEIKIRA (CTR declining) + BC winners. Needs the product/offer. Start from existing ad names/creatives via read-only creative pulls if Alvian doesn't answer.
+4. M-002: first weekly report Monday 2026-11-09 07:00 WIB.
+5. Check whether Incess "OMO ADVLeads" is bid-capped (same pattern as BC: big budget, low spend).
 
 ## Blockers / waiting on Alvian
-- Mission approval (OUTBOX [DECISION] ×2).
-- Lead value per business; which businesses are ours vs clients.
+- Apply M-001 proposals 1–3 (OUTBOX [DECISION]).
+- Who is Markus Reynaldo (OUTBOX [RISK])? Lead value per business; ours vs. clients (OUTBOX [FYI]).
 
 ## Needs a local session
-- (none) Checked 2026-11-05: `fab_advertising/` on the Mac has only empty folders, so there's nothing missing from the repo. The SOPs and context still have to come from Alvian.
+- (none)
 
 ## System
-- Cloud Fuku is LIVE (2026-11-05): routine trig_01NGMFnv9BpvRp1jQjkAwUVJ, hourly 07:00–22:00 WIB, Opus, repo alvianlim/karnivall-hq. The first test run pushed to main successfully (bd7ce6e).
+- Cloud Fuku is live: routine trig_01NGMFnv9BpvRp1jQjkAwUVJ, hourly 07–22 WIB.
 
 ## Open loops
 - 4 disabled ad accounts (OUTBOX [RISK]).
