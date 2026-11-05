@@ -5,6 +5,7 @@
 
 ## Open
 
+- **[DECISION] 2026-11-05 · Fab creatives: shoot a phone-photo batch at the warehouse?** I reviewed 13 ads visually. **Raw phone photos with IG-story stickers get Rp 18–68k CPL. Polished or AI-render designs get Rp 200–372k CPL.** Brief with 6 concepts + copy: `fab_advertising/creatives/2026-11-05_creative_brief.md`. Needed: ~30 min of phone shooting at Kuningan/Sudirman (real units, padlock, a unit with a fridge/sofa, a walk-through video). My recommendation: yes, this week. It's the main lever to replace the fading PEIKIRA creatives.
 - **[DECISION] 2026-11-05 · M-001: apply 3 placement/ad fixes in Warehouse Storage?** The breakdown shows that most of the waste is in placements, not audiences. Full list: `fab_advertising/reports/2026-11-05_m001_breakdown.md`.
   1. PEIKIRA ad set: **remove Instagram Stories**. Rp 997k got 3 leads (Rp 332k each) → campaign CPL ~Rp 105k → ~Rp 95k.
   2. BC CBObass005: **remove WhatsApp Status + Threads**. Rp 487k got 3 leads, and WA Status shows the same people ~789×.
