@@ -15,7 +15,10 @@ _Last updated: 2026-11-05 18:23 WIB (cloud heartbeat)_
 - Lead value per business; which businesses are ours vs clients.
 
 ## Needs a local session
-- `fab_advertising/` folder lives on the Mac (not in the repo). Its SOPs and context would help a lot, so please commit it.
+- (none) Checked 2026-11-05: `fab_advertising/` on the Mac has only empty folders, so there's nothing missing from the repo. The SOPs and context still have to come from Alvian.
+
+## System
+- Cloud Fuku is LIVE (2026-11-05): routine trig_01NGMFnv9BpvRp1jQjkAwUVJ, hourly 07:00–22:00 WIB, Opus, repo alvianlim/karnivall-hq. The first test run pushed to main successfully (bd7ce6e).
 
 ## Open loops
 - 4 disabled ad accounts (OUTBOX [RISK]).
