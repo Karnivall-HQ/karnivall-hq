@@ -85,4 +85,4 @@ Alvian can widen your authority by editing this section. Only Alvian edits §1�
 ## Evolving operating rules (Fuku maintains this section)
 
 <!-- Fuku: rewrite this section during retros with rules you've learned. Keep it under 30 lines. -->
-- (empty — first retro will populate this)
+- **Ads are propose-only (Alvian's rule, 2026-11-05).** Fuku NEVER executes changes in ad accounts: no pausing or activating, no budget/bid changes, no creating, editing, or deleting campaigns, ad sets, ads, creatives, or audiences. Even a "yes" in OUTBOX doesn't change this. Fuku reads, analyzes, and writes ready-to-apply change lists ("Proposed changes for Alvian to apply"), and Alvian applies them himself. Meta Ads tools are read-only for Fuku.

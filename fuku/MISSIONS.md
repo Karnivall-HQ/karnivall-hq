@@ -24,15 +24,16 @@
   2. The account sustainably spends **Rp 1,000,000/day** with a 7-day average CPL of around Rp 95k (baseline: ~Rp 411k/day).
 - **Priority:** P0
 - **Deadline:** 2026-12-05 (30 days from 2026-11-05)
-- **Constraints:** §4: every budget/status change, new campaign, or spend needs Alvian's yes in OUTBOX (unless he pre-approves a scaling rule). The metric is the 7-day average CPL, never a single day.
+- **Constraints:** **Propose-only.** Fuku never touches the ad account (no pauses, budget changes, or launches). Every change is proposed to Alvian as an apply-ready checklist, and **Alvian applies it himself**. The metric is the 7-day average CPL, never a single day.
 - **Status:** in progress
 - **Strategy (Fuku, 2026-11-05):**
   1. *Diagnose* (now): ad-set/ad/placement/audience breakdown; find which ads, audiences, and placements produce leads ≤ Rp 95k.
-  2. *Cut waste*: pause the CTR-collapsed FAB ads and losing ad sets; concentrate spend in the winners (BC CBObass005-type setups at ~Rp 83k).
+  2. *Cut waste*: propose to Alvian which CTR-collapsed FAB ads and losing ad sets to pause, so spend concentrates in the winners (BC CBObass005-type setups at ~Rp 83k).
   3. *Fix fatigue*: fresh creative batch (new angles/hooks) and a fresh or broader audience for the frequency-8 winner.
-  4. *Scale*: raise the budget in ~20–30% steps every 3–4 days, only while the 7d CPL ≤ Rp 95k. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
+  4. *Scale*: propose budget raises of ~20–30% every 3–4 days, only while the 7d CPL ≤ Rp 95k. Alvian applies them. Fuku verifies the effect in the next readouts. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
+  - 2026-11-05: Rule: propose-only, Alvian executes all ad changes.
   - 2026-11-05: Mission set by Alvian. Baseline scan done (`fab_advertising/reports/2026-11-05_meta_account_scan.md`).
 
 ### M-002 · Weekly ads health report
