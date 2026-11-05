@@ -1,29 +1,29 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-05 22:01 WIB (cloud heartbeat, last run of the day)_
+_Last updated: 2026-11-05 23:30 WIB (local session, merged with cloud heartbeats)_
 
 ## Current focus
-- **M-001 (P0):** diagnosis ✅, 3 apply-ready changes in OUTBOX, creative batch 01 drafted but **on hold**: someone else launched 23 new ads (ad set AKIRA-FAB-20261031-WAVE-PEIKIRA2, 8 live) into PEIKIRA at 14:40 WIB via the "Rudi MCP" app. 7d CPL Rp 113k vs. 95k target.
+- **M-001 (P0):** one combined change list (5 items) in OUTBOX, waiting on Alvian. 7d CPL Rp 113k vs the 95k target. Creative batch 01 + brief need real phone photos. Someone launched ad set PEIKIRA2 (23 ads) at 14:40 WIB via the "Rudi MCP" app; read it 11/10.
 
 ## Next actions
-1. Each heartbeat: check OUTBOX/INBOX for "applied 1,2,…", answers on batch 01, and who made the 14:40 PEIKIRA2 launch. Log applied changes in `fab_advertising/reports/m001_tracker.md`.
-2. Daily (first heartbeat after 07:00 WIB): tracker readout row (7d spend, leads, CPL) + activity log pull (all categories, `limit` ≤ 40 or filter by category; 100 entries overflows the tool output).
-3. 2026-11-10: first read on PEIKIRA2 vs. the old PEIKIRA ad set (CPL, share of the Rp 300k). Decide then whether batch 01 still adds anything.
-4. Check ImageAd 201B ("Update Required", in winner BCbatch201 Manny5) is fixed.
-5. Landing page audit: needs `fabwarehouses.com` allowed in the cloud environment's network settings (blocked this run) → or do it in a local session.
-6. M-002: first weekly report Monday 2026-11-09 07:00 WIB. Follow `fuku/memory/playbooks/weekly_ads_health_report.md` (ready).
-7. Tomorrow 07:00 WIB: first full-day snapshot for 11/05 (today's row is partial: Rp 327k, 2 leads) + activity log since 22:00 WIB.
+0. **Read `fuku/memory/playbooks/meta-ads-algorithm.md` before any ads work.** Open experiments E1–E4 are listed there.
+1. Each heartbeat: check OUTBOX/INBOX for "applied 1,2,…", the photo shoot and the 3 facts. Log applied changes in `fab_advertising/reports/m001_tracker.md`.
+2. Daily (first heartbeat after 07:00 WIB): tracker readout row + activity log (limit ≤ 40).
+3. 2026-11-10: read PEIKIRA2 vs the old PEIKIRA ad set, plus the effect of any applied changes.
+4. Check that ImageAd 201B ("Update Required") is fixed.
+5. Landing page + WhatsApp flow audit (playbook E4). Network was set to Full on 2026-11-05, so `fabwarehouses.com` should now be reachable from the cloud. Try it.
+6. View BC Image087 (the #1 lead source) at full size via IG media.
+7. M-002: first weekly report Mon 2026-11-09 07:00 WIB (`fuku/memory/playbooks/weekly_ads_health_report.md`).
 
 ## Blockers / waiting on Alvian
-- Apply M-001 proposals 1–3 (OUTBOX [DECISION]).
-- Batch 01: price Rp750rb vs 800rb, min rental period, unit photos.
-- Who is behind actor 61594758338050 ("Rudi MCP", 14:40 launch)? Who is Markus Reynaldo? Lead value per business.
+- Apply M-001 items 1–5 (OUTBOX).
+- Phone photo shoot; price 750 vs 800rb; minimum rental period; close rate + months stayed.
+- Who is actor 61594758338050 ("Rudi MCP", 14:40 launch)? Who is Markus Reynaldo?
 
 ## Needs a local session
-- Landing page audit of `fabwarehouses.com/sewa-gudang-self-storage-jakarta/` (cloud DNS blocked), unless Alvian allows the domain in the cloud environment.
+- (none; the network is now Full)
 
 ## System
-- Cloud Fuku is live: routine trig_01NGMFnv9BpvRp1jQjkAwUVJ, hourly 07–22 WIB.
-- Meta write tools are visible in the cloud session's tool list. Fuku never calls them (propose-only rule).
+- Cloud Fuku is live: routine trig_01NGMFnv9BpvRp1jQjkAwUVJ, hourly 07–22 WIB. Propose-only: Fuku never calls Meta write tools, even when they're visible.
 
 ## Open loops
 - 4 disabled ad accounts (OUTBOX [RISK]).

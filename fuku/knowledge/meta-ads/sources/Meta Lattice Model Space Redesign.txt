@@ -1,0 +1,926 @@
+                                                   Meta Lattice: Model Space Redesign for Cost-Effective
+                                                          Industry-Scale Ads Recommendations
+                                            Liang Luo, Yuxin Chen, Zhengyu Zhang, Mengyue Hang, Andrew Gu, Buyun Zhang, Boyang Liu,
+                                            Chen Chen, Chengze Fan, Dong Liang, Fan Yang, Feifan Gu, Huayu Li, Jade Nie, Jiayi Xu, Jiyan Yang,
+                                                Jongsoo Park, Laming Chen, Longhao Jin, Qianru Li, Qin Huang, Shali Jiang, Shiwen Shen,
+                                              Shuaiwen Wang, Sihan Zeng, Siyang Yuan, Tongyi Tang, Weilin Zhang, Wenjun Wang, Xi Liu,
+                                            Xiaohan Wei, Xiaozhen Xia, Yuchen Hao, Yunlong He, Yasmine Badr, Zeliang Chen, Maxim Naumov,
+                                                      Yantao Yao, Wenlin Chen, Santanu Kolay, GP Musumeci, Ellie Dingqiao Wen
+                                                                                                           Meta AI
+                                                                                                  Menlo Park, California, USA
+arXiv:2512.09200v1 [cs.IR] 9 Dec 2025
+
+
+
+
+                                        Abstract                                                                      To address these interconnected challenges and unlock the full
+                                        The rapidly evolving landscape of products, surfaces, policies, and        potential of large recommendation models, we propose moving be-
+                                        regulations poses significant challenges for deploying state-of-the-       yond traditional per-portfolio scaling toward model space redesign
+                                        art recommendation models at industry scale, primarily due to data         via Lattice (Figure 1)—a transformative framework that tackles the
+                                        fragmentation across domains and escalating infrastructure costs           three fundamental challenges.
+                                        that hinder sustained quality improvements.                                   For economic scalability, Lattice reduces the overall number of
+                                           To address this challenge, we propose Lattice, a recommenda-            models required by consolidating portfolios to harness scaling laws
+                                        tion framework centered around model space redesign that extends           while minimizing costs—a single invocation on Lattice models can
+                                        Multi-Domain, Multi-Objective (MDMO) learning beyond models                simultaneously generate predictions for multiple portfolios. For
+                                        and learning objectives. Lattice addresses these challenges through        data fragmentation, Lattice enriches training data per model by
+                                        a comprehensive model space redesign that combines cross-domain            facilitating cross-portfolio sharing, allowing models to learn from
+                                        knowledge sharing, data consolidation, model unification, distilla-        broader and more diverse datasets. For deployment constraints, Lat-
+                                        tion, and system optimizations to achieve significant improvements         tice overcomes latency barriers through a hierarchical model space
+                                        in both quality and cost-efficiency.                                       design where large-scale foundational models [48] are decoupled
+                                           Our deployment of Lattice at Meta has resulted in 10% revenue-          from real-time serving and act as teachers, transferring knowledge
+                                        driving top-line metrics gain, 11.5% user satisfaction improvement,        to smaller, highly-optimized user-facing models.
+                                        6% boost in conversion rate, with 20% capacity saving.                        However, effective portfolio consolidation introduces technical
+                                                                                                                   challenges that extend far beyond traditional MDMO approaches,
+                                        1   Introduction                                                           which primarily focus on tweaking model architectures and learn-
+                                                                                                                   ing objectives while assuming clean, readily available datasets.
+                                        The discovery of scaling laws in recommendation models [6, 23,
+                                                                                                                      First, the delayed feedback problem: Ad recommenders face dif-
+                                        25, 113] has unveiled new avenues for enhancing recommendation
+                                                                                                                   ferent attribution windows (time windows for collecting positive
+                                        performance. However, translating these theoretical insights into
+                                                                                                                   signals [14, 38, 97]), creating a critical trade-off between data fresh-
+                                        practical deployment at industry scale faces challenges.
+                                                                                                                   ness and correctness. Lattice addresses this through Lattice Zipper,
+                                           The first challenge is economic scalability. Modern recom-
+                                                                                                                   which integrates datasets by associating each ad impression with a
+                                        menders operate across thousands of domain-objective pairs (called
+                                                                                                                   randomly selected attribution window, infusing both freshness and
+                                        portfolios), each traditionally requiring a dedicated model [15, 63, 73,
+                                                                                                                   correctness into unified datasets.
+                                        94, 113]. While scaling laws demonstrate clear performance benefits
+                                                                                                                      Second, the feature selection problem: Ensuring model perfor-
+                                        from larger models [35, 113], the prohibitive infrastructure costs
+                                                                                                                   mance across consolidated portfolios while adhering to resource
+                                        make it impractical to upscale every model independently. This
+                                                                                                                   constraints requires optimal feature selection from vastly expanded
+                                        forces practitioners to focus optimization on only a small subset of
+                                                                                                                   feature spaces. Lattice employs Lattice Filter, a Pareto-optimal al-
+                                        key portfolios, leaving significant performance gains unrealized.
+                                                                                                                   gorithm that selects features from merged datasets to guarantee
+                                           The second challenge is data fragmentation. Large-scale models
+                                                                                                                   pareto-optimal quality across all portfolios.
+                                        are inherently data-hungry, yet maintaining separate datasets for
+                                                                                                                      Third, the architecture design problem: With data and features
+                                        each portfolio creates artificial barriers to knowledge sharing. This
+                                                                                                                   consolidated, Lattice constructs Lattice Networks, a family of MDMO
+                                        fragmentation restricts cross-product understanding of user prefer-
+                                                                                                                   models featuring novel architectures tailored to handle diverse
+                                        ences and limits the data available to individual models, creating a
+                                                                                                                   input formats through interleaved learning while mitigating domain
+                                        scalability bottleneck due to data scarcity in specialized domains.
+                                                                                                                   conflicts via parameter untying.
+                                           The third challenge is deployment constraints. Industrial produc-
+                                                                                                                      Fourth, the knowledge transfer problem: To fully harness scaling
+                                        tion environments impose stringent inference latency requirements
+                                                                                                                   laws without sacrificing inference performance, Lattice implements
+                                        that severely limit the complexity of models that can be practically
+                                                                                                                   Lattice KTAP, a highly-scalable mechanism leveraging asynchro-
+                                        deployed, creating a fundamental tension between model capability
+                                                                                                                   nous precompute for hierarchical knowledge transfer at inference
+                                        and operational feasibility.
+Conference acronym ’XX, June 03–05, 2018, Woodstock, NY                                                                                              Meta Lattice Team
+
+
+
+          DISJOINT MODEL SPACE                            REDESIGNED MODEL SPACE
+
+                                          LATTICE
+                                        Model Space                                                                LATTICE
+                                        Consolidation
+                                                                                                                   Efficiency
+                                                                                                 LATTICE          Optimization     OPTIMIZED ADS DELIVERY
+                                                                                              Model Unification
+                                            Partitioner
+                                                                                                                   Knowledge
+                                                                                                  Foundational     Transfer          Topline              User
+                                            Zipper                                                Model                              Metrics          Satisfaction
+                                                                                                                   Performance
+                                                                                                                   Optimizations
+                                            Filter
+                                                                                                     4                              Conversion
+                                                                                                                                      Rate
+                                                                                                                                                       Capacity
+                                                                                                                                                       Savings
+                                                                                                                       5
+                                             2
+                        Attribution
+                                                                                                                                                 6
+           Domains       Windows                                 Unified Datasets
+          Objective       Model                               Pareto-optimal Features
+
+
+                1                                       3
+Figure 1: Lattice overview: ○
+                            1 Even with MDMO frameworks, current model space remains scattered, with heterogeneous datasets,
+assorted attribution windows and siloed models and objectives. ○-2 ○3 Lattice redesigns the model space by consolidating datasets
+of heterogeneous formats, attribution windows and selects features on the pareto-front to form a small set of consolidated
+portfolios, improving knowledge sharing across domains and cutting down serving cost. ○        4 Foundational Lattice Network
+employs a MDMO-based, unified model architecture to consume multiple data formats and produces predictions for all
+consolidated objectives. ○ 5 These models are further distilled to lean user-facing models via novel knowledge transfer and
+efficiency optimizations. ○6 Deployed Lattice at Meta results in significant improvements in all key metrics and cost reduction.
+
+time, augmenting knowledge distillation efficacy while maintaining                         Multi-Domain, Multi-Objective (MDMO) approaches [42, 43, 54,
+real-time serving requirements.                                                         60, 62, 82, 88, 95, 96, 98, 106–108] use models consuming all-domain
+   The unified model architecture enables focused efficiency opti-                      data for all tasks, but monolithic designs limit model complexity
+mizations. We develop Lattice Sketch, an automated search tool for                      due to latency constraints and task interference issues [28, 89].
+model hyperparameters and parallelization strategies, guided by                         Traditional ensemble approaches that combine separate models
+scaling laws to balance quality and performance. Additionally, the                      increase rather than reduce computational costs.
+consolidated model space requires only a small number of models,                        Opportunities Portfolio consolidation extends MDMO to broader
+enabling careful optimization through customized GPU kernels and                        settings, capturing massive domains without compromising de-
+low-precision training and inference.                                                   ployability through multiple foundational models within latency
+   Finally, Lattice incorporates Lattice Partitioner, a policy tool that                envelopes while separating competing domains and objectives to
+guides portfolio consolidation, improving knowledge sharing, re-                        mitigate interference [28, 89].
+ducing data conflicts, and maximizing global model performance                          2.2      Data Integration
+within resource budgets while ensuring privacy compliance.
+   We evaluate Lattice through extensive experiments across both                        Status Quo Most MDMO research assumes clean, readily avail-
+public benchmarks and industry-scale datasets with real-world                           able datasets [12, 116], simulating MDMO setups by partitioning
+recommendation scenarios. Our results demonstrate that Lattice                          coherent datasets [40, 117]. Real-world datasets are heterogeneous
+consistently outperforms 10 state-of-the-art baselines, achieving up                    (diverse data types and formats [112]), fragmented across product
+to 1% improvement in prediction loss while delivering up to 1.3×                        surfaces, sparse due to rare positive signals, and dynamic with
+hardware efficiency gains on 1024 GPUs. Our production deploy-                          shifting user behaviors. For example, delayed feedback creates ad-
+ment of Lattice across a representative set of Meta’s ads model types                   ditional challenges where different attribution windows introduce
+has delivered substantial real-world impact: 10% improvement in                         trade-offs between label completeness and freshness [14, 38, 97].
+revenue-driving top-line metrics, 11.5% uplift in user satisfaction,                    Opportunities Data integration enables sustainable model scaling
+6% boost in conversion rate, accompanied by 20% capacity savings,                       by addressing data scarcity while enhancing model quality through
+demonstrating that Lattice successfully bridges the gap between                         cross-domain knowledge sharing, optimal feature selection, and
+theoretical advances and practical industry deployment at scale.                        effective attribution window blending.
+
+2     Related Work and Opportunities                                                    2.3      Model Unification
+                                                                                        Status Quo Representative MDMO models use a common-
+This section provides a review on the recent advancements and
+                                                                                        then-specialize paradigm, including MMoE [60] with multi-gate
+further opportunities to improve with Lattice.
+                                                                                        mixture-of-experts, M2M [116] using meta units and tower mod-
+2.1     Portfolio Consolidation                                                         ules, M3 oE [117] with two-level feature extraction mechanisms,
+Status Quo Current recommendation systems optimize narrow                               PEPNet [12] employing personalized embedding networks, and
+objective sets within specific domains [15, 63, 73, 94, 113], becoming
+inefficient as domains and objectives proliferate.
+Meta Lattice: Model Space Redesign for Cost-Effective Industry-Scale Ads Recommendations                  Conference acronym ’XX, June 03–05, 2018, Woodstock, NY
+
+
+M3REC [40] using meta-learning for unified embedding represen-                        • Allocates resources: Distributes compute and storage budgets
+tation. However, these approaches assume homogeneous input                              based on estimated revenue impact.
+formats and struggle with cross-domain interference [89].                             3.2    Data Integration: Lattice Zipper & Filter
+Opportunities Portfolio consolidation requires architectures that
+efficiently process heterogeneous input formats—dense, sparse, and                    Lattice creates unified datasets and selects relevant features to fa-
+sequential data [55, 112]—while mitigating learning interference                      cilitate cross-domain knowledge sharing and mitigate data scarcity
+across consolidated domains through novel architectural designs                       for consolidated recommendation portfolios.
+and parameter isolation techniques.                                                   Unified Dataset Construction: We concatenate multiple datasets,
+                                                                                      where the feature set becomes the union of all features. Each record
+2.4     Efficiency Improvement                                                        contains an original entry from one domain with non-existent fea-
+Status Quo Recommendation models face efficiency challenges                           tures zero-padded, enabling models to learn cross-domain patterns
+from large embedding tables [47] and poor hardware utilization [59].                  while handling heterogeneous feature spaces.
+Existing approaches target architecture [53, 85, 113], topology-                      3.2.1 Mixing Attribution Windows via Lattice Zipper Un-
+aware designs [59, 111, 114], specialized hardware [3], and knowl-                    like typical recommenders that focus on real-time user feedback,
+edge distillation [29]. Training stability from distribution shifts and               ad recommenders face delayed feedback challenges. User conver-
+MDMO learning are addressed through gradient clipping [76, 89],                       sions (e.g., purchases) can occur anywhere from minutes to days
+better feature interactions [5], and normalization [7, 81].                           after an ad impression. To capture these delayed conversions, ad-
+Opportunities Portfolio consolidation enables focused efficiency                      vertisers define attribution windows—time periods during which
+optimizations across fewer, unified models while requiring joint                      post-impression actions are credited to the ad. However, this creates
+optimization strategies that traditional approaches cannot provide,                   a fundamental trade-off: shorter windows provide fresher training
+for example, low-precision training and inference, successful in                      data but miss delayed conversions, while longer windows capture
+LLMs [17], remain largely unexplored in recommendation due to                         more conversions but introduce staleness.
+scattered model landscape as they need to be tuned per-model.                             Traditionally, this is addressed by ensembling 𝐾 models trained
+3     Meta Lattice                                                                    on datasets with different attribution windows, or through multi-
+                                                                                      pass training that updates models as attribution windows close.
+We present Lattice, a comprehensive framework that advances state-
+                                                                                      Both increase training costs by 𝐾× and can cause overfitting or
+of-the-art recommendation at industry scale through co-design of
+                                                                                      instability due to conflicting labels for the same impression [56].
+data, model, and efficiency strategies.
+                                                                                          Instead of maintaining 𝐾 separate datasets, Lattice Zipper cre-
+3.1     Portfolio Consolidation: Lattice Partitioner                                  ates a single unified dataset by randomly assigning each impression
+Grounded in established theories that sample complexity and esti-                     to one attribution window based on a tunable probability distribu-
+mation error decrease when tasks are related [8, 64], we partition                    tion (usually uniform random). The assignment uses deterministic
+domain-objective pairs into manageable recommendation groups,                         hashing of the impression signature (user ID, ad ID, timestamp).
+reducing the total number of required models while leveraging                             We then modify the model architecture to include separate pre-
+foundational model [10], auxiliary learning [28], multi-task learn-                   diction heads for each attribution window incorporated in the
+ing [43], and transfer learning [74] theories to address data frag-                   dataset. During training, impressions are routed to their assigned
+mentation and improve cross-domain knowledge sharing [61, 68].                        prediction head, allowing the model to learn from data at different
+   When grouped, domain-objective pairs merge their associated                        freshness-correctness trade-off points simultaneously. The longest
+datasets, features, and objectives, requiring only a single model per                 attribution window serves as the "oracle" head, learning from the
+group. However, naive consolidation causes training instability and                   most complete data, while shorter windows provide fresher signals
+quality degradation due to domain conflicts [28, 90].                                 that improve the shared backbone representation.
+   Lattice Partitioner addresses this through a policy-driven ap-                         At serving time, we use only the oracle prediction head, which
+proach that:                                                                          benefits from both the complete long-window data and the fresher
+• Prioritizes overlapping ID spaces: Merges domains with sub-                         shorter windows during training.
+  stantial user/item overlap (e.g., combining "News Ads" and "Video                   3.2.2 Pareto-Optimal Feature Selection via Lattice Filter Al-
+  Ads" which share users, versus keeping "Marketplace" separate                       though tens of thousands of features characterizing users and items
+  due to distinct item) to facilitate knowledge sharing.                              are available, resource constraints limit models to using only se-
+• Groups objectives by feedback characteristics: Separates (1)                        lective features (typically thousands). Portfolio consolidation in-
+  fresh, dense feedback tasks (click, like, follow) from (2) delayed,                 troduces a new challenge: selecting features that achieve optimal
+  sparse feedback tasks (purchase, conversion). Task similarity                       performance across multiple consolidated portfolios simultaneously,
+  within groups is assessed via empirical loss weighting [70, 77]                     where each portfolio may value different feature subsets.
+  or gradient-based metrics [4, 22], and subgroups can be further                         Standard feature selection approaches optimize for single tasks or
+  created if similarity is low. Conflicts within a group are mitigated                use weighted combinations across tasks, which can result in degra-
+  through parameter untying (§3.3.4), supervision changes (§3.3.5),                   dation of specific portfolios when one dominates the optimization
+  and MetaBalance [28].                                                               objective. This is problematic when consolidated portfolios have
+• Ensures compliance: Respects privacy policies and data sharing                      different business importance or data characteristics.
+  restrictions.
+Conference acronym ’XX, June 03–05, 2018, Woodstock, NY                                                                                                                                               Meta Lattice Team
+
+
+                                              Lattice NETWORK                                  WUKONG / DHEN FUSION BLOCK                                      TRANSFORMER BLOCK
+              Tower Arch
+                                                             …
+                              Tower 1         Tower 2                Tower N
+
+
+
+
+                                                                                                                                                                                                     LAYER N
+                                                                                                                                     LAYER N
+
+
+
+
+                                                                                                                                                          …
+                                                                           LAYER N
+
+
+
+
+                                                                                               …
+                                                     +
+                                                                                                                                                                          +
+                                      …
+              Backbone Arch
+
+
+
+
+                                                                                                                                     LAYER 1
+                                                                                                            Norm                                       Untied FFN     Untied FFN        Untied FFN
+
+                                                     +                                                       +
+                                                                                                                                                       (Domain 1)     (Domain 2)        (Domain 3)
+
+
+
+
+                                                                           LAYER 1
+
+
+
+
+                                                                                                                                                                                                     LAYER 1
+                                        WUKONG / DHEN Fusion Block
+                                                                                                                 WUKONG                                               Multi-Head
+                                              Transformer Block
+                                                                                          DHEN               +                  Other                                  Attention
+                                                                                          Module                             Interaction
+                                                                                                      FMB          LCB
+                                                                                                                                                                    Learned Queries
+
+                                                     +
+                                                                                                             +                                                            +
+               Preprocessor
+
+
+
+
+                                                                                           Sparse         Dense           Sequential
+                              Sparse Inputs   Dense Inputs   Sequence Inputs              Embedding     Embedding         Embedding                  RoPE Embedding            Sequence Inputs
+
+                                        + Residual and Mixing Network          Dense Network       Embedding Layer       Event Model           Extended Context Storage    Prediction
+
+Figure 2: Lattice Networks interleave sequence and non-sequence learning to handle diverse input types in merged domains.
+                                                                                                                Lattice Filter ensures balanced performance across all portfolios.
+                                                                                                             The approach can be extended to incorporate additional criteria
+                                                                                                             such as feature computation cost, storage requirements, portfo-
+                                                                                                             lio importance, and data freshness, enabling rich multi-objective
+                                                                                                             optimization for feature selection.
+                                                                                                             3.3         Model Unification: Lattice Networks
+                                                                                                             Each Lattice Network covers one recommendation group. When
+                                                                                                             domains with different input formats are merged, a unified model
+                                                                                                             architecture must handle diverse input types while maintaining the
+                                                                                                             ability to learn domain-specific patterns.
+                                                                                                                 Lattice Networks process mix-format, multi-modal inputs: cat-
+                                                                                                             egorical features (F𝑐 ) such as user/item IDs, dense features (F𝑑 )
+Figure 3: Illustration: Lattice Filter with 𝑇 = 9 and |F | = 10                                              like user age or item price, and sequence features (F𝑠 ) such as user
+via 3 iterations.                                                                                            interaction histories or raw contents. Each sample in a batch 𝐵
+   Lattice Filter addresses this through Pareto-optimal selection,                                           produces one prediction per consolidated task.
+ensuring no portfolio is unfairly penalized while maximizing overall                                             Lattice Networks adopt a novel three-stage preprocessor-
+quality across all consolidated portfolios.                                                                  backbone-task architecture with interleaving of sequence and non-
+   Lattice Filter begins by computing a feature importance score                                             sequence processing plus parameter untying (Figure 2). This de-
+vector for each feature in the set F . For the 𝑖-th feature across                                           sign first unifies disparate input representations, then performs
+𝑁 tasks (representing all objectives from consolidated portfolios),                                          cross-domain interaction through specialized modules, and finally
+we denote its importance scores as F𝑖 = (𝑓𝑖,1, . . . , 𝑓𝑖,𝑁 ), where 𝑓𝑖,𝑗                                    generates task-specific predictions.
+represents the importance of feature 𝑖 in task 𝑗, computed using                                             3.3.1 Feature Processors unify input representations and project
+permutation-based importance [11].                                                                           them into a common embedding space with uniform dimension 𝑑,
+   We establish a partial order relationship "dominated by" (≼):                                             enabling subsequent modules to operate on standardized inputs for
+F𝑖 ≼ F𝑘 if and only if 𝑓𝑖,𝑗 ≤ 𝑓𝑘,𝑗 for all 𝑗 ∈ [1, 𝑁 ]. When feature                                         all original data types:
+𝑘’s importance vector dominates feature 𝑖, feature 𝑖 is not on the                                           • Categorical Features (F𝑐 ): Processed through embedding tables,
+current pareto front and hence excluded from immediate selection.                                               producing output 𝑂𝑐 with shape (𝐵, |F𝑐 |, 𝑑).
+   Given target feature count 𝑇 , Lattice Filter iteratively identifies                                      • Dense Features (F𝑑 ): Processed by MLPs to handle numerical
+features on the current Pareto frontier. In each iteration, features                                            inputs, producing output 𝑂𝑑 with shape (𝐵, |F𝑑 |, 𝑑).
+from the current frontier are selected. If there are more features                                           • Sequence Features (F𝑠 ): Processed by attention-based event
+on the pareto frontier than the budget, remaining quota is filled                                               models. This produces sequence embeddings 𝑂𝑠 with shape
+by randomly picking features on the current frontier. This random                                               (𝐵, |F𝑠 | × 𝐾, 𝑑), where 𝐾 represents the output feature count
+process ensures quality because features are pre-sorted by impor-                                               per event source.
+tance, critical ones are chosen in earlier iterations, they should have                                          A mixing network then concatenates 𝑂𝑐 and 𝑂𝑑 and normal-
+already appeared on previous frontiers. It also does not introduce                                           izes them to form unified non-sequence representation 𝑂𝑐𝑑 , while
+bias because selection freezes the current frontier. This process con-                                       preserving 𝑂𝑠 separately. This separation enables the backbone to
+tinues until 𝑇 features are selected. Figure 3 provides an illustration                                      apply interleaved learning.
+of Lattice Filter.
+Meta Lattice: Model Space Redesign for Cost-Effective Industry-Scale Ads Recommendations                  Conference acronym ’XX, June 03–05, 2018, Woodstock, NY
+
+
+3.3.2 Backbone The Lattice Network backbone is designed for                           3.3.5 Supervision Changes When portfolios are consolidated,
+efficient dense scaling [83, 113, 115], leveraging modern hard-                       models must learn representations that work well across multiple
+ware’s superior compute capabilities over memory and network                          domains simultaneously. Without proper supervision, models tend
+resources [57, 58]. The architecture addresses the core challenge                     to optimize each domain’s loss independently, leading to conflicting
+of processing both sequence and non-sequence data effectively                         gradients and suboptimal cross-domain knowledge transfer.
+through interleaved learning.                                                            Lattice Partitioner introduces a cross-domain correlation loss
+Extended Context Storage (ECS) provides a global key-value                            to align representation spaces across consolidated domains:
+store supporting DenseNet [32]-style residual connections and in-                                             (𝑋 ,𝑌 )
+                                                                                      L𝑐𝑜𝑟𝑟 (𝑋, 𝑌 ) = 1 − 𝐶𝑜𝑣
+                                                                                                            𝜎𝑋 𝜎𝑌 , where 𝑋 represents the ground truth
+termediate activation access, enabling high-bandwidth information                     label distribution across domains in a batch and 𝑌 represents the
+flow across layers and components which significantly helps with                      predicted label distribution from the model. 𝐶𝑜𝑣 denotes covariance
+deeper networks [103].                                                                and 𝜎 denotes standard deviation. This auxiliary loss is computed
+Transformer Blocks (TB) process RoPE-encoded [87] input se-                           per batch and added to the primary objective during training.
+quences 𝑂𝑠 , producing contextualized sequences 𝑂𝑠′ using standard                       The correlation loss encourages the model to maintain consis-
+transformer layers [93]: 𝑂𝑠′ = 𝑇 𝐵(𝑅𝑂𝑃𝐸 (𝑂𝑠 )). To enable better                      tent prediction patterns across domains by: (1) Preventing domain
+user-ad feature interactions, cross-attention layers and adaptive                     isolation. Without this loss, models can optimize per-domain objec-
+parameter generation networks [105] are adopted in FFN layers.                        tives independently, leading to conflicting representations rather
+DHEN/Wukong Fusion Blocks (DWFB) address transformer                                  than beneficial knowledge sharing across consolidated portfolios;
+limitations in processing non-sequence data by capturing bit-wise                     (2) Balancing domain confidence. The loss prevents models from
+interactions [94]. DWFBs flatten 𝑂𝑠′ , concatenate with 𝑂𝑐𝑑 , and                     becoming overconfident in domains with abundant data while re-
+produce updated non-sequence representations 𝑂𝑐𝑑      ′ using Factor-
+                                                                                      maining underconfident in data-sparse domains, promoting more
+ization Machine Blocks (FMB) and Linear Compression Blocks                            balanced learning across the consolidated portfolio. By aligning pre-
+(LCB) [113, 114]: 𝑂𝑐𝑑′ = 𝐷𝑊 𝐹 𝐵([𝑂 ′ ; 𝑂 ]).
+                                    𝑠    𝑐𝑑                                           diction distributions, the shared backbone learns representations
+   Evidently, each backbone block applies specialized processing to                   that generalize better across all consolidated domains.
+sequence versus non-sequence data by different modules that are                          When optimizing multiple objectives simultaneously, gradient
+optimized for different data modalities, facilitating the higher-level                magnitudes can vary significantly across tasks, causing training in-
+interactions between sequences and non-sequences [110].                               stability. We address this using MetaBalance [28], which adaptively
+3.3.3 Task Modules Task-specific adaptation uses lightweight                          weighs gradients to ensure stable multi-objective optimization. We
+MLP layers (one per objective) that project shared backbone embed-                    use a second-order optimizer [26] to optimize Lattice Networks.
+dings to task-specific output spaces, enabling specialization while                   3.4    Enabling Inference-Time Knowledge
+maintaining shared representations.
+                                                                                             Transfer via Lattice KTAP
+3.3.4 Architecture Changes To address instability issues inher-
+ent in MDMO training across diverse domains and objectives, we                        Knowledge distillation is commonly used to improve low-latency,
+employ several architectural techniques:                                              user-facing models via powerful teachers. However, traditional
+Modality Contention Mitigation: On mixed-modal datasets,                              soft-label distillation transfers knowledge only during training.
+we mitigate contention among different modalities [92] via QK-                            We design Lattice KTAP to address this fundamental limitation
+norm [18] in attention mechanisms.                                                    through asynchronous precompute and feature-based knowledge
+Parameter Untying for Domain Conflicts: Lattice Networks                              transfer, enabling continuous knowledge transfer from teacher mod-
+adopt parameter untying [19, 50–52, 100, 104] to mitigate learning                    els to smaller student models during both training and inference:
+conflicts not resolved by Lattice Partitioner. By dedicating weights                  • Background Teacher Computation Teacher Lattice Networks
+for conflicting domains in backbone layers, Lattice Networks cap-                        maintain background jobs that continuously evaluate the most
+ture different distributions without causing interference.                               relevant items (identified by earlier-stage ranking services) for
+Low-precision Friendly Architecture To enable stable low-                                each user, storing the final backbone layer embeddings for each
+precision training (e.g., FP8) while maintaining quality, we imple-                      user-item pair with time-to-live (TTL) metadata.
+ment several architectural modifications:                                             • Student Query Mechanism During both training and inference,
+• Bias-less Backbone Layers Remove bias terms from linear and                            student Lattice Networks query each user-item pair to retrieve
+   normalization layers to prevent unbounded growth and numeri-                          precomputed teacher embeddings, checking TTL validity (typi-
+   cal overflow in deep MLPs [24].                                                       cally a few hours) to ensure freshness.
+• Stabilized Interactions Apply proper normalization to in-                           • Embedding Integration Valid teacher embeddings are directly
+   put/output tensors in modules like Deep Cross Nets [94] that                          incorporated as additional input features to the student model.
+   cause training instability in DHEN ensembles.                                         For expired or missing embeddings, the user-item pair is queued
+• Swish RMSNorm (SwishRN) Combine Swish activation [78]                                  for the teacher’s next refresh cycle, while zero tensors serve as
+   with RMSNorm for FFN layers for expressivity and stability:                           placeholders in the student.
+   𝑋𝑜𝑢𝑡 = 𝑅𝑀𝑆𝑁𝑜𝑟𝑚(𝑋𝑖𝑛 ) ⊙ 𝑆𝑖𝑔𝑚𝑜𝑖𝑑 (𝑅𝑀𝑆𝑁𝑜𝑟𝑚(𝑋𝑖𝑛 )). RMSNorm                            • Dual Knowledge Transfer In addition to feature-based transfer,
+   avoids catastrophic cancellation issues of LayerNorm when el-                         teacher prediction logits are provided to students for traditional
+   ements are near the mean, while the additional RMSNorm on                             label-based distillation, creating a comprehensive knowledge
+   self-gating improves numerical stability.                                             transfer mechanism.
+Conference acronym ’XX, June 03–05, 2018, Woodstock, NY                                                                                 Meta Lattice Team
+
+
+    Unlike traditional knowledge distillation that relies solely on     enters sharding strategy optimization where hyperparameters are
+teacher labels for loss computation, Lattice KTAP incorporates          fixed and 𝑆 mutated sharding strategies are evaluated on cluster.
+both precomputed embeddings as model inputs and teacher labels          Initial seeds are replaced by higher throughput configurations be-
+in the loss function. This dual approach significantly enhances         fore transitioning to hyperparameter search phase. This alternative
+the knowledge transfer ratio during both training and inference,        optimization strategy allows us to make better use of clusters, such
+providing richer supervision signals than conventional methods.         that hyperparameters-related tunings only need to happen locally.
+    Lattice KTAP achieves an optimal balance between staleness and      Scaling Law-Guided Search Space Reduction: To accelerate
+computational efficiency by leveraging the natural stability of user    search, Lattice Sketch leverages established scaling laws [30, 35, 83]
+interests over short periods. Since user preferences typically remain   to shrink hyperparameter spaces. For Wukong, we simultaneously
+consistent within a few hours, teacher embeddings retain their          scale output embedding counts in LCB and FMB; for transformers,
+relevance, enabling effective student model enhancement during          hyperparameter modifications show minimal quality impact [72]
+inference without requiring real-time teacher computation.              with a fixed FLOPs budget.
+    To ensure cost-effective deployment, Lattice KTAP employs           Dynamic Programming Bootstrapping: We bootstrap FSDP
+caching and clustering techniques that minimize computational           sharding strategy search by profiling execution latency 𝑇𝑏 (𝑠𝑙 ) and
+overhead. The system provides flexible resource allocation by al-       memory usage 𝑅𝑏 (𝑠𝑙 ) for each layer 𝑙 with batch size 𝑏 and shard-
+lowing dynamic adjustment of precomputed embedding volumes              ing strategy 𝑠𝑙 , plus communication latency 𝐶 (𝑠𝑙 ). Using dynamic
+based on real-time traffic patterns and business priorities, making     programming with GPU memory capacity 𝑅, we find optimal con-
+it highly scalable across varying workloads.                            figurations 𝐴𝑁 𝑆𝑏∗ by enumerating batch sizes (powers of 2).
+    Lattice KTAP incorporates feature clipping [91] on teacher em-                                     Border condition:
+beddings and label smoothing [71] on teacher labels to further                 𝑂𝑃𝑇𝑏 [𝑙, 𝑟 ] = ∞, 𝐴𝑁 𝑆𝑏 [𝑙, 𝑟 ] = 0, ∀𝑥 𝑥 ≤ 0 ∨ 𝑟 > 𝑅 ∨ 𝑥 > 𝐿
+improve training stability and convergence properties.                                                    Recurrence:
+3.5     Efficiency Optimizations                                                 𝑠𝑙∗+1,𝑟 = 𝑎𝑟𝑔𝑚𝑖𝑛𝑠 ∈𝑆 𝑂𝑃𝑇𝑏 [𝑙, 𝑟 − 𝑅𝑏 (𝑠 ) ] + 𝑇𝑏 (𝑠 ) + 𝐶 (𝑠 )
+This section details efficiency improvements for Lattice.                     𝑂𝑃𝑇𝑏 [𝑙 + 1, 𝑟 ] = 𝑚𝑖𝑛𝑠 ∈𝑆 𝑂𝑃𝑇𝑏 [𝑙, 𝑟 − 𝑅𝑏 (𝑠 ) ] + 𝑇𝑏 (𝑠 ) + 𝐶 (𝑠 )
+3.5.1 Distributed Training Optimizations We utilize hybrid                         𝐴𝑁 𝑆𝑏 [𝑙 + 1, 𝑟 ] = 𝐴𝑁 𝑆𝑏 [𝑙, 𝑟 − 𝑅𝑏 (𝑠𝑙∗+1,𝑟 ) ] ← 𝑠𝑙∗+1,𝑟
+parallelism [69] with TorchRec [33] for embedding table sharding               Output (algorithm complexity 𝑂 ( |𝐾 | × |𝑆 | × 𝐿𝑅) given 𝑏:)
+and FSDP [49, 118] for dense parameter synchronization. Small                        𝐴𝑁 𝑆𝑏∗ = 𝐴𝑁 𝑆𝑏 [𝐿 − 1, 𝑎𝑟𝑔𝑚𝑖𝑛𝑟 𝑂𝑃𝑇𝑏 [𝐿 − 1, 𝑟 ] ]
+parameters use DDP [44] with pre-allocated static GPU storage to
+eliminate padding overhead and enable efficient gradient bucketing.     4     Evaluation
+3.5.2 Low-precision Training and Inference Leveraging ar-               We evaluate each Lattice component’s contribution to cost-efficient
+chitectural changes from §3.3.4, we employ mixed-precision              recommendation at industry scale.
+FP8/BF16/FP32 training and FP8 inference. Linear layer GEMMs use        4.1    Evaluation Setup
+FP8 or BF16 based on performance trade-offs, while normalization
+                                                                        Datasets and Baselines We evaluate Lattice on one public dataset
+layers upcast to FP32 for stability. Inference converts weights to
+                                                                        (Kuaishou [39]) and multiple internal datasets (1-3K features each),
+FP8 for reduced storage and quantization costs.
+                                                                        comparing against 10 state-of-the-art baselines: AFN+ [15], Au-
+    Unlike block-wise scaling approaches [17], we use tensor-wise
+                                                                        toInt+ [85], DLRM [73], DCNv2 [94], FinalMLP [63], MaskNet [99],
+or row-wise scalers with FBGEMM kernels [36]. Fast accumula-
+                                                                        xDeepFM [46], BST [13], APG [105], and Wukong [113].
+tion [79] is disabled during training but enabled for inference.
+                                                                        Metrics We report AUC and binary cross-entropy (BCE) loss for
+3.5.3 Optimized GPU Kernels We combine automatic optimiza-              public datasets, and relative BCE improvement over baselines for
+tion via Torch Compile with manual kernel fusion for SwishRN            internal datasets (0.01% improvement is significant at our scale).
+operators. Our BlockNorm strategy operates on local GEMM tiles          Throughput is measured in queries per second (QPS). Teacher mod-
+to avoid cross-SM synchronization, fusing with preceding GEMM           els are applied equally across all internal evaluations, and they have
+kernels to leverage L1/L2 cache locality. We replace Sigmoid with       negligible cost (teacher:student GPU ratio ≈ 1:100) hence is omitted.
+HardSwish [31] to eliminate expensive exponential operations.              We provide an ablation of overall gain in §5.2.
+3.5.4 Iterative Execution Refinements with Lattice Sketch To
+                                                                        4.2    Effectiveness of Data Consolidation
+optimize model execution efficiency without compromising quality,
+we propose Lattice Sketch, a unified search framework maximizing        We evaluate Lattice Zipper and Lattice Filter on their abilities to
+the (model quality, throughput) tuple given latency budget 𝑇 and        consolidate multi-attribution window datasets and select pareto-
+quality threshold 𝑄.                                                    optimal features using industry-scale datasets.
+Alternating Optimization Phase: Lattice Sketch’s search space           Lattice Zipper We apply Lattice Zipper to consolidate two datasets
+consists of FSDP sharding strategies and model hyperparameters.         with 90-minute and 1-day attribution windows, assessing its abil-
+It alternates solving phases via beam search of width 𝐾, with each      ity to balance freshness and correctness. To establish performance
+phase optimizing either hyperparameters or sharding strategies.         bounds, we simulate an ideal case where all ground-truth labels
+Each phase contains 𝑆 steps guided by parallel Bayesian optimiz-        are immediately available as “Upperbound”. We evaluate models
+ers [84], with configurations violating 𝑇 or 𝑄 constraints receiving    under daily incremental training over one month. Our baseline
+zero scores. The algorithm initializes 𝐾 seeding configurations, then   uses only the 1-day attribution window model (we omit the 90-
+                                                                        minute-only model for visual clarity as it consistently shows 1%
+Meta Lattice: Model Space Redesign for Cost-Effective Industry-Scale Ads Recommendations                                                                  Conference acronym ’XX, June 03–05, 2018, Woodstock, NY
+
+
+                                 Task Type                              Loss Improvements (%)                                      Industry-Scale Dataset: Non-sequence Data We upscale se-
+                  CTR of multiple domains                                           0.2 ∼ 0.5                                      lected models to 30-40 GFLOPs/sample and evaluate on our
+                  CVR of multiple domains                                           0.12∼0.17                                      industry-scale dataset with 100B samples for scalability testing.
+                 CTR+CVR of a single domain                                         0.1 ∼ 0.5
+                CTR+Quality of a single domain                                         0.06
+                                                                                                                                   We use three tasks: one CTR and two CVR tasks. We present results
+                                                                                                                                   in Figure 4, using AFN as a baseline. Lattice Networks continue to
+                       Table 1: Evaluation of Lattice Filter.                                                                      significantly outperform other state-of-the-art models, improving
+                                                                                                                                   loss by up to 1.14%, demonstrating the scalability of Lattice Net-
+                CTR                                 CVR Window 1                               CVR Window 2                 1.48   works and the quality improvements from the architectural changes
+                                                                                                                     1.39
+                                                                                                         1.07 1.05                 described in §3.3.4.
+                                                                                             0.91 0.86
+                              0.75 0.78
+                                                                        0.66 0.70                                                  Industry-Scale Dataset: Mixed Sequence and Non-sequence
+        0.49 0.50 0.51 0.54                       0.42 0.42 0.46 0.48
+                                                                                      0.52
+ 0.22                                      0.21
+                                                                                                                                   Data We compare Lattice Network’s performance with scaled-up
+                                                                                                                                   Wukong on a mixed-format dataset with 50B samples merged from
+          AutoInt       MaskNet           DLRM       FinalMLP       DCN         Wukong          Lattice Network                    domains with mixed sequence data. We predict O(10) objectives
+                                                                                                                                   among click (CTR), conversion (CONV), and ads quality (QLT)
+Figure 4: Relative Loss Improvement (%) over AFN on an                                                                             types. Table 3 summarizes results for overall CTR, CVR, QLT, and
+industry-scale dataset.                                                                                                            selectively reports two conversion types: lead generation (LG) and
+                                                                                                                                   post engagements (PE) to demonstrate effectiveness on finer-grain
+                                                                                                                                   breakdowns. Lattice Networks significantly outperform Wukong
+                                                                                                                                   in every task with comparable complexity, demonstrating the ef-
+                                                                                                                                   fectiveness of interleaved learning (§3.3.2) and our architectural
+                                                                                                                                   changes (§3.3.4).
+                                                                                                                                   4.4     Effectiveness of Portfolio Consolidation
+                                                                                                                                   We evaluate the effectiveness of portfolio consolidation, guided by
+Figure 5: Relative Loss Improvement (%) of Lattice Zipper                                                                          Lattice Partitioner, in a challenging scenario involving CTR pre-
+across various dates in a month, compared to an upperbound.                                                                        diction on two product surfaces (A and B). These were originally
+                                                                                                                                   handled by two separate models with 1.33T and 0.71T parameters
+regression). We compare Lattice Zipper against existing solutions:                                                                 and training complexity of 20 GFLOPs and 12 GFLOPs/sample,
+delayed feedback modeling [14, 97], continuous training with neg-                                                                  respectively. We merge the task modules, data, and features as
+ative samples [38, 97], and label correction with reweighing [14].                                                                 necessary for consolidation, building on the 20 GFLOPs baseline.
+All baseline approaches requiring multi-pass training exhibited                                                                    Table 4 shows an immediate benefit for Domain B at the cost of
+severe divergence or loss regression on our datasets while being                                                                   quality loss for Domain A – a typical manifestation of cross-domain
+less efficient. Figure 5 shows Lattice Zipper achieves consistent                                                                  interference in multi-objective setups. However, applying supervi-
+improvements across all evaluation dates. It’s worth noting that                                                                   sion changes (§3.3.5) produces a significant performance boost that
+the effectiveness of Lattice Zipper extends beyond the two-window                                                                  surpasses the unconsolidated baseline. Overall, portfolio consolida-
+consolidation. Specifically, we see additional gain on the 7d head                                                                 tion guided by Lattice Partitioner achieves 1.5× FLOPs and 1.04×
+when consolidating 90min/1d/7d combination. Adding more con-                                                                       parameter savings1 with significant performance improvements
+solidation windows to the mix yield additional yet diminishing                                                                     in both domains. The minimal complexity increase indicates that
+returns.                                                                                                                           Lattice portfolio consolidation facilitates knowledge transfer be-
+Lattice Filter We apply Lattice Filter to select approximately 2K                                                                  tween domains, underscoring its key advantage: the cost of serving
+features from a pool of 12K features in a consolidated dataset.                                                                    a consolidated portfolio is significantly lower than serving portfolios
+   We compare against a standard weighted loss-based feature se-                                                                   separately.
+lection baseline [16, 34]. Table 1 shows relative loss improvements
+across 10 models spanning 4 optimization goals: Lattice Filter gen-                                                                4.5     Inference-time Knowledge Transfer Gains
+eralizes well across diverse tasks and combinations compared to                                                                    We measure improvements using Lattice KTAP, by comparing the
+traditional approaches.                                                                                                            loss improvements of a distilled Lattice Network over an non-
+                                                                                                                                   distilled version via: (1) traditional soft-label distillation; (2) Lattice
+4.3         Effectiveness of Lattice Networks                                                                                      KTAP with a typical observed cache hit rate of 0.6 and (3) Lattice
+We focus our evaluation on the quality gains from adopting Lattice                                                                 KTAP with an ideal case of 1.0 cache hit rate, on a CTR task. We
+Networks on a public dataset and industry-scale datasets.                                                                          set TTL to 6 hours. The teacher, student and baseline models are
+Open Source MDMO Dataset: KuaiVideo We simultaneously                                                                              Lattice Networks with complexity of 2.7 GFLOPs and 0.42 GFLOPs.
+predict the labels for 𝑙𝑖𝑘𝑒, 𝑓 𝑜𝑙𝑙𝑜𝑤, and 𝑐𝑙𝑖𝑐𝑘 to test the models’                                                                   Shown in Table 5, we observe over a 1.3× boost in knowledge
+MDMO performance, following established approaches [120, 122].                                                                     transfer efficiency in typical settings, harnessing most of the benefit
+We report final test performance in Table 2 after learning rate tuning                                                             in the ideal case of 100% hit rate.
+for all models. Best and second-best performing models are bolded
+and underlined. Lattice Networks match or outperform state-of-
+the-art performance in 7 out of 8 metrics with comparable or lower                                                                 1 Parameter count is dominated by embedding table size, determined by the total
+complexity.                                                                                                                        number of features consolidated, hence smaller savings compared to FLOPs.
+Conference acronym ’XX, June 03–05, 2018, Woodstock, NY                                                                                                                            Meta Lattice Team
+
+
+                                                                                                     AUC                                        Loss                    Complexity
+                                                 Model
+                                                                                   Click       Follow    Like          AVG       Click    Follow     Like   AVG      MFLOPs MParams
+                                          AFN+                                     0.7172      0.7703        0.8466    0.7780    0.4572   0.0074   0.8466   0.1604   10.96     79.60
+                                        AutoInt+                                   0.7181      0.7882        0.8725    0.7929    0.4607   0.0075   0.0156   0.1617   79.27     41.75
+                                          DLRM                                     0.7088      0.6743        0.7734    0.7188    0.4874   0.0081   0.0175   0.1710   1.996     39.24
+                                         DCNv2                                     0.7225      0.7954        0.8804    0.7995    0.4534   0.0073   0.0152   0.1586   9.159     40.44
+                                        FinalMLP                                   0.7176      0.7627        0.8624    0.7809    0.4690   0.0080   0.0163   0.1645   12.22     571.4
+                                        MaskNet                                    0.7133      0.7143        0.8599    0.7625    0.4650   0.0077   0.0156   0.1627   4.299     39.63
+                                        xDeepFM                                    0.7189      0.7704        0.8706    0.7866    0.4642   0.0079   0.0156   0.1626   6.810     51.60
+                                      APG (DeepFM)                                 0.7066      0.7464        0.8515    0.7682    0.4915   0.0080   0.0166   0.1720   11.74     52.40
+                                           BST                                     0.7217      0.7664        0.8707    0.7863    0.4512   0.0076   0.0153   0.1581   326.1     40.63
+                                        Wukong                                     0.7251      0.7947        0.8842    0.8014    0.4580   0.0075   0.0155   0.1603   22.62     42.59
+                             Lattice Network (Expert Tuned)                        0.7281      0.7997        0.8793    0.8024    0.4513   0.0073   0.0154   0.1580   25.54     43.08
+                             Lattice Network (Lattice Sketch)                      0.7249      0.7984        0.8861    0.8031    0.4529   0.0073   0.0151   0.1584   1.575     39.17
+   Table 2: Test performance on KuaiVideo across 3 tasks. Lattice Networks achieve best performance with least resources.
+
+   CTR                CONV                  QLT                      LG                            PE                        summarizes the results. Compared to an expert-tuned baseline and 4
+                                      T1            T2         T1         T2        T1       T2         T3     T4
+                                                                                                                             state-of-the-art optimizers—including HyperOpt [9], annealing [37],
+   0.27                     0.36     0.38          0.39       0.48        0.63     0.59      0.68       1      1.14          dual annealing [2], and differential evolution [86]—given the same
+Table 3: Relative Loss Improvement (%) of Lattice Network                                                                    search budget of 500 attempts, Lattice Sketch delivers up to 1.6×
+over Wukong on an industry-scale, mixed-sequence dataset.                                                                    better throughput.
+                                                                                                                             Other Efficiency Improvements When coupled with the opti-
+                                                  Loss Improvements                        FLOPs             Params          mizations in §3.5.1, Lattice Network achieves an additional 26%
+  Consolidation Type
+                                                 CTR on A    CTR on B                      Saving             Saving         faster inference speed with FP8 inference, where 10% is contributed
+         Data                                     -0.15%                  0.36 %            1.59×            1.04×           by kernel optimizations.
+    Data + Aux Loss                                0.13%                  0.46 %            1.50×            1.04×
+                                                                                                                             5     Industrial Deployment and Impacts
+      Table 4: Effectiveness of Portfolio Consolidation.
+                                                                                                                             The surging demand for recommendation systems in recent
+                                                                                                                             years [69, 75, 101, 112] has made Lattice essential for sustained
+                            Knowledge Transfer Type                              Loss Improvements (%)                       growth of recommendation at Meta.
+                Soft-label Distillation                                                     0.12
+             Lattice KTAP (Hit Rate 0.6)                                                    0.24                             5.1    Deployment Baseline and Methodology
+      Lattice KTAP (Hit Rate 1.0, Upperbound)                                               0.43                             We deployed Lattice across a critical set of ads model types serving
+                             Table 5: Effectiveness of Lattice KTAP.                                                         global Meta users across platforms. Our baseline is the prior pro-
+                                                                                                                             duction system without Lattice, where each portfolio was served by
+                                                                           Simulated Annealing
+                                                                                                                             a separate model trained on isolated datasets. During testing, both
+           Throughput/GPU
+
+
+
+
+                                                             3354          Dual Annealing
+                                                 2795 2919
+                              2001 2051
+                                          2370                             Differential Evolution                            Lattice and the baseline predict CTR/CVR metrics for live traffic in
+                                                                           HyperOpt
+                                                                           Expert
+                                                                                                                             the form of (user, ad) pairs, with the highest-ranked pairs presented
+                                                                           Lattice Sketch                                    to users based on predictions and other factors.
+                                                                                                                                We measure Lattice’s impact using: (1) revenue-driving top-line
+Figure 6: Lattice Sketch improves throughput by 20% on 128
+                                                                                                                             metrics, (2) relevance metrics such as (CTR, CVR, ads quality (user
+A100 GPUs through iterative refinements.
+                                                                                                                             satisfaction [1]), and (3) cost metrics (capacity savings in power
+4.6       Cost-efficiency Improvements                                                                                       usage). Our blog posts [65, 66] have more details.
+We evaluate Lattice Sketch’s efficacy on hyperparameter tuning
+and throughput improvements.
+                                                                                                                             5.2    Results and Ablation
+Lattice Sketch on Quality We set up a search space for Lattice                                                               Lattice has delivered substantial real-world impact: 10% top-line
+Sketch with 4 trillion choices and apply it to Lattice Network on the                                                        metric gains, 11.5% improvement in ads quality, and up to 6% in-
+KuaiVideo dataset. We set the objective to max 𝑂𝑉 𝑀 = max 𝑓𝐴𝑈        𝐶                                                       crease in ad conversions while achieving 20% capacity savings.
+                                                                  0.003
+on the validation set, reflecting our expectation that Lattice’s AUC                                                            We ablated the top-line metric contributions as follows: Lattice
+scales linearly with 𝑓 0.003 . This modification biases the search                                                           Partitioner (36%), Lattice Zipper (11%), Lattice Filter (13%), Lattice
+slightly toward lower-latency configurations that outperform the                                                             Networks (23%), and Lattice KTAP (17%). The capacity savings
+scaling baseline in efficiency (as prescribed by the 𝑓 0 .003 scaling                                                        result entirely from reducing model count and sharing compute
+law slope). We use Lattice Sketch with a budget of 1200 steps. We                                                            through improved efficiency across portfolios, and has factored in
+present results in Table 2. The tuned model achieves state-of-the-art                                                        the cost associated with tuning Lattice.
+results in 4 out of 8 metrics, outperforming the expert-tuned model                                                          5.3    Deployment Trade-offs
+with 17× fewer FLOPs.                                                                                                        Our deployment experience demonstrates that Lattice achieves
+Lattice Sketch on Training Throughput We evaluate Lattice                                                                    cost reduction without quality trade-offs. Small models benefit
+Sketch’s throughput improvement by simultaneously adjusting                                                                  from upscaling, while potential conflicts between objectives and do-
+batch size and FSDP parallelization strategy for each DWFB on                                                                mains are prevented by Lattice Partitioner (§3.1) and mitigated
+128 Nvidia A100 GPUs for an 8-layer Lattice Network. Figure 6
+Meta Lattice: Model Space Redesign for Cost-Effective Industry-Scale Ads Recommendations                        Conference acronym ’XX, June 03–05, 2018, Woodstock, NY
+
+
+through auxiliary loss (§3.3.5), parameter untying (§3.3.4), and                              SIGKDD Conference on Knowledge Discovery and Data Mining (, Long Beach,
+domain-specific towers (§3.3.3). To balance model complexity and la-                          CA, USA,) (KDD ’23). Association for Computing Machinery, New York, NY,
+                                                                                              USA, 3795–3804. https://doi.org/10.1145/3580305.3599884
+tency, Lattice employs efficient architectures (§3.3.4), low-precision                   [13] Qiwei Chen, Huan Zhao, Wei Li, Pipei Huang, and Wenwu Ou. 2019. Be-
+(BF16/FP8) execution, optimized GPU kernels (§3.5.2-3.5.3), and                               havior Sequence Transformer for E-commerce Recommendation in Alibaba.
+                                                                                              arXiv:1905.06874 [cs.IR] https://arxiv.org/abs/1905.06874
+optimal execution strategies via Lattice Sketch (§3.5.4).                                [14] Yu Chen, Jiaqi Jin, Hui Zhao, Pengjie Wang, Guojun Liu, Jian Xu, and Bo Zheng.
+                                                                                              2022. Asymptotically unbiased estimation for delayed feedback modeling via
+6    Discussion and Limitations                                                               label correction. In Proceedings of the ACM Web Conference 2022. 369–379.
+Comparison with State-of-the-Art The holistic approach to port-                          [15] Weiyu Cheng, Yanyan Shen, and Linpeng Huang. 2020. Adaptive factorization
+                                                                                              network: Learning adaptive-order feature interactions. In Proceedings of the
+folio, data, and model consolidation distinguishes Lattice from exist-                        AAAI Conference on Artificial Intelligence, Vol. 34. 3609–3616.
+ing methods that focus solely on model design [20, 41, 60, 67, 117]                      [16] Souvik Debnath, Niloy Ganguly, and Pabitra Mitra. 2008. Feature weighting
+or efficiency [33, 59, 69, 111] in isolation, addressing a critical gap                       in content based recommendation system using social network analysis. In
+                                                                                              Proceedings of the 17th international conference on World Wide Web. 1041–1042.
+in the literature regarding data curation for MDMO learning in in-                       [17] DeepSeek-AI, Aixin Liu, Bei Feng, Bing Xue, Bingxuan Wang, Bochao Wu,
+dustrial settings and improving upon feature selection schemes that                           Chengda Lu, Chenggang Zhao, Chengqi Deng, Chenyu Zhang, Chong Ruan,
+                                                                                              Damai Dai, Daya Guo, Dejian Yang, Deli Chen, Dongjie Ji, Erhang Li, Fangyun
+directly compute importance scores (e.g., using Shapley values [80])                          Lin, Fucong Dai, Fuli Luo, Guangbo Hao, Guanting Chen, Guowei Li, H. Zhang,
+and selecting top-K features with lowest loss [61, 102, 109] to avoid                         Han Bao, Hanwei Xu, Haocheng Wang, Haowei Zhang, Honghui Ding, Huajian
+loss-gaming. Compared to neural architecture search (NAS) [21],                               Xin, Huazuo Gao, Hui Li, Hui Qu, J. L. Cai, Jian Liang, Jianzhong Guo, Jiaqi Ni,
+                                                                                              Jiashi Li, Jiawei Wang, Jin Chen, Jingchang Chen, Jingyang Yuan, Junjie Qiu,
+Lattice Sketch leverages established scaling laws and does not re-                            Junlong Li, Junxiao Song, Kai Dong, Kai Hu, Kaige Gao, Kang Guan, Kexin Huang,
+quire waiting for slow quality signals, enabling faster iteration.                            Kuai Yu, Lean Wang, Lecong Zhang, Lei Xu, Leyi Xia, Liang Zhao, Litong Wang,
+Limitations While we strive to share generalizable deployment                                 Liyue Zhang, Meng Li, Miaojun Wang, Mingchuan Zhang, Minghua Zhang,
+                                                                                              Minghui Tang, Mingming Li, Ning Tian, Panpan Huang, Peiyi Wang, Peng
+insights with the broader community, some findings contain Meta-                              Zhang, Qiancheng Wang, Qihao Zhu, Qinyu Chen, Qiushi Du, R. J. Chen, R. L.
+specific elements. For example, Meta’s business requirements and                              Jin, Ruiqi Ge, Ruisong Zhang, Ruizhe Pan, Runji Wang, Runxin Xu, Ruoyu Zhang,
+                                                                                              Ruyi Chen, S. S. Li, Shanghao Lu, Shangyan Zhou, Shanhuang Chen, Shaoqing
+partner relationships define the problem spaces of by Lattice.                                Wu, Shengfeng Ye, Shengfeng Ye, Shirong Ma, Shiyu Wang, Shuang Zhou,
+7    Conclusion                                                                               Shuiping Yu, Shunfeng Zhou, Shuting Pan, T. Wang, Tao Yun, Tian Pei, Tianyu
+                                                                                              Sun, W. L. Xiao, Wangding Zeng, Wanjia Zhao, Wei An, Wen Liu, Wenfeng
+Through comprehensive model space redesign that integrates port-                              Liang, Wenjun Gao, Wenqin Yu, Wentao Zhang, X. Q. Li, Xiangyue Jin, Xianzu
+                                                                                              Wang, Xiao Bi, Xiaodong Liu, Xiaohan Wang, Xiaojin Shen, Xiaokang Chen,
+folio consolidation, data unification, architectural innovations, and                         Xiaokang Zhang, Xiaosha Chen, Xiaotao Nie, Xiaowen Sun, Xiaoxiang Wang,
+efficiency optimizations, Meta Lattice demonstrates substantial real-                         Xin Cheng, Xin Liu, Xin Xie, Xingchao Liu, Xingkai Yu, Xinnan Song, Xinxia
+world impact: 10% improvement in revenue-driving top-line met-                                Shan, Xinyi Zhou, Xinyu Yang, Xinyuan Li, Xuecheng Su, Xuheng Lin, Y. K.
+                                                                                              Li, Y. Q. Wang, Y. X. Wei, Y. X. Zhu, Yang Zhang, Yanhong Xu, Yanhong Xu,
+rics, 11.5% enhancement in ads quality, 6% increase in conversion                             Yanping Huang, Yao Li, Yao Zhao, Yaofeng Sun, Yaohui Li, Yaohui Wang, Yi Yu,
+rates, and 20% capacity savings. These results validate Lattice’s                             Yi Zheng, Yichao Zhang, Yifan Shi, Yiliang Xiong, Ying He, Ying Tang, Yishi
+effectiveness in bridging the gap between theoretical advances in                             Piao, Yisong Wang, Yixuan Tan, Yiyang Ma, Yiyuan Liu, Yongqiang Guo, Yu Wu,
+                                                                                              Yuan Ou, Yuchen Zhu, Yuduan Wang, Yue Gong, Yuheng Zou, Yujia He, Yukun
+recommendation systems and practical industry deployment.                                     Zha, Yunfan Xiong, Yunxian Ma, Yuting Yan, Yuxiang Luo, Yuxiang You, Yuxuan
+                                                                                              Liu, Yuyang Zhou, Z. F. Wu, Z. Z. Ren, Zehui Ren, Zhangli Sha, Zhe Fu, Zhean
+References                                                                                    Xu, Zhen Huang, Zhen Zhang, Zhenda Xie, Zhengyan Zhang, Zhewen Hao,
+  [1] [n. d.]. Ads Quality. https://www.facebook.com/business/help/423781975167984.           Zhibin Gou, Zhicheng Ma, Zhigang Yan, Zhihong Shao, Zhipeng Xu, Zhiyu Wu,
+      [Accessed 11-07-2025].                                                                  Zhongyu Zhang, Zhuoshu Li, Zihui Gu, Zijia Zhu, Zijun Liu, Zilin Li, Ziwei Xie,
+  [2] [n. d.]. dual annealing scipy manual — docs.scipy.org. https://docs.scipy.org/          Ziyang Song, Ziyi Gao, and Zizheng Pan. 2025. DeepSeek-V3 Technical Report.
+      doc/scipy/reference/generated/scipy.optimize.dual_annealing.html. [Accessed             arXiv:2412.19437 [cs.CL] https://arxiv.org/abs/2412.19437
+      05-07-2025].                                                                       [18] Mostafa Dehghani, Josip Djolonga, Basil Mustafa, Piotr Padlewski, Jonathan
+  [3] [n. d.].     Our next generation Meta Training and Inference Acceler-                   Heek, Justin Gilmer, Andreas Peter Steiner, Mathilde Caron, Robert Geirhos,
+      ator.      https://ai.meta.com/blog/next-generation-meta-training-inference-            Ibrahim Alabdulmohsin, et al. 2023. Scaling vision transformers to 22 billion
+      accelerator-AI-MTIA/. (Accessed on 05/29/2024).                                         parameters. In International Conference on Machine Learning. PMLR, 7480–7512.
+  [4] Alessandro Achille, Michael Lam, Rahul Tewari, Avinash Ravichandran,               [19] Chaorui Deng, Deyao Zhu, Kunchang Li, Chenhui Gou, Feng Li, Zeyu Wang,
+      Subhransu Maji, Charless C Fowlkes, Stefano Soatto, and Pietro Perona. 2019.            Shu Zhong, Weihao Yu, Xiaonan Nie, Ziang Song, Guang Shi, and Haoqi Fan.
+      Task2vec: Task embedding for meta-learning. In Proceedings of the IEEE/CVF              2025. Emerging Properties in Unified Multimodal Pretraining. arXiv preprint
+      international conference on computer vision. 6430–6439.                                 arXiv:2505.14683 (2025).
+  [5] Muhammad Adnan, Yassaman Ebrahimzadeh Maboud, Divya Mahajan, and                   [20] Mark Dredze, Alex Kulesza, and Koby Crammer. 2010. Multi-domain learning
+      Prashant J. Nair. 2023. Ad-Rec: Advanced Feature Interactions to Address                by confidence-weighted parameter combination. Machine Learning 79 (2010),
+      Covariate-Shifts in Recommendation Networks. arXiv:2308.14902 [cs.IR]                   123–149.
+  [6] Newsha Ardalani, Carole-Jean Wu, Zeliang Chen, Bhargav Bhushanam, and              [21] Thomas Elsken, Jan Hendrik Metzen, and Frank Hutter. 2019. Neural architecture
+      Adnan Aziz. 2022. Understanding scaling laws for recommendation models.                 search: A survey. Journal of Machine Learning Research 20, 55 (2019), 1–21.
+      arXiv preprint arXiv:2208.08489 (2022).                                            [22] Chris Fifty, Ehsan Amid, Zhe Zhao, Tianhe Yu, Rohan Anil, and Chelsea Finn.
+  [7] Jimmy Lei Ba, Jamie Ryan Kiros, and Geoffrey E. Hinton. 2016. Layer Normal-             2021. Efficiently identifying task groupings for multi-task learning. Advances
+      ization. arXiv:1607.06450 [stat.ML] https://arxiv.org/abs/1607.06450                    in Neural Information Processing Systems 34 (2021), 27503–27516.
+  [8] J. Baxter. 2000. A Model of Inductive Bias Learning. Journal of Artificial         [23] Shijie Geng, Juntao Tan, Shuchang Liu, Zuohui Fu, and Yongfeng Zhang. 2023.
+      Intelligence Research 12 (March 2000), 149–198. https://doi.org/10.1613/jair.731        Vip5: Towards multimodal foundation models for recommendation. arXiv
+  [9] James Bergstra, Dan Yamins, David D Cox, et al. 2013. Hyperopt: A Python                preprint arXiv:2305.14302 (2023).
+      Library for Optimizing the Hyperparameters of Machine Learning Algorithms.         [24] Dirk Groeneveld, Iz Beltagy, Pete Walsh, Akshita Bhagia, Rodney Kinney,
+      SciPy 13 (2013), 20.                                                                    Oyvind Tafjord, Ananya Harsh Jha, Hamish Ivison, Ian Magnusson, Yizhong
+ [10] Rishi Bommasani, Drew A Hudson, Ehsan Adeli, Russ Altman, Simran Arora,                 Wang, Shane Arora, David Atkinson, Russell Authur, Khyathi Raghavi Chandu,
+      Sydney von Arx, Michael S Bernstein, Jeannette Bohg, Antoine Bosselut, Emma             Arman Cohan, Jennifer Dumas, Yanai Elazar, Yuling Gu, Jack Hessel, Tushar
+      Brunskill, et al. 2021. On the opportunities and risks of foundation models.            Khot, William Merrill, Jacob Morrison, Niklas Muennighoff, Aakanksha Naik,
+      arXiv preprint arXiv:2108.07258 (2021).                                                 Crystal Nam, Matthew E. Peters, Valentina Pyatkin, Abhilasha Ravichander,
+ [11] Leo Breiman. 2001. Random forests. Machine learning 45 (2001), 5–32.                    Dustin Schwenk, Saurabh Shah, Will Smith, Emma Strubell, Nishant Subramani,
+ [12] Jianxin Chang, Chenbin Zhang, Yiqun Hui, Dewei Leng, Yanan Niu, Yang Song,              Mitchell Wortsman, Pradeep Dasigi, Nathan Lambert, Kyle Richardson, Luke
+      and Kun Gai. 2023. PEPNet: Parameter and Embedding Personalized Network                 Zettlemoyer, Jesse Dodge, Kyle Lo, Luca Soldaini, Noah A. Smith, and Han-
+      for Infusing with Personalized Prior Information. In Proceedings of the 29th ACM        naneh Hajishirzi. 2024. OLMo: Accelerating the Science of Language Models.
+Conference acronym ’XX, June 03–05, 2018, Woodstock, NY                                                                                                   Meta Lattice Team
+
+
+      arXiv:2402.00838 [cs.CL] https://arxiv.org/abs/2402.00838                                System. In Proceedings of the 27th ACM International Conference on Multimedia
+ [25] Xingzhuo Guo, Junwei Pan, Ximei Wang, Baixu Chen, Jie Jiang, and Mingsheng               (Nice, France) (MM ’19). Association for Computing Machinery, New York, NY,
+      Long. 2023. On the Embedding Collapse when Scaling up Recommendation                     USA, 1464–1472. https://doi.org/10.1145/3343031.3350950
+      Models. arXiv preprint arXiv:2310.04400 (2023).                                     [46] Jianxun Lian, Xiaohuan Zhou, Fuzheng Zhang, Zhongxia Chen, Xing Xie, and
+ [26] Vineet Gupta, Tomer Koren, and Yoram Singer. 2018. Shampoo: Preconditioned               Guangzhong Sun. 2018. xdeepfm: Combining explicit and implicit feature
+      Stochastic Tensor Optimization. arXiv:1802.09568 [cs.LG] https://arxiv.org/              interactions for recommender systems. In Proceedings of the 24th ACM SIGKDD
+      abs/1802.09568                                                                           international conference on knowledge discovery & data mining. 1754–1763.
+ [27] Xinran He, Junfeng Pan, Ou Jin, Tianbing Xu, Bo Liu, Tao Xu, Yanxin Shi,            [47] Xiangru Lian, Binhang Yuan, Xuefeng Zhu, Yulong Wang, Yongjun He,
+      Antoine Atallah, Ralf Herbrich, Stuart Bowers, and Joaquin Quiñonero Candela.            Honghuan Wu, Lei Sun, Haodong Lyu, Chengjun Liu, Xing Dong, Yiqiao Liao,
+      2014. Practical Lessons from Predicting Clicks on Ads at Facebook. In Proceedings        Mingnan Luo, Congfei Zhang, Jingru Xie, Haonan Li, Lei Chen, Renjie Huang,
+      of the Eighth International Workshop on Data Mining for Online Advertising (New          Jianying Lin, Chengchun Shu, Xuezhong Qiu, Zhishan Liu, Dongying Kong, Lei
+      York, NY, USA) (ADKDD’14). Association for Computing Machinery, New York,                Yuan, Hai Yu, Sen Yang, Ce Zhang, and Ji Liu. 2021. Persia: An open, hybrid
+      NY, USA, 1–9. https://doi.org/10.1145/2648584.2648589                                    system scaling deep learning-based recommenders up to 100 trillion parameters.
+ [28] Yun He, Xue Feng, Cheng Cheng, Geng Ji, Yunsong Guo, and James Caverlee.                 (Nov. 2021). arXiv:2111.05897 [cs.LG]
+      2022. Metabalance: improving multi-task recommendations via adapting gradi-         [48] Mingfu Liang, Xi Liu, Rong Jin, Boyang Liu, Qiuling Suo, Qinghai Zhou, Song
+      ent magnitudes of auxiliary tasks. In Proceedings of the ACM Web Conference              Zhou, Laming Chen, Hua Zheng, Zhiyuan Li, Shali Jiang, Jiyan Yang, Xiaozhen
+      2022. 2205–2215.                                                                         Xia, Fan Yang, Yasmine Badr, Ellie Wen, Shuyu Xu, Hansey Chen, Zhengyu
+ [29] Geoffrey Hinton, Oriol Vinyals, and Jeff Dean. 2015. Distilling the knowledge            Zhang, and Huayu Li. 2025. External Large Foundation Model: How to Efficiently
+      in a neural network. arXiv preprint arXiv:1503.02531 (2015).                             Serve Trillions of Parameters for Online Ads Recommendation. https://doi.org/
+ [30] Jordan Hoffmann, Sebastian Borgeaud, Arthur Mensch, Elena Buchatskaya,                   10.48550/arXiv.2502.17494
+      Trevor Cai, Eliza Rutherford, Diego de Las Casas, Lisa Anne Hendricks, Johannes     [49] Wanchao Liang, Tianyu Liu, Less Wright, Will Constable, Andrew Gu, Chien-
+      Welbl, Aidan Clark, Tom Hennigan, Eric Noland, Katie Millican, George van den            Chin Huang, Iris Zhang, Wei Feng, Howard Huang, Junjie Wang, Sanket Puran-
+      Driessche, Bogdan Damoc, Aurelia Guy, Simon Osindero, Karen Simonyan,                    dare, Gokul Nadathur, and Stratos Idreos. 2024. TorchTitan: One-stop PyTorch
+      Erich Elsen, Jack W. Rae, Oriol Vinyals, and Laurent Sifre. 2022. Training               native solution for production ready LLM pre-training. arXiv:2410.06511 [cs.CL]
+      Compute-Optimal Large Language Models. arXiv:2203.15556 [cs.CL] https:                   https://arxiv.org/abs/2410.06511
+      //arxiv.org/abs/2203.15556                                                          [50] Weixin Liang, Lili Yu, Liang Luo, Srinivasan Iyer, Ning Dong, Chunting Zhou,
+ [31] Andrew Howard, Mark Sandler, Grace Chu, Liang-Chieh Chen, Bo Chen, Mingx-                Gargi Ghosh, Mike Lewis, Wen tau Yih, Luke Zettlemoyer, and Xi Victoria
+      ing Tan, Weijun Wang, Yukun Zhu, Ruoming Pang, Vijay Vasudevan, Quoc V. Le,              Lin. 2024. Mixture-of-Transformers: A Sparse and Scalable Architecture for
+      and Hartwig Adam. 2019. Searching for MobileNetV3. arXiv:1905.02244 [cs.CV]              Multi-Modal Foundation Models. arXiv:2411.04996 [cs.CL] https://arxiv.org/
+      https://arxiv.org/abs/1905.02244                                                         abs/2411.04996
+ [32] Gao Huang, Zhuang Liu, Laurens Van Der Maaten, and Kilian Q. Weinberger.            [51] Chao Liao, Liyang Liu, Xun Wang, Zhengxiong Luo, Xinyu Zhang, Wenliang
+      2017. Densely Connected Convolutional Networks. In 2017 IEEE Conference on               Zhao, Jie Wu, Liang Li, Zhi Tian, and Weilin Huang. 2025. Mogao: An Omni Foun-
+      Computer Vision and Pattern Recognition (CVPR). 2261–2269. https://doi.org/10.           dation Model for Interleaved Multi-Modal Generation. arXiv:2505.05472 [cs.CV]
+      1109/CVPR.2017.243                                                                       https://arxiv.org/abs/2505.05472
+ [33] Dmytro Ivchenko, Dennis Van Der Staay, Colin Taylor, Xing Liu, Will Feng,           [52] Xi Victoria Lin, Akshat Shrivastava, Liang Luo, Srinivasan Iyer, Mike Lewis,
+      Rahul Kindi, Anirudh Sudarshan, and Shahin Sefati. 2022. Torchrec: a pytorch             Gargi Gosh, Luke Zettlemoyer, and Armen Aghajanyan. 2024. MoMa: Ef-
+      domain library for recommendation systems. In Proceedings of the 16th ACM                ficient Early-Fusion Pre-training with Mixture of Modality-Aware Experts.
+      Conference on Recommender Systems. 482–483.                                              arXiv:2407.21770 [cs.AI] https://arxiv.org/abs/2407.21770
+ [34] Himanshu Jain, Yashoteja Prabhu, and Manik Varma. 2016. Extreme multi-label         [53] Chengkai Liu, Jianghao Lin, Jianling Wang, Hanzhou Liu, and James Caverlee.
+      loss functions for recommendation, tagging, ranking & other missing label                2024. Mamba4rec: Towards efficient sequential recommendation with selective
+      applications. In Proceedings of the 22nd ACM SIGKDD international conference             state space models. arXiv preprint arXiv:2403.03900 (2024).
+      on knowledge discovery and data mining. 935–944.                                    [54] Junning Liu, Xinjian Li, Bo An, Zijie Xia, and Xu Wang. 2022. Multi-faceted
+ [35] Jared Kaplan, Sam McCandlish, Tom Henighan, Tom B Brown, Benjamin Chess,                 hierarchical multi-task learning for recommender systems. In Proceedings of the
+      Rewon Child, Scott Gray, Alec Radford, Jeffrey Wu, and Dario Amodei. 2020.               31st ACM International Conference on Information & Knowledge Management.
+      Scaling laws for neural language models. arXiv preprint arXiv:2001.08361 (2020).         3332–3341.
+ [36] Daya Khudia, Jianyu Huang, Protonu Basu, Summer Deng, Haixin Liu, Jongsoo           [55] Qidong Liu, Jiaxi Hu, Yutian Xiao, Xiangyu Zhao, Jingtong Gao, Wanyu Wang,
+      Park, and Mikhail Smelyanskiy. 2021. FBGEMM: Enabling High-Performance                   Qing Li, and Jiliang Tang. 2024. Multimodal Recommender Systems: A Survey.
+      Low-Precision Deep Learning Inference. arXiv:2101.05615 [cs.LG] https:                   arXiv:2302.03883 [cs.IR] https://arxiv.org/abs/2302.03883
+      //arxiv.org/abs/2101.05615                                                          [56] Zhaocheng Liu, Zhongxiang Fan, Jian Liang, Dongying Kong, and Han Li. 2023.
+ [37] Scott Kirkpatrick, C Daniel Gelatt Jr, and Mario P Vecchi. 1983. Optimization            Multi-epoch learning for deep Click-Through Rate prediction models. arXiv
+      by simulated annealing. science 220, 4598 (1983), 671–680.                               [cs.IR] (May 2023).
+ [38] Sofia Ira Ktena, Alykhan Tejani, Lucas Theis, Pranay Kumar Myana, Deepak            [57] Liang Luo, Jacob Nelson, Luis Ceze, Amar Phanishayee, and Arvind Krishna-
+      Dilipkumar, Ferenc Huszár, Steven Yoo, and Wenzhe Shi. 2019. Addressing de-              murthy. 2018. Parameter hub: a rack-scale parameter server for distributed
+      layed feedback for continuous training with neural networks in CTR prediction.           deep neural network training. In Proceedings of the ACM Symposium on Cloud
+      In Proceedings of the 13th ACM conference on recommender systems. 187–195.               Computing. 41–54.
+ [39] Kuaishou. [n. d.]. https://www.kuaishou.com/activity/uimc                           [58] Liang Luo, Peter West, Jacob Nelson, Arvind Krishnamurthy, and Luis Ceze.
+ [40] Zerong Lan, Yingyi Zhang, and Xianneng Li. 2023. M3REC: A Meta-based Multi-              2020. Plink: Discovering and exploiting locality for accelerated distributed
+      scenario Multi-task Recommendation Framework. In Proceedings of the 17th                 training on the public cloud. Proceedings of Machine Learning and Systems 2
+      ACM Conference on Recommender Systems (Singapore, Singapore) (RecSys ’23).               (2020), 82–97.
+      Association for Computing Machinery, New York, NY, USA, 771–776. https:             [59] Liang Luo, Buyun Zhang, Michael Tsang, Yinbin Ma, Ching-Hsiang Chu, Yuxin
+      //doi.org/10.1145/3604915.3608828                                                        Chen, Shen Li, Yuchen Hao, Yanli Zhao, Guna Lakshminarayanan, et al. 2024.
+ [41] Chao Li, Zhiyuan Liu, Mengmeng Wu, Yuchi Xu, Huan Zhao, Pipei Huang,                     Disaggregated Multi-Tower: Topology-aware Modeling Technique for Efficient
+      Guoliang Kang, Qiwei Chen, Wei Li, and Dik Lun Lee. 2019. Multi-interest                 Large-Scale Recommendation. arXiv preprint arXiv:2403.00877 (2024).
+      network with dynamic routing for recommendation at Tmall. In Proceedings of         [60] Jiaqi Ma, Zhe Zhao, Xinyang Yi, Jilin Chen, Lichan Hong, and Ed H Chi. 2018.
+      the 28th ACM international conference on information and knowledge management.           Modeling task relationships in multi-task learning with multi-gate mixture-
+      2615–2623.                                                                               of-experts. In Proceedings of the 24th ACM SIGKDD international conference on
+ [42] Danwei Li, Zhengyu Zhang, Siyang Yuan, Mingze Gao, Weilin Zhang, Chaofei                 knowledge discovery & data mining. 1930–1939.
+      Yang, Xi Liu, and Jiyan Yang. 2023. AdaTT: Adaptive Task-to-Task Fusion             [61] Xiao Ma, Liqin Zhao, Guan Huang, Zhi Wang, Zelin Hu, Xiaoqiang Zhu, and Kun
+      Network for Multitask Learning in Recommendations. In Proceedings of the 29th            Gai. 2018. Entire space multi-task model: An effective approach for estimating
+      ACM SIGKDD Conference on Knowledge Discovery and Data Mining. 4370–4379.                 post-click conversion rate. In The 41st International ACM SIGIR Conference on
+ [43] Pan Li and Alexander Tuzhilin. 2020. Ddtcdr: Deep dual transfer cross domain             Research & Development in Information Retrieval. 1137–1140.
+      recommendation. In Proceedings of the 13th International Conference on Web          [62] Aakarsh Malhotra, Mayank Vatsa, and Richa Singh. 2022. Dropped scheduled
+      Search and Data Mining. 331–339.                                                         task: Mitigating negative transfer in multi-task learning using dynamic task
+ [44] Shen Li, Yanli Zhao, Rohan Varma, Omkar Salpekar, Pieter Noordhuis, Teng                 dropping. Transactions on Machine Learning Research (2022).
+      Li, Adam Paszke, Jeff Smith, Brian Vaughan, Pritam Damania, and Soumith             [63] Kelong Mao, Jieming Zhu, Liangcai Su, Guohao Cai, Yuru Li, and Zhenhua Dong.
+      Chintala. 2020. PyTorch Distributed: Experiences on Accelerating Data Parallel           2023. FinalMLP: An Enhanced Two-Stream MLP Model for CTR Prediction.
+      Training. arXiv:2006.15704 [cs.DC] https://arxiv.org/abs/2006.15704                      arXiv preprint arXiv:2304.00902 (2023).
+ [45] Yongqi Li, Meng Liu, Jianhua Yin, Chaoran Cui, Xin-Shun Xu, and Liqiang Nie.
+      2019. Routing Micro-videos via A Temporal Graph-guided Recommendation
+Meta Lattice: Model Space Redesign for Cost-Effective Industry-Scale Ads Recommendations                           Conference acronym ’XX, June 03–05, 2018, Woodstock, NY
+
+
+ [64] Andreas Maurer. 2006. Bounds for Linear Multi-Task Learning. J. Mach. Learn.         [86] Rainer Storn and Kenneth Price. 1997. Differential evolution–a simple and
+      Res. 7 (Dec. 2006), 117–139.                                                              efficient heuristic for global optimization over continuous spaces. Journal of
+ [65] Meta AI. 2023. AI Ads: Performance and Efficiency with Meta Lattice. https:               global optimization 11 (1997), 341–359.
+      //ai.meta.com/blog/ai-ads-performance-efficiency-meta-lattice/                       [87] Jianlin Su, Yu Lu, Shengfeng Pan, Ahmed Murtadha, Bo Wen, and Yunfeng
+ [66] Meta Production Engineering. 2024.           The Andromeda Advantage: How                 Liu. 2023. RoFormer: Enhanced Transformer with Rotary Position Embedding.
+      Meta’s Next-Gen Retrieval Engine Automates Personalized Ads.               https:         arXiv:2104.09864 [cs.CL] https://arxiv.org/abs/2104.09864
+      //engineering.fb.com/2024/12/02/production-engineering/meta-andromeda-               [88] Hongyan Tang, Junning Liu, Ming Zhao, and Xudong Gong. 2020. Progressive
+      advantage-automation-next-gen-personalized-ads-retrieval-engine/                          layered extraction (ple): A novel multi-task learning (mtl) model for personalized
+ [67] Ishan Misra, Abhinav Shrivastava, Abhinav Gupta, and Martial Hebert. 2016.                recommendations. In Proceedings of the 14th ACM Conference on Recommender
+      Cross-stitch networks for multi-task learning. In Proceedings of the IEEE confer-         Systems. 269–278.
+      ence on computer vision and pattern recognition. 3994–4003.                          [89] Jiaxi Tang, Yoel Drori, Daryl Chang, Maheswaran Sathiamoorthy, Justin Gilmer,
+ [68] Taylor Mordan, Nicolas Thome, Gilles Henaff, and Matthieu Cord. 2018. Revis-              Li Wei, Xinyang Yi, Lichan Hong, and Ed H Chi. 2023. Improving training
+      iting multi-task learning with rock: a deep residual auxiliary block for visual           stability for multitask ranking models in recommender systems. In Proceedings
+      detection. Advances in neural information processing systems 31 (2018).                   of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining.
+ [69] Dheevatsa Mudigere, Yuchen Hao, Jianyu Huang, Andrew Tulloch, Srinivas                    4882–4893.
+      Sridharan, Xing Liu, Mustafa Ozdal, Jade Nie, Jongsoo Park, Liang Luo, et al.        [90] Jiaxi Tang, Yoel Drori, Daryl Chang, Maheswaran Sathiamoorthy, Justin Gilmer,
+      2021. High-performance, distributed training of large-scale deep learning rec-            Li Wei, Xinyang Yi, Lichan Hong, and Ed H Chi. 2023. Improving Training
+      ommendation models. arXiv preprint arXiv:2104.05158 (2021).                               Stability for Multitask Ranking Models in Recommender Systems. arXiv preprint
+ [70] Keerthiram Murugesan, Hanxiao Liu, Jaime Carbonell, and Yiming Yang. 2016.                arXiv:2302.09178 (2023).
+      Adaptive smoothed online multi-task learning. Advances in Neural Information         [91] Linwei Tao, Minjing Dong, and Chang Xu. 2024. Feature Clipping for Uncertainty
+      Processing Systems 29 (2016).                                                             Calibration. arXiv:2410.19796 [cs.CV] https://arxiv.org/abs/2410.19796
+ [71] Rafael Müller, Simon Kornblith, and Geoffrey Hinton. 2020. When Does Label           [92] Chameleon Team. 2024. Chameleon: Mixed-Modal Early-Fusion Foundation
+      Smoothing Help? arXiv:1906.02629 [cs.LG] https://arxiv.org/abs/1906.02629                 Models. arXiv:2405.09818 [cs.CL]
+ [72] Sharan Narang, Hyung Won Chung, Yi Tay, William Fedus, Thibault Fevry,               [93] Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+      Michael Matena, Karishma Malkan, Noah Fiedel, Noam Shazeer, Zhenzhong                     Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. 2017. Attention is all you
+      Lan, et al. 2021. Do transformer modifications transfer across implementations            need. Advances in neural information processing systems 30 (2017).
+      and applications? arXiv preprint arXiv:2102.11972 (2021).                            [94] Ruoxi Wang, Rakesh Shivanna, Derek Cheng, Sagar Jain, Dong Lin, Lichan Hong,
+ [73] Maxim Naumov, Dheevatsa Mudigere, Hao-Jun Michael Shi, Jianyu Huang,                      and Ed Chi. 2021. Dcn v2: Improved deep & cross network and practical lessons
+      Narayanan Sundaraman, Jongsoo Park, Xiaodong Wang, Udit Gupta, Carole-                    for web-scale learning to rank systems. In Proceedings of the web conference 2021.
+      Jean Wu, Alisson G Azzolini, et al. 2019. Deep learning recommendation                    1785–1797.
+      model for personalization and recommendation systems. arXiv preprint                 [95] Yichao Wang, Huifeng Guo, Bo Chen, Weiwen Liu, Zhirong Liu, Qi Zhang,
+      arXiv:1906.00091 (2019).                                                                  Zhicheng He, Hongkun Zheng, Weiwei Yao, Muyu Zhang, et al. 2022. Causalint:
+ [74] Sinno Jialin Pan and Qiang Yang. 2010. A Survey on Transfer Learning. IEEE                Causal inspired intervention for multi-scenario recommendation. In Proceedings
+      Transactions on Knowledge and Data Engineering 22, 10 (2010), 1345–1359. https:           of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining.
+      //doi.org/10.1109/TKDE.2009.191                                                           4090–4099.
+ [75] Jongsoo Park, Maxim Naumov, Protonu Basu, Summer Deng, Aravind Kalaiah,              [96] Yuyan Wang, Xuezhi Wang, Alex Beutel, Flavien Prost, Jilin Chen, and Ed H Chi.
+      Daya Shanker Khudia, James Law, Parth Malani, Andrey Malevich, Nadathur                   2021. Understanding and improving fairness-accuracy trade-offs in multi-task
+      Satish, Juan Miguel Pino, Martin Schatz, Alexander Sidorov, Viswanath Sivaku-             learning. In Proceedings of the 27th ACM SIGKDD Conference on Knowledge
+      mar, Andrew Tulloch, Xiaodong Wang, Yiming Wu, Hector Yuen, Utku Diril,                   Discovery & Data Mining. 1748–1757.
+      Dmytro Dzhulgakov, Kim M. Hazelwood, Bill Jia, Yangqing Jia, Lin Qiao, Vijay         [97] Yanshi Wang, Jie Zhang, Qing Da, and Anxiang Zeng. 2020. Delayed feed-
+      Rao, Nadav Rotem, Sungjoo Yoo, and Mikhail Smelyanskiy. 2018. Deep Learning               back modeling for the entire space conversion rate prediction. arXiv preprint
+      Inference in Facebook Data Centers: Characterization, Performance Optimiza-               arXiv:2011.11826 (2020).
+      tions and Hardware Implications. CoRR abs/1811.09886 (2018). arXiv:1811.09886        [98] Yuyan Wang, Zhe Zhao, Bo Dai, Christopher Fifty, Dong Lin, Lichan Hong, Li
+      http://arxiv.org/abs/1811.09886                                                           Wei, and Ed H Chi. 2022. Can small heads help? understanding and improving
+ [76] Razvan Pascanu, Tomas Mikolov, and Yoshua Bengio. 2013. On the difficulty                 multi-task generalization. In Proceedings of the ACM Web Conference 2022. 3009–
+      of training recurrent neural networks. In International conference on machine             3019.
+      learning. Pmlr, 1310–1318.                                                           [99] Zhiqiang Wang, Qingyun She, and Junlin Zhang. 2021. MaskNet: Introducing
+ [77] Anastasia Pentina and Christoph H Lampert. 2017. Multi-task learning with                 feature-wise multiplication to CTR ranking models by instance-guided mask.
+      labeled and unlabeled tasks. In International conference on machine learning.             arXiv preprint arXiv:2102.07619 (2021).
+      PMLR, 2807–2816.                                                                    [100] Chengyue Wu, Xiaokang Chen, Zhiyu Wu, Yiyang Ma, Xingchao Liu, Zizheng
+ [78] Prajit Ramachandran, Barret Zoph, and Quoc V. Le. 2017. Swish: a Self-Gated               Pan, Wen Liu, Zhenda Xie, Xingkai Yu, Chong Ruan, and Ping Luo. 2024. Janus:
+      Activation Function. arXiv: Neural and Evolutionary Computing (2017). https:              Decoupling Visual Encoding for Unified Multimodal Understanding and Gener-
+      //api.semanticscholar.org/CorpusID:196158220                                              ation. arXiv:2410.13848 [cs.CV] https://arxiv.org/abs/2410.13848
+ [79] Colfax Research. 2025. DeepSeek-R1 and FP8 Mixed-Precision Training. https:         [101] Carole-Jean Wu, Ramya Raghavendra, Udit Gupta, Bilge Acun, Newsha Ardalani,
+      //research.colfax-intl.com/deepseek-r1-and-fp8-mixed-precision-training/ Dis-             Kiwan Maeng, Gloria Chang, Fiona Aga, Jinshi Huang, Charles Bai, et al. 2022.
+      cussion of FP8 accumulation strategies including tensor core vs CUDA core                 Sustainable ai: Environmental implications, challenges and opportunities. Pro-
+      accumulation.                                                                             ceedings of Machine Learning and Systems 4 (2022), 795–813.
+ [80] Alvin E Roth. 1988. The Shapley value: essays in honor of Lloyd S. Shapley.         [102] Dongbo Xi, Zhen Chen, Peng Yan, Yinger Zhang, Yongchun Zhu, Fuzhen Zhuang,
+      Cambridge University Press.                                                               and Yu Chen. 2021. Modeling the sequential dependence among audience multi-
+ [81] Shibani Santurkar, Dimitris Tsipras, Andrew Ilyas, and Aleksander Madry. 2018.            step conversions with multi-task learning in targeted display advertising. In
+      How does batch normalization help optimization? Advances in neural informa-               Proceedings of the 27th ACM SIGKDD Conference on Knowledge Discovery & Data
+      tion processing systems 31 (2018).                                                        Mining. 3745–3755.
+ [82] Xiang-Rong Sheng, Liqin Zhao, Guorui Zhou, Xinyao Ding, Binding Dai, Qiang          [103] Da Xiao, Qingye Meng, Shengping Li, and Xingyuan Yuan. 2025. MUDDFormer:
+      Luo, Siran Yang, Jingshan Lv, Chi Zhang, Hongbo Deng, et al. 2021. One model              Breaking Residual Bottlenecks in Transformers via Multiway Dynamic Dense
+      to serve all: Star topology adaptive recommender for multi-domain ctr predic-             Connections. arXiv:2502.12170 [cs.LG] https://arxiv.org/abs/2502.12170
+      tion. In Proceedings of the 30th ACM International Conference on Information &      [104] Jiayi Xin, Sukwon Yun, Jie Peng, Inyoung Choi, Jenna L. Ballard, Tianlong
+      Knowledge Management. 4104–4113.                                                          Chen, and Qi Long. 2025. I2MoE: Interpretable Multimodal Interaction-aware
+ [83] Kyuyong Shin, Hanock Kwak, Su Young Kim, Max Nihlén Ramström, Jisu Jeong,                 Mixture-of-Experts. arXiv:2505.19190 [cs.LG] https://arxiv.org/abs/2505.19190
+      Jung-Woo Ha, and Kyung-Min Kim. 2023. Scaling law for recommendation                [105] Bencheng Yan, Pengjie Wang, Kai Zhang, Feng Li, Hongbo Deng, Jian Xu, and Bo
+      models: Towards general-purpose user representations. In Proceedings of the               Zheng. 2022. APG: Adaptive Parameter Generation Network for Click-Through
+      AAAI Conference on Artificial Intelligence, Vol. 37. 4596–4604.                           Rate Prediction. In Advances in Neural Information Processing Systems, S. Koyejo,
+ [84] Jasper Snoek, Hugo Larochelle, and Ryan P Adams. 2012. Practical bayesian                 S. Mohamed, A. Agarwal, D. Belgrave, K. Cho, and A. Oh (Eds.), Vol. 35. Curran
+      optimization of machine learning algorithms. Advances in neural information               Associates, Inc., 24740–24752. https://proceedings.neurips.cc/paper_files/paper/
+      processing systems 25 (2012).                                                             2022/file/9cd0c57170f48520749d5ae62838241f-Paper-Conference.pdf
+ [85] Weiping Song, Chence Shi, Zhiping Xiao, Zhijian Duan, Yewen Xu, Ming Zhang,         [106] Huan Yan, Xiangning Chen, Chen Gao, Yong Li, and Depeng Jin. 2019. Deepapf:
+      and Jian Tang. 2019. Autoint: Automatic feature interaction learning via self-            Deep attentive probabilistic factorization for multi-site video recommendation.
+      attentive neural networks. In Proceedings of the 28th ACM international confer-           TC 2, 130 (2019), 17–883.
+      ence on information and knowledge management. 1161–1170.
+Conference acronym ’XX, June 03–05, 2018, Woodstock, NY                                                                                                   Meta Lattice Team
+
+
+[107] Enneng Yang, Junwei Pan, Ximei Wang, Haibin Yu, Li Shen, Xihua Chen, Lei                 https://doi.org/10.1145/3477495.3531723
+      Xiao, Jie Jiang, and Guibing Guo. 2023. Adatask: A task-aware adaptive learning    [122] Jieming Zhu, Jinyang Liu, Shuai Yang, Qi Zhang, and Xiuqiang He. 2021. Open
+      rate approach to multi-task learning. In Proceedings of the AAAI Conference on           Benchmarking for Click-Through Rate Prediction. In CIKM ’21: The 30th ACM
+      Artificial Intelligence, Vol. 37. 10745–10753.                                           International Conference on Information and Knowledge Management, Virtual
+[108] Xuanhua Yang, Xiaoyu Peng, Penghui Wei, Shaoguo Liu, Liang Wang, and Bo                  Event, Queensland, Australia, November 1 - 5, 2021, Gianluca Demartini, Guido
+      Zheng. 2022. Adasparse: Learning adaptively sparse structures for multi-domain           Zuccon, J. Shane Culpepper, Zi Huang, and Hanghang Tong (Eds.). ACM, 2759–
+      click-through rate prediction. In Proceedings of the 31st ACM International Con-         2769. https://doi.org/10.1145/3459637.3482486
+      ference on Information & Knowledge Management. 4635–4639.                          [123] Jieming Zhu, Jinyang Liu, Shuai Yang, Qi Zhang, and Xiuqiang He. 2021. Open
+[109] Taisuke Yasuda, Mohammadhossein Bateni, Lin Chen, Matthew Fahrbach, Gang                 Benchmarking for Click-Through Rate Prediction. In Proceedings of the 30th
+      Fu, and Vahab Mirrokni. 2022. Sequential Attention for Feature Selection. In             ACM International Conference on Information & Knowledge Management (Virtual
+      The Eleventh International Conference on Learning Representations.                       Event, Queensland, Australia) (CIKM ’21). Association for Computing Machinery,
+[110] Zhichen Zeng, Xiaolong Liu, Mengyue Hang, Xiaoyi Liu, Qinghai Zhou, Chaofei              New York, NY, USA, 2759–2769. https://doi.org/10.1145/3459637.3482486
+      Yang, Yiqun Liu, Yichen Ruan, Laming Chen, Yuxin Chen, Yujia Hao, Jiaqi Xu,
+      Jade Nie, Xi Liu, Buyun Zhang, Wei Wen, Siyang Yuan, Kai Wang, Wen-Yen             A     Appendix
+      Chen, Yiping Han, Huayu Li, Chunzhi Yang, Bo Long, Philip S. Yu, Hanghang
+      Tong, and Jiyan Yang. 2024. InterFormer: Towards Effective Heterogeneous           A.1      Detailed Experimental Setup
+      Interaction Learning for Click-Through Rate Prediction. arXiv:2411.09852 [cs.IR]
+      https://arxiv.org/abs/2411.09852                                                   A.1.1 Datasets We evaluate Lattice on both public and internal
+[111] Daochen Zha, Louis Feng, Liang Luo, Bhargav Bhushanam, Zirui Liu, Yusuo Hu,        datasets. The public dataset KuaiVideo is an representative compe-
+      Jade Nie, Yuzhen Huang, Yuandong Tian, Arun Kejariwal, et al. 2023. Pre-train
+      and Search: Efficient Embedding Table Sharding with Pre-trained Neural Cost        tition dataset released by Kuaishou [39] as used in [45, 113, 119].
+      Models. Proceedings of Machine Learning and Systems 5 (2023).                      This dataset has 13M entries with 8 features. We use this dataset as
+[112] Jiaqi Zhai, Lucy Liao, Xing Liu, Yueming Wang, Rui Li, Xuan Cao, Leon Gao,         a standard benchmark for recent state-of-the-art models in multi-
+      Zhaojie Gong, Fangda Gu, Michael He, et al. 2024. Actions Speak Louder than
+      Words: Trillion-Parameter Sequential Transducers for Generative Recommen-          objective recommendation. We use the train/test split provided by
+      dations. arXiv preprint arXiv:2402.17152 (2024).                                   the BARS [121] benchmark suite, and we further perform 9 to 1
+[113] Buyun Zhang, Liang Luo, Yuxin Chen, Jade Nie, Xi Liu, Daifeng Guo, Yanli Zhao,
+      Shen Li, Yuchen Hao, Yantao Yao, et al. 2024. Wukong: Towards a Scaling Law
+                                                                                         train and validation split. We use and extend the FuxiCTR frame-
+      for Large-Scale Recommendation. arXiv preprint arXiv:2403.02545 (2024).            work [123] for experimentation on public dataset. We use two
+[114] Buyun Zhang, Liang Luo, Xi Liu, Jay Li, Zeliang Chen, Weilin Zhang, Xiaohan        internal datasets, with and without sequence features to evaluate
+      Wei, Yuchen Hao, Michael Tsang, Wenjun Wang, et al. 2022. DHEN: A deep
+      and hierarchical ensemble network for large-scale click-through rate prediction.   model performance. The dataset without event feature has about
+      arXiv preprint arXiv:2203.11014 (2022).                                            1K features. The dataset with event features contains roughly 2K
+[115] Gaowei Zhang, Yupeng Hou, Hongyu Lu, Yu Chen, Wayne Xin Zhao, and Ji-              features and 9 event sources. For evaluating data strategy, we use
+      Rong Wen. 2023. Scaling Law of Large Sequential Recommendation Models.
+      arXiv preprint arXiv:2311.11351 (2023).                                            an internal dataset with about 2K nonsequence features, selected
+[116] Qianqian Zhang, Xinru Liao, Quan Liu, Jian Xu, and Bo Zheng. 2022. Leav-           from a pool of 12K features.
+      ing No One Behind: A Multi-Scenario Multi-Task Meta Learning Approach
+      for Advertiser Modeling. In Proceedings of the Fifteenth ACM International         A.1.2 Metrics and Objectives For KuaiVideo, we report AUC and
+      Conference on Web Search and Data Mining (Virtual Event, AZ, USA) (WSDM            loss; for internal datasets, we report improved normalized entropy
+      ’22). Association for Computing Machinery, New York, NY, USA, 1368–1376.
+      https://doi.org/10.1145/3488560.3498479
+                                                                                         (NE) [27] over a baseline, following prior arts.
+[117] Zijian Zhang, Shuchang Liu, Jiaao Yu, Qingpeng Cai, Xiangyu Zhao, Chunxu               Due to lack of a common fundamental task across all recom-
+      Zhang, Ziru Liu, Qidong Liu, Hongwei Zhao, Lantao Hu, et al. 2024. M3oE:           mendation tasks, we use a collection of representative tasks to
+      Multi-Domain Multi-Task Mixture-of Experts Recommendation Framework.
+      arXiv preprint arXiv:2404.18465 (2024).                                            approximate a foundational task from which all downstream tasks
+[118] Yanli Zhao, Andrew Gu, Rohan Varma, Liang Luo, Chien-Chin Huang, Min               can benefit. For the Kuaishou dataset, we predict three tasks: is_like,
+      Xu, Less Wright, Hamid Shojanazeri, Myle Ott, Sam Shleifer, et al. 2023. Py-       is_follow and is_click and use the average loss as the final loss. For
+      torch FSDP: experiences on scaling fully sharded data parallel. arXiv preprint
+      arXiv:2304.11277 (2023).                                                           internal dataset, we create 3 tasks derived from a combination of
+[119] Jieming Zhu, Guohao Cai, Junjie Huang, Zhenhua Dong, Ruiming Tang, and             click and conversion rate prediction across various attribution win-
+      Weinan Zhang. 2023. ReLoop2: Building Self-Adaptive Recommendation Mod-
+      els via Responsive Error Compensation Loop. In Proceedings of the 29th ACM
+                                                                                         dows, and we train each model sufficiently long enough to draw
+      SIGKDD Conference on Knowledge Discovery and Data Mining (Long Beach, CA,          conclusions and report metrics.
+      USA) (KDD ’23). Association for Computing Machinery, New York, NY, USA,
+      5728–5738. https://doi.org/10.1145/3580305.3599785
+                                                                                         A.1.3 Baselines We focus on comparing with recent state-of-the-
+[120] Jieming Zhu, Quanyu Dai, Liangcai Su, Rong Ma, Jinyang Liu, Guohao Cai,            art recommendation models including AFN+ [15], AutoInt+ [85],
+      Xi Xiao, and Rui Zhang. 2022. BARS: Towards Open Benchmarking for Rec-             DLRM [73], DCNv2 [94], FinalMLP [63], MaskNet [99], xDeepFM
+      ommender Systems. In SIGIR ’22: The 45th International ACM SIGIR Confer-
+      ence on Research and Development in Information Retrieval, Madrid, Spain, July     [46], BST [13], APG [105] and Wukong [113]. For public dataset,
+      11 - 15, 2022, Enrique Amigó, Pablo Castells, Julio Gonzalo, Ben Carterette,       we use the best-tuned config from BARS if available, otherwise we
+      J. Shane Culpepper, and Gabriella Kazai (Eds.). ACM, 2912–2923. https:             use the configuration used by [113]. For internal dataset, we use
+      //doi.org/10.1145/3477495.3531723
+[121] Jieming Zhu, Quanyu Dai, Liangcai Su, Rong Ma, Jinyang Liu, Guohao Cai, Xi         the model tunings adopted by [113]. We report model complexity
+      Xiao, and Rui Zhang. 2022. BARS: Towards Open Benchmarking for Recom-              and parameter count for fair comparison. Note that we may use
+      mender Systems. In Proceedings of the 45th International ACM SIGIR Conference
+      on Research and Development in Information Retrieval (Madrid, Spain) (SIGIR
+                                                                                         different model configurations to highlight the effectiveness of
+      ’22). Association for Computing Machinery, New York, NY, USA, 2912–2923.           different components, which we detail in their respective sections.
+

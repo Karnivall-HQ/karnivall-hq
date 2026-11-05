@@ -5,17 +5,19 @@
 
 ## Open
 
+- **[DECISION] 2026-11-05 23:30 · M-001: ONE combined change list for Fab (merges the 19:09 cloud diagnosis + the local placement breakdown).** 7d CPL **Rp 113k** at Rp 355k/day (target ≤ 95k). Details: `fab_advertising/reports/2026-11-05_m001_diagnosis.md` + `2026-11-05_m001_breakdown.md`.
+  1. **PEIKIRA ad set: remove Instagram Stories.** Rp 997k → 3 leads (Rp 332k each). Without it, 30d CPL ≈ Rp 94.9k *(calc)*. Budget unchanged.
+  2. **BC CBObass005: remove WhatsApp Status + Threads.** Rp 487k → 3 leads; WA Status frequency 789.
+  3. **BC: keep 5 winner ad sets** (087 Copy 7, 201 Manny5, BC4-08 Usir, BC204 Manny6, batch101 Copy 21) **and pause the other ~44** (< Rp 30k each, 0 leads).
+  4. **Raise the bid cap Rp 94,250 → Rp 105,000 on 087 Copy 7 and BC204 Manny6** (confirmed caps Rp 80k/94.25k choke delivery to ~1.4% of budget). Revert if 7d CPL > Rp 95k after 5 days.
+  5. **Pause 5 dead PEIKIRA ads** (KENJI-019-001 v03, Ad003/004/005/008: Rp 237k, 0 leads).
+  → My recommendation: apply 1–5 today. Reply with the numbers you applied (e.g. "applied 1,2,3") and I'll measure on 11/10.
+- **[DECISION] 2026-11-05 23:30 · Fab creatives: get real phone photos, then launch.** Visual review of 13 ads: **raw phone photos + IG-story stickers = Rp 18–68k CPL; polished/AI-look renders = Rp 200–372k.** Copy is ready (`fab_advertising/creatives/2026-11-05_creative_batch_01.md`) and concepts are briefed (`2026-11-05_creative_brief.md`). Both need **real unit photos**.
+  → Ask: ~30 min of phone shooting at Kuningan/Sudirman this week + 3 facts: (a) price Rp750rb (FAB750) or Rp800rb? (b) minimum rental period? (c) close rate and average months stayed (lead value).
 - **[RISK] 2026-11-05 21:03 · Someone launched 23 new Fab ads today via an MCP app, not me.** At 14:40 WIB the "Rudi MCP" app (actor id 61594758338050) created ad set **AKIRA-FAB-20261031-WAVE-PEIKIRA2** inside PEIKIRA-BID-CAP-LEADS-CAMPAIGN with 23 image ads: 8 approved and live, 15 went inactive after review. The campaign budget stayed at Rp 300k/day, so total spend didn't change, but PEIKIRA's budget is now split with a new ad set in learning (today: Rp 26.5k, 700 impr, 5 clicks, 0 leads). My heartbeats are read-only and started at 18:23, so this wasn't Fuku.
   → Was this you (another Claude session) or Markus? I've logged it in `m001_tracker.md` and will read its effect on 11/10. Until then I'm **holding creative batch 01** so we don't stack two creative tests in the same Rp 300k campaign.
   Also: Meta set **ImageAd 201B** (in winner ad set BCbatch201 Manny5) to "Update Required" at 17:06. That ad has stopped delivering. Please open it in Ads Manager and fix or replace it.
   Also: this cloud run's tool list includes Meta *write* tools (create/update ads). I didn't call any, but the read-only restriction may not be enforced at the connector. Worth re-checking the routine's connector settings.
-- **[DECISION] 2026-11-05 20:02 · M-001: 6 fresh Fab ads, copy ready → `fab_advertising/creatives/2026-11-05_creative_batch_01.md`.** PEIKIRA CTR is collapsing on 6 of its FAB ads (−40% to −99%), and only AKIRA Ad015 still carries volume (14 leads @ Rp 104.5k, 14d). Data: direct "what + price + where" ads convert; the soft lifestyle ad (yoga mat) got 0 leads. Cheapest leads came from "Apartemen malah jadi gudang?" (Rp 29k) and the item-list ad (Rp 60k), on small samples.
-  → Recommendation: add A1, A2, A4 (no new claims, need only unit photos) as new ads in the PEIKIRA ad set, budget unchanged. A3/A5/A6 after you confirm 2 facts. **3 quick answers needed:** (a) is the current price Rp750rb (FAB750) or Rp800rb? Live ads show both; (b) minimum rental period; (c) do you have real unit photos?
-- **[DECISION] 2026-11-05 19:09 · M-001: 3 changes for you to apply in Warehouse Storage.** 7d CPL is **Rp 113k** (target 95k), Rp 355k/day. Diagnosis + exact IDs: `fab_advertising/reports/2026-11-05_m001_diagnosis.md`.
-  1. **BC CBObass005 campaign: keep 5 winner ad sets (087 Copy 7, 201 Manny5, BC4-08 Usir, BC204 Manny6, batch101 Copy 21), pause the other ~44** (all < Rp 30k spend, 0 leads in 7d). Cost impact ≈ 0, focuses delivery.
-  2. **Raise the bid cap Rp 94,250 → Rp 105,000 on 087 Copy 7 and BC204 Manny6.** This bid-cap setup made leads at **Rp 60k** on 10/19–28, but delivery stalled to ~Rp 70k/day. Revert if their 7d CPL > Rp 95k after 5 days.
-  3. **PEIKIRA: hold Rp 300k/day, no edits** (in learning; CPL Rp 105k, CTR declining → needs fresh creatives).
-  → My recommendation: apply 1+2+3 today. Reply with the numbers you applied, e.g. "applied 1,2", and I'll measure the effect.
 - **[RISK] 2026-11-05 · Someone else is editing the Fab account.** Markus Reynaldo cut the PEIKIRA budget **Rp 5M → Rp 300k/day** on 10/26 (activity log). Is he on your team? If changes come from two sides I can't attribute cause and effect. Recommendation: route all Fab ad changes through you, and tell me when Markus changes something.
 
 - **[RISK] 2026-11-05 · 4 ad accounts disabled by Meta** ("unusual activity"): Alv Ads, WooCore Ads, For App in Audience Network Ads, Babyso Rp. If any still matter, they need an appeal from you. Also: Incess "OMO ADVLeads" has a Rp 5.95M/day budget but spends ~Rp 725k/day. Is that expected?
