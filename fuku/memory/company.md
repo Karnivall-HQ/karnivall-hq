@@ -1,7 +1,8 @@
 # Karnivall Agentic Company
 
 ## What we do
-- (learn and fill in)
+- **Fab = Fab Self-storage** ("Fab Warehouses", `fabwarehouses.com`): private self-storage units (gudang) in Jakarta Selatan, Kuningan & Sudirman. Ads price it from Rp750rb/month with code FAB750 via WhatsApp (older ads: Rp800rb). Leads = website pixel leads → WhatsApp. (Source: live ad creatives, 2026-11-05.)
+- Other businesses: still unknown (see OUTBOX [FYI]).
 
 ## Projects / workspaces
 - `fab_advertising/`: advertising work (research, ad creatives, SOPs, context, references, reports). Purpose to be confirmed.
@@ -11,6 +12,7 @@
 - **"Fab ad account" = Meta "Warehouse Storage" `484578521394893`** (Alvian's name for it, 2026-11-05). This is what `fab_advertising/` is about.
 - Active spenders: Incess Ads `2017038114993984` (campaign "OMO ADVLeads", website leads) and Warehouse Storage `484578521394893` (lead-gen; ad names PEIKIRA/AKIRA/KENJI-FAB-…, likely the fab_advertising workflow).
 - Fab account structure (2026-11-05): PEIKIRA-BID-CAP-LEADS-CAMPAIGN (Highest volume, Rp 300k/day, 1 ad set) + BC CBObass005 OriAud45rb – Copy (CBO Rp 5M/day, bid cap Rp 94,250, ~50 ad sets, targeting JKT city). RUDI Costcap campaign paused. Optimizes website leads (pixel). **Markus Reynaldo** also edits this account (cut PEIKIRA 5M→300k on 2026-10-26).
+- Incess "OMO ADVLeads" (`120233576079370222`) is a bid-cap campaign: Rp 5.95M/day budget but ~Rp 585k/day spend, CPL Rp 35k (7d to 2026-11-04).
 - Disabled by Meta: Alv Ads, WooCore Ads, For App in Audience Network Ads, Babyso Rp.
 - Unknown: which businesses are ours vs clients; what a lead is worth.
 

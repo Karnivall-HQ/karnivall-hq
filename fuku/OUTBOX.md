@@ -5,6 +5,8 @@
 
 ## Open
 
+- **[DECISION] 2026-11-05 20:02 · M-001: 6 fresh Fab ads, copy ready → `fab_advertising/creatives/2026-11-05_creative_batch_01.md`.** PEIKIRA CTR is collapsing on 6 of its FAB ads (−40% to −99%), and only AKIRA Ad015 still carries volume (14 leads @ Rp 104.5k, 14d). Data: direct "what + price + where" ads convert; the soft lifestyle ad (yoga mat) got 0 leads. Cheapest leads came from "Apartemen malah jadi gudang?" (Rp 29k) and the item-list ad (Rp 60k), on small samples.
+  → Recommendation: add A1, A2, A4 (no new claims, need only unit photos) as new ads in the PEIKIRA ad set, budget unchanged. A3/A5/A6 after you confirm 2 facts. **3 quick answers needed:** (a) is the current price Rp750rb (FAB750) or Rp800rb? Live ads show both; (b) minimum rental period; (c) do you have real unit photos?
 - **[DECISION] 2026-11-05 19:09 · M-001: 3 changes for you to apply in Warehouse Storage.** 7d CPL is **Rp 113k** (target 95k), Rp 355k/day. Diagnosis + exact IDs: `fab_advertising/reports/2026-11-05_m001_diagnosis.md`.
   1. **BC CBObass005 campaign: keep 5 winner ad sets (087 Copy 7, 201 Manny5, BC4-08 Usir, BC204 Manny6, batch101 Copy 21), pause the other ~44** (all < Rp 30k spend, 0 leads in 7d). Cost impact ≈ 0, focuses delivery.
   2. **Raise the bid cap Rp 94,250 → Rp 105,000 on 087 Copy 7 and BC204 Manny6.** This bid-cap setup made leads at **Rp 60k** on 10/19–28, but delivery stalled to ~Rp 70k/day. Revert if their 7d CPL > Rp 95k after 5 days.
@@ -13,6 +15,7 @@
 - **[RISK] 2026-11-05 · Someone else is editing the Fab account.** Markus Reynaldo cut the PEIKIRA budget **Rp 5M → Rp 300k/day** on 10/26 (activity log). Is he on your team? If changes come from two sides I can't attribute cause and effect. Recommendation: route all Fab ad changes through you, and tell me when Markus changes something.
 
 - **[RISK] 2026-11-05 · 4 ad accounts disabled by Meta** ("unusual activity"): Alv Ads, WooCore Ads, For App in Audience Network Ads, Babyso Rp. If any still matter, they need an appeal from you. Also: Incess "OMO ADVLeads" has a Rp 5.95M/day budget but spends ~Rp 725k/day. Is that expected?
+  → **Update 20:02:** explained. It's a **bid-cap** campaign: the cap, not the budget, limits spend. Last 7d: Rp 4.09M, 117 leads, **CPL Rp 35k** (~Rp 585k/day). Healthy. If you want more Incess leads, the lever is a small bid-cap raise (+10%), not budget. Tell me if you want an apply-ready proposal.
 - **[FYI] 2026-11-05 · Questions only you can answer:** What is a lead worth for each business (close rate, deal value)? Which businesses does Karnivall run vs. serve as clients (Incess, Travell Fi, The North Case, GudangHub, Jinhe, Karnivall)? What is `fab_advertising/` (ad names use "FAB")?
 
 ## Resolved
