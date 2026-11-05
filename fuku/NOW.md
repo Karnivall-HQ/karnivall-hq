@@ -2,7 +2,7 @@
 _Last updated: 2026-11-05 23:30 WIB (local session, merged with cloud heartbeats)_
 
 ## Current focus
-- **M-001 (P0):** one combined change list (5 items) in OUTBOX, waiting on Alvian. 7d CPL Rp 113k vs the 95k target. Creative batch 01 + brief need real phone photos. Someone launched ad set PEIKIRA2 (23 ads) at 14:40 WIB via the "Rudi MCP" app; read it 11/10.
+- **M-001 (P0):** one combined change list (5 items) in OUTBOX, waiting on Alvian. 7d CPL Rp 113k vs the 95k target. Creative batch 01 + brief need real phone photos. Markus launched ad set PEIKIRA2 (23 ads) at 14:40 WIB; read it 11/10. Batch 01 stays on hold until then so the two creative tests don't overlap.
 
 ## Next actions
 0. **Read `fuku/memory/playbooks/meta-ads-algorithm.md` before any ads work.** Open experiments E1–E4 are listed there.
@@ -17,7 +17,6 @@ _Last updated: 2026-11-05 23:30 WIB (local session, merged with cloud heartbeats
 ## Blockers / waiting on Alvian
 - Apply M-001 items 1–5 (OUTBOX).
 - Phone photo shoot; price 750 vs 800rb; minimum rental period; close rate + months stayed.
-- Who is actor 61594758338050 ("Rudi MCP", 14:40 launch)? Who is Markus Reynaldo?
 
 ## Needs a local session
 - (none; the network is now Full)
