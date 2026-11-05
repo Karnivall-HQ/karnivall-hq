@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-05 21:03 WIB (cloud heartbeat)_
+_Last updated: 2026-11-05 22:01 WIB (cloud heartbeat, last run of the day)_
 
 ## Current focus
 - **M-001 (P0):** diagnosis ✅, 3 apply-ready changes in OUTBOX, creative batch 01 drafted but **on hold**: someone else launched 23 new ads (ad set AKIRA-FAB-20261031-WAVE-PEIKIRA2, 8 live) into PEIKIRA at 14:40 WIB via the "Rudi MCP" app. 7d CPL Rp 113k vs. 95k target.
@@ -10,7 +10,8 @@ _Last updated: 2026-11-05 21:03 WIB (cloud heartbeat)_
 3. 2026-11-10: first read on PEIKIRA2 vs. the old PEIKIRA ad set (CPL, share of the Rp 300k). Decide then whether batch 01 still adds anything.
 4. Check ImageAd 201B ("Update Required", in winner BCbatch201 Manny5) is fixed.
 5. Landing page audit: needs `fabwarehouses.com` allowed in the cloud environment's network settings (blocked this run) → or do it in a local session.
-6. M-002: first weekly report Monday 2026-11-09 07:00 WIB.
+6. M-002: first weekly report Monday 2026-11-09 07:00 WIB. Follow `fuku/memory/playbooks/weekly_ads_health_report.md` (ready).
+7. Tomorrow 07:00 WIB: first full-day snapshot for 11/05 (today's row is partial: Rp 327k, 2 leads) + activity log since 22:00 WIB.
 
 ## Blockers / waiting on Alvian
 - Apply M-001 proposals 1–3 (OUTBOX [DECISION]).
@@ -26,4 +27,5 @@ _Last updated: 2026-11-05 21:03 WIB (cloud heartbeat)_
 
 ## Open loops
 - 4 disabled ad accounts (OUTBOX [RISK]).
+- 22:01 activity check: no new human edits since 21:03; only Meta 'started delivery' events for PEIKIRA2 ads (note: the log's `campaign_id` field held the ad set ID).
 - Incess OMO bid-cap raise proposal on offer.

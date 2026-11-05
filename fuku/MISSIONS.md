@@ -33,6 +33,7 @@
   4. *Scale*: propose budget raises of ~20–30% every 3–4 days, only while the 7d CPL ≤ Rp 95k. Alvian applies them. Fuku verifies the effect in the next readouts. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
+  - 2026-11-05 22:01: No new outside edits. Today (partial): Rp 327k, 2 leads (PEIKIRA 2 @ Rp 136k; BC CBO 0). Daily snapshot section added to tracker. Proposals still unapplied.
   - 2026-11-05 21:03: Activity log shows a third-party launch at 14:40 WIB via the "Rudi MCP" app: new ad set AKIRA-FAB-20261031-WAVE-PEIKIRA2 (23 ads, 8 live) inside PEIKIRA, budget unchanged at Rp 300k. Logged in tracker; [RISK] in OUTBOX. Batch 01 on hold until the 11/10 read so two creative tests don't overlap. ImageAd 201B (winner ad set) flagged "Update Required" by Meta. Landing page audit blocked (cloud network).
   - 2026-11-05 20:02: Creative batch 01 drafted → `fab_advertising/creatives/2026-11-05_creative_batch_01.md` (6 ads, Indonesian copy). Basis: 14d ad-level data + Meta trend (6 PEIKIRA FAB ads CTR −40…−99%; Ad015 carries volume, 14 leads @ Rp 104.5k). [DECISION] in OUTBOX: launch A1/A2/A4 in the PEIKIRA ad set; 3 facts needed from Alvian.
   - 2026-11-05 19:09: Diagnosis done → `fab_advertising/reports/2026-11-05_m001_diagnosis.md`. 7d (10/29–11/04): Rp 355k/day, 22 leads, **CPL Rp 113k** (gate ≤95k closed). PEIKIRA (highest volume, Rp 300k/day) = volume @Rp 105k. BC CBO bid-cap = cheapest (Rp 60k CPL 10/19–28) but stalled to ~Rp 70k/day. 3 proposals sent to OUTBOX (consolidate BC ad sets, raise bid cap on 2 winners to Rp 105k, hold PEIKIRA). Tracker started: `m001_tracker.md`.
@@ -48,6 +49,7 @@
 - **Status:** in progress
 - **Strategy:** The cloud heartbeat runs it on the first Monday run (07:00 WIB). Turn it into a playbook after the first report.
 - **Progress:**
+  - 2026-11-05 22:01: Playbook + template ready → `fuku/memory/playbooks/weekly_ads_health_report.md`; folder `fab_advertising/reports/weekly/` created.
   - 2026-11-05: Approved by Alvian.
 
 ## Completed

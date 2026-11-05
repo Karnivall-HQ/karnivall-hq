@@ -7,6 +7,11 @@ Numbers come from Rudi MCP (read-only). *(calc)* = Fuku's arithmetic. Proposed c
 |---|---|---|---|---|---|---|---|
 | 2026-11-05 19:09 | 10-29 → 11-04 | Rp 2,483,302 | Rp 355k | 22 | Rp 112,877 *(calc)* | ❌ | PEIKIRA 19 leads @105k; BC CBO 3 leads @163k (stalled under bid cap) |
 
+## Daily snapshots (partial day unless noted)
+| Date (WIB) | Spend | Leads | CPL | Notes |
+|---|---|---|---|---|
+| 2026-11-05 (to 22:01) | Rp 327,111 *(calc)* | 2 | Rp 163,556 *(calc)* | PEIKIRA Rp 272,991 / 2 leads (incl. PEIKIRA2 in learning); BC CBO Copy Rp 54,120 / 0. Single day, not a gate metric. |
+
 ## Change log (applied by Alvian)
 | Date | Change | By | Effect read on |
 |---|---|---|---|
