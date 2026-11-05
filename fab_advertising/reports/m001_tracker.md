@@ -5,7 +5,7 @@ Numbers come from Rudi MCP (read-only). *(calc)* = Fuku's arithmetic. Proposed c
 ## Weekly readouts (7d windows)
 | Readout (WIB) | Window | Spend 7d | Spend/day | Leads | 7d CPL | Gate (≤95k)? | Notes |
 |---|---|---|---|---|---|---|---|
-| 2026-11-05 19:09 | 10-29 → 11-04 | Rp 2,483,302 | Rp 355k | 22 | Rp 112,877 *(calc)* | ❌ | PEIKIRA 19 leads @105k; BC CBO 3 leads @163k (stalled under bid cap) |
+| 2026-11-05 19:09 | 10-29 → 11-04 | Rp 2,483,302 | Rp 355k | 22 | Rp 112,877 *(calc)* | ❌ | PEIKIRA 19 leads @105k; BC CBO 3 leads @163k (stalled under bid cap). Placement breakdown → `2026-11-05_m001_breakdown.md` |
 
 ## Daily snapshots (partial day unless noted)
 | Date (WIB) | Spend | Leads | CPL | Notes |

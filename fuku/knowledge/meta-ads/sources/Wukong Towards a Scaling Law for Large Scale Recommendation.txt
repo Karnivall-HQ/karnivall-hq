@@ -1,0 +1,810 @@
+                                                  Wukong: Towards a Scaling Law for Large-Scale Recommendation
+
+
+                                                                             Buyun Zhang * 1 Liang Luo * 1 Yuxin Chen * 1
+                                                                       Jade Nie 1 Xi Liu 1 Daifeng Guo 1 Yanli Zhao 1 Shen Li 1
+                                                                        Yuchen Hao 1 Yantao Yao 1 Guna Lakshminarayanan 1
+                                                                Ellie Dingqiao Wen 1 Jongsoo Park 1 Maxim Naumov 1 Wenlin Chen 1
+
+
+                                                                 Abstract                               Relative LogLoss (%)
+arXiv:2403.02545v1 [cs.LG] 4 Mar 2024
+
+
+
+
+                                                                                                         0.4
+                                                                                                                                                 AutoInt+
+                                              Scaling laws play an instrumental role in the sus-
+                                              tainable improvement in model quality. Unfor-              0.2                           AFN+
+                                              tunately, recommendation models to date do not
+                                              exhibit such laws similar to those observed in the         0.0       DLRM     MaskNet
+                                              domain of large language models, due to the in-                                         FinalMLP
+                                              efficiencies of their upscaling mechanisms. This          −0.2
+                                                                                                                           DCNv2
+                                              limitation poses significant challenges in adapt-
+                                              ing these models to increasingly more complex             −0.4
+                                              real-world datasets.
+                                              In this paper, we propose an effective network            −0.6
+                                              architecture based purely on stacked factoriza-                                            Wukong
+                                                                                                        −0.8
+                                              tion machines, and a synergistic upscaling strat-                      100                      101                    102
+                                              egy, collectively dubbed Wukong, to establish a                                                               GFLOP/example
+                                              scaling law in the domain of recommendation.
+                                                                                                        Figure 1: Wukong outperforms existing state-of-the-art mod-
+                                              Wukong’s unique design makes it possible to               els while demonstrating a scaling law in the recommendation
+                                              capture diverse, any-order of interactions simply         domain across two orders of magnitude in model complexity,
+                                              through taller and wider layers.                          extending beyond 100 GFLOP/example or equivalently up to
+                                                                                                        GPT-3/LLaMa-2 scale of total training compute, where prior
+                                              We conducted extensive evaluations on six public
+                                                                                                        arts fall short.
+                                              datasets, and our results demonstrate that Wukong
+                                              consistently outperforms state-of-the-art models
+                                              quality-wise. Further, we assessed Wukong’s scal-         ering a wide range of online services as reported by major
+                                              ability on an internal, large-scale dataset. The          content providers (Naumov et al., 2019; Wang et al., 2021a;
+                                              results show that Wukong retains its superiority in       Lian et al., 2021; Liu et al., 2022; Covington et al., 2016).
+                                              quality over state-of-the-art models, while hold-
+                                              ing the scaling law across two orders of mag-             Modern DLRS are designed to process a blend of contin-
+                                              nitude in model complexity, extending beyond              uous dense features, such as date, and categorical sparse
+                                              100 GFLOP/example or equivalently up to GPT-              features, like user clicked posts history. Each sparse fea-
+                                              3/LLaMa-2 scale of total training compute, where          ture is transformed into a dense embedding representation
+                                              prior arts fall short.                                    through a trainable embedding lookup table. These dense
+                                                                                                        embeddings are then fed into an interaction component, de-
+                                                                                                        signed to capture the intricate interactions between features.
+                                                                                                        While existing models demonstrate promising accuracy on
+                                        1. Introduction
+                                                                                                        smaller datasets, their capability to adapt to the scale and
+                                        From movie recommendations to feed compilations, deep           intricacy of substantially larger datasets, and to sustain con-
+                                        learning-based recommendation systems (DLRS) are pow-           tinuous quality improvement as these models scale up, re-
+                                          *
+                                                                                                        mains less certain. This scalability is increasingly crucial,
+                                           Equal contribution 1 Meta Platforms, Inc.. Correspon-        as modern datasets have seen exponential growth. For ex-
+                                        dence to: Buyun Zhang <buyunz@meta.com>, Liang Luo <lian-
+                                        gluo@meta.com>, Yuxin Chen <yuxinc@meta.com>.                   ample, production datasets today might contain hundreds
+                                                                                                        of billions of training examples (Wang et al., 2021a). Fur-
+                                                                                                        thermore, foundational models (Bommasani et al., 2021)
+
+                                                                                                    1
+                              Wukong: Towards a Scaling Law for Large-Scale Recommendation
+
+need to operate at scale to handle larger and multiple com-           ing second order interactions with respect to its inputs, and
+plex input sources at the same time. Thus, the need for               the outputs from these FMs are subsequently transformed by
+a DLRS that can both upscale and downscale effectively,               MLPs into new embeddings, which encode the interactions
+adjusting to varying dataset sizes and computational con-             results and serve as inputs to the next layers.
+straints, is paramount. This scalability is encompassed in
+                                                                      We evaluated Wukong’s performance using six public
+what is known as a "scaling law" (Kaplan et al., 2020).
+                                                                      datasets and a large-scale internal dataset. The results
+To date, the primary trend of DLRS up-scaling is through              demonstrate that Wukong outperforms state-of-the-art mod-
+sparse scaling, i.e., expanding the sizes of embedding ta-            els across all public datasets in terms of AUC, indicating
+bles by adding more entries to reduce collision and widen-            the effectiveness of Wukong’s architecture and its ability
+ing their dimensions for increased expressiveness. Conse-             to generalize across a wide range of recommendation tasks
+quently, DLRS have reached trillions of parameters (Kang              and datasets. On our internal dataset, Wukong not only sig-
+et al., 2020; Mudigere et al., 2021; Lian et al., 2021) with          nificantly outperforms existing models in terms of quality
+embedding tables dominating the parameter count.                      at comparable levels of complexity but also shows contin-
+                                                                      uous enhancements in quality when scaled up across two
+Unfortunately, the traditional way of up-scaling has a few
+                                                                      orders of magnitude in model complexity, extending beyond
+practical drawbacks. Merely expanding the sparse com-
+                                                                      100 GFLOP/example or equivalently up to GPT-3/LLaMa-2
+ponent of a model does not enhance its ability to capture
+                                                                      scale of total training compute, where prior arts fall short.
+the complex interactions among an increasing number of
+features. Moreover, this trend notably diverges from the
+trend of hardware advancements, as most improvements in               2. Related Work
+the next generation accelerators lie in the compute capac-
+                                                                      Deep Learning Recommendation Systems (DLRS) Ex-
+ity (Luo et al., 2018; 2017), which embedding table lookups
+                                                                      isting DLRS share a similar structure. A typical model
+can not utilize. Thus, simply expanding embedding table
+                                                                      consists of a sparse and a dense component. The sparse com-
+leads to prohibitive infrastructure costs with suboptimal
+                                                                      ponent is essentially embedding lookup tables that transform
+accelerator utilization, especially in distributed settings.
+                                                                      sparse categorical features into dense embeddings, whereas
+Our work aims to find an alternative scaling mechanism for            the dense component is responsible for capturing interac-
+recommendation models, that can establish the scaling law,            tions among these embeddings to generate a prediction.
+similar to that established in the LLM domain. Namely, we
+                                                                      Dense Interaction Architectures Capturing interaction
+would like to devise a unified architecture whose quality can
+                                                                      between features is the key to effective DLRS, and various
+be continuously improved in conjunction with dataset size,
+                                                                      prior arts have been proposed for this cause. For instance,
+compute and parameter budgets, with a synergistic strategy.
+                                                                      AFN+ (Cheng et al., 2020) transforms features into a log-
+We focus on upscaling interaction components, dubbed                  arithmic space to capture arbitrary order of interactions;
+dense scaling, to mitigate the quality and efficiency draw-           AutoInt+ (Song et al., 2019) uses multi-head self-attention;
+backs from sparse scaling. However, existing models cannot            DLRM and DeepFM (Naumov et al., 2019; Guo et al., 2017)
+benefit from this paradigm for various reasons. For example,          leverage Factorization Machines (FM) (Rendle, 2010) to
+DLRM faces scalability constraints, being limited to captur-          explicitly capture second order interactions; HOFM (Blon-
+ing only second-order interactions, which restricts its effec-        del et al., 2016) optimizes FM to efficiently capture higher
+tiveness on complex datasets. Moreover, existing models               order of interactions; DCNv2 (Wang et al., 2021a) uses
+lack a comprehensive process for scaling up. For example,             CrossNet, which captures interactions via stacked feature
+DCNv2 and AutoInt+ focus on tuning certain hyperparme-                crossing, which can be viewed as a form of elementwise
+ters, leading to rapidly diminishing returns when scaling up.         input attention. FinalMLP (Mao et al., 2023) employs a
+Additionally, even with modern tricks like residual connec-           bilinear fusion to aggregate results from two MLP streams,
+tion (He et al., 2016), layernorm (Ba et al., 2016), gradient         each takes stream-specific gated features as input. MaskNet
+clip (Pascanu et al., 2013)), up-scaling existing models is           (Wang et al., 2021b) adopts a series of MaskBlocks for inter-
+prone to training stability issues (Tang et al., 2023).               action capture, applying “input attention” to the input itself
+                                                                      and intermediate activations of DNN; xDeepFM (Lian et al.,
+To establish a scaling law for recommendation models, we
+                                                                      2018) combines a DNN with a Compressed Interaction Net-
+propose Wukong, a simple yet effective interaction architec-
+                                                                      work, which captures interactions through outer products
+ture that exhibits effective dense scaling properties. Inspired
+                                                                      and compressing the results with element-wise summation.
+by the principles of binary exponentiation, our key inno-
+vation is to use a series of stacked Factorization Machines           Scaling up DLRS Existing literature mainly focuses on
+(FMs) to efficiently and scalably capture any-order feature           scaling up the sparse component of models (Kang et al.,
+interactions. In our design, each FM is responsible of captur-        2020; Mudigere et al., 2021; Lian et al., 2021). There is
+
+
+                                                                  2
+                              Wukong: Towards a Scaling Law for Large-Scale Recommendation
+
+limited discussion on the scalability of dense interaction ar-                               Output Predictions
+chitectures. Among the few investigated, their scalability are
+often unsatisfactory. For example, AutoInt+ observes dimin-                                          MLP
+ishing gains with more than two layers on public datasets.
+                                                                                               Wukong Layer             Interaction
+Similarly, DCNv2 experiences rapidly diminishing returns                                                                     Stack
+when expanding beyond two layers or increasing the rank
+size, despite being tested on a large-scale production dataset.                                Wukong Layer
+
+
+                                                                                                Add & Norm            Wukong
+3. Design of Wukong                                                                                                     Layer
+                                                                                                    Concat
+We keep two objectives in mind when designing Wukong’s
+architecture: (1) to effectively capture the intricate high-                        Factorization               Linear
+                                                                                    Machine Block            Compress Block
+order feature interactions; and (2) to ensure Wukong’s
+quality scale gracefully with respect to dataset size,
+GFLOP/example and parameter budgets.
+
+3.1. Overview
+                                                                                             Dense Embeddings
+In Wukong, categorical and dense features initially pass
+through an Embedding Layer (Sec. 3.2), which transforms
+                                                                      Figure 2: Wukong employs an interaction stack to capture
+these inputs into Dense Embeddings.                                   feature interactions. Each layer in the stack consists of a
+As shown in Figure 2, Wukong subsequently adopts an                   Factorization Machine Block and a Linear Compress Block.
+Interaction Stack (Sec. 3.3), a stack of unified neural net-
+work layers to capture the interaction between embeddings.
+The Interaction Stack draws inspiration from the concept              dings that share the same d dimension, and are joined with
+of binary exponentiation, allowing each successive layer to           the embedding outputs of categorical input. This yields an
+capture exponentially higher-order interactions. Each layer           output tensor of size X0 ∈ Rn×d , where n is the total num-
+in the Interaction Stack consists of a Factorization Ma-              ber of embeddings from the dense and sparse part. X0 is
+chine Block (FMB, Sec. 3.4) and a Linear Compression                  then ready to be further processed by the Interaction Stack.
+Block (LCB, Sec. 3.5). FMB and LCB independently take
+                                                                      Note that unlike conventional approaches like DCN (Wang
+in input from last layer and their outputs are ensembled as
+                                                                      et al., 2021a), we interpret each embedding vector as a
+the output for the current layer. Following the interaction
+                                                                      whole unit (detailed later), and hence our representation of
+stack is a final Multilayer Perceptron (MLP) layer that maps
+                                                                      X0 ∈ Rn×d as opposed to X0 ∈ Rnd .
+the interaction results into a prediction.
+                                                                      3.3. Interaction Stack
+3.2. Embedding Layer
+                                                                      The interaction modules stack l identical interaction layers,
+Given a multi-hot categorical input, an embedding table
+                                                                      where each layer captures progressively higher-order fea-
+maps it to a dense embedding. This process involves a
+                                                                      ture interactions at an exponential rate using Factorization
+series of lookups, each corresponding to a “hot” dimensions
+                                                                      Machines (FMs).
+within the input. The lookup results are then aggregated
+using a pooling operation, with summation being the typical           An interaction layer has two blocks in parallel: a Factor-
+method in the realm of embeddings.                                    ization Machine Block (FMB) and a Linear Compression
+                                                                      Block (LCB). FMB computes feature interactions between
+In our design, the embedding dimension is standardized for
+                                                                      input embeddings of the layer, and LCB simply forwards
+all embeddings generated by the Embedding Layer, known
+                                                                      linearly compressed input embeddings of the layer. The
+as the global embedding dimension d. To accommodate the
+                                                                      outputs of FMB and LCB are then concatenated.
+varying significance of different features, multiple embed-
+dings are generated for each feature deemed significant. In           For layer i in the stack, its results can contain feature inter-
+contrast, less important features are allocated smaller under-        actions with arbitrary order from 1 to 2i . This can be simply
+lying embedding dimensions. These smaller embeddings are              shown by induction. Let’s assume the input of layer i con-
+then collectively grouped, concatenated, and transformed              tains interactions of order from 1 to 2i−1 , which is true for
+into d-dimensional embeddings using a MLP.                            the first layer (i.e. i = 1). Since FMB generates (o1 + o2 )-
+                                                                      order feature interactions given o1 and o2-order interactions,
+Dense inputs are transformed by an MLP into latent embed-
+                                                                      then we have immediately the output of layer i containing 1
+
+                                                                  3
+                               Wukong: Towards a Scaling Law for Large-Scale Recommendation
+
+to 2i -order interactions, with the lower bound achieved from           with the number of embeddings. This quickly becomes pro-
+the output of LCB and the upper bound achieved by the FM                hibitive on real-world datasets with thousands of features.
+interacting two 2i−1 -order interactions from the input.
+                                                                        To allow effective feature interaction while lowering com-
+To help stabilize training, we also adopt residual connections          pute cost, we adopt a similar scheme to (Sharma, 2023;
+across layers, followed by layer normalization (LN). Putting            Anonymous, 2019) that leverage low-rank property in pair-
+everything together, we have                                            wise dot product matrix, which was observed in many real-
+                                                                        world datasets (Wang et al., 2021a).
+   Xi+1 = LN(concat(FMBi (Xi ), LCBi (Xi )) + Xi )
+                                                                        When d <= n, the dot-product interaction XX T is a d-
+                                                                        rank matrix, which is often the case on large datasets whose
+Depending on the specific configurations of FMB and LCB,                number of features is larger than the embedding dimension.
+Xi may have a different number of embeddings than Xi+1 ,                Therefore, we can effectively reduce the size of output ma-
+which usually happens at the first layer. To handle this case,          trix from n × n to n × k, where k is a hyperparameter,
+the residual can be linearly compressed to match the shape.             by multiplying XX T with a learnable projection matrix Y
+                                                                        of shape n × k (i.e., computing XX T Y ) without loss of
+3.4. Factorization Machine Block (FMB)                                  information in theory. This reduces memory requirement to
+                                                                        store the interaction matrix. We can then take advantage of
+A FMB contains a Factorization Machine (FM) followed
+                                                                        the associative law to compute X T Y first, further reducing
+by a MLP. The FM is used to capture explicit feature in-
+                                                                        compute complexity from O(n2 d) to O(nkd) with k << n.
+teractions of the input embeddings, with the output being
+a 2D interaction matrix where each element represents the               Furthermore, to enhance the model quality, the projection
+interaction between a pair of embeddings. This interaction              matrix Y can be made attentive to the input by processing
+matrix is flattened and converted to a vector with shape of             linearly compressed input through a MLP. We use the opti-
+(nF × d) through the MLP, and reshaped to nF embeddings                 mized FM in our following experiments by default, unless
+for later use.                                                          mentioned otherwise.
+Operationally, a FMB does the following:
+                                                                        3.7. Complexity Analysis
+  FMB(Xi ) = reshape(MLP(LN(flatten(FM(Xi )))))                         We assume each layer in the Interaction Stack uses the same
+                                                                        hyperparameters, and the largest FC in the MLP has size h.
+Wukong’s FM module is fully customizable: for example,                  For the first layer, the time complexity of FMB is the sum
+in the most basic version, we followed the FM design in                 of the FM and the MLP, which is O(nkd) ≈ O(ndh) and
+(Naumov et al., 2019), i.e., taking the dot product between             O(nkh + h2 + nF dh) ≈ O(ndh + h2 ), respectively. The
+all pairs of embedding vectors, F M (X) = XX T . We                     time complexity of LCB is O(nnL d) ≈ O(ndh). For sub-
+discuss more optimized FM designs in Sec. 3.6.                          sequent layers, the time complexity is O(n′ dh + h2 ), where
+                                                                        n′ = nL + nF . Hence, the total time complexity of Wukong
+3.5. Linear Compress Block (LCB)                                        is O(ndh + ln′ dh + h2 ) ≈ O(ndhlogn + h2 ).
+LCB simply linearly recombines embeddings without in-
+creasing interaction orders, which is critical in ensuring that         3.8. Scaling Wukong
+the invariance of interaction order is maintained throughout            Having defined the Wukong architecture, we summarize the
+the layers. Specifically, it guarantees that the i-th interaction       main hyperparameters that are related to scale up and later
+layer captures interaction orders ranging from 1 to 2i . The            we describe our efforts to upscaling Wukong with respect to
+operation performed by a LCB can be described as follows:               these hyperparameters.
+
+                     LCB(Xi ) = WL Xi                                   • l: number of layers in the Interaction Stack.
+                                                                        • nF : number of embeddings generated by FMB
+where WL ∈ RnL ×ni is a weight matrix, nL is a hyperpa-                 • nL : number of embeddings generated by LCB
+rameter indicating the number of compressed embeddings,                 • k: number of compressed embeddings in optimized FM
+and ni is the number of input embeddings of layer i.                    • M LP : number of layers and FC size in the MLP of FMB
+
+                                                                        During scaling up, we initially focus on increasing l to en-
+3.6. Optimized FM
+                                                                        able the model to capture higher-order interactions. Follow-
+In its basic form where a pairwise dot-product is used, FM’s            ing this, we enlarge other hyperparameters to augment the
+computation and storage complexity grows quadratically                  model’s capacity of capturing broader range of interactions.
+
+                                                                    4
+                             Wukong: Towards a Scaling Law for Large-Scale Recommendation
+
+3.9. Intuition Behind Wukong’s Enhanced Effectiveness                                             #Samples          #Features
+Compared to existing work using FM as their primary in-                 Frappe                        0.29M                   10
+                                                                        MicroVideo                      1.7M                   7
+teraction architecture, Wukong’s innovative approach of
+                                                                        MovieLens Latest                  2M                   3
+stacking FMs greatly enhances the conventional FM’s capa-               KuaiVideo                        13M                   8
+bility. This allows Wukong to capture interactions of any               TaobaoAds                       26M                   21
+order, making it highly effective for large-scale, complex              Criteo Terabyte                   4B                  39
+datasets that require higher-order reasoning. While there               Internal                       146B                   720
+are efforts towards high-order FM, Wukong’s exponential
+rate of capturing high-order interactions offers great effi-                Table 1: Statistics of our evaluation datasets.
+ciency, bypassing the linear complexity seen in HOFM and
+avoiding the costly outer product in xDeepInt.
+While MLPs have shown limitations in implicitly capturing
+                                                                     5. Overview of Evaluations
+interactions (Beutel et al., 2018), Wukong diverges from ap-
+proaches that rely on MLPs for interaction capture. Instead,         We evaluate Wukong using six public datasets and an inter-
+Wukong primarily employs MLPs to transform the results of            nal dataset, details of which are summarized in Table 1. The
+interactions into embedding representations, which are then          results of these evaluations are organized in two sections.
+used for further interactions. This distinct use of MLPs en-
+                                                                     In Section 6, we evaluate on six public datasets, focusing
+hances the model’s ability to process and interpret complex,
+                                                                     on demonstrating the effectiveness of Wukong in the low
+heterogeneous features effectively.
+                                                                     complexity realm. Our results show that Wukong surpasses
+Additionally, Wukong treats each embedding as a single               previous state-of-the-art methods across all six datasets,
+unit, focusing on embedding-wise interactions. This ap-              demonstrating its effectiveness.
+proach significantly reduces computational demands com-
+                                                                     In Section 7, we evaluate on our large-scale in-house dataset
+pared to architectures that capture element-wise interac-
+                                                                     to demonstrate the scalability of Wukong. The dataset con-
+tions, as it avoids the less useful intra-embedding and cross-
+                                                                     tains 30 times more samples and 20 times more features
+dimensional interactions. Consequently, Wukong not only
+                                                                     compared to one of the largest dataset Criteo. Our results
+enhances the efficiency of the recommendation system but
+                                                                     reveals that (1) Wukong consistently outperforms all base-
+also maintains its effectiveness in capturing relevant feature
+                                                                     line models in terms of both model quality and runtime
+interactions.
+                                                                     speed, maintaining this superiority across all complexity
+                                                                     scales; (2) Wukong exhibits a better scaling trend in com-
+4. Implementation                                                    parison to baseline models. We also conduct an ablation
+                                                                     study to gain understanding of the individual contributions
+This section discusses practices to effectively train high-
+                                                                     and the effectiveness of each component within Wukong.
+complexity Wukong on large-scale datasets.
+Overall, distributed training is required to make Wukong
+                                                                     6. Evaluation on Public Datasets
+training feasible. For the embedding layer, we use a column-
+wise sharded embedding bag implementation provided by                In this section, we aim to demonstrate the effectiveness of
+Neo (Mudigere et al., 2021) and NeuroShard (Zha et al.,              Wukong across a variety of public datasets. Unless noted
+2023). On the dense part, we balance the trade-off between           otherwise, we use the preproc provided by the BARS bench-
+performance and memory capacity by adopting FSDP (Zhao               mark (Zhu et al., 2022b) for consistency with prior work.
+et al., 2023) and tune the sharding factor so that the model
+fits in the memory without creating too much redundancy.             6.1. General Evaluation Setup
+To enhance training efficiency, we employ both automatic             6.1.1. DATASETS
+operator fusion through torch.fx (Reed et al., 2022) to im-
+prove training performance. In addition, we aggressively             Frappe (Baltrunas) is an app usage log. This datasets
+apply quantization to reduce compute, memory, and com-               predicts whether a user uses the app with the given contexts.
+munication overheads simultaneously. Specifically, we train          MicroVideo (Chen et al., 2018) is a content understanding-
+Wukong’s embedding tables in FP16, and communicate em-               based dataset provided by THACIL work containing inter-
+bedding lookup results in FP16 in the forward pass and               actions between users and micro-videos. This log contains
+BF16 in the backward pass; we use BF16 quantization dur-             multimodal embeddings, together with traditional features.
+ing the transport and reduction of gradients for dense param-
+eters in the backward pass.                                          MovieLens Latest (Harper & Konstan, 2015) is a well
+                                                                     known dataset that contains users’ ratings on movies.
+
+                                                                 5
+                              Wukong: Towards a Scaling Law for Large-Scale Recommendation
+
+                 Frappe           MicroVideo         MovieLens L.           KuaiVideo          TaobaoAds           Criteo TB
+               AUC LogLoss        AUC LogLoss        AUC LogLoss           AUC LogLoss        AUC LogLoss        AUC LogLoss
+ Baselines
+ AFN+        0.9812 0.2340       0.7220 0.4142      0.9648 0.3109        0.7348 0.4372      0.6416 0.1929       0.8023 0.1242
+ AutoInt+    0.9806 0.1754       0.7155 0.4203      0.9693 0.2178        0.7297 0.4376      0.6437 0.1930       0.8073 0.1233
+ DCNv2       0.9774 0.2325       0.7187 0.4162      0.9683 0.2169        0.7360 0.4383      0.6457 0.1926       0.8096 0.1227
+ DLRM        0.9846 0.1465       0.7173 0.4179      0.9685 0.2160        0.7357 0.4382      0.6430 0.1931       0.8076 0.1232
+ FinalMLP    0.9868 0.1280       0.7247 0.4147      0.9723 0.2211        0.7374 0.4435      0.6434 0.1928       0.8096 0.1226
+ MaskNet     0.9816 0.1701       0.7255 0.4157      0.9676 0.2383        0.7376 0.4372      0.6433 0.1927       0.8100 0.1227
+ xDeepFM     0.9780 0.2441       0.7167 0.4172      0.9667 0.2089        0.7118 0.4565      0.6342 0.1961       0.8084 0.1229
+ Ours
+ Wukong      0.9868 0.1757       0.7292 0.4148      0.9723 0.1794        0.7414 0.4367      0.6488 0.1954       0.8106 0.1225
+
+Table 2: Evaluation results on six public datasets. The model with best AUC and best LogLoss on each dataset are highlighted.
+
+
+KuaiVideo (Kuaishou) is the competition dataset re-                  whichever of these two configurations yielded better results.
+leased by Kuaishou. The dataset is used to predict the click         For Wukong, we tune the dropout rate and optimizer settings
+probability of a user on new micro-videos. This dataset also         and compression of LCB to adapt to the number of features.
+contains content understanding-based embeddings along
+                                                                     We leverage the larger Criteo dataset to evaluate the model
+with other categorical and float features.
+                                                                     performance on realistic online recommendation systems,
+TaobaoAds (Tianchi, 2018) This dataset includes 8 days               where one-pass training is performed. In light of the new
+of ads click through rate (CTR) prediction on Taobao.                training setup, we conducted extensive grid search using the
+                                                                     system described in Sec. 4 for all baselines and Wukong to
+Criteo Terabyte (Criteo) This dataset contains 24 days of
+                                                                     facilitate fair comparisons. This exhaustive process involved
+ads click feedback. We used the last day of data for testing.
+                                                                     nearly 3000 individual runs. We provide the model-specific
+                                                                     search space in Appendix A. The best searched model hy-
+6.1.2. BASELINES
+                                                                     perparameters were later used as the base config in Sec 7.
+We benchmark Wukong against seven widely recognized
+state-of-the-art models used in both academia and industry,          6.3. Results
+including AFN+ (Cheng et al., 2020), AutoInt+ (Song et al.,
+2019), DLRM (Naumov et al., 2019), DCNv2 (Wang et al.,               We summarize the results in Table 2. Overall, Wukong
+2021a), FinalMLP (Mao et al., 2023), MaskNet (Wang et al.,           is able to achieve state-of-the-art results in terms of AUC
+2021b) and xDeepFM (Lian et al., 2018).                              across all public datasets. This result demonstrates the effec-
+                                                                     tiveness of Wukong’s architecture and its ability to compre-
+6.1.3. M ETRICS                                                      hend diverse datasets and to generalize across a wide range
+                                                                     of recommendation tasks.
+AUC Area Under the Curve (AUC) provides an aggre-
+gated measure of the model’s ability to correctly classify
+                                                                     7. Evaluation on an Internal Dataset
+positives and negatives across all thresholds. A higher AUC
+value indicates a better model performance.                          In this section, our demonstrate the scalability of Wukong
+LogLoss The log loss quantifies the penalty based on how             and gain a deep understanding of how different individual
+far the prediction is from the actual label. The lower the log       components of Wukong contribute to its effectiveness, using
+loss, the better the model.                                          a large-scale dataset.
+
+
+6.2. Model-Specific Setup                                            7.1. Evaluation Setup
+
+For the five smaller datasets, aside from Criteo, we adopted         7.1.1. DATASET
+the public BARS evaluation framework (Zhu et al., 2022a;             This dataset contains 146B entries in total and has 720
+2021). We directly use the best searched model configs               distinct features. Each feature describes a property of either
+on BARS whenever possible, and use the provided model                the item or the user. There are two tasks associated with
+default hyperparameters for the rest. In addition to the             this dataset: (Task1) predicting whether a user has showed
+default embedding dimension provided in the framework,               interested in an item (e.g., clicked) and (Task2) whether a
+we further test an embedding dimension of 128 and report             conversion happened (e.g., liked, followed).
+
+
+                                                                 6
+                              Wukong: Towards a Scaling Law for Large-Scale Recommendation
+
+7.1.2. M ETRICS                                                      Relative LogLoss (%)
+
+GFLOP/example Giga Floating Point Operations per                      0.25
+                                                                                              AFN+
+example (GFLOP/example) quantifies the computational
+complexity during model training.                                     0.00        MaskNet                     AutoInt+
+                                                                                              DLRM
+PF-days The total amount of training compute equivalent              −0.25
+to running a machine operating at 1 PetaFLOP/s for 1 day.                                                                FinalMLP
+                                                                                      DCNv2
+
+#Params Model size measured by the number of param-                  −0.50
+eters in the model. The sparse embedding table size was
+fixed to 627B parameters.                                            −0.75                           Wukong
+                                                                               627 + 10   0
+                                                                                                                     627 + 101
+Relative LogLoss LogLoss improvement relative to a                                                       # Sparse + Dense Params (B)
+fixed baseline. We opt to use the DLRM with the basic con-
+                                                                     Figure 3: Scalability of Wukong with respect to # parameters.
+fig as the baseline. A 0.02% Relative LogLoss improvement
+is considered as significant on this dataset. We report rela-
+tive LogLoss on the last 1B-window during online training.
+
+7.1.3. BASELINES                                                     scale in total training compute 1 approximately translating
+                                                                     to a 0.1% improvement for every quadrupling of complex-
+We adhere to the same baseline setup as detailed in Sec.             ity. Among baselines, AFN+, DLRM and FinalMLP tend
+6.1.2. However, xDeepFM was not included in the reported             to reach a plateau after a certain complexity level, while
+results, due to the incompatibility of its expensive outer           AutoInt+, DCNv2 and MaskNet failed to further enhance
+product operation with the large-scale dataset, consistently         quality 2 . Nonetheless, even DCNv2, the top-performing
+causing out-of-memory issues even in minimal setups.                 baseline, demands a 40-fold increase in complexity to match
+                                                                     Wukong’s quality.
+7.1.4. T RAINING
+                                                                     Quality vs. Model Size In Fig. 3, we illustrate the
+We used the best optimizer configuration found in our pilot          correlation between model quality and model size. Echoing
+study across all experiments, i.e., Adam with lr=0.04 with           the trends observed in compute complexity scaling above,
+beta1=0.9, beta2=1 for dense part and Rowwise Adagrad                Wukong consistently outperforms all baselines by rougly
+with lr=0.04 for sparse embedding tables. Models were                0.2% across all scales of model size. while demonstrating a
+trained and evaluated in an online training manner. We fix           steady improvement trend up to over 637 billion parameters.
+the embedding dimension to 160 across all runs.
+                                                                     Model-Specifc Scaling Throughout the scaling process,
+We set the hyperparameters with the best configuration               we employed distinct strategies per model. Detailed hyper-
+found on the Criteo Terabyte evaluation described in Sec. 6          parameter settings for each run are provided in Appendix B.
+as a starting point, and gradually scale up parameter count          Scaling processes of each model are summarized as follows:
+for each model. We use a global batch size of 262,144 for
+                                                                        Wukong We scaled up Wukong by tuning the hyperpa-
+all experiments. Each experiment was run on 128 or 256
+                                                                     rameters detailed in Sec. 3.8.
+H100 GPUs depending on the model size.
+                                                                        AFN+ We scaled up AFN’s hidden layers, ensemble
+7.2. Results                                                         DNN, and the number of logarithmic neurons. The results
+                                                                     show that scaling up AFN does not improve model quality.
+We observed comparable results for both tasks, and report
+results for Task1 in the main text, while the detailed results          AutoInt+ We scaled up multi-head attention and the
+of Task2 are provided in Appendix B.                                 ensemble DNN. Model quality of this model is initially
+                                                                     worse than others, but improves notably when scaling up.
+Quality vs. Compute Complexity In Fig. 1, we depict
+                                                                         1
+the relationship between quality and compute complexity.                   Projecting the 160 PF-days of total training compute on the
+The results show that Wukong consistently outperforms all            internal dataset to a 365-day timeframe, assuming the use of con-
+baselines across various complexity levels, achieving over           tinuous online training.
+                                                                         2
+                                                                           AutoInt+ and DCNv2 consistently faced significant training
+0.2% improvement in LogLoss. Notably, Wukong holds its               instability issue when further scaled up. AutoInt+ recovered from
+scaling law across two orders of magnitude in model com-             loss explosion, albeit with reduced model quality; while DCNv2
+plexity – we observe a significant 0.4% enhancement in qual-         failed to recover, and its quality was estimated from performance
+ity with a 200-fold complexity rise , up to GPT-3/LLaMa-2            before the explosion. MaskNet was hindered by excessive memory
+                                                                     consumption, leading to out-of-memory errors, blocking further
+                                                                     scaling up.
+
+                                                                 7
+                              Wukong: Towards a Scaling Law for Large-Scale Recommendation
+
+   DLRM We scaled up the top MLP. The results show that              quality improvements than scaling each individually.
+the quality starts saturated beyond 31 GFLOP/example.
+                                                                     Relative LogLoss (%)
+    DCNv2 We scaled up both Cross Network and Deep                                 nL= 32
+                                                                      0.00
+Network. Scaling up Cross Network did not yield any qual-
+ity improvement. The training stability of DCNv2 is worse                      nF=32                        k=96
+than other models and we applied strict gradient clipping.           −0.05                                         k=96; nF=32;
+                                                                                                                   nL=32
+   FinalMLP We scaled up the two MLP streams and the                                                                         MLP=
+Feature Selection modules. The results show that the model                                                                   3x8192
+                                                                                                          
+quality improves in the low complexity region, but starts to         −0.10
+saturate beyond 36 GFLOP/example.                                                       100                 2 × 100     3 × 100
+                                                                                                                 GFLOP/example
+   MaskNet We tested both Parallel and Serial MaskNet,
+                                                                         Figure 5: Impact of scaling individual components.
+and found that the Parallel variant is better. We decreased
+the initial reduction ratio to ensure the model has a runnable
+size, and progressively scaled up number of MaskBlocks,
+the DNN and the reduction ratio.                                     8. Discussions
+                                                                     Practically Serving Scaled-up Models Scaling up to
+7.3. Ablation                                                        high complexity presents notable challenges for real-time
+Significance of Individual Components Our goal is to                 serving. Potential solutions include training a multi-task
+demonstrate the importance of FMB, LCB and the residual              foundation model to amortize costs: distilling knowledge
+connection in Wukong’s Interaction Stack. To this end,               from the large models into small, efficient ones for serving.
+we performed experiments in which each component was                 Implication on Resource-Limited Research and Busi-
+individually deactivated by zeroing out its results.                 nesses Wukong’s efficiency and scalability offer signifi-
+As shown in Fig. 4, nullifying FMB results in a large quality        cant advantages to researchers and businesses with limited
+degradation. Interestingly, the deactivation of either LCB           resources. Its capability to match the accuracy of other
+or the residual leads to only a modest decline in quality,           models with forty times less computing resources enables
+while disabling both causes a substantial degradation. This          cutting-edge recommendation research and applications,
+observation implies that by zero-padding FMB outputs and             even in environments with limited computation resources.
+incorporating a residual connection, LCB can be simplified.          Limitation and Future Work We also note limitations
+                                                                     and caveats to our work, which can be goals in future work.
+Relative LogLoss (%)                                1.84
+                                                                     Understanding the exact limit of Wukong’s scalability is
+1.5
+                                                                     an important area of research. Due to the massive com-
+1.0       0.8
+                                                                     pute requirement, we have not been able to reach a level of
+                                                                     complexity where the limit applies.
+0.5
+                                      0.08                           While Wukong demonstrates superior quality in various
+                         0.03
+0.0                                                                  evaluations, a comprehensive theoretical understanding of
+        Zero Out       Zero Out       No        Zero Out LCB
+          FCB            LCB        Residual    & No Residual        its underlying principles, particularly in contrast to archi-
+      Figure 4: Signiﬁcance of individual components.
+                                                                     tectures like transformers which share stacked dot product
+                                                                     structure, remains an area that needs further exploration.
+Impact of Scaling Individual Components We aim to                    Additionally, Wukong’s generalizability beyond recommen-
+dissect the contributions in model quality when scaling up           dation, particularly in domains that involve heterogeneous
+each hyperparameter within Wukong. We started from a                 input data sources similar to distinct features in recommen-
+base configuration and proceeded to incrementally double             dation, remains to be further explored and understood.
+each hyperparameter. The results are depicted in Fig. 5.
+We observed that increasing the number of Wukong lay-                9. Conclusion
+ers l leads to a substantial uplift in model quality, due to
+higher-order interactions being captured. Additionally, aug-         We proposed an effective network architecture, named
+menting the MLP size results in considerable performance             Wukong. We demonstrated that Wukong establishes a scal-
+enhancements. Elevating k and nF proves beneficial, while            ing law in the domain of recommendation that is not pre-
+nL has plateaued for the base configuration. Notably, a              viously observed – Wukong is able to efficiently scale up
+combined scale-up of k, nF , nL delivers more pronounced             and down across two order of magnitude in compute com-
+
+                                                                 8
+                              Wukong: Towards a Scaling Law for Large-Scale Recommendation
+
+plexity while maintaining a competitive edge over other               Guo, H., Tang, R., Ye, Y., Li, Z., and He, X. Deepfm: a
+state of the art models, making it a scalable architecture              factorization-machine based neural network for ctr pre-
+that can serve as a backbone from small vertical models to              diction. arXiv preprint arXiv:1703.04247, 2017.
+large foundational models across a wide range of tasks and
+datasets.                                                             Harper, F. M. and Konstan, J. A. The movielens datasets:
+                                                                        History and context. ACM Trans. Interact. Intell. Syst., 5
+                                                                        (4), dec 2015. ISSN 2160-6455. doi: 10.1145/2827872.
+Impact Statements                                                       URL https://doi.org/10.1145/2827872.
+This paper presents work whose goal is to advance the field
+of Machine Learning. There are many potential societal                He, K., Zhang, X., Ren, S., and Sun, J. Deep residual learn-
+consequences of our work, none which we feel must be                    ing for image recognition. In Proceedings of the IEEE
+specifically highlighted here.                                          Conference on Computer Vision and Pattern Recognition
+                                                                        (CVPR), June 2016.
+
+References                                                            Kang, W.-C., Cheng, D. Z., Yao, T., Yi, X., Chen, T., Hong,
+Anonymous. Dot product matrix compression for machine                   L., and Chi, E. H. Learning to embed categorical features
+  learning. Technical Disclosure Commons, 2019.                         without embedding tables for recommendation. arXiv
+                                                                        preprint arXiv:2010.10784, 2020.
+Ba, J. L., Kiros, J. R., and Hinton, G. E. Layer normalization.
+  arXiv preprint arXiv:1607.06450, 2016.                              Kaplan, J., McCandlish, S., Henighan, T., Brown, T. B.,
+                                                                        Chess, B., Child, R., Gray, S., Radford, A., Wu, J., and
+Baltrunas, L. Frappe - mobile app usage. URL https:                     Amodei, D. Scaling laws for neural language models.
+  //www.baltrunas.info/context-aware.                                   arXiv preprint arXiv:2001.08361, 2020.
+Beutel, A., Covington, P., Jain, S., Xu, C., Li, J., Gatto, V.,
+                                                                      Kuaishou. URL https://www.kuaishou.com/
+  and Chi, E. H. Latent cross: Making use of context in
+                                                                        activity/uimc.
+  recurrent recommender systems. In Proceedings of the
+  eleventh ACM international conference on web search                 Lian, J., Zhou, X., Zhang, F., Chen, Z., Xie, X., and Sun, G.
+  and data mining, pp. 46–54, 2018.                                     xdeepfm: Combining explicit and implicit feature inter-
+Blondel, M., Fujino, A., Ueda, N., and Ishihata, M. Higher-             actions for recommender systems. In Proceedings of the
+  order factorization machines. Advances in Neural Infor-               24th ACM SIGKDD international conference on knowl-
+  mation Processing Systems, 29, 2016.                                  edge discovery & data mining, pp. 1754–1763, 2018.
+
+Bommasani, R., Hudson, D. A., Adeli, E., Altman, R.,                  Lian, X., Yuan, B., Zhu, X., Wang, Y., He, Y., Wu, H.,
+  Arora, S., von Arx, S., Bernstein, M. S., Bohg, J., Bosse-            Sun, L., Lyu, H., Liu, C., Dong, X., Liao, Y., Luo, M.,
+  lut, A., Brunskill, E., et al. On the opportunities and risks         Zhang, C., Xie, J., Li, H., Chen, L., Huang, R., Lin, J.,
+  of foundation models. arXiv preprint arXiv:2108.07258,                Shu, C., Qiu, X., Liu, Z., Kong, D., Yuan, L., Yu, H.,
+  2021.                                                                 Yang, S., Zhang, C., and Liu, J. Persia: An open, hybrid
+                                                                        system scaling deep learning-based recommenders up to
+Chen, X., Liu, D., Zha, Z.-J., Zhou, W., Xiong, Z., and                 100 trillion parameters. November 2021.
+  Li, Y. Temporal hierarchical attention at category- and
+  item-level for micro-video click-through prediction. In             Liu, Z., Zou, L., Zou, X., Wang, C., Zhang, B., Tang, D.,
+  MM, 2018.                                                             Zhu, B., Zhu, Y., Wu, P., Wang, K., et al. Monolith: Real
+                                                                        time recommendation system with collisionless embed-
+Cheng, W., Shen, Y., and Huang, L. Adaptive factorization
+                                                                        ding table. corr abs/2209.07663 (2022), 2022.
+  network: Learning adaptive-order feature interactions. In
+  Proceedings of the AAAI Conference on Artificial Intelli-           Luo, L., Liu, M., Nelson, J., Ceze, L., Phanishayee, A., and
+  gence, volume 34, pp. 3609–3616, 2020.                                Krishnamurthy, A. Motivating in-network aggregation
+Covington, P., Adams, J., and Sargin, E. Deep neural net-               for distributed deep neural network training. In Workshop
+  works for youtube recommendations. In Proceedings of                  on Approximate Computing Across the Stack, 2017.
+  the 10th ACM conference on recommender systems, pp.
+ 191–198, 2016.                            Luo, L., Nelson, J., Ceze, L., Phanishayee, A., and Krishna-
+                                             murthy, A. Parameter hub: a rack-scale parameter server
+Criteo.     Criteo 1tb click logs dataset.   for distributed deep neural network training. In Proceed-
+  https://ailab.criteo.com/                  ings of the ACM Symposium on Cloud Computing, pp.
+  download-criteo-1tb-click-logs-dataset/. 41–54, 2018.
+
+                                                                  9
+                             Wukong: Towards a Scaling Law for Large-Scale Recommendation
+
+Mao, K., Zhu, J., Su, L., Cai, G., Li, Y., and Dong, Z.               Wang, Z., She, Q., and Zhang, J. Masknet: Introduc-
+ Finalmlp: An enhanced two-stream mlp model for ctr                    ing feature-wise multiplication to ctr ranking models by
+ prediction. arXiv preprint arXiv:2304.00902, 2023.                    instance-guided mask. arXiv preprint arXiv:2102.07619,
+                                                                       2021b.
+Mudigere, D., Hao, Y., Huang, J., Tulloch, A., Sridharan,
+ S., Liu, X., Ozdal, M., Nie, J., Park, J., Luo, L., et al.           Zha, D., Feng, L., Luo, L., Bhushanam, B., Liu, Z., Hu,
+ High-performance, distributed training of large-scale                  Y., Nie, J., Huang, Y., Tian, Y., Kejariwal, A., et al. Pre-
+ deep learning recommendation models. arXiv preprint                    train and search: Efficient embedding table sharding with
+ arXiv:2104.05158, 2021.                                                pre-trained neural cost models. Proceedings of Machine
+                                                                        Learning and Systems, 5, 2023.
+Naumov, M., Mudigere, D., Shi, H.-J. M., Huang, J., Sun-
+  daraman, N., Park, J., Wang, X., Gupta, U., Wu, C.-J.,              Zhao, Y., Gu, A., Varma, R., Luo, L., Huang, C.-C., Xu, M.,
+  Azzolini, A. G., et al. Deep learning recommendation                  Wright, L., Shojanazeri, H., Ott, M., Shleifer, S., et al.
+  model for personalization and recommendation systems.                 Pytorch fsdp: experiences on scaling fully sharded data
+  arXiv preprint arXiv:1906.00091, 2019.                                parallel. arXiv preprint arXiv:2304.11277, 2023.
+
+                                                                      Zhu, J., Liu, J., Yang, S., Zhang, Q., and He, X. Open
+Pascanu, R., Mikolov, T., and Bengio, Y. On the difficulty
+                                                                        benchmarking for click-through rate prediction. In
+  of training recurrent neural networks. In International
+                                                                        Demartini, G., Zuccon, G., Culpepper, J. S., Huang,
+  conference on machine learning, pp. 1310–1318. Pmlr,
+                                                                        Z., and Tong, H. (eds.), CIKM ’21: The 30th ACM
+  2013.
+                                                                        International Conference on Information and Knowl-
+Reed, J., DeVito, Z., He, H., Ussery, A., and Ansel, J. Torch.          edge Management, Virtual Event, Queensland, Australia,
+  fx: Practical program capture and transformation for deep             November 1 - 5, 2021, pp. 2759–2769. ACM, 2021.
+  learning in python. Proceedings of Machine Learning                   doi: 10.1145/3459637.3482486. URL https://doi.
+  and Systems, 4:638–651, 2022.                                         org/10.1145/3459637.3482486.
+
+                                                              Zhu, J., Dai, Q., Su, L., Ma, R., Liu, J., Cai, G., Xiao,
+Rendle, S. Factorization machines. In 2010 IEEE Interna-
+                                                                X., and Zhang, R. BARS: towards open benchmark-
+  tional Conference on Data Mining, pp. 995–1000. ieeex-
+                                                                ing for recommender systems. In Amigó, E., Castells,
+  plore.ieee.org, December 2010.
+                                                                P., Gonzalo, J., Carterette, B., Culpepper, J. S., and
+Sharma, S.          Feature fusion for the uninitiated          Kazai, G. (eds.), SIGIR ’22: The 45th International
+  | by siddharth sharma | medium.                    https:     ACM SIGIR Conference on Research and Development
+  //siddharth-1729-65206.medium.com/                            in Information Retrieval, Madrid, Spain, July 11 - 15,
+  feature-fusion-for-the-uninitiated-4c5938db28b7,              2022, pp. 2912–2923. ACM, 2022a. doi: 10.1145/
+  2023. (Accessed on 01/24/2024).                               3477495.3531723. URL https://doi.org/10.
+                                                                1145/3477495.3531723.
+Song, W., Shi, C., Xiao, Z., Duan, Z., Xu, Y., Zhang, M., and
+                                                              Zhu, J., Dai, Q., Su, L., Ma, R., Liu, J., Cai, G., Xiao,
+  Tang, J. Autoint: Automatic feature interaction learning
+                                                                X., and Zhang, R. BARS: towards open benchmark-
+  via self-attentive neural networks. In Proceedings of the
+                                                                ing for recommender systems. In Amigó, E., Castells,
+  28th ACM international conference on information and
+                                                                P., Gonzalo, J., Carterette, B., Culpepper, J. S., and
+  knowledge management, pp. 1161–1170, 2019.
+                                                                Kazai, G. (eds.), SIGIR ’22: The 45th International
+Tang, J., Drori, Y., Chang, D., Sathiamoorthy, M., Gilmer,      ACM SIGIR Conference on Research and Development
+  J., Wei, L., Yi, X., Hong, L., and Chi, E. H. Improving       in Information Retrieval, Madrid, Spain, July 11 - 15,
+  training stability for multitask ranking models in recom-     2022, pp. 2912–2923. ACM, 2022b. doi: 10.1145/
+  mender systems. arXiv preprint arXiv:2302.09178, 2023.        3477495.3531723. URL https://doi.org/10.
+                                                                1145/3477495.3531723.
+Tianchi. Ad display/click data on taobao.com, 2018. URL
+  https://tianchi.aliyun.com/dataset/
+  dataDetail?dataId=56.                                       A. Model-Specific Grid Search Space on
+                                                                         Criteo
+Wang, R., Shivanna, R., Cheng, D., Jain, S., Lin, D., Hong,
+ L., and Chi, E. Dcn v2: Improved deep & cross network                We use Adam for dense arch optimization and use Rowwise
+ and practical lessons for web-scale learning to rank sys-            AdaGrad for sparse arch optimization with a linear warmup
+ tems. In Proceedings of the web conference 2021, pp.                 period for the first 10% steps. We use 8 ∗ 16384 = 131, 072
+ 1785–1797, 2021a.                                                    global batch size. All models use ReLU for activation. We
+
+                                                                 10
+                              Wukong: Towards a Scaling Law for Large-Scale Recommendation
+
+opted to use 128 as embedding dimension, as it shows better           the same value, ranged in {8, 16}. k is fixed to 24.
+results on all models in our pilot experiments. We use FP32
+in all runs. Due to the dataset volume and model size, we             B. Model-Specific Scaling-up Configurations
+use (Mudigere et al., 2021) as the sparse distributed training
+framework and data parallel for dense synchronization.                Please refer to Table 3 for details.
+To facilitate fair comparisons, we conducted extensive grid
+search (>3000 runs) over both general hyper-parameters and            C. Analysis of High Order Interactions in
+model-specific configs on Criteo Dataset.                                Wukong
+For all the models, both sparse and dense learning rate was           The traditional factorization machine approach solves sec-
+separately tuned in {1e−3 , 1e−2 , 1e−1 }. For MLPs in all the        ond order interaction problem by minimizing (Naumov et al.,
+models, the number of hidden layers ranged in {1, 2, 3, 4}            2019):
+with their layer sizes in {512, 1024, 2048}. To reduce the                              min Σ rij − X 1 X 1
+                                                                                                             T
+
+excessively large search space, we did a pilot experiments                                    i,j∈S
+on the optimizer hyperparameters, and found that setting              where rij ∈ R is the rating of the i-th product by the j-th
+learning rate to 1e−3 for dense and 1e−1 for sparse works             user for i = 1, ..., m and j = 1, ..., n; X denotes the user and
+the best for all models. We fixed the learning rate in the            item representations (embeddings), and the superscript 1
+following runs. We now describe model-specific search                 denotes the embedding contains 1st order information. The
+space:                                                                dot product of these embedding vectors yields a meaningful
+AFN+ The AFN hidden units and DNN hidden units                        prediction of the subsequent rating for 2nd order interac-
+are the same across all runs, followed the general MLP                tions. In Wukong, this meaningful interactions are then
+search space. The number of logarithmic neurons ranges in             transformed to 2nd order interaction representations X 2 us-
+{128, 256, 512, 1024}.                                                ing MLP. In the 2nd layer FMB, with a residual and LCB
+                                                                      connection, a dot product of (X 1 + X 2 )(X 1 + X 2 )T yield
+AutoInt+ We created the search space based on the best                both meaningful interaction from 1st order to 4th order. By
+configurations reported in the paper (Song et al., 2019), with        analogy, a l-layer Wukong solves a problem by minimizing:
+a larger value being considered additionally per hyperpa-
+rameter. The number of attention layers ranged in {3, 4},                                                               T
+                                                                                 min Σ (rij −            Σ          XkXk )
+with attention dim ranged in {256, 512}. The number of                                i,j∈S        k∈1,2,...,2l−1
+attention heads are in {4, 8}. The DNN hidden units follow
+                                                                      Thus, comparing to the traditional factorization approach,
+the general MLP search space.
+                                                                      Wukong is able to solve the recommendation problem with
+DCNv2 The number of cross layers ranged from 1 to 4.                  a more sufficient interaction orders.
+Rank searched in either full-rank or 512.
+DLRM The bottom MLP layer sizes and numbers was
+set to [512, 256].
+FinalMLP We followed the public benchmark setup (Zhu
+et al., 2022a), by setting FeatureSelection (FS) to all float
+features for one stream, and searching over one of 8 selected
+sparse features for the other stream. FS MLP is set to [800].
+Number of heads is fixed to 256.
+MaskNet We tested both Parallel MaskNet and Serial
+MaskNet. For the Parallel variant, we consider the number
+of blocks in {1, 8, 16} and the block dimension in {64, 128}.
+For the Serial variant, we consider the number of layers in
+{1, 4, 8} with the layer size in {64, 256, 1024}. We fixed
+the reduction ratio to 1 for both variants.
+xDeepInt We considered Compressed Interaction Net-
+work (CIN) with the number of layers in {3, 4} and the
+layer dimension in {16, 32, 64}.
+Wukong The bottom MLP layer sizes and numbers was
+set to [512, 256]. l ranged from 1 to 4; nF and nL are set to
+
+                                                                 11
+                            Wukong: Towards a Scaling Law for Large-Scale Recommendation
+
+
+ Hyperparameters                                        GFLOP/example #Params Relative LogLoss Relative LogLoss
+                                                                                        (Task1)          (Task2)
+ AFN+
+ DNN=4x2048, afn=4x2048, nlog=1024                                  4.41    628.22                 0.11              0.05
+ DNN=4x4096, afn=4x2048, nlog=1024                                  7.65    628.74                 0.12              0.06
+ DNN=4x4096, afn=4x4096, nlog=2048                                 13.08    629.46                 0.21              0.14
+ DNN=4x8192, afn=4x8192, nlog=4096                                  43.4    633.95                 0.12              0.06
+ AutoInt+
+ Attention=3x256, nhead=4, DNN=2x256                               7.72     627.73                 0.39               0.24
+ Attention=3x512, nhead=4, DNN=2x256                              18.58     627.77                 0.15              0.05
+ Attention=3x512, nhead=8, DNN=3x8192                             42.53     631.49                -0.09              -0.16
+ Attention=3x512, nhead=16, DNN=3x10240                           49.58     632.59                  -0.1              -0.2
+ Attention=3x512, nhead=16, DNN=3x16384                           68.83     635.57        0.13 (LossX)       0.01 (LossX)
+ DCN
+ l=2, rank=512, MLP=4x2048                                            3     628.11                -0.27              -0.27
+ l=2, rank=512, MLP=4x4096                                         4.67     628.37                -0.29              -0.32
+ l=2, rank=512, MLP=4x16384                                       17.85     630.42                -0.38              -0.41
+ l=2, rank=512, MLP=4x32768                                       43.88     634.46                -0.43              -0.45
+ l=2, rank=512, MLP=4x51200                                       84.71     640.79             (LossX)            (LossX)
+ DLRM
+ TopMLP=2x512                                                       1.37    627.78          (Baseline)          (Baseline)
+ TopMLP=4x512                                                       1.37    627.78               -0.11              -0.08
+ TopMLP=4x2048                                                      3.85    628.17              -0.23                -0.21
+ TopMLP=4x4096                                                      7.29     628.7              -0.28               -0.27
+ TopMLP=4x8192                                                     14.61    629.84              -0.32                -0.31
+ TopMLP=4x16384                                                       31    632.39              -0.37               -0.35
+ TopMLP=4x32768                                                    71.23    638.62              -0.36               -0.34
+ FinalMLP
+ MLP1=4x4096, MLP2=2x1024, output_dim=64,                           3.93    628.25                -0.11              -0.16
+  no_fs
+ MLP1=4x4096, MLP2=2x1024, output_dim=64,                           8.17    628.91                -0.23             -0.27
+  fs1=[0,57600], fs2=[57600,115200], fs_MLP=1x2048
+ MLP1=4x8192, MLP2=2x2048, output_dim=64,                           16.9    630.27                -0.34             -0.36
+  fs1=[0,57600], fs2=[57600,115200], fs_MLP=1x4096
+ MLP1=8x8192, MLP2=4x2048, output_dim=64,                          18.77    630.56                -0.37             -0.38
+  fs1=[0,57600], fs2=[57600,115200], fs_MLP=2x4096,
+ MLP1=4x16384, MLP2=2x4096, output_dim=64,                        36.26     633.27                -0.34             -0.34
+  fs1=[0,57600], fs2=[57600,115200], fs_MLP=1x8192
+ MLP1=4x24576, MLP2=2x6144, output_dim=64,                         58.12    636.67                -0.37             -0.38
+  fs1=[0,57600], fs2=[57600,115200], fs_MLP=1x12288
+ MaskNet
+ MLP=1x512, nblock=1, dim=128, reduction=0.01                      1.76     627.92                -0.09             -0.12
+ MLP=1x512, nblock=4, dim=128, reduction=0.01                       6.8      628.7                -0.22             -0.25
+ MLP=3x2048, nblock=4, dim=128, reduction=0.01                     6.88     628.71                -0.28              -0.3
+ MLP=3x2048, nblock=4, dim=128, reduction=0.05                    32.36     632.67                -0.37             -0.37
+ MLP=3x2048, nblock=4, dim=128, reduction=0.1                     64.21     637.61                  -0.4             -0.4
+ Wukong
+ l=2, nL=8, nF=8, k=24, MLP=3x2048                                 0.53     627.74                -0.35             -0.32
+ l=4, nL=32, nF=32, k=24, MLP=3x2048                               1.25     627.82                -0.45             -0.43
+ l=8, nL=32, nF=32, k=24, MLP=3x2048                               2.12     627.95                -0.53             -0.49
+ l=8, nL=48, nF=48, k=48, MLP=3x4096                                5.6     628.46                 -0.6               -0.6
+ l=8, nL=96, nF=96, k=96, MLP=3x8192                              22.23     630.96                -0.67             -0.66
+ l=8, nL=96, nF=96, k=96, MLP=3x16384                                61     636.99                  -0.7            -0.69
+ l=8, nL=192, nF=192, k=192, MLP=3x16384                            108        644                -0.76             -0.76
+
+Table 3: Detailed hyperparameters, compute complexity, model quality and model size for each run evaluated in Sec. 7. LossX
+means loss exploded during training.
+
+
+                                                            12
+

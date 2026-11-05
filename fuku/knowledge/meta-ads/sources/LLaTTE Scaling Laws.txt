@@ -1,0 +1,967 @@
+                                             LLaTTE: Scaling Laws for Multi-Stage Sequence Modeling
+                                             in Large-Scale Ads Recommendation
+                                             Lee Xiong† , Zhirong Chen† , Rahul Mayuranath† , Shangran Qiu , Arda Ozdemir , Lu Li , Yang Hu , Dave Li , Jingtao Ren ,
+                                             Howard Cheng , Fabian Souto Herrera , Ahmed Agiza , Allen Lin , Baruch Epshtein , Anuj Aggarwal , Julia Ulziisaikhan ,
+                                             Chao Wang , Dinesh Ramasamy , Parshva Doshi , Sri Reddy , Arnold Overwijk
+                                             †
+                                                 First Authors, AI at Meta
+                                             We present LLaTTE (LLM-Style Latent Transformers for Temporal Events), a scalable transformer architecture for
+                                             production ads recommendation. Through systematic experiments, we demonstrate that sequence modeling in
+                                             recommendation systems follows predictable power-law scaling similar to LLMs. Crucially, we find that semantic
+                                             features bend the scaling curve: they are a prerequisite for scaling, enabling the model to effectively utilize the
+                                             capacity of deeper and longer architectures. To realize the benefits of continued scaling under strict latency
+                                             constraints, we introduce a two-stage architecture that offloads the heavy computation of large, long-context models
+arXiv:2601.20083v1 [cs.IR] 27 Jan 2026
+
+
+
+
+                                             to an asynchronous upstream user model. We demonstrate that upstream improvements transfer predictably to
+                                             downstream ranking tasks. Deployed as the largest user model at Meta, this multi-stage framework drives a 4.3%
+                                             conversion uplift on Facebook Feed and Reels with minimal serving overhead, establishing a practical blueprint for
+                                             harnessing scaling laws in industrial recommender systems.
+
+                                             Keywords:    Recommender Systems, Sequential Modeling, Transformers, Scaling Laws, Multi-stage Ranking
+
+
+
+
+                                         1   Introduction                                                   how to effectively scale sequence models while preserving the
+                                                                                                            strengths of both paradigms under production constraints,
+                                         The convergence of sequence modeling and recommendation            and harness predictable scaling laws in this hybrid regime,
+                                         systems has opened new frontiers in artificial intelligence.       remains a challenge that bridges research and real-world
+                                         Modern recommendation systems, particularly in advertis-           deployment.
+                                         ing and content platforms, process billions of user interac-
+                                         tions daily as each user’s journey through products, ads,          To address these challenges, we structured our investigation
+                                         and content forms a rich temporal sequence that encodes            around three research questions: RQ1, How can we design
+                                         user preferences and intent. While Large Language Models           sequence models that integrate with FM-based architectures
+                                         (LLMs) have demonstrated that deep sequence models can             to leverage both sparse collaborative signals and temporal
+                                         achieve remarkable performance through predictable scal-           dynamics? RQ2, Do recommendation systems exhibit pre-
+                                         ing laws Kaplan et al. (2020) (with capabilities improving         dictable scaling behaviors similar to LLMs, with identifiable
+                                         as power-law functions of model size, data, and compute),          trade-offs, capacity bottlenecks, and data quality impacts?
+                                         production recommendation systems have largely remained            RQ3, How can we harness scaling benefits while meeting
+                                         constrained to shallower sequence architectures Kang and           strict production latency requirements?
+                                         McAuley (2018); Sun et al. (2019); Chen et al. (2019).             We introduce LLaTTE (LLM-Style Latent Transformers for
+                                                                                                            Temporal Events), an architectural paradigm deployed in
+                                         This gap persists despite the sequential nature of user be-        our massive-scale production systems that addresses all
+                                         havior and the potential for similar scaling benefits. The         three questions. LLaTTE enables efficient scaling through
+                                         challenges are twofold: (i) reconciling the computational          two key innovations that reconcile deep sequence modeling
+                                         demands of deep sequence models with the strict latency            with our production constraints:
+                                         requirements of production serving, where systems must
+                                         rank hundreds of candidates within milliseconds, and (ii)          1. Target-Aware Adaptive Transformer: Our sequence mod-
+                                         bridging the architectural divide between traditional Fac-            ule integrates non-sequence sparse features and candidate
+                                         torization Machine (FM) based models Zhang et al. (2024b)             information into extended query tokens, leveraging Multi-
+                                         and transformer-based sequence models. FM-based models                head Latent Attention (MLA) DeepSeek-AI (2024). The
+                                         excel at learning from massive sparse and dense feature               architecture supports adaptive pyramidal output extrac-
+                                         spaces (user IDs, item IDs, request and contextual fea-               tion, which can optionally be employed to progressively
+                                         tures), but they lack sequential modeling capacity, while             reduce computational complexity. This design seamlessly
+                                         sequence models capture temporal dynamics but struggle to             integrates with FM-style modules, enabling us to har-
+                                         efficiently incorporate the high-dimensional non-sequence             ness the scaling gains of deep sequence processing within
+                                         features critical for production performance. Understanding           strict production inference budgets.
+
+
+                                                                                                        1
+2. Multi-Stage Architecture: To harvest scaling benefits un-         mechanisms marked a significant advance in the field. SAS-
+   der strict latency constraints, we introduce an upstream          Rec Kang and McAuley (2018) and HLLM Chen et al.
+   stage that runs large LLaTTE encoders, triggered by               (2024) applied self-attention to next-item prediction, en-
+   high-value user events, to asynchronously generate and            abling parallel processing and better long-range modeling.
+   cache compressed user embeddings that are not bounded             BERT4Rec Sun et al. (2019) adapted bidirectional trans-
+   by request-time latency. The online ranking stage com-            formers using masked item prediction, while S3-Rec Zhou
+   bines these cached embeddings with fresh, short-horizon           et al. (2020) introduced self-supervised pretraining for se-
+   sequential signals processed by a lightweight LLaTTE              quential recommendation.
+   counterpart. Both stages share a common sequence ar-
+                                                                     Target-aware attention mechanisms have also proven critical
+   chitecture while operating at drastically different scales.
+                                                                     for production CTR prediction. DIN Zhou et al. (2018)
+   Specifically, the upstream model consumes > 45× the
+                                                                     introduced attention weighted by the target item, later
+   sequence FLOPs of its online counterpart. This asym-
+                                                                     extended by DIEN Zhou et al. (2019) with interest evolution
+   metry allows us to offload the vast majority of sequence
+                                                                     modeling.
+   computation without impacting online serving latency.
+Through systematic experiments spanning model depth,                 Recent work has explored different architectural choices
+width, sequence length, data enrichment via content under-           for integrating sequential and non-sequential features.
+standing model features, and cross-stage transfer dynamics,          HSTU Zhai et al. (2024), OneTrans Zhang et al. (2025), and
+we provide comprehensive answers to foundational scaling             LONGER Chai et al. (2025) advocate for pure sequence-
+behavior questions in the recommendation system setting,             based architectures, while InterFormer Zeng et al. (2025)
+revealing several key insights: (i) Performance follows pre-         proposes interleaving sequence and non-sequence compu-
+dictable log-linear scaling laws, with sequence length serving       tation at each layer. However, these approaches require
+as a primary lever; (ii) Data enrichment such as semantic            tight coupling to specific architectures, limiting flexibility
+content embeddings is not merely additive but a prereq-              for independent scaling of sequence modules and preventing
+uisite for steeper scaling curves, effectively bending the           easy separation of model inference across online and offline
+scaling laws beyond what sparse ID signals allow; (iii) Im-          stages. This architectural rigidity has constrained produc-
+provements from upstream modeling transfer predictably               tion systems to relatively small sequence models processing
+to online ranking stages with a high transfer ratio (≈ 50%),         limited context.
+validating the efficacy of our multi-stage design even across        2.2   Scaling Laws
+a strict information bottleneck; and (iv) Model width acts as
+a capacity bottleneck; sufficient width must be established          Kaplan et al. Kaplan et al. (2020) demonstrated that
+before depth scaling becomes effective. These findings estab-        language model performance follows power-law relation-
+lish that recommendation systems can benefit from scaling            ships with model size, dataset size, and compute budget.
+laws analogous to LLMs when architectural constraints are            While recent work has explored scaling in recommender
+properly addressed.                                                  systems Zhang et al. (2025, 2024b), these studies typically
+                                                                     examine either individual scaling dimensions in isolation or
+Our production deployment validates these findings, demon-           their compounding effects, without systematically investi-
+strating that the two-stage architecture achieves a 0.25% im-        gating how different scaling axes interact. Moreover, they
+provement in Normalized Entropy on our primary revenue-              overlook critical dimensions such as data richness and com-
+generating models with minimal serving overhead. Together,           position, which are particularly important for large-scale
+our architectural innovations and empirical scaling laws pro-        production recommendation systems. We address this by
+vide a systematic framework for scaling sequence models in           modeling the joint interaction of depth, width, and fea-
+large-scale production recommendation systems.                       ture richness, identifying critical thresholds where scaling
+                                                                     behavior fundamentally shifts.
+2     Background and Related Work                                    2.3 Multi-Stage Architectures in Production Rec-
+Our work intersects three research areas: transformer-based              Sys
+sequence modeling in recommendation systems, scaling laws            Multi-stage architectures, which separate representation
+for neural networks, and multi-stage architectures for pro-          learning from task-specific prediction, have emerged as a
+duction deployment. We review each area and position our             practical paradigm for modeling in production recommen-
+contributions.                                                       dation systems. These approaches aim to balance model
+2.1   Sequence Modeling in Recommendation                            expressiveness with the stringent latency requirements of
+                                                                     online serving.
+Early sequential recommendation approaches used recur-
+rent neural networks for modeling sequential behavior.               Embedding-based approaches precompute user representa-
+GRU4Rec Hidasi et al. (2016) pioneered RNNs for session-             tions for consumption by online ranking models. Pinner-
+based recommendation, followed by various LSTM vari-                 former Pancha et al. (2022) learns user embeddings from se-
+ants Donkers et al. (2017). The introduction of self-attention       quential engagement data using a transformer trained with a
+
+
+                                                                 2
+dense all-action loss over engagement windows. SUM Zhang             where H = {CTR, CVR, . . .} is the set of prediction heads
+et al. (2024a) provides a framework for sharing user repre-          and θ denotes model parameters.
+sentations across hundreds of production models via asyn-
+chronous inference. Both systems decouple upstream com-              Feature Structure We categorize input features along two
+putation from online serving, enabling larger models than            axes. By source, we distinguish: (1) User xu (demographics,
+real-time latency budgets would permit.                              aggregates, behavioral sequence Su ); (2) Ad xi (creative
+                                                                     attributes, landing page, advertiser metadata); (3) User-
+TransAct Xia et al. (2023) introduces a hybrid architecture
+                                                                     Ad xui (historical interactions); and (4) Context xc (time,
+that combines precomputed embeddings with real-time pro-
+                                                                     device, surface).
+cessing of recent user actions. The system processes recent
+actions (O(102 )) through a transformer while leveraging             By type, features are processed as:
+precomputed embeddings for long-term interests. TransAct
+V2 Xia et al. (2025) extends the real-time component to              • Sparse IDs xsparse ∈ V msparse : categorical entities mapped
+longer sequences (O(104 )) using candidate-anchored nearest            to embeddings.
+neighbor search and custom GPU kernels.                              • Dense features xdense ∈ Rmdense : precomputed embed-
+                                                                       dings (e.g., from content encoders).
+An alternative approach uses retrieval-based designs that            • Float attributes xfloat ∈ Rmfloat : continuous variables.
+operate synchronously within each request. SIM Pi et al.             • Sequences Su : ordered lists of temporal events.
+(2020) introduced the GSU-ESU paradigm, where a General
+Search Unit retrieves relevant behaviors before an Exact             User Sequences User behavioral sequence Su                         =
+Search Unit applies target-aware attention. TWIN Chang               {a1 , a2 , . . . , aT } is a temporally ordered list of actions. Each
+et al. (2023) improves consistency between stages by ensur-          action at consists of a timestamp, action type, item identi-
+ing both use identical relevance metrics, scaling to 104 –105        fier, surface type, optional content embeddings and other
+behaviors at Kuaishou. TWIN V2 Si et al. (2024) extends              metadata. In our experiments, sequence lengths T range
+to lifecycle-scale sequences through hierarchical clustering         from 500 to 5000 actions.
+compression.
+Despite these advances, prior multi-stage work has not ex-           Objective and Evaluation We train using a weighted multi-
+plored systematic model scaling following predictable scaling        task binary cross-entropy loss. Our primary evaluation
+laws. These systems typically scale along a single dimen-            metric is the relative improvement in Normalized Entropy
+sion (e.g., sequence length in TransAct V2) while keeping            (NE). NE is defined as the average log loss normalized by
+models relatively small overall. In this work, we show that          the entropy of the empirical CTR:
+a unified scaling framework applies to both real-time and                             PN 
+                                                                                 − N1 i=1 yi log ŷi + (1 − yi ) log(1 − ŷi )
+                                                                                                                               
+asynchronous upstream ranking settings. We systemati-                     NE =                                                 , (2)
+cally examine how increasing model capacity across mul-                                − p log p + (1 − p) log(1 − p)
+tiple dimensions and allocating capacity between online
+and upstream stages, affects performance in production               where p is the empirical positive rate observed from the
+recommendation systems. To our knowledge, this is the                ground truth. NE is a standard metric in industrial recom-
+first work to establish empirical scaling laws for such hybrid       mendation.
+upstream-downstream architectures. Additionally, we rigor-
+ously quantify the transfer ratio between stages, offering a         4 Experimental Backbone: The LLaTTE
+metric to measure how effectively scaling laws traverse the
+                                                                       Paradigm
+inference bottleneck.
+                                                                     To systematically study scaling laws in recommendation,
+                                                                     we require an architecture that is both representative of
+3 Preliminaries: Ads Recommendation                                  modern production systems and efficient enough to scale to
+  Stack                                                              massive contexts. We adopt a modular design, referred to
+                                                                     as LLaTTE (LLM-Style Latent Transformers for Temporal
+We consider a standard multi-task ads ranking problem
+                                                                     Events), that synthesizes best practices in efficient sequence
+where the model predicts engagement probabilities such as
+                                                                     modeling.
+click-through rate (CTR) and conversion rate (CVR). These
+calibrated probabilities are utilized for both downstream            The architecture (Figure 1) consists of three components:
+ranking and auction pricing.                                         (i) a Sequence Module that encodes user behavioral histo-
+                                                                     ries; (ii) a Non-Sequence Module that integrates sequence
+                                                                     summaries with static features; and (iii) Task Heads for
+Task Given a user u, candidate ad i, and request context
+                                                                     prediction.
+c, the model predicts a vector of engagement probabilities:
+                                                                     Compute Allocation. In our production setting, the sequence
+            y = f (xu , xi , xui , xc ; θ) ∈ [0, 1]|H| ,   (1)       module accounts for over 90% of total inference FLOPs in
+
+
+                                                                 3
+ LLATTE Tw o Stage Model
+                                                    Upstream User Model                                                                                                       Online Ranking Model
+                                  High Compute (92 GFLOPS / sample) | Asy nc | Full User History                                                         Latency Constrained | Ad- Aw are | Short User History | Interleaved
+
+
+
+                                                             CTR                               CVR                                                                           CTR                             CVR
+
+
+
+
+                                                                                                                                                                                          Layer N
+                                                                               DHEN
+                                                                          (Training Only )
+
+                                                                                                                                                                                          Layer 2
+
+
+
+                                                                                                                                                                                                                              Layer 1
+                                                                                                                                                                             DHEN
+                                                                                              LLaTTE User
+                            ...                                     ...                                                     ...
+                                                                                              Embeddings
+
+
+
+                                                                                                 Transformer Layer N
+       Dense Features                             Sparse Features
+                                                                                              (Full Self Attention + MLP)               Asy nc                                                                Lightweight
+                                                                                                                                                                                                           LLaTTE Backbone
+
+
+
+                                                                                                     ...                    ...
+                                                                                                                                                                                         Ads Query Tokens
+
+
+                                                                                                                                                                                                     ...
+                                  Gated MLP
+                                                                                                 Transformer Layer 2
+                                                                                              (Full Self Attention + MLP)                    Feature
+                                                                                                                                              Store
+                                                                                                                                                                                          Query Generator
+      Multi- Head Latent Attention
+      (MLA)
+                                                                                                     ...                    ...
+                                     WO
+
+                                                                                                                                          Quantization
+                                                                                                                                                                   ...                      ...                                ...
+                       Scaled Dot- Product Attention
+
+                                                                                                 Transformer Layer 1
+                                                                                              (Full Self Attention + MLP)                                                                                    User History Tokens (Short)
+           Text                      Text
+                                      Text                  Text
+            Text                          K                  Text
+                Q                                               V
+                                                                                                                                                          Dense Features           Sparse Features
+
+
+                    W Qup                        W KV up
+                                                                                                     ...                    ...
+
+                Latent Q                       Latent KV
+                                                                                    User History Tokens         User Query Tokens
+
+                W Qdow n                       W KV dow n
+
+
+           User Query Tokens              User History Tokens                                   LLaTTE Backbone
+
+
+
+Figure 1 LLaTTE architecture overview. We hold the non-sequence backbone (DHEN) and task heads fixed, and scale the transformer-
+based sequence module in depth, width, and sequence length. The sequence module utilizes Multi-head Latent Attention (MLA) and
+adaptive pyramidal trimming to efficiently process long user histories.
+
+
+the large-scale upstream model, while a lightweight sequence                                                                            shallow MLPs producing probabilities ŷh = σ(MLPh (z)).
+module counterpart accounts for roughly 30% of the online
+ranking model FLOPs. In subsequent scaling experiments,                                                                                 4.2       Sequence Module
+we focus our study on the large-scale upstream model by                                                                                 The sequence module is the focus of our scaling study. To
+default, where varying the capacity (L, d, T ) of the Sequence                                                                          enable scaling to long contexts (lengths > 1000) under pro-
+Module allows us to explore scaling behaviors across a                                                                                  duction constraints, we employ a Target-Aware transformer
+much wider compute FLOP range than is possible with                                                                                     with two key efficiency optimizations: Multi-head Latent
+the lightweight online ranking model. The Non-Sequence                                                                                  Attention (MLA) and Adaptive Pyramidal Output.
+backbone and Task Heads are held fixed throughout to
+isolate the effects of Sequence Module scaling.                                                                                         The module operates in five steps:
+
+4.1    Non-Sequence Backbone                                                                                                            1. Tokenization: Embeds each action at into a token vector
+The non-sequence module implements a standard DHEN-                                                                                        xt , forming Xseq .
+style architecture Zhang et al. (2022), a deep ensemble                                                                                 2. Fusion: Appends nq query tokens to form Xinput . We
+network that combines heterogeneous feature interaction                                                                                    encode the query tokens with user-ad candidate context
+modules. It processes all non-sequential features alongside                                                                                for online model, and user-only context for upstream
+                          (k)                                                                                                              model when ad candidate context isn’t available yet.
+the sequence summaries zseq produced by the transformer.
+                                                                                                                                           This flexible encoding allows the same architecture to
+Sparse categorical features are embedded and concatenated                                                                                  bridge offline and online stages.
+with dense/float features. The concatenated features are                                                                                3. Latent Attention: Applies an L-layer transformer using
+passed through LNS layers of feature interaction networks                                                                                  MLA DeepSeek-AI (2024) to reduce memory footprint.
+to yield a unified representation z. Prediction heads are                                                                               4. Pyramidal Reduction: Selectively trims older tokens at
+
+
+                                                                                                                                    4
+   deeper layers (following Zhang et al. (2025)). This con-          dense semantic embeddings from foundational content en-
+   centrates compute on recent events and query tokens,              coders, treating signal quality as a multiplier on the scaling
+   allowing the model to trade off context length against            coefficient α.
+   FLOPs.
+5. Readout: Extracts fixed-size summaries from the final             4. Cross-Stage Transfer Efficiency. To quantify cross-
+   query-token representations.                                      stage efficiency, we introduce the Transfer Ratio (τ ) which
+This adaptive design allows us to deploy different flavors           measures how effectively improvements from a large up-
+of LLaTTE across the stack while maintaining a unified               stream model translate to the production online ranking
+modeling paradigm. In the asynchronous upstream stage,               loss. This metric accounts for all production interference
+we deploy high-capacity variants that consume > 45× the se-          factors such as asynchronous inference latency penalties.
+quence FLOPs of the main ranker (with > 90% concentrated
+in the Sequence Module), utilizing full self-attention to max-                                ∆NEdownstream
+imize representation quality. Conversely, online ranking                                 τ=                                    (4)
+                                                                                               ∆NEupstream
+models employ aggressive pyramidal trimming to adhere to
+strict latency budgets. The architecture composes standard-          where ∆NEupstream is the loss reduction in the offline user
+ized components; full specifications appear in Appendix A.           modeling task and ∆NEdownstream is the realized gain in
+                                                                     the online ranking task. This metric allows us to deter-
+                                                                     mine which scaling axes best preserve gains through the
+5    Scaling Framework and Methodology
+                                                                     information bottleneck inherent in multi-stage architectures.
+To rigorously quantify the benefits of scaling in recommenda-
+tion, we move beyond ad-hoc architecture search and adopt            6     Experimental Results
+a systematic scaling framework. Unlike LLMs, where the
+input text distribution is generally treated as fixed, recom-        6.1   Experimental Setup
+mendation systems allow us to scale along both architectural
+                                                                     Training infrastructure. All scaling experiments are con-
+dimensions and input information densities.
+                                                                     ducted on the same large-scale production recommendation
+We formulate the scaling behavior as a function of the               task using a proprietary industrial training platform. As
+compute budget C, measured in FLOPs allocated to the                 previously noted, our experiments are conducted on the
+sequence module. When the information density is held                large upstream model to investigate the maximum achiev-
+constant, we posit that Normalized Entropy (NE) improve-             able FLOP horizon, extending beyond the computational
+ments (relative to our strong production baseline) follow a          limits of the online model. Models are trained with mixed
+power-law relationship with compute, modeled log-linearly            precision on 128 NVIDIA H100 GPUs and use FlashAtten-
+as:                                                                  tion Dao et al. (2022) for memory and throughput efficiency.
+                  ∆NE(C) ∝ −α · log10 C                  (3)         Unless otherwise noted, each configuration is trained for
+                                                                     229K steps on 30 billion examples sampled from the produc-
+where α represents the scaling coefficient (efficiency) of a         tion traffic distribution.
+specific dimension. We investigate four primary axes of
+scaling:
+                                                                     Evaluation metric. We report all results using Normalized
+                                                                     Entropy (NE), defined in Eq. 2. We report relative reduc-
+1. Model Capacity (L, d). We vary the transformer depth              tions in NE (%) compared to a strong production baseline,
+L and embedding width d. A key objective is to identify              where lower NE values indicate better performance. On our
+the aspect ratio L/d that maximizes parameter efficiency,            internal datasets, a reduction in NE of 0.02% is considered
+determining if critical width thresholds exist before depth          statistically significant and sufficient to yield measurable
+scaling becomes effective in the sparse-feature regime of            revenue impact.
+recommendation systems.
+                                                                     6.2   Scaling Model Depth and Width
+2. Temporal Horizon (T ). We treat sequence length T as              We first investigate how to allocate a fixed compute budget
+a direct proxy for the information horizon. We examine if            between model depth (L) and width (d). We conduct a grid
+extending T yields diminishing returns or if larger models           search over L ∈ {1, 2, 4, 8} and d ∈ {128, 256, 512, 1024} at
+can effectively attend to increasingly distant history events        a fixed sequence length of T = 400.
+(T → 5000).                                                          The results reveal a non-linear relationship between depth
+                                                                     and width. When the model is narrow (d = 128), increasing
+3. Information Density. Standard scaling laws assume                 depth yields diminishing returns; the representation capacity
+a homogeneous token distribution. We challenge this by               is bottlenecked by the embedding dimension. However, once
+varying the semantic richness of the tokens xt . We com-             width reaches a critical threshold of d ≈ 256, depth scaling
+pare sparse ID-based tokens against tokens enriched with             becomes substantially more effective. Conversely, allocating
+
+
+                                                                 5
+compute purely to width (fixing L and increasing d → 1024)                                                         NE Gain vs Sequence Length
+yields limited NE gains.
+To illustrate these regimes, Table 1 compares four represen-                                          0                                                        Layers
+                                                                                                                                                                   1L
+tative configurations. We include a “Deep-Balanced” variant                                                                                                        2L
+to demonstrate the scaling behavior when both depth and                                             −0.1                                                           4L
+
+
+
+
+                                                                         NE Gain (%)
+width are sufficient. Extreme or unbalanced allocation to ei-
+                                                                                                    −0.2
+ther width or depth leads to diminishing returns. Sufficient
+width (d ≥ 256) is required for depth scaling to be effec-                                          −0.3
+tive, while excessive width without adequate depth (e.g.,
+d = 1024) is computationally inefficient and yields limited                                         −0.4
+gains. Balanced configurations maximize performance and
+compute efficiency.                                                                                 −0.5
+                                                                                                           200   400            800                              1600
+                                                                                                                         Sequence Length (T)
+Table 1 Capacity allocation across depth and width. Deep-
+Balanced (d = 256) successfully leverages depth to achieve the
+best performance (-0.17%)                                               Figure 2 Sequence length scaling for L = 1, L = 2, and L = 4
+                                                                        models. NE improves smoothly with longer histories, with deeper
+                                                                        models exhibiting a steeper dependence on T .
+ Setting              Deep     Balanced        Deep    Shallow
+                     Narrow                Balanced      Wide
+
+ Depth (L)                 8           4          8          2                                             Attention-Score Distribution Across Sequence
+ Width (d)               128         256        256       1024
+                                                                                                    100%
+ Seq Params (M)         0.85        1.16       2.33       6.93                                                          K=884           K=1588
+                                    530                                  Cumulative Attention (%)
+ Seq FLOPs (M)           568                   1187       1909                                                                                           80% threshold
+                                                                                                     80%
+
+ NE ∆ (%)            -0.10%      -0.14%      -0.17%     -0.08%
+                                                                                                     60%
+
+
+Motivated by these observations, we adopt balanced con-                                              40%
+figurations (d ≥ 256) as the default when studying other
+scaling axes such as sequence length and content features.                                           20%                                                Method
+                                                                                                                                                            TopK
+                                                                                                                                                            RecentK
+6.3     Sequence Length, Composition, and Content                                                     0%
+                                                                                                           0      500    1000         1500       2000   2500       3000
+We now examine how LLaTTE performance scales with the                                                                            Position
+temporal horizon proportional to the number of events T ,
+and with the semantic content embeddings on each event.
+                                                                        Figure 3 Attention-score distribution across the sequence. The
+                                                                        model continues to attend to events throughout the history,
+6.3.1   Extending the temporal horizon                                  supporting the usefulness of long contexts.
+
+We vary the sequence horizon T ∈ {200, 400, 800, 1600} for
+models with depths L ∈ {1, 2, 4, 8} while keeping width                 6.3.2                         Balancing freshness and signal strength
+fixed. As summarized in Figure 2, NE decreases monotoni-
+cally with T across all depths, confirming that longer user             We next examine the composition of the sequence at fixed
+histories consistently improve ranking quality.                         length. In this setting, user histories combine high-frequency,
+                                                                        lower per-event signal actions (ad views) with low-frequency,
+The incremental benefit of additional context depends                   high-value actions (conversions). We fix T = 1000 and vary
+strongly on model capacity. Deeper models exhibit larger                the allocation between these two sources (Table 2, top).
+NE gains as T increases, which is reflected in the curves for
+L = 2 compared to L = 1 in Figure 2.                                    The balanced mixture of views and conversions performs
+                                                                        best; both extremes are clearly suboptimal. Pure-view
+Attention-score probability analyses also revealed the utility          sequences underperform because they contain many low-
+of long contexts. The cumulative attention probability                  signal events. Pure-conversion sequences, while composed
+distributions over positions (Figure 3) show that a non-                of very high-value events, also degrade performance because
+trivial fraction of attention probability is allocated across the       conversions are temporally sparse: filling a length-1000
+entire 200–1600 token range, rather than narrowly focusing              sequence with only conversions forces the model to rely on
+on the most recent events, indicating that mid- and long-               older events that may no longer reflect current intent. Views,
+range history contributes meaningfully to predictions. The              by contrast, provide dense and recent coverage. The best-
+details of this study can be found in the Appendix (see                 performing allocations combine the high per-event signal
+Section A.4).                                                           of conversions with the temporal freshness provided by
+
+
+                                                                    6
+frequent views.                                                                                     NE Gain vs Total Compute (FLOPs)
+
+6.3.3 Content-aware scaling: strong content features bend
+      the scaling curve                                                                0
+
+Finally, we study how feature richness interacts with archi-
+
+
+
+
+                                                                       NE Gain (%)
+tectural scaling. In addition to sparse IDs, we introduce                            −0.1
+
+dense content embeddings produced by fine-tuned LLaMA
+models as well as Content Understanding models processing                            −0.2   Scaling Strategy
+
+heterogeneous multimodal signals (e.g., text and images)                                         no content scaling (α=-0.082)
+                                                                                                 model width (α=-0.133)
+and compare models with and without these features at                                −0.3
+                                                                                                 model depth (α=-0.200)
+different depths (Table 2, bottom).                                                              sequence length (α=-0.265)
+
+                                                                                                    2       3    4   5   6   7 8 9      2   3   4   5   6
+
+Table 2 Sequence-quality ablations. Top: impact of sequence                                                                      1020
+composition at fixed length T = 1000. Bottom: effect of content                                                 Total Compute (FLOPs)
+semantic features at two depths.
+                                                                      Figure 4 Relative normalized entropy (NE) gain versus training
+                Sequence composition (T = 1000)
+                                                                      compute (FLOPs, log scale) for different scaling strategies. The
+                                                                      slope of each line indicates NE improvement per 10× increase in
+ Allocation (Views / Conv)             ∆NE (%)                        compute.
+ Balanced (500 / 500)                   0.00%       reference
+ Conv-heavy (200 / 800)                +0.01%     near-optimal
+ Pure conversions (0 / 1000)           +0.105%      degraded
+                                                                      We fit a log-linear model to the empirical data:
+ Pure views (1000 / 0)                 +0.15%         worst
+                         Content features
+
+ Features                              1L model    4L model                                             ∆NE(C) = −α · log10 C + β
+ Sparse IDs only                       +0.06%        -0.01%
+ Sparse IDs + content embeddings        0.00%       -0.118%
+                                                                      where the scaling coefficient α is determined by the scaling
+                                                                      strategy. We observe distinct behaviors for each axis:
+Two observations stand out. First, in the absence of content
+features, increasing depth from one to four layers yields only        • Sequence Length: This dimension exhibits the steepest
+a minor improvement: the 4-layer ID-only model is only                  scaling slope. Extending the temporal horizon consis-
+slightly better than the 1-layer baseline. This corresponds             tently yields the largest performance improvement per
+to a very shallow scaling slope and indicates that additional           unit of compute, indicating that the model effectively
+capacity is largely spent memorizing ID patterns. Second,               utilizes long-term history. This, however, comes with the
+when LLaMA content embeddings are enabled, the same                     additional cost of logging and materializing longer user
+4-layer configuration achieves a substantially larger gain,             engagement histories.
+and the relative benefit of content is markedly stronger for          • Model Depth: Increasing depth provides robust scaling
+the deeper model than for the shallow one.                              behavior. Once the model width is sufficiently scaled up,
+These results show that strong semantic content features are            adding layers offers a reliable path to improved ranking
+not a marginal add-on but a prerequisite for effective scaling.         quality.
+The presence of semantic features materially changes the              • Model Width: Width plays a foundational role in the
+slope of the compute–NE curve: with ID-only inputs, depth               architecture. While the scaling slope is less steep com-
+and sequence-length scaling quickly exhibit diminishing                 pared to depth or length, sufficient width is essential for
+returns, whereas with content-enriched sequences, the same              maximizing the capacity of the other dimensions.
+increases in L and T translate into substantially larger              • Content Quality: As shown in Figure 4, the presence
+NE gains. In this sense, the scaling law for LLaTTE is                  of semantic features significantly enhances the scaling
+inherently content-aware; analyzing model size and compute              laws on all other dimensions. Content-enriched models
+in isolation is insufficient to predict performance.                    demonstrate a steep slope compared to their ID-only coun-
+                                                                        terparts (black line), showing that high-quality semantic
+6.4   Global Compute Scaling                                            features are necessary for the model to extract value from
+Finally, we aggregate the above experiments to examine                  increased compute.
+global compute scaling. Figure 4 plots relative NE gain
+                                                                      These findings establish that sequence-based recommen-
+versus sequence compute budget C (measured in sequence
+                                                                      dation is a scalable paradigm that converts compute into
+FLOPs) on a logarithmic scale.
+                                                                      predictable performance gains. We leverage this scaling hi-
+The results demonstrate that recommendation performance               erarchy in Section 7 to optimize our multi-stage architecture
+follows a predictable power-law relationship with compute.            under production constraints.
+
+
+                                                                  7
+7 Multistage Sequence Model: Towards                                 across all dimensions. This difference, however, reflects
+                                                                     a structural asymmetry: in the downstream ranker, the
+  Maximizing RoI in Production                                       sequence module accounts for only ≈ 30% of total FLOPs,
+                                                                     whereas in the upstream model it accounts for ≈ 90%.
+7.1    Motivation and architecture
+                                                                     Scaling the sequence module thus yields a larger relative
+Section 6.4 showed that ranking quality continues to im-             improvement per total FLOP in the downstream setting.
+prove as we scale depth, and in particular, sequence length.
+The production ranker, however, serves trillions of requests         To isolate the intrinsic scaling efficiency of the sequence mod-
+per day under a strict latency budget, which limits the              ule, Table 3b reports slopes against sequence-only FLOPs.
+deployed sequence module to a few layers and a per-source            This comparison reveals that depth and width scaling effi-
+(i.e. engagement type) horizon of roughly T ≈ 400 events/-           ciency is consistent across both settings. The key difference
+tokens. To benefit from the favorable scaling curves with-           lies in sequence length: upstream scaling retains only ≈ 50%
+out violating latency constraints, we adopt a multistage             of the downstream efficiency. This gap arises because the
+architecture. The latency-constrained downstream model               upstream encoder lacks candidate context, forcing it to
+remains compact and attends jointly over user sequences              compress the history into a generic representation rather
+and ad/context features. An asynchronous upstream user               than performing candidate-aware attention. Consequently,
+model processes longer histories using the same LLaTTE               only long-range signals that are universally relevant across
+architecture but with only user-side features, and publishes         candidates survive the bottleneck.
+cached user embeddings that the ranker consumes at request           7.3   Transfer efficiency
+time. This separation introduces a strict information bottle-
+neck, as the upstream encoder must summarize thousands               To quantify the efficiency of our multi-stage architecture,
+of historical events into a single fixed-size vector (in our         recall the transfer ratio τ defined in Eq. 4. This metric
+production deployment, dtransfer = 2048). We study how               measures the conversion rate of upstream representation
+this fixed-bandwidth bottleneck affects scaling laws.                quality into downstream ranking accuracy.
+                                                                     For instance, the Seq-heavy configuration in Table 3c demon-
+7.2    Upstream scaling laws
+                                                                     strates this relationship: upgrading the upstream encoder
+We first characterize the scaling behavior of the upstream           yields a 0.14% upstream improvement, which translates to a
+user model in isolation. Using the same log-linear fitting           0.07% improvement in the downstream ranker, correspond-
+procedure as in Section 6.4, we estimate slopes for NE               ing to a transfer ratio of τ ≈ 50%.
+improvement as a function of upstream sequence FLOPs.
+Table 3 (top) summarizes the comparison between upstream
+                                                                     Benchmarking Transfer Efficiency. Transferring gains
+and downstream slopes.
+                                                                     from asynchronous upstream models to online rankers
+                                                                     is inherently lossy. Several structural factors typically
+Table 3 Upstream vs downstream scaling comparison.
+                                                                     limit transfer efficiency to the 25%–30% range: the ca-
+         (a) Slopes α against total model FLOPs (Cfull ).            pacity gap between massive upstream encoders and com-
+                                                                     pact downstream rankers, the staleness introduced by asyn-
+                      Depth (L)   Width (d)   Seq. length (T )       chronous inference, and the information bottleneck imposed
+      Downstream α      0.200       0.133          0.265             by compressing user histories into fixed-size user embed-
+      Upstream α        0.102       0.113          0.116             dings. Against this backdrop, the ≈ 50% transfer ratio
+                                                                     observed in our experiments is significant. It indicates that
+        (b) Slopes α against sequence-only FLOPs (Cseq ).            the high-level intent signals captured by scaling the sequence
+                                                                     encoder are robust to compression and temporal delays, re-
+                      Depth (L)   Width (d)   Seq. length (T )       taining substantial predictive value despite the aggressive
+      Downstream α      0.106       0.091          0.238             compression and separation from the online scoring context.
+      Upstream α        0.092       0.102          0.094
+                                                                     Architecture Robustness. To determine if specific archi-
+  (c) Transfer ratios for iso-FLOPs upstream configurations.         tectural choices affect this efficiency, we compare two up-
+                                                                     stream configurations with matched compute budgets (≈ 12
+                     Seq-heavy                Model-heavy
+                                                                     GFLOPs/sample) representing different scaling priorities:
+               (L=3, d=512, T =1000)     (L=6, d=512, T =460)
+ ∆NEup                −0.14%                    −0.13%               • Sequence-heavy: L = 3, d = 512, T = 1000
+ ∆NEdown              −0.07%                    −0.07%               • Model-heavy: L = 6, d = 512, T = 460
+ τ (%)                  50                        53
+                                                                     As shown in Table 3 (bottom), both models achieve similar
+                                                                     upstream gains (−0.14% vs −0.13%) and, crucially, identical
+Table 3a reports scaling slopes against total model FLOPs.           downstream gains (−0.07%). This indicates that for a fixed
+The downstream model exhibits notably steeper slopes                 compute budget, the architecture is robust to the specific
+
+
+                                                                 8
+allocation between depth and sequence length. The total              8.2   Latency and online gains
+compute of the upstream model determines the downstream              Offloading heavy sequence modeling to the asynchronous
+performance, validating that we can flexibly trade off history       embedding service keeps the additional cost on the ranking
+length for model capacity without degrading the transfer             path to a single feature lookup. The online downstream
+ratio.                                                               LLaTTE model remains conservative in design (depth and
+7.4   Implications for compute allocation                            sequence length). We observe no measurable change in P99
+                                                                     ranking latency compared to the baseline without upstream
+The combined downstream and upstream observations yield
+                                                                     LLaTTE user embeddings. The extra FLOPs from the
+a simple policy:
+                                                                     larger upstream LLaTTE models are absorbed by the H100
+• Downstream online ranker: Allocate the latency budget              cluster, which operates at much lower QPS and is heavily
+  to short sequence lengths and shallow depths, supported            batched.
+  by sufficient width and rich content features (sequence
+                                                                     Across multiple large-scale A/B tests, the combination of
+  lengths up to T ≈ 400).
+                                                                     the compact online LLaTTE and the upstream LLaTTE
+• Asynchronous upstream user model: Use the relaxed la-
+                                                                     user embeddings delivered approximately 0.25% NE reduc-
+  tency budget to scale total sequence-modeling compute.
+                                                                     tion on our flagship ads ranker, corresponding to a 4.3%
+  Results indicate that downstream performance is driven
+                                                                     conversion uplift on Facebook Feed and Reels, a business
+  primarily by the total upstream compute budget rather
+                                                                     impact on the order of hundreds of millions of dollars in an-
+  than the specific allocation between depth and length.
+                                                                     nual revenue. This validates the proposed two-stage scaling
+  Consequently, we deploy upstream models with a sequence
+                                                                     strategy as an efficient way to convert additional sequence-
+  compute budget 45× larger than that of the online ranker.
+                                                                     modeling compute into production value under strict serving
+This two-stage asymmetric strategy lets us continue follow-          constraints.
+ing the scaling frontier identified in Section 6.4 after the
+latency-constrained ranker has exhausted its local budget,           9     Conclusion & Future Work
+turning additional offline compute into predictable online
+gains.                                                               In this work, we propose the LLaTTE paradigm, which
+                                                                     significantly scales up sequence learning in recommender
+                                                                     systems. By allocating the majority of computational re-
+8     Production Deployment                                          sources to sequence modeling, we achieve predictable and
+8.1 Asynchronous embedding service with online                       robust scaling behavior. We systematically analyze scaling
+                                                                     across standard dimensions (model depth and width) as
+    LLaTTE
+                                                                     well as less explored factors (sequence length, composition
+In production, we deploy a two-stage LLaTTE architec-                and richness), demonstrating that optimal scaling requires
+ture. The downstream ranking model continues to run a                balancing all these factors simultaneously.
+compact LLaTTE module online, attending over short user
+histories (per-source horizon capped at T ≈ 400) together            To maximize production impact, we develop a multistage
+with ad and context features, under a strict per-request la-         modeling and deployment strategy: a computationally ex-
+tency budget at trillion-request scale. This online LLaTTE           pensive model trained on user-only features that runs offline
+model captures fresh user intent signals and leverages ad-           and infrequently, while effectively transferring these gains
+specific interactions, but is intentionally much smaller than        to the lightweight online production model.
+the models investigated in the scaling study presented in            Our work was developed concurrently with other notable
+Section 6.4.                                                         industry advances in sequence modeling for recommender
+To exploit bigger sequence models without impacting la-              systems Zhang et al. (2025); Deng et al. (2025). These efforts
+tency, we introduce an asynchronous embedding service that           collectively demonstrate the rise of sequence modeling in
+hosts the upstream user understanding LLaTTE model.                  large-scale recommendation systems. Moving forward, we
+Embedding updates are not computed per request; instead,             plan to explore efficient long-context kernels, reinforcement
+they are triggered on high-value user events (primarily user         learning, scalable infrastructure solutions, and the upper
+conversions). Triggered events are processed on a dedi-              bounds of scaling laws – as we stand at the cusp of the
+cated cluster of H100 GPU hosts using deeper and longer              LLM-scale era for recommender systems.
+LLaTTE models optimized for high-throughput transformer
+inference. Representing the largest user model deployment            References
+at Meta, these upstream encoders operate only on user-side           Zheng Chai, Qin Ren, Xijun Xiao, Huizhi Yang, Bo Han, Si-
+features, generate user representations (embeddings), and              jun Zhang, Di Chen, Hui Lu, Wenlin Zhao, Lele Yu, Xiong-
+write their compressed representations to a feature store.             hang Xie, Shiru Ren, Xiang Sun, Yaocheng Tan, Peng
+At request time, the downstream ranking models read these              Xu, Yuchao Zheng, and Di Wu. 2025. LONGER: Scaling
+embeddings as dense features and utilize them in the online            Up Long Sequence Modeling in Industrial Recommenders.
+downstream LLaTTE ranking model.                                       arXiv:2505.04421 [cs.IR] https://arxiv.org/abs/2505.04421
+
+
+                                                                 9
+Jianxin Chang, Chenbin Zhang, Zhiyi Fu, Xiaoxue Zang, Lin                aodong Wang, Udit Gupta, Carole-Jean Wu, Alisson G. Az-
+   Guan, Jing Lu, Yiqun Hui, Dewei Leng, Yanan Niu, Yang                 zolini, Dmytro Dzhulgakov, Andrey Mallevich, Ilia Cherni-
+   Song, and Kun Gai. 2023. TWIN: TWo-stage Interest Network             avskii, Yinghai Lu, Raghuraman Krishnamoorthi, Ansha Yu,
+   for Lifelong User Behavior Modeling in CTR Prediction at              Volodymyr Kondratenko, Stephanie Pereira, Xianjie Chen,
+   Kuaishou. In Proceedings of the 29th ACM SIGKDD Con-                  Wenlin Chen, Vijay Rao, Bill Jia, Liang Xiong, and Misha
+   ference on Knowledge Discovery and Data Mining. https:                Smelyanskiy. 2019. Deep Learning Recommendation Model
+  //arxiv.org/abs/2302.02352                                             for Personalization and Recommendation Systems. CoRR
+                                                                         abs/1906.00091 (2019). arXiv:1906.00091 http://arxiv.org/
+Junyi Chen, Lu Chi, Bingyue Peng, and Zehuan Yuan. 2024.
+                                                                         abs/1906.00091
+  HLLM: Enhancing Sequential Recommendations via Hierar-
+  chical Large Language Models for Item and User Modeling.             Nikil Pancha, Andrew Zhai, Jure Leskovec, and Charles Rosen-
+  arXiv:2409.12740 [cs.IR] https://arxiv.org/abs/2409.12740              berg. 2022. PinnerFormer: Sequence Modeling for User Rep-
+                                                                         resentation at Pinterest. arXiv:2205.04507 [cs.LG] https:
+Qiwei Chen, Huan Zhao, Wei Li, Pipei Huang, and Wenwu                    //arxiv.org/abs/2205.04507
+  Ou. 2019. Behavior Sequence Transformer for E-commerce
+  Recommendation in Alibaba. arXiv:1905.06874 [cs.IR] https:           Qi Pi, Xiaoqiang Zhu, Guorui Zhou, Yujing Zhang, Zhe Wang,
+  //arxiv.org/abs/1905.06874                                             Lejian Ren, Ying Fan, and Kun Gai. 2020. Search-based User
+                                                                         Interest Modeling with Lifelong Sequential Behavior Data
+Tri Dao, Daniel Y. Fu, Stefano Ermon, Atri Rudra, and Christo-           for Click-Through Rate Prediction. In Proceedings of the 29th
+  pher Ré. 2022. FlashAttention: Fast and Memory-Efficient               ACM International Conference on Information and Knowledge
+  Exact Attention with IO-Awareness. arXiv:2205.14135 [cs.LG]            Management. https://arxiv.org/abs/2006.05639
+  https://arxiv.org/abs/2205.14135
+                                                                       Noam Shazeer. 2019. Fast Transformer Decoding: One Write-
+DeepSeek-AI. 2024.      DeepSeek-V2: A Strong, Econom-                   Head is All You Need. arXiv:1911.02150 [cs.NE] https://
+  ical, and Efficient Mixture-of-Experts Language Model.                 arxiv.org/abs/1911.02150
+  arXiv:2405.04434 [cs.CL] https://arxiv.org/abs/2405.04434
+                                                                       Zihua Si, Lin Guan, ZhongXiang Sun, Xiaoxue Zang, Jing Lu,
+Jiaxin Deng, Shiyao Wang, Kuo Cai, Lejian Ren, Qigen Hu,                 Yiqun Hui, Xingchao Cao, Zeyu Yang, Yichen Zheng, Dewei
+  Weifeng Ding, Qiang Luo, and Guorui Zhou. 2025. OneRec:                Leng, Kai Zheng, Chenbin Zhang, Yanan Niu, Yang Song, and
+   Unifying Retrieve and Rank with Generative Recommender                Kun Gai. 2024. TWIN V2: Scaling Ultra-Long User Behavior
+   and Iterative Preference Alignment. arXiv:2502.18965 [cs.IR]          Sequence Modeling for Enhanced CTR Prediction at Kuaishou.
+   https://arxiv.org/abs/2502.18965                                      In Proceedings of the 33rd ACM International Conference on
+Tim Donkers, Benedikt Loepp, and Jürgen Ziegler. 2017. Se-               Information and Knowledge Management. https://arxiv.org/
+  quential User-based Recurrent Neural Network Recommen-                 abs/2407.16357
+  dations. In Proceedings of the Eleventh ACM Conference on            Fei Sun, Jun Liu, Jian Wu, Changhua Pei, Xiao Lin, Wenwu
+  Recommender Systems (Como, Italy) (RecSys ’17). Associa-               Ou, and Peng Jiang. 2019. BERT4Rec: Sequential Recom-
+  tion for Computing Machinery, New York, NY, USA, 152–160.              mendation with Bidirectional Encoder Representations from
+  doi:10.1145/3109859.3109877                                            Transformer. CoRR abs/1904.06690 (2019). arXiv:1904.06690
+Huifeng Guo, Ruiming Tang, Yunming Ye, Zhenguo Li, and                   http://arxiv.org/abs/1904.06690
+ Xiuqiang He. 2017. DeepFM: A Factorization-Machine based              Ruoxi Wang, Bin Fu, Gang Fu, and Mingliang Wang. 2017.
+  Neural Network for CTR Prediction. CoRR abs/1703.04247                 Deep & Cross Network for Ad Click Predictions. CoRR
+ (2017). arXiv:1703.04247 http://arxiv.org/abs/1703.04247                abs/1708.05123 (2017). arXiv:1708.05123 http://arxiv.org/
+Balázs Hidasi, Alexandros Karatzoglou, Linas Baltrunas, and              abs/1708.05123
+  Domonkos Tikk. 2016. Session-based Recommendations with              Ruoxi Wang, Rakesh Shivanna, Derek Cheng, Sagar Jain, Dong
+  Recurrent Neural Networks. arXiv:1511.06939 [cs.LG] https:             Lin, Lichan Hong, and Ed Chi. 2021. DCN V2: Improved Deep
+  //arxiv.org/abs/1511.06939                                             & Cross Network and Practical Lessons for Web-scale Learning
+Andrew Jaegle, Felix Gimeno, Andrew Brock, Andrew Zisserman,             to Rank Systems. In Proceedings of the Web Conference 2021
+  Oriol Vinyals, and Joao Carreira. 2021. Perceiver: General            (WWW ’21). ACM, 1785–1797. doi:10.1145/3442381.3450078
+  Perception with Iterative Attention. arXiv:2103.03206 [cs.CV]        Xue Xia, Pong Eksombatchai, Nikil Pancha, Dhruvil Deven
+  https://arxiv.org/abs/2103.03206                                       Badani, Po-Wei Wang, Neng Gu, Saurabh Vishwas Joshi,
+Wang-Cheng Kang and Julian McAuley. 2018. Self-Attentive                 Nazanin Farahpour, Zhiyuan Zhang, and Andrew Zhai. 2023.
+ Sequential Recommendation. arXiv:1808.09781 [cs.IR] https:             TransAct: Transformer-based Realtime User Action Model
+ //arxiv.org/abs/1808.09781                                              for Recommendation at Pinterest. In Proceedings of the 29th
+                                                                        ACM SIGKDD Conference on Knowledge Discovery and Data
+Jared Kaplan, Sam McCandlish, Tom Henighan, Tom B. Brown,               Mining (KDD ’23). ACM, 5249–5259. doi:10.1145/3580305.
+  Benjamin Chess, Rewon Child, Scott Gray, Alec Radford,                 3599918
+  Jeffrey Wu, and Dario Amodei. 2020. Scaling Laws for Neural
+                                                                       Xue Xia, Saurabh Vishwas Joshi, Kousik Rajesh, Kangnan Li,
+  Language Models. arXiv:2001.08361 [cs.LG] https://arxiv.
+                                                                        Yangyi Lu, Nikil Pancha, Dhruvil Deven Badani, Jiajing Xu,
+  org/abs/2001.08361
+                                                                         and Pong Eksombatchai. 2025. TransAct V2: Lifelong User
+Maxim Naumov, Dheevatsa Mudigere, Hao-Jun Michael Shi,                  Action Sequence Modeling on Pinterest Recommendation.
+ Jianyu Huang, Narayanan Sundaraman, Jongsoo Park, Xi-                   arXiv:2506.02267 [cs.IR] https://arxiv.org/abs/2506.02267
+
+
+                                                                  10
+Zhichen Zeng, Xiaolong Liu, Mengyue Hang, Xiaoyi Liu, Qinghai            S3-Rec: Self-Supervised Learning for Sequential Recommen-
+  Zhou, Chaofei Yang, Yiqun Liu, Yichen Ruan, Laming Chen,               dation with Mutual Information Maximization. In Proceedings
+  Yuxin Chen, Yujia Hao, Jiaqi Xu, Jade Nie, Xi Liu, Buyun               of the 29th ACM International Conference on Information
+  Zhang, Wei Wen, Siyang Yuan, Hang Yin, Xin Zhang, Kai                  & Knowledge Management (CIKM ’20). ACM, 1893–1902.
+  Wang, Wen-Yen Chen, Yiping Han, Huayu Li, Chunzhi Yang,                doi:10.1145/3340531.3411954
+  Bo Long, Philip S. Yu, Hanghang Tong, and Jiyan Yang. 2025.
+  InterFormer: Effective Heterogeneous Interaction Learning
+  for Click-Through Rate Prediction. arXiv:2411.09852 [cs.IR]          A       LLaTTE Architecture Details
+  https://arxiv.org/abs/2411.09852
+                                                                       A.1     Non-Sequence Module
+Jiaqi Zhai, Lucy Liao, Xing Liu, Yueming Wang, Rui Li, Xuan
+   Cao, Leon Gao, Zhaojie Gong, Fangda Gu, Michael He,                 Let E : V → Rde denote the embedding lookup for sparse
+  Yinghai Lu, and Yu Shi. 2024. Actions Speak Louder than              categorical features. We construct the initial non-sequence
+  Words: Trillion-Parameter Sequential Transducers for Gen-            representation by concatenating embedded sparse features,
+   erative Recommendations. arXiv:2402.17152 [cs.LG] https:            dense features, float features, and sequence summaries:
+  //arxiv.org/abs/2402.17152
+                                                                                                                               
+                                                                                                                           mseq
+Buyun Zhang, Liang Luo, Yuxin Chen, Jade Nie, Xi Liu,                  h(0) = Concat E(xsparse ), xdense , xfloat , {z(k) }
+                                                                                                                      seq k=1     ∈ Rd0 .
+  Daifeng Guo, Yanli Zhao, Shen Li, Yuchen Hao, Yantao
+                                                                                                                                    (5)
+  Yao, Guna Lakshminarayanan, Ellie Dingqiao Wen, Jong-
+                                                                       We then apply LNS layers of a feature-interaction network:
+  soo Park, Maxim Naumov, and Wenlin Chen. 2024b. Wukong:
+  Towards a Scaling Law for Large-Scale Recommendation.
+  arXiv:2403.02545 [cs.LG] https://arxiv.org/abs/2403.02545                       h(ℓ) = NonSeqℓ (h(ℓ−1) ),       ℓ = 1, . . . , LNS ,   (6)
+
+Buyun Zhang, Liang Luo, Xi Liu, Jay Li, Zeliang Chen, Weilin           yielding
+  Zhang, Xiaohan Wei, Yuchen Hao, Michael Tsang, Wenjun                                         z = h(LNS ) ∈ Rd .                       (7)
+  Wang, Yang Liu, Huayu Li, Yasmine Badr, Jongsoo Park,
+  Jiyan Yang, Dheevatsa Mudigere, and Ellie Wen. 2022. DHEN:           In production, NonSeqℓ is instantiated with a
+  A Deep and Hierarchical Ensemble Network for Large-Scale             DCN/DeepFM/DLRM-style architecture Guo et al.
+  Click-Through Rate Prediction. arXiv:2203.11014 [cs.IR]              (2017); Naumov et al. (2019); Wang et al. (2017, 2021);
+  https://arxiv.org/abs/2203.11014
+                                                                       Zhang et al. (2024b).
+Biao Zhang and Rico Sennrich. 2019. Root Mean Square Layer
+  Normalization. arXiv:1910.07467 [cs.LG] https://arxiv.org/           A.2     Sequence Module
+  abs/1910.07467                                                       A.2.1    Action Embeddings
+Wei Zhang, Dai Li, Chen Liang, Fang Zhou, Zhongke Zhang,
+                                                                       Let Su = {a1 , a2 , . . . , aT } be the temporally ordered
+ Xuewei Wang, Ru Li, Yi Zhou, Yaning Huang, Dong Liang,
+ Kai Wang, Zhangyuan Wang, Zhengxing Chen, Fenggang Wu,
+                                                                       sequence of actions, oldest first. Each action at =
+ Minghai Chen, Huayu Li, Yunnan Wu, Zhan Shu, Mindi Yuan,              (τt , typet , itemt , surfacet , metat ) is embedded and projected
+ and Sri Reddy. 2024a. Scaling User Modeling: Large-scale              into a token:
+ Online User Representations for Ads Personalization in Meta.                           
+ In Companion Proceedings of the ACM Web Conference 2024               xt = MLPact Etype (typet ), Eitem (itemt ),
+ (WWW ’24). ACM, 47–55. doi:10.1145/3589335.3648301                                                                                        
+                                                                                          Esurface (surfacet ), Etime (τt ), Emeta (metat ) ∈ Rd
+Zhaoqi Zhang, Haolei Pei, Jun Guo, Tianyu Wang, Yufei Feng,
+  Hui Sun, Shaowei Liu, and Aixin Sun. 2025. OneTrans: Unified
+  Feature Interaction and Sequence Modeling with One Trans-            forming
+  former in Industrial Recommender. arXiv:2510.26104 [cs.IR]                           Xseq = [x1 ; x2 ; . . . ; xT ] ∈ RT ×d .          (8)
+  https://arxiv.org/abs/2510.26104
+                                                                       We apply additive timestamp encodings to a subset of hidden
+Guorui Zhou, Na Mou, Ying Fan, Qi Pi, Weijie Bian, Chang               dimensions.
+ Zhou, Xiaoqiang Zhu, and Kun Gai. 2019. Deep Interest
+ Evolution Network for Click-Through Rate Prediction. In
+ Proceedings of the AAAI Conference on Artificial Intelligence,        A.2.2    Query Tokens and Fusion
+ Vol. 33. 5941–5948. https://arxiv.org/abs/1809.03672
+                                                                       We introduce nq query tokens Q ∈ Rnq ×d that summarize
+Guorui Zhou, Chengru Song, Xiaoqiang Zhu, Ying Fan, Han                the user–ad request. Depending on the stage, these tokens
+ Zhu, Xiao Ma, Yanghui Yan, Junqi Jin, Han Li, and Kun                 may encode candidate ad features, request context, user-
+ Gai. 2018. Deep Interest Network for Click-Through Rate               level features, and learned seed tokens Jaegle et al. (2021).
+ Prediction. In Proceedings of the 24th ACM SIGKDD Interna-            We concatenate sequence and query tokens:
+ tional Conference on Knowledge Discovery and Data Mining.
+ https://arxiv.org/abs/1706.06978
+                                                                                  Xinput = Concat(Xseq , Q) ∈ R(T +nq )×d ,              (9)
+Kun Zhou, Hui Wang, Wayne Xin Zhao, Yutao Zhu, Sirui Wang,
+  Fuzheng Zhang, Zhongyuan Wang, and Ji-Rong Wen. 2020.                and feed Xinput into the transformer.
+
+
+                                                                  11
+A.2.3   Transformer Layers and Pyramidal Schedule                                                           Total Attention Weight Distribution Across Time
+
+We apply an L-layer causal transformer with Multi-head                                                20k
+
+Latent Attention (MLA) DeepSeek-AI (2024) and RMS
+
+
+
+
+                                                                             Total Attention Weight
+normalization Zhang and Sennrich (2019). Let R(0) =                                                   15k
+
+Xinput . For layer ℓ:
+                                                                                                      10k
+
+           Z(ℓ) = RMSNorm R(ℓ) + MLA(R(ℓ) ) ,      (10)
+                                              
+                                                                                                       5k
+          X = RMSNorm Z + FFN(Z ) .
+            (ℓ)             (ℓ)         (ℓ)
+                                                   (11)
+                                            
+
+                                                                                                       0
+
+Following Zhang et al. (2025), we use an adaptive pyramidal                                                 0     100    200   300    400    500    600   700
+                                                                                                                                Hours Ago
+schedule over the temporal dimension. If X(ℓ) ∈ R(Tℓ +nq )×d ,
+the next layer operates on
+                                                                       Figure 5 Total attention weight distributed to event tokens
+           R(ℓ+1) = X(ℓ) [:, −Tℓ+1 :, :] ∈ RTℓ+1 ×d ,     (12)         bucketized by hours prior to the user request.
+
+where Tℓ+1 ≤ Tℓ . This progressively trims older tokens, re-
+ducing attention cost O(Tℓ+1 Tℓ d) and FFN cost O(Tℓ+1 d2 ).           This simplification reveals that MLA is mathematically
+                                                                       equivalent to Multi-Query Attention (MQA) Shazeer (2019)
+We use three regimes:                                                  on the latent space, where queries are projected to multiple
+• Full self-attention (Tℓ = T + nq ): all sequence and query           heads while key-value representations remain shared in the
+  tokens are retained.                                                 compressed latent space. The reformulated equations are
+• Pyramidal attention (nq < Tℓ < T + nq ): query tokens                as follows:
+  plus the m = Tℓ − nq most recent actions.
+• Cross-attention (Tℓ = nq ): only query tokens are retained;                                          Q
+  used in the final layer.                                              Qlatent ∈ RT ×h×dc = RMSNorm(XWdown )                                                   (17)
+                                                                         KVlatent ∈ R                           T ×dc               KV
+                                                                                                                        = RMSNorm(XWdown )                      (18)
+Offline (upstream) models typically use more layers with full
+self-attention (except the final cross-attention layer). Online
+                                                                                                                                                                 !
+                                                                                                                                         Qlatent WQK KV⊤
+ranking models use more aggressive pyramidal trimming in                 MLA(X) ∈ RT ×d = softmax                                                 √    latent
+                                                                                                                                                    dc
+early layers before the final cross-attention layer.
+                                                                                                                                      V
+                                                                                                                          · KVlatent Wout                       (19)
+A.2.4   Sequence Summaries
+                                                                       A.4           Attention Weight Distribution
+The final layer outputs Zraw at the query-token positions.
+                                                                       We studied the attention weight distribution P
+We project these into one or more fixed-size sequence sum-
+maries:                                                                                                QK⊤
+                                                                                                             
+                                                                                        P = softmax √                                                           (20)
+                                                                                                          dk
+         seq = LoRAMLPk Flatten(Zraw ) ∈ R
+        z(k)                                           (13)
+                                               dseq
+                                         
+                                                    ,
+                                                                       To enhance the visualization of attention weights, we re-
+where each LoRAMLPk is a low-rank adapted MLP.
+                                                                       duced both the number of query tokens and the number
+A.3     Multi-head Latent Attention                                    of attention heads in a single-layer transformer LLaTTE
+For completeness, we include the MLA parameterization.                 backbone. We extracted the attention probabilities of each
+For h heads, given input X ∈ Rh×d :                                    query token with respect to the entire user sequence and
+                                                                       aggregated these probabilities across a sufficient number of
+  K, V ∈ RT ×h×dk = split RMSNorm(XWdownKV     KV                      samples from diverse user requests.
+                                                   
+                                           )Wup
+                                                          (14)         Our analysis reveals that the model allocates a greater pro-
+                                Q                                      portion of its attention to the most recent events. However,
+    Q ∈ RT ×h×dk = RMSNorm(XWdown    Q
+                                   )Wup                   (15)         it continues to assign non-negligible probabilities to longer-
+                            QK⊤                                        term history, indicating that the model does not disregard
+                               
+  MLA(X) ∈ RT ×d = softmax √      VWout                   (16)
+                             dk                                        earlier events entirely Figure 3. Interestingly, we also exam-
+                                                                       ined the cumulative attention weight by selecting topK event
+A key observation is that consecutive linear projections can           tokens instead most recent k tokens, which present the the-
+be algebraically absorbed into single matrices. Specifically:          oretical maximum cumulative attention weight achievable
+                               ⊤
+                                                                       by selecting k tokens.
+  • the Wup
+         Q
+            and the Wup
+                     KV
+                                   on K⊤ can be fused
+                                                                       Additionally, we identified notable seasonality patterns at
+  • the Wup
+         KV
+            on Q can be absorbed into Wout                             the daily level. As shown in Figure 5 and Figure 6, the
+
+
+                                                                  12
+                          Macro-Average Attention-Score Distribution Across Time
+
+      Average Attention    0.02
+
+
+
+                          0.015
+
+
+
+                           0.01
+
+
+
+                          0.005
+
+
+
+                             0
+                                  0   100   200   300   400   500    600   700
+                                                  Hours Ago
+
+
+Figure 6 Average attention weight per event by hours prior to
+the user request.
+
+
+attention weight spikes occur at sharp 24-hour intervals.
+This suggests that individual users tend to exhibit recurring
+interests and behaviors at similar times of day.
+While these findings are consistent with our intuitions, we
+recognize that a more granular understanding of user be-
+havior in relation to behavioral sequences remains an open
+area for exploration. We present these preliminary results
+to encourage further research and contributions from the
+broader community.
+
+B    Acknowledgments
+We thank Rui Yang, Xinyi Zhao, Minji Wu, Zhaoyang
+Huang, Zhehui Zhou, Larry Zhang, Wenbo Bu, Liang Tao,
+Alex Li, Guang Yang, Ketan Singh, Dianshi Li, Ruichao
+Xiao, Dan Barysevich, Zahra Rezapour, Abdul Zainul-
+Abedin, Gaoxiang Liu, Rupert Wu, Yuxi Hu, Leo Ding,
+and Qiao Yang for infrastructure support.
+We thank Zhenyuan Liu, Fan Xia, I-Ta Lee, Feng Wei,
+Michael Du, Bella Shi, Bella Zhang, Zhaoheng Zheng, Nabil
+Hossain, Nara Lakamsani, Mehrnoosh Mirtaheri, Samarth
+Mittal and Minghai Chen for developing strong content
+features.
+We are grateful to Julia Ulziisaikhan, Yang Zhang, Jingjing
+Feng, and Yuan Zhang for data science support, and to Abha
+Jain and Sean O’Byrne for product management guidance.
+We thank Danil Kirsanov, Rostam Shirani and Steven De
+Gryze for management support.
+We thank Mingwei Tang, Allen Lin, Xinlong Liu, Mustafa
+Acar, Reazul Russel, Navid Madani, Alan Yang, Ashish
+Katiyar, Metarya Ruparel, Kai Wang, Robert Tang, Eley
+Ng, James Teng, Manpreet Singh Takkar for productioniza-
+tion efforts.
+
+
+
+
+                                                                                   13
+
