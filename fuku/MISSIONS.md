@@ -17,6 +17,10 @@
 - **Progress:** ← Fuku's latest update (dated)
 -->
 
-_(no active missions yet: Alvian, set the first one)_
+_(no active missions yet. Fuku proposed M-001 and M-002 in OUTBOX on 2026-11-05 and is waiting for Alvian's yes.)_
+
+### Proposed (not yet approved)
+- **M-001 (P0):** Warehouse Storage cost per lead from ~Rp 133k to ≤ Rp 85k within 30 days at the same spend. Baseline: `fab_advertising/reports/2026-11-05_meta_account_scan.md`.
+- **M-002 (P1):** Weekly ads health report (Monday) covering all ad accounts.
 
 ## Completed
