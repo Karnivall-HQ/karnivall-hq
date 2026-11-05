@@ -5,6 +5,11 @@
 
 ## Open
 
+- **[DECISION] 2026-11-05 · M-001: apply 3 placement/ad fixes in Warehouse Storage?** The breakdown shows that most of the waste is in placements, not audiences. Full list: `fab_advertising/reports/2026-11-05_m001_breakdown.md`.
+  1. PEIKIRA ad set: **remove Instagram Stories**. Rp 997k got 3 leads (Rp 332k each) → campaign CPL ~Rp 105k → ~Rp 95k.
+  2. BC CBObass005: **remove WhatsApp Status + Threads**. Rp 487k got 3 leads, and WA Status shows the same people ~789×.
+  3. **Pause 5 dead PEIKIRA ads** (Rp 237k spent, 0 leads).
+  My recommendation: yes to all 3, applied today. No budget change. 7d CPL now Rp 112.9k; I'll re-check on 2026-11-09.
 - **[RISK] 2026-11-05 · 4 ad accounts disabled by Meta** ("unusual activity"): Alv Ads, WooCore Ads, For App in Audience Network Ads, Babyso Rp. If any still matter, they need an appeal from you. Also: Incess "OMO ADVLeads" has a Rp 5.95M/day budget but spends ~Rp 725k/day. Is that expected?
 - **[FYI] 2026-11-05 · Questions only you can answer:** What is a lead worth for each business (close rate, deal value)? Which businesses does Karnivall run vs. serve as clients (Incess, Travell Fi, The North Case, GudangHub, Jinhe, Karnivall)? What is `fab_advertising/` (ad names use "FAB")?
 

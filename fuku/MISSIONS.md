@@ -33,6 +33,7 @@
   4. *Scale*: propose budget raises of ~20–30% every 3–4 days, only while the 7d CPL ≤ Rp 95k. Alvian applies them. Fuku verifies the effect in the next readouts. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
+  - 2026-11-05: Breakdown done (`fab_advertising/reports/2026-11-05_m001_breakdown.md`). 7d CPL Rp 112.9k at ~Rp 355k/day. The main waste is placements (PEIKIRA IG Stories Rp 332k CPL; BC WA Status + Threads). Proposed 5 changes; top 3 are in OUTBOX. Tracker started.
   - 2026-11-05: Rule: propose-only, Alvian executes all ad changes.
   - 2026-11-05: Mission set by Alvian. Baseline scan done (`fab_advertising/reports/2026-11-05_meta_account_scan.md`).
 
