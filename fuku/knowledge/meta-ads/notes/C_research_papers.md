@@ -8,7 +8,7 @@ Sources: the three plain-text extracts in `../sources/` only. Some table layouts
 
 ### Wukong: Towards a Scaling Law for Large-Scale Recommendation
 **2024 (arXiv Mar 2024) · Meta Platforms, Inc.**
-Ranking models had not shown LLM-style "scaling laws": making them bigger mostly meant making embedding tables bigger, which stopped improving quality and used hardware poorly. Wukong replaces the interaction part of the model with stacked factorization machines, so each extra layer captures higher-order combinations of features ("dense scaling"). On six public datasets it beat 7 baselines on AUC. On an internal dataset (146B examples, 720 features, click and conversion tasks) quality kept improving across two orders of magnitude of compute: about 0.4% better log-loss for a 200x complexity increase, roughly 0.1% per 4x. The best baseline (DCNv2) needed about 40x more compute to match it, and several baselines plateaued or became unstable. The paper does not claim a production deployment. It suggests distilling large models into small ones for serving.
+Ranking models had not shown LLM-style "scaling laws": making them bigger mostly meant making embedding tables bigger, which stopped improving quality and used hardware poorly. Wukong replaces the interaction part of the model with stacked factorization machines, so each extra layer captures higher-order combinations of features ("dense scaling"). On an internal dataset (146B examples, 720 features, click and conversion tasks) quality kept improving across two orders of magnitude of compute: about 0.4% better log-loss for a 200x complexity increase, roughly 0.1% per 4x. The best baseline (DCNv2) needed about 40x more compute to match it. The paper does not claim a production deployment. It suggests distilling large models into small ones for serving.
 
 ### LLaTTE: Scaling Laws for Multi-Stage Sequence Modeling in Large-Scale Ads Recommendation
 **2026 (arXiv Jan 2026) · AI at Meta**
@@ -32,7 +32,6 @@ Meta ran thousands of "portfolios" (domain × objective pairs), each with its ow
 **Cross-domain learning**
 - Lattice: grouping is by audience overlap. Quote: "Merges domains with substantial user/item overlap (e.g., combining "News Ads" and "Video Ads" which share users".
 - Lattice: helps domains with little data. Quote: the loss keeps models from "becoming overconfident in domains with abundant data while remaining underconfident in data-sparse domains".
-- Lattice: grouping respects compliance. Quote: "Respects privacy policies and data sharing restrictions."
 
 **Sparse or delayed conversions and attribution windows**
 - Lattice: conversions arrive late. Quote: "User conversions (e.g., purchases) can occur anywhere from minutes to days after an ad impression."
@@ -49,7 +48,7 @@ Meta ran thousands of "portfolios" (domain × objective pairs), each with its ow
 
 **User sequence length and composition**
 - LLaTTE. Quote: "Sequence Length: This dimension exhibits the steepest scaling slope." The slope is α = 0.265, against 0.200 for depth and 0.133 for width.
-- LLaTTE: experiments used sequences of "500 to 5000 actions". Online, the "per-source horizon [is] capped at T ≈ 400".
+- LLaTTE: experiments used sequences of "500 to 5000 actions". Online: "per-source horizon capped at T ≈ 400".
 - LLaTTE: what goes into the history matters. Quote: "The balanced mixture of views and conversions performs best; both extremes are clearly suboptimal." Conversion-only histories are "temporally sparse".
 - LLaTTE: the model still attends to older history. Quote: "mid- and long-range history contributes meaningfully to predictions."
 - LLaTTE: daily rhythm. Quote: "attention weight spikes occur at sharp 24-hour intervals."
@@ -59,8 +58,7 @@ Meta ran thousands of "portfolios" (domain × objective pairs), each with its ow
 - LLaTTE: without content features, extra capacity "is largely spent memorizing ID patterns".
 - LLaTTE: ad-side inputs include "creative attributes, landing page, advertiser metadata". Each action in a user's history records a "surface type".
 - LLaTTE: predictions are used for pricing as well as ranking. Quote: "calibrated probabilities are utilized for both downstream ranking and auction pricing."
-- Lattice. Quote: "tens of thousands of features ... are available, resource constraints limit models to using only selective features (typically thousands)."
-- Wukong: the internal dataset had 720 features. Quote: "Each feature describes a property of either the item or the user."
+- Lattice. Quote: "tens of thousands of features characterizing users and items are available, resource constraints limit models to using only selective features (typically thousands)."
 
 **Scale and significance**
 - LLaTTE: "a reduction in NE of 0.02% is considered statistically significant". It describes the 4.3% uplift as worth "hundreds of millions of dollars in annual revenue."
@@ -76,7 +74,7 @@ None of these papers gives advice to advertisers. Every item below is **[INFERRE
 
 1. **[INFERRED, strong]** Conversion volume is sparse and delayed. Fab gets about 3 leads/day (Rp 350k ÷ Rp 113k). Meta's system handles this kind of signal with separate, long-window heads. Make sure every lead is reported back to Meta as a conversion, including leads that arrive late. Missing late conversions starve the "oracle" head that is used at serving time.
 2. **[INFERRED, strong]** Lead gen is a first-class objective, modeled next to clicks and quality in shared models. Optimize for the lead or conversion event, not for clicks: clicks are a separate "dense" task group.
-3. **[INFERRED, strong]** Creative content is read semantically. Ad features include creative attributes and the landing page, and content embeddings from text and image models drive gains. Make creative and copy say clearly and specifically what the offer is (self-storage, Jakarta, the use case), and test creatives that are meaningfully different, not small variations. Keep the landing page consistent with the ad.
+3. **[INFERRED, strong]** Creative content is read semantically. Ad features include creative attributes and the landing page, and content embeddings from text and image models drive gains. Make creative and copy say clearly and specifically what the offer is (self-storage, Jakarta, the use case), and test creatives that are meaningfully different, not small variations.
 4. **[INFERRED, medium]** Predictions are calibrated and used in auction pricing. Anything that raises Fab's true conversion rate after the click or impression (form friction, offer, landing page) should feed back into higher predicted CVR and better auction outcomes. This is a possible lever on CPL, which is currently Rp 113k against a Rp 95k target.
 5. **[INFERRED, medium]** Users are modeled from long behavior histories (hundreds to thousands of actions) that are refreshed on conversions, and models share learning across surfaces. Meta's model probably finds intent better than hand-picked narrow targeting can. That argues for testing broader delivery, but the papers do not test targeting settings directly.
 6. **[INFERRED, medium]** Meta treats 0.02% loss changes as significant because it has billions of examples. At about 3 leads/day, Fab's daily CPL is mostly noise. Judge changes on multi-day or weekly windows, never on single days.
@@ -96,8 +94,8 @@ None of these papers gives advice to advertisers. Every item below is **[INFERRE
 | The advertiser's chosen attribution setting changes how delivery optimizes | Not addressed. The papers only cover windows used as training labels |
 | Pixel / Conversions API / event match quality | Not addressed |
 | New advertisers or new ads have a cold-start penalty | Not addressed |
-| Creative fatigue / frequency caps | Not addressed |
+| Creative fatigue | Not addressed |
 | Andromeda retrieval behavior | Not addressed (cited only as a blog reference title in Lattice) |
 | Dayparting improves results | Not addressed. LLaTTE only shows that the model learns daily cycles |
-| Audience size minimums, lookalikes, custom audiences | Not addressed |
+| Audience size minimums, lookalikes, custom audiences, frequency caps | Not addressed |
 | "Meta's AI understands your creative" | Partly supported: semantic content embeddings and creative attributes are model inputs. The papers do not say how creative is scored |
