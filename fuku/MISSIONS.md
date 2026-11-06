@@ -33,6 +33,7 @@
   4. *Scale*: propose budget raises of ~20–30% every 3–4 days, only while the 7d CPL ≤ Rp 95k. Alvian applies them. Fuku verifies the effect in the next readouts. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
+  - 2026-11-06 18:02: Activity log 16:13–18:02 empty (item 1 not applied). Ad-level check: PEIKIRA depends on one ad (Ad015: Rp 1.66M / 16 leads / Rp 103,865 in W2 = 86.7% of PEIKIRA ad spend *(calc)*); BC Image087 CTR flat 1.51% at freq 1.22, so its drop is the bid cap, not fatigue. No new ask.
   - 2026-11-06 16:02: Activity log 15:00–16:02 empty. BC ad-set split: the BC drop is **one ad set**, BC batch087 Copy 7 (55–59% of BC spend): spend 555k → 261k (−53%, calc) at flat CPM 13.7k → 14.2k, leads 7 → 2. Lost auctions under the Rp 94,250 cap → item 4 on 087 is the single BC lever. Mon 11/09 weekly report skeleton pre-filled (`fab_advertising/reports/weekly/2026-11-09.md`). No new ask.
   - 2026-11-06 15:02: Activity log 14:00–15:02 empty. **Correction to 14:02:** the CPL rise (112k → 125k, wk 10/23 vs 10/30) is a campaign-mix shift. PEIKIRA improved (CPM 53.8k → 37.9k, CPL 193k → 113k *(calc)*); BC CBO Copy spend halved (937k → 477k) and leads fell 12 → 2 at a stable CPM. BC starvation is the CPL gap, which backs items 3+4. → `fab_advertising/reports/2026-11-06_cpl_mix_shift.md`. No new ask.
   - 2026-11-06 13:02: Activity log 12:00–13:02 empty. Pre-staged the 11/10 PEIKIRA2 read (`fab_advertising/reports/2026-11-10_peikira2_read_prestage.md`) with decision rules fixed in advance. Mid-flight 11/05–11/06: control ad set Rp 307k / 4 leads (Rp 76.8k), PEIKIRA2 Rp 168k / 1 lead, campaign ≈ Rp 95.1k *(calc)*. Too early to judge; no new ask.
@@ -60,6 +61,7 @@
 - **Status:** in progress
 - **Strategy:** The cloud heartbeat runs it on the first Monday run (07:00 WIB). Turn it into a playbook after the first report.
 - **Progress:**
+  - 2026-11-06 18:02: Fab ad-level fatigue pre-check → `fab_advertising/reports/2026-11-06_fab_ad_fatigue_precheck.md`. Max freq 1.60, no frequency fatigue; CTR flags Ad001 (−57%), KENJI-001 (−52%), Ad007 (−30%); ⚠️ Ad015 carries 86.7% *(calc)* of PEIKIRA W2 spend. Row added to the 11/09 skeleton.
   - 2026-11-06 17:02: Incess OMO ad-level fatigue pre-check → `fab_advertising/reports/2026-11-06_incess_omo_fatigue_precheck.md`. Healthy: CPL 35.5k → 36.3k *(calc)*, max freq 1.78, no flags; watch ImageAd047 (CTR −27%).
   - 2026-11-06 10:02: Prior-week baseline (10/26–11/01) pulled → `fab_advertising/reports/weekly/_baseline_2026-10-26.md`. Fab Rp 2.56M / 19 leads / CPL Rp 134.6k *(calc)*; Incess Rp 4.42M / 121 / Rp 36.5k. Monday only needs the current week + fatigue + logs.
   - 2026-11-05 22:01: Playbook + template ready → `fuku/memory/playbooks/weekly_ads_health_report.md`; folder `fab_advertising/reports/weekly/` created.

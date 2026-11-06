@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-06 17:02 WIB (cloud heartbeat)_
+_Last updated: 2026-11-06 18:02 WIB (cloud heartbeat)_
 
 ## Current focus
 - **M-001 (P0):** 7d CPL **Rp 125k** (10/30–11/05) and rising, vs the 95k target. Two decision packs are waiting on Alvian: ad change list 1–5 and website fixes W1–W4 (new). The post-click leak is now quantified: LP→Lead 3.9%. PEIKIRA2 read on 11/10. Batch 01 on hold until then.
@@ -16,7 +16,7 @@ _Last updated: 2026-11-06 17:02 WIB (cloud heartbeat)_
 7. M-002: first weekly report Mon 2026-11-09 07:00 WIB (`fuku/memory/playbooks/weekly_ads_health_report.md`). Include the pixel funnel row.
 8. ✅ The WA follow-up script is drafted (`fab_advertising/creatives/2026-11-06_wa_followup_script.md`). It's waiting on 750 vs 800 + an OK from Alvian.
 9. ✅ M-002 prior-week baseline (10/26–11/01) pulled → `fab_advertising/reports/weekly/_baseline_2026-10-26.md` (incl. Monday pull checklist). ✅ 13:02: 11/10 PEIKIRA2 read pre-staged → `fab_advertising/reports/2026-11-10_peikira2_read_prestage.md` (IDs, 5 pulls, table, decision rules set in advance). Mid-flight: control Rp 76.8k CPL (4 leads), PEIKIRA2 Rp 168k (1 lead).
-10. ✅ 16:02: Mon 11/09 weekly report skeleton pre-filled → `fab_advertising/reports/weekly/2026-11-09.md` (per-campaign + PEIKIRA2 + 087 rows, funnel baseline, proposal-status table). ✅ 16:02 BC ad-set split: the BC drop = **087 Copy 7** losing delivery under its Rp 94,250 cap (spend −53% at flat CPM, leads 7→2); appended to the mix-shift doc. ✅ 17:02 Incess OMO fatigue pre-check done (healthy, no flags; watch ImageAd047 CTR −27%) → `fab_advertising/reports/2026-11-06_incess_omo_fatigue_precheck.md`. Next groundwork idea: Fab ad-level fatigue pre-check for Monday (same method). ✅ 15:02 correction: the CPL rise is a **campaign-mix shift**, not account-wide upstream drift. PEIKIRA improved on everything (CPL 193k→113k); BC spend halved and leads fell 12→2 → `fab_advertising/reports/2026-11-06_cpl_mix_shift.md`. Weekly report must show CPM/cost-per-LPV **per campaign** + a BC ad-set split.
+10. ✅ 16:02: Mon 11/09 weekly report skeleton pre-filled → `fab_advertising/reports/weekly/2026-11-09.md` (per-campaign + PEIKIRA2 + 087 rows, funnel baseline, proposal-status table). ✅ 16:02 BC ad-set split: the BC drop = **087 Copy 7** losing delivery under its Rp 94,250 cap (spend −53% at flat CPM, leads 7→2); appended to the mix-shift doc. ✅ 17:02 Incess OMO fatigue pre-check done (healthy, no flags; watch ImageAd047 CTR −27%) → `fab_advertising/reports/2026-11-06_incess_omo_fatigue_precheck.md`. ✅ 18:02 Fab ad-level fatigue pre-check → `fab_advertising/reports/2026-11-06_fab_ad_fatigue_precheck.md`: no freq fatigue (max 1.60); **Ad015 = 86.7% of PEIKIRA spend** (single point of failure, CTR −16%); 087 CTR flat = cap starvation confirmed. Next groundwork idea: tracker daily row for 11/06 at tomorrow's 07:00 readout. ✅ 15:02 correction: the CPL rise is a **campaign-mix shift**, not account-wide upstream drift. PEIKIRA improved on everything (CPL 193k→113k); BC spend halved and leads fell 12→2 → `fab_advertising/reports/2026-11-06_cpl_mix_shift.md`. Weekly report must show CPM/cost-per-LPV **per campaign** + a BC ad-set split.
 
 ## Blockers / waiting on Alvian
 - Apply M-001 items 1–5 (OUTBOX); website W1–W4, and who edits the site.
@@ -31,6 +31,6 @@ _Last updated: 2026-11-06 17:02 WIB (cloud heartbeat)_
 
 ## Open loops
 - 4 disabled ad accounts (OUTBOX [RISK]).
-- Activity log 07:00–17:02 WIB 11/06: no human edits (only 2 Meta 'started delivery' events on PEIKIRA2 ads at 16:01/16:13); item 1 not applied yet.
+- Activity log 07:00–18:02 WIB 11/06: no human edits (only 2 Meta 'started delivery' events on PEIKIRA2 ads at 16:01/16:13); item 1 not applied yet.
 - Overnight activity (22:00→07:00 WIB): only 2 Meta "started delivery" events for PEIKIRA2 (06:22); no human edits.
 - Incess OMO bid-cap raise proposal on offer.
