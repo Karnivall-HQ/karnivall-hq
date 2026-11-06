@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-06 20:02 WIB (cloud heartbeat)_
+_Last updated: 2026-11-06 21:01 WIB (cloud heartbeat)_
 
 ## Current focus
 - **M-001 (P0):** 7d CPL **Rp 125k** (10/30–11/05) and rising, vs the 95k target. Two decision packs are waiting on Alvian: ad change list 1–5 and website fixes W1–W4 (new). The post-click leak is now quantified: LP→Lead 3.9%. PEIKIRA2 read on 11/10. Batch 01 on hold until then.
@@ -32,6 +32,6 @@ _Last updated: 2026-11-06 20:02 WIB (cloud heartbeat)_
 
 ## Open loops
 - 4 disabled ad accounts (OUTBOX [RISK]).
-- Activity log 07:00–20:02 WIB 11/06: no human edits (only 2 Meta 'started delivery' events on PEIKIRA2 ads at 16:01/16:13); item 1 not applied yet.
+- Activity log 07:00–21:01 WIB 11/06: no human edits (only 2 Meta 'started delivery' events on PEIKIRA2 ads at 16:01/16:13); item 1 not applied yet.
 - Overnight activity (22:00→07:00 WIB): only 2 Meta "started delivery" events for PEIKIRA2 (06:22); no human edits.
 - Incess OMO bid-cap raise proposal on offer.
