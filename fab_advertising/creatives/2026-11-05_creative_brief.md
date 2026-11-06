@@ -67,5 +67,8 @@ Headline: "Sewa Gudang Self-storage Jakarta, dari Rp750rb/bulan"
 - Winner = a 7d CPL ≤ Rp 95k with ≥ 3 leads. Fuku reads the results and reports.
 
 ## ❓ Gaps / inputs needed
-- **BC Image087** (16 leads, the #1 source) is an IG post. The API only gives a 64×64 thumbnail, so I haven't seen it at full size yet. Next step: pull it via its IG media.
+- ~~BC Image087 not viewed~~ ✅ **viewed 2026-11-06 11:01** (`2026-11-05_review/bc_image087.jpg`, 750×1334 story format, via `ads_get_ad_images` hash url). Account data, 30d: Rp 1,362,425 / 15 leads = **Rp 90.8k CPL** *(calc)*; Meta trend: CPR −53%, CVR +98%, CTR +8% (all GOOD, improving).
+  - **What it is:** a raw phone photo of a *cluttered home*: suitcases, bags, boxes on a floor. **No warehouse, no unit, no price.** 3 IG-story text stickers: "Di Rumah butuh kamar kosong? 😉" → "Kosongkan Kamar dengan simpan barang di…" → "Gudang Self-storage di Fab 👇".
+  - **Implication (INFERRED):** the #1 creative sells the *problem* (a cluttered room) and the *outcome* (an empty room), not the facility. So the photo shoot **doesn't need the warehouse**: anyone on the team can shoot clutter at home in 10 min. That makes C-concepts built on "before" shots unblocked by the Kuningan trip.
+  - Meta Advantage+ enhancements are ON for it (brightness/contrast, enhance CTA, image animation, reveal details, destination blurbs, cv_transformation). Keep them as-is on copies of this winner; don't change a winner's setup.
 - Needed from Alvian/team: **a phone photo/video shoot at the warehouse** for C1–C6. I can't produce real photos. AI renders are exactly what's losing.
