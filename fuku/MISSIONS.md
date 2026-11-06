@@ -60,6 +60,7 @@
 - **Status:** in progress
 - **Strategy:** The cloud heartbeat runs it on the first Monday run (07:00 WIB). Turn it into a playbook after the first report.
 - **Progress:**
+  - 2026-11-06 17:02: Incess OMO ad-level fatigue pre-check → `fab_advertising/reports/2026-11-06_incess_omo_fatigue_precheck.md`. Healthy: CPL 35.5k → 36.3k *(calc)*, max freq 1.78, no flags; watch ImageAd047 (CTR −27%).
   - 2026-11-06 10:02: Prior-week baseline (10/26–11/01) pulled → `fab_advertising/reports/weekly/_baseline_2026-10-26.md`. Fab Rp 2.56M / 19 leads / CPL Rp 134.6k *(calc)*; Incess Rp 4.42M / 121 / Rp 36.5k. Monday only needs the current week + fatigue + logs.
   - 2026-11-05 22:01: Playbook + template ready → `fuku/memory/playbooks/weekly_ads_health_report.md`; folder `fab_advertising/reports/weekly/` created.
   - 2026-11-05: Approved by Alvian.
