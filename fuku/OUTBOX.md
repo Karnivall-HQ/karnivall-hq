@@ -10,6 +10,7 @@
   - W2: Form page price → "Promo Rp750.000/bulan (kode FAB750)" (or, if 800 is real, fix the ads instead).
   - W3: Drop the "Pernah chat WA ke Fab sebelumnya?" field.
   - W4: Tell me how the Lead event fires: 40% of form submits never become a Lead. Those numbers may be sitting uncalled in Fluent Form entries.
+    → **08:02 update:** a 3-message WA follow-up script for those contacts is ready: `fab_advertising/creatives/2026-11-06_wa_followup_script.md`. Have the Fab team use it once 750 vs 800 is confirmed? (It's a draft; nothing has been sent.)
   → My recommendation: **yes to W1+W2 today** (10 min, zero risk). Every +1pt of LP→Lead ≈ −20% CPL *(calc)*. Website edits aren't ad-account changes, so they don't disturb the 11/10 read. Who edits the site: you or Markus?
   → Also, the site already answers 2 of my 3 facts: **no minimum rental, no deposit, free pickup**. Correct? Still open: 750 vs 800, close rate + months stayed.
 - **[REPORT] 2026-11-06 07:01 · Fab daily readout.** 7d (10/30–11/05): Rp 2.50M, 20 leads, **CPL Rp 125k** (was 113k; target ≤95k) ⚠️. Yesterday: Rp 343k, 2 leads. No human edits overnight. Proposals 1–5 still unapplied, and the account is drifting the wrong way.

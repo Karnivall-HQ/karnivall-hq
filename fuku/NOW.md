@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-06 07:01 WIB (cloud heartbeat)_
+_Last updated: 2026-11-06 08:02 WIB (cloud heartbeat)_
 
 ## Current focus
 - **M-001 (P0):** 7d CPL **Rp 125k** (10/30–11/05) and rising, vs the 95k target. Two decision packs are waiting on Alvian: ad change list 1–5 and website fixes W1–W4 (new). The post-click leak is now quantified: LP→Lead 3.9%. PEIKIRA2 read on 11/10. Batch 01 on hold until then.
@@ -9,11 +9,12 @@ _Last updated: 2026-11-06 07:01 WIB (cloud heartbeat)_
 1. Each heartbeat: check OUTBOX/INBOX for "applied 1,2,…", "W1/W2 done", the photo shoot, and facts (750 vs 800, close rate, months stayed). Log applied changes in `fab_advertising/reports/m001_tracker.md`.
 2. Daily (first heartbeat after 07:00 WIB): tracker readout row + activity log (limit ≤ 40). ✅ done 11/06.
 3. When W1/W2 are applied: re-curl the 3 Jakarta pages to verify, and record a pixel funnel baseline (ViewContent/Form/Lead via `ads_get_dataset_stats` event_total_counts) for a before/after.
-4. Check that ImageAd 201B ("Update Required") is fixed (not checked 11/06).
+4. ~~ImageAd 201B~~ ✅ checked 11/06 08:02: it's immaterial (Rp 0 spend over 14d). Drop it unless Manny5 gets a bid-cap raise.
 5. 2026-11-10: read PEIKIRA2 vs the old PEIKIRA ad set, plus the effect of any applied changes.
 6. View BC Image087 (the #1 lead source) at full size via IG media.
 7. M-002: first weekly report Mon 2026-11-09 07:00 WIB (`fuku/memory/playbooks/weekly_ads_health_report.md`). Include the pixel funnel row.
-8. Groundwork idea: draft the WA follow-up script for Form-but-no-Lead contacts (W4) once Alvian says how Lead fires.
+8. ✅ The WA follow-up script is drafted (`fab_advertising/creatives/2026-11-06_wa_followup_script.md`). It's waiting on 750 vs 800 + an OK from Alvian.
+9. Next groundwork options: pre-build the M-002 weekly report data pull (script/query list) so Monday's run is fast; view BC Image087 at full size.
 
 ## Blockers / waiting on Alvian
 - Apply M-001 items 1–5 (OUTBOX); website W1–W4, and who edits the site.
