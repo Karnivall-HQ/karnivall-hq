@@ -12,6 +12,7 @@ Numbers come from Rudi MCP (read-only). *(calc)* = Fuku's arithmetic. Proposed c
 | Date (WIB) | Spend | Leads | CPL | Notes |
 |---|---|---|---|---|
 | 2026-11-06 (to 19:01) | Rp 337,101 *(calc, top 15 ad sets)* | 3 | Rp 112,367 *(calc)* | PEIKIRA2 Rp 239,487 / 1 (77.7% of PEIKIRA spend, CPM 54k); control Rp 68,588 / 2; BC Rp 29,026 / 0 (087 Copy 7 only Rp 9,791). Single day, not a gate metric. |
+| 2026-11-06 (to 20:02) | PEIKIRA ad sets Rp 321,977 *(calc)* | 3 | Rp 107,326 *(calc)* | PEIKIRA2 Rp 252,984 / 1 (78.6%); control Rp 68,993 / 2. PEIKIRA2 cumulative Rp 292,582 / 1 → pause threshold tripped. No human edits 19:00–20:02. |
 | 2026-11-05 (full day) | Rp 342,560 *(calc)* | 2 | Rp 171,280 *(calc)* | PEIKIRA Rp 285,413 / 2; BC CBO Copy Rp 57,147 / 0. |
 | 2026-11-05 (to 22:01) | Rp 327,111 *(calc)* | 2 | Rp 163,556 *(calc)* | PEIKIRA Rp 272,991 / 2 leads (incl. PEIKIRA2 in learning); BC CBO Copy Rp 54,120 / 0. Single day, not a gate metric. |
 
