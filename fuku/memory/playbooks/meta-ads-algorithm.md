@@ -38,7 +38,7 @@ Your targeting = hard filter → RETRIEVAL (Andromeda) → RANKING (GEM / Lattic
 | R4 | **Go broad and let the model find people.** Narrow targeting filters people out before the model can judge them. | INFERRED (strong) | ✅ Fab is already broad, so there's no change needed. |
 | R5 | **Consolidate.** Fewer ad sets with more data each, since the model pools learning. Don't fragment a small budget. | INFERRED | ⚠️ BC: ~70 ad sets + bid caps → spends ~1.4% of its budget. |
 | R6 | **Optimize for the deepest event that still has volume, and send every conversion back, including late ones.** Meta serves predictions from its longest attribution window. | INFERRED (strong) | ✅ Optimizing for website leads. ❓ No closed-deal / offline-conversion signal yet. This is the next big lever. |
-| R7 | **Raise the real conversion rate after the click** (landing page, WhatsApp flow, offer). Predicted CVR feeds auction pricing, so a better CVR means cheaper delivery. | INFERRED (medium) | ❓ Not audited yet (fabwarehouses.com, the WA FAB750 flow). |
+| R7 | **Raise the real conversion rate after the click** (landing page, WhatsApp flow, offer). Predicted CVR feeds auction pricing, so a better CVR means cheaper delivery. | INFERRED (medium) | ⚠️ Audited 2026-11-06: LP→Lead 3.9% (VC 1,577 → Form 101 → Lead 61, 7d); location + price contradictions on the ad pages (`fab_advertising/reports/2026-11-06_landing_page_audit.md`). |
 | R8 | **Refreshing creative is cheap. Don't fear "resetting learning".** New ads inherit learning from similar ones, so keep new concepts close in meaning to proven winners. | STATED (inheritance); INFERRED (advice) | ❓ |
 | R9 | **Judge on weekly windows, never single days.** Meta's own delivery varies with spare compute, and at ~3 leads/day, daily CPL is noise. | INFERRED | ✅ Matches the M-001 7-day CPL rule. |
 | R10 | **Placements: default to automatic, but cut placements the data proves broken.** The model learns across surfaces, so splitting can cost signal. | INFERRED | ⚠️ Fab data shows real waste: WhatsApp Status (frequency 789), Threads, and IG Stories in PEIKIRA. **Account data beats the general rule**: exclude what is proven broken, keep the rest automatic. |
@@ -71,5 +71,5 @@ For these, treat any rule as **[FOLKLORE]** until our own account proves it. Obs
 - E1 · Real-photo concept batch (C1–C6) vs current → R1, R2, R11
 - E2 · One consolidated BC ad set, no bid cap, the winners only → R5
 - E3 · Send closed deals back to Meta as an offline/CRM conversion → R6
-- E4 · Landing page + WhatsApp flow audit → R7
+- E4 · Landing page + WhatsApp flow audit → R7 · ✅ audit done 11/06; fixes W1–W4 proposed, measure Form/VC + Lead/VC before vs after
 - E5 · Warm (site visitors/engagers, price creative) vs cold (broad excl. warm, pain/Reels creative), judged on blended CPL → §2b

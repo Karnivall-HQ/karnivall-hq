@@ -5,6 +5,14 @@
 
 ## Open
 
+- **[DECISION] 2026-11-06 07:01 · Fab website: 4 free fixes for the post-click leak (no ad changes).** Pixel funnel, 7d: landing page 1,577 views → 101 forms → **61 leads = 3.9% LP→Lead**. The Jakarta Selatan ad pages also say **"Kelapa Gading, sebelah Mall of Indonesia"** and "Jakarta Pusat", and the WA form page says **"mulai dari Rp 800.000"** while the ad says 750rb. Full audit: `fab_advertising/reports/2026-11-06_landing_page_audit.md`.
+  - W1: Remove every Kelapa Gading / Jakarta Pusat line from the 3 Jakarta pages → "ITC Kuningan Ambasador, Sudirman, Jakarta Selatan".
+  - W2: Form page price → "Promo Rp750.000/bulan (kode FAB750)" (or, if 800 is real, fix the ads instead).
+  - W3: Drop the "Pernah chat WA ke Fab sebelumnya?" field.
+  - W4: Tell me how the Lead event fires: 40% of form submits never become a Lead. Those numbers may be sitting uncalled in Fluent Form entries.
+  → My recommendation: **yes to W1+W2 today** (10 min, zero risk). Every +1pt of LP→Lead ≈ −20% CPL *(calc)*. Website edits aren't ad-account changes, so they don't disturb the 11/10 read. Who edits the site: you or Markus?
+  → Also, the site already answers 2 of my 3 facts: **no minimum rental, no deposit, free pickup**. Correct? Still open: 750 vs 800, close rate + months stayed.
+- **[REPORT] 2026-11-06 07:01 · Fab daily readout.** 7d (10/30–11/05): Rp 2.50M, 20 leads, **CPL Rp 125k** (was 113k; target ≤95k) ⚠️. Yesterday: Rp 343k, 2 leads. No human edits overnight. Proposals 1–5 still unapplied, and the account is drifting the wrong way.
 - **[DECISION] 2026-11-05 23:30 · M-001: ONE combined change list for Fab (merges the 19:09 cloud diagnosis + the local placement breakdown).** 7d CPL **Rp 113k** at Rp 355k/day (target ≤ 95k). Details: `fab_advertising/reports/2026-11-05_m001_diagnosis.md` + `2026-11-05_m001_breakdown.md`.
   1. **PEIKIRA ad set: remove Instagram Stories.** Rp 997k → 3 leads (Rp 332k each). Without it, 30d CPL ≈ Rp 94.9k *(calc)*. Budget unchanged.
   2. **BC CBObass005: remove WhatsApp Status + Threads.** Rp 487k → 3 leads; WA Status frequency 789.

@@ -23,3 +23,8 @@
 
 ## Key numbers
 - 2026-11-05 Meta, last 30d: Incess Ads Rp 21.8M → 633 leads @ Rp 34k (campaign OMO ADVLeads). Warehouse Storage Rp 12.3M → 93 leads @ ~Rp 133k. All other accounts Rp 0. Full scan: `fab_advertising/reports/2026-11-05_meta_account_scan.md`
+
+## Fab website & tracking (2026-11-06 audit)
+- fabwarehouses.com = WordPress 6.1 + PixelYourSite Pro + Fluent Forms. Pixel/dataset **405755485775053**, browser + server events, Lead EMQ 7.8.
+- Flow: self-storage LP (`/sewa-gudang-self-storage-jakarta/`, promo Rp750k) → WA form page (`/form-chat-fab-storage-via-whatsapp/`, 5 fields) → WhatsApp 0899 0332 050.
+- The site states: no minimum rental, monthly payment, no deposit, free pickup, weekend loading. Units Small 4.75 m³ / Medium 9.5 m³ / Large 19 m³. Also: Fab Seller Warehouse (warehouse + coworking for Shopee sellers) from Rp5jt/month; a Kelapa Gading location exists (Kirana Boutique, next to MOI).
