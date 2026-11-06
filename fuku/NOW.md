@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-06 09:01 WIB (cloud heartbeat)_
+_Last updated: 2026-11-06 10:02 WIB (cloud heartbeat)_
 
 ## Current focus
 - **M-001 (P0):** 7d CPL **Rp 125k** (10/30–11/05) and rising, vs the 95k target. Two decision packs are waiting on Alvian: ad change list 1–5 and website fixes W1–W4 (new). The post-click leak is now quantified: LP→Lead 3.9%. PEIKIRA2 read on 11/10. Batch 01 on hold until then.
@@ -15,7 +15,7 @@ _Last updated: 2026-11-06 09:01 WIB (cloud heartbeat)_
 6. View BC Image087 (the #1 lead source) at full size via IG media.
 7. M-002: first weekly report Mon 2026-11-09 07:00 WIB (`fuku/memory/playbooks/weekly_ads_health_report.md`). Include the pixel funnel row.
 8. ✅ The WA follow-up script is drafted (`fab_advertising/creatives/2026-11-06_wa_followup_script.md`). It's waiting on 750 vs 800 + an OK from Alvian.
-9. Next groundwork options: pre-build the M-002 weekly report data pull (script/query list) so Monday's run is fast; view BC Image087 at full size.
+9. ✅ M-002 prior-week baseline (10/26–11/01) pulled → `fab_advertising/reports/weekly/_baseline_2026-10-26.md` (incl. Monday pull checklist). Next groundwork: view BC Image087 at full size.
 
 ## Blockers / waiting on Alvian
 - Apply M-001 items 1–5 (OUTBOX); website W1–W4, and who edits the site.
@@ -30,6 +30,6 @@ _Last updated: 2026-11-06 09:01 WIB (cloud heartbeat)_
 
 ## Open loops
 - 4 disabled ad accounts (OUTBOX [RISK]).
-- Activity log 07:00–09:00 WIB 11/06: empty.
+- Activity log 07:00–10:02 WIB 11/06: empty (item 1 not applied yet).
 - Overnight activity (22:00→07:00 WIB): only 2 Meta "started delivery" events for PEIKIRA2 (06:22); no human edits.
 - Incess OMO bid-cap raise proposal on offer.

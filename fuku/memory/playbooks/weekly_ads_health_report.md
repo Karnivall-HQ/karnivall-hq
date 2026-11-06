@@ -27,4 +27,5 @@ _Created 2026-11-05 22:01 WIB, before the first run (Mon 2026-11-09). Refine aft
 ## Top 3 recommended actions (for Alvian to apply)
 1. … (exact object name + ID, current → proposed value, expected effect)
 ```
+Prior week (10/26–11/01) is pre-pulled in `fab_advertising/reports/weekly/_baseline_2026-10-26.md`; use it for the WoW columns on 11/09.
 Also update the M-001 tracker weekly readout row from the Fab numbers.
