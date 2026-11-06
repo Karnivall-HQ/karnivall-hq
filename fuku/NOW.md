@@ -1,11 +1,12 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-06 08:02 WIB (cloud heartbeat)_
+_Last updated: 2026-11-06 09:01 WIB (cloud heartbeat)_
 
 ## Current focus
 - **M-001 (P0):** 7d CPL **Rp 125k** (10/30–11/05) and rising, vs the 95k target. Two decision packs are waiting on Alvian: ad change list 1–5 and website fixes W1–W4 (new). The post-click leak is now quantified: LP→Lead 3.9%. PEIKIRA2 read on 11/10. Batch 01 on hold until then.
 
 ## Next actions
-0. **Read `fuku/memory/playbooks/meta-ads-algorithm.md` before any ads work.**
+0. **Read `fuku/memory/playbooks/meta-ads-algorithm.md` + `meta-cpl-diagnosis.md` before any ads work.** Retro #1 done 11/06 09:01; next retro ~11/13 or at 15 new lessons.
+0b. Don't add new decision packs until something is applied. The only live ask is "applied 1" (PEIKIRA IG Stories off).
 1. Each heartbeat: check OUTBOX/INBOX for "applied 1,2,…", "W1/W2 done", the photo shoot, and facts (750 vs 800, close rate, months stayed). Log applied changes in `fab_advertising/reports/m001_tracker.md`.
 2. Daily (first heartbeat after 07:00 WIB): tracker readout row + activity log (limit ≤ 40). ✅ done 11/06.
 3. When W1/W2 are applied: re-curl the 3 Jakarta pages to verify, and record a pixel funnel baseline (ViewContent/Form/Lead via `ads_get_dataset_stats` event_total_counts) for a before/after.
@@ -29,5 +30,6 @@ _Last updated: 2026-11-06 08:02 WIB (cloud heartbeat)_
 
 ## Open loops
 - 4 disabled ad accounts (OUTBOX [RISK]).
+- Activity log 07:00–09:00 WIB 11/06: empty.
 - Overnight activity (22:00→07:00 WIB): only 2 Meta "started delivery" events for PEIKIRA2 (06:22); no human edits.
 - Incess OMO bid-cap raise proposal on offer.

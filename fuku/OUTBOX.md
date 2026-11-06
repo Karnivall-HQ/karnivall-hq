@@ -5,6 +5,8 @@
 
 ## Open
 
+- **[DECISION] 2026-11-06 09:01 · One thing today: remove Instagram Stories from the PEIKIRA ad set (item 1 of the 23:30 list)?** It spent Rp 997k for 3 leads (Rp 332k each). Without it, 30d CPL ≈ **Rp 94.9k** *(calc)*, under the 95k target, at zero budget change. 7d CPL is now Rp 125k and rising, and 0 of 5 proposals are applied after ~36h. My recommendation: **yes, 2 min in Ads Manager** (ad set → Placements → untick Instagram Stories). Reply "applied 1". The other items can wait.
+- **[REPORT] 2026-11-06 09:01 · Retro #1 (week 1).** 🚀 Wins: diagnosis done, cheapest levers found (placements, bid caps, phone photos, site copy), M-002 ready for Monday. ⚠️ Misses: 7d CPL 113k → 125k; nothing applied, because my asks were too long. 🔧 What I changed: 13 lessons → playbook `meta-cpl-diagnosis.md`; new rule: stalled asks get shrunk to one yes/no. 🙏 Need from you: "applied 1" + 750 vs 800. 👉 Next week: the 11/10 PEIKIRA2 read + the first weekly report on Mon 11/09.
 - **[DECISION] 2026-11-06 07:01 · Fab website: 4 free fixes for the post-click leak (no ad changes).** Pixel funnel, 7d: landing page 1,577 views → 101 forms → **61 leads = 3.9% LP→Lead**. The Jakarta Selatan ad pages also say **"Kelapa Gading, sebelah Mall of Indonesia"** and "Jakarta Pusat", and the WA form page says **"mulai dari Rp 800.000"** while the ad says 750rb. Full audit: `fab_advertising/reports/2026-11-06_landing_page_audit.md`.
   - W1: Remove every Kelapa Gading / Jakarta Pusat line from the 3 Jakarta pages → "ITC Kuningan Ambasador, Sudirman, Jakarta Selatan".
   - W2: Form page price → "Promo Rp750.000/bulan (kode FAB750)" (or, if 800 is real, fix the ads instead).
