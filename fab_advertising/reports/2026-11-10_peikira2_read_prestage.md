@@ -1,0 +1,46 @@
+# PEIKIRA2 read (Tue 2026-11-10): pre-staged
+_Prepared 2026-11-06 13:02 WIB (cloud heartbeat). Read-only. On 11/10 you only need to run the pulls, fill the table, and apply the rules._
+
+## Objects
+| What | Name | ID |
+|---|---|---|
+| Campaign (CBO, Rp 300k/day, bid cap) | PEIKIRA-BID-CAP-LEADS-CAMPAIGN | `120254051672440572` |
+| Old ad set (control) | PEIKIRA-FAB-20261023-ADSET | `120254051672430572` |
+| New ad set (test, launched by Markus 11/05 14:40 WIB) | AKIRA-FAB-20261031-WAVE-PEIKIRA2 | `120254276298070572` |
+
+Account `484578521394893`. Window: **2026-11-05 → 2026-11-09** (5 full days; 11/05 is a partial launch day for PEIKIRA2, so read it with and without 11/05).
+
+## Pulls (run in this order)
+1. **Activity log** `start_time=2026-11-05T07:40:00Z`, `object_id=120254051672440572`, limit 40. Note any edit to either ad set (an edit resets learning and breaks the comparison).
+2. **Ad sets** `ads_get_ad_entities` level=adset, filter `campaign.name CONTAIN PEIKIRA`, `time_range {"since":"2026-11-05","until":"2026-11-09"}`, fields: id, name, effective_status, amount_spent, impressions, link_click, ctr, lead, cost_per_lead, learning_stage_info. Repeat with `since 2026-11-06`.
+3. **Ads in PEIKIRA2** level=ad, filter `adset.id IN [120254276298070572]` (verify the field with `ads_get_field_context` first), same window, fields: id, name, effective_status, amount_spent, ctr, lead, cost_per_lead. Sort by amount_spent descending.
+4. **Placement breakdown** for both ad sets (`breakdowns: ["publisher_platform","platform_position"]`), same window. Check whether IG Stories is still eating PEIKIRA spend (item 1).
+5. Campaign total for 11/05–11/09 → feeds the tracker's 7d row.
+
+## Table to fill
+| Ad set | Spend | Leads | CPL | CTR | Learning | Share of campaign spend |
+|---|---|---|---|---|---|---|
+| Old (control) | | | | | | |
+| PEIKIRA2 (test) | | | | | | |
+| Campaign total | | | | | | 100% |
+
+### Mid-flight snapshot (11/05–11/06 13:02 WIB, partial; context only, not a verdict)
+| Ad set | Spend | Leads | CPL | CTR | Learning |
+|---|---|---|---|---|---|
+| Old (control) | Rp 307,284 | 4 | Rp 76,821 | 1.68% | LEARNING (23 conv.) |
+| PEIKIRA2 (test) | Rp 168,108 | 1 | Rp 168,108 | 1.67% | LEARNING (1 conv.) |
+| Campaign | Rp 475,392 *(calc)* | 5 | Rp 95,078 *(calc)* | | |
+
+PEIKIRA2 took 35% *(calc)* of campaign spend in its first ~1.5 days. Meta trend (old ad set, full history): CPR improving (−54%, GOOD), CVR +136%, CTR down 8%; industry benchmark: old ad set CTR 54% **below** peers. The test ad set has too little data for trend/benchmark.
+
+## Decision rules (set now, so the read isn't biased by the result)
+Target CPL Rp 95k. Five days at ~Rp 300k/day ≈ Rp 1.5M, ~15 leads at target.
+- **PEIKIRA2 spent ≥ Rp 285k (3× target) with ≤ 1 lead** → propose: pause PEIKIRA2's ads with 0 leads and Rp ≥ 95k spend; spend returns to the control.
+- **PEIKIRA2 7d-window CPL ≤ Rp 95k with ≥ 3 leads** → keep; propose pausing control ads with CTR collapse instead (old item 5) and give batch 01 v2 a slot.
+- **In between (CPL 95–150k or < 3 leads)** → hold 3 more days, no new creative test.
+- **Either way:** if the campaign CPL for the window is worse than the control alone, the split itself is costing money, so propose consolidating into the better ad set.
+- Every proposal goes to OUTBOX as a one-line yes/no (stalled-asks rule). Fuku applies nothing.
+
+## Caveats
+- 1–5 leads per side is noise-level. Treat ±1 lead as a coin flip; lean on spend-per-lead thresholds above, not CTR.
+- Placement item 1 (IG Stories) may be applied mid-window. If the activity log shows it, split the read at the change time.

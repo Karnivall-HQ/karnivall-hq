@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-06 12:01 WIB (cloud heartbeat)_
+_Last updated: 2026-11-06 13:02 WIB (cloud heartbeat)_
 
 ## Current focus
 - **M-001 (P0):** 7d CPL **Rp 125k** (10/30–11/05) and rising, vs the 95k target. Two decision packs are waiting on Alvian: ad change list 1–5 and website fixes W1–W4 (new). The post-click leak is now quantified: LP→Lead 3.9%. PEIKIRA2 read on 11/10. Batch 01 on hold until then.
@@ -15,7 +15,8 @@ _Last updated: 2026-11-06 12:01 WIB (cloud heartbeat)_
 6. ✅ BC Image087 viewed 11/06 11:01: home-clutter phone photo + 3 story stickers, no warehouse (`fab_advertising/creatives/2026-11-05_review/bc_image087.jpg`). Shoot ask shrunk in OUTBOX. ✅ 12:01: batch 01 v2 shot list done (`fab_advertising/creatives/2026-11-06_batch01_v2_home_clutter_shotlist.md`), 6 home shots + sticker text. Launch still held to after the 11/10 read.
 7. M-002: first weekly report Mon 2026-11-09 07:00 WIB (`fuku/memory/playbooks/weekly_ads_health_report.md`). Include the pixel funnel row.
 8. ✅ The WA follow-up script is drafted (`fab_advertising/creatives/2026-11-06_wa_followup_script.md`). It's waiting on 750 vs 800 + an OK from Alvian.
-9. ✅ M-002 prior-week baseline (10/26–11/01) pulled → `fab_advertising/reports/weekly/_baseline_2026-10-26.md` (incl. Monday pull checklist). Next groundwork: pre-stage the 11/10 PEIKIRA2 read (queries + table skeleton) so it's one pull on Tuesday.
+9. ✅ M-002 prior-week baseline (10/26–11/01) pulled → `fab_advertising/reports/weekly/_baseline_2026-10-26.md` (incl. Monday pull checklist). ✅ 13:02: 11/10 PEIKIRA2 read pre-staged → `fab_advertising/reports/2026-11-10_peikira2_read_prestage.md` (IDs, 5 pulls, table, decision rules set in advance). Mid-flight: control Rp 76.8k CPL (4 leads), PEIKIRA2 Rp 168k (1 lead).
+10. Next groundwork options: pre-fill the Mon 11/09 weekly report skeleton with the 11/02–11/08 pull list; or the pixel funnel baseline (NOW #3) so it's ready before W1/W2.
 
 ## Blockers / waiting on Alvian
 - Apply M-001 items 1–5 (OUTBOX); website W1–W4, and who edits the site.
@@ -30,6 +31,6 @@ _Last updated: 2026-11-06 12:01 WIB (cloud heartbeat)_
 
 ## Open loops
 - 4 disabled ad accounts (OUTBOX [RISK]).
-- Activity log 07:00–12:01 WIB 11/06: empty (item 1 not applied yet).
+- Activity log 07:00–13:02 WIB 11/06: empty (item 1 not applied yet).
 - Overnight activity (22:00→07:00 WIB): only 2 Meta "started delivery" events for PEIKIRA2 (06:22); no human edits.
 - Incess OMO bid-cap raise proposal on offer.
