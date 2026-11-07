@@ -5,6 +5,8 @@
 
 ## Open
 
+- **[DECISION] 2026-11-07 09:02 · Re-ask (48h open): untick Instagram Stories in the PEIKIRA ad set?** Rp 997k → 3 leads (Rp 332k each); without it 30d CPL ≈ **Rp 94.9k** *(calc)*, under target, zero budget change. 7d CPL now Rp 121.9k. My recommendation: **yes, 2 min**. Reply "applied 1" (or "no"). No other asks until this moves.
+
 - **[REPORT] 2026-11-07 07:02 · Fab daily readout: no PEIKIRA2 ask after all.** 📊 7d (10/31–11/06): Rp 2.56M, 21 leads, **CPL Rp 121.9k** *(calc)* (was 125.2k; target ≤ 95k) ❌. Yesterday: Rp 413k, 5 leads (Rp 82.7k, one day only). PEIKIRA2 got a 2nd lead overnight: Rp 337k / 2 (Rp 168k) vs the old ad set Rp 322k / 4 (Rp 80k). My pause rule needed ≤ 1 lead, so I'm **holding to the 11/10 read**. No human edits overnight. The one live ask is still item 1 (remove IG Stories from PEIKIRA).
 
 - **[RISK] 2026-11-06 19:01 · Markus's new PEIKIRA2 ad set is eating the good one's budget.** Today it took **78%** *(calc)* of PEIKIRA's Rp 300k: Rp 239k for 1 lead, while the old ad set got Rp 69k for 2 leads. Since launch: PEIKIRA2 **Rp 279k / 1 lead**, old ad set **Rp 314k / 4 leads (Rp 78.6k CPL, under target)**. It hits my pre-set pause threshold (Rp 285k, ≤1 lead) tonight. No new ask yet: if it's still ≤1 lead at Rp 400k at tomorrow's 07:00 readout, "pause PEIKIRA2" becomes the one ask. If you'd rather act now, tell Markus. Details: `fab_advertising/reports/2026-11-10_peikira2_read_prestage.md`.
