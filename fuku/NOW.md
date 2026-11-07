@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-07 18:01 WIB (cloud heartbeat)_
+_Last updated: 2026-11-07 19:01 WIB (cloud heartbeat)_
 
 ## Current focus
 - **M-001 (P0):** 7d CPL **Rp 121.9k** (10/31–11/06), down from 125.2k but still, vs the 95k target. Two decision packs are waiting on Alvian: ad change list 1–5 and website fixes W1–W4 (new). The post-click leak is now quantified: LP→Lead 3.9%. PEIKIRA2 read on 11/10. Batch 01 on hold until then.
@@ -33,6 +33,6 @@ _Last updated: 2026-11-07 18:01 WIB (cloud heartbeat)_
 ## Open loops
 - 4 disabled ad accounts (OUTBOX [RISK]).
 - Activity log 07:00–22:01 WIB 11/06: no human edits (only 2 Meta 'started delivery' events on PEIKIRA2 ads at 16:01/16:13); item 1 not applied yet.
-- Overnight 11/06 22:00 → 11/07 09:02 WIB: only a Meta 'Account billed' event (06:30); no human edits, item 1 not applied (08:01 + 09:02 + 10:01 + 11:01 + 12:01 + 13:01 + 14:01 + 15:01 + 16:01 + 17:01 + 18:01 checks: `[]`).
+- Overnight 11/06 22:00 → 11/07 09:02 WIB: only a Meta 'Account billed' event (06:30); no human edits, item 1 not applied (08:01 + 09:02 + 10:01 + 11:01 + 12:01 + 13:01 + 14:01 + 15:01 + 16:01 + 17:01 + 18:01 + 19:01 checks: `[]`).
 - 16:01 site re-curl (4 pages): W1/W2/W3 not applied: Kelapa Gading still on all 4 pages, 'Jakarta Pusat' ×9 on /sewa-gudang-self-storage-jakarta/, 'Rp 800.000' still shown, 'Pernah chat' field still on the form.
 - Incess OMO bid-cap raise proposal on offer.
