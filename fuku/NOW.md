@@ -1,15 +1,15 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-06 22:01 WIB (cloud heartbeat)_
+_Last updated: 2026-11-07 07:02 WIB (cloud heartbeat)_
 
 ## Current focus
-- **M-001 (P0):** 7d CPL **Rp 125k** (10/30–11/05) and rising, vs the 95k target. Two decision packs are waiting on Alvian: ad change list 1–5 and website fixes W1–W4 (new). The post-click leak is now quantified: LP→Lead 3.9%. PEIKIRA2 read on 11/10. Batch 01 on hold until then.
+- **M-001 (P0):** 7d CPL **Rp 121.9k** (10/31–11/06), down from 125.2k but still, vs the 95k target. Two decision packs are waiting on Alvian: ad change list 1–5 and website fixes W1–W4 (new). The post-click leak is now quantified: LP→Lead 3.9%. PEIKIRA2 read on 11/10. Batch 01 on hold until then.
 
 ## Next actions
-00. **11/07 07:00 readout: check PEIKIRA2 (`120254276298070572`) cumulative since 11/05.** At 20:02 it was Rp 292,582 / 1 lead (threshold Rp 285k **tripped**) and took 78.6% of today's PEIKIRA spend. If still ≤ 1 lead at ≥ Rp 400k → make "pause PEIKIRA2" the single OUTBOX ask (it *replaces* item 1 as the one ask only if bigger impact; else keep both as two one-liners max). Else keep the 11/10 read.
+00. ✅ 11/07 07:02 readout done: PEIKIRA2 got its 2nd lead (Rp 336,659 / 2 = Rp 168k) vs control Rp 321,669 / 4 → pause rule (≤1 lead) no longer applies → **hold to 11/10, no ask**. Keep checking its spend share at each daily readout; re-trigger the pause ask only if it reaches ≥ Rp 500k with ≤ 2 leads (≈5× target).
 0. **Read `fuku/memory/playbooks/meta-ads-algorithm.md` + `meta-cpl-diagnosis.md` before any ads work.** Retro #1 done 11/06 09:01; next retro ~11/13 or at 15 new lessons.
 0b. Don't add new decision packs until something is applied. The only live ask is "applied 1" (PEIKIRA IG Stories off).
 1. Each heartbeat: check OUTBOX/INBOX for "applied 1,2,…", "W1/W2 done", the photo shoot, and facts (750 vs 800, close rate, months stayed). Log applied changes in `fab_advertising/reports/m001_tracker.md`.
-2. Daily (first heartbeat after 07:00 WIB): tracker readout row + activity log (limit ≤ 40). ✅ done 11/06.
+2. Daily (first heartbeat after 07:00 WIB): tracker readout row + activity log (limit ≤ 40). ✅ done 11/07. Stalled-asks check: item 1 hits 24h at 11/07 09:01 → re-ask as a one-liner then if still unapplied.
 3. When W1/W2 are applied: re-curl the 3 Jakarta pages to verify, then re-pull the funnel and compare to the ✅ baseline (14:02, `fab_advertising/reports/2026-11-06_pixel_funnel_baseline.md`: VC→Lead 3.8%, VC→Form 6.4%, Form→Lead 60%). 14:02 curl: site still unedited.
 4. ~~ImageAd 201B~~ ✅ checked 11/06 08:02: it's immaterial (Rp 0 spend over 14d). Drop it unless Manny5 gets a bid-cap raise.
 5. 2026-11-10: read PEIKIRA2 vs the old PEIKIRA ad set, plus the effect of any applied changes.
@@ -33,5 +33,5 @@ _Last updated: 2026-11-06 22:01 WIB (cloud heartbeat)_
 ## Open loops
 - 4 disabled ad accounts (OUTBOX [RISK]).
 - Activity log 07:00–22:01 WIB 11/06: no human edits (only 2 Meta 'started delivery' events on PEIKIRA2 ads at 16:01/16:13); item 1 not applied yet.
-- Overnight activity (22:00→07:00 WIB): only 2 Meta "started delivery" events for PEIKIRA2 (06:22); no human edits.
+- Overnight 11/06 22:00 → 11/07 07:02 WIB: only a Meta 'Account billed' event (06:30); no human edits, item 1 not applied.
 - Incess OMO bid-cap raise proposal on offer.

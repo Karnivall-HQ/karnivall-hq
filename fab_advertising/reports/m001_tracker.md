@@ -5,12 +5,14 @@ Numbers come from Rudi MCP (read-only). *(calc)* = Fuku's arithmetic. Proposed c
 ## Weekly readouts (7d windows)
 | Readout (WIB) | Window | Spend 7d | Spend/day | Leads | 7d CPL | Gate (≤95k)? | Notes |
 |---|---|---|---|---|---|---|---|
+| 2026-11-07 07:02 | 10-31 → 11-06 | Rp 2,560,776 *(calc)* | Rp 366k *(calc)* | 21 | Rp 121,942 *(calc)* | ❌ | Slightly better than 11/06 (125.2k). PEIKIRA 19 leads @ Rp 109,956 (Rp 2.09M); BC CBO Copy 2 @ Rp 235,806 (Rp 472k). No proposals applied; no human edits overnight. |
 | 2026-11-06 07:01 | 10-30 → 11-05 | Rp 2,503,323 | Rp 358k | 20 | Rp 125,166 *(calc)* | ❌ | Worse than yesterday's readout. PEIKIRA 18 leads @ Rp 112.6k (Rp 2.03M); BC CBO Copy 2 leads @ Rp 238k (Rp 477k). No proposals applied yet. Pixel funnel: LP→Lead 3.9% → `2026-11-06_landing_page_audit.md` |
 | 2026-11-05 19:09 | 10-29 → 11-04 | Rp 2,483,302 | Rp 355k | 22 | Rp 112,877 *(calc)* | ❌ | PEIKIRA 19 leads @105k; BC CBO 3 leads @163k (stalled under bid cap). Placement breakdown → `2026-11-05_m001_breakdown.md` |
 
 ## Daily snapshots (partial day unless noted)
 | Date (WIB) | Spend | Leads | CPL | Notes |
 |---|---|---|---|---|
+| 2026-11-06 (full day) | Rp 413,498 *(calc)* | 5 | Rp 82,700 *(calc)* | PEIKIRA Rp 372,915 / 4 (Rp 93,229); BC CBO Copy Rp 40,583 / 1. PEIKIRA2 got its 2nd lead after 20:02 → cumulative 11/05–11/06 Rp 336,659 / 2 (Rp 168,330); control Rp 321,669 / 4 (Rp 80,417). Single day, not a gate metric. |
 | 2026-11-06 (to 19:01) | Rp 337,101 *(calc, top 15 ad sets)* | 3 | Rp 112,367 *(calc)* | PEIKIRA2 Rp 239,487 / 1 (77.7% of PEIKIRA spend, CPM 54k); control Rp 68,588 / 2; BC Rp 29,026 / 0 (087 Copy 7 only Rp 9,791). Single day, not a gate metric. |
 | 2026-11-06 (to 20:02) | PEIKIRA ad sets Rp 321,977 *(calc)* | 3 | Rp 107,326 *(calc)* | PEIKIRA2 Rp 252,984 / 1 (78.6%); control Rp 68,993 / 2. PEIKIRA2 cumulative Rp 292,582 / 1 → pause threshold tripped. No human edits 19:00–20:02. |
 | 2026-11-05 (full day) | Rp 342,560 *(calc)* | 2 | Rp 171,280 *(calc)* | PEIKIRA Rp 285,413 / 2; BC CBO Copy Rp 57,147 / 0. |

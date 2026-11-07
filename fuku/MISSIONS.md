@@ -33,6 +33,7 @@
   4. *Scale*: propose budget raises of ~20–30% every 3–4 days, only while the 7d CPL ≤ Rp 95k. Alvian applies them. Fuku verifies the effect in the next readouts. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
+  - 2026-11-07 07:02: Daily readout: 7d (10/31–11/06) Rp 2,560,776 / 21 leads / **CPL Rp 121,942** *(calc)* ❌ (125.2k yesterday). 11/06 full day Rp 413k / 5 leads. PEIKIRA2 got a 2nd lead overnight (Rp 336,659 / 2) → pause rule no longer applies; hold to 11/10, no ask. No human edits overnight; item 1 still unapplied.
   - 2026-11-06 20:02: Activity log empty (item 1 not applied). PEIKIRA2 cumulative Rp 292,582 / 1 lead → Rp 285k pause threshold tripped; control Rp 314,808 / 4. Ask scheduled for 11/07 07:00 readout.
   - 2026-11-06 19:01: Activity log 18:00–19:01 empty (item 1 not applied). Intraday: PEIKIRA2 took 77.7% *(calc)* of PEIKIRA spend today (Rp 239k / 1 lead) vs control Rp 69k / 2. Cumulative PEIKIRA2 Rp 279,085 / 1 lead, at 97.9% of the pre-set Rp 285k pause threshold. OUTBOX [RISK]; becomes the single ask at 11/07 07:00 if still ≤1 lead at ≥ Rp 400k.
   - 2026-11-06 18:02: Activity log 16:13–18:02 empty (item 1 not applied). Ad-level check: PEIKIRA depends on one ad (Ad015: Rp 1.66M / 16 leads / Rp 103,865 in W2 = 86.7% of PEIKIRA ad spend *(calc)*); BC Image087 CTR flat 1.51% at freq 1.22, so its drop is the bid cap, not fatigue. No new ask.

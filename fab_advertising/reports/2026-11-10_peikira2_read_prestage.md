@@ -49,6 +49,14 @@ Today alone (11/06 to 19:01): PEIKIRA2 Rp 239,487 / 1 lead at CPM Rp 54,048; con
 
 Today (11/06 to 20:02): PEIKIRA2 Rp 252,984 / 1; control Rp 68,993 / 2 (CPL Rp 34,497). PEIKIRA2 = 78.6% *(calc)* of today's PEIKIRA spend. **Pause threshold (Rp 285k, ≤1 lead) tripped: 102.7% *(calc)*.** Per the 19:01 plan the ask fires at the 11/07 07:00 readout (if still ≤1 lead at ≥ Rp 400k), not tonight — the campaign has already spent ~Rp 322k *(calc)* of today's Rp 300k, so little more can be lost before morning.
 
+### 11/07 07:02 readout (11/05–11/06 full days; context only)
+| Ad set | Spend | Leads | CPL | CTR | Learning |
+|---|---|---|---|---|---|
+| Old (control) | Rp 321,669 | 4 | Rp 80,417 | 1.72% | LEARNING (23 conv.) |
+| PEIKIRA2 (test) | Rp 336,659 | 2 | Rp 168,330 | 1.64% | LEARNING (2 conv.) |
+
+PEIKIRA2 got a 2nd lead after 20:02, so the pause rule (≤ 1 lead) **no longer applies**; it sits in the "in between" band (CPL 95–150k+ / < 3 leads) → **hold**, no ask. Share of campaign spend 51% *(calc)*. The 11/10 read stands.
+
 ## Decision rules (set now, so the read isn't biased by the result)
 Target CPL Rp 95k. Five days at ~Rp 300k/day ≈ Rp 1.5M, ~15 leads at target.
 - **PEIKIRA2 spent ≥ Rp 285k (3× target) with ≤ 1 lead** → propose: pause PEIKIRA2's ads with 0 leads and Rp ≥ 95k spend; spend returns to the control.
