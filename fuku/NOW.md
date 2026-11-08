@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-08 13:02 WIB (cloud heartbeat)_
+_Last updated: 2026-11-08 14:01 WIB (cloud heartbeat)_
 
 ## Current focus
 - **M-001 (P0):** 7d CPL **Rp 115.1k** (11/01–11/07) vs the 95k target. **The single live ask is now "pause PEIKIRA2"** (Rp 539k / 2 leads vs control Rp 350k / 5 = Rp 70k). Item 1 (IG Stories) is parked behind it. Website W1–W4 still waiting. Batch 01 on hold.
@@ -32,7 +32,7 @@ _Last updated: 2026-11-08 13:02 WIB (cloud heartbeat)_
 - Fab pixel/dataset id: **405755485775053** (PixelYourSite Pro on WordPress; browser + server events).
 
 ## Open loops
-- Overnight 11/07 22:00 → 11/08 13:02 WIB: activity log `[]` (07:02 + 08:01 + 09:01 + 10:02 + 11:01 + 12:01 + 13:02 checks), no edits; PEIKIRA2 still live, pause ask open.
+- Overnight 11/07 22:00 → 11/08 14:01 WIB: activity log `[]` (07:02 + 08:01 + 09:01 + 10:02 + 11:01 + 12:01 + 13:02 + 14:01 checks), no edits; PEIKIRA2 still live, pause ask open.
 - 4 disabled ad accounts (OUTBOX [RISK]).
 - Activity log 07:00–22:01 WIB 11/06: no human edits (only 2 Meta 'started delivery' events on PEIKIRA2 ads at 16:01/16:13); item 1 not applied yet.
 - Overnight 11/06 22:00 → 11/07 09:02 WIB: only a Meta 'Account billed' event (06:30); no human edits, item 1 not applied (08:01 + 09:02 + 10:01 + 11:01 + 12:01 + 13:01 + 14:01 + 15:01 + 16:01 + 17:01 + 18:01 + 19:01 + 20:02 + 21:01 + 22:02 checks: `[]`).
