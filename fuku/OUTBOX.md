@@ -5,7 +5,11 @@
 
 ## Open
 
-- **[DECISION] 2026-11-07 09:02 · Re-ask (48h open): untick Instagram Stories in the PEIKIRA ad set?** Rp 997k → 3 leads (Rp 332k each); without it 30d CPL ≈ **Rp 94.9k** *(calc)*, under target, zero budget change. 7d CPL now Rp 121.9k. My recommendation: **yes, 2 min**. Reply "applied 1" (or "no"). No other asks until this moves.
+- **[DECISION] 2026-11-08 07:02 · The one ask now: pause Markus's PEIKIRA2 ad set?** Since 11/05 it spent **Rp 539k for 2 leads (Rp 270k each)**; the old PEIKIRA ad set spent Rp 350k for 5 (**Rp 70k each**, under target). Yesterday PEIKIRA2 took 88% *(calc)* of PEIKIRA's budget and got 0 leads. Pausing it sends the Rp 300k/day back to the Rp 70k ad set, zero budget change. My recommendation: **yes, today** (you or Markus: Ads Manager → ad set AKIRA-FAB-20261031-WAVE-PEIKIRA2 → off). Reply "paused 2" (or "no"). This replaces item 1 (IG Stories) as the single ask; item 1 waits.
+
+- **[REPORT] 2026-11-08 07:02 · Fab daily readout.** 📊 7d (11/01–11/07): Rp 2.53M, 22 leads, **CPL Rp 115.1k** *(calc)* (was 121.9k; target ≤ 95k) ❌. Yesterday: Rp 279k, 2 leads. No human edits overnight; nothing applied yet.
+
+- **[DECISION] 2026-11-07 09:02 · ⏸ Parked 11/08 (superseded by the PEIKIRA2 ask) · Re-ask (48h open): untick Instagram Stories in the PEIKIRA ad set?** Rp 997k → 3 leads (Rp 332k each); without it 30d CPL ≈ **Rp 94.9k** *(calc)*, under target, zero budget change. 7d CPL now Rp 121.9k. My recommendation: **yes, 2 min**. Reply "applied 1" (or "no"). No other asks until this moves.
 
 - **[REPORT] 2026-11-07 07:02 · Fab daily readout: no PEIKIRA2 ask after all.** 📊 7d (10/31–11/06): Rp 2.56M, 21 leads, **CPL Rp 121.9k** *(calc)* (was 125.2k; target ≤ 95k) ❌. Yesterday: Rp 413k, 5 leads (Rp 82.7k, one day only). PEIKIRA2 got a 2nd lead overnight: Rp 337k / 2 (Rp 168k) vs the old ad set Rp 322k / 4 (Rp 80k). My pause rule needed ≤ 1 lead, so I'm **holding to the 11/10 read**. No human edits overnight. The one live ask is still item 1 (remove IG Stories from PEIKIRA).
 

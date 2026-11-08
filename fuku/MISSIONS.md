@@ -25,7 +25,7 @@
 - **Priority:** P0
 - **Deadline:** 2026-12-05 (30 days from 2026-11-05)
 - **Constraints:** **Propose-only.** Fuku never touches the ad account (no pauses, budget changes, or launches). Every change is proposed to Alvian as an apply-ready checklist, and **Alvian applies it himself**. The metric is the 7-day average CPL, never a single day.
-- **Status:** in progress (diagnosis ✅, waiting on Alvian to apply proposals)
+- **Status:** in progress (diagnosis ✅, waiting on Alvian to apply proposals; live ask: pause PEIKIRA2)
 - **Strategy (Fuku, 2026-11-05):**
   1. *Diagnose* (now): ad-set/ad/placement/audience breakdown; find which ads, audiences, and placements produce leads ≤ Rp 95k.
   2. *Cut waste*: propose to Alvian which CTR-collapsed FAB ads and losing ad sets to pause, so spend concentrates in the winners (BC CBObass005-type setups at ~Rp 83k).
@@ -33,6 +33,7 @@
   4. *Scale*: propose budget raises of ~20–30% every 3–4 days, only while the 7d CPL ≤ Rp 95k. Alvian applies them. Fuku verifies the effect in the next readouts. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
+  - 2026-11-08 07:02: Daily readout: 7d (11/01–11/07) Rp 2,531,551 / 22 leads / **CPL Rp 115,070** *(calc)* ❌ (121.9k yesterday). 11/07 Rp 278,661 / 2. PEIKIRA2 cumulative Rp 539,027 / 2 (Rp 269.5k) vs control Rp 350,414 / 5 (Rp 70.1k); 11/07 PEIKIRA2 took 87.6% *(calc)* of PEIKIRA spend for 0 leads → pre-set re-trigger fired. Single ask switched to "pause PEIKIRA2" (item 1 parked). No human edits overnight.
   - 2026-11-07 09:02: Activity log 07:55–09:02 empty; item 1 unapplied at 48h. Re-asked as a single one-line [DECISION] at OUTBOX top + push notification. No new packs.
   - 2026-11-07 07:02: Daily readout: 7d (10/31–11/06) Rp 2,560,776 / 21 leads / **CPL Rp 121,942** *(calc)* ❌ (125.2k yesterday). 11/06 full day Rp 413k / 5 leads. PEIKIRA2 got a 2nd lead overnight (Rp 336,659 / 2) → pause rule no longer applies; hold to 11/10, no ask. No human edits overnight; item 1 still unapplied.
   - 2026-11-06 20:02: Activity log empty (item 1 not applied). PEIKIRA2 cumulative Rp 292,582 / 1 lead → Rp 285k pause threshold tripped; control Rp 314,808 / 4. Ask scheduled for 11/07 07:00 readout.

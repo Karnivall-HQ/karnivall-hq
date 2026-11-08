@@ -57,6 +57,15 @@ Today (11/06 to 20:02): PEIKIRA2 Rp 252,984 / 1; control Rp 68,993 / 2 (CPL Rp 3
 
 PEIKIRA2 got a 2nd lead after 20:02, so the pause rule (≤ 1 lead) **no longer applies**; it sits in the "in between" band (CPL 95–150k+ / < 3 leads) → **hold**, no ask. Share of campaign spend 51% *(calc)*. The 11/10 read stands.
 
+### 11/08 07:02 readout (11/05–11/07 full days) → early trigger
+| Ad set | Spend | Leads | CPL |
+|---|---|---|---|
+| PEIKIRA2 (`120254276298070572`) | Rp 539,027 | 2 | Rp 269,514 *(calc)* |
+| Control PEIKIRA-FAB-20261023-ADSET (`120254051672430572`) | Rp 350,414 | 5 | Rp 70,083 *(calc)* |
+| Campaign (both) | Rp 889,441 *(calc)* | 7 | Rp 127,063 *(calc)* |
+
+11/07 alone: PEIKIRA2 Rp 202,368 / 0 leads *(calc)* = 87.6% of PEIKIRA spend; control Rp 28,745 / 1. PEIKIRA2 is ≈ 5.7× target spend *(calc)* with 2 leads → the 11/07 re-trigger rule (≥ Rp 500k with ≤ 2 leads) fired, and the "either way" rule also fires: campaign CPL (127k) is worse than the control alone (70k), so the split is costing money. **Ask (replaces item 1 as the single live ask): pause ad set PEIKIRA2; budget flows back to the control.** The 11/10 read becomes a check of the post-pause effect.
+
 ## Decision rules (set now, so the read isn't biased by the result)
 Target CPL Rp 95k. Five days at ~Rp 300k/day ≈ Rp 1.5M, ~15 leads at target.
 - **PEIKIRA2 spent ≥ Rp 285k (3× target) with ≤ 1 lead** → propose: pause PEIKIRA2's ads with 0 leads and Rp ≥ 95k spend; spend returns to the control.
