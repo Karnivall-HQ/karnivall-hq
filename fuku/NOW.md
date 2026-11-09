@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-09 12:01 WIB (cloud heartbeat)_
+_Last updated: 2026-11-09 13:05 WIB (cloud heartbeat)_
 
 ## Current focus
 - **M-001 (P0):** 7d CPL **Rp 104.6k** (11/02–11/08, best yet, −22% WoW) vs the 95k target. **Single live ask: "pause PEIKIRA2"**, re-asked 11/09 07:02 + push (Rp 740k / 4 = Rp 185k vs control Rp 450k / 6 = Rp 75k).
@@ -34,6 +34,7 @@ _Last updated: 2026-11-09 12:01 WIB (cloud heartbeat)_
 - Fab pixel/dataset id: **405755485775053** (PixelYourSite Pro on WordPress; browser + server events).
 
 ## Open loops
+- 11/09 13:05: activity log since 11:30 WIB `[]`: no human edits, PEIKIRA2 still not paused. Next: hourly log checks; 11/10 07:00 PEIKIRA2 read + re-ask.
 - 11/09 12:01: activity log since 10:30 WIB `[]`: no human edits, PEIKIRA2 still not paused. Next: hourly log checks; 11/10 07:00 PEIKIRA2 read + re-ask.
 - 11/09 11:01: activity log since 09:30 WIB `[]`: no human edits, PEIKIRA2 still not paused. Next: hourly log checks; 11/10 07:00 PEIKIRA2 read + re-ask.
 - 11/09 10:01: activity log since 08:30 WIB `[]`: no human edits, PEIKIRA2 still not paused. Next: hourly log checks; 11/10 07:00 PEIKIRA2 read + re-ask.
