@@ -5,6 +5,7 @@ This repo is your whole brain. Anything you don't commit and push is lost when t
 
 ## 0. Sync
 - `git checkout main && git pull --ff-only origin main` before doing anything else.
+- If the pull says "Not possible to fast-forward" (the cloud clone is often shallow with a stale local `main`): run `git fetch --unshallow origin main` (or `git fetch origin main` if not shallow), check `git log origin/main..main` holds only commits already merged upstream, then `git reset --hard origin/main`. Never push the stale local history.
 
 ## 1–6. Work
 - Follow `fuku/protocols/heartbeat.md` steps 1–6 exactly (Orient → Decide → Execute → Verify → Record → Reflect).
