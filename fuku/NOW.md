@@ -1,11 +1,12 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-09 14:02 WIB (cloud heartbeat)_
+_Last updated: 2026-11-09 15:02 WIB (cloud heartbeat)_
 
 ## Current focus
 - **M-001 (P0):** 7d CPL **Rp 104.6k** (11/02–11/08, best yet, −22% WoW) vs the 95k target. **Single live ask: "pause PEIKIRA2"**, re-asked 11/09 07:02 + push (Rp 740k / 4 = Rp 185k vs control Rp 450k / 6 = Rp 75k).
 - **M-002 (P1):** ✅ first weekly report done 11/09 → `fab_advertising/reports/weekly/2026-11-09.md`. Next Mon 11/16 07:00. Item 1 (IG Stories) is parked behind it. Website W1–W4 still waiting. Batch 01 on hold.
 
 ## Next actions
+00000. ⚠️ 11/09 15:02: ad AKIRA-FAB-20261031-006 (PEIKIRA2's top ad) PAUSED at 14:11 WIB via Rudi MCP (presumed Markus). Ad set PEIKIRA2 still ACTIVE. At the 11/10 07:00 read: pull PEIKIRA2 ads + the control for 11/09–11/10. If the spend just moved to other PEIKIRA2 ads → re-ask "pause the ad set". If it flowed to the control → the partial pause did the job; log it.
 0000. ✅ 11/09 07:02: daily + weekly readout done, pause-PEIKIRA2 re-asked (push sent). Next re-ask no earlier than 11/10 07:00, folded into the 11/10 PEIKIRA2 read (pre-stage doc; window now 11/05–11/09). If paused: log it in the tracker, read the control on 11/11–11/12. Rest of today: activity-log checks only.
 000. ✅ 11/08 07:02 readout: PEIKIRA2 hit the re-trigger (Rp 539,027 / 2 leads ≥ Rp 500k) and took 87.6% *(calc)* of PEIKIRA spend on 11/07 for 0 leads → single [DECISION] "pause PEIKIRA2" at OUTBOX top + push. Next re-ask no earlier than 11/09 07:00 (fold it into the weekly report). If applied: log it in the tracker change log and read the control's CPL on 11/10–11/11.
 00. ✅ 11/07 07:02 readout done: PEIKIRA2 got its 2nd lead (Rp 336,659 / 2 = Rp 168k) vs control Rp 321,669 / 4 → pause rule (≤1 lead) no longer applies → **hold to 11/10, no ask**. Keep checking its spend share at each daily readout; re-trigger the pause ask only if it reaches ≥ Rp 500k with ≤ 2 leads (≈5× target).
@@ -34,6 +35,7 @@ _Last updated: 2026-11-09 14:02 WIB (cloud heartbeat)_
 - Fab pixel/dataset id: **405755485775053** (PixelYourSite Pro on WordPress; browser + server events).
 
 ## Open loops
+- 11/09 15:02: activity log since 13:30 WIB: 3 entries, all ad 006 → PAUSED 14:11 (Rudi MCP actor 61594758338050). Ad set still ACTIVE. FYI in OUTBOX + push.
 - 11/09 14:02: activity log since 12:30 WIB `[]`: no human edits, PEIKIRA2 still not paused. Next: hourly log checks; 11/10 07:00 PEIKIRA2 read + re-ask.
 - 11/09 13:05: activity log since 11:30 WIB `[]`: no human edits, PEIKIRA2 still not paused. Next: hourly log checks; 11/10 07:00 PEIKIRA2 read + re-ask.
 - 11/09 12:01: activity log since 10:30 WIB `[]`: no human edits, PEIKIRA2 still not paused. Next: hourly log checks; 11/10 07:00 PEIKIRA2 read + re-ask.

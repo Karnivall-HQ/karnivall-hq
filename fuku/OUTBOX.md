@@ -5,6 +5,8 @@
 
 ## Open
 
+- **[FYI] 2026-11-09 15:02 · ⚠️ Half of the PEIKIRA2 pause happened: someone paused its top AD, not the ad set.** At 14:11 WIB the Rudi MCP app (same actor as Markus's 11/05 launch; not me) paused ad **AKIRA-FAB-20261031-006**, which carried 83% of PEIKIRA2's spend. **The ad set AKIRA-FAB-20261031-WAVE-PEIKIRA2 is still ACTIVE** with its other ads (today: Rp 107k, 0 leads). Risk: Meta just moves the money to PEIKIRA2's other ads, which are unproven. If the goal was "pause PEIKIRA2", switch off the **ad set** too. Was this Markus? I'll read where the money went at the 11/10 07:00 readout. No new ask.
+
 - **[DECISION] 2026-11-09 07:02 · Re-ask (24h open): pause Markus's PEIKIRA2 ad set?** 11/05–11/08: PEIKIRA2 **Rp 740k / 4 leads = Rp 185k each**; the old ad set **Rp 450k / 6 = Rp 75k each**. PEIKIRA2 still takes 62% *(calc)* of the Rp 300k/day. Pausing it = zero budget change, money moves to the Rp 75k ad set. My recommendation: **yes, today** (Ads Manager → AKIRA-FAB-20261031-WAVE-PEIKIRA2 → off). Reply "paused 2" or "no".
 
 - **[REPORT] 2026-11-09 07:02 · 📊 Weekly ads health (11/02–11/08), first M-002 report.** Fab Rp 2.41M / 23 leads / **CPL Rp 104.6k** *(calc)*, −22% WoW, still ❌ vs 95k. Incess Rp 4.19M / 119 / **Rp 35.2k** ✅. No fatigue (max freq 1.74), no new disabled accounts, 0 proposals applied. FYI: Incess has unpublished Ads Manager drafts ("FIX OMO CostCap Increm", Rp 5M/day draft budget, Bali car rental); nothing delivers from them. Full report: `fab_advertising/reports/weekly/2026-11-09.md`.
