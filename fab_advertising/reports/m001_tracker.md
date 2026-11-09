@@ -5,6 +5,7 @@ Numbers come from Rudi MCP (read-only). *(calc)* = Fuku's arithmetic. Proposed c
 ## Weekly readouts (7d windows)
 | Readout (WIB) | Window | Spend 7d | Spend/day | Leads | 7d CPL | Gate (≤95k)? | Notes |
 |---|---|---|---|---|---|---|---|
+| 2026-11-09 07:02 | 11-02 → 11-08 | Rp 2,406,326 *(calc)* | Rp 344k *(calc)* | 23 | Rp 104,623 *(calc)* | ❌ | Best 7d so far (115.1k yesterday). PEIKIRA Rp 2,032,386 / 20 (Rp 101,619); BC CBO Copy Rp 373,940 / 3 (Rp 124,647). PEIKIRA2 cum. 11/05–11/08 Rp 739,973 / 4 (Rp 184,993) vs control Rp 450,290 / 6 (Rp 75,048); campaign 119k vs control 75k → "either way" rule still says consolidate. Pause ask re-sent. No human edits. Weekly report `weekly/2026-11-09.md`. |
 | 2026-11-08 07:02 | 11-01 → 11-07 | Rp 2,531,551 *(calc)* | Rp 362k *(calc)* | 22 | Rp 115,070 *(calc)* | ❌ | Better than 11/07 (121.9k) on paper, but driven by the control ad set. PEIKIRA Rp 2,095,244 / 19 (Rp 110,276); BC CBO Copy Rp 436,307 / 3 (Rp 145,436). PEIKIRA2 cumulative 11/05–11/07 Rp 539,027 / 2 (Rp 269.5k) vs control Rp 350,414 / 5 (Rp 70.1k) → re-trigger rule (≥ Rp 500k, ≤ 2 leads) hit → pause-PEIKIRA2 ask. No human edits overnight. |
 | 2026-11-07 07:02 | 10-31 → 11-06 | Rp 2,560,776 *(calc)* | Rp 366k *(calc)* | 21 | Rp 121,942 *(calc)* | ❌ | Slightly better than 11/06 (125.2k). PEIKIRA 19 leads @ Rp 109,956 (Rp 2.09M); BC CBO Copy 2 @ Rp 235,806 (Rp 472k). No proposals applied; no human edits overnight. |
 | 2026-11-06 07:01 | 10-30 → 11-05 | Rp 2,503,323 | Rp 358k | 20 | Rp 125,166 *(calc)* | ❌ | Worse than yesterday's readout. PEIKIRA 18 leads @ Rp 112.6k (Rp 2.03M); BC CBO Copy 2 leads @ Rp 238k (Rp 477k). No proposals applied yet. Pixel funnel: LP→Lead 3.9% → `2026-11-06_landing_page_audit.md` |
@@ -13,6 +14,7 @@ Numbers come from Rudi MCP (read-only). *(calc)* = Fuku's arithmetic. Proposed c
 ## Daily snapshots (partial day unless noted)
 | Date (WIB) | Spend | Leads | CPL | Notes |
 |---|---|---|---|---|
+| 2026-11-08 (full day) | Rp 333,473 | 3 | Rp 111,158 *(calc)* | PEIKIRA Rp 300,822 / 3; BC CBO Copy Rp 32,651 / 0. PEIKIRA2 Rp 200,946 / 2 *(calc)* (66.8% of PEIKIRA spend); control Rp 99,876 / 1 *(calc)*. Single day, not a gate metric. |
 | 2026-11-07 (full day) | Rp 278,661 *(calc)* | 2 | Rp 139,331 *(calc)* | PEIKIRA Rp 231,092 / 1; BC CBO Copy Rp 47,569 / 1. Inside PEIKIRA: PEIKIRA2 Rp 202,368 / 0 *(calc)* = 87.6% of PEIKIRA spend; control Rp 28,745 / 1 *(calc)*. Single day, not a gate metric. |
 | 2026-11-06 (full day) | Rp 413,498 *(calc)* | 5 | Rp 82,700 *(calc)* | PEIKIRA Rp 372,915 / 4 (Rp 93,229); BC CBO Copy Rp 40,583 / 1. PEIKIRA2 got its 2nd lead after 20:02 → cumulative 11/05–11/06 Rp 336,659 / 2 (Rp 168,330); control Rp 321,669 / 4 (Rp 80,417). Single day, not a gate metric. |
 | 2026-11-06 (to 19:01) | Rp 337,101 *(calc, top 15 ad sets)* | 3 | Rp 112,367 *(calc)* | PEIKIRA2 Rp 239,487 / 1 (77.7% of PEIKIRA spend, CPM 54k); control Rp 68,588 / 2; BC Rp 29,026 / 0 (087 Copy 7 only Rp 9,791). Single day, not a gate metric. |

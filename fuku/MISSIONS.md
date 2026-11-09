@@ -33,6 +33,7 @@
   4. *Scale*: propose budget raises of ~20–30% every 3–4 days, only while the 7d CPL ≤ Rp 95k. Alvian applies them. Fuku verifies the effect in the next readouts. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
+  - 2026-11-09 07:02: Daily + weekly readout: 7d (11/02–11/08) Rp 2,406,326 / 23 leads / **CPL Rp 104,623** *(calc)* ❌ (best yet; 115.1k yesterday, −22% WoW). PEIKIRA2 cum. Rp 739,973 / 4 (Rp 185k) vs control Rp 450,290 / 6 (Rp 75k). 11/08 was PEIKIRA2's best day (2 leads), but the split still costs the campaign ~119k vs 75k → pause ask re-sent (24h open) + push. Site still unedited (curl). No human edits.
   - 2026-11-08 07:02: Daily readout: 7d (11/01–11/07) Rp 2,531,551 / 22 leads / **CPL Rp 115,070** *(calc)* ❌ (121.9k yesterday). 11/07 Rp 278,661 / 2. PEIKIRA2 cumulative Rp 539,027 / 2 (Rp 269.5k) vs control Rp 350,414 / 5 (Rp 70.1k); 11/07 PEIKIRA2 took 87.6% *(calc)* of PEIKIRA spend for 0 leads → pre-set re-trigger fired. Single ask switched to "pause PEIKIRA2" (item 1 parked). No human edits overnight.
   - 2026-11-07 09:02: Activity log 07:55–09:02 empty; item 1 unapplied at 48h. Re-asked as a single one-line [DECISION] at OUTBOX top + push notification. No new packs.
   - 2026-11-07 07:02: Daily readout: 7d (10/31–11/06) Rp 2,560,776 / 21 leads / **CPL Rp 121,942** *(calc)* ❌ (125.2k yesterday). 11/06 full day Rp 413k / 5 leads. PEIKIRA2 got a 2nd lead overnight (Rp 336,659 / 2) → pause rule no longer applies; hold to 11/10, no ask. No human edits overnight; item 1 still unapplied.
@@ -66,6 +67,7 @@
 - **Status:** in progress
 - **Strategy:** The cloud heartbeat runs it on the first Monday run (07:00 WIB). Turn it into a playbook after the first report.
 - **Progress:**
+  - 2026-11-09 07:02: ✅ First weekly report delivered → `fab_advertising/reports/weekly/2026-11-09.md` (Fab 104.6k CPL −22% WoW; Incess 35.2k −3.7%; no fatigue; no new disabled accounts; Incess unpublished drafts noted as FYI). [REPORT] in OUTBOX. Next: Mon 11/16 07:00.
   - 2026-11-06 18:02: Fab ad-level fatigue pre-check → `fab_advertising/reports/2026-11-06_fab_ad_fatigue_precheck.md`. Max freq 1.60, no frequency fatigue; CTR flags Ad001 (−57%), KENJI-001 (−52%), Ad007 (−30%); ⚠️ Ad015 carries 86.7% *(calc)* of PEIKIRA W2 spend. Row added to the 11/09 skeleton.
   - 2026-11-06 17:02: Incess OMO ad-level fatigue pre-check → `fab_advertising/reports/2026-11-06_incess_omo_fatigue_precheck.md`. Healthy: CPL 35.5k → 36.3k *(calc)*, max freq 1.78, no flags; watch ImageAd047 (CTR −27%).
   - 2026-11-06 10:02: Prior-week baseline (10/26–11/01) pulled → `fab_advertising/reports/weekly/_baseline_2026-10-26.md`. Fab Rp 2.56M / 19 leads / CPL Rp 134.6k *(calc)*; Incess Rp 4.42M / 121 / Rp 36.5k. Monday only needs the current week + fatigue + logs.

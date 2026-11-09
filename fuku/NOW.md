@@ -1,10 +1,12 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-08 22:02 WIB (cloud heartbeat)_
+_Last updated: 2026-11-09 07:02 WIB (cloud heartbeat)_
 
 ## Current focus
-- **M-001 (P0):** 7d CPL **Rp 115.1k** (11/01–11/07) vs the 95k target. **The single live ask is now "pause PEIKIRA2"** (Rp 539k / 2 leads vs control Rp 350k / 5 = Rp 70k). Item 1 (IG Stories) is parked behind it. Website W1–W4 still waiting. Batch 01 on hold.
+- **M-001 (P0):** 7d CPL **Rp 104.6k** (11/02–11/08, best yet, −22% WoW) vs the 95k target. **Single live ask: "pause PEIKIRA2"**, re-asked 11/09 07:02 + push (Rp 740k / 4 = Rp 185k vs control Rp 450k / 6 = Rp 75k).
+- **M-002 (P1):** ✅ first weekly report done 11/09 → `fab_advertising/reports/weekly/2026-11-09.md`. Next Mon 11/16 07:00. Item 1 (IG Stories) is parked behind it. Website W1–W4 still waiting. Batch 01 on hold.
 
 ## Next actions
+0000. ✅ 11/09 07:02: daily + weekly readout done, pause-PEIKIRA2 re-asked (push sent). Next re-ask no earlier than 11/10 07:00, folded into the 11/10 PEIKIRA2 read (pre-stage doc; window now 11/05–11/09). If paused: log it in the tracker, read the control on 11/11–11/12. Rest of today: activity-log checks only.
 000. ✅ 11/08 07:02 readout: PEIKIRA2 hit the re-trigger (Rp 539,027 / 2 leads ≥ Rp 500k) and took 87.6% *(calc)* of PEIKIRA spend on 11/07 for 0 leads → single [DECISION] "pause PEIKIRA2" at OUTBOX top + push. Next re-ask no earlier than 11/09 07:00 (fold it into the weekly report). If applied: log it in the tracker change log and read the control's CPL on 11/10–11/11.
 00. ✅ 11/07 07:02 readout done: PEIKIRA2 got its 2nd lead (Rp 336,659 / 2 = Rp 168k) vs control Rp 321,669 / 4 → pause rule (≤1 lead) no longer applies → **hold to 11/10, no ask**. Keep checking its spend share at each daily readout; re-trigger the pause ask only if it reaches ≥ Rp 500k with ≤ 2 leads (≈5× target).
 0. **Read `fuku/memory/playbooks/meta-ads-algorithm.md` + `meta-cpl-diagnosis.md` before any ads work.** Retro #1 done 11/06 09:01; next retro ~11/13 or at 15 new lessons.
@@ -32,6 +34,7 @@ _Last updated: 2026-11-08 22:02 WIB (cloud heartbeat)_
 - Fab pixel/dataset id: **405755485775053** (PixelYourSite Pro on WordPress; browser + server events).
 
 ## Open loops
+- 11/08 22:02 → 11/09 07:02: no human edits (only Meta "Account billed" 06:19). Site curl 07:02: W1/W2 not applied. Incess has unpublished drafts ("FIX OMO CostCap Increm", Rp 5M/day draft) → FYI in weekly report, no ask.
 - Overnight 11/07 22:00 → 11/08 22:02 WIB: no human edits (07:02–15:01 + 17:01 + 18:02 + 19:02 + 20:02 + 21:01 + 22:02 checks `[]`; 16:02 check: only a Meta 'Ad delivered / Started delivery' on PEIKIRA2 ad AKIRA-FAB-20261103-009_Group_1 at 15:13). PEIKIRA2 still live and still rotating new ads in; pause ask open.
 - 4 disabled ad accounts (OUTBOX [RISK]).
 - Activity log 07:00–22:01 WIB 11/06: no human edits (only 2 Meta 'started delivery' events on PEIKIRA2 ads at 16:01/16:13); item 1 not applied yet.

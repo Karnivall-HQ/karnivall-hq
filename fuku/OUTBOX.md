@@ -5,7 +5,11 @@
 
 ## Open
 
-- **[DECISION] 2026-11-08 07:02 · The one ask now: pause Markus's PEIKIRA2 ad set?** Since 11/05 it spent **Rp 539k for 2 leads (Rp 270k each)**; the old PEIKIRA ad set spent Rp 350k for 5 (**Rp 70k each**, under target). Yesterday PEIKIRA2 took 88% *(calc)* of PEIKIRA's budget and got 0 leads. Pausing it sends the Rp 300k/day back to the Rp 70k ad set, zero budget change. My recommendation: **yes, today** (you or Markus: Ads Manager → ad set AKIRA-FAB-20261031-WAVE-PEIKIRA2 → off). Reply "paused 2" (or "no"). This replaces item 1 (IG Stories) as the single ask; item 1 waits.
+- **[DECISION] 2026-11-09 07:02 · Re-ask (24h open): pause Markus's PEIKIRA2 ad set?** 11/05–11/08: PEIKIRA2 **Rp 740k / 4 leads = Rp 185k each**; the old ad set **Rp 450k / 6 = Rp 75k each**. PEIKIRA2 still takes 62% *(calc)* of the Rp 300k/day. Pausing it = zero budget change, money moves to the Rp 75k ad set. My recommendation: **yes, today** (Ads Manager → AKIRA-FAB-20261031-WAVE-PEIKIRA2 → off). Reply "paused 2" or "no".
+
+- **[REPORT] 2026-11-09 07:02 · 📊 Weekly ads health (11/02–11/08), first M-002 report.** Fab Rp 2.41M / 23 leads / **CPL Rp 104.6k** *(calc)*, −22% WoW, still ❌ vs 95k. Incess Rp 4.19M / 119 / **Rp 35.2k** ✅. No fatigue (max freq 1.74), no new disabled accounts, 0 proposals applied. FYI: Incess has unpublished Ads Manager drafts ("FIX OMO CostCap Increm", Rp 5M/day draft budget, Bali car rental); nothing delivers from them. Full report: `fab_advertising/reports/weekly/2026-11-09.md`.
+
+- **[DECISION] 2026-11-08 07:02 · ⏩ Superseded by the 11/09 re-ask above · The one ask now: pause Markus's PEIKIRA2 ad set?** Since 11/05 it spent **Rp 539k for 2 leads (Rp 270k each)**; the old PEIKIRA ad set spent Rp 350k for 5 (**Rp 70k each**, under target). Yesterday PEIKIRA2 took 88% *(calc)* of PEIKIRA's budget and got 0 leads. Pausing it sends the Rp 300k/day back to the Rp 70k ad set, zero budget change. My recommendation: **yes, today** (you or Markus: Ads Manager → ad set AKIRA-FAB-20261031-WAVE-PEIKIRA2 → off). Reply "paused 2" (or "no"). This replaces item 1 (IG Stories) as the single ask; item 1 waits.
 
 - **[REPORT] 2026-11-08 07:02 · Fab daily readout.** 📊 7d (11/01–11/07): Rp 2.53M, 22 leads, **CPL Rp 115.1k** *(calc)* (was 121.9k; target ≤ 95k) ❌. Yesterday: Rp 279k, 2 leads. No human edits overnight; nothing applied yet.
 

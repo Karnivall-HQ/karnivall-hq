@@ -27,5 +27,12 @@ _Created 2026-11-05 22:01 WIB, before the first run (Mon 2026-11-09). Refine aft
 ## Top 3 recommended actions (for Alvian to apply)
 1. … (exact object name + ID, current → proposed value, expected effect)
 ```
+## Notes from run #1 (2026-11-09)
+- Whole run = ~12 tool calls, ~15 min. Use `time_range` Mon→Sun for both campaign and ad levels; ad-level filter `amount_spent > 50000` gives ~3 Fab + ~7 Incess rows (fits output).
+- Pixel: `event_total_counts`, start = Mon 00:00 WIB, end = next Mon 00:00 WIB (`date -d '… +0700' +%s`).
+- Incess returns a required `object_state=draft` follow-up read; the result is ~140k chars, so parse the saved file with python and list names/budgets only. Report drafts as FYI; never publish.
+- Fab yesterday's spend = the 06:19 'Account billed' amount in the activity log (cross-check).
+- Re-curl the site in the same run so the funnel row says whether W1/W2 explain any change.
+
 Prior week (10/26–11/01) is pre-pulled in `fab_advertising/reports/weekly/_baseline_2026-10-26.md`; use it for the WoW columns on 11/09.
 Also update the M-001 tracker weekly readout row from the Fab numbers.
