@@ -75,6 +75,7 @@
 - **Status:** in progress
 - **Strategy:** The cloud heartbeat runs it on the first Monday run (07:00 WIB). Turn it into a playbook after the first report.
 - **Progress:**
+  - 2026-11-10 20:03: Incess OMO apply-ready bid-cap proposal → `fab_advertising/reports/2026-11-10_incess_bidcap_proposal.md` (4 ad sets +~10%, 7-day judge rules). Parked in OUTBOX pending lead value.
   - 2026-11-09 07:02: ✅ First weekly report delivered → `fab_advertising/reports/weekly/2026-11-09.md` (Fab 104.6k CPL −22% WoW; Incess 35.2k −3.7%; no fatigue; no new disabled accounts; Incess unpublished drafts noted as FYI). [REPORT] in OUTBOX. Next: Mon 11/16 07:00.
   - 2026-11-06 18:02: Fab ad-level fatigue pre-check → `fab_advertising/reports/2026-11-06_fab_ad_fatigue_precheck.md`. Max freq 1.60, no frequency fatigue; CTR flags Ad001 (−57%), KENJI-001 (−52%), Ad007 (−30%); ⚠️ Ad015 carries 86.7% *(calc)* of PEIKIRA W2 spend. Row added to the 11/09 skeleton.
   - 2026-11-06 17:02: Incess OMO ad-level fatigue pre-check → `fab_advertising/reports/2026-11-06_incess_omo_fatigue_precheck.md`. Healthy: CPL 35.5k → 36.3k *(calc)*, max freq 1.78, no flags; watch ImageAd047 (CTR −27%).

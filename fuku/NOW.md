@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-10 19:02 WIB (cloud heartbeat: 19:00 poll + price-copy audit)_
+_Last updated: 2026-11-10 20:03 WIB (cloud heartbeat: Incess bid-cap proposal)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -10,6 +10,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - **WA price-objection reply done** (in `fab_advertising/creatives/2026-11-06_wa_followup_script.md`): lead with pickup / no deposit / no minimum, then a sizing question; no discount, no cost-parity claim. Same gates as batch 02.
 - **Price-copy audit done** (`fab_advertising/reports/2026-11-10_price_copy_audit.md`): all 59 live BC ads say "dari 800rb" (9.8% of 7d spend), all 11 PEIKIRA ads say 750rb (80.6%) *(calc)*. If 750 is real → no ad change, site W2 only; if 800 → PEIKIRA copy is the problem.
 - **Batch 02 copy done** (`fab_advertising/creatives/2026-11-10_creative_batch_02.md`): 5 objection ads (pickup / no deposit / monthly / 1-day), same 10-min shoot as batch 01. Gates G1–G5 = confirm pickup, deposit, minimum, price, site fix. Top-3 pick: B1, B2, A1.
+- **Incess bid-cap proposal done** (`fab_advertising/reports/2026-11-10_incess_bidcap_proposal.md`): caps binding, spend −30% at unchanged caps, CPL flat 35k. Raise 4 cheapest ad sets → Rp 51k/50k; parked until lead value known.
 - **M-002 (P1):** next weekly report Mon 11/16 07:00 (`playbooks/weekly_ads_health_report.md`; include the pixel funnel row, CPM/cost-per-LPV per campaign, and a BC ad-set split).
 
 ## Next actions (dated or triggered)
@@ -22,9 +23,9 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 _Seeded 2026-11-10 by the local session. Take the top one, finish it as an artifact, delete it here._
-1. **Incess OMO:** write the apply-ready +10% bid-cap proposal that is currently only "on offer".
-2. **Merge batch 01 + 02 into one shoot-day card** (one page: 6 photos → which ads each feeds, launch order), so the photo ask needs one hand-off.
-3. **M-002 prep:** pre-fill the 11/16 weekly report skeleton (sections + queries) so Monday's run is one pull.
+1. **Merge batch 01 + 02 into one shoot-day card** (one page: 6 photos → which ads each feeds, launch order), so the photo ask needs one hand-off.
+2. **M-002 prep:** pre-fill the 11/16 weekly report skeleton (sections + queries; add the Incess 4-ad-set baseline 12.9 leads/day @ Rp 28.4k) so Monday's run is one pull.
+3. **Incess ad-set 019 (Rp 53k CPL, 22% of spend):** ad-level split to see which of its 15 ads drag it, for the 11/16 weekly.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - Website W1 + W2, and who edits the site.
