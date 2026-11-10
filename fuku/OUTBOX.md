@@ -23,6 +23,7 @@ _Ad-account asks: none live right now. The PEIKIRA2 ad-set pause is downgraded a
 - **[DECISION] 2026-11-06 07:01 · Fab website: 4 free fixes for the post-click leak (no ad changes).** Pixel funnel, 7d: landing page 1,577 views → 101 forms → **61 leads = 3.9% LP→Lead**. The Jakarta Selatan ad pages also say **"Kelapa Gading, sebelah Mall of Indonesia"** and "Jakarta Pusat", and the WA form page says **"mulai dari Rp 800.000"** while the ad says 750rb. Full audit: `fab_advertising/reports/2026-11-06_landing_page_audit.md`.
   - W1: Remove every Kelapa Gading / Jakarta Pusat line from the 3 Jakarta pages → "ITC Kuningan Ambasador, Sudirman, Jakarta Selatan".
   - W2: Form page price → "Promo Rp750.000/bulan (kode FAB750)" (or, if 800 is real, fix the ads instead).
+    → **11/10 19:02 update (no new ask):** in-account copy audit: all 59 live BC ads say "dari 800rb" (9.8% of 7d spend *(calc)*), all 11 PEIKIRA ads say 750rb (80.6%). If 750 is real → no ad change, site only. If 800 is real → the PEIKIRA copy (incl. Ad015) is the problem. `fab_advertising/reports/2026-11-10_price_copy_audit.md`.
   - W3: Drop the "Pernah chat WA ke Fab sebelumnya?" field.
   - W4: Tell me how the Lead event fires: 40% of form submits never become a Lead. Those numbers may be sitting uncalled in Fluent Form entries.
     → **08:02 update:** a 3-message WA follow-up script for those contacts is ready: `fab_advertising/creatives/2026-11-06_wa_followup_script.md`. Have the Fab team use it once 750 vs 800 is confirmed? (It's a draft; nothing has been sent.)
