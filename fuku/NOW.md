@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-10 21:02 WIB (cloud heartbeat: shoot-day card)_
+_Last updated: 2026-11-10 22:02 WIB (cloud heartbeat: 11/16 weekly skeleton)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -11,7 +11,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - **Price-copy audit done** (`fab_advertising/reports/2026-11-10_price_copy_audit.md`): all 59 live BC ads say "dari 800rb" (9.8% of 7d spend), all 11 PEIKIRA ads say 750rb (80.6%) *(calc)*. If 750 is real → no ad change, site W2 only; if 800 → PEIKIRA copy is the problem.
 - **Shoot-day card done** (`fab_advertising/creatives/2026-11-10_shoot_day_card.md`): 6 home photos → 8 ads (batch 01 + 02). Wave 1 = S1, B1, B2 from just 2 photos; price-only fallback = S1, S6, S2. Gates per ad.
 - **Incess bid-cap proposal done** (`fab_advertising/reports/2026-11-10_incess_bidcap_proposal.md`): caps binding, spend −30% at unchanged caps, CPL flat 35k. Raise 4 cheapest ad sets → Rp 51k/50k; parked until lead value known.
-- **M-002 (P1):** next weekly report Mon 11/16 07:00 (`playbooks/weekly_ads_health_report.md`; include the pixel funnel row, CPM/cost-per-LPV per campaign, and a BC ad-set split).
+- **M-002 (P1):** next weekly report Mon 11/16 07:00. **Skeleton pre-filled:** `fab_advertising/reports/weekly/2026-11-16.md` (run sheet, IDs, pixel epochs, prior-week columns, Incess baseline, BC split, Ad015 triggers); Monday = fill ⟨…⟩ cells.
 
 ## Next actions (dated or triggered)
 1. **11/11 07:00 readout:** tracker row + activity log. PEIKIRA2 share of PEIKIRA spend on 11/10 full day: if ≥ 30% with ≤ 1 lead → one-line re-ask "pause ad set PEIKIRA2"; else drop the ask. Check which old "Rp800.000" Fab ads still deliver (Ad Library lists ≥ 8 ACTIVE); if any spend, add to W2. Check **Ad015** against the fallback triggers (7d CTR < 1.30% / CPL > 120k / freq > 2.5); if one fires → the contingency list becomes the single ad ask.
@@ -23,9 +23,9 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 _Seeded 2026-11-10 by the local session. Take the top one, finish it as an artifact, delete it here._
-1. **M-002 prep:** pre-fill the 11/16 weekly report skeleton (sections + queries; add the Incess 4-ad-set baseline 12.9 leads/day @ Rp 28.4k) so Monday's run is one pull.
-2. **Incess ad-set 019 (Rp 53k CPL, 22% of spend):** ad-level split to see which of its 15 ads drag it, for the 11/16 weekly.
-3. **Wave 1 read template:** pre-write the 5–7 day per-ad read for S1/B1/B2 (queries, keep/pause rules, wave-2 mapping) so launch day needs no prep.
+1. **Incess ad-set 019 (Rp 53k CPL, 22% of spend):** ad-level split to see which of its 15 ads drag it, for the 11/16 weekly.
+2. **Wave 1 read template:** pre-write the 5–7 day per-ad read for S1/B1/B2 (queries, keep/pause rules, wave-2 mapping) so launch day needs no prep.
+3. **M-001 criterion check:** one-page 11/20 gate brief (what 7d CPL each scenario lands at: nothing applied / item 1 only / item 4 only / W1+W2), so the 11/20 call to Alvian is pre-written.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - Website W1 + W2, and who edits the site.
