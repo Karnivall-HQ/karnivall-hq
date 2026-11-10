@@ -30,3 +30,21 @@ Placeholders: `{nama}`, `{kebutuhan}` (from the form's "Kebutuhan" field), `{rua
 - "± isi 1 kamar kos" is Fuku's sizing analogy [INFERRED], not a site claim. Have the team check it against real units, or drop it.
 - Message 2's "foto unit" ties in with the phone photo shoot (the same real photos double as ad creative).
 - Measure: replies ÷ messaged and surveys ÷ messaged for 2 weeks. If reply rate < 10%, rewrite Message 1 (lead with the price, not the question).
+
+## Objection reply: "Kok lebih mahal dari yang 400rb?" (added 2026-11-10 18:02, draft, NOT sent)
+**Context:** SpaceHub (Thamrin, ~10 min away) advertises "From Rp 400k / month" for its smallest unit, but asks a **security deposit**, needs **online self-booking + pay first**, and you **move your stuff yourself** (its own FAQ, `fab_advertising/research/2026-11-10_competitor_angles.md`). Rule: compare **total cost and effort**, never knock the competitor by name, never discount on the spot.
+**Gate:** use only after Alvian confirms 750 vs 800, no deposit, free pickup (+ pickup area), and the Small unit size. Unit size of SpaceHub's 400k unit is **unknown**, so the reply does not claim "ours is bigger".
+
+**Reply A (default, short)**
+> Betul Kak, ada yang mulai 400rb 🙏 Bedanya di Fab: barang Kakak **kami jemput gratis**, **tanpa deposit**, dan **tanpa minimal sewa**, jadi bayarnya cuma Rp750rb bulan ini aja.
+> Jadi Kakak nggak perlu sewa mobil bak, cari tenaga angkut, atau siapkan uang deposit di depan. Tinggal tunjuk barangnya 😊
+> Barangnya kira-kira berapa banyak, Kak? Biar kami cek unit yang pas.
+
+**Reply B (if they push on price again)**
+> Kami paham Kak 🙏 Supaya adil, coba bandingkan dari ukurannya juga ya: unit Small kami 4,75 m³. Kalau barangnya sedikit, kami bantu cek dulu apakah memang perlu unit itu.
+> Mau kami kirim foto unitnya + estimasi jadwal jemput?
+
+**Notes**
+- Reply A makes no "total cost is the same" claim: no Jakarta pickup-truck price is checked, and deposits are usually refundable. If a lead asks for a cost comparison, the team should not quote a number.
+- Reply B hands the sizing question back instead of discounting: protects the FAB750 price and moves to a photo/pickup step (the same next step as Message 2).
+- Measure: tag chats that raise the 400rb objection; if > 20% of chats raise it in 2 weeks, test a price-led reply (and tell Fuku).

@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-10 17:02 WIB (cloud heartbeat: groundwork, batch 02 copy done)_
+_Last updated: 2026-11-10 18:02 WIB (cloud heartbeat: groundwork, WA price-objection reply done)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -7,6 +7,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - **Scale plan done** (`fab_advertising/reports/scale_plan.md`): proven capacity ≈ Rp 590k/day at ≤ 95k (BC 290k + PEIKIRA 300k) *(calc)*; the last ~410k needs new creative. Gate (7d ≤ 95k) must open by **11/20** to hit 1M by 12/05. Bid cap max Rp 105k on 087 Copy 7.
 - **Ad015 fallback done** (`fab_advertising/reports/2026-11-10_ad015_fallback.md`): Ad015 = 93% of control 7d spend *(calc)*, CPL 88.2k; the rest of the ad set does Rp 182k/lead over 30d *(calc)*, so there's no proven backup. Early CTR slide 1.82% → 1.55% *(calc)*. Triggers: 7d CTR < 1.30%, CPL > 120k, or freq > 2.5.
 - **Competitor angles done** (`fab_advertising/research/2026-11-10_competitor_angles.md`): only SpaceHub + Gudangku advertise; SpaceHub Thamrin "from Rp 400k" but deposit + self-move. Lead batch 02 with pickup / no deposit, price second.
+- **WA price-objection reply done** (in `fab_advertising/creatives/2026-11-06_wa_followup_script.md`): lead with pickup / no deposit / no minimum, then a sizing question; no discount, no cost-parity claim. Same gates as batch 02.
 - **Batch 02 copy done** (`fab_advertising/creatives/2026-11-10_creative_batch_02.md`): 5 objection ads (pickup / no deposit / monthly / 1-day), same 10-min shoot as batch 01. Gates G1–G5 = confirm pickup, deposit, minimum, price, site fix. Top-3 pick: B1, B2, A1.
 - **M-002 (P1):** next weekly report Mon 11/16 07:00 (`playbooks/weekly_ads_health_report.md`; include the pixel funnel row, CPM/cost-per-LPV per campaign, and a BC ad-set split).
 
@@ -20,9 +21,9 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 _Seeded 2026-11-10 by the local session. Take the top one, finish it as an artifact, delete it here._
-1. **WA reply line for "kok lebih mahal dari 400rb?"** → add to `fab_advertising/creatives/2026-11-06_wa_followup_script.md` (draft).
-2. **Incess OMO:** write the apply-ready +10% bid-cap proposal that is currently only "on offer".
-3. **Merge batch 01 + 02 into one shoot-day card** (one page: 6 photos → which ads each feeds, launch order), so the photo ask needs one hand-off.
+1. **Incess OMO:** write the apply-ready +10% bid-cap proposal that is currently only "on offer".
+2. **Merge batch 01 + 02 into one shoot-day card** (one page: 6 photos → which ads each feeds, launch order), so the photo ask needs one hand-off.
+3. **Old "Rp800.000" ads list:** at the 19:00 poll, pull in-account delivery of the 09/2026 "dari Rp800.000" ads → one apply-ready pause/replace list folded into W2.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - Website W1 + W2, and who edits the site.
