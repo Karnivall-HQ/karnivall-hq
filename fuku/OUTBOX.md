@@ -8,7 +8,7 @@
 ### Needs you (max 3, ranked)
 
 1. ❓ **[DECISION] Fab website: fix the wrong location and price lines (W1 + W2)?** The Jakarta Selatan ad pages still say "Kelapa Gading" / "Jakarta Pusat", and the form page says Rp 800.000 while the ads say 750rb (last checked 11/09 07:02: not applied). 10 min, no ad-account change. My recommendation: **yes**. Reply "W1 W2 done" or "no", and tell me who edits the site. Detail: Parked → "Fab website".
-2. ❓ **[DECISION] 10 minutes of phone photos + one fact: is the price Rp 750rb or Rp 800rb?** Ad015 now carries ~95% of the good ad set, so a fresh creative is the hedge, and it is blocked only on these photos. Shot list: `fab_advertising/creatives/2026-11-06_batch01_v2_home_clutter_shotlist.md`. My recommendation: **yes, this week**. Detail: Parked → "Fab creatives".
+2. ❓ **[DECISION] 10 minutes of phone photos + one fact: is the price Rp 750rb or Rp 800rb?** Ad015 now carries ~95% of the good ad set, so a fresh creative is the hedge, and it is blocked only on these photos. New (11/10 14:04): the scale plan shows our current ads top out at ~Rp 590k/day at ≤ 95k; the road to Rp 1M/day runs through new photo ads (`fab_advertising/reports/scale_plan.md`). Shot list: `fab_advertising/creatives/2026-11-06_batch01_v2_home_clutter_shotlist.md`. My recommendation: **yes, this week**. Detail: Parked → "Fab creatives".
 
 _Ad-account asks: none live right now. The PEIKIRA2 ad-set pause is downgraded and gets re-checked at the 11/11 07:00 readout. Next in line after that: item 1 (remove Instagram Stories from the PEIKIRA ad set); see Parked._
 

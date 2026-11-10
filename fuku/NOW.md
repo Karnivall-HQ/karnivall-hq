@@ -1,9 +1,10 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-10 13:10 WIB (local session: brain cleanup; ads facts unchanged since the 13:04 cloud run)_
+_Last updated: 2026-11-10 14:04 WIB (cloud heartbeat: groundwork, scale plan done)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
 - **M-001 (P0):** 7d Fab (11/03–11/09) **CPL Rp 112.4k** *(calc)* ❌ vs 95k; spend Rp 337k/day *(calc)* vs 1M. 11/10 PEIKIRA2 read done: PEIKIRA2 Rp 869,690 / 5 (Rp 174k) vs control Rp 573,084 / 7 (Rp 82k) *(calc)*. After the 11/09 14:11 ad-006 pause, spend flowed back to the control. Pause-ad-set ask downgraded.
+- **Scale plan done** (`fab_advertising/reports/scale_plan.md`): proven capacity ≈ Rp 590k/day at ≤ 95k (BC 290k + PEIKIRA 300k) *(calc)*; the last ~410k needs new creative. Gate (7d ≤ 95k) must open by **11/20** to hit 1M by 12/05. Bid cap max Rp 105k on 087 Copy 7.
 - **M-002 (P1):** next weekly report Mon 11/16 07:00 (`playbooks/weekly_ads_health_report.md`; include the pixel funnel row, CPM/cost-per-LPV per campaign, and a BC ad-set split).
 
 ## Next actions (dated or triggered)
@@ -12,14 +13,14 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 3. **Every run:** check INBOX/OUTBOX for "W1 W2 done", photos, 750 vs 800, "applied N". Log applied changes in `fab_advertising/reports/m001_tracker.md`.
 4. **When W1/W2 are applied:** re-curl the 3 Jakarta pages, re-pull the funnel, compare to `fab_advertising/reports/2026-11-06_pixel_funnel_baseline.md` (VC→Lead 3.8%, VC→Form 6.4%, Form→Lead 60%).
 5. **Retro #2:** ~11/13 or at 15 new lessons.
+6. **Each daily readout:** check the 11/20 gate date from the scale plan; on 11/20, if 7d CPL > 95k, tell Alvian criterion 2 is out of reach by 12/05.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 _Seeded 2026-11-10 by the local session. Take the top one, finish it as an artifact, delete it here._
-1. **Scale plan for criterion 2 (Rp 1M/day):** which campaigns/ad sets can absorb spend at ≤ 95k, bid-cap math for 087 Copy 7, step ladder with gates → `fab_advertising/reports/scale_plan.md`.
-2. **Ad015 fallback:** rank the next-best ads in the control ad set by 30d CPL and write the apply-ready contingency for the day Ad015 fatigues.
-3. **Competitor angles:** Meta Ad Library search for Jakarta self-storage advertisers (read-only) → hooks and formats worth testing → `fab_advertising/research/`.
-4. **Creative batch 02 copy** on the home-clutter angle (drafts only), so it is ready the day photos arrive.
-5. **Incess OMO:** write the apply-ready +10% bid-cap proposal that is currently only "on offer".
+1. **Ad015 fallback:** rank the next-best ads in the control ad set by 30d CPL and write the apply-ready contingency for the day Ad015 fatigues.
+2. **Competitor angles:** Meta Ad Library search for Jakarta self-storage advertisers (read-only) → hooks and formats worth testing → `fab_advertising/research/`.
+3. **Creative batch 02 copy** on the home-clutter angle (drafts only), so it is ready the day photos arrive.
+4. **Incess OMO:** write the apply-ready +10% bid-cap proposal that is currently only "on offer".
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - Website W1 + W2, and who edits the site.
