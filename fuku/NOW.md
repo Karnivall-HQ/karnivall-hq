@@ -1,12 +1,13 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-09 22:02 WIB (cloud heartbeat)_
+_Last updated: 2026-11-10 07:02 WIB (cloud heartbeat)_
 
 ## Current focus
-- **M-001 (P0):** 7d CPL **Rp 104.6k** (11/02–11/08, best yet, −22% WoW) vs the 95k target. **Single live ask: "pause PEIKIRA2"**, re-asked 11/09 07:02 + push (Rp 740k / 4 = Rp 185k vs control Rp 450k / 6 = Rp 75k).
-- **M-002 (P1):** ✅ first weekly report done 11/09 → `fab_advertising/reports/weekly/2026-11-09.md`. Next Mon 11/16 07:00. Item 1 (IG Stories) is parked behind it. Website W1–W4 still waiting. Batch 01 on hold.
+- **M-001 (P0):** ✅ 11/10 PEIKIRA2 read done: PEIKIRA2 Rp 869,690 / 5 (Rp 174k) vs control Rp 573,084 / 7 (Rp 82k) *(calc)*. After the 11/09 14:11 ad-006 pause, spend flowed back to the control (67% of PEIKIRA on 11/10 so far). Pause-ad-set ask **downgraded** (not re-pushed). 7d Fab (11/03–11/09) **CPL Rp 112.4k** *(calc)* ❌.
+- **M-002 (P1):** next weekly report Mon 11/16 07:00.
 
 ## Next actions
-00000. ⚠️ 11/09 15:02: ad AKIRA-FAB-20261031-006 (PEIKIRA2's top ad) PAUSED at 14:11 WIB via Rudi MCP (presumed Markus). Ad set PEIKIRA2 still ACTIVE. At the 11/10 07:00 read: pull PEIKIRA2 ads + the control for 11/09–11/10. If the spend just moved to other PEIKIRA2 ads → re-ask "pause the ad set". If it flowed to the control → the partial pause did the job; log it.
+000000. 11/11 07:00 readout: PEIKIRA2 share of PEIKIRA spend on 11/10 full day. If ≥ 30% with ≤ 1 lead → one-line re-ask "pause ad set PEIKIRA2". Else log it and drop the ask. Also watch **Ad015** (≈95% of control spend on 11/09): CTR/CPL trend; it's the single point of failure.
+00000. Batch 01 v2 (home-clutter phone photos) is no longer blocked by the 11/10 read; it's now only blocked on the photos. It's the hedge for Ad015. Don't stack a new ask until the PEIKIRA2 residual is settled (11/11).
 0000. ✅ 11/09 07:02: daily + weekly readout done, pause-PEIKIRA2 re-asked (push sent). Next re-ask no earlier than 11/10 07:00, folded into the 11/10 PEIKIRA2 read (pre-stage doc; window now 11/05–11/09). If paused: log it in the tracker, read the control on 11/11–11/12. Rest of today: activity-log checks only.
 000. ✅ 11/08 07:02 readout: PEIKIRA2 hit the re-trigger (Rp 539,027 / 2 leads ≥ Rp 500k) and took 87.6% *(calc)* of PEIKIRA spend on 11/07 for 0 leads → single [DECISION] "pause PEIKIRA2" at OUTBOX top + push. Next re-ask no earlier than 11/09 07:00 (fold it into the weekly report). If applied: log it in the tracker change log and read the control's CPL on 11/10–11/11.
 00. ✅ 11/07 07:02 readout done: PEIKIRA2 got its 2nd lead (Rp 336,659 / 2 = Rp 168k) vs control Rp 321,669 / 4 → pause rule (≤1 lead) no longer applies → **hold to 11/10, no ask**. Keep checking its spend share at each daily readout; re-trigger the pause ask only if it reaches ≥ Rp 500k with ≤ 2 leads (≈5× target).
@@ -24,7 +25,7 @@ _Last updated: 2026-11-09 22:02 WIB (cloud heartbeat)_
 10. ✅ 16:02: Mon 11/09 weekly report skeleton pre-filled → `fab_advertising/reports/weekly/2026-11-09.md` (per-campaign + PEIKIRA2 + 087 rows, funnel baseline, proposal-status table). ✅ 16:02 BC ad-set split: the BC drop = **087 Copy 7** losing delivery under its Rp 94,250 cap (spend −53% at flat CPM, leads 7→2); appended to the mix-shift doc. ✅ 17:02 Incess OMO fatigue pre-check done (healthy, no flags; watch ImageAd047 CTR −27%) → `fab_advertising/reports/2026-11-06_incess_omo_fatigue_precheck.md`. ✅ 18:02 Fab ad-level fatigue pre-check → `fab_advertising/reports/2026-11-06_fab_ad_fatigue_precheck.md`: no freq fatigue (max 1.60); **Ad015 = 86.7% of PEIKIRA spend** (single point of failure, CTR −16%); 087 CTR flat = cap starvation confirmed. Remaining heartbeats tonight (21:00, 22:00): activity-log check only; no more groundwork docs needed. Next groundwork idea: tracker daily row for 11/06 at tomorrow's 07:00 readout. ✅ 15:02 correction: the CPL rise is a **campaign-mix shift**, not account-wide upstream drift. PEIKIRA improved on everything (CPL 193k→113k); BC spend halved and leads fell 12→2 → `fab_advertising/reports/2026-11-06_cpl_mix_shift.md`. Weekly report must show CPM/cost-per-LPV **per campaign** + a BC ad-set split.
 
 ## Blockers / waiting on Alvian
-- Pause PEIKIRA2 (single ask, 11/08); then M-001 items 1–5 (OUTBOX); website W1–W4, and who edits the site.
+- PEIKIRA2 ad-set pause (downgraded 11/10, residual check 11/11); then M-001 items 1–5 (OUTBOX); website W1–W4, and who edits the site.
 - Phone photo shoot; price 750 vs 800rb; close rate + months stayed. (The site says no minimum rental, no deposit, free pickup; confirm.)
 
 ## Needs a local session
@@ -35,6 +36,7 @@ _Last updated: 2026-11-09 22:02 WIB (cloud heartbeat)_
 - Fab pixel/dataset id: **405755485775053** (PixelYourSite Pro on WordPress; browser + server events).
 
 ## Open loops
+- 11/10 07:02: activity log 11/09 14:00 WIB → now: only Meta "Account billed" 06:19 + the 14:11 ad-006 pause entries. No new human edits. PEIKIRA2 read written up.
 - 11/09 22:02: activity log since 20:30 WIB `[]`: no edits after the 14:11 ad-006 pause; ad set PEIKIRA2 still not paused. Last check of the day. Next: 11/10 07:00 PEIKIRA2 read (where ad-006's spend moved) + re-ask.
 - 11/09 21:02: activity log since 19:30 WIB `[]`: no edits after the 14:11 ad-006 pause; ad set PEIKIRA2 still not paused. Next: 22:00 log check; 11/10 07:00 PEIKIRA2 read + re-ask.
 - 11/09 20:03: activity log since 18:30 WIB `[]`: no edits after the 14:11 ad-006 pause; ad set PEIKIRA2 still not paused. Next: 21:00/22:00 log checks; 11/10 07:00 PEIKIRA2 read + re-ask.

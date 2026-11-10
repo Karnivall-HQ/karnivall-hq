@@ -25,7 +25,7 @@
 - **Priority:** P0
 - **Deadline:** 2026-12-05 (30 days from 2026-11-05)
 - **Constraints:** **Propose-only.** Fuku never touches the ad account (no pauses, budget changes, or launches). Every change is proposed to Alvian as an apply-ready checklist, and **Alvian applies it himself**. The metric is the 7-day average CPL, never a single day.
-- **Status:** in progress (diagnosis ✅, waiting on Alvian to apply proposals; live ask: pause PEIKIRA2)
+- **Status:** in progress (diagnosis ✅, waiting on Alvian to apply proposals; PEIKIRA2 mostly throttled via the 11/09 ad-006 pause; residual check 11/11)
 - **Strategy (Fuku, 2026-11-05):**
   1. *Diagnose* (now): ad-set/ad/placement/audience breakdown; find which ads, audiences, and placements produce leads ≤ Rp 95k.
   2. *Cut waste*: propose to Alvian which CTR-collapsed FAB ads and losing ad sets to pause, so spend concentrates in the winners (BC CBObass005-type setups at ~Rp 83k).
@@ -33,6 +33,7 @@
   4. *Scale*: propose budget raises of ~20–30% every 3–4 days, only while the 7d CPL ≤ Rp 95k. Alvian applies them. Fuku verifies the effect in the next readouts. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
+  - 2026-11-10 07:02: ✅ PEIKIRA2 read (11/05–11/09): PEIKIRA2 Rp 869,690 / 5 (Rp 173,938) vs control Rp 573,084 / 7 (Rp 81,869) *(calc)* → test lost. The 11/09 ad-006 pause moved spend back to the control (67% of PEIKIRA on 11/10 so far), so the ad-set pause ask is downgraded; re-check 11/11. 7d (11/03–11/09) Rp 2,359,757 / 21 / **CPL Rp 112,369** *(calc)* ❌. New risk: control relies on Ad015.
   - 2026-11-09 15:02: Activity log: ad **AKIRA-FAB-20261031-006** (83% of PEIKIRA2 spend) was PAUSED at 14:11 WIB via the Rudi MCP app (presumed Markus, not Fuku). The **ad set PEIKIRA2 is still ACTIVE** (today Rp 107,014 / 0 leads). Logged in the tracker, FYI in OUTBOX + push. Read where the spend shifts on 11/10 07:00.
   - 2026-11-09 07:02: Daily + weekly readout: 7d (11/02–11/08) Rp 2,406,326 / 23 leads / **CPL Rp 104,623** *(calc)* ❌ (best yet; 115.1k yesterday, −22% WoW). PEIKIRA2 cum. Rp 739,973 / 4 (Rp 185k) vs control Rp 450,290 / 6 (Rp 75k). 11/08 was PEIKIRA2's best day (2 leads), but the split still costs the campaign ~119k vs 75k → pause ask re-sent (24h open) + push. Site still unedited (curl). No human edits.
   - 2026-11-08 07:02: Daily readout: 7d (11/01–11/07) Rp 2,531,551 / 22 leads / **CPL Rp 115,070** *(calc)* ❌ (121.9k yesterday). 11/07 Rp 278,661 / 2. PEIKIRA2 cumulative Rp 539,027 / 2 (Rp 269.5k) vs control Rp 350,414 / 5 (Rp 70.1k); 11/07 PEIKIRA2 took 87.6% *(calc)* of PEIKIRA spend for 0 leads → pre-set re-trigger fired. Single ask switched to "pause PEIKIRA2" (item 1 parked). No human edits overnight.

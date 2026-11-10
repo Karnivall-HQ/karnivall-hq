@@ -77,3 +77,20 @@ Target CPL Rp 95k. Five days at ~Rp 300k/day ≈ Rp 1.5M, ~15 leads at target.
 ## Caveats
 - 1–5 leads per side is noise-level. Treat ±1 lead as a coin flip; lean on spend-per-lead thresholds above, not CTR.
 - Placement item 1 (IG Stories) may be applied mid-window. If the activity log shows it, split the read at the change time.
+
+## ✅ 11/10 07:02 FINAL READ (11/05–11/09 full days)
+| Ad set | Spend | Leads | CPL | Share of campaign spend |
+|---|---|---|---|---|
+| Old (control) `120254051672430572` | Rp 573,084 *(calc)* | 7 | Rp 81,869 *(calc)* | 39.7% *(calc)* |
+| PEIKIRA2 (test) `120254276298070572` | Rp 869,690 *(calc)* | 5 | Rp 173,938 *(calc)* | 60.3% *(calc)* |
+| Campaign (both ad sets) | Rp 1,442,774 *(calc)* | 12 | Rp 120,231 *(calc)* | 100% |
+Without launch day 11/05: control Rp 327,269 / 5 = Rp 65,454; PEIKIRA2 Rp 830,092 / 5 = Rp 166,018 *(calc)*.
+
+**Verdict (pre-set rules):** PEIKIRA2 lost: CPL 2.1× the control *(calc)* and above the 150k band; the "either way" rule fires (campaign 120k > control 82k).
+
+**Where ad 006's money went (paused 11/09 14:11 WIB):**
+- 11/09 full day: control Rp 122,794 / 1; PEIKIRA2 Rp 129,717 / 1, of which ad 006 Rp 105,728 before the pause → PEIKIRA2's other ads only Rp 23,989 *(calc)*.
+- 11/10 to ~07:00 WIB: control Rp 21,184 / 1 lead (Ad015 Rp 20,551) vs PEIKIRA2 Rp 10,249 / 0 *(calc)* → control share **67%** *(calc)* (was 12–33% on 11/06–11/08).
+- → **The partial pause did most of the job: money is flowing back to the control.** Residual risk: PEIKIRA2 still takes ~1/3 (ads 009 + 013). Activity log since 11/09 14:11: no further human edits.
+
+**Next:** no re-push of "pause the ad set". Check at 11/11 07:00: if PEIKIRA2 ≥ 30% of PEIKIRA spend on 11/10 with ≤ 1 lead → one-line re-ask. New risk: control now leans on **Ad015** (Rp 116k of Rp 123k on 11/09); watch its CTR.
