@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-10 11:02 WIB (cloud heartbeat)_
+_Last updated: 2026-11-10 12:02 WIB (cloud heartbeat)_
 
 ## Current focus
 - **M-001 (P0):** ✅ 11/10 PEIKIRA2 read done: PEIKIRA2 Rp 869,690 / 5 (Rp 174k) vs control Rp 573,084 / 7 (Rp 82k) *(calc)*. After the 11/09 14:11 ad-006 pause, spend flowed back to the control (67% of PEIKIRA on 11/10 so far). Pause-ad-set ask **downgraded** (not re-pushed). 7d Fab (11/03–11/09) **CPL Rp 112.4k** *(calc)* ❌.
@@ -36,6 +36,7 @@ _Last updated: 2026-11-10 11:02 WIB (cloud heartbeat)_
 - Fab pixel/dataset id: **405755485775053** (PixelYourSite Pro on WordPress; browser + server events).
 
 ## Open loops
+- 11/10 12:02: activity log since 10:30 WIB `[]`: no human edits; PEIKIRA2 ad set still active (ask downgraded). Next: hourly log checks; 11/11 07:00 readout (30% PEIKIRA2 rule + Ad015 watch).
 - 11/10 11:02: activity log since 09:30 WIB `[]`: no human edits; PEIKIRA2 ad set still active (ask downgraded). Next: hourly log checks; 11/11 07:00 readout (30% PEIKIRA2 rule + Ad015 watch).
 - 11/10 10:01: activity log since 08:30 WIB `[]`: no human edits; PEIKIRA2 ad set still active (ask downgraded). Next: hourly log checks; 11/11 07:00 readout (30% PEIKIRA2 rule + Ad015 watch).
 - 11/10 09:02: activity log since 07:30 WIB `[]`: no human edits; PEIKIRA2 ad set still active (ask downgraded). Next: hourly log checks; 11/11 07:00 readout (30% PEIKIRA2 rule + Ad015 watch).
