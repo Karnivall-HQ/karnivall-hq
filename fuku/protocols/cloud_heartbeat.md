@@ -14,7 +14,8 @@ This repo is your whole brain. Anything you don't commit and push is lost when t
 - In the journal, label the entry `## HH:MM cloud heartbeat (Asia/Jakarta time)`.
 
 ## 7. Save (mandatory)
-- Commit everything, with the message: `fuku: cloud heartbeat YYYY-MM-DD HH:MM — <one-line summary>`
+- If this was a quiet run that exited clean (see the quiet-run rule in `heartbeat.md`), there is nothing to save: make **no commit** and stop here.
+- Otherwise commit everything, with the message: `fuku: cloud heartbeat YYYY-MM-DD HH:MM — <one-line summary>`
 - Push straight to `main`: `git pull --rebase origin main && git push origin main`.
 - If you can't push to `main`, push to the branch `fuku/cloud` and say so at the top of `fuku/OUTBOX.md` as a [RISK].
 - Never force-push. Never rewrite history.

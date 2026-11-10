@@ -1,31 +1,25 @@
 # OUTBOX — Fuku → Alvian
 
-> Fuku: newest at top. Each item gets a tag: **[DECISION]** (needs a yes/no), **[REPORT]**, **[WIN]**, **[RISK]**, **[FYI]**.
-> Alvian: answer decisions inline (e.g. "→ yes") or in INBOX.md. Fuku moves resolved items to "Resolved".
+> Fuku: "Open" holds **at most 3 asks** under "Needs you" (ranked, one line each) and **one** latest report per mission. Answered, superseded, or re-asked items move to "Resolved" straight away. Valid asks you are not pushing right now go to "Parked". Tags: **[DECISION]**, **[REPORT]**, **[WIN]**, **[RISK]**, **[FYI]**.
+> Alvian: answer inline (e.g. "→ yes") or in INBOX.md. Only "Needs you" needs you.
 
 ## Open
 
+### Needs you (max 3, ranked)
+
+1. ❓ **[DECISION] Fab website: fix the wrong location and price lines (W1 + W2)?** The Jakarta Selatan ad pages still say "Kelapa Gading" / "Jakarta Pusat", and the form page says Rp 800.000 while the ads say 750rb (last checked 11/09 07:02: not applied). 10 min, no ad-account change. My recommendation: **yes**. Reply "W1 W2 done" or "no", and tell me who edits the site. Detail: Parked → "Fab website".
+2. ❓ **[DECISION] 10 minutes of phone photos + one fact: is the price Rp 750rb or Rp 800rb?** Ad015 now carries ~95% of the good ad set, so a fresh creative is the hedge, and it is blocked only on these photos. Shot list: `fab_advertising/creatives/2026-11-06_batch01_v2_home_clutter_shotlist.md`. My recommendation: **yes, this week**. Detail: Parked → "Fab creatives".
+
+_Ad-account asks: none live right now. The PEIKIRA2 ad-set pause is downgraded and gets re-checked at the 11/11 07:00 readout. Next in line after that: item 1 (remove Instagram Stories from the PEIKIRA ad set); see Parked._
+
+### Latest report
+
 - **[REPORT] 2026-11-10 07:02 · 📊 PEIKIRA2 read done: it lost, but the 11/09 pause of its top ad already fixed most of it.** 11/05–11/09: PEIKIRA2 **Rp 870k / 5 leads = Rp 174k each**; old ad set **Rp 573k / 7 = Rp 82k each** *(calc)*. Since ad 006 was paused (11/09 14:11), the money is flowing back to the old ad set: **67%** of PEIKIRA spend today so far, vs 12–33% before *(calc)*. ✅ So I'm **not** re-pushing "pause the ad set"; PEIKIRA2 still takes ~1/3, and I'll re-ask only if that holds with ≤ 1 lead at tomorrow's readout. 7d Fab (11/03–11/09): Rp 2.36M / 21 leads / **CPL Rp 112k** *(calc)* ❌ (was 104.6k). ⚠️ New single point of failure: ad **AKIRA-FAB-20261016-Ad015** now carries ~95% of the old ad set; a fresh creative (batch 01 v2, home-clutter phone photos) is the hedge. Details: `fab_advertising/reports/2026-11-10_peikira2_read_prestage.md`.
 
-- **[FYI] 2026-11-09 15:02 · ⚠️ Half of the PEIKIRA2 pause happened: someone paused its top AD, not the ad set.** At 14:11 WIB the Rudi MCP app (same actor as Markus's 11/05 launch; not me) paused ad **AKIRA-FAB-20261031-006**, which carried 83% of PEIKIRA2's spend. **The ad set AKIRA-FAB-20261031-WAVE-PEIKIRA2 is still ACTIVE** with its other ads (today: Rp 107k, 0 leads). Risk: Meta just moves the money to PEIKIRA2's other ads, which are unproven. If the goal was "pause PEIKIRA2", switch off the **ad set** too. Was this Markus? I'll read where the money went at the 11/10 07:00 readout. No new ask.
+## Parked
 
-- **[DECISION] 2026-11-09 07:02 · ⏸ Mostly handled by the 11/09 ad-006 pause (see 11/10 report) · Re-ask (24h open): pause Markus's PEIKIRA2 ad set?** 11/05–11/08: PEIKIRA2 **Rp 740k / 4 leads = Rp 185k each**; the old ad set **Rp 450k / 6 = Rp 75k each**. PEIKIRA2 still takes 62% *(calc)* of the Rp 300k/day. Pausing it = zero budget change, money moves to the Rp 75k ad set. My recommendation: **yes, today** (Ads Manager → AKIRA-FAB-20261031-WAVE-PEIKIRA2 → off). Reply "paused 2" or "no".
+> Still valid, not being pushed right now. Full detail kept so an ask can be re-raised as one line.
 
-- **[REPORT] 2026-11-09 07:02 · 📊 Weekly ads health (11/02–11/08), first M-002 report.** Fab Rp 2.41M / 23 leads / **CPL Rp 104.6k** *(calc)*, −22% WoW, still ❌ vs 95k. Incess Rp 4.19M / 119 / **Rp 35.2k** ✅. No fatigue (max freq 1.74), no new disabled accounts, 0 proposals applied. FYI: Incess has unpublished Ads Manager drafts ("FIX OMO CostCap Increm", Rp 5M/day draft budget, Bali car rental); nothing delivers from them. Full report: `fab_advertising/reports/weekly/2026-11-09.md`.
-
-- **[DECISION] 2026-11-08 07:02 · ⏩ Superseded by the 11/09 re-ask above · The one ask now: pause Markus's PEIKIRA2 ad set?** Since 11/05 it spent **Rp 539k for 2 leads (Rp 270k each)**; the old PEIKIRA ad set spent Rp 350k for 5 (**Rp 70k each**, under target). Yesterday PEIKIRA2 took 88% *(calc)* of PEIKIRA's budget and got 0 leads. Pausing it sends the Rp 300k/day back to the Rp 70k ad set, zero budget change. My recommendation: **yes, today** (you or Markus: Ads Manager → ad set AKIRA-FAB-20261031-WAVE-PEIKIRA2 → off). Reply "paused 2" (or "no"). This replaces item 1 (IG Stories) as the single ask; item 1 waits.
-
-- **[REPORT] 2026-11-08 07:02 · Fab daily readout.** 📊 7d (11/01–11/07): Rp 2.53M, 22 leads, **CPL Rp 115.1k** *(calc)* (was 121.9k; target ≤ 95k) ❌. Yesterday: Rp 279k, 2 leads. No human edits overnight; nothing applied yet.
-
-- **[DECISION] 2026-11-07 09:02 · ⏸ Parked 11/08 (superseded by the PEIKIRA2 ask) · Re-ask (48h open): untick Instagram Stories in the PEIKIRA ad set?** Rp 997k → 3 leads (Rp 332k each); without it 30d CPL ≈ **Rp 94.9k** *(calc)*, under target, zero budget change. 7d CPL now Rp 121.9k. My recommendation: **yes, 2 min**. Reply "applied 1" (or "no"). No other asks until this moves.
-
-- **[REPORT] 2026-11-07 07:02 · Fab daily readout: no PEIKIRA2 ask after all.** 📊 7d (10/31–11/06): Rp 2.56M, 21 leads, **CPL Rp 121.9k** *(calc)* (was 125.2k; target ≤ 95k) ❌. Yesterday: Rp 413k, 5 leads (Rp 82.7k, one day only). PEIKIRA2 got a 2nd lead overnight: Rp 337k / 2 (Rp 168k) vs the old ad set Rp 322k / 4 (Rp 80k). My pause rule needed ≤ 1 lead, so I'm **holding to the 11/10 read**. No human edits overnight. The one live ask is still item 1 (remove IG Stories from PEIKIRA).
-
-- **[RISK] 2026-11-06 19:01 · Markus's new PEIKIRA2 ad set is eating the good one's budget.** Today it took **78%** *(calc)* of PEIKIRA's Rp 300k: Rp 239k for 1 lead, while the old ad set got Rp 69k for 2 leads. Since launch: PEIKIRA2 **Rp 279k / 1 lead**, old ad set **Rp 314k / 4 leads (Rp 78.6k CPL, under target)**. It hits my pre-set pause threshold (Rp 285k, ≤1 lead) tonight. No new ask yet: if it's still ≤1 lead at Rp 400k at tomorrow's 07:00 readout, "pause PEIKIRA2" becomes the one ask. If you'd rather act now, tell Markus. Details: `fab_advertising/reports/2026-11-10_peikira2_read_prestage.md`.
-  → **11/07 07:02: downgraded, no ask.** PEIKIRA2 got its 2nd lead: Rp 336,659 / 2 (Rp 168k) vs control Rp 321,669 / 4. The ≤ 1-lead pause rule no longer applies → hold to 11/10.
-  → **20:02 update:** threshold tripped: PEIKIRA2 Rp 292,582 / 1 lead; old ad set Rp 314,808 / 4. Today's budget is already spent (~Rp 322k *(calc)*), so the ask comes at 07:00 with the fresh numbers.
-- **[DECISION] 2026-11-06 09:01 · One thing today: remove Instagram Stories from the PEIKIRA ad set (item 1 of the 23:30 list)?** It spent Rp 997k for 3 leads (Rp 332k each). Without it, 30d CPL ≈ **Rp 94.9k** *(calc)*, under the 95k target, at zero budget change. 7d CPL is now Rp 125k and rising, and 0 of 5 proposals are applied after ~36h. My recommendation: **yes, 2 min in Ads Manager** (ad set → Placements → untick Instagram Stories). Reply "applied 1". The other items can wait.
-- **[REPORT] 2026-11-06 09:01 · Retro #1 (week 1).** 🚀 Wins: diagnosis done, cheapest levers found (placements, bid caps, phone photos, site copy), M-002 ready for Monday. ⚠️ Misses: 7d CPL 113k → 125k; nothing applied, because my asks were too long. 🔧 What I changed: 13 lessons → playbook `meta-cpl-diagnosis.md`; new rule: stalled asks get shrunk to one yes/no. 🙏 Need from you: "applied 1" + 750 vs 800. 👉 Next week: the 11/10 PEIKIRA2 read + the first weekly report on Mon 11/09.
 - **[DECISION] 2026-11-06 07:01 · Fab website: 4 free fixes for the post-click leak (no ad changes).** Pixel funnel, 7d: landing page 1,577 views → 101 forms → **61 leads = 3.9% LP→Lead**. The Jakarta Selatan ad pages also say **"Kelapa Gading, sebelah Mall of Indonesia"** and "Jakarta Pusat", and the WA form page says **"mulai dari Rp 800.000"** while the ad says 750rb. Full audit: `fab_advertising/reports/2026-11-06_landing_page_audit.md`.
   - W1: Remove every Kelapa Gading / Jakarta Pusat line from the 3 Jakarta pages → "ITC Kuningan Ambasador, Sudirman, Jakarta Selatan".
   - W2: Form page price → "Promo Rp750.000/bulan (kode FAB750)" (or, if 800 is real, fix the ads instead).
@@ -34,7 +28,6 @@
     → **08:02 update:** a 3-message WA follow-up script for those contacts is ready: `fab_advertising/creatives/2026-11-06_wa_followup_script.md`. Have the Fab team use it once 750 vs 800 is confirmed? (It's a draft; nothing has been sent.)
   → My recommendation: **yes to W1+W2 today** (10 min, zero risk). Every +1pt of LP→Lead ≈ −20% CPL *(calc)*. Website edits aren't ad-account changes, so they don't disturb the 11/10 read. Who edits the site: you or Markus?
   → Also, the site already answers 2 of my 3 facts: **no minimum rental, no deposit, free pickup**. Correct? Still open: 750 vs 800, close rate + months stayed.
-- **[REPORT] 2026-11-06 07:01 · Fab daily readout.** 7d (10/30–11/05): Rp 2.50M, 20 leads, **CPL Rp 125k** (was 113k; target ≤95k) ⚠️. Yesterday: Rp 343k, 2 leads. No human edits overnight. Proposals 1–5 still unapplied, and the account is drifting the wrong way.
 - **[DECISION] 2026-11-05 23:30 · M-001: ONE combined change list for Fab (merges the 19:09 cloud diagnosis + the local placement breakdown).** 7d CPL **Rp 113k** at Rp 355k/day (target ≤ 95k). Details: `fab_advertising/reports/2026-11-05_m001_diagnosis.md` + `2026-11-05_m001_breakdown.md`.
   1. **PEIKIRA ad set: remove Instagram Stories.** Rp 997k → 3 leads (Rp 332k each). Without it, 30d CPL ≈ Rp 94.9k *(calc)*. Budget unchanged.
   2. **BC CBObass005: remove WhatsApp Status + Threads.** Rp 487k → 3 leads; WA Status frequency 789.
@@ -53,6 +46,33 @@
 - **[FYI] 2026-11-05 · Questions only you can answer:** What is a lead worth for each business (close rate, deal value)? Which businesses does Karnivall run vs. serve as clients (Incess, Travell Fi, The North Case, GudangHub, Jinhe, Karnivall)? What is `fab_advertising/` (ad names use "FAB")?
 
 ## Resolved
+
+> 2026-11-10 cleanup: the entries from here down to the 11/06 07:01 daily readout were superseded by later readouts or by the 11/10 PEIKIRA2 report. Moved here unchanged.
+
+- **[FYI] 2026-11-09 15:02 · ⚠️ Half of the PEIKIRA2 pause happened: someone paused its top AD, not the ad set.** At 14:11 WIB the Rudi MCP app (same actor as Markus's 11/05 launch; not me) paused ad **AKIRA-FAB-20261031-006**, which carried 83% of PEIKIRA2's spend. **The ad set AKIRA-FAB-20261031-WAVE-PEIKIRA2 is still ACTIVE** with its other ads (today: Rp 107k, 0 leads). Risk: Meta just moves the money to PEIKIRA2's other ads, which are unproven. If the goal was "pause PEIKIRA2", switch off the **ad set** too. Was this Markus? I'll read where the money went at the 11/10 07:00 readout. No new ask.
+
+- **[DECISION] 2026-11-09 07:02 · ⏸ Mostly handled by the 11/09 ad-006 pause (see 11/10 report) · Re-ask (24h open): pause Markus's PEIKIRA2 ad set?** 11/05–11/08: PEIKIRA2 **Rp 740k / 4 leads = Rp 185k each**; the old ad set **Rp 450k / 6 = Rp 75k each**. PEIKIRA2 still takes 62% *(calc)* of the Rp 300k/day. Pausing it = zero budget change, money moves to the Rp 75k ad set. My recommendation: **yes, today** (Ads Manager → AKIRA-FAB-20261031-WAVE-PEIKIRA2 → off). Reply "paused 2" or "no".
+
+- **[REPORT] 2026-11-09 07:02 · 📊 Weekly ads health (11/02–11/08), first M-002 report.** Fab Rp 2.41M / 23 leads / **CPL Rp 104.6k** *(calc)*, −22% WoW, still ❌ vs 95k. Incess Rp 4.19M / 119 / **Rp 35.2k** ✅. No fatigue (max freq 1.74), no new disabled accounts, 0 proposals applied. FYI: Incess has unpublished Ads Manager drafts ("FIX OMO CostCap Increm", Rp 5M/day draft budget, Bali car rental); nothing delivers from them. Full report: `fab_advertising/reports/weekly/2026-11-09.md`.
+
+- **[DECISION] 2026-11-08 07:02 · ⏩ Superseded by the 11/09 re-ask above · The one ask now: pause Markus's PEIKIRA2 ad set?** Since 11/05 it spent **Rp 539k for 2 leads (Rp 270k each)**; the old PEIKIRA ad set spent Rp 350k for 5 (**Rp 70k each**, under target). Yesterday PEIKIRA2 took 88% *(calc)* of PEIKIRA's budget and got 0 leads. Pausing it sends the Rp 300k/day back to the Rp 70k ad set, zero budget change. My recommendation: **yes, today** (you or Markus: Ads Manager → ad set AKIRA-FAB-20261031-WAVE-PEIKIRA2 → off). Reply "paused 2" (or "no"). This replaces item 1 (IG Stories) as the single ask; item 1 waits.
+
+- **[REPORT] 2026-11-08 07:02 · Fab daily readout.** 📊 7d (11/01–11/07): Rp 2.53M, 22 leads, **CPL Rp 115.1k** *(calc)* (was 121.9k; target ≤ 95k) ❌. Yesterday: Rp 279k, 2 leads. No human edits overnight; nothing applied yet.
+
+- **[DECISION] 2026-11-07 09:02 · ⏸ Parked 11/08 (superseded by the PEIKIRA2 ask) · Re-ask (48h open): untick Instagram Stories in the PEIKIRA ad set?** Rp 997k → 3 leads (Rp 332k each); without it 30d CPL ≈ **Rp 94.9k** *(calc)*, under target, zero budget change. 7d CPL now Rp 121.9k. My recommendation: **yes, 2 min**. Reply "applied 1" (or "no"). No other asks until this moves.
+
+- **[REPORT] 2026-11-07 07:02 · Fab daily readout: no PEIKIRA2 ask after all.** 📊 7d (10/31–11/06): Rp 2.56M, 21 leads, **CPL Rp 121.9k** *(calc)* (was 125.2k; target ≤ 95k) ❌. Yesterday: Rp 413k, 5 leads (Rp 82.7k, one day only). PEIKIRA2 got a 2nd lead overnight: Rp 337k / 2 (Rp 168k) vs the old ad set Rp 322k / 4 (Rp 80k). My pause rule needed ≤ 1 lead, so I'm **holding to the 11/10 read**. No human edits overnight. The one live ask is still item 1 (remove IG Stories from PEIKIRA).
+
+- **[RISK] 2026-11-06 19:01 · Markus's new PEIKIRA2 ad set is eating the good one's budget.** Today it took **78%** *(calc)* of PEIKIRA's Rp 300k: Rp 239k for 1 lead, while the old ad set got Rp 69k for 2 leads. Since launch: PEIKIRA2 **Rp 279k / 1 lead**, old ad set **Rp 314k / 4 leads (Rp 78.6k CPL, under target)**. It hits my pre-set pause threshold (Rp 285k, ≤1 lead) tonight. No new ask yet: if it's still ≤1 lead at Rp 400k at tomorrow's 07:00 readout, "pause PEIKIRA2" becomes the one ask. If you'd rather act now, tell Markus. Details: `fab_advertising/reports/2026-11-10_peikira2_read_prestage.md`.
+  → **11/07 07:02: downgraded, no ask.** PEIKIRA2 got its 2nd lead: Rp 336,659 / 2 (Rp 168k) vs control Rp 321,669 / 4. The ≤ 1-lead pause rule no longer applies → hold to 11/10.
+  → **20:02 update:** threshold tripped: PEIKIRA2 Rp 292,582 / 1 lead; old ad set Rp 314,808 / 4. Today's budget is already spent (~Rp 322k *(calc)*), so the ask comes at 07:00 with the fresh numbers.
+
+- **[DECISION] 2026-11-06 09:01 · One thing today: remove Instagram Stories from the PEIKIRA ad set (item 1 of the 23:30 list)?** It spent Rp 997k for 3 leads (Rp 332k each). Without it, 30d CPL ≈ **Rp 94.9k** *(calc)*, under the 95k target, at zero budget change. 7d CPL is now Rp 125k and rising, and 0 of 5 proposals are applied after ~36h. My recommendation: **yes, 2 min in Ads Manager** (ad set → Placements → untick Instagram Stories). Reply "applied 1". The other items can wait.
+
+- **[REPORT] 2026-11-06 09:01 · Retro #1 (week 1).** 🚀 Wins: diagnosis done, cheapest levers found (placements, bid caps, phone photos, site copy), M-002 ready for Monday. ⚠️ Misses: 7d CPL 113k → 125k; nothing applied, because my asks were too long. 🔧 What I changed: 13 lessons → playbook `meta-cpl-diagnosis.md`; new rule: stalled asks get shrunk to one yes/no. 🙏 Need from you: "applied 1" + 750 vs 800. 👉 Next week: the 11/10 PEIKIRA2 read + the first weekly report on Mon 11/09.
+
+- **[REPORT] 2026-11-06 07:01 · Fab daily readout.** 7d (10/30–11/05): Rp 2.50M, 20 leads, **CPL Rp 125k** (was 113k; target ≤95k) ⚠️. Yesterday: Rp 343k, 2 leads. No human edits overnight. Proposals 1–5 still unapplied, and the account is drifting the wrong way.
+
 
 - **[RISK] 2026-11-05 21:03 · Someone launched 23 new Fab ads today via an MCP app, not me.** At 14:40 WIB the "Rudi MCP" app (actor id 61594758338050) created ad set **AKIRA-FAB-20261031-WAVE-PEIKIRA2** inside PEIKIRA-BID-CAP-LEADS-CAMPAIGN with 23 image ads: 8 approved and live, 15 went inactive after review. The campaign budget stayed at Rp 300k/day, so total spend didn't change, but PEIKIRA's budget is now split with a new ad set in learning (today: Rp 26.5k, 700 impr, 5 clicks, 0 leads). My heartbeats are read-only and started at 18:23, so this wasn't Fuku.
   → Was this you (another Claude session) or Markus? I've logged it in `m001_tracker.md` and will read its effect on 11/10. Until then I'm **holding creative batch 01** so we don't stack two creative tests in the same Rp 300k campaign.

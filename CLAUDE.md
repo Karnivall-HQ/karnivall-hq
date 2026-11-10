@@ -90,3 +90,5 @@ Alvian can widen your authority by editing this section. Only Alvian edits §1�
 - **CPL diagnosis: follow `fuku/memory/playbooks/meta-cpl-diagnosis.md` (retro 2026-11-06).** Order: activity log (by actor_id) → bid caps → placements → 7d/14d recency → targeting → pixel funnel → landing page grep → creatives.
 - **Stalled asks get shrunk, not stacked (retro 2026-11-06).** If an OUTBOX decision sits > 24h, re-ask the single highest-impact item as a one-line yes/no and hold new decision packs until something moves.
 - **Numbers discipline.** Copy numbers from tool output; mark anything computed *(calc)*; metric = 7d average, never one day.
+- **Quiet runs do groundwork or exit (2026-11-10).** No hourly "nothing changed" checks: polling is capped at 3× a day, and a run with nothing due takes the top item of NOW.md "Groundwork backlog" or exits with no commit. Blocked on Alvian is never a reason to idle. See `fuku/protocols/heartbeat.md`.
+- **Keep the brain lean (2026-11-10).** NOW.md is rewritten each run, max 45 lines, states not logs. OUTBOX "Open" = max 3 asks under "Needs you" + one latest report per mission; everything else goes to "Parked" or "Resolved".
