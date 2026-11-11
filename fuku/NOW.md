@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-11 10:02 WIB (cloud heartbeat: Wave 1 read template + Retro #2)_
+_Last updated: 2026-11-11 11:02 WIB (cloud heartbeat: W1/W2 lift template)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -14,15 +14,15 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 1. **~13:00 and ~19:00 polls:** activity log only (no new human edits since 11/09 14:11).
 2. **11/12 07:00 readout:** tracker row; Ad015 triggers (7d CTR < 1.30% / CPL > 120k / freq > 2.5); placement split again only if Feed stays > 150k for a 2nd week (then consider proposing a Feed→Reels test, not an exclusion).
 3. **Every run:** check INBOX/OUTBOX for "W1 W2 done", photos, 750 vs 800, "applied N". Log applied changes in `fab_advertising/reports/m001_tracker.md`.
-4. **When W1/W2 are applied:** re-curl the 3 Jakarta pages, re-pull the funnel, compare to `fab_advertising/reports/2026-11-06_pixel_funnel_baseline.md`.
+4. **When W1/W2 are applied:** re-curl the 3 Jakarta pages, run `fab_advertising/reports/w1w2_lift_template.md` (day-7 + day-14 pixel reads vs 27-d baseline 3.72% VC→Lead).
 5. **If OUTBOX asks stay unanswered by 11/12 07:00 (> 48h):** shrink to ONE line: fix the 2 site lines today (location → Kuningan/Sudirman, price → whichever is true, 750 or 800). Covers W1+W2+price fact (gate brief).
 6. **Retro #3:** ~11/18 or at 15 new lessons (Retro #2 done 11/11; new playbook `meta-tests-and-proposals.md`).
 7. **11/20:** if 7d CPL > 95k, tell Alvian criterion 2 is out of reach by 12/05.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **W1/W2 lift measurement template:** pixel funnel queries + 3–4 day LP→Lead read vs the 11/06 baseline, to test the gate brief's +0.5/+1pt assumption.
-2. **Incess 019 Copy 5 (`120240954144760222`, Rp 188k / 1 lead, CVR −91% per trend):** ad-level read; is it a dying copy worth a pause line in the 11/16 weekly?
-3. **BC 5-keeper read:** 7d per-ad-set CPL/spend for the 5 BC winners vs the other ~44 (refresh parked item 3 numbers per the re-validate rule before 11/12).
+1. **Incess 019 Copy 5 (`120240954144760222`, Rp 188k / 1 lead, CVR −91% per trend):** ad-level read; is it a dying copy worth a pause line in the 11/16 weekly?
+2. **BC 5-keeper read:** 7d per-ad-set CPL/spend for the 5 BC winners vs the other ~44 (refresh parked item 3 numbers per the re-validate rule before 11/12).
+3. **Organic vs ad share of pixel Leads:** pixel ~8 Leads/day vs Meta ~3/day; split by URL/UTM or event_source to size how much of a site lift reaches the ads.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - Website W1 + W2, and who edits the site.

@@ -10,7 +10,8 @@ Any new ad, ad set, creative wave, bid-cap or structure change that Fuku propose
 3. **Add one comparative rule** (test vs control, same window) next to the absolute ones. It survives a single good day.
 4. **Shared budget (CBO):** a new ad set can take 78% of spend on day 2 (PEIKIRA2, 11/06). Check spend *share* daily; a share threshold can trip before the read date. New *ads* in an ad set with one dominant ad can starve instead (Ad007: Rp 1,487 in 7d). Check both directions.
 5. **Evaluate lead thresholds on full-day data** (first readout after 07:00 WIB), never intraday.
-6. Write all of it into the pre-stage doc **before** the read date, then apply it as written.
+6. **Check the detectable effect before promising a funnel read.** Compute z for the hoped-for lift at the real weekly volume. Fab pixel (~1,300 VC/wk, base 3.72%): +1pt is readable in 7 d, +0.5pt needs ~14 d (11/11). Pin one stats call (aggregation) for before and after: different aggregations give different counts.
+7. Write all of it into the pre-stage doc **before** the read date, then apply it as written.
 
 ## B. Reading the account before claiming a trend
 - **Split by campaign first** when 2+ campaigns spend: account totals hide mix shifts (11/06: "CPM +16%" was spend moving from cheap BC to PEIKIRA).
