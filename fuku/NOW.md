@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-11 18:03 WIB (cloud heartbeat: second form checked, it's a different product, no missed Lead path)_
+_Last updated: 2026-11-11 19:02 WIB (cloud heartbeat: 19:00 poll clean; all checked ads land on one page, homepage risk closed)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -7,14 +7,14 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - **No ad-account ask live.** PEIKIRA2 pause dropped (2 leads on 11/10). Item 1 (cut IG Stories) retired: 7d Stories 119k, Feed 166k, Reels 48k *(calc)*. Items 2 (WA Status junk gone, freq 1.11; WA+Threads 9.9% of BC spend, `2026-11-11_bc_item2_revalidate.md`), 3 (BC keep-5) and 5 (dead PEIKIRA ads, 0.9% of spend) retired 11/11. **Only item 4 remains** (087 Copy 7 cap 94,250 → 105k).
 - **Ad015:** 7d CTR 1.73%, CPL 98,955, freq 1.36 → no fallback trigger; 94% of control spend.
 - **W4 answered (17:02):** Lead = PYS event on `/thank-you-self-storage-lead/` only (24 h window); Form #10 routes some answers to a no-Lead page → the ~1 in 3 gap is by design. W3 held (field may drive routing). Lead definition stays (`2026-11-11_w4_lead_trigger.md`).
-- **Form #8 (`/form-chat-whatsapp/`) = warehouse+coworking product (Rp 5jt/bulan)**, linked only from homepage/about/warehouse page; no self-storage page links to it → no missed Lead path. Risk if any ad lands on the homepage (unconfirmed, `2026-11-11_form2_whatsapp_check.md`).
+- **Ad destinations (19:02):** 13 ads = 88% of 7d spend *(calc)* all land on `/sewa-gudang-self-storage-jakarta/` (→ Form #10 only). Homepage/Form #8 risk closed. **W1 = that one page** (still "Jakarta Pusat" ×9, "Kelapa Gading" ×2, "Rp 800.000" ×3). `2026-11-11_ad_destination_check.md`.
 - **Pixel Leads are ≈ 73% ad-attributed** *(calc)* (~30 unique/7d vs Meta 22; stats sum browser+server, `2026-11-11_pixel_lead_ad_share.md`), so a site fix mostly reaches ad CPL.
 - **The only real levers left need Alvian:** W1/W2 site fixes and phone photos + 750/800 (OUTBOX asks #1, #2). Reels being cheapest supports vertical phone-photo ads.
 - **11/20 gate brief** (`fab_advertising/reports/2026-11-20_gate_brief.md`): only W1+W2 can open the gate alone (≈ 94.6k / 85.0k *(calc)*); item 4 alone ≈ 104k; Wave 1 only if ≤ 70k. Must be live by 11/12 evening to count.
 - **M-002 (P1):** weekly report Mon 11/16 07:00; skeleton `fab_advertising/reports/weekly/2026-11-16.md`. Incess 019 = 1 ad, 8-wk sawtooth, 2-wk CPL 34–39k → keep; judge on 2-wk (`2026-11-11_incess_019_split.md`). 019 Copy 5: 2-wk Rp 175.5k / 3 *(calc)*, post-click not fatigue; 11/16 rule: propose pause if 3-wk CPL > 105k (`2026-11-11_incess_019_copy5.md`).
 
 ## Next actions (dated or triggered)
-1. **~13:00 and ~19:00 polls:** activity log only (no new human edits since 11/09 14:11).
+1. **Polls:** next is inside the 11/12 07:00 readout (13:00 + 19:00 done today, both empty).
 2. **11/12 07:00 readout:** tracker row; Ad015 triggers (7d CTR < 1.30% / CPL > 120k / freq > 2.5); placement split again only if Feed stays > 150k for a 2nd week (then consider proposing a Feed→Reels test, not an exclusion).
 3. **Every run:** check INBOX/OUTBOX for "W1 W2 done", photos, 750 vs 800, "applied N". Log applied changes in `fab_advertising/reports/m001_tracker.md`.
 4. **When W1/W2 are applied:** re-curl the 3 Jakarta pages, run `fab_advertising/reports/w1w2_lift_template.md` (day-7 + day-14 pixel reads vs 27-d baseline 3.72% VC→Lead).
@@ -25,7 +25,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **Wave 1 pre-launch tidy list for Markus:** one checklist (pause 5 dead PEIKIRA ads + where Wave 1 ads go + read rules) so a photo drop turns into a launch in one step.
 2. **Item 4 apply-ready card:** 087 Copy 7 cap 94,250 → 105k with the 5-day revert rule and read rule, one screen, for the 11/12 re-ask if site asks stay stuck.
-3. **11/12 07:00 re-ask line, pre-written:** one-line site ask (W1 location + W2 price + "does any Fab ad land on the homepage?") so the 07:00 run only pastes it if still unanswered.
+3. **11/12 07:00 re-ask line, pre-written:** one-line site ask: fix ONE page `/sewa-gudang-self-storage-jakarta/` (location → Kuningan/Sudirman Jakarta Selatan; price → 750 or 800, whichever is true). Homepage question no longer needed.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - Website W1 + W2, and who edits the site.
@@ -38,6 +38,6 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - Markus (team) edits the Fab account via the Rudi MCP app (actor 61594758338050).
 
 ## Open loops (current state, one line each)
-- Activity log: no human edits since the 11/09 14:11 ad-006 pause (last check 11/11 13:02). PEIKIRA2 ACTIVE, ~35% of PEIKIRA spend.
+- Activity log: no human edits since the 11/09 14:11 ad-006 pause (last check 11/11 19:02). PEIKIRA2 ACTIVE, ~35% of PEIKIRA spend.
 - Site: W1/W2 not applied (copy re-checked 11/09 07:02; tracking curl 11/11 17:02). W3 on hold pending the W4 routing rule.
 - Parked in OUTBOX: M-001 item 4, W3/W4 + WA follow-up script, 4 disabled ad accounts, Incess bid-cap, lead-value questions.
