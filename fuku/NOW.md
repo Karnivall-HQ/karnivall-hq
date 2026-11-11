@@ -1,11 +1,12 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-11 15:02 WIB (cloud heartbeat: BC item 2 re-validation, retired)_
+_Last updated: 2026-11-11 16:02 WIB (cloud heartbeat: pixel Leads ≈ 73% ad-attributed)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
 - **M-001 (P0):** 7d Fab (11/04–11/10) **CPL Rp 106.8k** *(calc)* ❌ vs 95k, improving (112.4k → 106.8k); spend Rp 336k/day vs 1M. PEIKIRA 118.9k (17 leads), BC 65.7k (5 leads).
 - **No ad-account ask live.** PEIKIRA2 pause dropped (2 leads on 11/10). Item 1 (cut IG Stories) retired: 7d Stories 119k, Feed 166k, Reels 48k *(calc)*. Items 2 (WA Status junk gone, freq 1.11; WA+Threads 9.9% of BC spend, `2026-11-11_bc_item2_revalidate.md`), 3 (BC keep-5) and 5 (dead PEIKIRA ads, 0.9% of spend) retired 11/11. **Only item 4 remains** (087 Copy 7 cap 94,250 → 105k).
 - **Ad015:** 7d CTR 1.73%, CPL 98,955, freq 1.36 → no fallback trigger; 94% of control spend.
+- **Pixel Leads are ≈ 73% ad-attributed** *(calc)* (~30 unique/7d vs Meta 22; stats sum browser+server, `2026-11-11_pixel_lead_ad_share.md`), so a site fix mostly reaches ad CPL.
 - **The only real levers left need Alvian:** W1/W2 site fixes and phone photos + 750/800 (OUTBOX asks #1, #2). Reels being cheapest supports vertical phone-photo ads.
 - **11/20 gate brief** (`fab_advertising/reports/2026-11-20_gate_brief.md`): only W1+W2 can open the gate alone (≈ 94.6k / 85.0k *(calc)*); item 4 alone ≈ 104k; Wave 1 only if ≤ 70k. Must be live by 11/12 evening to count.
 - **M-002 (P1):** weekly report Mon 11/16 07:00; skeleton `fab_advertising/reports/weekly/2026-11-16.md`. Incess 019 = 1 ad, 8-wk sawtooth, 2-wk CPL 34–39k → keep; judge on 2-wk (`2026-11-11_incess_019_split.md`). 019 Copy 5: 2-wk Rp 175.5k / 3 *(calc)*, post-click not fatigue; 11/16 rule: propose pause if 3-wk CPL > 105k (`2026-11-11_incess_019_copy5.md`).
@@ -20,9 +21,9 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 7. **11/20:** if 7d CPL > 95k, tell Alvian criterion 2 is out of reach by 12/05.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **Organic vs ad share of pixel Leads:** pixel ~8 Leads/day vs Meta ~3/day; split by URL/UTM or event_source to size how much of a site lift reaches the ads.
-2. **Wave 1 pre-launch tidy list for Markus:** one checklist (pause 5 dead PEIKIRA ads + where Wave 1 ads go + read rules) so a photo drop turns into a launch in one step.
-3. **Item 4 apply-ready card:** 087 Copy 7 cap 94,250 → 105k with the 5-day revert rule and read rule, one screen, for the 11/12 re-ask if site asks stay stuck.
+1. **Wave 1 pre-launch tidy list for Markus:** one checklist (pause 5 dead PEIKIRA ads + where Wave 1 ads go + read rules) so a photo drop turns into a launch in one step.
+2. **Item 4 apply-ready card:** 087 Copy 7 cap 94,250 → 105k with the 5-day revert rule and read rule, one screen, for the 11/12 re-ask if site asks stay stuck.
+3. **W4 form→Lead gap:** ~1 in 3 Form events never fire a Lead (server 51 → 30). Read the site's form/thank-you flow (curl) and pin where the Lead fires, so W4 can be asked as one concrete fix.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - Website W1 + W2, and who edits the site.

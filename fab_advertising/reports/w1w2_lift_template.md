@@ -14,7 +14,7 @@ Call: `ads_get_dataset_stats` dataset `405755485775053`, aggregation=`event`, gr
 | 11/05–11/10 (6 d) | 1,011 | 43 | 4.25% |
 | **27 days** | **5,787** | **215** | **3.72%** |
 
-Week-to-week noise is already ±0.5pt (3.29–4.25%) with no change made. ⚠️ Pixel Leads (~8/day) are ~3× Meta-attributed leads (~3/day): the pixel includes organic/non-ad traffic. INFERRED, so the pixel tells us *whether the site converts better*, and Meta CPL tells us *whether that reached the ads*.
+Week-to-week noise is already ±0.5pt (3.29–4.25%) with no change made. ⚠️ Pixel Leads (~8/day) are ~3× Meta-attributed leads (~3/day): the pixel includes organic/non-ad traffic. **Correction 11/11 16:02:** that ratio was double counting. Every event is sent browser + server, and this call sums both; unique Leads ≈ 4.3/day, so ≈ 73% of site Leads are ad-attributed (`2026-11-11_pixel_lead_ad_share.md`). Counts below are *received* events: the real Poisson noise is ~√2 larger than the table shows, so treat day 7 as directional and day 14 + Meta CPL as the read. Originally: INFERRED, so the pixel tells us *whether the site converts better*, and Meta CPL tells us *whether that reached the ads*.
 
 ## What a 7-day read can and can't see *(calc, Poisson, ~1,300 VC/week)*
 | True post-fix VC→Lead | Expected leads/7d | z vs baseline | Readable in 7d? |
