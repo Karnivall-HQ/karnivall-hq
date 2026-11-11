@@ -34,7 +34,7 @@ Ad copy (hook/body/headline) for each is in the two source files; none of it nee
 
 ## Launch order (proposal for Alvian/Markus; Fuku doesn't touch the account)
 1. **Wave 1, 3 ads:** **S1, B1, B2** (P1 + P2 only). One per angle: situation, pickup, no deposit + pickup. New ads **inside the existing PEIKIRA control ad set**, budget unchanged, Ad015 keeps running.
-2. **Read after 5–7 days:** keep ads ≤ Rp 95k CPL with ≥ 2 leads, pause the rest.
+2. **Read after 5–7 days** with `fab_advertising/reports/wave1_read_template.md` (11/11: "≥ 2 leads by day 7" is unreadable at ≈ Rp 105k/ad/week *(calc)*; the template uses staged spend-based rules).
 3. **Wave 2:** the winning angle's siblings (pickup won → B5, B3; situation won → S6, S2; no-deposit won → B3, B4).
 Why waves: Rp 300k/day across 8 new ads ≈ Rp 37k/ad/day *(calc)*, under one lead a day each. That isn't enough to read any of them in a week.
 

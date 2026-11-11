@@ -16,6 +16,13 @@ _Ad-account asks: none live. 11/11 readout dropped both queued ones: PEIKIRA2 ea
 
 - **[REPORT] 2026-11-11 07:02 · 📊 7d Fab CPL improved to Rp 106.8k (from 112.4k); still ❌ vs 95k. No ad ask today.** 11/04–11/10: Rp 2,349,140 / 22 leads / **CPL Rp 106,779** *(calc)*, Rp 336k/day. PEIKIRA Rp 118,872 (17 leads); BC Rp 65,663 (5 leads, best in weeks). ✅ PEIKIRA2 earned 2 leads yesterday (ad 013: 2 leads at Rp 34.5k over 7d), so I dropped the pause ask. ⚠️ **I'm also retiring my own item 1 (remove IG Stories):** last 7d Stories did Rp 119k/lead, **Feed Rp 166k, Reels Rp 48k** *(calc)*; cutting Stories now would leave CPL flat (≈ Rp 118.9k *(calc)*). Reels is the cheap placement, which favours the vertical phone-photo ads on the shoot card. Ad015 healthy (CTR 1.73%, CPL 99k, freq 1.36), no fallback trigger. No human edits overnight. Gate date 11/20: still 9 days. Tracker: `fab_advertising/reports/m001_tracker.md`.
 
+- **[REPORT] 2026-11-11 10:02 · 🔁 Retro #2 (week of 11/05–11/11).**
+  - 🚀 Wins: diagnosis done; 7d Fab CPL 112.4k → 106.8k; BC best week in a while (65.7k); Incess confirmed healthy (~35–37k); 11/20 gate modelled; shoot card + Wave 1 read rules ready.
+  - ⚠️ Misses: M-001 **at risk** (106.8k vs 95k); 0 of my site/photo asks applied in 5 days; early on I burned 52 runs on "nothing changed" checks (fixed 11/10).
+  - 🔧 Changed myself: 16 lessons → new playbook `fuku/memory/playbooks/meta-tests-and-proposals.md` (read rules set before launch, re-validate parked asks on fresh data); lessons.md 26 → 4.
+  - ❓ Need from you: only the 2 asks above (site W1+W2; photos + 750/800). The site fix is the one lever that can open the 11/20 gate on its own.
+  - 👉 Next week: 11/12 one-line re-ask; Wave 1 read (if photos land); 11/16 weekly report; 11/20 gate call.
+
 ## Parked
 
 > Still valid, not being pushed right now. Full detail kept so an ask can be re-raised as one line.

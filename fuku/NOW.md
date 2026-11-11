@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-11 09:01 WIB (cloud heartbeat: groundwork, Incess 019 split)_
+_Last updated: 2026-11-11 10:02 WIB (cloud heartbeat: Wave 1 read template + Retro #2)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -16,20 +16,20 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 3. **Every run:** check INBOX/OUTBOX for "W1 W2 done", photos, 750 vs 800, "applied N". Log applied changes in `fab_advertising/reports/m001_tracker.md`.
 4. **When W1/W2 are applied:** re-curl the 3 Jakarta pages, re-pull the funnel, compare to `fab_advertising/reports/2026-11-06_pixel_funnel_baseline.md`.
 5. **If OUTBOX asks stay unanswered by 11/12 07:00 (> 48h):** shrink to ONE line: fix the 2 site lines today (location → Kuningan/Sudirman, price → whichever is true, 750 or 800). Covers W1+W2+price fact (gate brief).
-6. **Retro #2:** ~11/13 or at 15 new lessons.
+6. **Retro #3:** ~11/18 or at 15 new lessons (Retro #2 done 11/11; new playbook `meta-tests-and-proposals.md`).
 7. **11/20:** if 7d CPL > 95k, tell Alvian criterion 2 is out of reach by 12/05.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **Wave 1 read template:** 5–7 day per-ad read for S1/B1/B2 (queries, keep/pause rules, wave-2 mapping).
-2. **W1/W2 lift measurement template:** pixel funnel queries + 3–4 day LP→Lead read vs the 11/06 baseline, to test the gate brief's +0.5/+1pt assumption.
-3. **Incess 019 Copy 5 (`120240954144760222`, Rp 188k / 1 lead, CVR −91% per trend):** ad-level read; is it a dying copy worth a pause line in the 11/16 weekly?
+1. **W1/W2 lift measurement template:** pixel funnel queries + 3–4 day LP→Lead read vs the 11/06 baseline, to test the gate brief's +0.5/+1pt assumption.
+2. **Incess 019 Copy 5 (`120240954144760222`, Rp 188k / 1 lead, CVR −91% per trend):** ad-level read; is it a dying copy worth a pause line in the 11/16 weekly?
+3. **BC 5-keeper read:** 7d per-ad-set CPL/spend for the 5 BC winners vs the other ~44 (refresh parked item 3 numbers per the re-validate rule before 11/12).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - Website W1 + W2, and who edits the site.
 - Phone photos; price 750 vs 800rb. Later: close rate + months stayed; confirm no minimum rental / no deposit / free pickup.
 
 ## Standing facts
-- Read `playbooks/meta-ads-algorithm.md` + `meta-cpl-diagnosis.md` before any ads work.
+- Read `playbooks/meta-ads-algorithm.md` + `meta-cpl-diagnosis.md` + `meta-tests-and-proposals.md` before any ads work. Wave 1 is read with `fab_advertising/reports/wave1_read_template.md`.
 - Cloud Fuku: routine trig_01NGMFnv9BpvRp1jQjkAwUVJ, hourly 07–22 WIB. Propose-only: never call Meta write tools, even when visible.
 - Fab pixel/dataset id **405755485775053**. PEIKIRA campaign `120254051672440572`, control ad set `120254051672430572`, PEIKIRA2 `120254276298070572`, BC campaign `120236222888610572`.
 - Markus (team) edits the Fab account via the Rudi MCP app (actor 61594758338050).

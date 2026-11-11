@@ -18,6 +18,8 @@
 - Account scan: `level=ad_account`, `include_additional_context=false`, spend only, then deep-dive only the accounts that are spending. Benchmarks often return nothing, so don't block on them.
 - Ad-level 30d output and activity logs with limit 100 overflow the tool output. Parse the saved file with jq/python.
 - Ad copy: write only from facts already in live ads (`ads_get_creatives` body/title), and flag any new claim for confirmation.
+- Activity log "Active → Inactive after Ad Review" can be a human pause via the MCP app: read the entity `status` (PAUSED = human) and the parent's status before calling it a Meta action. (Retro #2)
+- Test design, read rules and re-asks: see `meta-tests-and-proposals.md`.
 
 ## Output
 An apply-ready change list (exact object name + ID, current → proposed value, expected effect, revert rule) in OUTBOX, and a tracker row in `fab_advertising/reports/m001_tracker.md`.
