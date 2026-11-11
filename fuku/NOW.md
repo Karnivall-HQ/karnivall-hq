@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-11 07:02 WIB (cloud heartbeat: 07:00 readout)_
+_Last updated: 2026-11-11 08:02 WIB (cloud heartbeat: groundwork, 11/20 gate brief)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -7,6 +7,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - **No ad-account ask live.** PEIKIRA2 pause dropped (2 leads on 11/10). Item 1 (cut IG Stories) retired: 7d Stories 119k, Feed 166k, Reels 48k *(calc)*. Remaining parked ad items: 3+4 (BC consolidate + 087 Copy 7 cap → Rp 105k), 5 (dead PEIKIRA ads).
 - **Ad015:** 7d CTR 1.73%, CPL 98,955, freq 1.36 → no fallback trigger; 94% of control spend.
 - **The only real levers left need Alvian:** W1/W2 site fixes and phone photos + 750/800 (OUTBOX asks #1, #2). Reels being cheapest supports vertical phone-photo ads.
+- **11/20 gate brief** (`fab_advertising/reports/2026-11-20_gate_brief.md`): only W1+W2 can open the gate alone (≈ 94.6k / 85.0k *(calc)*); item 4 alone ≈ 104k; Wave 1 only if ≤ 70k. Must be live by 11/12 evening to count.
 - **M-002 (P1):** weekly report Mon 11/16 07:00; skeleton `fab_advertising/reports/weekly/2026-11-16.md`.
 
 ## Next actions (dated or triggered)
@@ -14,14 +15,14 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 2. **11/12 07:00 readout:** tracker row; Ad015 triggers (7d CTR < 1.30% / CPL > 120k / freq > 2.5); placement split again only if Feed stays > 150k for a 2nd week (then consider proposing a Feed→Reels test, not an exclusion).
 3. **Every run:** check INBOX/OUTBOX for "W1 W2 done", photos, 750 vs 800, "applied N". Log applied changes in `fab_advertising/reports/m001_tracker.md`.
 4. **When W1/W2 are applied:** re-curl the 3 Jakarta pages, re-pull the funnel, compare to `fab_advertising/reports/2026-11-06_pixel_funnel_baseline.md`.
-5. **If OUTBOX asks stay unanswered by 11/12 07:00 (> 48h):** shrink to ask #2's price fact alone as a one-line yes/no.
+5. **If OUTBOX asks stay unanswered by 11/12 07:00 (> 48h):** shrink to ONE line: fix the 2 site lines today (location → Kuningan/Sudirman, price → whichever is true, 750 or 800). Covers W1+W2+price fact (gate brief).
 6. **Retro #2:** ~11/13 or at 15 new lessons.
 7. **11/20:** if 7d CPL > 95k, tell Alvian criterion 2 is out of reach by 12/05.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **M-001 criterion check:** one-page 11/20 gate brief (7d CPL per scenario: nothing applied / item 4 only / W1+W2 / Wave 1 photos). Use 11/11 numbers (item 1 is gone).
-2. **Incess ad-set 019 (Rp 53k CPL, 22% of spend):** ad-level split for the 11/16 weekly.
-3. **Wave 1 read template:** 5–7 day per-ad read for S1/B1/B2 (queries, keep/pause rules, wave-2 mapping).
+1. **Incess ad-set 019 (Rp 53k CPL, 22% of spend):** ad-level split for the 11/16 weekly.
+2. **Wave 1 read template:** 5–7 day per-ad read for S1/B1/B2 (queries, keep/pause rules, wave-2 mapping).
+3. **W1/W2 lift measurement template:** pixel funnel queries + 3–4 day LP→Lead read vs the 11/06 baseline, to test the gate brief's +0.5/+1pt assumption.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - Website W1 + W2, and who edits the site.
