@@ -32,7 +32,9 @@ _Ad-account asks: none live. 11/11 readout dropped both queued ones: PEIKIRA2 ea
   - W2: Form page price → "Promo Rp750.000/bulan (kode FAB750)" (or, if 800 is real, fix the ads instead).
     → **11/10 19:02 update (no new ask):** in-account copy audit: all 59 live BC ads say "dari 800rb" (9.8% of 7d spend *(calc)*), all 11 PEIKIRA ads say 750rb (80.6%). If 750 is real → no ad change, site only. If 800 is real → the PEIKIRA copy (incl. Ad015) is the problem. `fab_advertising/reports/2026-11-10_price_copy_audit.md`.
   - W3: Drop the "Pernah chat WA ke Fab sebelumnya?" field.
+    → **11/11 17:02:** hold W3 until the W4 routing rule is known. If routing uses this field, deleting it changes what counts as a Lead.
   - W4: Tell me how the Lead event fires: 40% of form submits never become a Lead. Those numbers may be sitting uncalled in Fluent Form entries.
+    → **11/11 17:02 answered by curl:** Lead = PixelYourSite event on `/thank-you-self-storage-lead/` only (once per visitor per 24 h). Form #10 sends some answers to `/terima-kasih-non-self-storage-lead/` (no Lead). The gap is mostly by design. Only open question: which answer routes to the non-lead page (Fluent Forms → Form 10 → Confirmation)? `fab_advertising/reports/2026-11-11_w4_lead_trigger.md`
     → **08:02 update:** a 3-message WA follow-up script for those contacts is ready: `fab_advertising/creatives/2026-11-06_wa_followup_script.md`. Have the Fab team use it once 750 vs 800 is confirmed? (It's a draft; nothing has been sent.)
   → My recommendation: **yes to W1+W2 today** (10 min, zero risk). Every +1pt of LP→Lead ≈ −20% CPL *(calc)*. Website edits aren't ad-account changes, so they don't disturb the 11/10 read. Who edits the site: you or Markus?
   → Also, the site already answers 2 of my 3 facts: **no minimum rental, no deposit, free pickup**. Correct? Still open: 750 vs 800, close rate + months stayed.
