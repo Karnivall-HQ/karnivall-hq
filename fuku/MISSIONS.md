@@ -78,6 +78,7 @@
 - **Status:** in progress
 - **Strategy:** The cloud heartbeat runs it on the first Monday run (07:00 WIB). Turn it into a playbook after the first report.
 - **Progress:**
+  - 2026-11-11 09:01: Incess 019 ad-level split → `fab_advertising/reports/2026-11-11_incess_019_split.md`: one live ad (ImageAd019, 1 yr old), no fatigue; weekly CPL alternates 29–53k but 2-wk blocks hold 34–39k (8-wk 36.9k *(calc)*). Keep; 11/16 weekly judges it on 2-wk CPL.
   - 2026-11-10 22:02: 11/16 weekly skeleton pre-filled → `fab_advertising/reports/weekly/2026-11-16.md` (run sheet with IDs + pixel epochs, prior-week columns, Incess 4-ad-set baseline, BC 5-keeper split, Ad015 triggers, 11/20 gate row).
   - 2026-11-10 20:03: Incess OMO apply-ready bid-cap proposal → `fab_advertising/reports/2026-11-10_incess_bidcap_proposal.md` (4 ad sets +~10%, 7-day judge rules). Parked in OUTBOX pending lead value.
   - 2026-11-09 07:02: ✅ First weekly report delivered → `fab_advertising/reports/weekly/2026-11-09.md` (Fab 104.6k CPL −22% WoW; Incess 35.2k −3.7%; no fatigue; no new disabled accounts; Incess unpublished drafts noted as FYI). [REPORT] in OUTBOX. Next: Mon 11/16 07:00.
