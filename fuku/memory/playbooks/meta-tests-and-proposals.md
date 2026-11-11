@@ -29,6 +29,7 @@ Any new ad, ad set, creative wave, bid-cap or structure change that Fuku propose
 
 ## D. Re-asking and following up
 - **Before re-raising a parked ask, re-pull the same breakdown on the latest 7d** and recompute "CPL without it". If the gain is gone, retire the ask (IG Stories, 11/11).
+- **For a "pause the losers" ask, also check the losers' 7d spend share.** In CBO, Meta often starves 0-lead ads within a week; if they're < 5% of the parent's 7d spend, the pause has ~0 CPL effect, so retire it as an ask (BC tail 11/11: Rp 22.7k/day; PEIKIRA item 5 11/11: 0.9%).
 - **When the team applies a partial version**, measure where the money went at the next readout and shrink or drop the ask instead of repeating it (ad 006 pause, 11/09–11/10).
 - Stalled > 24h → one-line yes/no re-ask (CLAUDE.md Evolving rule); one push notification per re-ask per day.
 
