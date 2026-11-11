@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-11 21:02 WIB (cloud heartbeat: quiet run; groundwork → W1/W2 paste-ready edits)_
+_Last updated: 2026-11-11 22:02 WIB (cloud heartbeat: quiet run; groundwork → WA form page W2 line added)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -10,7 +10,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - **Ad destinations (19:02):** 13 ads = 88% of 7d spend *(calc)* all land on `/sewa-gudang-self-storage-jakarta/` (→ Form #10 only). Homepage/Form #8 risk closed. **W1 = that one page** (still "Jakarta Pusat" ×9, "Kelapa Gading" ×2, "Rp 800.000" ×3). `2026-11-11_ad_destination_check.md`.
 - **Pixel Leads are ≈ 73% ad-attributed** *(calc)* (~30 unique/7d vs Meta 22; stats sum browser+server, `2026-11-11_pixel_lead_ad_share.md`), so a site fix mostly reaches ad CPL.
 - **The only real levers left need Alvian:** W1/W2 site fixes and phone photos + 750/800 (OUTBOX asks #1, #2). Reels being cheapest supports vertical phone-photo ads.
-- **W1/W2 paste-ready** (21:02, `fab_advertising/reports/2026-11-11_w1w2_paste_ready.md`): 9 "Jakarta Pusat" lines + 1 FAQ price line (800 ×3 = one FAQ answer + its schema copy); "Kelapa Gading" ×2 = footer address only (decide, don't auto-edit). Includes the pre-written 11/12 re-ask line (section E).
+- **W1/W2 paste-ready** (21:02, `fab_advertising/reports/2026-11-11_w1w2_paste_ready.md`): 9 "Jakarta Pusat" lines + 1 FAQ price line (800 ×3 = one FAQ answer + its schema copy); "Kelapa Gading" ×2 = footer address only (decide, don't auto-edit). 22:02: + B2 = WA form page heading `859f605` "mulai dari Rp 800.000 /bulan." (only other 800 in the flow; page also shows 750rb ×2) → 11 edits total. Pre-written 11/12 re-ask in section E.
 - **Wave 1 launch checklist** (20:02, `fab_advertising/creatives/2026-11-11_wave1_launch_checklist.md`): gates, optional dead-ad tidy, build spec (inside control ad set, `?ad={{ad.name}}` URL, WAVE1 names), one-line INBOX handback, read rules. Photo drop → launch in one sitting.
 - **11/20 gate brief** (`fab_advertising/reports/2026-11-20_gate_brief.md`): only W1+W2 can open the gate alone (≈ 94.6k / 85.0k *(calc)*); item 4 alone ≈ 104k; Wave 1 only if ≤ 70k. Must be live by 11/12 evening to count.
 - **M-002 (P1):** weekly report Mon 11/16 07:00; skeleton `fab_advertising/reports/weekly/2026-11-16.md`. Incess 019 = 1 ad, 8-wk sawtooth, 2-wk CPL 34–39k → keep; judge on 2-wk (`2026-11-11_incess_019_split.md`). 019 Copy 5: 2-wk Rp 175.5k / 3 *(calc)*, post-click not fatigue; 11/16 rule: propose pause if 3-wk CPL > 105k (`2026-11-11_incess_019_copy5.md`).
@@ -26,8 +26,8 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **Item 4 apply-ready card:** 087 Copy 7 cap 94,250 → 105k with the 5-day revert rule and read rule, one screen, ready for when site asks move.
-2. **WA form page W2 line:** curl `/form-chat-fab-storage-via-whatsapp/` and add its exact "mulai dari Rp 800.000" find → replace to the paste-ready file (the only other price line in the ad flow).
-3. **11/16 weekly report prefill:** fill the skeleton's static parts (accounts list, disabled accounts, Incess 019 rules) so the Monday run only adds numbers.
+2. **11/16 weekly report prefill:** fill the skeleton's static parts (accounts list, disabled accounts, Incess 019 rules) so the Monday run only adds numbers.
+3. **Wave 1 ad copy final check vs W2:** make sure every Wave 1 headline/primary text uses the same price wording as the B2/W2 replacements ("Promo Rp750.000/bulan, kode FAB750"), so site and ads match on day 1.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - Website W1 + W2, and who edits the site.

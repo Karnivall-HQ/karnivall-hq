@@ -1,4 +1,4 @@
-# W1 + W2 paste-ready edits: `/sewa-gudang-self-storage-jakarta/` (2026-11-11 21:02 WIB, read-only curl)
+# W1 + W2 paste-ready edits: `/sewa-gudang-self-storage-jakarta/` + WA form page (2026-11-11 21:02 WIB, WA page added 22:02; read-only curl)
 
 **Who it's for:** whoever edits fabwarehouses.com (Alvian or Markus). Open the page in the WordPress editor, Ctrl+F each **Find** string, replace with **Replace**. About 10 minutes. No ad-account change.
 
@@ -32,7 +32,13 @@ Fast path: a site-wide search-replace of `Jakarta Pusat` → `Jakarta Selatan` *
 | `Harga Sewa Gudang Pribadi di Fab Self Storage mulai dari Rp 800.000 /bulan (sewa bisa dibayar per bulan).` | `Harga Sewa Gudang Pribadi di Fab Self Storage: Promo Rp750.000/bulan (kode FAB750), sewa bisa dibayar per bulan.` |
 
 If **800 is the real price**, don't edit this. Then the 750 ads are the problem instead (`2026-11-10_price_copy_audit.md`).
-The WA form page `/form-chat-fab-storage-via-whatsapp/` also says "mulai dari Rp 800.000/bulan" (11/06 audit). Same fix there: one more line.
+**B2. WA form page `/form-chat-fab-storage-via-whatsapp/` (1 more edit, verified by curl 11/11 22:02 WIB).** It is the only other "800" in the ad flow; the same page already shows "Rp 750rb /bulan" twice (price table + promo heading), so today it states both prices.
+
+| Find (Elementor heading widget `859f605`, under "Gudang Pribadi di Fab Self-Storage") | Replace with |
+|---|---|
+| `Sewa Gudang Self-Storage di Fab,` ⏎ **`mulai dari Rp 800.000 /bulan.`** (bold, after a line break) | `Sewa Gudang Self-Storage di Fab,` ⏎ **`Promo Rp750.000/bulan (kode FAB750).`** |
+
+This page has 0 × "Jakarta Pusat" (no W1 work here); its "Kelapa Gading" ×4 are the same footer/schema address as section C. Its price table also lists "dari Rp 1 juta/bulan" for "Layanan lainnya" (other services); leave it.
 
 ## C. Footer address (decide, don't auto-edit)
 
@@ -44,7 +50,8 @@ Verified 21:02: each Find string occurs on the live page exactly as listed (pyth
 
 ## D. Check after saving (Fuku does this on the next run once "W1 W2 done" lands in INBOX)
 - `curl` the page: `Jakarta Pusat` = 0, `Rp 800.000` = 0 (incl. schema), `Kelapa Gading` = 0 or footer only.
+- `curl` the WA form page: `Rp 800.000` = 0, `FAB750` ≥ 1.
 - Start the lift read: `fab_advertising/reports/w1w2_lift_template.md` (day-7 + day-14 vs the 3.72% VC→Lead baseline).
 
 ## E. Pre-written 11/12 07:00 re-ask (if ask #1 is still unanswered, > 48h)
-> ❓ One page, ~10 min: fix the location (Jakarta Pusat → Jakarta Selatan, 9 lines) and the FAQ price (800 → 750) on the page all Fab ads land on? Paste-ready: `fab_advertising/reports/2026-11-11_w1w2_paste_ready.md`. My recommendation: yes, today. It's the only lever that can bring 7d CPL under Rp 95k by 11/20 on its own.
+> ❓ ~10 min on the site: fix the location (Jakarta Pusat → Jakarta Selatan, 9 lines) and the price (800 → 750: 1 FAQ line on the page all Fab ads land on + 1 line on the WA form page)? Paste-ready: `fab_advertising/reports/2026-11-11_w1w2_paste_ready.md`. My recommendation: yes, today. It's the only lever that can bring 7d CPL under Rp 95k by 11/20 on its own.
