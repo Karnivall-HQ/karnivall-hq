@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-11 19:02 WIB (cloud heartbeat: 19:00 poll clean; all checked ads land on one page, homepage risk closed)_
+_Last updated: 2026-11-11 20:02 WIB (cloud heartbeat: quiet run; groundwork → Wave 1 launch checklist for Markus)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -10,6 +10,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - **Ad destinations (19:02):** 13 ads = 88% of 7d spend *(calc)* all land on `/sewa-gudang-self-storage-jakarta/` (→ Form #10 only). Homepage/Form #8 risk closed. **W1 = that one page** (still "Jakarta Pusat" ×9, "Kelapa Gading" ×2, "Rp 800.000" ×3). `2026-11-11_ad_destination_check.md`.
 - **Pixel Leads are ≈ 73% ad-attributed** *(calc)* (~30 unique/7d vs Meta 22; stats sum browser+server, `2026-11-11_pixel_lead_ad_share.md`), so a site fix mostly reaches ad CPL.
 - **The only real levers left need Alvian:** W1/W2 site fixes and phone photos + 750/800 (OUTBOX asks #1, #2). Reels being cheapest supports vertical phone-photo ads.
+- **Wave 1 launch checklist** (20:02, `fab_advertising/creatives/2026-11-11_wave1_launch_checklist.md`): gates, optional dead-ad tidy, build spec (inside control ad set, `?ad={{ad.name}}` URL, WAVE1 names), one-line INBOX handback, read rules. Photo drop → launch in one sitting.
 - **11/20 gate brief** (`fab_advertising/reports/2026-11-20_gate_brief.md`): only W1+W2 can open the gate alone (≈ 94.6k / 85.0k *(calc)*); item 4 alone ≈ 104k; Wave 1 only if ≤ 70k. Must be live by 11/12 evening to count.
 - **M-002 (P1):** weekly report Mon 11/16 07:00; skeleton `fab_advertising/reports/weekly/2026-11-16.md`. Incess 019 = 1 ad, 8-wk sawtooth, 2-wk CPL 34–39k → keep; judge on 2-wk (`2026-11-11_incess_019_split.md`). 019 Copy 5: 2-wk Rp 175.5k / 3 *(calc)*, post-click not fatigue; 11/16 rule: propose pause if 3-wk CPL > 105k (`2026-11-11_incess_019_copy5.md`).
 
@@ -23,9 +24,9 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 7. **11/20:** if 7d CPL > 95k, tell Alvian criterion 2 is out of reach by 12/05.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **Wave 1 pre-launch tidy list for Markus:** one checklist (pause 5 dead PEIKIRA ads + where Wave 1 ads go + read rules) so a photo drop turns into a launch in one step.
-2. **Item 4 apply-ready card:** 087 Copy 7 cap 94,250 → 105k with the 5-day revert rule and read rule, one screen, for the 11/12 re-ask if site asks stay stuck.
-3. **11/12 07:00 re-ask line, pre-written:** one-line site ask: fix ONE page `/sewa-gudang-self-storage-jakarta/` (location → Kuningan/Sudirman Jakarta Selatan; price → 750 or 800, whichever is true). Homepage question no longer needed.
+1. **Item 4 apply-ready card:** 087 Copy 7 cap 94,250 → 105k with the 5-day revert rule and read rule, one screen, for the 11/12 re-ask if site asks stay stuck.
+2. **11/12 07:00 re-ask line, pre-written:** one-line site ask: fix ONE page `/sewa-gudang-self-storage-jakarta/` (location → Kuningan/Sudirman Jakarta Selatan; price → 750 or 800, whichever is true).
+3. **W1 replacement text, paste-ready:** exact before → after lines for the 9 "Jakarta Pusat", 2 "Kelapa Gading", 3 "Rp 800.000" hits on that page, so the site fix is copy-paste.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - Website W1 + W2, and who edits the site.
