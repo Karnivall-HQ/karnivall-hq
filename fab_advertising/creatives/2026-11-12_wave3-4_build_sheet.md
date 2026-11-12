@@ -8,6 +8,10 @@ Wave 3 = R1 · R2 · R3, only after Wave 2 passes its day-7 rule. Wave 4 = best 
 
 URL for all: `https://fabwarehouses.com/sewa-gudang-self-storage-jakarta/?ad={{ad.name}}`
 
+**Build settings (copy of Wave 1 one-pager §3, Ad015 creative `1718772653590165` read 11/12 20:02, account data):** Facebook Page = same as Ad015 · Instagram account `17841466480733343` · CTA `SEE_DETAILS` (Lihat Detail) · single image (object_type SHARE) · placements as the ad set.
+**⚠️ Advantage+ creative enhancements: turn OFF `image_text_translation` and `cv_transformation` on every new ad; leave `image_animation` on** (*INFERRED*: stickers are the Indonesian copy; translation or crop/re-render would blur the raw-phone-photo test). Don't touch Ad015. If Wave 1's read shows a reason to change this, the Wave 1 one-pager (`2026-11-12_wave1_markus_onepager.md`) is the source of truth.
+**Before publish, check:** names `WAVE<n>-…`, all in the control ad set, URL has `?ad={{ad.name}}`, 2 enhancements off, ad set budget unchanged. Handback line in `fuku/INBOX.md` adds `enhancements off <yes|no>`.
+
 ## Wave 3 rows (paste-ready; `\n` = line break; 750 case)
 | Code | Photo | Stickers (top · middle · bottom, yellow on bottom) | Primary text (hook + body) | Headline |
 |---|---|---|---|---|

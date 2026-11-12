@@ -24,6 +24,10 @@ Only after **Wave 1 passes its day-7 rule** (`../reports/wave1_read_template.md`
 
 URL for all 5: `https://fabwarehouses.com/sewa-gudang-self-storage-jakarta/?ad={{ad.name}}`
 
+**Build settings (copy of Wave 1 one-pager §3, Ad015 creative `1718772653590165` read 11/12 20:02, account data):** Facebook Page = same as Ad015 · Instagram account `17841466480733343` · CTA `SEE_DETAILS` (Lihat Detail) · single image (object_type SHARE) · placements as the ad set.
+**⚠️ Advantage+ creative enhancements: turn OFF `image_text_translation` and `cv_transformation` on every new ad; leave `image_animation` on** (*INFERRED*: stickers are the Indonesian copy; translation or crop/re-render would blur the raw-phone-photo test). Don't touch Ad015. If Wave 1's read shows a reason to change this, the Wave 1 one-pager (`2026-11-12_wave1_markus_onepager.md`) is the source of truth.
+**Before publish, check:** names `WAVE<n>-…`, all in the control ad set, URL has `?ad={{ad.name}}`, 2 enhancements off, ad set budget unchanged. Handback line in `fuku/INBOX.md` adds `enhancements off <yes|no>`.
+
 **If the price is 800:** change 3 places per row: bottom sticker, the 💰 line (→ `Mulai Rp800rb/bulan via WhatsApp.`, drop "promo launching" and the code), and the headline where it says Rp750rb (S6, S2).
 
 ## What changed vs the source docs (and why)
