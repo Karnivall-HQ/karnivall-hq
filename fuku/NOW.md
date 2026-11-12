@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-12 09:02 WIB (cloud heartbeat: groundwork, 11/16 weekly skeleton refreshed)_
+_Last updated: 2026-11-12 10:02 WIB (cloud heartbeat: groundwork, Wave 1 vs site price wording aligned)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -10,7 +10,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - **Ad destinations (19:02):** 13 ads = 88% of 7d spend *(calc)* all land on `/sewa-gudang-self-storage-jakarta/` (→ Form #10 only). Homepage/Form #8 risk closed. **W1 = that one page** (still "Jakarta Pusat" ×9, "Kelapa Gading" ×2, "Rp 800.000" ×3). `2026-11-11_ad_destination_check.md`.
 - **Pixel Leads are ≈ 73% ad-attributed** *(calc)* (~30 unique/7d vs Meta 22; stats sum browser+server, `2026-11-11_pixel_lead_ad_share.md`), so a site fix mostly reaches ad CPL.
 - **The only real levers left need Alvian:** W1/W2 site fixes and phone photos + 750/800 (OUTBOX asks #1, #2). Reels being cheapest supports vertical phone-photo ads.
-- **W1/W2 paste-ready** (21:02, `fab_advertising/reports/2026-11-11_w1w2_paste_ready.md`): 9 "Jakarta Pusat" lines + 1 FAQ price line (800 ×3 = one FAQ answer + its schema copy); "Kelapa Gading" ×2 = footer address only (decide, don't auto-edit). 22:02: + B2 = WA form page heading `859f605` "mulai dari Rp 800.000 /bulan." (only other 800 in the flow; page also shows 750rb ×2) → 11 edits total. Pre-written 11/12 re-ask in section E.
+- **W1/W2 paste-ready** (21:02, `fab_advertising/reports/2026-11-11_w1w2_paste_ready.md`): 9 "Jakarta Pusat" lines + 1 FAQ price line (800 ×3 = one FAQ answer + its schema copy); "Kelapa Gading" ×2 = footer address only (decide, don't auto-edit). 22:02: + B2 = WA form page heading `859f605` "mulai dari Rp 800.000 /bulan." (only other 800 in the flow; page also shows 750rb ×2) → 11 edits total. 11/12 10:02: W2/B2 replacement text now uses the site's own "Harga Promo Launching Rp750.000" (site has 0 × "FAB750"; `2026-11-12_wave1_price_wording_check.md`).
 - **Wave 1 launch checklist** (20:02, `fab_advertising/creatives/2026-11-11_wave1_launch_checklist.md`): gates, optional dead-ad tidy, build spec (inside control ad set, `?ad={{ad.name}}` URL, WAVE1 names), one-line INBOX handback, read rules. Photo drop → launch in one sitting.
 - **11/20 gate brief** (`fab_advertising/reports/2026-11-20_gate_brief.md`): only W1+W2 can open the gate alone (≈ 94.6k / 85.0k *(calc)*); item 4 now ≈ 107k+ (corrected 11/12); Wave 1 only if ≤ 70k. Must be live by 11/12 evening to count. **Scale plan S1/S2 have no lever left**: volume past ~Rp 330k/day needs new creative (photos).
 - **M-002 (P1):** weekly report Mon 11/16 07:00; skeleton `fab_advertising/reports/weekly/2026-11-16.md` (static parts current as of 11/12 09:02: proposal retirements, gate levers, pre-ranked top 3). Incess 019 = 1 ad, 8-wk sawtooth, 2-wk CPL 34–39k → keep; judge on 2-wk (`2026-11-11_incess_019_split.md`). 019 Copy 5: 2-wk Rp 175.5k / 3 *(calc)*, post-click not fatigue; 11/16 rule: propose pause if 3-wk CPL > 105k (`2026-11-11_incess_019_copy5.md`).
@@ -25,9 +25,9 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 7. **11/20:** if 7d CPL > 95k, tell Alvian criterion 2 is out of reach by 12/05.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **Wave 1 ad copy final check vs W2:** make sure every Wave 1 headline/primary text uses the same price wording as the B2/W2 replacements ("Promo Rp750.000/bulan, kode FAB750"), so site and ads match on day 1.
-2. **Scale plan v2:** rebuild the Rp 1M/day path without BC cap levers: how many photo-ad waves at what CPL, and the per-wave capacity from the 8-week history.
-3. **Partial-week pre-pull for 11/16:** after the 13:00 poll, nothing; on a quiet run 11/14–15, pull 11/09–11/13 Fab+Incess ad-set rows into the skeleton as a draft so Monday is a delta.
+1. **Scale plan v2:** rebuild the Rp 1M/day path without BC cap levers: how many photo-ad waves at what CPL, and the per-wave capacity from the 8-week history.
+2. **Partial-week pre-pull for 11/16:** after the 13:00 poll, nothing; on a quiet run 11/14–15, pull 11/09–11/13 Fab+Incess ad-set rows into the skeleton as a draft so Monday is a delta.
+3. **WA follow-up script price wording:** align `2026-11-06_wa_followup_script.md` to "harga promo launching" + 750 the same way (draft only, nothing sent).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - Website W1 + W2, and who edits the site.

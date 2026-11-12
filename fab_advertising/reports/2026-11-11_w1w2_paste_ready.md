@@ -29,14 +29,16 @@ Fast path: a site-wide search-replace of `Jakarta Pusat` → `Jakarta Selatan` *
 
 | Find (FAQ answer "Berapa Harga Sewa Self-Storage di Fab?") | Replace with |
 |---|---|
-| `Harga Sewa Gudang Pribadi di Fab Self Storage mulai dari Rp 800.000 /bulan (sewa bisa dibayar per bulan).` | `Harga Sewa Gudang Pribadi di Fab Self Storage: Promo Rp750.000/bulan (kode FAB750), sewa bisa dibayar per bulan.` |
+| `Harga Sewa Gudang Pribadi di Fab Self Storage mulai dari Rp 800.000 /bulan (sewa bisa dibayar per bulan).` | `Harga Sewa Gudang Pribadi di Fab Self Storage: Harga Promo Launching Rp750.000/bulan (sewa bisa dibayar per bulan).` |
+
+_Wording changed 11/12 10:02: the site never says "FAB750" (0 hits on both pages); it says "Harga Promo Launching" 12×. The replacements now use the site's own phrase, so no new claim is added. See `2026-11-12_wave1_price_wording_check.md`._
 
 If **800 is the real price**, don't edit this. Then the 750 ads are the problem instead (`2026-11-10_price_copy_audit.md`).
 **B2. WA form page `/form-chat-fab-storage-via-whatsapp/` (1 more edit, verified by curl 11/11 22:02 WIB).** It is the only other "800" in the ad flow; the same page already shows "Rp 750rb /bulan" twice (price table + promo heading), so today it states both prices.
 
 | Find (Elementor heading widget `859f605`, under "Gudang Pribadi di Fab Self-Storage") | Replace with |
 |---|---|
-| `Sewa Gudang Self-Storage di Fab,` ⏎ **`mulai dari Rp 800.000 /bulan.`** (bold, after a line break) | `Sewa Gudang Self-Storage di Fab,` ⏎ **`Promo Rp750.000/bulan (kode FAB750).`** |
+| `Sewa Gudang Self-Storage di Fab,` ⏎ **`mulai dari Rp 800.000 /bulan.`** (bold, after a line break) | `Sewa Gudang Self-Storage di Fab,` ⏎ **`Harga Promo Launching Rp750.000/bulan.`** |
 
 This page has 0 × "Jakarta Pusat" (no W1 work here); its "Kelapa Gading" ×4 are the same footer/schema address as section C. Its price table also lists "dari Rp 1 juta/bulan" for "Layanan lainnya" (other services); leave it.
 
@@ -50,7 +52,7 @@ Verified 21:02: each Find string occurs on the live page exactly as listed (pyth
 
 ## D. Check after saving (Fuku does this on the next run once "W1 W2 done" lands in INBOX)
 - `curl` the page: `Jakarta Pusat` = 0, `Rp 800.000` = 0 (incl. schema), `Kelapa Gading` = 0 or footer only.
-- `curl` the WA form page: `Rp 800.000` = 0, `FAB750` ≥ 1.
+- `curl` the WA form page: `Rp 800.000` = 0, `Promo Launching Rp750.000` ≥ 1.
 - Start the lift read: `fab_advertising/reports/w1w2_lift_template.md` (day-7 + day-14 vs the 3.72% VC→Lead baseline).
 
 ## E. Pre-written 11/12 07:00 re-ask (if ask #1 is still unanswered, > 48h)

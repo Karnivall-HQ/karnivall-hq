@@ -23,7 +23,7 @@ Rules kept from winners: product named in line 1, price anchor present but **not
 - **Photo:** suitcases + boxes stacked by a front door / in a hallway (reuse S1 or S6 from the batch 01 shot list if shot).
 - **Stickers:** `Mau beresin barang tapi males angkut?` · `Tim Fab yang jemput 🚚` · `Gudang mulai 750rb/bln 👇`
 - **Hook:** 🚚 Gudang self-storage yang barangnya kami jemput sendiri.
-- **Body:** Nggak perlu sewa pickup, nggak perlu angkat-angkat. Tunjuk barangnya, tim Fab yang bawa ke unit gudangmu.\n🔒 Unit pribadi, bersih, terkunci\n📍 Kuningan & Sudirman, Jakarta Selatan\n💰 Mulai Rp750rb/bulan, kode FAB750 via WhatsApp.
+- **Body:** Nggak perlu sewa pickup, nggak perlu angkat-angkat. Tunjuk barangnya, tim Fab yang bawa ke unit gudangmu.\n🔒 Unit pribadi, bersih, terkunci\n📍 Kuningan & Sudirman, Jakarta Selatan\n💰 Harga promo launching Rp750rb/bulan (kode FAB750 via WhatsApp).
 - **Headline:** Sewa Gudang Jakarta, Barang Dijemput Gratis
 - **Hypothesis:** effort is the biggest unspoken objection for home-clutter buyers; no rival we saw offers pickup.
 
@@ -31,7 +31,7 @@ Rules kept from winners: product named in line 1, price anchor present but **not
 - **Photo:** messy bedroom corner with koper, kardus, kipas (S1 reuse works).
 - **Stickers:** `Kamar penuh barang? 😩` · `Tanpa deposit, langsung dijemput` · `mulai 750rb/bulan 👇`
 - **Hook:** 📦 Sewa gudang self-storage tanpa deposit, barang dijemput gratis.
-- **Body:** Bayar bulan pertama aja, nggak ada uang jaminan. Barangmu kami jemput dari rumah dan disimpan di unit pribadi yang terkunci.\n📍 Kuningan & Sudirman, Jakarta Selatan\n💰 Mulai Rp750rb/bulan, kode FAB750 via WhatsApp.
+- **Body:** Bayar bulan pertama aja, nggak ada uang jaminan. Barangmu kami jemput dari rumah dan disimpan di unit pribadi yang terkunci.\n📍 Kuningan & Sudirman, Jakarta Selatan\n💰 Harga promo launching Rp750rb/bulan (kode FAB750 via WhatsApp).
 - **Headline:** Tanpa Deposit, Barang Dijemput, Mulai Rp750rb
 - **Hypothesis:** stacking two objections in one line beats either alone for cold traffic. Test vs B1 to see which carries.
 
