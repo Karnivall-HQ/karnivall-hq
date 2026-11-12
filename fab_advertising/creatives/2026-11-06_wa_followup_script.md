@@ -3,7 +3,7 @@ _2026-11-06 08:02 WIB · Fuku draft · NOT sent. Nothing goes out until Alvian a
 
 **Why:** 7d pixel shows 101 Form events vs 61 Lead events (~40% gap) [data, `2026-11-06_landing_page_audit.md`]. If Lead fires only when WhatsApp opens, the gap = people who left a name + WA number in Fluent Form #10 but never sent the chat. They raised a hand; a same-day reply is the cheapest lead Fab can get (no ad spend). [INFERRED until W4 confirms how Lead fires.]
 
-**Facts used (only those already on the live site/ads):** "Harga Promo Launching" Rp750.000/bulan (the site's own wording; the site never mentions a code, the PEIKIRA ads say "kode FAB750") (⚠️ the WA form page + 1 FAQ line still say Rp800.000 = W2; confirm before sending) · ITC Kuningan Ambasador, Sudirman, Jakarta Selatan · no minimum rental, monthly payment, no deposit, free pickup · Small 4.75 m³ / Medium 9.5 m³ / Large 19 m³. ⚠️ Confirm all with Alvian before use.
+**Facts used (only those already on the live site/ads):** "Harga Promo Launching" Rp750.000/bulan (the site's own wording; the site never mentions a code, the PEIKIRA ads say "kode FAB750") (⚠️ the WA form page + 1 FAQ line still say Rp800.000 = W2; confirm before sending) · ITC Kuningan Ambasador, Sudirman, Jakarta Selatan · no minimum rental, monthly payment, no deposit, free pickup · Small 3.8 m³ / Medium 7.6 m³ / Large 15.2 m³ (ad landing page, 11/12 curl; an older read said 4.75/9.5/19). ⚠️ Confirm all with Alvian before use.
 
 ## How to run it (for the Fab team)
 1. Daily, export Fluent Form #10 entries from WP admin (Fluent Forms → Entries).
@@ -21,7 +21,7 @@ Placeholders: `{nama}`, `{kebutuhan}` (from the form's "Kebutuhan" field), `{rua
 > Barangnya kira-kira apa aja, Kak? 😊
 
 **Message 2 (+24 h, no reply)**
-> Kak {nama}, biar gampang pilihnya: Small 4,75 m³ (± isi 1 kamar kos), Medium 9,5 m³, Large 19 m³. Mau kami kirim foto unitnya dulu?
+> Kak {nama}, biar gampang pilihnya: Small 3,8 m³ (± isi 1 kamar kos), Medium 7,6 m³, Large 15,2 m³. Mau kami kirim foto unitnya dulu?
 
 **Message 3 (+3 days, last one)**
 > Kak {nama}, kalau masih butuh tempat simpan barang, harga promo launching Rp750rb/bulan masih berlaku. Mau survei langsung ke Kuningan minggu ini? Balas "survei" nanti kami atur jamnya. Kalau sudah tidak perlu, tidak apa-apa, terima kasih ya Kak 🙏
@@ -42,7 +42,7 @@ Placeholders: `{nama}`, `{kebutuhan}` (from the form's "Kebutuhan" field), `{rua
 > Barangnya kira-kira berapa banyak, Kak? Biar kami cek unit yang pas.
 
 **Reply B (if they push on price again)**
-> Kami paham Kak 🙏 Supaya adil, coba bandingkan dari ukurannya juga ya: unit Small kami 4,75 m³. Kalau barangnya sedikit, kami bantu cek dulu apakah memang perlu unit itu.
+> Kami paham Kak 🙏 Supaya adil, coba bandingkan dari ukurannya juga ya: unit Small kami 3,8 m³. Kalau barangnya sedikit, kami bantu cek dulu apakah memang perlu unit itu.
 > Mau kami kirim foto unitnya + estimasi jadwal jemput?
 
 **Notes**

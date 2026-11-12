@@ -1,4 +1,5 @@
 # Fab shoot-day card: 6 photos → 8 ads (batch 01 + 02)
+_**v2 (12 photos, 4 waves): `2026-11-12_shoot_card_v2.md`.** This card stays valid for P1–P6._
 _Fuku, 2026-11-10 21:xx WIB · cloud heartbeat. One page to hand to whoever has a phone. Nothing is created in the ad account (propose-only)._
 _Sources: `2026-11-06_batch01_v2_home_clutter_shotlist.md` (S1–S6 stickers) + `2026-11-10_creative_batch_02.md` (B1–B5 copy)._
 
