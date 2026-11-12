@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-12 21:02 WIB (cloud heartbeat: Ad015 settings block copied into Wave 2 + 3–4 sheets)_
+_Last updated: 2026-11-12 22:02 WIB (cloud heartbeat: Wave 1 read template got Stage 0 build check)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -27,7 +27,6 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **Partial-week pre-pull for 11/16:** on a quiet run 11/14–15, pull 11/09–11/13 Fab+Incess ad-set rows (by object_ids) into the skeleton as a draft so Monday is a delta.
 2. **11/20 gate brief refresh** after the 11/13 readout: re-run the W1/W2 and Wave 1 paths on the new 7d (and "no site fix" path if W1/W2 still unanswered, per action 5).
-3. **Wave 1 read template, day-2 step:** add a read-only check of each new ad's creative (CTA, IG account, the 2 enhancements off) so a build slip is caught before the day-3 kill rules.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - Website W1 + W2, and who edits the site.

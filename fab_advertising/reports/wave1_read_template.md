@@ -26,6 +26,21 @@ Account `484578521394893` · campaign `120254051672440572` · control ad set `12
 4. Stage 3 only: `ads_get_dataset_stats` event_total_counts for the same window (VC→Lead vs the 11/06 baseline 3.8%), so a site change isn't credited to the creatives.
 Copy numbers from tool output; mark derived ones *(calc)*; stage verdicts use the cumulative window since launch, not one day.
 
+## Stage 0 — build check (day 1–2, before any kill rule) _(added 11/12 22:02)_
+Catches a build slip before stages 1–2 judge an ad that wasn't built to spec. Read-only.
+1. `ads_get_ad_entities` level ad, parent = control ad set → note each new ad's creative ID.
+2. `ads_get_creatives` with `creative_ids` = the 3 new creatives + Ad015's `1718772653590165` (same call, as the reference). Fields (names from the tool's schema): `instagram_user_id`, `call_to_action_type`, `object_type`, `link_url`, `body`, `advantage_plus_creative_enhancements`.
+
+| Check | Expected (from `2026-11-12_wave1_markus_onepager.md`) | If wrong |
+|---|---|---|
+| `instagram_user_id` | `17841466480733343` (same as Ad015) | one line to Alvian/Markus: fix before day 3 |
+| `call_to_action_type` | `SEE_DETAILS` | same |
+| `link_url` | `/sewa-gudang-self-storage-jakarta/` (the page 88% of spend lands on) | same; a homepage link sells the Rp 5jt product |
+| `body` | verbatim the paste row in the Wave 1 build sheet (price = the 750/800 answer) | same |
+| `advantage_plus_creative_enhancements` | must **not** list `image_text_translation` or `cv_transformation` (`image_animation` may stay, as on Ad015) | same; INFERRED risk, so flag but don't stop the read |
+
+A slipped ad's stage-1/2 numbers are read but labelled "built off-spec"; if it's fixed by editing, its read restarts from the fix date (activity log gives the time).
+
 ## Stage 1 — delivery check (day 2–3)
 Question: is Meta giving the new ads any spend at all? (Ad007 got Rp 1,487 in 7d while Ad015 ate the ad set.)
 | Signal | Rule |
