@@ -26,6 +26,7 @@ _2026-11-11 08:02 WIB, Fuku cloud heartbeat (groundwork). Read-only, no ad-accou
 ## What Fuku does with this
 1. **Ranking stays:** OUTBOX ask #1 (W1+W2) is the only single lever that can open the gate. Ask #2 (photos + 750/800) is the second, and its price fact also unlocks W2.
 2. **11/12 07:00 (asks > 48h):** shrink to one line: *"Fix the 2 site lines today (location → Kuningan/Sudirman, price → whichever is true: 750 or 800)?"*. This covers W1, W2 and the price fact in one yes/no.
+2b. **Volume half (added 11/12 11:01):** a winning creative wave adds only Rp 100–185k/day at ≤ 95k (8-wk ad-set data). Rp 1M/day needs 4–7 winners; best realistic 12/05 case with W1/W2 + Wave 1 ≈ Rp 450–520k/day *(calc)*. Use the scenario table in `2026-11-12_scale_plan_v2.md` for the criterion-2 call.
 3. **11/20 readout:** compare the real 7d CPL to this table. If the gate is shut and none of B/C/D was applied, tell Alvian plainly that criterion 2 (Rp 1M/day by 12/05) is out of reach, as `scale_plan.md` commits to.
 
 ## Caveats

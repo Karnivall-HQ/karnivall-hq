@@ -9,6 +9,8 @@ Source: Rudi MCP, account `484578521394893`. Campaign weekly 2026-09-14 → 11-0
 3. **Deadline math:** 5 steps of +25% every 3 days take 15 days. To reach Rp 1M by 12/05, the 7d CPL gate (≤ 95k) must open by **2026-11-20** *(calc)*. Today it is Rp 112.4k ❌.
 4. **What unlocks it, in order:** (a) restore BC delivery (items 3+4 of the parked change list), (b) new phone-photo creative (batch 01 v2), (c) only then budget steps.
 
+> ⚠️ **Superseded 2026-11-12 11:01 by `2026-11-12_scale_plan_v2.md`** (no BC cap lever; per-wave capacity Rp 100–185k/day; Rp 1M/day by 12/05 not supported by account data). Tables below kept as history.
+
 ## Need vs have
 | | Now (7d 11/03–11/09) | Target |
 |---|---|---|
