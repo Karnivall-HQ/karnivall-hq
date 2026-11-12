@@ -1,5 +1,6 @@
 # Wave 1 launch checklist for Markus (one screen)
 _Fuku, 2026-11-11 20:02 WIB · cloud heartbeat groundwork. Propose-only: Fuku does not create, pause or edit anything in the ad account. Markus or Alvian applies every step below._
+_**Newer: send Markus `2026-11-12_wave1_markus_onepager.md` (all of this + paste text + Ad015 settings).**_
 _Sources: `2026-11-10_shoot_day_card.md`, `../reports/wave1_read_template.md`, `../reports/2026-11-11_peikira_item5_revalidate.md`, `../reports/2026-11-11_ad_destination_check.md`._
 
 **Goal:** when the photos arrive, launch in one sitting, with nothing left to decide.
