@@ -24,6 +24,7 @@ Sticker rules (from the winners): ≤ 7 words, ≤ 1 emoji, price always on the 
 | **P10** | **Furniture pushed together under a plastic sheet / half-packed boxes (renovation)** | **S3** | 4 | new (v1 S3 copy) |
 | **P11** | **A bicycle leaning in a living room / apartment hallway, kardus behind it** | **R4** | 4 | new |
 | **P12** | **Online-shop stock: stacked shipping cartons / polymailers in a home corner** | **R5** | 4 | new |
+| **P12-alt** | **Office corner with stacked kardus / arsip boxes (any office)** | **K1** | 4 | new 11/12 17:02, replaces R5 until its gate clears |
 
 ## Stickers for the 6 new photos (top · middle · bottom)
 Every middle sticker uses a claim the landing page already makes, in its own words (checked 11/12 12:02, page all ads land on: `/sewa-gudang-self-storage-jakarta/`).
@@ -38,7 +39,7 @@ Every middle sticker uses a claim the landing page already makes, in its own wor
   site: Small Storage capacity "1 kulkas, 1 lemari, 1 sepeda, 1 rak … kardus"
 - **R5** (P12): `Stok jualan numpuk di rumah? 📦` · `Gratis pickup dari tempatmu 🚚` · `mulai 750rb/bulan 👇`
   site: "Gratis: Pickup barang dari tempat-mu" (×2)
-Ad copy (hook/body/headline) for R1–R5 + S3: `2026-11-12_creative_batch_03_waves3-4.md` (13:01). Wave 2 paste-ready rows (S6/S2/B3/B4/B5): `2026-11-12_wave2_build_sheet.md` (14:02). Note: R5/S3 situations (online shop, renovasi) appear 0× on the landing page → Wave 4 runs R4 first.
+Ad copy (hook/body/headline) for R1–R5 + S3: `2026-11-12_creative_batch_03_waves3-4.md` (13:01). Wave 2 paste-ready rows (S6/S2/B3/B4/B5): `2026-11-12_wave2_build_sheet.md` (14:02). Wave 3–4 paste rows (R1–R4, K1, S3; R5 gated): `2026-11-12_wave3-4_build_sheet.md` (17:02). Note: R5/S3 situations (online shop, renovasi) appear 0× on the landing page → Wave 4 runs R4 first.
 
 ## Wave plan (proposal; Markus builds, Fuku reads)
 | Wave | Ads | Angle being tested | Starts |
