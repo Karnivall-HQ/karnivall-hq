@@ -40,6 +40,7 @@ Still on the page at 15:02: "Jakarta Pusat" ×9, "Rp 800" ×1 → W1/W2 not appl
 | all | Site W1/W2 fixed | ❌ (launch anyway if needed; note "site not fixed") |
 | B1, B2 | Free pickup | STATED on site, not confirmed |
 | B2 | No deposit | STATED on site, not confirmed |
+| B2 (`langsung dijemput`), WA M3 | G6: site open for goods/survey now? Page: "akan launching" | ❓ Alvian (added 19:02); if not open, sticker → `Tanpa deposit, barang dijemput gratis` |
 
 ## Read rules
 Fixed before launch: checklist §E + `../reports/wave1_read_template.md`. Hand back in INBOX: `Wave 1 live <date time>, ads S1/B1/B2, price <750|800>, site fixed <yes|no>, dead ads paused <yes|no>`.

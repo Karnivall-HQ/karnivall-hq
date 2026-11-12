@@ -7,6 +7,7 @@ _Sources: `2026-11-10_shoot_day_card.md`, `../reports/wave1_read_template.md`, `
 ## A. Gates (all ✅ before you press publish)
 - [ ] **Price confirmed:** 750rb or 800rb → the same number on the last sticker of every ad. If 800: also swap it in the body price line + headline (3 places per ad). Body price wording matches the site since 11/12 ("Harga promo launching", `../reports/2026-11-12_wave1_price_wording_check.md`); drop "(kode FAB750 via WhatsApp)" if the WA team doesn't use the code.
 - [ ] **Website W1/W2 fixed** on `/sewa-gudang-self-storage-jakarta/` (location → ITC Kuningan / Sudirman, Jakarta Selatan; price = the confirmed number). Every ad lands here (88% of 7d spend checked). If it isn't fixed, launch anyway, but write "site not fixed" in the launch note so the read isn't confused.
+- [ ] **G6 · Site open now?** The landing page says Fab Self Storage "akan launching" at ITC Kuningan Ambasador (re-curled 11/12 18:02). Before publish, Alvian confirms units take goods now. If not open: B2's sticker `Tanpa deposit, langsung dijemput` → `Tanpa deposit, barang dijemput gratis` (no "langsung"), and the WA team must not promise a survey or move-in date (WA script M3). S1/B1 make no timing claim.
 - [ ] **B1 needs free pickup ✅; B2 needs free pickup + no deposit ✅** (Alvian). If they're not confirmed, launch **S1 + S6 + S2** instead (price only).
 
 ## B. Tidy first (2 min, optional, ~0 CPL effect)

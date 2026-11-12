@@ -43,6 +43,8 @@ Leading indicators vs Ad015's own 7d numbers (CTR 1.73%, CPL Rp 98,955, freq 1.3
 - Everything else: keep running.
 
 ## Stage 3 — verdict (day 7, extend to day 14 if unread)
+
+> **2-week rule (added 11/12 19:02, from `2026-11-12_scale_plan_v2.md`: weekly ad-set swings run ±2×).** Kill rules (❌ / PAUSE) may fire on day 7: they are spend-multiple rules and don't depend on one good week. **A ✅ / KEEP on day 7 is provisional:** it unlocks *building* Wave 2, but the ad counts as a "winner" for budget steps or the scale plan only after the **day-14 read** (≥ 14 days or ≥ Rp 1.4M pooled spend) still meets the same row. If the day-14 read falls to ⚠️ or ❌, Wave 2 stays built but unlaunched.
 ### 3a. Format (pooled S1+B1+B2) — decide this first
 | Pooled result | Verdict | Next |
 |---|---|---|

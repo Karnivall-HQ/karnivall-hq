@@ -57,6 +57,7 @@ Still on the page at 17:02: "Jakarta Pusat" ×9, "Rp 800" ×1 → W1/W2 not appl
 | R5 | Self-storage may be sold to online sellers (vs the warehouse product) | ❓ Alvian, ask only when Wave 4 is near |
 | K1 | Extra photo (office corner) | to add to the shoot |
 | all | Free pickup / no deposit / no minimum | STATED on site, not confirmed |
+| all | G6: site open now? Page: "akan launching" | ❓ Alvian (added 19:02). Sweep 19:02: R1–R4, K1, S3 rows hold no survey/move-in/"langsung" promise → no row edit; gate only matters if a row is changed to add one |
 
 ## Labels
 - STATED (site curl 11/12 17:02): flood-free + raised area, building security + CCTV 1×24 jam, per-month, no minimum, Small fits sepeda, free pickup incl. from offices, office residents as audience, "Harga sudah All-in", one launch site, Fab.com = e-commerce warehouse startup.

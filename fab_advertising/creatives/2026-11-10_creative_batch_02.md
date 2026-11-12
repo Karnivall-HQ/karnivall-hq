@@ -58,6 +58,7 @@ Rules kept from winners: product named in line 1, price anchor present but **not
 - **Hook:** 🚚 Kamar berantakan jadi lega dalam 1 hari. Barang dijemput, disimpan di gudang self-storage Fab.
 - **Body:** Chat WhatsApp pagi, tim Fab jemput barangnya, unit gudangmu siap dipakai.\n📍 Kuningan & Sudirman, Jakarta Selatan\n💰 Mulai Rp750rb/bulan, kode FAB750 via WhatsApp.
 - **Headline:** Kamar Berantakan Jadi Rapi Dalam 1 Hari
+- **⚠️ Superseded 11/12:** use the B5 row in `2026-11-12_wave2_build_sheet.md` (no "1 hari"; "siap dipakai" gated by G6, site "akan launching").
 - **Hypothesis:** the live "Rapi Dalam 1 Hari" headline in the proven photo format. ⚠️ Needs G1 **plus** confirmation that same-day pickup is actually possible; otherwise change to "dalam 1–2 hari".
 
 ## What NOT to do (INFERRED from competitor scan)
