@@ -1,11 +1,11 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-11 22:02 WIB (cloud heartbeat: quiet run; groundwork → WA form page W2 line added)_
+_Last updated: 2026-11-12 07:02 WIB (cloud heartbeat: 07:00 readout + 48h re-ask of W1/W2)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
-- **M-001 (P0):** 7d Fab (11/04–11/10) **CPL Rp 106.8k** *(calc)* ❌ vs 95k, improving (112.4k → 106.8k); spend Rp 336k/day vs 1M. PEIKIRA 118.9k (17 leads), BC 65.7k (5 leads).
+- **M-001 (P0):** 7d Fab (11/05–11/11) **CPL Rp 100.5k** *(calc)* ❌ vs 95k, best so far (112.4k → 106.8k → 100.5k); spend Rp 330k/day vs 1M. PEIKIRA 111.4k (18), BC 61.2k (5). Control 107.6k (9) vs PEIKIRA2 115.2k (9): now close.
 - **No ad-account ask live.** PEIKIRA2 pause dropped (2 leads on 11/10). Item 1 (cut IG Stories) retired: 7d Stories 119k, Feed 166k, Reels 48k *(calc)*. Items 2 (WA Status junk gone, freq 1.11; WA+Threads 9.9% of BC spend, `2026-11-11_bc_item2_revalidate.md`), 3 (BC keep-5) and 5 (dead PEIKIRA ads, 0.9% of spend) retired 11/11. **Only item 4 remains** (087 Copy 7 cap 94,250 → 105k).
-- **Ad015:** 7d CTR 1.73%, CPL 98,955, freq 1.36 → no fallback trigger; 94% of control spend.
+- **Ad015:** 7d CTR 1.96%, CPL 98,810, freq 1.34 → no fallback trigger; 92% of control spend.
 - **W4 answered (17:02):** Lead = PYS event on `/thank-you-self-storage-lead/` only (24 h window); Form #10 routes some answers to a no-Lead page → the ~1 in 3 gap is by design. W3 held (field may drive routing). Lead definition stays (`2026-11-11_w4_lead_trigger.md`).
 - **Ad destinations (19:02):** 13 ads = 88% of 7d spend *(calc)* all land on `/sewa-gudang-self-storage-jakarta/` (→ Form #10 only). Homepage/Form #8 risk closed. **W1 = that one page** (still "Jakarta Pusat" ×9, "Kelapa Gading" ×2, "Rp 800.000" ×3). `2026-11-11_ad_destination_check.md`.
 - **Pixel Leads are ≈ 73% ad-attributed** *(calc)* (~30 unique/7d vs Meta 22; stats sum browser+server, `2026-11-11_pixel_lead_ad_share.md`), so a site fix mostly reaches ad CPL.
@@ -16,11 +16,11 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - **M-002 (P1):** weekly report Mon 11/16 07:00; skeleton `fab_advertising/reports/weekly/2026-11-16.md`. Incess 019 = 1 ad, 8-wk sawtooth, 2-wk CPL 34–39k → keep; judge on 2-wk (`2026-11-11_incess_019_split.md`). 019 Copy 5: 2-wk Rp 175.5k / 3 *(calc)*, post-click not fatigue; 11/16 rule: propose pause if 3-wk CPL > 105k (`2026-11-11_incess_019_copy5.md`).
 
 ## Next actions (dated or triggered)
-1. **Polls:** next is inside the 11/12 07:00 readout (13:00 + 19:00 done today, both empty).
-2. **11/12 07:00 readout:** tracker row; Ad015 triggers (7d CTR < 1.30% / CPL > 120k / freq > 2.5); placement split again only if Feed stays > 150k for a 2nd week (then consider proposing a Feed→Reels test, not an exclusion).
+1. **Polls:** ~13:00 and ~19:00 today (07:00 done: no human edits).
+2. **11/13 07:00 readout:** tracker row; Ad015 triggers (7d CTR < 1.30% / CPL > 120k / freq > 2.5); placement split again only if Feed stays > 150k for a 2nd week (then consider a Feed→Reels test, not an exclusion).
 3. **Every run:** check INBOX/OUTBOX for "W1 W2 done", photos, 750 vs 800, "applied N". Log applied changes in `fab_advertising/reports/m001_tracker.md`.
 4. **When W1/W2 are applied:** re-curl the 3 Jakarta pages, run `fab_advertising/reports/w1w2_lift_template.md` (day-7 + day-14 pixel reads vs 27-d baseline 3.72% VC→Lead).
-5. **If OUTBOX asks stay unanswered by 11/12 07:00 (> 48h):** replace ask #1 with the line in section E of `2026-11-11_w1w2_paste_ready.md` (covers W1+W2+price fact).
+5. **W1/W2 re-ask sent 11/12 07:02 (+1 push).** No more pushes on it today. If still unanswered at 11/13 07:00, model the 11/20 gate without it and say so in the readout.
 6. **Retro #3:** ~11/18 or at 15 new lessons (Retro #2 done 11/11; new playbook `meta-tests-and-proposals.md`).
 7. **11/20:** if 7d CPL > 95k, tell Alvian criterion 2 is out of reach by 12/05.
 
