@@ -18,7 +18,7 @@ Do **not** touch Ad015 (≈ 94% of the ad set, 7d CPL ≈ 99k) or PEIKIRA2.
 | Setting | Value |
 |---|---|
 | Where | **Inside** the existing PEIKIRA control ad set `120254051672430572` (campaign `120254051672440572`). No new ad set, no budget change. |
-| Ads | **S1** (photo P1) · **B1** (P2) · **B2** (P1). Stickers + copy: shoot card + `2026-11-05_creative_batch_01.md` / `2026-11-10_creative_batch_02.md`. |
+| Ads | **S1** (photo P1) · **B1** (P2) · **B2** (P1). Paste rows (stickers, text, headline, name): **`2026-11-12_wave1_build_sheet.md`**. |
 | Format | Single image, vertical 9:16 (Reels is the cheapest placement: 7d Rp 48k/lead *(calc)*). Placements: same as Ad015 (don't customise). |
 | Destination URL | `https://fabwarehouses.com/sewa-gudang-self-storage-jakarta/?ad={{ad.name}}`, the same pattern as Ad015, so site visits can be traced to the ad. |
 | Names | `WAVE1-FAB-<YYYYMMDD>-S1` / `-B1` / `-B2`, so Fuku can find them in the log. |

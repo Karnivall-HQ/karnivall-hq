@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-12 14:02 WIB (cloud heartbeat: Wave 2 build sheet)_
+_Last updated: 2026-11-12 15:02 WIB (cloud heartbeat: Wave 1 build sheet)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -12,7 +12,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - **The only real levers left need Alvian:** W1/W2 site fixes and phone photos + 750/800 (OUTBOX asks #1, #2). Reels being cheapest supports vertical phone-photo ads.
 - **W1/W2 paste-ready** (21:02, `fab_advertising/reports/2026-11-11_w1w2_paste_ready.md`): 9 "Jakarta Pusat" lines + 1 FAQ price line (800 ×3 = one FAQ answer + its schema copy); "Kelapa Gading" ×2 = footer address only (decide, don't auto-edit). 22:02: + B2 = WA form page heading `859f605` "mulai dari Rp 800.000 /bulan." (only other 800 in the flow; page also shows 750rb ×2) → 11 edits total. 11/12 10:02: W2/B2 replacement text now uses the site's own "Harga Promo Launching Rp750.000" (site has 0 × "FAB750"; `2026-11-12_wave1_price_wording_check.md`).
 - **Wave 1 launch checklist** (20:02, `fab_advertising/creatives/2026-11-11_wave1_launch_checklist.md`): gates, optional dead-ad tidy, build spec (inside control ad set, `?ad={{ad.name}}` URL, WAVE1 names), one-line INBOX handback, read rules. Photo drop → launch in one sitting.
-- **11/20 gate brief** (`fab_advertising/reports/2026-11-20_gate_brief.md`): only W1+W2 can open the CPL gate alone (≈ 94.6k / 85.0k *(calc)*); Wave 1 only if ≤ 70k. **Volume (scale plan v2, 11/12 11:01, `2026-11-12_scale_plan_v2.md`):** a winning wave adds Rp 100–185k/day at ≤ 95k and swings ±2× weekly; Rp 1M/day needs 4–7 winners → realistic 12/05 ≈ Rp 450–520k/day *(calc)*. Judge waves on 2 weeks. When photos are answered, ask for 12, not 2: **shoot card v2** (12:02) `fab_advertising/creatives/2026-11-12_shoot_card_v2.md` maps P1–P12 → Waves 1–4. Site lists unit sizes 3.8/7.6/15.2 m³ and kasur only from Medium → S2 sticker gate. **Wave 3–4 copy ready** (13:01) `fab_advertising/creatives/2026-11-12_creative_batch_03_waves3-4.md`; R5/S3 situations appear 0× on the landing page → Wave 4 runs R4 first. **Wave 2 build sheet** (14:02) `fab_advertising/creatives/2026-11-12_wave2_build_sheet.md`: 5 paste rows + pick-3 by Wave-1 winner; fixed S6 "bisa diakses" (page: weekend loading), S2 kasur/sofa (Medium+), B5 same-day (0× on page).
+- **11/20 gate brief** (`fab_advertising/reports/2026-11-20_gate_brief.md`): only W1+W2 can open the CPL gate alone (≈ 94.6k / 85.0k *(calc)*); Wave 1 only if ≤ 70k. **Volume (scale plan v2, 11/12 11:01, `2026-11-12_scale_plan_v2.md`):** a winning wave adds Rp 100–185k/day at ≤ 95k and swings ±2× weekly; Rp 1M/day needs 4–7 winners → realistic 12/05 ≈ Rp 450–520k/day *(calc)*. Judge waves on 2 weeks. When photos are answered, ask for 12, not 2: **shoot card v2** (12:02) `fab_advertising/creatives/2026-11-12_shoot_card_v2.md` maps P1–P12 → Waves 1–4. Site lists unit sizes 3.8/7.6/15.2 m³ and kasur only from Medium → S2 sticker gate. **Wave 3–4 copy ready** (13:01) `fab_advertising/creatives/2026-11-12_creative_batch_03_waves3-4.md`; R5/S3 situations appear 0× on the landing page → Wave 4 runs R4 first. **Wave 2 build sheet** (14:02) `fab_advertising/creatives/2026-11-12_wave2_build_sheet.md`: 5 paste rows + pick-3 by Wave-1 winner; fixed S6 "bisa diakses" (page: weekend loading), S2 kasur/sofa (Medium+), B5 same-day (0× on page). **Wave 1 build sheet** (15:02) `fab_advertising/creatives/2026-11-12_wave1_build_sheet.md`: S1/B1/B2 paste rows, linked from checklist §C; B2 "bayar bulan pertama aja" → "bayar per bulan"; location → "ITC Kuningan Ambasador, Sudirman" (page names one site; swap Wave 2 rows at build).
 - **M-002 (P1):** weekly report Mon 11/16 07:00; skeleton `fab_advertising/reports/weekly/2026-11-16.md` (static parts current as of 11/12 09:02: proposal retirements, gate levers, pre-ranked top 3). Incess 019 = 1 ad, 8-wk sawtooth, 2-wk CPL 34–39k → keep; judge on 2-wk (`2026-11-11_incess_019_split.md`). 019 Copy 5: 2-wk Rp 175.5k / 3 *(calc)*, post-click not fatigue; 11/16 rule: propose pause if 3-wk CPL > 105k (`2026-11-11_incess_019_copy5.md`).
 
 ## Next actions (dated or triggered)
@@ -26,15 +26,15 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **Partial-week pre-pull for 11/16:** on a quiet run 11/14–15, pull 11/09–11/13 Fab+Incess ad-set rows (by object_ids) into the skeleton as a draft so Monday is a delta.
-2. **Wave 1 build rows:** turn S1/B1/B2 (+ fallback S6/S2) into the same paste-row table as the Wave 2 sheet and link it from the launch checklist §C, so Wave 1 is copy-rows too.
-3. **Wave 3–4 build rows:** same table for R1–R5 + S3 from batch 03 (R1 gate "bebas banjir" kept).
+2. **Wave 3–4 build rows:** same table for R1–R5 + S3 from batch 03 (R1 gate "bebas banjir" kept); run `playbooks/ad-copy-page-check.md`; use the one-site location line.
+3. **WA follow-up script page check:** run the new playbook on `fab_advertising/creatives/2026-11-06_wa_followup_script.md` (implied "only"/timing words, location line).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - Website W1 + W2, and who edits the site.
 - Phone photos; price 750 vs 800rb. Later: close rate + months stayed; confirm no minimum rental / no deposit / free pickup.
 
 ## Standing facts
-- Read `playbooks/meta-ads-algorithm.md` + `meta-cpl-diagnosis.md` + `meta-tests-and-proposals.md` before any ads work. Wave 1 is read with `fab_advertising/reports/wave1_read_template.md`.
+- Read `playbooks/meta-ads-algorithm.md` + `meta-cpl-diagnosis.md` + `meta-tests-and-proposals.md` before any ads work; `ad-copy-page-check.md` before any copy is paste-ready. Wave 1 is read with `fab_advertising/reports/wave1_read_template.md`.
 - Cloud Fuku: routine trig_01NGMFnv9BpvRp1jQjkAwUVJ, hourly 07–22 WIB. Propose-only: never call Meta write tools, even when visible.
 - Fab pixel/dataset id **405755485775053**. PEIKIRA campaign `120254051672440572`, control ad set `120254051672430572`, PEIKIRA2 `120254276298070572`, BC campaign `120236222888610572` (= "BC CBObass005").
 - Markus (team) edits the Fab account via the Rudi MCP app (actor 61594758338050).

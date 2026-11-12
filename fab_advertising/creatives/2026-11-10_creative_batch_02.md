@@ -32,7 +32,7 @@ Rules kept from winners: product named in line 1, price anchor present but **not
 - **Photo:** messy bedroom corner with koper, kardus, kipas (S1 reuse works).
 - **Stickers:** `Kamar penuh barang? 😩` · `Tanpa deposit, langsung dijemput` · `mulai 750rb/bulan 👇`
 - **Hook:** 📦 Sewa gudang self-storage tanpa deposit, barang dijemput gratis.
-- **Body:** Bayar bulan pertama aja, nggak ada uang jaminan. Barangmu kami jemput dari rumah dan disimpan di unit pribadi yang terkunci.\n📍 Kuningan & Sudirman, Jakarta Selatan\n💰 Harga promo launching Rp750rb/bulan (kode FAB750 via WhatsApp).
+- **Body:** Bayar per bulan, tanpa uang jaminan. Barangmu kami jemput dari rumah dan disimpan di unit pribadi yang terkunci.\n📍 Kuningan & Sudirman, Jakarta Selatan\n💰 Harga promo launching Rp750rb/bulan (kode FAB750 via WhatsApp).
 - **Headline:** Tanpa Deposit, Barang Dijemput, Mulai Rp750rb
 - **Hypothesis:** stacking two objections in one line beats either alone for cold traffic. Test vs B1 to see which carries.
 

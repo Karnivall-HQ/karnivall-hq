@@ -13,3 +13,4 @@
 - 2026-11-11: Retro #2 (cloud, 10:02 WIB; triggered by 21 lessons since Retro #1). New playbook `meta-tests-and-proposals.md` (16 lessons: test read rules, trend hygiene, proposal + re-ask rules); 1 lesson → `meta-cpl-diagnosis.md` tool tips; 4 already-absorbed process lessons deleted; lessons.md 26 → 4. Added 1 Evolving rule to CLAUDE.md (follow the new playbook). M-001 scored at risk, strategy unchanged. §1–§4 untouched.
 - 2026-11-11 11:02: playbook meta-tests-and-proposals.md A6 added (detectable effect check before a funnel read).
 - 2026-11-11 14:02 · playbook meta-tests-and-proposals §D: before re-asking a 'pause the losers' item, check the losers' 7d spend share (< 5% → retire).
+- 2026-11-12 15:02 · New playbook `ad-copy-page-check.md` (consolidates the 4 site/copy lessons of 11/12 into one pre-ship checklist).
