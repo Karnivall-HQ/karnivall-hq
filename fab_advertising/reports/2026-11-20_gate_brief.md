@@ -6,6 +6,7 @@ _2026-11-11 08:02 WIB, Fuku cloud heartbeat (groundwork). Read-only, no ad-accou
 **Base:** 7d 11/04–11/10 (11/11 readout): PEIKIRA Rp 2,020,826 / 17 leads; BC Rp 328,314 / 5 leads. Blended **Rp 106,779** *(calc)*. Per day: PEIKIRA Rp 288.7k / 2.43 leads, BC Rp 46.9k / 0.71 leads *(calc)*.
 
 ## TL;DR
+- ⚠️ **11/12 08:01 correction:** on 8 weekly rows, 087 Copy 7 already runs Rp 96.1k CPL at the current cap (ratio 1.02), so scenario B lands at the **upper end (≈ 107k+)** and B+C loses its volume bonus. Item 4 is retired for 087 (`2026-11-12_item4_bidcap_card.md`).
 - **Only one lever can open the gate by itself: the website fixes W1+W2** (≈ Rp 94.6k at +0.5pt LP→Lead, ≈ Rp 85.0k at +1pt) *(calc)*. They are 10 minutes of work and touch no ad.
 - Item 4 (BC bid cap → Rp 105k) **alone does not** open it (≈ Rp 104k best case): it adds volume at ~95k, it does not pull the blend under 95k.
 - Wave 1 photo ads open it alone **only if** they win at ≤ ~Rp 70k and are live by 11/15. That is plausible (raw phone photos ran Rp 18–68k) but it's a bet.

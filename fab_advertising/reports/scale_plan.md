@@ -46,6 +46,7 @@ Sum of proven capacity: Rp 290k + 300k = **~Rp 590k/day** *(calc)*.
 - Steps are +25% *(calc: 337k × 1.25ⁿ)*, at most every 3 days [FOLKLORE: Meta docs give no budget-change speed].
 - **Cut-back rule:** if the 7d CPL goes above **Rp 110k** after any step, go back to the previous step's level.
 - S1–S2 need **no new assets and no budget edit**; they are the parked items 3+4. S3+ need photos.
+- ⚠️ **11/12 08:01:** items 3 and 4 (087) are both retired (`2026-11-12_item4_bidcap_card.md`: 087 8-wk CPL 96.1k at the current cap). **S1/S2 have no lever on current creative**: BC capacity is whatever it delivers at Rp 94,250. Volume past ~Rp 330k/day now runs through new creative (S3).
 
 ## Risks
 - ⚠️ **Ad015 single point of failure:** it carries ~95% of the PEIKIRA control ad set (11/09). If it fatigues, PEIKIRA's ~Rp 300k capacity falls with it. Hedge = new creative (S3). Contingency list = groundwork backlog item 2.
