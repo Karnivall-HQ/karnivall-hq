@@ -34,7 +34,7 @@ Rules for every ad: name the product ("gudang self-storage") in the first line, 
 
 ### A2 · "Muat apa saja?" (item list, from 3-21)
 - **Hook:** Cari gudang self-storage di Jakarta? Ini yang muat di unit Fab 👇
-- **Body:** Barang kecil: box dokumen, baju, sepatu, koper.\nBarang besar: meja, sofa, lemari, kulkas, kasur, sepeda.\n🔒 Unit pribadi, bersih & terang, pintunya terkunci.\n📍 Kuningan & Sudirman, Jakarta Selatan\n💰 Harga promo launching Rp750rb/bulan (kode FAB750 via WhatsApp).
+- **Body:** Barang kecil: box dokumen, baju, sepatu, koper.\nBarang besar: kulkas, lemari, rak, sepeda (sofa & kasur: unit Medium ke atas).\n🔒 Unit pribadi, bersih & terang, pintunya terkunci.\n📍 Kuningan & Sudirman, Jakarta Selatan\n💰 Harga promo launching Rp750rb/bulan (kode FAB750 via WhatsApp).
 - **Headline:** Sewa Gudang Self-storage Jakarta, Mulai Rp750rb
 - **Visual:** carousel, one card per item type inside a real unit (sofa, kulkas, boxes, sepeda), final card = price + location.
 - **Hypothesis:** concrete items answer "will my stuff fit?", the main pre-lead question. 3-21 had the best CTR (3.30%).
@@ -61,9 +61,9 @@ Rules for every ad: name the product ("gudang self-storage") in the first line, 
 
 ### A6 · "Barang di rumah keluarga" (scale KENJI-020, sharpen the CTA)
 - **Hook:** 🤝 Barangmu masih numpang di rumah orang tua?
-- **Body:** Sudah waktunya punya tempat sendiri untuk barang-barangmu. Gudang self-storage Fab: unit pribadi, terkunci, bisa diakses saat perlu.\n📍 Kuningan & Sudirman, Jakarta Selatan\n💰 Harga promo launching Rp750rb/bulan (kode FAB750 via WhatsApp).
+- **Body:** Sudah waktunya punya tempat sendiri untuk barang-barangmu. Gudang self-storage Fab: unit pribadi, terkunci, loading barang bisa Sabtu & Minggu juga.\n📍 Kuningan & Sudirman, Jakarta Selatan\n💰 Harga promo launching Rp750rb/bulan (kode FAB750 via WhatsApp).
 - **Headline:** Gudang Pribadi untuk Barangmu, Mulai Rp750rb
-- **Hypothesis:** KENJI-020 has good CTR (2.09%) but its copy has no price; adding the price anchor should lift CVR. *⚠️ Confirm that "bisa diakses saat perlu" matches the real access policy.*
+- **Hypothesis:** KENJI-020 has good CTR (2.09%) but its copy has no price; adding the price anchor should lift CVR. *11/12 14:02: "bisa diakses saat perlu" replaced with the page's own "Sabtu & Minggu bisa" loading claim (page has 0× "akses").*
 
 ## How to launch (for Alvian; Fuku does not touch the account)
 - Put A1–A6 as new ads **inside the existing PEIKIRA ad set**. Don't create a new campaign, so learning isn't reset at the campaign level. Keep Ad015 running.

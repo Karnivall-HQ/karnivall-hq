@@ -38,7 +38,7 @@ Every middle sticker uses a claim the landing page already makes, in its own wor
   site: Small Storage capacity "1 kulkas, 1 lemari, 1 sepeda, 1 rak … kardus"
 - **R5** (P12): `Stok jualan numpuk di rumah? 📦` · `Gratis pickup dari tempatmu 🚚` · `mulai 750rb/bulan 👇`
   site: "Gratis: Pickup barang dari tempat-mu" (×2)
-Ad copy (hook/body/headline) for R1–R5 + S3: `2026-11-12_creative_batch_03_waves3-4.md` (13:01). Note: R5/S3 situations (online shop, renovasi) appear 0× on the landing page → Wave 4 runs R4 first.
+Ad copy (hook/body/headline) for R1–R5 + S3: `2026-11-12_creative_batch_03_waves3-4.md` (13:01). Wave 2 paste-ready rows (S6/S2/B3/B4/B5): `2026-11-12_wave2_build_sheet.md` (14:02). Note: R5/S3 situations (online shop, renovasi) appear 0× on the landing page → Wave 4 runs R4 first.
 
 ## Wave plan (proposal; Markus builds, Fuku reads)
 | Wave | Ads | Angle being tested | Starts |

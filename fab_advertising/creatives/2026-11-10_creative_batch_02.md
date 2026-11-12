@@ -17,6 +17,7 @@ _Fuku, 2026-11-10 17:xx WIB · cloud heartbeat. Status: **draft, ready the day p
 If G1 is false → drop B1, B2, B5. If G2 false → drop B2, rewrite B3 without "tanpa deposit". If G3 false → drop B4 and the "bulanan" line in B3.
 
 ## 5 ads (Bahasa Indonesia; `\n` = line break)
+> **11/12 14:02:** for building, use `2026-11-12_wave2_build_sheet.md` (B3–B5 there carry the current price line, B5 without the unbacked same-day claim, B3 "tanpa kontrak").
 Rules kept from winners: product named in line 1, price anchor present but **not first**, location, one CTA (WhatsApp). Stickers ≤ 7 words, ≤ 1 emoji each, price on the last sticker, no logo/URL on image.
 
 ### B1 · "Kami yang angkut" (free pickup, lead angle)
