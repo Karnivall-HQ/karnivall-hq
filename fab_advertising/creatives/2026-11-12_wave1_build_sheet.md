@@ -20,7 +20,7 @@ URL for all 3: `https://fabwarehouses.com/sewa-gudang-self-storage-jakarta/?ad={
 
 ## What changed vs the source docs (and why)
 1. **B2 "Bayar bulan pertama aja" → "Bayar per bulan, tanpa uang jaminan".** The page backs per-month payment ("dibayar per 1 bulan" ×6) and no deposit ("Bisa tanpa uang deposit/ jaminan"), but never says the first month is the *only* upfront payment ("bulan pertama" 0, "biaya"/"admin" 0). If there is an admin fee, the old line becomes a broken promise in the WA chat.
-2. **Location line → "ITC Kuningan Ambasador, Sudirman, Jakarta Selatan"** (was "Kuningan & Sudirman"). The page names **one** site ("akan launching di ITC Kuningan Ambasador Sudirman"); "Kuningan & Sudirman" can read as two branches. Same wording as the W1 site replacement, so ad and page match word for word once W1 lands. Wave 2 rows keep the old line for now; swap them the same way at Wave 2 build.
+2. **Location line → "ITC Kuningan Ambasador, Sudirman, Jakarta Selatan"** (was "Kuningan & Sudirman"). The page names **one** site ("akan launching di ITC Kuningan Ambasador Sudirman"); "Kuningan & Sudirman" can read as two branches. Same wording as the W1 site replacement, so ad and page match word for word once W1 lands. Wave 2 rows were swapped the same way on 11/12 18:02.
 3. **Price line** already aligned 11/12 10:02 (site says "Harga Promo Launching"; 0× "FAB750").
 
 ## Page check (each ad's claims vs the live page, 11/12 15:02)

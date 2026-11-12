@@ -24,13 +24,28 @@ Placeholders: `{nama}`, `{kebutuhan}` (from the form's "Kebutuhan" field), `{rua
 > Kak {nama}, biar gampang pilihnya: Small 3,8 m³ (± isi 1 kamar kos), Medium 7,6 m³, Large 15,2 m³. Mau kami kirim foto unitnya dulu?
 
 **Message 3 (+3 days, last one)**
-> Kak {nama}, kalau masih butuh tempat simpan barang, harga promo launching Rp750rb/bulan masih berlaku. Mau survei langsung ke Kuningan minggu ini? Balas "survei" nanti kami atur jamnya. Kalau sudah tidak perlu, tidak apa-apa, terima kasih ya Kak 🙏
+> Kak {nama}, kalau masih butuh tempat simpan barang, harga promo launching Rp750rb/bulan masih berlaku. Mau survei langsung ke gudang Fab di ITC Kuningan Ambasador minggu ini? Balas "survei" nanti kami atur jamnya. Kalau sudah tidak perlu, tidak apa-apa, terima kasih ya Kak 🙏
 
 ## Notes
 - "± isi 1 kamar kos" is Fuku's sizing analogy [INFERRED], not a site claim. Have the team check it against real units, or drop it.
 - **Price wording (2026-11-12 11:01):** Messages 1 and 3 now use the site's own phrase "harga promo launching Rp750rb/bulan" instead of "kode FAB750" (`fab_advertising/reports/2026-11-12_wave1_price_wording_check.md`). Reason: a form-filler arrives from the site, so the WA reply should echo the site. If a lead quotes "FAB750" from an ad, the team just confirms it (same 750 price). Message 3 no longer claims "slot" scarcity, which nothing on the site backs. If **800 is real**, change the number in Messages 1, 3 and Reply A.
 - Message 2's "foto unit" ties in with the phone photo shoot (the same real photos double as ad creative).
 - Measure: replies ÷ messaged and surveys ÷ messaged for 2 weeks. If reply rate < 10%, rewrite Message 1 (lead with the price, not the question).
+
+## Page check (playbook `ad-copy-page-check.md`, 11/12 18:02, live `/sewa-gudang-self-storage-jakarta/`, HTTP 200)
+| Claim in the script | On page | Verdict |
+|---|---|---|
+| harga promo launching Rp750rb/bulan (M1, M3) | ✔ "Harga Promo Launching: Rp750.000 /bulan" (750 ×9; "Rp 800" ×1 = W2) | ✔ STATED |
+| ITC Kuningan Ambasador (Sudirman, Jaksel) (M1) | ✔ ×1: "**akan launching** di ITC Kuningan Ambasador Sudirman, Jakarta Selatan" | ⚠️ see gate below |
+| tanpa deposit · tanpa minimal sewa · pickup gratis (M1) | ✔ deposit/jaminan ×2, "tanpa minimal lama sewa" ×8, "Gratis: Pickup barang dari tempat-mu" | ✔ STATED |
+| Small 3,8 / Medium 7,6 / Large 15,2 m³ (M2) | ✔ each ×1 | ✔ STATED |
+| "± isi 1 kamar kos" (M2) | ✗ 0 ("kos" hits are all "Kosong") | ⚠️ INFERRED, already flagged; team checks or drops |
+| survei ke gudang (M3) | ✔ "Cara Sewa: 01 Chat via WhatsApp · 02 Datang survey ke warehouse · 03 Booking unit" | ✔ STATED; M3 mirrors the page's own step 02 |
+| "masih berlaku" (M3) | 0 (no end date on the page) | ✔ OK: no deadline is claimed, only "still valid now". Don't add a deadline. |
+| "bayarnya cuma Rp750rb bulan ini aja" (Reply A) | "per 1 bulan" ✔; "Harga sudah All-in" ×1 (table row, no detail) | ⚠️ "cuma … aja" implies no other fee; true only if "All-in" holds. Gate: Alvian confirms what All-in covers. |
+
+**Fixed (18:02):** M3 "survei langsung ke Kuningan" → "ke gudang Fab di ITC Kuningan Ambasador" (one named site, same line as the ads).
+**New gate (G6), before any message that offers a survey or a move-in:** the page says the site **"akan launching"** (will launch). If units are not open yet, M3's survey offer and "unit gudangmu siap dipakai" (Wave 2 B5) can't be kept. Confirm with Alvian: is ITC Kuningan Ambasador open for survey and move-in now? If not, M3 becomes "Mau kami kabari begitu unit siap disurvei?" and B5's last line drops "siap dipakai".
 
 ## Objection reply: "Kok lebih mahal dari yang 400rb?" (added 2026-11-10 18:02, draft, NOT sent)
 **Context:** SpaceHub (Thamrin, ~10 min away) advertises "From Rp 400k / month" for its smallest unit, but asks a **security deposit**, needs **online self-booking + pay first**, and you **move your stuff yourself** (its own FAQ, `fab_advertising/research/2026-11-10_competitor_angles.md`). Rule: compare **total cost and effort**, never knock the competitor by name, never discount on the spot.
