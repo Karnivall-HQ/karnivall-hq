@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-13 14:02 WIB (cloud heartbeat: quiet run → 11/20 readout template written)_
+_Last updated: 2026-11-13 15:02 WIB (cloud heartbeat: quiet run → criterion-2 re-plan draft written)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -18,13 +18,13 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 2. **11/14 07:00 readout:** tracker row; first full day of ADSET-3: fill the read card's "Day-1 share check" line (share → break-even from its table), rules 1–2; Ad015 triggers (CTR < 1.30% / CPL > 120k / freq > 2.5).
 3. **Every run:** INBOX/OUTBOX for "W1 W2 done", photos answer, TourHub actor answer. Log applied changes in the tracker.
 4. **When W1/W2 are applied:** re-curl the page, run `fab_advertising/reports/w1w2_lift_template.md`.
-5. **11/20 readout:** run `fab_advertising/reports/2026-11-20_readout_template.md` top to bottom (pulls → rule 3 → G1–G3 → S1 card or variant H/M1/M2 → record).
+5. **11/20 readout:** run `fab_advertising/reports/2026-11-20_readout_template.md` top to bottom (pulls → rule 3 → G1–G3 → S1 card or variant H/M1/M2 → record). Variant H/M carries the criterion-2 ask from `2026-11-20_criterion2_replan.md`.
 6. **Retro #3:** ~11/18 or at 15 new lessons.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **Partial-week pre-pull for 11/16 (+ ADSET-3 rows):** on a quiet run 11/14–15, pull 11/09–11/13 Fab+Incess ad-set rows (by object_ids) into the skeleton as a draft so Monday is a delta.
-2. **Criterion-2 re-plan draft:** if 12/05 volume misses, a weekly photo-wave cadence to Rp 1M/day by 01/15 (waves, winners needed, budget steps) to back the M-variant ask.
-3. **11/27 ADSET-3 verdict template:** day-14 read (rule 4: winner only ≤ 95k on ≥ 4 leads), per-ad keep/cut list, what a winner unlocks (S-step or next wave).
+2. **11/27 ADSET-3 verdict template:** day-14 read (rule 4: winner only ≤ 95k on ≥ 4 leads), per-ad keep/cut list, what a winner unlocks (S-step or next wave).
+3. **Wave 5–6 build sheet:** rows for 12/21 + 12/28 waves (criterion-2 re-plan), drawn from the Wave 1–4 angles not yet used; page-checked per `ad-copy-page-check.md`.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Website W1 + W2, and who edits the site. #2 Are the 15 new images the phone photos + is the Kuningan site open now (G6/P1)? FYI: who is the "TourHub" actor?
