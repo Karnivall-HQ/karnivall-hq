@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-13 20:36 WIB (cloud heartbeat: quiet → weekly photo calendar done)_
+_Last updated: 2026-11-13 22:34 WIB (cloud heartbeat: quiet → 11/20 messages pre-drafted)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -25,7 +25,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **Partial-week pre-pull for 11/16 (+ ADSET-3 rows):** on a quiet run 11/14–15, pull 11/09–11/13 Fab+Incess ad-set rows (by object_ids) into the skeleton as a draft so Monday is a delta.
 2. **Wave 5–6 photo-brief fallback:** if ask #2 says the 15 images are NOT the shoot, a 1-page shoot-day checklist for Markus from `shoot_card_v2` (else drop).
-3. **11/20 message pre-draft:** fill the gate-miss note's Variant H/M1/M2 texts with the photo calendar link + criterion-2 line, so 11/20 is pick-and-send.
+3. **Retro #3 prep:** tally lessons since 11/11 and draft which become playbook rules, so the ~11/18 retro is a review, not a rewrite.
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Website W1 + W2, and who edits the site. #3 ADSET-3 min daily spend Rp 75k. #2 Are the 15 new images the phone photos + is the Kuningan site open now (G6/P1)? FYI: who is the "TourHub" actor?
 - Later: "All-in" meaning, R5 online sellers, close rate + months stayed.
@@ -39,6 +39,6 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Open loops (current state, one line each)
 - Activity log: 11/13 00:04–04:08 ADSET-3 build (TourHub actor + Markus); since then only a Meta 'started delivery' event (12:11), checked 19:02. Control ad set delivery = warning 'learning_exit_unsuccessfully'.
 - Site: W1/W2 not applied (curl 11/13 07:02). W3 on hold pending the W4 routing rule.
-- Weekly photo calendar ready (`fab_advertising/creatives/2026-11-13_weekly_photo_calendar.md`), ships with the 11/20 criterion-2 ask.
-- Rudi MCP failed to connect at 20:36 (503); if still down at 11/14 07:00, readout can't pull → [RISK] in OUTBOX.
+- 11/20 messages pre-drafted: gate-miss note has the ADSET-3 clause table + one shared criterion-2 line (links re-plan + photo calendar).
+- Rudi MCP: 503 at 20:36, connected again at 22:34.
 - Parked in OUTBOX: optional BC204 cap probe, W3/W4 + WA follow-up script, 4 disabled ad accounts, Incess bid-cap, lead-value questions.
