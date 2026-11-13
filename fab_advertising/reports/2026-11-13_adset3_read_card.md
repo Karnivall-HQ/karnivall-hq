@@ -33,3 +33,22 @@ Target CPL 95k. Projection: CBO Rp 300k/day over 3 ad sets → ~Rp 70–130k/day
 
 ## Effect on the 11/20 gate
 - 7d CPL 11/06–11/12 = Rp 103,286 *(calc)*. With W1+W2 (same lift ratio 1.129 as the gate brief) ≈ **91.5k** *(calc)* → opens the gate. Without a site fix, ADSET-3 alone opens the gate at ≤ Rp 83.5k CPL on a 1/3 share, or ≤ 95.7k on a 60% share *(calc, 11/13 09:01 gate refresh in `2026-11-20_gate_brief.md`)*.
+
+## Day-1 share check (for the 11/14 07:00 readout; added 11/13 10:01)
+Pull level=adset, campaign `120254051672440572`, time_range 11/13→11/13 (and 11/13→yesterday from 11/15 on).
+- **Share** s = ADSET-3 spend ÷ PEIKIRA campaign spend, same day(s) *(calc)*.
+- **Break-even CPL** (opens the 11/20 gate with no site fix; base 11/06–11/12, PEIKIRA Rp 299,363/day + 2.571 leads/day, gate needs +2.006 leads over the 23 already in base) *(calc)*:
+  `BE(s, d) = s·d·299,363 ÷ (2.006 + s·d·2.571)`, d = days ADSET-3 delivers inside 11/13–11/19.
+
+| share s | d = 6 (from 11/14) | d = 5 (from 11/15) | d = 4 (from 11/16) |
+|---|---|---|---|
+| 20% | 70.6k | 65.4k | 58.9k |
+| 25% | 76.6k | 71.7k | 65.4k |
+| 33% | 83.8k | 79.3k | 73.4k |
+| 40% | 87.9k | 83.8k | 78.3k |
+| 50% | 92.4k | 88.7k | 83.8k |
+| 60% | 95.7k | 92.4k | 87.9k |
+| 70% | 98.2k | 95.2k | 91.1k |
+| 80% | 100.1k | 97.4k | 93.6k |
+- Readout line template: "ADSET-3 day N: Rp ⟨spend⟩ = ⟨s⟩% of PEIKIRA, ⟨leads⟩ leads; break-even at that share = ⟨BE⟩ *(calc)*; rule 1 (>70% & 0 leads) ⟨ok/flag⟩; rule 2 (≥ Rp 190k & 0 leads) ⟨ok/flag⟩."
+- Late start costs margin: every day ADSET-3 stays at 0 impressions lowers the bar by ~4–6k at a 1/3 share. Low share (< 25%) means ADSET-3 can't open the gate alone, whatever its CPL: W1+W2 then carries it.

@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-13 09:01 WIB (cloud heartbeat: 11/20 gate brief refresh, groundwork)_
+_Last updated: 2026-11-13 10:01 WIB (cloud heartbeat: ADSET-3 break-even table + weekly ADSET-3 section, groundwork)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -10,11 +10,12 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - **11/20 gate (refreshed 09:01, `2026-11-20_gate_brief.md`):** site fix +0.5pt → 93.1k if live by 11/14 eve, ❌ 97.9k from 11/16. ADSET-3 alone opens it at ≤ 83.5k (1/3 share) / ≤ 95.7k (60%) *(calc)*.
 - **ADSET-3 copy check done** (`fab_advertising/reports/2026-11-13_adset3_copy_check.md`): ads clean; page gaps P1 "akan launching" (contradicts ad 018), P2 access hours, P3 pickup cap. Still Rp 0 / 0 impr at 08:0x.
 - **Our Wave 1–4 build sheets** may be partly overtaken by the team's own photo wave: hold them until Alvian answers ask #2 (are the 15 images the photos?).
-- **M-002 (P1):** weekly report Mon 11/16 07:00; skeleton `fab_advertising/reports/weekly/2026-11-16.md`. Add ADSET-3 launch + read rules. Incess 019 Copy 5 rule: propose pause if 3-wk CPL > 105k.
+- **ADSET-3 break-even table** (share × delivery days) now in the read card: 1/3 share → 83.8k from 11/14, 79.3k from 11/15, 73.4k from 11/16 *(calc)*.
+- **M-002 (P1):** weekly report Mon 11/16 07:00; skeleton `fab_advertising/reports/weekly/2026-11-16.md` now has the ADSET-3 row + section + refreshed gate paragraph. Incess 019 Copy 5 rule: propose pause if 3-wk CPL > 105k.
 
 ## Next actions (dated or triggered)
 1. **Polls today:** next ~13:00 and ~19:00: activity log + ADSET-3 spend/impressions today. If still 0 impressions at 13:00 → check ad review/delivery status and flag.
-2. **11/14 07:00 readout:** tracker row; first full day of ADSET-3: spend, share of PEIKIRA, leads vs rules 1–2; Ad015 triggers (CTR < 1.30% / CPL > 120k / freq > 2.5).
+2. **11/14 07:00 readout:** tracker row; first full day of ADSET-3: fill the read card's "Day-1 share check" line (share → break-even from its table), rules 1–2; Ad015 triggers (CTR < 1.30% / CPL > 120k / freq > 2.5).
 3. **Every run:** INBOX/OUTBOX for "W1 W2 done", photos answer, TourHub actor answer. Log applied changes in the tracker.
 4. **When W1/W2 are applied:** re-curl the page, run `fab_advertising/reports/w1w2_lift_template.md`.
 5. **11/20 readout:** ADSET-3 day-7 comparative read (rule 3) + gate call: if 7d CPL > 95k, tell Alvian criterion 2 is out of reach by 12/05.
@@ -22,8 +23,8 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **Partial-week pre-pull for 11/16 (+ ADSET-3 rows):** on a quiet run 11/14–15, pull 11/09–11/13 Fab+Incess ad-set rows (by object_ids) into the skeleton as a draft so Monday is a delta.
-2. **Weekly report prep:** draft the "ADSET-3 launch + copy check" section of `fab_advertising/reports/weekly/2026-11-16.md` (facts only, read rules link).
-3. **ADSET-3 day-1 share check prep:** one-line formula block in the read card for the 11/14 readout (share %, break-even at that share from the gate refresh table).
+2. **Scale ladder S1 card:** if the gate opens on 11/20, a ready-to-apply S1 step (+25% CBO, which ad sets, read rules) from `2026-11-12_scale_plan_v2.md`, so Alvian gets it the same morning.
+3. **"Gate ❌" message draft:** the 11/20 honest-miss note (criterion 2 out of reach by 12/05, revised date + what still moves CPL), ready to send if 7d > 95k.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Website W1 + W2, and who edits the site. #2 Are the 15 new images the phone photos + is the Kuningan site open now (G6/P1)? FYI: who is the "TourHub" actor?
