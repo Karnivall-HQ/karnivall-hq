@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-13 12:02 WIB (cloud heartbeat: 11/20 gate-miss/hold messages pre-staged, groundwork)_
+_Last updated: 2026-11-13 13:02 WIB (cloud heartbeat: 13:00 poll, ADSET-3 still 0 impressions → [RISK] flagged)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -8,13 +8,13 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - **🚀 Team launched ADSET-3** `120254400251570572` in the PEIKIRA CBO (Rp 300k/day now split 3 ways): 6 ads, new images (15 in library), copy "Rp750rb" + "Jakarta Selatan (Kuningan and Sudirman)", Advantage+ audience + creative enhancements on. ACTIVE 04:05 11/13. Built by new actor "TourHub Shared Office…" (61557670947597) + Markus. Read card (kill/compare/verdict): `fab_advertising/reports/2026-11-13_adset3_read_card.md`.
 - **Site vs new ads:** page still "Jakarta Pusat" ×9, "Rp 800.000" ×1 → contradicts the new ads. OUTBOX #1. Paste-ready: `fab_advertising/reports/2026-11-11_w1w2_paste_ready.md`.
 - **11/20 gate (refreshed 09:01, `2026-11-20_gate_brief.md`):** site fix +0.5pt → 93.1k if live by 11/14 eve, ❌ 97.9k from 11/16. ADSET-3 alone opens it at ≤ 83.5k (1/3 share) / ≤ 95.7k (60%) *(calc)*.
-- **ADSET-3 copy check done** (`fab_advertising/reports/2026-11-13_adset3_copy_check.md`): ads clean; page gaps P1 "akan launching" (contradicts ad 018), P2 access hours, P3 pickup cap. Still Rp 0 / 0 impr at 08:0x.
+- **⚠️ ADSET-3 not delivering:** Rp 0 / 0 impr at 13:02 (~9h live), no errors, ads approved; CBO gave Rp 177k to control + PEIKIRA2 *(INFERRED starvation)*. [RISK] in OUTBOX; fix pre-written (min daily spend Rp 75k) in the read card "Delivery check". Copy check: ads clean, page gaps P1–P3 (`2026-11-13_adset3_copy_check.md`).
 - **Our Wave 1–4 build sheets** may be partly overtaken by the team's own photo wave: hold them until Alvian answers ask #2 (are the 15 images the photos?).
 - **ADSET-3 break-even table** (share × delivery days) now in the read card: 1/3 share → 83.8k from 11/14, 79.3k from 11/15, 73.4k from 11/16 *(calc)*.
 - **M-002 (P1):** weekly report Mon 11/16 07:00; skeleton `fab_advertising/reports/weekly/2026-11-16.md` now has the ADSET-3 row + section + refreshed gate paragraph. Incess 019 Copy 5 rule: propose pause if 3-wk CPL > 105k.
 
 ## Next actions (dated or triggered)
-1. **Polls today:** next ~13:00 and ~19:00: activity log + ADSET-3 spend/impressions today. If still 0 impressions at 13:00 → check ad review/delivery status and flag.
+1. **19:00 poll:** activity log + ADSET-3 impressions. Still 0 → move the min-spend Rp 75k change into OUTBOX "Needs you" as a one-line ask (ask #3) and drop the [RISK] note. Delivering → drop the [RISK] note, note start time (sets d in the break-even table).
 2. **11/14 07:00 readout:** tracker row; first full day of ADSET-3: fill the read card's "Day-1 share check" line (share → break-even from its table), rules 1–2; Ad015 triggers (CTR < 1.30% / CPL > 120k / freq > 2.5).
 3. **Every run:** INBOX/OUTBOX for "W1 W2 done", photos answer, TourHub actor answer. Log applied changes in the tracker.
 4. **When W1/W2 are applied:** re-curl the page, run `fab_advertising/reports/w1w2_lift_template.md`.
@@ -37,6 +37,6 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - Markus (team) edits the Fab account via the Rudi MCP app (actor 61594758338050).
 
 ## Open loops (current state, one line each)
-- Activity log: 11/13 00:04–04:08 ADSET-3 build (TourHub actor + Markus); nothing else since the 11/09 ad-006 pause. PEIKIRA2 ACTIVE.
+- Activity log: 11/13 00:04–04:08 ADSET-3 build (TourHub actor + Markus); since then only a Meta 'started delivery' event (12:11). PEIKIRA2 ACTIVE.
 - Site: W1/W2 not applied (curl 11/13 07:02). W3 on hold pending the W4 routing rule.
 - Parked in OUTBOX: optional BC204 cap probe, W3/W4 + WA follow-up script, 4 disabled ad accounts, Incess bid-cap, lead-value questions.

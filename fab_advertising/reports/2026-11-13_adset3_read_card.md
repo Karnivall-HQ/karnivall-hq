@@ -52,3 +52,11 @@ Pull level=adset, campaign `120254051672440572`, time_range 11/13→11/13 (and 1
 | 80% | 100.1k | 97.4k | 93.6k |
 - Readout line template: "ADSET-3 day N: Rp ⟨spend⟩ = ⟨s⟩% of PEIKIRA, ⟨leads⟩ leads; break-even at that share = ⟨BE⟩ *(calc)*; rule 1 (>70% & 0 leads) ⟨ok/flag⟩; rule 2 (≥ Rp 190k & 0 leads) ⟨ok/flag⟩."
 - Late start costs margin: every day ADSET-3 stays at 0 impressions lowers the bar by ~4–6k at a 1/3 share. Low share (< 25%) means ADSET-3 can't open the gate alone, whatever its CPL: W1+W2 then carries it.
+
+## Delivery check 11/13 13:02 WIB (rule: still 0 impressions at 13:00 → check and flag)
+- **ADSET-3 today: Rp 0 / 0 impressions, ~9h after ACTIVE (04:05).** Ad set delivery = active / `in_learning_phase` (0 conversions). 5 ads active / learning, ad FAB-20261109-007 `pending / preparing`. `ads_get_errors` on the ad set + 6 ads: **none**. All ads `ACTIVE` (= past review).
+- Same campaign today: control Rp 101,228 / 2,102 impr; PEIKIRA2 Rp 76,028 / 1,448 impr → CBO has spent Rp 177,256 *(calc)* and given ADSET-3 nothing.
+- Settings are not the blocker: same pixel/LEAD goal, same Jakarta city geo, Advantage+ audience, IG-only placements (a superset of the control's). No end time, no spend cap visible.
+- **Diagnosis (INFERRED):** CBO starvation. Meta allocates to the two ad sets with conversion history (29 and 10) and has not yet tested the new one. Not an error, not a rejection.
+- **Cost of waiting:** every 0-impression day lowers ADSET-3's 1/3-share break-even ~4–6k (table above). From 11/15 the bar is 79.3k, from 11/16 73.4k *(calc)*.
+- **Conditional proposal (for Alvian/Markus to apply; Fuku does not touch the account):** if ADSET-3 is still at 0 impressions at the **19:00 poll**, set an ad-set **minimum daily spend of Rp 75,000** on PEIKIRA-FAB-20261109-ADSET-3 (Ads Manager → ad set → Budget & schedule → Ad set spend limits → Daily minimum), CBO total unchanged at Rp 300k. Remove the minimum at the 11/20 read or when rule 2 fires (≥ Rp 190k, 0 leads). Why 75k: 25% of the CBO, enough for ~1 expected lead every 1.3 days at 95k *(calc)*, without starving Ad015.
