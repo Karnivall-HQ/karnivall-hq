@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-13 16:02 WIB (cloud heartbeat: quiet run → 11/27 ADSET-3 verdict template written)_
+_Last updated: 2026-11-13 17:02 WIB (cloud heartbeat: quiet run → Incess 019 Copy 5 pre-pull)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -11,7 +11,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - **⚠️ ADSET-3 not delivering:** Rp 0 / 0 impr at 13:02 (~9h live), no errors, ads approved; CBO gave Rp 177k to control + PEIKIRA2 *(INFERRED starvation)*. [RISK] in OUTBOX; fix pre-written (min daily spend Rp 75k) in the read card "Delivery check". Copy check: ads clean, page gaps P1–P3 (`2026-11-13_adset3_copy_check.md`).
 - **Our Wave 1–4 build sheets** may be partly overtaken by the team's own photo wave: hold them until Alvian answers ask #2 (are the 15 images the photos?).
 - **ADSET-3 break-even table** (share × delivery days) now in the read card: 1/3 share → 83.8k from 11/14, 79.3k from 11/15, 73.4k from 11/16 *(calc)*.
-- **M-002 (P1):** weekly report Mon 11/16 07:00; skeleton `fab_advertising/reports/weekly/2026-11-16.md` now has the ADSET-3 row + section + refreshed gate paragraph. Incess 019 Copy 5 rule: propose pause if 3-wk CPL > 105k.
+- **M-002 (P1):** weekly report Mon 11/16 07:00; skeleton `fab_advertising/reports/weekly/2026-11-16.md` now has the ADSET-3 row + section + refreshed gate paragraph. Incess 019 Copy 5: 3-wk to date 147.2k (4 leads); needs ≥ 2 leads 11/13–11/16 to avoid the pause ask (lookup `2026-11-13_incess_019copy5_prepull.md`).
 
 ## Next actions (dated or triggered)
 1. **19:00 poll:** activity log + ADSET-3 impressions. Still 0 → move the min-spend Rp 75k change into OUTBOX "Needs you" as a one-line ask (ask #3) and drop the [RISK] note. Delivering → drop the [RISK] note, note start time (sets d in the break-even table).
@@ -25,7 +25,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **Partial-week pre-pull for 11/16 (+ ADSET-3 rows):** on a quiet run 11/14–15, pull 11/09–11/13 Fab+Incess ad-set rows (by object_ids) into the skeleton as a draft so Monday is a delta.
 2. **Wave 5–6 build sheet:** rows for 12/21 + 12/28 waves (criterion-2 re-plan), drawn from the Wave 1–4 angles not yet used; page-checked per `ad-copy-page-check.md`.
-3. **Incess 019 Copy 5 3-week pre-pull:** weekly CPL rows by object_ids so the 11/16 "pause if 3-wk CPL > 105k" rule is a lookup.
+3. **Wave 5–6 photo-brief fallback:** if ask #2 says the 15 images are NOT the shoot, a 1-page shoot-day checklist for Markus from `shoot_card_v2` (else drop).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Website W1 + W2, and who edits the site. #2 Are the 15 new images the phone photos + is the Kuningan site open now (G6/P1)? FYI: who is the "TourHub" actor?
