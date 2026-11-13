@@ -47,6 +47,7 @@ Reading:
 - 11/20 gate brief: add the scenario table above as the volume half of the call (criterion 2).
 - New read rule for each wave: judge on **2 weeks** (≥ Rp 1.4M spend or 14 days), not one good week.
 - Scale steps (+25% per 3 days) only on a 7d CPL ≤ 95k **and** a winning wave present; never on budget alone (KENJI proof).
+- → Apply-ready S1 card with gate + read rules: `2026-11-20_s1_scale_card.md` (11/13).
 
 ## Labels
 - Account data: every row in the wave table; benchmark and trend outputs.
