@@ -6,7 +6,7 @@ _Used only if the 11/20 readout sends Variant M or H (`2026-11-20_gate_miss_note
 1. **Rp 1M/day needs 4–7 winning ad sets/waves at once** (each adds Rp 100–185k/day at ≤ 95k; base ≈ Rp 340k/day) *(calc, scale plan v2)*.
 2. **One 3-ad phone-photo wave per week from 11/23, six waves by 12/28** = 18 ads with a day-14 verdict by 01/11. At 1 winner per 3–5 ads that is **3.6–6.0 winners** (+ ADSET-3: 0–1) *(calc; hit rate INFERRED)*.
 3. **01/15 is reachable only in the middle-to-good case**: it needs a hit rate of **≥ ~26%** (≈ 1 in 4 ads) at a mid winner size of Rp 142k/day *(calc)*. Low case ≈ Rp 700k/day by 01/15 *(calc)*.
-4. **What it needs from Alvian:** (a) agree to the 01/15 date, (b) **3 new phone photos every week** from the Fab team (the shoot card already lists them). Everything else is Markus applying ready-made build sheets.
+4. **What it needs from Alvian:** (a) agree to the 01/15 date, (b) **3 new phone photos every week** from the Fab team (week-by-week list: `../creatives/2026-11-13_weekly_photo_calendar.md`). Everything else is Markus applying ready-made build sheets.
 
 ## Wave calendar (verdict = day-14 read, rule from scale plan v2)
 | Wave | Launch | Day-14 verdict | Phone ads judged (cum.) | Winners expected *(calc, 1/5–1/3)* | Build sheet |
