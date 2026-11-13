@@ -32,4 +32,4 @@ Target CPL 95k. Projection: CBO Rp 300k/day over 3 ad sets → ~Rp 70–130k/day
 - Enhancements: `cv_transformation` / `image_touchups` change the raw-photo look this test is about (INFERRED). Turning them off means editing live ads (re-review). Revisit only if day-7 CTR < control's.
 
 ## Effect on the 11/20 gate
-- 7d CPL 11/06–11/12 = Rp 103,286 *(calc)*. With W1+W2 (same lift ratio 1.129 as the gate brief) ≈ **91.5k** *(calc)* → opens the gate. Without a site fix, only a strong ADSET-3 (≤ ~70k on a large share) could pull 7d under 95k by 11/20 *(calc, INFERRED)*.
+- 7d CPL 11/06–11/12 = Rp 103,286 *(calc)*. With W1+W2 (same lift ratio 1.129 as the gate brief) ≈ **91.5k** *(calc)* → opens the gate. Without a site fix, ADSET-3 alone opens the gate at ≤ Rp 83.5k CPL on a 1/3 share, or ≤ 95.7k on a 60% share *(calc, 11/13 09:01 gate refresh in `2026-11-20_gate_brief.md`)*.

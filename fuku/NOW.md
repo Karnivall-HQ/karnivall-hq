@@ -1,12 +1,13 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-13 08:01 WIB (cloud heartbeat: ADSET-3 copy check, groundwork)_
+_Last updated: 2026-11-13 09:01 WIB (cloud heartbeat: 11/20 gate brief refresh, groundwork)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
 - **M-001 (P0):** 7d Fab (11/06–11/12) **CPL Rp 103.3k** *(calc)* ❌ vs 95k (was 100.5k); Rp 339k/day vs 1M. PEIKIRA 116.4k (18), BC 56.0k (5). Control 124.9k (8), PEIKIRA2 109.6k (10). Benchmark: control 89% worse than peers, PEIKIRA2 69%.
 - **Ad015:** 7d CTR 2.24%, CPL 114.5k, freq 1.38 → no trigger (CPL < 120k), 91.7% of control spend. CPL drifting up: watch.
 - **🚀 Team launched ADSET-3** `120254400251570572` in the PEIKIRA CBO (Rp 300k/day now split 3 ways): 6 ads, new images (15 in library), copy "Rp750rb" + "Jakarta Selatan (Kuningan and Sudirman)", Advantage+ audience + creative enhancements on. ACTIVE 04:05 11/13. Built by new actor "TourHub Shared Office…" (61557670947597) + Markus. Read card (kill/compare/verdict): `fab_advertising/reports/2026-11-13_adset3_read_card.md`.
-- **Site vs new ads:** page still "Jakarta Pusat" ×9, "Rp 800.000" ×1 → now contradicts the new ads. W1/W2 re-framed as OUTBOX #1 (with fix ≈ 91.5k *(calc)*). Paste-ready: `fab_advertising/reports/2026-11-11_w1w2_paste_ready.md`.
+- **Site vs new ads:** page still "Jakarta Pusat" ×9, "Rp 800.000" ×1 → contradicts the new ads. OUTBOX #1. Paste-ready: `fab_advertising/reports/2026-11-11_w1w2_paste_ready.md`.
+- **11/20 gate (refreshed 09:01, `2026-11-20_gate_brief.md`):** site fix +0.5pt → 93.1k if live by 11/14 eve, ❌ 97.9k from 11/16. ADSET-3 alone opens it at ≤ 83.5k (1/3 share) / ≤ 95.7k (60%) *(calc)*.
 - **ADSET-3 copy check done** (`fab_advertising/reports/2026-11-13_adset3_copy_check.md`): ads clean; page gaps P1 "akan launching" (contradicts ad 018), P2 access hours, P3 pickup cap. Still Rp 0 / 0 impr at 08:0x.
 - **Our Wave 1–4 build sheets** may be partly overtaken by the team's own photo wave: hold them until Alvian answers ask #2 (are the 15 images the photos?).
 - **M-002 (P1):** weekly report Mon 11/16 07:00; skeleton `fab_advertising/reports/weekly/2026-11-16.md`. Add ADSET-3 launch + read rules. Incess 019 Copy 5 rule: propose pause if 3-wk CPL > 105k.
@@ -21,8 +22,8 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **Partial-week pre-pull for 11/16 (+ ADSET-3 rows):** on a quiet run 11/14–15, pull 11/09–11/13 Fab+Incess ad-set rows (by object_ids) into the skeleton as a draft so Monday is a delta.
-2. **11/20 gate brief refresh** (due now: base 103.3k, add the ADSET-3 path): re-run the W1/W2 and Wave 1 paths on the new 7d (and "no site fix" path if W1/W2 still unanswered, per action 5).
-3. **Weekly report prep:** draft the "ADSET-3 launch + copy check" section of `fab_advertising/reports/weekly/2026-11-16.md` (facts only, read rules link).
+2. **Weekly report prep:** draft the "ADSET-3 launch + copy check" section of `fab_advertising/reports/weekly/2026-11-16.md` (facts only, read rules link).
+3. **ADSET-3 day-1 share check prep:** one-line formula block in the read card for the 11/14 readout (share %, break-even at that share from the gate refresh table).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Website W1 + W2, and who edits the site. #2 Are the 15 new images the phone photos + is the Kuningan site open now (G6/P1)? FYI: who is the "TourHub" actor?

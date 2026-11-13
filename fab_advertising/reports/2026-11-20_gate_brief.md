@@ -1,4 +1,33 @@
 # M-001: 11/20 gate brief (what gets the 7d CPL to ≤ Rp 95k by 11/20)
+
+## 🔄 Refresh 2026-11-13 09:01 WIB (new base + ADSET-3 path). This section supersedes the numbers below.
+**Base:** 7d 11/06–11/12 (11/13 readout, `m001_tracker.md`): PEIKIRA Rp 2,095,538 / 18 (116.4k), BC Rp 280,028 / 5 (56.0k) → **Rp 103,286** *(calc)*. Window judged on 11/20 = full days **11/13–11/19**. Method as below: per-day rates held flat, new spend replaces PEIKIRA spend 1:1 (CBO Rp 300k unchanged), BC flat. ADSET-3 assumed to deliver from 11/14 (6 of 7 days; Rp 0 / 0 impr at 08:0x 11/13).
+
+| # | Scenario | 7d CPL (11/13–11/19) | Gate |
+|---|---|---|---|
+| A | Nothing changes, ADSET-3 gets no share | **Rp 103.3k** *(calc)* | ❌ |
+| C | W1+W2 live, +0.5pt LP→Lead, for 6 / 5 / 3 days (live 11/13 eve / 11/14 eve / 11/16 eve) | **93.1k / 94.6k / 97.9k** *(calc)* | ✅ / ✅ just / ❌ |
+| C+ | W1+W2, +1pt, 6 / 5 / 3 days | **84.7k / 87.3k / 93.1k** *(calc)* | ✅ |
+| E | ADSET-3 takes **1/3** of PEIKIRA at 70k / 95k / 130k CPL | **90.1k / 98.4k / 105.7k** *(calc)* | ✅ / ❌ / ❌ |
+| E | ADSET-3 takes **60%** of PEIKIRA at 70k / 95k / 130k CPL | **81.5k / 94.7k / 107.8k** *(calc)* | ✅ / ✅ just / ❌ |
+| C+E | W1+W2 (+0.5pt, 6 d) + ADSET-3 1/3 at 95k / 130k | **88.6k / 95.3k** *(calc)* | ✅ / ❌ just |
+
+**Break-even ADSET-3 CPL (opens the gate with no site fix)** *(calc)*: share 1/3 → **≤ Rp 83.5k**; share 60% → ≤ 95.7k; share 80% → ≤ 100.1k. It is easier than the 11/11 "≤ 70k" bar because the other two PEIKIRA ad sets now run 116k (control 124.9k, PEIKIRA2 109.6k): any new ad set that merely hits target pulls the blend down.
+
+### What changed vs 11/11
+1. **ADSET-3 is now a second independent path** (team-launched, not Wave 1). Its photos are new (15 images, INFERRED), so its CPL is unknown; the read card (`2026-11-13_adset3_read_card.md`) decides keep/kill. Wave 1 (scenario D) is on hold behind ask #2, so D is dropped from this table.
+2. **The site fix has a deadline inside the window:** at +0.5pt it must be live by **11/14 evening** (5 days) to open the gate on its own; from 11/16 it no longer does (97.9k). At +1pt it still works if live by 11/16.
+3. **Item 4 / scenario B is retired** (11/12 card). Not modelled.
+4. W1/W2 still the only lever that does not depend on an untested ad set; with ADSET-3 at target, C+E gives ~6k of margin below 95k against the ±10% weekly noise *(calc)*.
+
+### Read on 11/20
+- Gate ✅ and ADSET-3 share ≥ 1/3 at ≤ 84k → credit ADSET-3 (and start S1 of the scale ladder per `2026-11-12_scale_plan_v2.md`).
+- Gate ✅ with W1/W2 live and ADSET-3 ≥ 95k → credit the site; pixel LP→Lead read (`w1w2_lift_template.md`) confirms.
+- Gate ❌ → tell Alvian criterion 2 (Rp 1M/day by 12/05) is out of reach, as committed.
+- Caveat: 23 leads/week; ±2 leads ≈ ±10% CPL *(calc)*. One week can open or shut the gate by noise alone.
+
+---
+_Original brief (2026-11-11), kept for history:_
 _2026-11-11 08:02 WIB, Fuku cloud heartbeat (groundwork). Read-only, no ad-account change. Propose-only._
 
 **Why 11/20:** the scale plan (`scale_plan.md`) needs 5 × +25% steps, 3 days apart, to reach Rp 1M/day by 12/05. That only works if the 7d CPL is ≤ Rp 95k by the **11/20 readout (window 11/13 → 11/19)**. For a change to count for the whole window, it has to be live by **11/12 evening**.
