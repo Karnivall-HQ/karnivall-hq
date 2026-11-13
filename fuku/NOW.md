@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-13 11:01 WIB (cloud heartbeat: S1 scale card pre-staged for 11/20, groundwork)_
+_Last updated: 2026-11-13 12:02 WIB (cloud heartbeat: 11/20 gate-miss/hold messages pre-staged, groundwork)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -18,13 +18,13 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 2. **11/14 07:00 readout:** tracker row; first full day of ADSET-3: fill the read card's "Day-1 share check" line (share → break-even from its table), rules 1–2; Ad015 triggers (CTR < 1.30% / CPL > 120k / freq > 2.5).
 3. **Every run:** INBOX/OUTBOX for "W1 W2 done", photos answer, TourHub actor answer. Log applied changes in the tracker.
 4. **When W1/W2 are applied:** re-curl the page, run `fab_advertising/reports/w1w2_lift_template.md`.
-5. **11/20 readout:** ADSET-3 day-7 read (rule 3) + gate call. G1–G3 pass → send S1 card line (`fab_advertising/reports/2026-11-20_s1_scale_card.md`, PEIKIRA CBO 300k→375k); else gate-miss note.
+5. **11/20 readout:** ADSET-3 day-7 read (rule 3) + gate call. G1–G3 pass → S1 card line (`2026-11-20_s1_scale_card.md`); else variant H/M from `fab_advertising/reports/2026-11-20_gate_miss_note.md`.
 6. **Retro #3:** ~11/18 or at 15 new lessons.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **Partial-week pre-pull for 11/16 (+ ADSET-3 rows):** on a quiet run 11/14–15, pull 11/09–11/13 Fab+Incess ad-set rows (by object_ids) into the skeleton as a draft so Monday is a delta.
-2. **"Gate ❌" message draft:** the 11/20 honest-miss note (criterion 2 out of reach by 12/05, revised date + what still moves CPL), ready to send if 7d > 95k; also the "G1 ✅ / G2 ❌ hold" variant from the S1 card.
-3. **11/20 readout template:** one fill-in page that runs gate (G1–G3 of `2026-11-20_s1_scale_card.md`), ADSET-3 rule 3, and picks S1 card vs gate-miss note.
+2. **11/20 readout template:** one fill-in page that runs gate (G1–G3 of `2026-11-20_s1_scale_card.md`), ADSET-3 rule 3, and picks S1 card vs `2026-11-20_gate_miss_note.md` (variant H / M1 / M2).
+3. **Criterion-2 re-plan draft:** if 12/05 volume misses, a weekly photo-wave cadence to Rp 1M/day by 01/15 (waves, winners needed, budget steps) to back the M-variant ask.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Website W1 + W2, and who edits the site. #2 Are the 15 new images the phone photos + is the Kuningan site open now (G6/P1)? FYI: who is the "TourHub" actor?
