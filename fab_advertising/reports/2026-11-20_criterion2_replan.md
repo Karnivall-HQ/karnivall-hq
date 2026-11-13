@@ -16,8 +16,8 @@ _Used only if the 11/20 readout sends Variant M or H (`2026-11-20_gate_miss_note
 | W2 | 11/30 | 12/14 | 6 | 1.2–2.0 | `creatives/2026-11-12_wave2_build_sheet.md` |
 | W3 | 12/07 | 12/21 | 9 | 1.8–3.0 | `creatives/2026-11-12_wave3-4_build_sheet.md` |
 | W4 | 12/14 | 12/28 | 12 | 2.4–4.0 | same (R4 → K1 → S3) |
-| W5 | 12/21 | 01/04 | 15 | 3.0–5.0 | to write (from W1–W4 winning angles) |
-| W6 | 12/28 | 01/11 | 18 | 3.6–6.0 | to write |
+| W5 | 12/21 | 01/04 | 15 | 3.0–5.0 | `creatives/2026-11-13_wave5-6_build_sheet.md` (2 winner iterations + 1 fresh) |
+| W6 | 12/28 | 01/11 | 18 | 3.6–6.0 | same |
 | W7+ | 01/04 → | after 01/15 | — | don't count for 01/15 | — |
 
 If photos arrive late, every row slips by the same number of days; a wave launched after 12/28 can't be judged by 01/15.
@@ -38,7 +38,7 @@ If photos arrive late, every row slips by the same number of days; a wave launch
 ## Risks (honest)
 - **Winners decay.** Control went 81k → 173k CPL in one week; Ad015 carried it ~3 weeks [account data]. Some early winners will be gone by 01/15, so the mid case may need W7. [INFERRED]
 - **Hit rate is a guess.** "1 in 3–5" comes from the 11/05 visual review (phone photos Rp 18–68k vs renders 200–372k), not a controlled test. W1's day-14 read (12/07) is the first real number: if W1 + W2 give 0 winners from 6 ads, re-forecast on 12/14 and tell Alvian then, not on 01/15.
-- **CBO starvation.** ADSET-3 shows a new ad set can sit at Rp 0 inside the CBO. Each wave needs the ad-set minimum daily spend fix (Rp 75k) from day 1 [INFERRED; see `2026-11-13_adset3_read_card.md` "Delivery check"].
+- **CBO starvation.** ADSET-3 shows a new ad set can sit at Rp 0 inside the CBO. Waves are ads inside the control ad set, so the ad-set min-spend fix doesn't reach them; use the Wave 1 starvation rule (< 10% of the ad set's spend by day 3, `wave1_read_template.md`). Min daily spend Rp 75k only if a wave gets its own ad set [INFERRED; corrected 11/13 18:02, see `../creatives/2026-11-13_wave5-6_build_sheet.md` rule 5].
 - **Seasonality.** 12/20–01/05 holiday weeks may move CPM and lead intent; no account data for last December. [unknown]
 - **The site still contradicts the ads** until W1/W2 is applied; every wave lands on that page.
 

@@ -25,6 +25,9 @@ Sticker rules (from the winners): ≤ 7 words, ≤ 1 emoji, price always on the 
 | **P11** | **A bicycle leaning in a living room / apartment hallway, kardus behind it** | **R4** | 4 | new |
 | **P12** | **Online-shop stock: stacked shipping cartons / polymailers in a home corner** | **R5** | 4 | new |
 | **P12-alt** | **Office corner with stacked kardus / arsip boxes (any office)** | **K1** | 4 | new 11/12 17:02, replaces R5 until its gate clears |
+| P13 | Someone carrying a kardus out of a home / into a car boot (no face needed) | F1 | 5–6 | added 11/13 18:02 (`2026-11-13_wave5-6_build_sheet.md`) |
+| P14 | Spare room crammed: kasur leaning on a wall, lemari, sofa, kardus | F2 | 5–6 | added 11/13 18:02 |
+| P15 | Living-room corner with kardus + leftover holiday boxes | F3 | 6 only | added 11/13 18:02, seasonal |
 
 ## Stickers for the 6 new photos (top · middle · bottom)
 Every middle sticker uses a claim the landing page already makes, in its own words (checked 11/12 12:02, page all ads land on: `/sewa-gudang-self-storage-jakarta/`).
