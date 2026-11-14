@@ -43,7 +43,7 @@ Window 11/13 00:00 → 11/20 07:00 WIB, account `484578521394893`. Fill one line
 |---|---|---|
 | G1 | account 7d CPL ⟨x⟩ ≤ 95,000 | ☐ ✅ ☐ ❌ |
 | G2 | ADSET-3: CPL ≤ control **and** ≤ 95k on ≥ 3 leads · *or* control / PEIKIRA2: 7d ≤ 95k on ≥ 4 leads | ☐ ✅ (⟨which⟩) ☐ ❌ |
-| G3 | no kill rule in P5 (ADSET-3 rules 1–2, Ad015 triggers) | ☐ ✅ ☐ ❌ (⟨rule, date⟩) |
+| G3 | no kill rule: ADSET-3 rules 1–2 (P2 + P5, cumulative) · Ad015 triggers on P4 (7d), only if Ad015 ACTIVE (paused → n/a; tripped-and-active → S1 card "G3 ❌ only because Ad015" row) | ☐ ✅ ☐ ❌ (⟨rule, date⟩) |
 
 ## Step 4b: criterion-1 last workable date (added 2026-11-14 16:01; the 12/05 window is 11/28–12/04)
 _Whatever the gate says, the 11/20 note must carry criterion 1's date. Source: `2026-12-05_criterion1_path.md`; method `meta-modelling-and-planning.md` §A1–A2._

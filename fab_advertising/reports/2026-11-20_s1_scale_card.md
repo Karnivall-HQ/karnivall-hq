@@ -6,20 +6,21 @@ _Sources: `2026-11-12_scale_plan_v2.md` (capacity, +25% rule), `2026-11-13_adset
 | # | Condition | Source | Pass? (fill 11/20) |
 |---|---|---|---|
 | G1 | Fab 7d CPL (11/13–11/19) **≤ Rp 95,000** | tracker | ☐ |
-| G2 | **A winning engine is present in PEIKIRA**: ADSET-3 day-7 CPL ≤ control CPL (read-card rule 3) **and** ≤ 95k, on ≥ 3 leads; *or* control/PEIKIRA2 7d ≤ 95k on ≥ 4 leads | ad-set pull by `object_ids` | ☐ |
-| G3 | **No kill rule tripped** in the last 3 days (ADSET-3 rules 1–2, Ad015 triggers CTR < 1.30% / CPL > 120k / freq > 2.5) | readouts 11/18–11/20 | ☐ |
+| G2 | **A winning engine is present in PEIKIRA**: ADSET-3 day-7 CPL ≤ control CPL (read-card rule 3) **and** ≤ 95k, on ≥ 3 leads; *or* control/PEIKIRA2 7d ≤ 95k on ≥ 4 leads. ADSET-3 < Rp 10k in 7d = starved → only the control/PEIKIRA2 branch can pass | readout P2 (7d 11/13–11/19, `object_ids`) | ☐ |
+| G3 | **No kill rule tripped**: ADSET-3 rules 1–2 (cumulative, P2 + P5 11/17–11/19) · Ad015 triggers CTR < 1.30% / CPL > 120k / freq > 2.5 on its **own 7d window** (P4), counted **only if Ad015 is ACTIVE** on 11/20 (paused → n/a) | readout P2, P4, P5 + activity log | ☐ |
 
 - G1 ✅ but G2 ❌ (the CPL came from the site fix, not from a new winner) → **don't scale**: send "hold at Rp 300k, CPL fixed, volume needs a winning wave" instead. Reason: scale plan v2, budget alone fails (KENJI Rp 741k/day → 185k CPL). [account data]
 - G1 ❌ → this card is not used; the gate-miss note goes out instead.
+- G1 ✅ G2 ✅ but G3 ❌ **only because Ad015 is still active and tripped** (its CPL trigger already fired 11/14: 7d 166.1k) → don't scale into it: ~90% of control spend would ride a fading ad. Re-send OUTBOX ask #1(a) (pause Ad015) as the one ask; S1 follows on the first readout after the pause where G1–G2 still pass. *(added 11/14 19:02 dry-run)*
 
 ## The change (one field, one campaign)
 **PEIKIRA-BID-CAP-LEADS-CAMPAIGN** `120254051672440572` → campaign daily budget **Rp 300,000 → Rp 375,000** (+25%).
 - Nothing else: no ad-set, ad, bid, audience or BC change. CBO decides the split; we read where it lands.
 - Why PEIKIRA and not BC: BC already has a Rp 5M budget and spends ≈ Rp 23–53k/day under its Rp 94,250 caps; more BC budget adds nothing (item 4 retired 11/12, `2026-11-12_item4_bidcap_card.md`). [account data]
 - Why +25%: scale-plan rule (+25% per ≥ 3 days, only on 7d ≤ 95k + a winner). Meta docs give no budget-change speed → the step size is [FOLKLORE], the read rules below are what protect the CPL.
-- Expected *(calc)*: account ≈ Rp 339k → **≈ Rp 414k/day**. At the gate CPL (≤ 95k) that is ≈ +0.8 leads/day. Marginal leads usually cost more than average [INFERRED], so the read rules judge the step on the 3-day CPL, not the 7d one alone.
+- Expected *(calc)*: account Rp ⟨P1 Rp/day⟩ → **⟨P1 Rp/day + 75k⟩/day** (11/07–11/13 base: Rp 333k → ≈ Rp 408k). At the gate CPL (≤ 95k) that is ≈ +0.8 leads/day. Marginal leads usually cost more than average [INFERRED], so the read rules judge the step on the 3-day CPL, not the 7d one alone.
 
-### Paste-ready for Alvian (Ads Manager)
+### Paste-ready for Alvian or Markus (Ads Manager)
 1. Campaigns tab → search `PEIKIRA-BID-CAP-LEADS-CAMPAIGN` → Budget column → `375000` (IDR, daily) → Publish.
 2. Reply "S1 done HH:MM" in INBOX so Fuku logs it in the tracker change log and starts the 3-day read.
 
@@ -36,4 +37,5 @@ Day 0 = the day S1 is applied. Compare PEIKIRA full days after S1 vs the 7 full 
 - So the S1 message on 11/20 states: CPL criterion met; volume on track only if each wave keeps adding a winner.
 
 ## Ready-to-send line (11/20, if G1–G3 pass)
+_Fill map: ⟨x⟩ = readout Step 2 account 7d; ⟨winner⟩ + ⟨y⟩ = the G2 branch that passed (Step 2 table CPL); criterion-1 line from readout Step 4b goes right after the first sentence._
 > ❓ **[DECISION] S1: PEIKIRA CBO Rp 300k → Rp 375k/day?** 7d CPL Rp ⟨x⟩ ✅ (≤ 95k), ⟨winner⟩ at Rp ⟨y⟩/lead. One field, revert rule set (3-day CPL > 125k → back to 300k). Card: `fab_advertising/reports/2026-11-20_s1_scale_card.md`. My recommendation: **yes**.

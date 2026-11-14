@@ -33,6 +33,7 @@
   4. *Scale*: propose budget raises of ~20–30% every 3–4 days, only while the 7d CPL ≤ Rp 95k. Alvian applies them. Fuku verifies the effect in the next readouts. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
+  - 2026-11-14 19:02: Poll: no account edits; ADSET-3 Rp 0 (~39h); site still unfixed. 11/20 S1 card dry-run: G3 now reads Ad015 on its own 7d window and only if it's still active; new row: if only Ad015 trips G3, re-send ask #1(a) instead of scaling.
   - 2026-11-14 14:02: Criterion-1 model is now a daily 07:00 step: `criterion1_model_1205.py` takes the fresh 7d base by flags and prints the last workable date (today: **11/29**, 15 days left *(calc)*); routine written at the top of `m001_tracker.md`. No new ask.
   - 2026-11-14 16:01: 11/20 readout template Step 4b: the 11/20 note will carry the criterion-1 last workable date whatever the gate says. No new ask.
   - 2026-11-14 13:01: Poll: no account edits; ADSET-3 still Rp 0 (~33h); control 3 leads today to 13:01 (half-day, not a metric). 11/27 verdict template now carries the criterion-1 re-run + 12/19 branch (Step 5b). No new ask.
