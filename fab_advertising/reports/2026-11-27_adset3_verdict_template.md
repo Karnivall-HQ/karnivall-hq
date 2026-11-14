@@ -53,6 +53,19 @@ Decay check (WINNER/PROMISING only): wk2 CPL > 1.5× wk1 CPL → label "decaying
 - **LOSER:** one-line pause ask; next photo wave goes into its own ad set with min spend from day 1 (re-plan risk "CBO starvation").
 - **Any verdict:** update the re-plan hit rate: ADSET-3 winners ⟨n⟩ of ⟨ads judged⟩ → record it next to the 1/5–1/3 guess.
 
+## Step 5b: criterion-1 re-run (added 2026-11-14 13:01, same readout)
+_The 11/27 readout is also the last clean date for criterion 1 (7d ≤ 95k on the 12/05 window 11/28–12/04). Source: `2026-12-05_criterion1_path.md`._
+1. Update the base in `fuku/bin/criterion1_model_1205.py` to the 7d 11/20–11/26 numbers (PEIKIRA spend/leads, BC spend/leads, PEIKIRA2 CPL), keep 11/27 eve as "live by", and run it. Lock actuals per `meta-modelling-and-planning.md` §A2.
+2. Fill one line: base ⟨⟩ · with what is **already live** (Ad015 paused ☐ / site W1+W2 ☐ / ADSET-3 verdict ⟨⟩) ⟨⟩ *(calc)* · gap to 95k ⟨⟩.
+3. Branch (pick one, replaces nothing in the 3-ask cap unless stated):
+| State on 11/27 | Projected 12/04 7d | Action |
+|---|---|---|
+| ≤ 90k projected | on track | no ask; FYI line in the report: "criterion 1 on track for 12/05 (⟨calc⟩)". |
+| 90–95k projected | coin flip | no new ask; re-push the one still-open lever (#1 or #2) as a one-liner: "live by 11/29 eve or criterion 1 slips". |
+| > 95k, a lever (#1 or #2) still unapplied | ❌ unless it lands by 11/29 | re-ask that lever only, with "last workable date 11/29 eve". |
+| > 95k, both levers live **or** neither live and ADSET-3 not WINNER | ❌ for 12/05 | the single ❓: **"Move criterion 1 to 12/19 (window 12/12–12/18), same Rp 95k target?"** Recommendation: yes only if paired with the missing lever(s) live that week; a move without a lever just reschedules the miss. Replaces the oldest parked M-001 ask. |
+4. Record the projected number + branch in the tracker row and MISSIONS M-001 progress.
+
 ## Step 6: message + record
 - Ask line (pick one, under the 3-ask cap; replace any older ADSET-3 ask):
   - WINNER: "❓ ADSET-3 won (Rp ⟨CPL⟩ on ⟨n⟩ leads, 14d). Raise the PEIKIRA CBO Rp ⟨now⟩ → ⟨+100k⟩/day? Card: ⟨link⟩. My recommendation: yes; I'll read it on day 3 and revert at > 125k."
