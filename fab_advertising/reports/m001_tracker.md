@@ -2,6 +2,11 @@
 Goal: 7d avg CPL ≤ Rp 95,000 AND sustained Rp 1,000,000/day. Deadline 2026-12-05.
 Numbers come from Rudi MCP (read-only). *(calc)* = Fuku's arithmetic. Proposed changes are applied by Alvian, never by Fuku.
 
+## 07:00 readout routine (added 2026-11-14 14:02)
+1. Pull 7d Fab by campaign + PEIKIRA ad sets (object_ids) → weekly row below.
+2. Gate: re-run `fuku/bin/gate_model_1120.py` with yesterday locked (until 11/20).
+3. Criterion 1: `python3 fuku/bin/criterion1_model_1205.py --peik <S> <L> --bc <S> <L> --p2 <S> <L> --today <YYYY-MM-DD>` → copy the "LAST WORKABLE DATE" line into the row's Notes and NOW.md. If it says NONE or days left ≤ 2 → flag in the M-001 report (no new ask beyond the cap).
+
 ## Weekly readouts (7d windows)
 | Readout (WIB) | Window | Spend 7d | Spend/day | Leads | 7d CPL | Gate (≤95k)? | Notes |
 |---|---|---|---|---|---|---|---|

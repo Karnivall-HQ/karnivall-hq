@@ -1,9 +1,18 @@
 # M-001 criterion 1 path model for the 12/05 deadline (Fuku, 2026-11-14 11:02 WIB).
 # Judged window: 7d 11/28-12/04 (12/05 07:00 readout). Base = 7d 11/07-11/13 rates (tracker 11/14 row).
 # A lever live by 11/27 eve counts all 7 days; live later -> fewer days. BC flat. Run: python3 fuku/bin/criterion1_model_1205.py
-P_S=2016453; P_L=14            # PEIKIRA 7d
-BC_S=313500; BC_L=6            # BC 7d
-P2_CPL=924806/8                # PEIKIRA2 115.6k
+# Daily use (07:00 readout): pass the fresh 7d base + today's date, e.g.
+#   python3 fuku/bin/criterion1_model_1205.py --peik 2016453 14 --bc 313500 6 --p2 924806 8 --today 2026-11-15
+# Defaults = 7d 11/07-11/13. Prints the last workable date (both asks live by eve of that date -> <= 95k).
+import argparse, datetime as dt
+ap=argparse.ArgumentParser()
+ap.add_argument('--peik',nargs=2,type=float,default=[2016453,14],metavar=('SPEND','LEADS'))
+ap.add_argument('--bc',nargs=2,type=float,default=[313500,6],metavar=('SPEND','LEADS'))
+ap.add_argument('--p2',nargs=2,type=float,default=[924806,8],metavar=('SPEND','LEADS'))
+ap.add_argument('--today',default=None)
+A=ap.parse_args()
+P_S,P_L=A.peik; BC_S,BC_L=A.bc
+P2_CPL=A.p2[0]/A.p2[1]         # freed spend runs at PEIKIRA2's 7d CPL
 P_DAY=P_S/7; P_CPL=P_S/P_L; BC_DAY=BC_S/7; BC_CPL=BC_S/BC_L
 SITE={'none':1.0,'+0.5pt':4.4/3.9,'+1pt':4.9/3.9}
 def week(days_on=7, rest=P_CPL, site=1.0, a3_share=0.0, a3_cpl=95000):
@@ -43,3 +52,12 @@ def be_rest(site):
         else: hi=m
     return lo
 print("Break-even PEIKIRA CPL (full window): no site", f(be_rest(1.0)), "| site +0.5pt", f(be_rest(SITE['+0.5pt'])), "| +1pt", f(be_rest(SITE['+1pt'])))
+
+# Last workable date: latest eve (11/27..12/03) where F+C(+0.5pt) live still gives <= 95k.
+start=dt.date(2026,11,27); last=None
+for k in range(7):
+    if week(7-k,P2_CPL,SITE['+0.5pt'])<=95000: last=start+dt.timedelta(days=k)
+line = f"LAST WORKABLE DATE (asks #1+#2 live by eve): {last.strftime('%m/%d') if last else 'NONE: criterion 1 needs more than asks #1+#2'}"
+if A.today and last:
+    line += f" | days left {(last-dt.date.fromisoformat(A.today)).days} *(calc)*"
+print(line)
