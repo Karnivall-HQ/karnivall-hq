@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-14 14:02 WIB (cloud heartbeat: criterion-1 daily step)_
+_Last updated: 2026-11-14 15:01 WIB (cloud heartbeat: 11/16 report prep + 11/20 clause wording)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -23,8 +23,8 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **11/15 07:00 gate re-run:** re-run `fuku/bin/gate_model_1120.py` with 11/14 actuals locked (playbook `meta-modelling-and-planning.md` §A2).
-2. **Weekly report 11/16 prep:** pre-write the "what changed this week" lines (Ad015 trigger, ADSET-3 starve, retro #3) into `fab_advertising/reports/weekly/2026-11-16.md` so Mon 07:00 is numbers-only.
-3. **ADSET-3 starved-for-7-days clause:** check `2026-11-20_gate_miss_note.md` clause table carries the same "untested, not a loser" wording as readout template line 33.
+2. **11/20 readout template:** add a criterion-1 step that calls `fuku/bin/criterion1_model_1205.py --peik/--bc/--p2 … --today 2026-11-20` so the 11/20 note carries the last workable date.
+3. **Wave 1 checklist vs ADSET-3:** if the 15 team images are the phone photos, mark which Wave 1 steps ADSET-3 already covers in `creatives/2026-11-11_wave1_launch_checklist.md` (avoid a duplicate ask).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Pause Ad015 + ADSET-3 min Rp 75k. #2 Website W1 + W2, and who edits the site. #3 15 images = phone photos + Kuningan open? FYI: who is the "TourHub" actor?
@@ -39,5 +39,5 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Open loops (current state, one line each)
 - Activity log: no human edits since the 11/13 04:08 ADSET-3 build (checked 11/14 13:01). Control ad set delivery warning 'learning_exit_unsuccessfully'.
 - Site: W1/W2 not applied (last curl 11/13 18:02). W3 on hold pending the W4 routing rule.
-- 11/20 messages pre-drafted (gate-miss note + ADSET-3 clause table); numbers current as of 11/14 08:01.
+- 11/20 messages pre-drafted (gate-miss note + ADSET-3 clause table, "starved" = < Rp 10k in both files, refers to ask #1b); numbers as of 11/14 08:01. 11/16 report: "What changed" + action #3 pre-written.
 - Parked in OUTBOX: optional BC204 cap probe, W3/W4 + WA follow-up script, 4 disabled ad accounts, Incess bid-cap, lead-value questions.

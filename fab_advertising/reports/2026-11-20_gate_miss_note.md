@@ -21,10 +21,10 @@ _Sister card: `2026-11-20_s1_scale_card.md` (used when G1–G3 all pass). Gate n
 > ⚠️ **[REPORT] 11/20 · Gate missed: 7d CPL Rp ⟨x⟩ ❌ (target 95k), even with the site fix live since ⟨date⟩.** Pixel LP→Lead ⟨before⟩% → ⟨after⟩% (needs 14 days to read +0.5pt). ⟨ADSET-3 clause⟩. The remaining CPL lever is creative (new phone-photo ads), not settings.
 
 ## ADSET-3 clause (pick the row that matches the 11/20 pull; added 11/13 22:34)
-_ADSET-3 was at Rp 0 / 0 impressions for its first ~15h (ask #3: min spend Rp 75k). So "Rp ⟨y⟩/lead" may not be fillable on 11/20. Pick by its 7d spend (11/13–11/19):_
+_ADSET-3 was at Rp 0 / 0 impressions for its first ~33h (11/14 13:01; min spend Rp 75k is part (b) of OUTBOX ask #1 since 11/14 07:02). So "Rp ⟨y⟩/lead" may not be fillable on 11/20. Pick by its 7d spend (11/13–11/19):_
 | ADSET-3 7d state | Clause (paste into H / M1 / M2) |
 |---|---|
-| **< Rp 10k spent** (still starved) | "ADSET-3 (the team's 6 new ads) got almost no delivery: Rp ⟨spend⟩ in 7 days, so it's untested, not a loser. The CBO kept the budget on the 2 old ad sets. ⟨If min spend not applied: "The fix is still ask #3: a Rp 75k daily minimum on it."⟩" |
+| **< Rp 10k spent** (still starved) | "ADSET-3 (the team's 6 new ads) got almost no delivery: Rp ⟨spend⟩ in 7 days, so it's untested, not a loser. The CBO kept the budget on the 2 old ad sets. ⟨If min spend not applied: "The fix is still a Rp 75k daily minimum on it (part (b) of ask #1)."⟩" |
 | **Rp 10k – 379k** (under-tested, < 4× CPL target) | "ADSET-3: Rp ⟨y⟩ spent, ⟨n⟩ leads, ⟨s⟩% of PEIKIRA spend: too early to judge (the read needs ≥ Rp 380k); verdict 11/27." |
 | **≥ Rp 380k** (readable) | "ADSET-3: Rp ⟨y⟩/lead on ⟨n⟩ leads (⟨s⟩% share) vs control Rp ⟨c⟩: ⟨winner ≤ 95k on ≥ 4 / promising / loser⟩ per the read card." |
 | **Paused / killed by rule 2** | "ADSET-3 was paused on ⟨date⟩ under kill rule 2 (≥ Rp 190k, 0 leads)." |

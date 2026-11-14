@@ -30,7 +30,7 @@ Window 11/13 00:00 → 11/20 07:00 WIB, account `484578521394893`. Fill one line
 
 ## Step 3: rule checks (tick one per line)
 **ADSET-3 (read card):**
-- Delivered at all? ☐ yes ☐ **no, still ~Rp 0** → skip rules 1–3, G2 via ADSET-3 = ❌; write "ADSET-3 untested (starved), not a loser" (rule 6) and keep the min-spend ask as the one ad ask.
+- Delivered at all? ☐ yes ☐ **no, < Rp 10k in 7d** (same line as the gate-miss note's "starved" row) → skip rules 1–3, G2 via ADSET-3 = ❌; write "ADSET-3 untested (starved), not a loser" (rule 6) and keep the min-spend ask as the one ad ask.
 - Rule 2 early kill (≥ Rp 190k & 0 leads, or ≥ Rp 285k & ≤ 1 lead, cumulative): ☐ ok ☐ **fired on ⟨date⟩**
 - **Rule 3 day-7:** ADSET-3 CPL ⟨⟩ vs control CPL ⟨⟩ → ratio ⟨⟩ *(calc)*
   - ≤ 1.00 → **KEEP** · 1.00–1.30 → keep, judge on 11/27 · > 1.30 with ≥ Rp 400k spent → **propose pause** · > 1.30 with < Rp 400k → too little spend, keep
