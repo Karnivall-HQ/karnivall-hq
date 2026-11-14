@@ -18,18 +18,21 @@ Any new ad, ad set, creative wave, bid-cap or structure change that Fuku propose
 - **Compare a stage week-over-week**, not its absolute level, before blaming it (post-click improved 3.0 → 3.8% while CPL rose).
 - **≥ 8 weekly rows** before calling a one-week CPL jump a decline. A sawtooth with flat CTR/CPM/freq is judged on 2-week blocks; the trend tool's single-period "BAD" is noise.
 - **Capacity:** the highest spend an engine ever held at target CPL in its 8-week history is its ceiling on current creative; the gap above it is a creative problem, not a budget one (Fab: Rp 919k/day week cost 201k/lead).
+- **CPL up with flat or rising CTR = post-click problem** (page/offer mismatch), not creative fatigue; a CTR fatigue rule never fires on it (Ad015 11/14: CPL 114.5k → 166.1k, CTR 1.4% → 2.3%). Pair the ad fix with the page fix in the ask. (Retro #3)
 - **One ad > 80% of an ad set's spend = no backup.** The hedge is new creative; write CTR/CPL/freq triggers before fatigue shows.
 
 ## C. Writing a proposal
 - **Sort levers:** "adds volume at ~target CPL" (cap raises, budget) vs "lowers CPL on current spend" (site conversion, cheaper creative). For a CPL gate push the second kind; for a scale gate the first.
-- **Bid caps:** pull ≥ 8 weekly rows + the bid-category activity log; spend can swing −30% at a fixed cap from the auction alone. Raise only ad sets with CPL ÷ cap < ~0.85, with a raised-vs-untouched comparative rule.
+- **Bid caps:** pull ≥ 8 weekly rows + the bid-category activity log; spend can swing −30% at a fixed cap from the auction alone. Raise only ad sets with CPL ÷ cap < ~0.85, with a raised-vs-untouched comparative rule. Never write a cap or scale proposal on < 8 weekly rows; a first diagnosis version is a hypothesis until re-pulled on the full window (item 4: 30d ratio 0.889 → 8-wk 1.02, 11/12).
 - **Copy consistency:** join `ads_get_ad_entities` (spend > 0, creative_id) with `ads_get_creatives` and size by spend share; an Ad Library sample undercounts (8 vs all 59).
+- **Build specs:** read the reference ad's creative settings (CTA, IG account, Advantage+ text translation / cv_transformation) and state which to copy and which to turn off; they can alter sticker copy and the raw-photo look (11/12).
 - **Competitors:** Ad Library tells *who* advertises and how often; their website tells the offer. Comparison copy claims only checked differences.
 - **Creative briefs:** view the top winner at full size first and copy its *subject*; size the ask to what it needed (Image087 = home clutter, no warehouse).
 
 ## D. Re-asking and following up
 - **Before re-raising a parked ask, re-pull the same breakdown on the latest 7d** and recompute "CPL without it". If the gain is gone, retire the ask (IG Stories, 11/11).
 - **For a "pause the losers" ask, also check the losers' 7d spend share.** In CBO, Meta often starves 0-lead ads within a week; if they're < 5% of the parent's 7d spend, the pause has ~0 CPL effect, so retire it as an ask (BC tail 11/11: Rp 22.7k/day; PEIKIRA item 5 11/11: 0.9%).
+- **When the team ships something on its own** (new ad set in the activity log): write its read card (kill + comparative + verdict + break-even, see `meta-modelling-and-planning.md` §B) and its page check the same run, then re-frame open asks around what shipped instead of repeating them (ADSET-3, 11/13).
 - **When the team applies a partial version**, measure where the money went at the next readout and shrink or drop the ask instead of repeating it (ad 006 pause, 11/09–11/10).
 - Stalled > 24h → one-line yes/no re-ask (CLAUDE.md Evolving rule); one push notification per re-ask per day.
 
@@ -37,4 +40,4 @@ Any new ad, ad set, creative wave, bid-cap or structure change that Fuku propose
 Every proposal names: the lever type, the read rules (absolute + comparative), the window, and labels each number account data / *(calc)* / INFERRED.
 
 ## Last validated
-2026-11-11 · M-001 (Wave 1 template, 11/20 gate brief, IG Stories retirement) and M-002 (Incess 019 split).
+2026-11-14 (Retro #3 additions) · 2026-11-11 · M-001 (Wave 1 template, 11/20 gate brief, IG Stories retirement) and M-002 (Incess 019 split).

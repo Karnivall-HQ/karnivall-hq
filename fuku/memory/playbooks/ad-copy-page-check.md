@@ -16,7 +16,8 @@ Before any ad copy, sticker, WA script or site replacement text is marked "paste
    - vocabulary the page doesn't use ("kode FAB750" vs the page's "Harga Promo Launching").
    - **status/tense words** on the page itself ("akan launching" = will launch): a copy line that promises a survey, a move-in or "siap dipakai" needs the thing to exist now (added 11/12 18:02, WA script check).
 6. Re-read numeric facts (sizes, prices) from the page every time; never reuse them from an older audit.
-7. Write a "Page check" table + "What changed and why" in the deliverable, and fix the source doc too so the old wording can't come back.
+7. **Map every grep hit to its visible line** before saying "×N fixes": strip script/style; schema copies and footers inflate counts ("Rp 800.000 ×3" = 1 FAQ answer, 11/11). Hand over exact find → replace strings.
+8. Write a "Page check" table + "What changed and why" in the deliverable, and fix the source doc too so the old wording can't come back.
 
 ## Labels
 Page counts = STATED (site). Physical or ad-data backing = INFERRED. Nothing here is confirmed by Alvian until he says so.

@@ -18,12 +18,12 @@ _Ad-account asks: #1 only (it absorbs the 11/13 min-spend ask)._
 - **[REPORT] 2026-11-14 07:02 · 📊 7d Fab CPL Rp 116.5k ❌ (from 103.3k). ⚠️ Ad015 is fading; ADSET-3 still got Rp 0.** 11/07–11/13: Rp 2,329,953 / 20 / **CPL Rp 116,498** *(calc)*, Rp 333k/day. PEIKIRA 144.0k (14); BC 52.3k (6, its best). Control 181.9k (6), PEIKIRA2 115.6k (8), ADSET-3 Rp 0 *(calc)*. 11/13: PEIKIRA Rp 293,851, 0 leads. No human edits overnight. The 11/20 gate (≤ 95k) now needs a fast turn: ask #1 + the site fix. Tracker: `fab_advertising/reports/m001_tracker.md`.
   → **08:01 ⚠️ gate refresh:** with the 0-lead 11/13 day locked in, **no single change opens the 11/20 gate any more**. Doing nothing ≈ 129.8k; Ad015 pause alone 114.2k; site fix alone 107.8k–117.8k; **both #1 + #2 live tonight ≈ 94.4k–103.3k** *(calc)*. From tomorrow even both miss unless ADSET-3 wins big. Likeliest: gate ❌ (INFERRED). `fab_advertising/reports/2026-11-20_gate_brief.md` (top section).
 
-- **[REPORT] 2026-11-11 10:02 · 🔁 Retro #2 (week of 11/05–11/11).**
-  - 🚀 Wins: diagnosis done; 7d Fab CPL 112.4k → 106.8k; BC best week in a while (65.7k); Incess confirmed healthy (~35–37k); 11/20 gate modelled; shoot card + Wave 1 read rules ready.
-  - ⚠️ Misses: M-001 **at risk** (106.8k vs 95k); 0 of my site/photo asks applied in 5 days; early on I burned 52 runs on "nothing changed" checks (fixed 11/10).
-  - 🔧 Changed myself: 16 lessons → new playbook `fuku/memory/playbooks/meta-tests-and-proposals.md` (read rules set before launch, re-validate parked asks on fresh data); lessons.md 26 → 4.
-  - ❓ Need from you: only the 2 asks above (site W1+W2; photos + 750/800). The site fix is the one lever that can open the 11/20 gate on its own.
-  - 👉 Next week: 11/12 one-line re-ask; Wave 1 read (if photos land); 11/16 weekly report; 11/20 gate call.
+- **[REPORT] 2026-11-14 12:01 · 🔁 Retro #3 (week of 11/11–11/14).**
+  - 🚀 Wins: 7d CPL hit its best yet (100.5k on 11/12); the team's ADSET-3 photo wave launched 11/13 and Fuku had its read card + copy check out the same run; 11/20 is now a fill job (readout, gate-miss, S1 scale, criterion-2 re-plan templates all pre-staged); criterion-1 path to 12/05 modelled.
+  - ⚠️ Misses: 7d CPL back up to 116.5k (Ad015 decaying post-click, ADSET-3 starved at Rp 0); the 11/20 gate is likely ❌; the site fix has waited **8 days**: approval latency, not analysis, is now the bottleneck.
+  - 🔧 Changed myself: 16 lessons → new playbook `fuku/memory/playbooks/meta-modelling-and-planning.md` (one model per judged window, CBO break-even tables, rule-overlap + calendar checks) + additions to 3 playbooks; lessons.md 29 → 3; 2 new Evolving rules.
+  - ❓ Need from you: only asks #1 (pause Ad015 + ADSET-3 min Rp 75k) and #2 (site W1+W2). **Both live by 11/27 ≈ 88k CPL on the 12/05 window; from 12/01 criterion 1 is lost** *(calc)*.
+  - 👉 Next week: 11/15 gate re-run; 11/16 weekly report; 11/20 gate call + criterion-2 re-plan (Rp 1M/day → 01/15); 11/27 ADSET-3 verdict.
 
 ## Parked
 
@@ -67,6 +67,14 @@ _Ad-account asks: #1 only (it absorbs the 11/13 min-spend ask)._
 - **[FYI] 2026-11-05 · Questions only you can answer:** What is a lead worth for each business (close rate, deal value)? Which businesses does Karnivall run vs. serve as clients (Incess, Travell Fi, The North Case, GudangHub, Jinhe, Karnivall)? What is `fab_advertising/` (ad names use "FAB")?
 
 ## Resolved
+
+- **[REPORT] 2026-11-11 10:02 · 🔁 Retro #2 (week of 11/05–11/11).**
+  - 🚀 Wins: diagnosis done; 7d Fab CPL 112.4k → 106.8k; BC best week in a while (65.7k); Incess confirmed healthy (~35–37k); 11/20 gate modelled; shoot card + Wave 1 read rules ready.
+  - ⚠️ Misses: M-001 **at risk** (106.8k vs 95k); 0 of my site/photo asks applied in 5 days; early on I burned 52 runs on "nothing changed" checks (fixed 11/10).
+  - 🔧 Changed myself: 16 lessons → new playbook `fuku/memory/playbooks/meta-tests-and-proposals.md` (read rules set before launch, re-validate parked asks on fresh data); lessons.md 26 → 4.
+  - ❓ Need from you: only the 2 asks above (site W1+W2; photos + 750/800). The site fix is the one lever that can open the 11/20 gate on its own.
+  - 👉 Next week: 11/12 one-line re-ask; Wave 1 read (if photos land); 11/16 weekly report; 11/20 gate call.
+  → Superseded by Retro #3 (2026-11-14 12:01).
 
 - (folded into ask #1, 11/14 07:02) ❓ **[DECISION] 2026-11-13 19:02 · ADSET-3 min daily spend Rp 75k.** ❓ **[DECISION] 2026-11-13 19:02 · Set a minimum daily spend of Rp 75,000 on the team's new ad set PEIKIRA-FAB-20261109-ADSET-3 (CBO total unchanged at Rp 300k)? Markus applies; I don't touch the account.** It is still at **Rp 0 / 0 impressions ~15h after going live** (04:05), no errors, all ads appr…
 - (replaced 11/14 07:02) - **[REPORT] 2026-11-13 07:02 · 📊 7d Fab CPL Rp 103.3k ❌ (from 100.5k). 🚀 Team launched ADSET-3 overnight: 6 new ads, read rules set.** 11/06–11/12: Rp 2,375,566 / 23 / **CPL Rp 103,286** *(calc)*, Rp 339k/day. PEIKIRA 116.4k (18); BC 56.0k (5). Control 124.9k (8), PEIKIRA2 109.6k (10). Ad015 CTR 2.24%, CPL 114.5k, freq 1.38 → no trigger. **New:** ad set PEIKIRA-FAB-20261109-ADSET-3 in the PEIKIRA CBO (same Rp 300k/day, now split 3 ways), ACTIVE 04:05, Rp 0 so far; built by a new actor "TourHub Shared Office for Tour Travel Business" + Markus. FYI ❓ who is the TourHub actor? Kill/compare/verdict rules: `fab_advertising/reports/2026-11-13_adset3_read_card.md` (day-7 read 11/20, verdict 11/27). Tracker: `fab_advertising/reports/m001_tracker.md`.

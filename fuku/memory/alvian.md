@@ -10,4 +10,4 @@
   - **Reconfirmed 2026-11-10:** offered a narrow pause-only lane for M-001 under pre-approved rules; Alvian chose to keep propose-only. Don't re-propose widening ad authority unless he raises it. The lever Fuku owns instead is making each ask short, single, and delivered where he reads.
 
 ## Context
-- (learn and fill in)
+- **Response pattern (retro 2026-11-14):** across 11/06–11/14, 0 of Fuku's site/photo asks were answered in OUTBOX; the team acted on its own instead (ADSET-3 photo wave, 11/13). Implication: one push per new/re-asked ask, frame asks around what the team already shipped, and never let a mission plan depend on a same-day answer.

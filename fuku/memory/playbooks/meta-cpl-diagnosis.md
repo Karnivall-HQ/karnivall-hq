@@ -19,6 +19,8 @@
 - Ad-level 30d output and activity logs with limit 100 overflow the tool output. Parse the saved file with jq/python.
 - Ad copy: write only from facts already in live ads (`ads_get_creatives` body/title), and flag any new claim for confirmation.
 - Activity log "Active → Inactive after Ad Review" can be a human pause via the MCP app: read the entity `status` (PAUSED = human) and the parent's status before calling it a Meta action. (Retro #2)
+- **Multi-week ad-set history: pull by `object_ids`.** `filtering` on amount_spent + `time_increment 7` returned real weeks only for the first ad set and zeros for the rest (11/12). Distrust a series where a known spender shows 0. (Retro #3)
+- **Empty creative `body`** (flexible/multi-image creatives): `ads_get_ad_preview` → curl `preview_url` → parse `"textData":{"primaryText":…}`. The destination URL isn't in either, so label it INFERRED (11/13). (Retro #3)
 - Test design, read rules and re-asks: see `meta-tests-and-proposals.md`.
 
 ## Output

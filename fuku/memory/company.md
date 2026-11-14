@@ -1,7 +1,7 @@
 # Karnivall Agentic Company
 
 ## What we do
-- **Fab = Fab Self-storage** ("Fab Warehouses", `fabwarehouses.com`): private self-storage units (gudang) in Jakarta Selatan, Kuningan & Sudirman. Ads price it from Rp750rb/month with code FAB750 via WhatsApp (older ads: Rp800rb). Leads = website pixel leads → WhatsApp. (Source: live ad creatives, 2026-11-05.)
+- **Fab = Fab Self-storage** ("Fab Warehouses", `fabwarehouses.com`): private self-storage units (gudang) in Jakarta Selatan, Kuningan & Sudirman. Ads price it from Rp750rb/month with code FAB750 via WhatsApp (older BC ads: Rp800rb); the site says "Harga Promo Launching" and never mentions a code. The site FAQ still says the Kuningan site "akan launching" (11/13). Leads = website pixel leads → WhatsApp. (Source: live ad creatives, 2026-11-05.)
 - Other businesses: still unknown (see OUTBOX [FYI]).
 
 ## Projects / workspaces
@@ -11,7 +11,7 @@
 - 36 ad accounts across businesses: Karnivall (Incess Ads, Kari Ads, Venue, Rental), Incess Dress, Travell Fi (TF, FeverAlert, Uniso, Roketso, Giantso, Bikeso, Kitchenso, Babyso), The North Case Indonesia (Warehouse Storage, Sumobaby, Sumo2), GudangHub (Ghub, OMO, OMOrental, OMO AlatBerat), Jinhe Korean BBQ (Jinhe, DapurHub accounts, Kemitraan), Alvian Lim's Business.
 - **"Fab ad account" = Meta "Warehouse Storage" `484578521394893`** (Alvian's name for it, 2026-11-05). This is what `fab_advertising/` is about.
 - Active spenders: Incess Ads `2017038114993984` (campaign "OMO ADVLeads", website leads) and Warehouse Storage `484578521394893` (lead-gen; ad names PEIKIRA/AKIRA/KENJI-FAB-…, likely the fab_advertising workflow).
-- Fab account structure (2026-11-05): PEIKIRA-BID-CAP-LEADS-CAMPAIGN (Highest volume, Rp 300k/day, 1 ad set) + BC CBObass005 OriAud45rb – Copy (CBO Rp 5M/day, bid cap Rp 94,250, ~50 ad sets, targeting JKT city). RUDI Costcap campaign paused. Optimizes website leads (pixel). **Markus Reynaldo is on Alvian's team** (confirmed 2026-11-05) and edits this account (cut PEIKIRA 5M→300k on 2026-10-26). Changes by Markus are team changes; log them in the tracker, don't flag them as a risk. Markus also launches ads via the "Rudi MCP" app (actor id 61594758338050), e.g. ad set AKIRA-FAB-20261031-WAVE-PEIKIRA2 on 2026-11-05 14:40 WIB.
+- Fab account structure (2026-11-05): PEIKIRA-BID-CAP-LEADS-CAMPAIGN (Highest volume, Rp 300k/day, 1 ad set) + BC CBObass005 OriAud45rb – Copy (CBO Rp 5M/day, bid cap Rp 94,250, ~50 ad sets, targeting JKT city). RUDI Costcap campaign paused. Optimizes website leads (pixel). **Markus Reynaldo is on Alvian's team** (confirmed 2026-11-05) and edits this account (cut PEIKIRA 5M→300k on 2026-10-26). Markus + an unidentified actor ("TourHub…") built ad set PEIKIRA-FAB-20261109-ADSET-3 (6 phone-photo ads) on 2026-11-13 04:08 WIB; who TourHub is is still open. Changes by Markus are team changes; log them in the tracker, don't flag them as a risk. Markus also launches ads via the "Rudi MCP" app (actor id 61594758338050), e.g. ad set AKIRA-FAB-20261031-WAVE-PEIKIRA2 on 2026-11-05 14:40 WIB.
 - Incess "OMO ADVLeads" (`120233576079370222`) is a bid-cap campaign: Rp 5.95M/day budget but ~Rp 585k/day spend, CPL Rp 35k (7d to 2026-11-04).
 - Disabled by Meta: Alv Ads, WooCore Ads, For App in Audience Network Ads, Babyso Rp.
 - Unknown: which businesses are ours vs clients; what a lead is worth.

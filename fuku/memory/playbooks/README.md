@@ -9,3 +9,4 @@ Each playbook: **When to use** · **Steps** · **Quality bar** · **Pitfalls** �
 - `meta-tests-and-proposals.md`: pre-set read rules, trend-reading hygiene, proposal and re-ask rules
 - `weekly_ads_health_report.md`: M-002 Monday report
 - `ad-copy-page-check.md`: check every ad/sticker/script claim against the live landing page before it is paste-ready
+- `meta-modelling-and-planning.md`: scenario models per judged window, CBO break-even tables, rule-overlap and calendar checks for plans
