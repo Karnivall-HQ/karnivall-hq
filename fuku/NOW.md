@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-14 19:02 WIB (cloud heartbeat: 19:00 poll + 11/20 S1 card dry-run)_
+_Last updated: 2026-11-14 20:02 WIB (cloud heartbeat: 11/20 gate-miss note dry-run)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -24,7 +24,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **11/15 07:00 gate re-run:** re-run `fuku/bin/gate_model_1120.py` with 11/14 actuals locked (playbook `meta-modelling-and-planning.md` §A2).
 2. **Wave 1 checklist vs ADSET-3:** if the 15 team images are the phone photos, mark which Wave 1 steps ADSET-3 already covers in `creatives/2026-11-11_wave1_launch_checklist.md` (avoid a duplicate ask).
-3. **11/20 gate-miss note dry-run:** check every ⟨⟩ in `fab_advertising/reports/2026-11-20_gate_miss_note.md` maps to a readout pull (P1–P6 / Step 4b).
+3. **11/16 weekly report vs 11/15 readout overlap:** check the 11/16 run sheet reuses the 11/15 07:00 tracker row instead of re-pulling (same 7d window end 11/15? no: 11/09–11/15) and note which numbers are copy vs new pull.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Pause Ad015 + ADSET-3 min Rp 75k. #2 Website W1 + W2, and who edits the site. #3 15 images = phone photos + Kuningan open? FYI: who is the "TourHub" actor?
@@ -39,5 +39,5 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Open loops (current state, one line each)
 - Activity log: no human edits since the 11/13 04:08 ADSET-3 build (checked 11/14 19:02). Control ad set delivery warning 'learning_exit_unsuccessfully'.
 - Site (fabwarehouses.com): W1/W2 not applied (curl 11/14 19:02: Jakarta Pusat ×9, Rp 800.000 ×3, "akan launching" ×3). W3 on hold pending the W4 routing rule.
-- 11/20 messages pre-drafted (gate-miss note + ADSET-3 clause table, "starved" = < Rp 10k in both files, refers to ask #1b); numbers as of 11/14 08:01. 11/16 report: "What changed" + action #3 pre-written.
+- 11/20 messages pre-drafted and dry-run (gate-miss note, S1 card, readout): every ⟨⟩ maps to readout Step 0 / P1–P6 / Step 2–4b; criterion-1 line comes from Step 4b. 11/16 report: "What changed" + action #3 pre-written.
 - Parked in OUTBOX: optional BC204 cap probe, W3/W4 + WA follow-up script, 4 disabled ad accounts, Incess bid-cap, lead-value questions.

@@ -6,6 +6,7 @@ _Uses: `2026-11-20_s1_scale_card.md` (G1–G3, S1 line), `2026-11-20_gate_miss_n
 Window 11/13 00:00 → 11/20 07:00 WIB, account `484578521394893`. Fill one line per human change (actor, time, object, old → new).
 - Site W1/W2 applied? ☐ no ☐ yes, live since ⟨date HH:MM⟩ (re-curl `/sewa-gudang-self-storage-jakarta/`: "Jakarta Pusat" count ⟨n⟩, "Rp 800.000" count ⟨n⟩). Source: INBOX "W1 W2 done" or curl.
 - ADSET-3 min daily spend (Rp 75k) applied? ☐ n/a ☐ no ☐ yes ⟨date⟩
+- Ad015 (`120254063163810572`) paused? ☐ no, still ACTIVE ☐ yes, since ⟨date HH:MM⟩ (feeds gate-miss M1 "neither / only Ad015", Variant H cause, G3)
 - Any budget / status / bid edit on PEIKIRA or BC: ⟨list or "none"⟩. A change inside the window → note it next to the number it moves; don't "correct" the CPL for it.
 
 ## Step 1: pulls (copy numbers from tool output; anything derived gets *(calc)*)
@@ -52,14 +53,14 @@ _Whatever the gate says, the 11/20 note must carry criterion 1's date. Source: `
    - PEIKIRA2 with < 2 leads → keep the default `--p2 924806 8` and write "p2 = 11/07–11/13 base" next to the line (one lead can't set the freed-spend CPL).
    - A lever **already live** for the whole window is inside the base: read row **A** as "with what's live", and ignore the rows that add that lever again (e.g. W1/W2 live since ≤ 11/13 → ignore every "C" row).
 2. Fill one line: base row A ⟨⟩ · F+C +0.5pt ⟨⟩ · **last workable date ⟨mm/dd⟩, days left ⟨n⟩** *(calc)*. If the script prints "NONE" (even 11/27 misses) → write "criterion 1 needs ADSET-3 to win (row F+E) or a move to 12/19", and put the 12/19 question on the 11/27 readout (Step 5b there), not in this note.
-3. The line goes, unchanged, into whichever message Step 5 picks (S1 / H / M1 / M2), right after the gate result, and into NOW.md "Current focus".
+3. The line goes, unchanged, into whichever message Step 5 picks (S1 / H / M1 / M2), just before the criterion-2 line (gate-miss note placeholder), and into NOW.md "Current focus".
 
-## Step 5: pick the message (exactly one M-001 "Latest report" in OUTBOX; replaces the 11/13 one)
+## Step 5: pick the message (exactly one M-001 "Latest report" in OUTBOX; replaces whichever M-001 report is current)
 | G1 | G2 | G3 | Send | Ad ask in "Needs you"? |
 |---|---|---|---|---|
 | ✅ | ✅ | ✅ | S1 line (`2026-11-20_s1_scale_card.md` bottom) + a short report | yes: PEIKIRA CBO 300k → 375k |
 | ✅ | ❌ | any | Variant H (`2026-11-20_gate_miss_note.md`) + ADSET-3 clause + criterion-2 line | no |
-| ✅ | ✅ | ❌ | Variant H + tripped rule, re-check 11/23 | no |
+| ✅ | ✅ | ❌ | Variant H + tripped rule, re-check 11/23 | no (if ❌ only because Ad015 active: re-send ask #1(a)) |
 | ❌ | any | any | W1/W2 not live → **M1**; live → **M2** (+ P6 numbers); both + criterion-2 line | no new ad ask (rule-3 pause / Ad015 fallback only if Step 3 fired) |
 
 Extra asks only if Step 3 fired, ranked under the 3-ask cap: (1) site fix if still open, (2) rule-3 / rule-2 ADSET-3 pause or min-spend, (3) Ad015 fallback. Anything else → Parked.
