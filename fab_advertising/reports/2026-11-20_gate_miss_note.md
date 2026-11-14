@@ -32,6 +32,8 @@ _Rp 380k = the under-tested line of the 11/27 verdict template (4 × 95k). If th
 
 ## Shared criterion-2 line (H, M1 and M2 all end with it; send as is)
 _Updated 11/13 22:34 to match the re-plan's one-line ask and link the photo calendar. It is the single ❓ in the 11/20 message._
+> ✅ Criterion 1 (CPL ≤ 95k) is still reachable for 12/05 (window 11/28–12/04): asks #1 + #2 both live by 11/27 ≈ 88k; the last workable date is 11/29 *(calc, `2026-12-05_criterion1_path.md`)*.
+
 > 📊 **Criterion 2 (Rp 1M/day at ~95k by 12/05) is out of reach.** To get there, 5 budget steps of +25% had to start by 11/20. A winning wave adds only ~Rp 100–185k/day at ≤ 95k (8 weeks of ad-set data), so Rp 1M/day needs 4–7 winners at once; we have ⟨0/1⟩. Realistic 12/05 ≈ **Rp ⟨340–400 / 440–520⟩k/day** *(calc)*. ❓ **Move criterion 2 to 01/15, with 3 new phone photos from the Fab team every Saturday from 11/21?** (Keep criterion 1, CPL ≤ 95k, as the 12/05 goal.) My recommendation: **yes**; 01/15 holds in the mid case (≈ 1 winner per 4 ads), and I re-forecast on 12/14 after the first two waves are judged. Reply "ok" or give me a new date. Plan: `fab_advertising/reports/2026-11-20_criterion2_replan.md` · team calendar (6 photos on 11/21, then 3 per Saturday): `fab_advertising/creatives/2026-11-13_weekly_photo_calendar.md`.
 
 _If Variant S1 (gate passed) goes out instead, the criterion-2 line still goes with it, with "out of reach" softened only if the S1 step plus winners on hand reach ≥ Rp 1M/day by 12/05 in the scale plan math (they won't with ≤ 1 winner)._
