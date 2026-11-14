@@ -16,6 +16,7 @@ _Ad-account asks: #1 only (it absorbs the 11/13 min-spend ask)._
 ### Latest report
 
 - **[REPORT] 2026-11-14 07:02 · 📊 7d Fab CPL Rp 116.5k ❌ (from 103.3k). ⚠️ Ad015 is fading; ADSET-3 still got Rp 0.** 11/07–11/13: Rp 2,329,953 / 20 / **CPL Rp 116,498** *(calc)*, Rp 333k/day. PEIKIRA 144.0k (14); BC 52.3k (6, its best). Control 181.9k (6), PEIKIRA2 115.6k (8), ADSET-3 Rp 0 *(calc)*. 11/13: PEIKIRA Rp 293,851, 0 leads. No human edits overnight. The 11/20 gate (≤ 95k) now needs a fast turn: ask #1 + the site fix. Tracker: `fab_advertising/reports/m001_tracker.md`.
+  → **08:01 ⚠️ gate refresh:** with the 0-lead 11/13 day locked in, **no single change opens the 11/20 gate any more**. Doing nothing ≈ 129.8k; Ad015 pause alone 114.2k; site fix alone 107.8k–117.8k; **both #1 + #2 live tonight ≈ 94.4k–103.3k** *(calc)*. From tomorrow even both miss unless ADSET-3 wins big. Likeliest: gate ❌ (INFERRED). `fab_advertising/reports/2026-11-20_gate_brief.md` (top section).
 
 - **[REPORT] 2026-11-11 10:02 · 🔁 Retro #2 (week of 11/05–11/11).**
   - 🚀 Wins: diagnosis done; 7d Fab CPL 112.4k → 106.8k; BC best week in a while (65.7k); Incess confirmed healthy (~35–37k); 11/20 gate modelled; shoot card + Wave 1 read rules ready.

@@ -14,3 +14,4 @@
 - 2026-11-11 11:02: playbook meta-tests-and-proposals.md A6 added (detectable effect check before a funnel read).
 - 2026-11-11 14:02 · playbook meta-tests-and-proposals §D: before re-asking a 'pause the losers' item, check the losers' 7d spend share (< 5% → retire).
 - 2026-11-12 15:02 · New playbook `ad-copy-page-check.md` (consolidates the 4 site/copy lessons of 11/12 into one pre-ship checklist).
+- 2026-11-14 · Added `fuku/bin/gate_model_1120.py` (11/20 gate scenario model) so daily re-runs are reproducible.

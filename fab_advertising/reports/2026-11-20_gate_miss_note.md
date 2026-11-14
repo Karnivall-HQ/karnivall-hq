@@ -1,6 +1,6 @@
 # 11/20 gate: "miss" and "hold" messages (pre-staged)
 _Pre-staged 2026-11-13 12:02 WIB by Fuku (cloud heartbeat, groundwork). Read-only, nothing changed in the ad account. Propose-only._
-_Sister card: `2026-11-20_s1_scale_card.md` (used when G1–G3 all pass). Gate numbers: `2026-11-20_gate_brief.md` (09:01 refresh). Volume math: `2026-11-12_scale_plan_v2.md`._
+_Sister card: `2026-11-20_s1_scale_card.md` (used when G1–G3 all pass). Gate numbers: `2026-11-20_gate_brief.md` (11/14 08:01 refresh). Volume math: `2026-11-12_scale_plan_v2.md`._
 
 ## Which message goes out on 11/20 (pick one at the 07:00 readout)
 | Gate result (S1 card G1–G3) | Message | Ad ask? |
@@ -15,7 +15,7 @@ _Sister card: `2026-11-20_s1_scale_card.md` (used when G1–G3 all pass). Gate n
 
 ## Variant M: "gate missed" (pick one sentence block)
 **M1: the site fix was not applied (W1/W2 still off on 11/19):**
-> ⚠️ **[REPORT] 11/20 · Gate missed: 7d CPL Rp ⟨x⟩ ❌ (target 95k).** The one lever that could open it on its own, the site fix (Jakarta Pusat → Selatan, 800 → 750), wasn't applied; my model had it at ≈ 93k if live by 11/14. ⟨ADSET-3 clause⟩. 👉 Still the #1 ask: the site fix, today (paste-ready: `fab_advertising/reports/2026-11-11_w1w2_paste_ready.md`).
+> ⚠️ **[REPORT] 11/20 · Gate missed: 7d CPL Rp ⟨x⟩ ❌ (target 95k).** After the 0-lead 11/13 day, only the site fix (Jakarta Pusat → Selatan, 800 → 750) **plus** pausing Ad015 could reach it (≈ 94–103k if both live by 11/14 eve, 11/14 08:01 model); ⟨neither was / only Ad015 was⟩ applied. ⟨ADSET-3 clause⟩. 👉 Still the #1 ask: the site fix, today (paste-ready: `fab_advertising/reports/2026-11-11_w1w2_paste_ready.md`).
 
 **M2: the site fix was applied but CPL is still above 95k:**
 > ⚠️ **[REPORT] 11/20 · Gate missed: 7d CPL Rp ⟨x⟩ ❌ (target 95k), even with the site fix live since ⟨date⟩.** Pixel LP→Lead ⟨before⟩% → ⟨after⟩% (needs 14 days to read +0.5pt). ⟨ADSET-3 clause⟩. The remaining CPL lever is creative (new phone-photo ads), not settings.

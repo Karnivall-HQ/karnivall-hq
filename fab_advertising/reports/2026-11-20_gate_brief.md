@@ -1,5 +1,31 @@
 # M-001: 11/20 gate brief (what gets the 7d CPL to ≤ Rp 95k by 11/20)
 
+## 🔄 Refresh 2026-11-14 08:01 WIB (base 116.5k, 11/13 locked in). Supersedes everything below.
+**Base:** 7d 11/07–11/13: PEIKIRA Rp 2,016,453 / 14 (**144.0k**), BC Rp 313,500 / 6 (52.3k) → 116.5k *(calc)*. Inside PEIKIRA: control Rp 1,091,647 / 6 (all 6 from Ad015), PEIKIRA2 Rp 924,806 / 8 (**115.6k**), ADSET-3 Rp 0.
+**Window 11/13–11/19, day 1 is already known:** 11/13 PEIKIRA Rp 293,851 / **0 leads**. Method: PEIKIRA Rp 288k/day (7d rate) at 144.0k unless changed; BC flat at its 7d rate; a change counts from the day after it goes live; site lift = LP→Lead 3.9% → 4.4% (+0.5pt) or 4.9% (+1pt), applied to PEIKIRA + BC. "Ad015 paused" = the freed spend runs at PEIKIRA2's 115.6k (optimistic; at 130k the numbers rise ~8k). Script: computed this run, numbers below are all *(calc)*.
+
+| # | Scenario (live **11/14 eve** = 5 changed days) | 7d CPL 11/13–11/19 | Gate |
+|---|---|---|---|
+| A | Nothing changes | **129.8k** | ❌ |
+| F | Ask #1a only: Ad015 paused | 114.2k | ❌ |
+| C | Ask #2 only: site W1+W2, +0.5pt / +1pt | 117.8k / 107.8k | ❌ / ❌ |
+| F+C | Ad015 paused + site +0.5pt / **+1pt** | 103.3k / **94.4k** | ❌ / ✅ just |
+| E | ADSET-3 1/3 share at 70k / 95k (rest 144k) | 108.5k / 118.4k | ❌ |
+| F+E | Ad015 paused + ADSET-3 1/3 at 70k / 95k | 100.8k / 109.4k | ❌ |
+| F+E | Ad015 paused + ADSET-3 **60%** at 70k / 95k | **92.2k** / 105.8k | ✅ / ❌ |
+| F+C+E | All three (+0.5pt), ADSET-3 1/3 at 70k / 95k / 130k | **91.0k** / 98.9k / 105.8k | ✅ / ❌ / ❌ |
+| F+C+E | All three (+0.5pt), ADSET-3 60% at 70k / 95k | **83.1k** / 95.6k | ✅ / ❌ just |
+
+**One day later (live 11/15 eve, 4 days):** F+C(+1pt) 99.8k ❌; all three at 1/3 share 96.8k ❌ even if ADSET-3 wins at 70k; all three at 60% share + ADSET-3 at 70k 89.6k ✅. **Live 11/16 eve:** only "all three, 60% share, ADSET-3 at 70k" gets close (97.1k ❌).
+
+**ADSET-3 break-even CPL (live 11/14 eve)** *(calc)*: share 1/3 → ≤ 48.4k (Ad015 running) / ≤ 58.0k (Ad015 paused) / **≤ 81.3k with Ad015 paused + site +0.5pt**; share 60% → ≤ 68.7k / ≤ 74.5k / ≤ 93.6k. (The 11/14 07:02 NOW line "79.3k at 1/3 from 11/15" used the old 116k incumbent; the incumbent PEIKIRA is now 144k and day 1 is a locked 0-lead day, so the bar is lower.)
+
+### What this means (INFERRED from the table)
+1. **No single lever opens the gate any more.** On 11/13 the site fix alone did (93.1k); the 0-lead 11/13 day and PEIKIRA's slide to 144k took that away.
+2. **The cheapest path is both open asks today:** #1 (pause Ad015) + #2 (site W1+W2) live by tonight, and then it needs the +1pt case (94.4k, ~0.6k of margin) or ADSET-3 to deliver at ≤ ~81k on a 1/3 share. Every day of delay costs ~5k.
+3. **Likeliest outcome: gate ❌ on 11/20.** Nothing has been applied in 9 days of asks, and the ±10% weekly noise (20 leads) is larger than the best-case margin. Prepare the criterion-2 message ("Rp 1M/day by 12/05 out of reach") now; keep the asks open because the same changes are what lower the CPL for criterion 1 after 11/20.
+4. The 11/20 read rules below still apply; numbers in the 11/13 section are superseded.
+
 ## 🔄 Refresh 2026-11-13 09:01 WIB (new base + ADSET-3 path). This section supersedes the numbers below.
 **Base:** 7d 11/06–11/12 (11/13 readout, `m001_tracker.md`): PEIKIRA Rp 2,095,538 / 18 (116.4k), BC Rp 280,028 / 5 (56.0k) → **Rp 103,286** *(calc)*. Window judged on 11/20 = full days **11/13–11/19**. Method as below: per-day rates held flat, new spend replaces PEIKIRA spend 1:1 (CBO Rp 300k unchanged), BC flat. ADSET-3 assumed to deliver from 11/14 (6 of 7 days; Rp 0 / 0 impr at 08:0x 11/13).
 

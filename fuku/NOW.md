@@ -1,13 +1,13 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-14 07:02 WIB (cloud heartbeat: 07:00 readout → Ad015 trigger fired, ask #1 rewritten)_
+_Last updated: 2026-11-14 08:01 WIB (cloud heartbeat: groundwork → 11/20 gate brief refreshed on 116.5k)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
 - **M-001 (P0, at risk):** 7d Fab (11/07–11/13) **CPL Rp 116.5k** *(calc)* ❌ vs 95k (was 103.3k); Rp 333k/day vs 1M. PEIKIRA 144.0k (14), BC 52.3k (6). Control 181.9k (6), PEIKIRA2 115.6k (8), ADSET-3 Rp 0.
 - **⚠️ Ad015 fallback trigger FIRED:** 7d Rp 996,561 / 6 = 166.1k; last 4 days 251.7k vs 90.8k on 11/03–11/06 *(calc)*; CTR rose to 2.3–2.5% → post-click decay (INFERRED: page mismatch makes the site fix more urgent). Note in `2026-11-10_ad015_fallback.md`.
-- **ADSET-3:** Rp 0 for its whole first day (11/13 share 0%), still 0 at 07:0x, no min spend set, no errors. Break-even now 79.3k from 11/15 / 73.4k from 11/16 at 1/3 share *(calc)*.
+- **ADSET-3:** Rp 0 for its whole first day (11/13 share 0%), no min spend set, no errors. Break-even at 1/3 share from 11/15: 48.4k alone / 81.3k with Ad015 paused + site fix *(calc, 11/14 08:01)*.
 - **OUTBOX #1 (new, one ask):** pause Ad015 + ADSET-3 daily min Rp 75k (Markus applies; undo rules in the ask). #2 site W1+W2. #3 15 images = photos? + Kuningan open?
-- **Gate brief is stale:** `2026-11-20_gate_brief.md` was built on base 103.3k; the 11/13 day (Rp 293,851 / 0 PEIKIRA leads) is inside the 11/13–11/19 window. Refresh on a quiet run (backlog 1).
+- **11/20 gate (refreshed 08:01):** no single lever opens it now. Nothing 129.8k; Ad015 pause 114.2k; site 107.8–117.8k; both live 11/14 eve 94.4–103.3k; each day late ≈ +5k *(calc)*. Likeliest ❌ (INFERRED). Brief top section + miss note M1 updated.
 - **M-002 (P1):** weekly report Mon 11/16 07:00; skeleton `fab_advertising/reports/weekly/2026-11-16.md`. Incess 019 Copy 5 needs ≥ 2 leads 11/13–11/16 (lookup `2026-11-13_incess_019copy5_prepull.md`).
 
 ## Next actions (dated or triggered)
@@ -20,9 +20,9 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 7. **Retro #3:** ~11/18 or at 15 new lessons.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **Gate brief refresh on base 116.5k:** recompute the 11/20 paths (site fix lift, ADSET-3 share × days, Ad015 paused vs not) incl. the 0-lead 11/13 day; update the read card table + gate-miss note numbers.
-2. **Partial-week pre-pull for 11/16:** 11/09–11/13 Fab+Incess ad-set rows (by object_ids) into the skeleton so Monday is a delta.
-3. **Retro #3 prep:** tally lessons since 11/11 and draft which become playbook rules.
+1. **Partial-week pre-pull for 11/16:** 11/09–11/13 Fab+Incess ad-set rows (by object_ids) into the skeleton so Monday is a delta.
+2. **Retro #3 prep:** tally lessons since 11/11 and draft which become playbook rules.
+3. **11/15 07:00 gate re-run:** re-run `fuku/bin/gate_model_1120.py` with 11/14 actuals locked (rule from 11/14 lesson); refill backlog from M-002 criteria.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Pause Ad015 + ADSET-3 min Rp 75k. #2 Website W1 + W2, and who edits the site. #3 15 images = phone photos + Kuningan open? FYI: who is the "TourHub" actor?
@@ -37,5 +37,5 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Open loops (current state, one line each)
 - Activity log: no human edits since the 11/13 04:08 ADSET-3 build (checked 11/14 07:02). Control ad set delivery warning 'learning_exit_unsuccessfully'.
 - Site: W1/W2 not applied (last curl 11/13 18:02). W3 on hold pending the W4 routing rule.
-- 11/20 messages pre-drafted (gate-miss note + ADSET-3 clause table); numbers need the backlog-1 refresh.
+- 11/20 messages pre-drafted (gate-miss note + ADSET-3 clause table); numbers current as of 11/14 08:01.
 - Parked in OUTBOX: optional BC204 cap probe, W3/W4 + WA follow-up script, 4 disabled ad accounts, Incess bid-cap, lead-value questions.
