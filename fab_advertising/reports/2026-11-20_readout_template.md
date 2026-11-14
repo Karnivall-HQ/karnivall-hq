@@ -40,6 +40,8 @@ Window 11/13 00:00 → 11/20 07:00 WIB, account `484578521394893`. Fill one line
 **Ad015:** CTR ⟨⟩ (< 1.30% = trigger) · CPL ⟨⟩ (> 120k = trigger) · freq ⟨⟩ (> 2.5 = trigger) → ☐ none ☐ ⟨which⟩ → fallback `2026-11-10_ad015_fallback.md`
 
 ## Step 4: gate (copy into the S1 card table)
+_No model today: the 11/13–11/19 window is closed, so G1 is the actual 7d CPL from P1 (`gate_model_1120.py` stops on purpose with 7 locked days). Model check: 11/19 tracker Notes "model 11/20" ⟨⟩ vs actual ⟨x⟩ → error ⟨⟩ *(calc)*. If the gap is > Rp 10k, add one line to `lessons.md` with the cause (BC flat-rate assumption, the ADSET-3 share, or the PEIKIRA daily rate)._
+
 | | Test | Result |
 |---|---|---|
 | G1 | account 7d CPL ⟨x⟩ ≤ 95,000 | ☐ ✅ ☐ ❌ |

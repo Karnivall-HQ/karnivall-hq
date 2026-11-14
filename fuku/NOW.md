@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-14 21:01 WIB (cloud heartbeat: gate model CLI + 11/16 overlap)_
+_Last updated: 2026-11-14 22:01 WIB (cloud heartbeat: 11/20 readout vs gate CLI + model check)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -24,7 +24,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **11/15 07:00 gate re-run:** tracker routine step 2: pull PEIKIRA 11/14 only, then `gate_model_1120.py --lock 293851 0 --lock <11/14> --peik/--bc/--p2 <7d>`; record the lock in the tracker row.
 2. **Wave 1 checklist vs ADSET-3:** if the 15 team images are the phone photos, mark which Wave 1 steps ADSET-3 already covers in `creatives/2026-11-11_wave1_launch_checklist.md` (avoid a duplicate ask).
-3. **11/20 readout template vs gate CLI:** check its gate step uses the `--lock` call with all 6 locked days (11/13–11/18) and the 7d 11/13–11/19 base; replace any "edit the script" wording.
+3. **Wave 1 / shoot card vs ADSET-3 photos:** if the photos answer stays open past 11/16, list which shoot-card v2 shots ADSET-3 already covers (from its ad images), so ask #3 can shrink to one line.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Pause Ad015 + ADSET-3 min Rp 75k. #2 Website W1 + W2, and who edits the site. #3 15 images = phone photos + Kuningan open? FYI: who is the "TourHub" actor?
