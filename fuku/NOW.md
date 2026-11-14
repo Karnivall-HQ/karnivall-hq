@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-14 15:01 WIB (cloud heartbeat: 11/16 report prep + 11/20 clause wording)_
+_Last updated: 2026-11-14 16:01 WIB (cloud heartbeat: 11/20 template criterion-1 step 4b)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -18,13 +18,13 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 3. **Every run:** INBOX/OUTBOX for "done" on #1, "W1 W2 done", photos answer, TourHub actor answer.
 4. **When W1/W2 are applied:** re-curl the page, run `fab_advertising/reports/w1w2_lift_template.md`.
 5. **11/15 07:00 readout:** run the tracker's 07:00 routine (gate + criterion-1 last workable date, now 11/29); tracker row; ADSET-3 share line in the read card; Ad015 (paused or still running) 7d.
-6. **11/16 07:00:** weekly report from the skeleton. **11/20:** `2026-11-20_readout_template.md`. **11/27:** `2026-11-27_adset3_verdict_template.md`.
+6. **11/16 07:00:** weekly report from the skeleton. **11/20:** `2026-11-20_readout_template.md` (Step 4b = criterion-1 date). **11/27:** `2026-11-27_adset3_verdict_template.md`.
 7. **Retro #4:** at > 15 lessons or 11/21 (7 days).
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **11/15 07:00 gate re-run:** re-run `fuku/bin/gate_model_1120.py` with 11/14 actuals locked (playbook `meta-modelling-and-planning.md` §A2).
-2. **11/20 readout template:** add a criterion-1 step that calls `fuku/bin/criterion1_model_1205.py --peik/--bc/--p2 … --today 2026-11-20` so the 11/20 note carries the last workable date.
-3. **Wave 1 checklist vs ADSET-3:** if the 15 team images are the phone photos, mark which Wave 1 steps ADSET-3 already covers in `creatives/2026-11-11_wave1_launch_checklist.md` (avoid a duplicate ask).
+2. **Wave 1 checklist vs ADSET-3:** if the 15 team images are the phone photos, mark which Wave 1 steps ADSET-3 already covers in `creatives/2026-11-11_wave1_launch_checklist.md` (avoid a duplicate ask).
+3. **11/16 weekly report dry-run:** check every ⟨⟩ in `fab_advertising/reports/weekly/2026-11-16.md` maps to one named pull, so 11/16 07:00 is a fill job.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Pause Ad015 + ADSET-3 min Rp 75k. #2 Website W1 + W2, and who edits the site. #3 15 images = phone photos + Kuningan open? FYI: who is the "TourHub" actor?
