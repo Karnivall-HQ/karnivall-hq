@@ -25,7 +25,7 @@
 - **Priority:** P0
 - **Deadline:** 2026-12-05 (30 days from 2026-11-05)
 - **Constraints:** **Propose-only.** Fuku never touches the ad account (no pauses, budget changes, or launches). Every change is proposed to Alvian as an apply-ready checklist, and **Alvian applies it himself**. The metric is the 7-day average CPL, never a single day.
-- **Status:** in progress (diagnosis ✅, waiting on Alvian to apply proposals; PEIKIRA2 mostly throttled via the 11/09 ad-006 pause; residual check 11/11)
+- **Status:** at risk (7d CPL 116.5k on 11/14, worst since 11/07; Ad015 fallback fired; ADSET-3 starved; waiting on Alvian/Markus for OUTBOX #1 + site fix)
 - **Strategy (Fuku, 2026-11-05):**
   1. *Diagnose* (now): ad-set/ad/placement/audience breakdown; find which ads, audiences, and placements produce leads ≤ Rp 95k.
   2. *Cut waste*: propose to Alvian which CTR-collapsed FAB ads and losing ad sets to pause, so spend concentrates in the winners (BC CBObass005-type setups at ~Rp 83k).
@@ -33,6 +33,7 @@
   4. *Scale*: propose budget raises of ~20–30% every 3–4 days, only while the 7d CPL ≤ Rp 95k. Alvian applies them. Fuku verifies the effect in the next readouts. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
+  - 2026-11-14 07:02: Readout: 7d (11/07–11/13) Rp 2,329,953 / 20 / CPL Rp 116,498 *(calc)* ❌ (from 103.3k). Control 181.9k (6), PEIKIRA2 115.6k (8), BC 52.3k (6). **Ad015 fallback trigger fired** (7d CPL 166.1k; last 4 days 251.7k vs 90.8k on 11/03–11/06, CTR up → post-click decay, INFERRED). ADSET-3 Rp 0 for its full first day (share 0%). → OUTBOX #1 now = pause Ad015 + ADSET-3 min Rp 75k (one ask, replaces the 11/13 min-spend ask). Site ask #2.
   - 2026-11-13 22:34: Groundwork: 11/20 messages pre-drafted (`fab_advertising/reports/2026-11-20_gate_miss_note.md`): ADSET-3 clause table by 7d spend (starved < Rp 10k / under-tested < Rp 380k / readable / killed) so H/M1/M2 fill even if ADSET-3 never delivers; one shared criterion-2 line for H, M1, M2 (and S1) = the re-plan's ask (01/15, 3 photos every Saturday from 11/21) + photo calendar link. Readout template Variant H row updated.
   - 2026-11-13 20:36: Groundwork: weekly photo calendar for the Fab team (`fab_advertising/creatives/2026-11-13_weekly_photo_calendar.md`): W1–W6 × Saturday photo deadline × P-codes × launch/day-7/day-14 dates; shoot P1–P6 together on 11/21 because W2's pick happens on its own launch day; 18 photos by 12/26. Linked from the criterion-2 re-plan; ships with its ask on 11/20.
   - 2026-11-13 18:02: Groundwork: Wave 5–6 build sheet (`fab_advertising/creatives/2026-11-13_wave5-6_build_sheet.md`): each wave = 2 iteration slots filled by rule from W1–W4 day-14 verdicts (WINNER, then PROMISING; max 1 per angle; new photo only) + 1 fresh slot from a page-checked pool (F1 weekend loading + staff, F2 Large unit 'isi satu kamar', F3 tahun baru for W6, W4 leftover; F4 'all-in' gated). Live curl 18:02: W1/W2 still not applied. Fixed the re-plan: ad-set min spend can't reach waves built as ads in the control ad set → Wave 1 10%-share starvation rule. P13–P15 added to shoot card v2. No new ask.
