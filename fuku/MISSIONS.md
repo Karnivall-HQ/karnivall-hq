@@ -124,6 +124,7 @@
 - **Status:** in progress
 - **Strategy:** The cloud heartbeat runs it on the first Monday run (07:00 WIB). Turn it into a playbook after the first report.
 - **Progress:**
+  - 2026-11-14 17:01: 11/16 dry-run: found 3 unmapped cell groups (Incess 019 2-wk / Copy 5 3-wk windows, ADSET-3 break-even, photos answer) → run-sheet rows 11–13 + a pre-data window rule (windows end 11/15, the last complete day at 07:00 Mon).
   - 2026-11-14 12:01: Retro #3 score: on track. 11/16 skeleton holds the 11/09–11/13 pre-pull + fatigue table; only the Mon 07:00 final pull remains. No strategy change.
   - 2026-11-14 10:01: Fatigue pre-pull 11/09–11/13 (12 ads, spend > Rp 30k) in the 11/16 skeleton: **0 flags**, max freq 1.63, every CTR flat or up vs prior (Ad015 +40% CTR at 217.8k CPL = post-click, not fatigue). PEIKIRA2 top ad = 009 (Rp 173,903 / 2).
   - 2026-11-14 09:01: Partial-week pre-pull (11/09–11/13) put into the 11/16 skeleton: Fab Rp 1,717,803 / 15 = 114.5k *(calc)*; control 240.8k (4), PEIKIRA2 86.9k (6), ADSET-3 Rp 0; BC 46.7k (5), keepers ≈ tail; Incess 4 picks 89 leads = 17.8/day at 21.2k *(calc)* vs baseline 12.9/day. Monday becomes a 2-day delta.
