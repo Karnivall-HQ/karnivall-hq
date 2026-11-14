@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-14 09:01 WIB (cloud heartbeat: groundwork → 11/09–11/13 pre-pull in the 11/16 skeleton)_
+_Last updated: 2026-11-14 10:01 WIB (cloud heartbeat: groundwork → fatigue pre-pull in the 11/16 skeleton, 0 flags)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -8,7 +8,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - **ADSET-3:** Rp 0 for its whole first day (11/13 share 0%), no min spend set, no errors. Break-even at 1/3 share from 11/15: 48.4k alone / 81.3k with Ad015 paused + site fix *(calc, 11/14 08:01)*.
 - **OUTBOX #1 (new, one ask):** pause Ad015 + ADSET-3 daily min Rp 75k (Markus applies; undo rules in the ask). #2 site W1+W2. #3 15 images = photos? + Kuningan open?
 - **11/20 gate (refreshed 08:01):** no single lever opens it now. Nothing 129.8k; Ad015 pause 114.2k; site 107.8–117.8k; both live 11/14 eve 94.4–103.3k; each day late ≈ +5k *(calc)*. Likeliest ❌ (INFERRED). Brief top section + miss note M1 updated.
-- **M-002 (P1):** weekly report Mon 11/16 07:00; skeleton holds 11/09–11/13 pre-pull (Fab 114.5k; control 240.8k vs PEIKIRA2 86.9k; Incess 21.2k at 17.8 leads/day *(calc)*). Incess 019 Copy 5 needs ≥ 2 leads 11/13–11/16.
+- **M-002 (P1):** weekly report Mon 11/16 07:00; skeleton holds 11/09–11/13 pre-pull (Fab 114.5k; control 240.8k vs PEIKIRA2 86.9k; Incess 21.2k at 17.8 leads/day *(calc)*) + fatigue table (0 flags, max freq 1.63). Incess 019 Copy 5 needs ≥ 2 leads 11/13–11/16.
 
 ## Next actions (dated or triggered)
 1. **11/14 ~13:00 poll:** activity log (Ad015 pause? min spend? site?) + ADSET-3 delivery today. If ask #1 applied → log in tracker change log, start the fallback's 3-day re-read (CBO CPL > 130k → re-enable Ad015) and set ADSET-3 d.
@@ -22,7 +22,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **Retro #3 prep:** tally lessons since 11/11 (15 now) and draft which become playbook rules.
 2. **11/15 07:00 gate re-run:** re-run `fuku/bin/gate_model_1120.py` with 11/14 actuals locked (rule from 11/14 lesson).
-3. **Fatigue-flag pre-pull for 11/16:** ad-level 11/09–11/13 CTR/freq for the 10 rows in the skeleton's fatigue table (by object_ids).
+3. **Gate-miss contingency for 11/20:** if the gate misses, draft the M-001 re-plan options (target/deadline reset vs. new levers) so Alvian gets one yes/no, not a blank page.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Pause Ad015 + ADSET-3 min Rp 75k. #2 Website W1 + W2, and who edits the site. #3 15 images = phone photos + Kuningan open? FYI: who is the "TourHub" actor?

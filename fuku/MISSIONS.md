@@ -119,6 +119,7 @@
 - **Status:** in progress
 - **Strategy:** The cloud heartbeat runs it on the first Monday run (07:00 WIB). Turn it into a playbook after the first report.
 - **Progress:**
+  - 2026-11-14 10:01: Fatigue pre-pull 11/09–11/13 (12 ads, spend > Rp 30k) in the 11/16 skeleton: **0 flags**, max freq 1.63, every CTR flat or up vs prior (Ad015 +40% CTR at 217.8k CPL = post-click, not fatigue). PEIKIRA2 top ad = 009 (Rp 173,903 / 2).
   - 2026-11-14 09:01: Partial-week pre-pull (11/09–11/13) put into the 11/16 skeleton: Fab Rp 1,717,803 / 15 = 114.5k *(calc)*; control 240.8k (4), PEIKIRA2 86.9k (6), ADSET-3 Rp 0; BC 46.7k (5), keepers ≈ tail; Incess 4 picks 89 leads = 17.8/day at 21.2k *(calc)* vs baseline 12.9/day. Monday becomes a 2-day delta.
   - 2026-11-13 17:02: Incess 019 Copy 5 pre-pull → `fab_advertising/reports/2026-11-13_incess_019copy5_prepull.md`: 11/10–11/12 Rp 62,426 / 1; 3-wk to date Rp 588,953 / 4 = 147.2k *(calc)*; lookup table (needs ≥ 2 leads 11/13–11/16 to avoid the pause ask); rule overlap at 2 leads resolved before the data (keep wins).
   - 2026-11-12 09:02: 11/16 skeleton static parts refreshed: proposal table shows all 5 retirements (11/11–11/12), BC keeper notes, 11/20 gate levers, known disabled accounts, pre-ranked top 3 (site W1+W2, photos/Wave 1, ad item only if a pre-set rule fires).
