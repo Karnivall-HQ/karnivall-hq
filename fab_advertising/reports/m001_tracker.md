@@ -4,7 +4,7 @@ Numbers come from Rudi MCP (read-only). *(calc)* = Fuku's arithmetic. Proposed c
 
 ## 07:00 readout routine (added 2026-11-14 14:02)
 1. Pull 7d Fab by campaign + PEIKIRA ad sets (object_ids) → weekly row below.
-2. Gate: re-run `fuku/bin/gate_model_1120.py` with yesterday locked (until 11/20).
+2. Gate (until 11/20): pull PEIKIRA campaign for **yesterday only** (spend, leads), then `python3 fuku/bin/gate_model_1120.py --lock 293851 0 [--lock <each later finished day>] --peik <S> <L> --bc <S> <L> --p2 <S> <L>` (7d base from step 1). Record each day's lock in the row Notes so the next readout can re-use it. Break-even for ADSET-3 = the `BE A3` line.
 3. Criterion 1: `python3 fuku/bin/criterion1_model_1205.py --peik <S> <L> --bc <S> <L> --p2 <S> <L> --today <YYYY-MM-DD>` → copy the "LAST WORKABLE DATE" line into the row's Notes and NOW.md. If it says NONE or days left ≤ 2 → flag in the M-001 report (no new ask beyond the cap).
 
 ## Weekly readouts (7d windows)

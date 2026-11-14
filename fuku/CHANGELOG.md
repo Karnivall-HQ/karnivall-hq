@@ -15,4 +15,5 @@
 - 2026-11-11 14:02 · playbook meta-tests-and-proposals §D: before re-asking a 'pause the losers' item, check the losers' 7d spend share (< 5% → retire).
 - 2026-11-12 15:02 · New playbook `ad-copy-page-check.md` (consolidates the 4 site/copy lessons of 11/12 into one pre-ship checklist).
 - 2026-11-14 · Added `fuku/bin/gate_model_1120.py` (11/20 gate scenario model) so daily re-runs are reproducible.
+- 2026-11-14 21:01 · `fuku/bin/gate_model_1120.py`: CLI flags `--lock S L` (repeatable), `--peik/--bc/--p2 S L`; labels and break-even horizon follow the locked-day count. Defaults reproduce the old output.
 - 2026-11-14 12:01: Retro #3 (cloud; triggered by 16 lessons since Retro #2). New playbook `meta-modelling-and-planning.md` (7 lessons); added 4 lessons to `meta-tests-and-proposals.md`, 2 tool tips to `meta-cpl-diagnosis.md`, 1 step to `ad-copy-page-check.md`; lessons.md 29 → 3; 2 Evolving rules added to CLAUDE.md (modelling playbook, copy check). Memory: Alvian response pattern, TourHub actor, site "promo launching"/"akan launching" wording. M-001 scored at risk, strategy now criterion-1-first with criterion 2 → 01/15 re-plan. §1–§4 untouched.

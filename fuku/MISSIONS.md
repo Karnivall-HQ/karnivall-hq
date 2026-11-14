@@ -33,6 +33,7 @@
   4. *Scale*: propose budget raises of ~20–30% every 3–4 days, only while the 7d CPL ≤ Rp 95k. Alvian applies them. Fuku verifies the effect in the next readouts. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
+  - 2026-11-14 21:01: `gate_model_1120.py` now takes `--lock` days and 7d bases by flag (defaults reproduce the 08:01 numbers exactly), so the 11/15–11/19 readouts re-run it without editing code. 11/16 weekly run sheet: rows 2–3 + 12 shared with the tracker readout (same 11/09–11/15 window, pull once). No new ask.
   - 2026-11-14 20:02: 11/20 gate-miss note dry-run: criterion-1 line now a placeholder fed by readout Step 4b (was hard-coded 11/14 numbers); ⟨y⟩ spend/CPL clash split; new ADSET-3 rows (rule 2 fired but active; readable = rule-3 word, winner only 11/27); Ad015-paused checkbox added to readout Step 0; G3-only-Ad015 row added.
   - 2026-11-14 19:02: Poll: no account edits; ADSET-3 Rp 0 (~39h); site still unfixed. 11/20 S1 card dry-run: G3 now reads Ad015 on its own 7d window and only if it's still active; new row: if only Ad015 trips G3, re-send ask #1(a) instead of scaling.
   - 2026-11-14 14:02: Criterion-1 model is now a daily 07:00 step: `criterion1_model_1205.py` takes the fresh 7d base by flags and prints the last workable date (today: **11/29**, 15 days left *(calc)*); routine written at the top of `m001_tracker.md`. No new ask.
