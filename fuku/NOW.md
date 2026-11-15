@@ -1,11 +1,11 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-15 13:02 WIB (cloud heartbeat: 13:00 poll)_
+_Last updated: 2026-11-15 14:01 WIB (cloud heartbeat: groundwork, ADSET-3 cause)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
 - **⚠️ 11/15 00:41 PEIKIRA CBO Rp 300k → Rp 3,000,000/day + bid cap Rp 105k on control, PEIKIRA2, ADSET-3** (actor Rudi MCP 61594758338050; not any ask). 13:02: today Rp 143,793 / 1, only Rp 5,366 spent since 07:05 → cap throttles (pace ≈ 265k/day *(calc)*); all 3 ad sets back in LEARNING since 00:42. Guards none tripped. OUTBOX #1 = "intended or revert?" (rec held to 11/18 read).
 - **M-001 (P0, at risk):** 7d (11/08–11/14) Rp 2,443,461 / 21 = **116.4k** *(calc)* ❌ vs 95k. PEIKIRA 130.9k (16), BC 69.7k (5). Control 153.6k (8), PEIKIRA2 108.2k (8), ADSET-3 Rp 0 (day 3, even under the cap).
-- **Ad015** still ACTIVE: 7d 141.0k *(calc)*, trigger still fired. OUTBOX #2 (pause Ad015 + ADSET-3 min 75k) still open; its "CBO stays 300k" depends on #1.
+- **Ad015** still ACTIVE: 7d 141.0k *(calc)*, trigger still fired. OUTBOX #2 (pause Ad015 + ADSET-3 min 75k) still open; its "CBO stays 300k" depends on #1. 14:01: ADSET-3 = same audience as PEIKIRA2 → overlap + cap starve it; only #2(b) fixes it (INFERRED).
 - **Models void until re-based:** gate 126.0k, criterion-1 11/28 (300k basis). Re-base = `--budget <actual PEIKIRA daily spend>` on both. At 475k pace: gate 127.3k, break-even PEIKIRA CPL 101.1k → 98.8k; at Rp 1M: 96.7k, last date 11/27 *(calc)*.
 - **M-002 (P1):** weekly report Mon 11/16 07:00 from the skeleton (budget-change line, 11/15 log rows, `--budget` on row 12, Top-3 item 0 all pre-staged 10:02).
 
@@ -20,7 +20,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **Wave 1 / shoot card vs ADSET-3 photos:** list which shoot-card v2 shots ADSET-3 already covers (photos ask is parked).
 2. **Cap-vs-target note:** if "intended", draft the cap question (105k cap > 95k target → blend ≈ 102–104k at ≥ Rp 1M/day *(calc)*); hold until the 11/18 read.
-3. **ADSET-3 starvation note:** learning status done 13:02 (LEARNING, 0 conv); still to pull: delivery diagnostics/`ads_get_errors` for a cause beyond the cap.
+3. **11/16 skeleton: ADSET-3 line:** add the 11/15 cause (overlap with PEIKIRA2 + cap; only #2(b) fixes it) to the weekly report's ADSET-3 row.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Budget Rp 3M/day intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
