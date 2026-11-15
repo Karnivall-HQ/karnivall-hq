@@ -33,6 +33,7 @@
   4. *Scale*: propose budget raises of ~20–30% every 3–4 days, only while the 7d CPL ≤ Rp 95k. Alvian applies them. Fuku verifies the effect in the next readouts. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
+  - 2026-11-15 15:01: Groundwork: viewed ADSET-3's new images vs shoot card v2 → not the home-clutter shoot (facility photos + graphics; S30 partly = P1). Shoot card stands; parked photos ask shrinks to "Kuningan open?". ⚠️ one image looks like a render (read ADSET-3 per ad). Weekly skeleton gets the ADSET-3 cause line. `fab_advertising/creatives/2026-11-15_adset3_vs_shoot_card.md`.
   - 2026-11-15 14:01: Groundwork: ADSET-3 starvation cause (read card 11/15 section). No errors; 6 ads 0 lifetime impr; targeting = PEIKIRA2's (Jakarta, IG-only, Adv+ audience) → auction overlap + Rp 105k cap + CBO allocation stack against a 0-history ad set (INFERRED). Only #2(b) min spend fixes it; #2(a) alone likely won't. No new ask.
   - 2026-11-15 13:02: 13:00 poll: PEIKIRA today Rp 143,793 / 1, only Rp 5,366 spent 07:05→13:02 *(calc)*: the 105k cap throttles spend (pace ≈ Rp 265k/day *(calc)*); all 3 ad sets back in LEARNING after the 00:42 edit. Guards none tripped; no log rows since 07:00. One status line on OUTBOX #1, no new ask.
   - 2026-11-15 12:02: Groundwork: `fuku/bin/peikira_guard.py` prints day CPL, pace and the G-a/G-b verdict from pasted PEIKIRA rows (verified: 11/15 07:05 pace Rp 474,607/day *(calc)*). No new ask.

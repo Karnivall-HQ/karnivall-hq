@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-15 14:01 WIB (cloud heartbeat: groundwork, ADSET-3 cause)_
+_Last updated: 2026-11-15 15:01 WIB (cloud heartbeat: groundwork, ADSET-3 images vs shoot card)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -18,13 +18,13 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 6. **Retro #4:** at > 15 lessons or 11/21.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **Wave 1 / shoot card vs ADSET-3 photos:** list which shoot-card v2 shots ADSET-3 already covers (photos ask is parked).
-2. **Cap-vs-target note:** if "intended", draft the cap question (105k cap > 95k target → blend ≈ 102–104k at ≥ Rp 1M/day *(calc)*); hold until the 11/18 read.
-3. **11/16 skeleton: ADSET-3 line:** add the 11/15 cause (overlap with PEIKIRA2 + cap; only #2(b) fixes it) to the weekly report's ADSET-3 row.
+1. **Cap-vs-target note:** if "intended", draft the cap question (105k cap > 95k target → blend ≈ 102–104k at ≥ Rp 1M/day *(calc)*); hold until the 11/18 read.
+2. **ADSET-3 per-ad read rules:** add to the read card: judge per look (home photo S30 / facility 018 / graphics 003, 007 / render-look image) since 3 looks are mixed (`creatives/2026-11-15_adset3_vs_shoot_card.md`).
+3. **Wave 2 carousel idea:** clutter photo → real C1 unit photo as a 2-card carousel; add as an option row to the wave-2 build sheet.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Budget Rp 3M/day intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
-- Parked: 15 images = phone photos + Kuningan open? FYI: who is "TourHub"? Later: "All-in", R5 sellers, close rate + months stayed.
+- Parked: Kuningan open? (photos half answered 15:01: not the shoot) FYI: who is "TourHub"? Later: "All-in", R5 sellers, close rate + months stayed.
 
 ## Standing facts
 - Read `playbooks/meta-ads-algorithm.md` + `meta-cpl-diagnosis.md` + `meta-tests-and-proposals.md` before any ads work, `meta-modelling-and-planning.md` before any model/plan; `ad-copy-page-check.md` before any copy is paste-ready.
