@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-15 07:05 WIB (cloud heartbeat: 07:00 readout + overnight budget change)_
+_Last updated: 2026-11-15 08:01 WIB (cloud heartbeat: groundwork, 11/18 budget-change read card)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -10,17 +10,17 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - **M-002 (P1):** weekly report Mon 11/16 07:00 from the skeleton; add the budget change to "What changed".
 
 ## Next actions (dated or triggered)
-1. **13:00 poll (today, extra weight):** PEIKIRA today spend/leads by ad set, activity log since 07:05. If PEIKIRA > Rp 1M spent today with CPL > 130k → add one line to OUTBOX #1 (no new ask).
+1. **13:00 poll (today, extra weight):** PEIKIRA today spend/leads by ad set, activity log since 07:05. Apply guards G-a/G-b from `fab_advertising/reports/2026-11-18_budget_change_read_card.md` (one line on OUTBOX #1, no new ask).
 2. **19:00 poll:** same; full-day pace estimate.
 3. **Every run:** INBOX/OUTBOX for "intended"/"revert", "done" on #2, "W1 W2 done", photos answer.
 4. **When #1 answered:** re-base `gate_model_1120.py` + `criterion1_model_1205.py` on the real budget (if intended: CBO break-even uses actual daily spend, not 300k); log in tracker.
-5. **11/16 07:00:** weekly report + readout (tracker routine step 0 = activity log first). **11/18:** 3-day read of the budget change. **11/20:** readout template. **11/27:** ADSET-3 verdict.
+5. **11/16 07:00:** weekly report + readout (tracker routine step 0 = activity log first). **11/18:** 3-day read of the budget change = fill `2026-11-18_budget_change_read_card.md`. **11/20:** readout template. **11/27:** ADSET-3 verdict.
 6. **Retro #4:** at > 15 lessons or 11/21.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **Budget-change read card:** pre-write the 11/18 3-day read (PEIKIRA spend/day, CPL, ad-set split, cap delivery) with stop/keep rules, both branches (intended / reverted).
-2. **Model re-base switch:** add a `--budget` flag to `gate_model_1120.py` and `criterion1_model_1205.py` so a new daily budget re-bases without code edits.
-3. **Wave 1 / shoot card vs ADSET-3 photos:** list which shoot-card v2 shots ADSET-3 already covers (photos ask is parked).
+1. **Model re-base switch:** add a `--budget` flag to `gate_model_1120.py` and `criterion1_model_1205.py` so a new daily budget re-bases without code edits.
+2. **Wave 1 / shoot card vs ADSET-3 photos:** list which shoot-card v2 shots ADSET-3 already covers (photos ask is parked).
+3. **Cap-vs-target note:** if "intended", draft the cap question (105k cap > 95k target → blend ≈ 102–104k at ≥ Rp 1M/day *(calc)*); hold until the 11/18 read.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Budget Rp 3M/day intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
