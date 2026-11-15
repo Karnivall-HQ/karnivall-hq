@@ -5,6 +5,7 @@ _Written 2026-11-15 08:01 WIB by Fuku, before the change has a full day of data 
 - Campaign `120254051672440572` PEIKIRA-BID-CAP-LEADS-CAMPAIGN: daily budget **Rp 300,000 → Rp 3,000,000**; bid strategy → **bid cap Rp 105,000** on control `120254051672430572`, PEIKIRA2 `120254276298070572`, ADSET-3 `120254400251570572`. Actor "Rudi MCP" (61594758338050). Intent unconfirmed (OUTBOX #1).
 - Baseline (7d 11/08–11/14, account data): PEIKIRA Rp 2,094,765 / 16 = **130.9k**, Rp 299k/day, 2.29 leads/day *(calc)*. BC Rp 348,696 / 5.
 - Today to 07:05: Rp 138,427 / 1 (not a metric).
+- **13:02 poll:** today Rp 143,793 / 1 (control Rp 91,613 / 0, PEIKIRA2 Rp 52,180 / 1, ADSET-3 Rp 0): only **Rp 5,366 spent 07:05→13:02** *(calc)*, pace ≈ Rp 265k/day *(calc, projection)*. The cap, not the budget, is setting spend (fits CAP-BOUND/STARVED, not overspend). Entity read: **all 3 ad sets are LEARNING, 0–1 conversions since the significant edit at 11/15 00:42** (last_sig_edit_ts), so the 11/15–11/17 read is learning-phase data; judge it against the table, but expect noise. No activity-log rows since 07:00. Guards: none tripped.
 
 ## What to expect (INFERRED, from this account's own bid-cap history)
 - At Fab, bid-capped ad sets land near the cap: BC 087 Copy 7, 8 weekly rows at cap Rp 94,250 → CPL 96.1k (ratio 1.02); caps choked BC delivery to ~1.4% of budget (11/05). So the likely outcome is **PEIKIRA CPL ≈ Rp 100–110k and spend far below Rp 3M/day**: the cap, not the budget, sets spend.
