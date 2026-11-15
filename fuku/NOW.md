@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-15 09:01 WIB (cloud heartbeat: groundwork, `--budget` re-base flag on both models)_
+_Last updated: 2026-11-15 10:02 WIB (cloud heartbeat: groundwork, 11/16 skeleton budget block + ask-number fixes)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -7,7 +7,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - **M-001 (P0, at risk):** 7d (11/08–11/14) Rp 2,443,461 / 21 = **116.4k** *(calc)* ❌ vs 95k. PEIKIRA 130.9k (16), BC 69.7k (5). Control 153.6k (8), PEIKIRA2 108.2k (8), ADSET-3 Rp 0 (day 3, even under the cap).
 - **Ad015** still ACTIVE: 7d 141.0k *(calc)*, trigger still fired. OUTBOX #2 (pause Ad015 + ADSET-3 min 75k) still open; its "CBO stays 300k" depends on #1.
 - **Models void until re-based:** gate 126.0k, criterion-1 11/28 (300k basis). Re-base = `--budget <actual PEIKIRA daily spend>` on both. At 475k pace: gate 127.3k, break-even PEIKIRA CPL 101.1k → 98.8k; at Rp 1M: 96.7k, last date 11/27 *(calc)*.
-- **M-002 (P1):** weekly report Mon 11/16 07:00 from the skeleton; add the budget change to "What changed".
+- **M-002 (P1):** weekly report Mon 11/16 07:00 from the skeleton (budget-change line, 11/15 log rows, `--budget` on row 12, Top-3 item 0 all pre-staged 10:02).
 
 ## Next actions (dated or triggered)
 1. **13:00 poll (today, extra weight):** PEIKIRA today spend/leads by ad set, activity log since 07:05. Apply guards G-a/G-b from `fab_advertising/reports/2026-11-18_budget_change_read_card.md` (one line on OUTBOX #1, no new ask).
@@ -20,7 +20,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **Wave 1 / shoot card vs ADSET-3 photos:** list which shoot-card v2 shots ADSET-3 already covers (photos ask is parked).
 2. **Cap-vs-target note:** if "intended", draft the cap question (105k cap > 95k target → blend ≈ 102–104k at ≥ Rp 1M/day *(calc)*); hold until the 11/18 read.
-3. **11/16 weekly skeleton:** add a "Budget change" block (3M CBO + 105k caps, pace, model re-base numbers above) so the 07:00 Monday report is a fill job.
+3. **OUTBOX-ref sweep:** grep `OUTBOX #` across other pre-staged files (11/20 readout, gate-miss note, S1 card) and fix stale numbers after the 07:05 renumber.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Budget Rp 3M/day intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
