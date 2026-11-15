@@ -3,6 +3,8 @@
 # A lever live by 11/27 eve counts all 7 days; live later -> fewer days. BC flat. Run: python3 fuku/bin/criterion1_model_1205.py
 # Daily use (07:00 readout): pass the fresh 7d base + today's date, e.g.
 #   python3 fuku/bin/criterion1_model_1205.py --peik 2016453 14 --bc 313500 6 --p2 924806 8 --today 2026-11-15
+# --budget = PEIKIRA daily SPEND for the window (re-base, added 2026-11-15): expected actual spend, not the CBO setting.
+#   CPLs stay the 7d CPLs (INFERRED: flat with spend under the bid cap). Default = PEIKIRA 7d spend / 7.
 # Defaults = 7d 11/07-11/13. Prints the last workable date (both asks live by eve of that date -> <= 95k).
 import argparse, datetime as dt
 ap=argparse.ArgumentParser()
@@ -10,10 +12,11 @@ ap.add_argument('--peik',nargs=2,type=float,default=[2016453,14],metavar=('SPEND
 ap.add_argument('--bc',nargs=2,type=float,default=[313500,6],metavar=('SPEND','LEADS'))
 ap.add_argument('--p2',nargs=2,type=float,default=[924806,8],metavar=('SPEND','LEADS'))
 ap.add_argument('--today',default=None)
+ap.add_argument('--budget',type=float,default=None,metavar='PEIKIRA_DAILY_SPEND')
 A=ap.parse_args()
 P_S,P_L=A.peik; BC_S,BC_L=A.bc
 P2_CPL=A.p2[0]/A.p2[1]         # freed spend runs at PEIKIRA2's 7d CPL
-P_DAY=P_S/7; P_CPL=P_S/P_L; BC_DAY=BC_S/7; BC_CPL=BC_S/BC_L
+P_DAY=A.budget if A.budget else P_S/7; P_CPL=P_S/P_L; BC_DAY=BC_S/7; BC_CPL=BC_S/BC_L
 SITE={'none':1.0,'+0.5pt':4.4/3.9,'+1pt':4.9/3.9}
 def week(days_on=7, rest=P_CPL, site=1.0, a3_share=0.0, a3_cpl=95000):
     s=l=0.0
@@ -38,6 +41,7 @@ rows=[("A  nothing changes", week(0)),
       ("F+E ADSET-3 1/3 @95k", week(rest=P2_CPL, a3_share=1/3, a3_cpl=95000)),
       ("F+C+E ADSET-3 1/3 @95k, +0.5pt", week(rest=P2_CPL, site=SITE['+0.5pt'], a3_share=1/3, a3_cpl=95000)),
       ("F+C+E ADSET-3 1/3 @130k, +0.5pt", week(rest=P2_CPL, site=SITE['+0.5pt'], a3_share=1/3, a3_cpl=130000))]
+print(f"PEIKIRA {f(P_DAY)}/day{' (--budget)' if A.budget else ''} at {f(P_CPL)}, BC {f(BC_DAY)}/day at {f(BC_CPL)}")
 print("Full window (all levers live by 11/27 eve):")
 for n,v in rows: print(f"  {n:38s} {f(v):>7s} {'OK' if v<=95000 else 'MISS'}")
 print("Late starts (days of 7 the lever is live):")

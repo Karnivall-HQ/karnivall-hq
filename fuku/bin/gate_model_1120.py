@@ -6,6 +6,8 @@
 #       --peik <7d S> <7d L> --bc <7d S> <7d L> --p2 <7d S> <7d L>
 # --lock = PEIKIRA campaign spend/leads for that day (BC is modelled flat at its 7d rate on all 7 days).
 # --peik = PEIKIRA 7d base for the open days (daily spend = S/7, CPL = S/L). --p2 = PEIKIRA2 7d (the "Ad015 paused" CPL).
+# --budget = PEIKIRA daily SPEND on open days (re-base, added 2026-11-15). Pass expected actual spend, not the CBO
+#   setting (11/15: CBO Rp 3M but paced ~475k/day under the 105k cap). CPL stays the --peik CPL (INFERRED: flat with spend).
 import argparse, datetime as dt
 
 ap = argparse.ArgumentParser()
@@ -13,13 +15,14 @@ ap.add_argument("--lock", nargs=2, type=float, action="append", metavar=("SPEND"
 ap.add_argument("--peik", nargs=2, type=float, default=[2016453, 14], metavar=("SPEND", "LEADS"))
 ap.add_argument("--bc", nargs=2, type=float, default=[313500, 6], metavar=("SPEND", "LEADS"))
 ap.add_argument("--p2", nargs=2, type=float, default=[924806, 8], metavar=("SPEND", "LEADS"))
+ap.add_argument("--budget", type=float, default=None, metavar="PEIKIRA_DAILY_SPEND")
 a = ap.parse_args()
 
 START = dt.date(2026, 11, 13)
 LOCKED = a.lock or [[293851, 0]]
 N_OPEN = 7 - len(LOCKED)  # PEIKIRA days still to come
 assert N_OPEN >= 1, "window already closed: read the 11/20 actual instead"
-P_DAY = a.peik[0] / 7; P_CPL = a.peik[0] / a.peik[1]
+P_DAY = a.budget if a.budget else a.peik[0] / 7; P_CPL = a.peik[0] / a.peik[1]
 BC_S, BC_L = a.bc
 P2_CPL = a.p2[0] / a.p2[1]
 
@@ -46,7 +49,7 @@ def run(days_changed, peik_cpl_after, site=1.0, a3_share=0, a3_cpl=None):
 def k(x): return f"{x/1000:.1f}k"
 locked_to = START + dt.timedelta(days=len(LOCKED) - 1)
 print(f"Locked PEIKIRA days: 11/13 -> {locked_to:%m/%d} ({len(LOCKED)}), open days: {N_OPEN}. "
-      f"Base PEIKIRA {k(P_CPL)}, P2 {k(P2_CPL)}, BC {k(BC_S/BC_L)}")
+      f"Base PEIKIRA {k(P_CPL)} at {k(P_DAY)}/day{' (--budget)' if a.budget else ''}, P2 {k(P2_CPL)}, BC {k(BC_S/BC_L)}")
 print("A nothing:", [round(x, 1) for x in run(0, P_CPL)])
 for days in [x for x in (N_OPEN - 1, N_OPEN - 2, N_OPEN - 3) if x >= 1]:
     live = START + dt.timedelta(days=7 - days - 1)
