@@ -49,3 +49,17 @@ Window: full days **11/15, 11/16, 11/17** (read at the 11/18 07:00 readout). Pul
 
 ## Readout line template (11/18)
 "PEIKIRA 11/15–11/17 under 3M + 105k cap: Rp ⟨S3⟩ (⟨S3/3⟩/day, ⟨%⟩ of budget) / ⟨L⟩ leads = ⟨C3⟩ *(calc)* vs baseline 130.9k. Case: ⟨CAP-BOUND/WIN/HOLD/REVERT/STARVED⟩. Split: control ⟨⟩ / PEIKIRA2 ⟨⟩ / ADSET-3 ⟨⟩. Guard trips: ⟨none/G-a date/G-b dates⟩."
+
+## Dry-run + rule-overlap check (written 11/15 20:01 WIB, before the data; playbook `meta-modelling-and-planning.md` C.1)
+**Every ⟨⟩ cell → one pull:** S3, L, C3, split = one `ads_get_ad_entities` level=adset, campaign `120254051672440572`, time_range 11/15→11/17 (spend, pixel Lead). ⟨%⟩ of budget = S3 ÷ Rp 9,000,000 *(calc)*. Guard trips = the G-a/G-b lines in the 11/15 19:01 journal + the 11/16 and 11/17 07:00 readouts (11/15: none to 19:01). Pre-change bid strategy (needed by row 3 below) = `old_value` in the `extra_data` of the 11/15 00:41–00:42 activity-log rows; pull it **in the 11/16 07:00 run** (row 7 already covers that window), so 11/18 doesn't depend on it.
+
+**Overlap found.** Tabulating S3 × leads *(calc)*: at the likely spend (11/15 pace ≈ Rp 189k/day → S3 ≈ Rp 450–570k), **STARVED and the comparative rule (C3 > 130.9k → REVERT) fire together for ≤ 3 leads (S3 450k) / ≤ 4 leads (S3 570k)**. They contradict: STARVED says "no change, re-read 11/21"; REVERT says "budget back to Rp 300k", which is moot when spend is under Rp 300k/day (the budget isn't binding). CAP-BOUND co-fires with every case below Rp 1.5M, so it is a label ("no budget ask"), not a case.
+
+**Precedence (fixed now):**
+1. **S3 ≥ Rp 600k:** the table as written; REVERT and the comparative rule agree in every cell checked (750k and 1.2M × 0–9 leads).
+2. **S3 < Rp 600k → STARVED branch only;** never propose a budget change (not binding). Split by C3:
+   - **STARVED-worse, C3 > 130.9k:** fewer leads (≤ 4 in 3 days vs baseline 2.29/day = 6.9 *(calc)*) **and** dearer. Proposal: **restore PEIKIRA's pre-11/15 setup on all 3 ad sets** (bid strategy = the logged `old_value`; budget Rp 300k): a known state with weeks of history, so this is not a new cap test (playbook §C's ≥ 8-row rule applies to new caps, not to undoing one). Basis is the volume loss, which is certain; the CPL gap alone is not (if the true CPL were still 130.9k, P(≤ 3 leads on Rp 450k) ≈ 55%, on Rp 570k P(≤ 4) ≈ 56% *(calc, Poisson)*) → say so in the line.
+   - **STARVED-middle, 95k < C3 ≤ 130.9k:** no ask; re-read 7d on 11/21 (as written).
+   - **STARVED-cheap, C3 ≤ 95k:** no ask; the cap works on cost, volume is the cost of it. Log leads/day vs 2.29; re-read 11/21.
+3. Any Alvian answer to OUTBOX #1 overrides rows 1–2 per "Branches" above.
+- **Most likely 11/18 line (INFERRED from the 11/15 pace + ≈ 1 lead/day):** STARVED-worse → re-ask OUTBOX #1 as one line: "Undo the 11/15 change (Rp 300k + previous bidding)? 3 days: Rp ⟨S3⟩ / ⟨L⟩ vs 6.9 leads at baseline."

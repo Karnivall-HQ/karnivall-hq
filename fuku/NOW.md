@@ -1,29 +1,29 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-15 19:01 WIB (cloud heartbeat: 19:00 poll, nothing tripped; L1a benchmark 80k)_
+_Last updated: 2026-11-15 20:01 WIB (cloud heartbeat: quiet; 11/18 card precedence fixed, weekly skeleton topped up)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
-- **⚠️ 11/15 00:41 PEIKIRA CBO Rp 300k → Rp 3,000,000/day + bid cap Rp 105k on control, PEIKIRA2, ADSET-3** (actor Rudi MCP 61594758338050; not any ask). 19:01: today Rp 149,379 / 1, only Rp 5,586 spent since 13:02 → cap nearly stalls delivery (pace ≈ 189k/day *(calc)*); all 3 ad sets back in LEARNING since 00:42. Guards none tripped. OUTBOX #1 = "intended or revert?" (rec held to 11/18 read).
-- **M-001 (P0, at risk):** 7d (11/08–11/14) Rp 2,443,461 / 21 = **116.4k** *(calc)* ❌ vs 95k. PEIKIRA 130.9k (16), BC 69.7k (5). Control 153.6k (8), PEIKIRA2 108.2k (8), ADSET-3 Rp 0 (day 3, even under the cap).
-- **Ad015** still ACTIVE: 7d 141.0k *(calc)*, trigger still fired. OUTBOX #2 (pause Ad015 + ADSET-3 min 75k) still open; its "CBO stays 300k" depends on #1. 14:01: ADSET-3 = same audience as PEIKIRA2 → overlap + cap starve it; only #2(b) fixes it (INFERRED). 17:02: ADSET-3 holds AKIRA-016 = home clutter + stickers (best-history look), so starvation blocks that test too. 18:01: 016's images never spent before (PEIKIRA2 copy paused 2 min after creation 11/05) → fresh test, no prior CPL.
-- **Models void until re-based:** gate 126.0k, criterion-1 11/28 (300k basis). Re-base = `--budget <actual PEIKIRA daily spend>` on both. At 475k pace: gate 127.3k, break-even PEIKIRA CPL 101.1k → 98.8k; at Rp 1M: 96.7k, last date 11/27 *(calc)*.
-- **M-002 (P1):** weekly report Mon 11/16 07:00 from the skeleton (budget-change line, 11/15 log rows, `--budget` on row 12, Top-3 item 0 all pre-staged 10:02).
+- **⚠️ 11/15 00:41 PEIKIRA CBO Rp 300k → Rp 3M/day + bid cap Rp 105k on control, PEIKIRA2, ADSET-3** (actor Rudi MCP 61594758338050; not any ask). 19:01: today Rp 149,379 / 1, pace ≈ 189k/day *(calc)*; cap stalls delivery; all 3 ad sets LEARNING since 00:42. Guards none tripped. OUTBOX #1 = "intended or revert?".
+- **11/18 read (precedence fixed 20:01):** S3 < Rp 600k → STARVED branch only (no budget ask); STARVED-worse (C3 > 130.9k) → re-ask #1 as "undo the 11/15 change (old bidding + Rp 300k)?" on the volume loss. Most likely outcome (INFERRED).
+- **M-001 (P0, at risk):** 7d (11/08–11/14) Rp 2,443,461 / 21 = **116.4k** *(calc)* ❌ vs 95k. PEIKIRA 130.9k (16), BC 69.7k (5). ADSET-3 Rp 0 (day 3).
+- **Ad015** still ACTIVE, 7d 141.0k *(calc)*. OUTBOX #2 (pause Ad015 + ADSET-3 min 75k) open; only #2(b) fixes ADSET-3 starvation (INFERRED). ADSET-3 holds AKIRA-016 (home clutter + stickers, fresh test; parent BC Image087 80.0k).
+- **Models void until re-based:** `--budget <actual PEIKIRA daily spend>` on both (gate + criterion-1).
+- **M-002 (P1):** weekly report Mon 11/16 07:00 from the skeleton (all pre-staged, incl. L1a line, stall line, `old_value` pull).
 
 ## Next actions (dated or triggered)
-1. **11/16 07:00:** full 11/15 day into the guard (19:01 base Rp 149,379 / 1); it won't reach 285k → STARVED watch, not G-b. No more polls today.
-2. **Every run:** INBOX/OUTBOX for "intended"/"revert", "done" on #2, "W1 W2 done", photos answer.
-3. **When #1 answered / from 11/16 readout:** run both models with `--budget <yesterday's PEIKIRA spend>` (not the CBO setting); log in tracker.
-4. **11/16 07:00:** weekly report + readout (tracker routine step 0 = activity log first). **11/18:** 3-day read of the budget change = fill `2026-11-18_budget_change_read_card.md`. **11/20:** readout template. **11/27:** ADSET-3 verdict.
-5. **Retro #4:** at > 15 lessons (now 11) or 11/21.
+1. **Every run:** INBOX/OUTBOX for "intended"/"revert", "done" on #2, "W1 W2 done", Kuningan answer.
+2. **11/16 07:00:** weekly report + readout (activity log first; copy the 11/15 bid-strategy `old_value` into the 11/18 card); run both models with `--budget <11/15 PEIKIRA spend>`.
+3. **11/18 07:00:** fill `2026-11-18_budget_change_read_card.md` using its precedence section. **11/20:** readout template. **11/27:** ADSET-3 verdict.
+4. **Retro #4:** at > 15 lessons (now 11) or 11/21.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **Cap-vs-target note:** if "intended", draft the cap question (105k cap > 95k target → blend ≈ 102–104k at ≥ Rp 1M/day *(calc)*); hold until the 11/18 read.
-2. **11/18 read card dry-run:** walk every ⟨⟩ cell to a named pull (as done for the 11/27 template 11/14).
-3. **Weekly skeleton:** add the L1a benchmark (BC Image087 80.0k lifetime / 79.0k 28d) + "11/15 delivery stalled under the cap" line to `reports/weekly/2026-11-16.md`.
+2. **Overlap check on the 11/20 readout template + 11/27 ADSET-3 verdict template** (playbook C.1: tabulate by lead count, write precedence) — the 11/18 card had one.
+3. **11/18 STARVED-worse ask:** pre-draft the one-line re-ask + the "undo" change list for Markus (fill `old_value` after 11/16).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Budget Rp 3M/day intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
-- Parked: Kuningan open? (photos half answered 15:01: not the shoot) FYI: who is "TourHub"? Later: "All-in", R5 sellers, close rate + months stayed.
+- Parked: Kuningan open? FYI: who is "TourHub"? Later: "All-in", R5 sellers, close rate + months stayed.
 
 ## Standing facts
 - Read `playbooks/meta-ads-algorithm.md` + `meta-cpl-diagnosis.md` + `meta-tests-and-proposals.md` before any ads work, `meta-modelling-and-planning.md` before any model/plan; `ad-copy-page-check.md` before any copy is paste-ready.
