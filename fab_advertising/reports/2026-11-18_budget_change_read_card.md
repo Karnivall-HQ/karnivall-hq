@@ -63,3 +63,26 @@ Window: full days **11/15, 11/16, 11/17** (read at the 11/18 07:00 readout). Pul
    - **STARVED-cheap, C3 ≤ 95k:** no ask; the cap works on cost, volume is the cost of it. Log leads/day vs 2.29; re-read 11/21.
 3. Any Alvian answer to OUTBOX #1 overrides rows 1–2 per "Branches" above.
 - **Most likely 11/18 line (INFERRED from the 11/15 pace + ≈ 1 lead/day):** STARVED-worse → re-ask OUTBOX #1 as one line: "Undo the 11/15 change (Rp 300k + previous bidding)? 3 days: Rp ⟨S3⟩ / ⟨L⟩ vs 6.9 leads at baseline."
+
+## Pre-drafted STARVED-worse ask + undo change list (written 11/15 22:01 WIB, before the data)
+**Pre-change state (activity log, account data; pulled 11/15 22:01, so the 11/16 run doesn't need to):**
+| Object | ID | Before 11/15 00:41–00:42 (`old_value`) | After (`new_value`) |
+|---|---|---|---|
+| Campaign PEIKIRA-BID-CAP-LEADS-CAMPAIGN (budget) | `120254051672440572` | Rp 300,000 per day | Rp 3,000,000 per day |
+| Control PEIKIRA-FAB-20261023-ADSET | `120254051672430572` | "Automatically bid for impressions", no cap amount | "Optimize bid for actions", cap Rp 105,000 |
+| AKIRA-FAB-20261031-WAVE-PEIKIRA2 | `120254276298070572` | "Automatically bid for clicks", no cap amount | "Optimize bid for actions", cap Rp 105,000 |
+| PEIKIRA-FAB-20261109-ADSET-3 | `120254400251570572` | "Automatically bid for actions", no cap amount | "Optimize bid for actions", cap Rp 105,000 |
+- All 3 were **automatic bidding with no cap** before (`additional_value.old_value: null`). The 3 labels are Meta's translated log labels; they probably differ only by billing/optimisation event, and in Ads Manager all 3 read as **"Highest volume"** (INFERRED; Markus confirms on screen). The campaign name says "BID-CAP", but the log shows no cap amount before 11/15.
+- Also logged at 00:41: the campaign went Active → Pending Process → Active (Meta re-review after the edit; not a separate change).
+
+**One-line ask (use only if the 11/18 case = STARVED-worse; fill ⟨⟩ from the read):**
+"❓ Undo the 11/15 PEIKIRA change: budget back to Rp 300k/day + remove the Rp 105k bid caps (back to Highest volume) on all 3 ad sets? 3 days under the cap: Rp ⟨S3⟩ / ⟨L⟩ leads = ⟨C3⟩ *(calc)* vs 6.9 leads and 130.9k at baseline. The volume loss is certain; the CPL gap could still be noise (≈ 55% chance *(calc)*). Reply 'undo' or 'keep'."
+
+**Proposed changes for Alvian/Markus to apply (Fuku applies nothing):**
+1. Campaign `120254051672440572` → daily budget **Rp 300,000** (from Rp 3,000,000).
+2. Ad set `120254051672430572` (control) → bid strategy **Highest volume**, cap removed.
+3. Ad set `120254276298070572` (PEIKIRA2) → **Highest volume**, cap removed.
+4. Ad set `120254400251570572` (ADSET-3) → **Highest volume**, cap removed. If OUTBOX #2(b) is a yes, set its Rp 75,000 daily minimum in the same sitting (one learning reset, not two).
+- Do it as **one edit session**: every bid edit resets learning on that ad set (11/15 showed it: all 3 LEARNING from 00:42), so batching = 1 reset.
+- **Read rule after the undo (fixed now):** window starts the full day after the undo; 7d read. Success = PEIKIRA back to ≥ 2 leads/day at ≤ 130.9k (the pre-change baseline) within 7 days; fail = < 1.5 leads/day *(calc threshold)* → re-check the activity log for other edits before blaming the undo.
+- **Do not use** if the case is anything other than STARVED-worse (precedence above), or if Alvian has already answered OUTBOX #1.
