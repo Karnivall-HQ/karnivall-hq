@@ -35,9 +35,19 @@ _Rules come from `2026-11-13_adset3_read_card.md` (rules 2–6) and `fuku/memory
 |---|---|---|
 | **WINNER** | 14d CPL **≤ Rp 95k on ≥ 4 leads** | proven engine: counts toward G2 / a criterion-2 step |
 | **PROMISING** | CPL ≤ 95k on 2–3 leads, **or** ≤ control's 14d CPL on ≥ 4 leads but > 95k | keep running; re-read on day 21 (12/04) with the same rule. No budget step |
-| **UNDER-TESTED** | spend < Rp 380k *(calc: 4 × 95k)* | can't reach 4 leads at target even in theory: no verdict. Cause = starvation → min-spend line below; re-read 12/04 |
+| **UNDER-TESTED** | spend < Rp 380k *(calc: 4 × 95k)* **and none of the rows above/below fired first (see precedence)** | too little spend to call a loser: no verdict. Cause = starvation → min-spend line below; re-read 12/04 |
 | **LOSER** | ≥ Rp 380k spent and CPL > 1.3× control 14d CPL, or rule 2 fired | propose pause (budget returns to control + PEIKIRA2) |
 | **NEUTRAL** | none of the above (e.g. 96k–1.3× control, ≥ 4 leads) | keep only while it isn't the worst ad set; no step, no extra ask |
+
+**Precedence (overlap check 2026-11-15 21:01, playbook C.1; script tabulated spend 0–1.6M × 0–12 leads at control 90k and 130.9k):** the table as first written gave 2 labels in 408 cells: **WINNER+UNDER-TESTED 333** (every 4-lead win costs ≤ 380k, so "< 380k" swallowed nearly every winner), PROMISING+UNDER-TESTED 47, LOSER(rule 2)+UNDER-TESTED 28. Step 5 sends opposite asks for these (budget step vs min-spend). Apply top-down, first match wins:
+1. Rule 2 fired (≥ Rp 190k & 0 leads, or ≥ Rp 285k & ≤ 1 lead) → **LOSER**.
+2. ≥ 4 leads & CPL ≤ 95k → **WINNER** (any spend).
+3. 2–3 leads & CPL ≤ 95k, or ≥ 4 leads & 95k < CPL ≤ control → **PROMISING**.
+4. Spend < Rp 380k → **UNDER-TESTED**.
+5. CPL > 1.3× control → **LOSER**.
+6. Else → **NEUTRAL**.
+Check rows at control 130.9k *(calc)*: 0–1 lead: 100k UNDER, ≥ 300k LOSER(r2) · 2 leads: 100k PROM, 300k UNDER, ≥ 500k LOSER · 4 leads: ≤ 300k WIN, 500k PROM, ≥ 800k LOSER · 6 leads: ≤ 500k WIN, 800k NEUTRAL, 1.2M LOSER. One label in every cell.
+**Budget-state gate (added 11/15):** Step 5's "+Rp 100k/day" step assumes the CBO is ~Rp 300k. If V5 shows the CBO still at Rp 3M/day (11/15 change) or a bid cap on ADSET-3, a WINNER gets **no budget ask**; the line becomes "ADSET-3 won under the cap; keep setup" and any open 11/18 undo ask outranks it.
 
 Decay check (WINNER/PROMISING only; n/a if wk1 had 0 leads or < Rp 95k spend): wk2 CPL > 1.5× wk1 CPL → label "decaying", count it as a winner for ≤ 1 more week (control went 81k → 173k in one week, scale plan v2) [account data].
 

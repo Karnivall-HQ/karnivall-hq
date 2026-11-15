@@ -35,6 +35,7 @@ Window 11/13 00:00 → 11/20 07:00 WIB, account `484578521394893`. Fill one line
 - Rule 2 early kill (≥ Rp 190k & 0 leads, or ≥ Rp 285k & ≤ 1 lead, cumulative): ☐ ok ☐ **fired on ⟨date⟩**
 - **Rule 3 day-7:** ADSET-3 CPL ⟨⟩ vs control CPL ⟨⟩ → ratio ⟨⟩ *(calc)*
   - ≤ 1.00 → **KEEP** · 1.00–1.30 → keep, judge on 11/27 · > 1.30 with ≥ Rp 400k spent → **propose pause** · > 1.30 with < Rp 400k → too little spend, keep
+  - **Precedence (overlap check 11/15 21:01):** starved (< Rp 10k) → stop here · rule 2 fired → pause, skip rule 3 (a ratio ≤ 1.00 can't save it: under the 11/15 cap the control CPL may itself be high) · ADSET-3 **0 leads with Rp 10k–189k** → no ratio (CPL undefined): "keep, judge 11/27" (this gap had no row) · else rule 3 as written.
 - Rule 5–6 per-ad: ads with ≥ Rp 95k spend: ⟨list CPLs⟩; ads < Rp 5k: ⟨list⟩ = untested.
 
 **Ad015:** CTR ⟨⟩ (< 1.30% = trigger) · CPL ⟨⟩ (> 120k = trigger) · freq ⟨⟩ (> 2.5 = trigger) → ☐ none ☐ ⟨which⟩ → fallback `2026-11-10_ad015_fallback.md`
@@ -60,12 +61,12 @@ _Whatever the gate says, the 11/20 note must carry criterion 1's date. Source: `
 ## Step 5: pick the message (exactly one M-001 "Latest report" in OUTBOX; replaces whichever M-001 report is current)
 | G1 | G2 | G3 | Send | Ad ask in "Needs you"? |
 |---|---|---|---|---|
-| ✅ | ✅ | ✅ | S1 line (`2026-11-20_s1_scale_card.md` bottom) + a short report | yes: PEIKIRA CBO 300k → 375k |
+| ✅ | ✅ | ✅ | S1 line (`2026-11-20_s1_scale_card.md` bottom) + a short report, **only if Step 0 shows the CBO back at Rp 300k**; CBO still Rp 3M/day or bid caps on → short report, no budget ask (the 11/18 card result stands) | yes only at Rp 300k: PEIKIRA CBO 300k → 375k |
 | ✅ | ❌ | any | Variant H (`2026-11-20_gate_miss_note.md`) + ADSET-3 clause + criterion-2 line | no |
 | ✅ | ✅ | ❌ | Variant H + tripped rule, re-check 11/23 | no (if ❌ only because Ad015 active: re-send ask #2(a) (pause Ad015)) |
 | ❌ | any | any | W1/W2 not live → **M1**; live → **M2** (+ P6 numbers); both + criterion-2 line | no new ad ask (rule-3 pause / Ad015 fallback only if Step 3 fired) |
 
-Extra asks only if Step 3 fired, ranked under the 3-ask cap: (1) site fix if still open, (2) rule-3 / rule-2 ADSET-3 pause or min-spend, (3) Ad015 fallback. Anything else → Parked.
+Extra asks only if Step 3 fired, ranked under the 3-ask cap (an open 11/18 "undo the 11/15 change" ask sits above all of these): (1) site fix if still open, (2) rule-3 / rule-2 ADSET-3 pause or min-spend, (3) Ad015 fallback. Anything else → Parked.
 
 ## Step 6: record (same run)
 - `m001_tracker.md`: weekly row for 11-13 → 11-19 (spend, /day, leads, CPL, gate, criterion-1 last workable date (Step 4b), ad-set split, ADSET-3 rule-3 line, Ad015, W1/W2 state); change-log rows from Step 0.
