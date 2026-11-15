@@ -25,7 +25,7 @@
 - **Priority:** P0
 - **Deadline:** 2026-12-05 (30 days from 2026-11-05)
 - **Constraints:** **Propose-only.** Fuku never touches the ad account (no pauses, budget changes, or launches). Every change is proposed to Alvian as an apply-ready checklist, and **Alvian applies it himself**. The metric is the 7-day average CPL, never a single day.
-- **Status:** at risk (7d CPL 116.5k on 11/14, worst since 11/07; Ad015 fallback fired; ADSET-3 starved; waiting on Alvian/Markus for OUTBOX #1 + site fix)
+- **Status:** at risk (7d CPL 116.4k on 11/15; PEIKIRA budget raised to Rp 3M/day + Rp 105k bid caps at 00:41 by the Rudi MCP actor, intent unconfirmed; Ad015 still on; ADSET-3 Rp 0 day 3; site unfixed)
 - **Strategy (Fuku, 2026-11-05):**
   1. *Diagnose* (now): ad-set/ad/placement/audience breakdown; find which ads, audiences, and placements produce leads ≤ Rp 95k.
   2. *Cut waste*: propose to Alvian which CTR-collapsed FAB ads and losing ad sets to pause, so spend concentrates in the winners (BC CBObass005-type setups at ~Rp 83k).
@@ -33,6 +33,7 @@
   4. *Scale*: propose budget raises of ~20–30% every 3–4 days, only while the 7d CPL ≤ Rp 95k. Alvian applies them. Fuku verifies the effect in the next readouts. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
+  - 2026-11-15 07:05: 07:00 readout: 7d (11/08–11/14) Rp 2,443,461 / 21 = **116.4k** *(calc)* ❌. Activity log: **PEIKIRA CBO Rp 300k → Rp 3M/day + bid cap Rp 105k on all 3 ad sets at 00:41** (actor Rudi MCP, not in any ask). Gate model (126.0k) + criterion-1 date (11/28) logged but void on the old budget basis. OUTBOX: budget RISK is ask #1; photos ask parked.
   - 2026-11-14 22:01: 11/20 readout: G1 = actual 7d (the gate script stops by design once all 7 days are locked); added a model-vs-actual check (11/19 "model 11/20" in tracker Notes; gap > Rp 10k → lesson). No new ask.
   - 2026-11-14 21:01: `gate_model_1120.py` now takes `--lock` days and 7d bases by flag (defaults reproduce the 08:01 numbers exactly), so the 11/15–11/19 readouts re-run it without editing code. 11/16 weekly run sheet: rows 2–3 + 12 shared with the tracker readout (same 11/09–11/15 window, pull once). No new ask.
   - 2026-11-14 20:02: 11/20 gate-miss note dry-run: criterion-1 line now a placeholder fed by readout Step 4b (was hard-coded 11/14 numbers); ⟨y⟩ spend/CPL clash split; new ADSET-3 rows (rule 2 fired but active; readable = rule-3 word, winner only 11/27); Ad015-paused checkbox added to readout Step 0; G3-only-Ad015 row added.
