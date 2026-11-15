@@ -44,15 +44,15 @@ Decay check (WINNER/PROMISING only; n/a if wk1 had 0 leads or < Rp 95k spend): w
 ## Step 4: per-ad keep/cut list (rule 5: only ads with ≥ Rp 95k spend; rule 6: < Rp 5k = untested)
 | Ad | Spend | Leads | CPL *(calc)* | CTR | Call |
 |---|---|---|---|---|---|
-| FAB-20261109-003 | | | | | ⟨keep / cut / untested⟩ |
-| FAB-20261109-007 | | | | | |
-| FAB-20261109-010 v03 | | | | | |
-| FAB-20261109-018 | | | | | |
-| FAB-20261109-S30 v04 | | | | | |
-| AKIRA-FAB-20261103-016 | | | | | |
+| FAB-20261109-003 (L3 graphic) | | | | | ⟨keep / cut / untested⟩ |
+| FAB-20261109-007 (L3 graphic) | | | | | |
+| FAB-20261109-010 v03 (L4 render-look) | | | | | |
+| FAB-20261109-018 (L2 facility) | | | | | |
+| FAB-20261109-S30 v04 (L1b home, text) | | | | | |
+| AKIRA-FAB-20261103-016 (L1a home + stickers) | | | | | |
 - Rows come from V2: any ad in V2 not listed above (team swaps/adds) gets its own row; a listed ad missing from V2 = "deleted/paused ⟨date from V5⟩". Spend basis = 14d; < Rp 5k in 14d = untested (rule 6).
 - **Cut** = ≥ Rp 190k (2× target) with 0 leads, or CPL > 1.5× the ad set's CPL on ≥ Rp 190k. Max 2 cuts per read (limits CBO re-learning; INFERRED). Ads under Rp 95k: no call.
-- **Per-look layer (read card rules 7–11, added 11/15):** map ads → looks L1–L4 via `ads_get_creatives` first, then one line per look: spend ⟨⟩ · leads ⟨⟩ · CPL ⟨⟩ *(calc)* · label ⟨works / fails / unclear / untested⟩. "Photo wave" verdict = L1 + L2 pooled only.
+- **Per-look layer (read card rules 7–11, added 11/15):** map ads → looks L1–L4 via `ads_get_creatives` first, then one line per look: spend ⟨⟩ · leads ⟨⟩ · CPL ⟨⟩ *(calc)* · label ⟨works / fails / unclear / untested⟩. "Photo wave" verdict = L1a + L1b + L2 pooled only. Looks pre-mapped 11/15 17:02 (one look per ad); re-map only if V2 shows new creative IDs.
 - **Keep-angle note:** for each kept ad, note subject + hook (e.g. "raw unit photo + Rp750rb") → feeds the next wave's build sheet (`2026-11-20_criterion2_replan.md`, Waves 1–6).
 
 ## Step 5: what each verdict unlocks (proposal only; Alvian/Markus apply)

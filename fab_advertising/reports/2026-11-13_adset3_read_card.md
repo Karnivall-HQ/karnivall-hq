@@ -77,16 +77,18 @@ Pull level=adset, campaign `120254051672440572`, time_range 11/13→11/13 (and 1
 ## 11/15 16:02 · Per-look read rules (added before ADSET-3 has spent; source `creatives/2026-11-15_adset3_vs_shoot_card.md`)
 ADSET-3 mixes looks, and our account history splits sharply by look (raw phone photos Rp 18–68k vs polished/render Rp 200–372k CPL, 11/05 review, account data). A pooled ad-set CPL would hide which look won. So the day-7 and day-14 reads add one layer between rule 3/4 (ad set) and rule 5 (per ad):
 
-| Look | Ads (mapping) | Question it answers |
+| Look | Ads (mapping: account data, mapped 11/15 17:02) | Question it answers |
 |---|---|---|
-| L1 home photo | S30 v04 (viewed) | does the home-clutter angle work without stickers? |
-| L2 real facility | 018 (viewed) + the no-text C1 photo (hash 1110…, ad not mapped) | does "real unit" proof work? |
-| L3 designed graphic | 003 (size chart), 007 (WA chat mock-up) | graphics vs photos |
-| L4 render-look | roll-up-door image (hash a0a5…, likely 010 v03, INFERRED) | expected loser per history |
-| — | AKIRA-016 (image not viewed) | map at read time |
+| L1a home photo + story stickers | **AKIRA-016** (2 images: 9:16 + 4:5, uploaded ~11/01): suitcases + boxes + fan in a tiled corner, stickers "Di Rumah butuh kamar kosong?" / "Kosongkan Kamar dengan simpan barang di…" / "Gudang Self-storage di Fab" (viewed) | does the BC Image087 formula (account's best look) work in PEIKIRA? |
+| L1b home photo, big text overlay | S30 v04 (1 image, viewed) | home clutter without stickers |
+| L2 real facility | 018 (v01 + v02 + 4:5, viewed) | does "real unit" proof work? |
+| L3 designed graphic | 003 (size chart, 3 images), 007 (WA chat mock-up, 3 images) | graphics vs photos |
+| L4 render-look | **010** (v03 + v04 + 4:5 v02): hand + key + brass padlock on white louvered/roll-up doors, glossy corridor (viewed; v03 = the a0a5 description re-uploaded as 6cc5…) | expected loser per history |
+
+Mapping facts (account data, `ads_get_creatives` + `ads_get_ad_images`, 11/15 17:02): every ADSET-3 ad is a placement-customized asset feed of one look in 2–3 crops, so **per ad = per look** (no ad mixes looks). The no-text C1 photo (1110…) and the a0a5 file are **not used by any ADSET-3 ad**. All 6 ads: Rp 0 spend, 0 impressions lifetime. ⚠️ 018 says "bukan gambar render" while 010 in the same ad set is render-look (copy risk, not an ad-account ask).
 
 7. **Map first.** At the read, pull `ads_get_creatives` for ADSET-3's ads (read-only) and fill the Ads column from image hashes; INFERRED rows become account data or move.
 8. **Per-look call only when the look has ≥ Rp 95k spend** (same floor as rule 5). Below that: "untested look", not a loser.
 9. **Look labels:** ≤ 95k on ≥ 2 leads = "look works" · > 1.5× the ad set's CPL on ≥ Rp 190k = "look fails" · else "unclear".
-10. **Naming the wave:** call ADSET-3 a "photo wave" win/loss only from L1 + L2 pooled (≥ Rp 190k between them). If the ad set wins on L3/L4 spend, write "graphics/render won", which would contradict the 11/05 history and needs a second test before it changes the creative plan.
+10. **Naming the wave:** call ADSET-3 a "photo wave" win/loss only from L1a + L1b + L2 pooled (≥ Rp 190k between them). If the ad set wins on L3/L4 spend, write "graphics/render won", which would contradict the 11/05 history and needs a second test before it changes the creative plan.
 11. **Feeds Wave 2+:** a "look works" on L2 unlocks the clutter → C1 unit carousel option (`creatives/2026-11-12_wave2_build_sheet.md`, row B5-C).

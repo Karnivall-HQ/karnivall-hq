@@ -15,10 +15,15 @@ The team's 15 new images are **not the home-clutter shoot**. Only **1 of 15 shoo
 | FAB-20261109-003-v01/v02 (+ 45 crop) | 003 | Small/Medium/Large size graphic (per copy check) | designed graphic (not viewed) | none |
 | untitled 818×1024 (hash 23c7…) | — | plain navy background | filler | none |
 
+## 17:02 correction (mapped by `ads_get_creatives`, account data)
+- **AKIRA-016 already IS shot P1 with stickers**: phone photo of 2 suitcases + 4 taped boxes + standing fan + tote bag in a tiled corner, 3 IG-story stickers ending "Gudang Self-storage di Fab". It's an older image (uploaded ~11/01), not part of the 15 new ones. So P1 is **covered**, and ADSET-3 does test the account's best look (BC Image087 formula), via 016.
+- 010 (v03/v04/4:5) = the render-look key/padlock image (louvered doors). The a0a5 and no-text C1 (1110) files are not in any ADSET-3 ad.
+- Wave 1 therefore = P2 (+ P1 only as a second variant, not a new test).
+
 ## Shoot card v2 coverage
 | Shot | Covered? | Note |
 |---|---|---|
-| P1 (bedroom corner: koper + kardus + kipas) | ◐ partly | S30's photo is the scene; an IG-story-sticker version (S1/B2 copy) is still a separate test |
+| P1 (bedroom corner: koper + kardus + kipas) | ✓ (17:02) | AKIRA-016 is this shot with stickers; S30 is a no-sticker variant |
 | P2–P15 | ✗ | still needed; Wave 1 = P1 + P2 |
 
 ## What this changes

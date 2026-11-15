@@ -1,11 +1,11 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-15 16:02 WIB (cloud heartbeat: groundwork, ADSET-3 per-look rules + B5-C carousel row)_
+_Last updated: 2026-11-15 17:02 WIB (cloud heartbeat: groundwork, ADSET-3 ads mapped to looks)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
 - **⚠️ 11/15 00:41 PEIKIRA CBO Rp 300k → Rp 3,000,000/day + bid cap Rp 105k on control, PEIKIRA2, ADSET-3** (actor Rudi MCP 61594758338050; not any ask). 13:02: today Rp 143,793 / 1, only Rp 5,366 spent since 07:05 → cap throttles (pace ≈ 265k/day *(calc)*); all 3 ad sets back in LEARNING since 00:42. Guards none tripped. OUTBOX #1 = "intended or revert?" (rec held to 11/18 read).
 - **M-001 (P0, at risk):** 7d (11/08–11/14) Rp 2,443,461 / 21 = **116.4k** *(calc)* ❌ vs 95k. PEIKIRA 130.9k (16), BC 69.7k (5). Control 153.6k (8), PEIKIRA2 108.2k (8), ADSET-3 Rp 0 (day 3, even under the cap).
-- **Ad015** still ACTIVE: 7d 141.0k *(calc)*, trigger still fired. OUTBOX #2 (pause Ad015 + ADSET-3 min 75k) still open; its "CBO stays 300k" depends on #1. 14:01: ADSET-3 = same audience as PEIKIRA2 → overlap + cap starve it; only #2(b) fixes it (INFERRED).
+- **Ad015** still ACTIVE: 7d 141.0k *(calc)*, trigger still fired. OUTBOX #2 (pause Ad015 + ADSET-3 min 75k) still open; its "CBO stays 300k" depends on #1. 14:01: ADSET-3 = same audience as PEIKIRA2 → overlap + cap starve it; only #2(b) fixes it (INFERRED). 17:02: ADSET-3 holds AKIRA-016 = home clutter + stickers (best-history look), so starvation blocks that test too.
 - **Models void until re-based:** gate 126.0k, criterion-1 11/28 (300k basis). Re-base = `--budget <actual PEIKIRA daily spend>` on both. At 475k pace: gate 127.3k, break-even PEIKIRA CPL 101.1k → 98.8k; at Rp 1M: 96.7k, last date 11/27 *(calc)*.
 - **M-002 (P1):** weekly report Mon 11/16 07:00 from the skeleton (budget-change line, 11/15 log rows, `--budget` on row 12, Top-3 item 0 all pre-staged 10:02).
 
@@ -19,8 +19,8 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **Cap-vs-target note:** if "intended", draft the cap question (105k cap > 95k target → blend ≈ 102–104k at ≥ Rp 1M/day *(calc)*); hold until the 11/18 read.
-2. **ADSET-3 ad → image map:** read-only `ads_get_creatives` on the 6 ads → fill the read card's look table (rule 7) now, so 11/20 isn't a lookup job (010 v03 + 016 unmapped).
-3. **11/18 read card dry-run:** walk every ⟨⟩ cell to a named pull (as done for the 11/27 template 11/14).
+2. **11/18 read card dry-run:** walk every ⟨⟩ cell to a named pull (as done for the 11/27 template 11/14).
+3. **016 history check:** does AKIRA-016's image (hash 708088…/749b0f…) have spend in any older PEIKIRA ad? Read-only `ads_get_creative_ads`/ad search → prior CPL for the L1a row.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Budget Rp 3M/day intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
