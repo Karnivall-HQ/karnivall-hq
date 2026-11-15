@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-15 11:02 WIB (cloud heartbeat: groundwork, stale OUTBOX-ref sweep in 11/20 + 12/05 staged files)_
+_Last updated: 2026-11-15 12:02 WIB (cloud heartbeat: groundwork, `fuku/bin/peikira_guard.py` for the G-a/G-b polls)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -10,8 +10,8 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - **M-002 (P1):** weekly report Mon 11/16 07:00 from the skeleton (budget-change line, 11/15 log rows, `--budget` on row 12, Top-3 item 0 all pre-staged 10:02).
 
 ## Next actions (dated or triggered)
-1. **13:00 poll (today, extra weight):** PEIKIRA today spend/leads by ad set, activity log since 07:05. Apply guards G-a/G-b from `fab_advertising/reports/2026-11-18_budget_change_read_card.md` (one line on OUTBOX #1, no new ask).
-2. **19:00 poll:** same; full-day pace estimate.
+1. **13:00 poll (today, extra weight):** PEIKIRA today spend/leads by ad set, activity log since 07:05. Run `python3 fuku/bin/peikira_guard.py --day 2026-11-14:309404:3 --day 2026-11-15:<S>:<L>:partial@13` (guards G-a/G-b of the 11/18 read card; one line on OUTBOX #1 (budget), no new ask).
+2. **19:00 poll:** same script, `partial@19`; it prints the pace *(calc)*.
 3. **Every run:** INBOX/OUTBOX for "intended"/"revert", "done" on #2, "W1 W2 done", photos answer.
 4. **When #1 answered / from 11/16 readout:** run both models with `--budget <yesterday's PEIKIRA spend>` (not the CBO setting); log in tracker.
 5. **11/16 07:00:** weekly report + readout (tracker routine step 0 = activity log first). **11/18:** 3-day read of the budget change = fill `2026-11-18_budget_change_read_card.md`. **11/20:** readout template. **11/27:** ADSET-3 verdict.
@@ -20,7 +20,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **Wave 1 / shoot card vs ADSET-3 photos:** list which shoot-card v2 shots ADSET-3 already covers (photos ask is parked).
 2. **Cap-vs-target note:** if "intended", draft the cap question (105k cap > 95k target → blend ≈ 102–104k at ≥ Rp 1M/day *(calc)*); hold until the 11/18 read.
-3. **G-a/G-b one-command check:** small script in `fuku/bin/` that prints PEIKIRA day spend, CPL and the guard verdict from pasted ad-set rows, so the 13:00/19:00 polls fill OUTBOX #1's line without hand math.
+3. **ADSET-3 starvation note for 11/18:** pull ADSET-3 delivery diagnostics/learning status (read-only) so the STARVED branch of the read card has a cause, not just Rp 0.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Budget Rp 3M/day intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
