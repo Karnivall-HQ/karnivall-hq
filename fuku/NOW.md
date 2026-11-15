@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-15 15:01 WIB (cloud heartbeat: groundwork, ADSET-3 images vs shoot card)_
+_Last updated: 2026-11-15 16:02 WIB (cloud heartbeat: groundwork, ADSET-3 per-look rules + B5-C carousel row)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -19,8 +19,8 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **Cap-vs-target note:** if "intended", draft the cap question (105k cap > 95k target → blend ≈ 102–104k at ≥ Rp 1M/day *(calc)*); hold until the 11/18 read.
-2. **ADSET-3 per-ad read rules:** add to the read card: judge per look (home photo S30 / facility 018 / graphics 003, 007 / render-look image) since 3 looks are mixed (`creatives/2026-11-15_adset3_vs_shoot_card.md`).
-3. **Wave 2 carousel idea:** clutter photo → real C1 unit photo as a 2-card carousel; add as an option row to the wave-2 build sheet.
+2. **ADSET-3 ad → image map:** read-only `ads_get_creatives` on the 6 ads → fill the read card's look table (rule 7) now, so 11/20 isn't a lookup job (010 v03 + 016 unmapped).
+3. **11/18 read card dry-run:** walk every ⟨⟩ cell to a named pull (as done for the 11/27 template 11/14).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Budget Rp 3M/day intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.

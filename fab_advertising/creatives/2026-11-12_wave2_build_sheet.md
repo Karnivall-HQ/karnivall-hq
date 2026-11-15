@@ -66,3 +66,12 @@ Same as Wave 1 (`../reports/wave1_read_template.md`), judged on 2 weeks (`../rep
 - Account data: format (BC Image087), ad set/campaign/pixel IDs, Reels cheapest placement.
 - STATED (site curl 11/12 14:02): pickup, no deposit, no contract, per-month, no minimum, weekend loading, unit capacities.
 - INFERRED: 750 = Small; sibling mapping per winner; B4 weaker because its situations aren't on the page.
+
+## Option row B5-C: clutter → real unit carousel (added 11/15 16:02; idea, needs nothing new from the shoot except P1/P3)
+Use only if B5 is picked **and** ADSET-3's L2 look (real facility photo) reads "works" or is untested (read card rules 7–11). It swaps B5's before/after of the same room for proof that the unit is real, the claim the team's ad 018 already makes ("Ini penampakan aslinya").
+| Code | Ad name | Format | Card 1 | Card 2 | Primary text | Headline |
+|---|---|---|---|---|---|---|
+| B5-C | `WAVE2-FAB-<YYYYMMDD>-B5C` | 2-card carousel, 1:1 (carousel has no 9:16 card; INFERRED from Meta specs, check at build) | P1 or P3 (koper + kardus in a room), sticker `Kamar penuh barang? 😣` | the **no-text C1 corridor photo already in the library** (720×1280, hash 1110…, real panel units + padlocks, yellow floor; crop to 1:1), sticker `Pindah ke sini. Unit pribadi, terkunci 🔒` | same as B5 | same as B5 |
+- Page check: "unit pribadi, terkunci" ✔ (same claims as S6). No new claims vs B5.
+- ⚠️ Never use the roll-up-door image (hash a0a5…) as card 2: it looks like a render and the real units are panels.
+- Card 2 can't say "datang dan lihat sendiri" until the Kuningan-open question (parked in OUTBOX) is answered.

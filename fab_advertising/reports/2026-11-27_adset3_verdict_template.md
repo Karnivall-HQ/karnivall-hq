@@ -52,6 +52,7 @@ Decay check (WINNER/PROMISING only; n/a if wk1 had 0 leads or < Rp 95k spend): w
 | AKIRA-FAB-20261103-016 | | | | | |
 - Rows come from V2: any ad in V2 not listed above (team swaps/adds) gets its own row; a listed ad missing from V2 = "deleted/paused ⟨date from V5⟩". Spend basis = 14d; < Rp 5k in 14d = untested (rule 6).
 - **Cut** = ≥ Rp 190k (2× target) with 0 leads, or CPL > 1.5× the ad set's CPL on ≥ Rp 190k. Max 2 cuts per read (limits CBO re-learning; INFERRED). Ads under Rp 95k: no call.
+- **Per-look layer (read card rules 7–11, added 11/15):** map ads → looks L1–L4 via `ads_get_creatives` first, then one line per look: spend ⟨⟩ · leads ⟨⟩ · CPL ⟨⟩ *(calc)* · label ⟨works / fails / unclear / untested⟩. "Photo wave" verdict = L1 + L2 pooled only.
 - **Keep-angle note:** for each kept ad, note subject + hook (e.g. "raw unit photo + Rp750rb") → feeds the next wave's build sheet (`2026-11-20_criterion2_replan.md`, Waves 1–6).
 
 ## Step 5: what each verdict unlocks (proposal only; Alvian/Markus apply)

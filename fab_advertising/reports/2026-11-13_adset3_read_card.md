@@ -73,3 +73,20 @@ Pull level=adset, campaign `120254051672440572`, time_range 11/13→11/13 (and 1
 - **Diagnosis (INFERRED):** two brakes stacked. (1) **Auction overlap:** same audience as PEIKIRA2, so in each auction Meta enters only one of the advertiser's ad sets, the one with the higher estimated value; ADSET-3 has 0 conversion history, so it loses that internal pick every time. (2) **Bid cap:** with no history its estimated action rate is low, so even when entered it rarely clears Rp 105k. CBO allocation (11/13 diagnosis) is the third layer. Benchmarks: no data. Trend tool: no rows for ADSET-3 (no delivery).
 - **What fixes it (for the existing ask, no new one):** OUTBOX #2(b) daily minimum Rp 75k forces delivery past all three layers. Pausing Ad015 alone (#2a) frees budget but does **not** fix the overlap or the cap, so ADSET-3 may stay at 0 even if #2a is applied without #2b (INFERRED). Untested alternative if #2b is refused: duplicate ADSET-3 into its own campaign without a bid cap (proposal only, not raised).
 - Cost so far: 3 days, d = 0 → 1/3-share break-even now 73.4k from 11/16 *(calc, table above)*: ADSET-3 can no longer open the 11/20 gate alone.
+
+## 11/15 16:02 · Per-look read rules (added before ADSET-3 has spent; source `creatives/2026-11-15_adset3_vs_shoot_card.md`)
+ADSET-3 mixes looks, and our account history splits sharply by look (raw phone photos Rp 18–68k vs polished/render Rp 200–372k CPL, 11/05 review, account data). A pooled ad-set CPL would hide which look won. So the day-7 and day-14 reads add one layer between rule 3/4 (ad set) and rule 5 (per ad):
+
+| Look | Ads (mapping) | Question it answers |
+|---|---|---|
+| L1 home photo | S30 v04 (viewed) | does the home-clutter angle work without stickers? |
+| L2 real facility | 018 (viewed) + the no-text C1 photo (hash 1110…, ad not mapped) | does "real unit" proof work? |
+| L3 designed graphic | 003 (size chart), 007 (WA chat mock-up) | graphics vs photos |
+| L4 render-look | roll-up-door image (hash a0a5…, likely 010 v03, INFERRED) | expected loser per history |
+| — | AKIRA-016 (image not viewed) | map at read time |
+
+7. **Map first.** At the read, pull `ads_get_creatives` for ADSET-3's ads (read-only) and fill the Ads column from image hashes; INFERRED rows become account data or move.
+8. **Per-look call only when the look has ≥ Rp 95k spend** (same floor as rule 5). Below that: "untested look", not a loser.
+9. **Look labels:** ≤ 95k on ≥ 2 leads = "look works" · > 1.5× the ad set's CPL on ≥ Rp 190k = "look fails" · else "unclear".
+10. **Naming the wave:** call ADSET-3 a "photo wave" win/loss only from L1 + L2 pooled (≥ Rp 190k between them). If the ad set wins on L3/L4 spend, write "graphics/render won", which would contradict the 11/05 history and needs a second test before it changes the creative plan.
+11. **Feeds Wave 2+:** a "look works" on L2 unlocks the clutter → C1 unit carousel option (`creatives/2026-11-12_wave2_build_sheet.md`, row B5-C).
