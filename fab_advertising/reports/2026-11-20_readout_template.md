@@ -62,7 +62,7 @@ _Whatever the gate says, the 11/20 note must carry criterion 1's date. Source: `
 |---|---|---|---|---|
 | ✅ | ✅ | ✅ | S1 line (`2026-11-20_s1_scale_card.md` bottom) + a short report | yes: PEIKIRA CBO 300k → 375k |
 | ✅ | ❌ | any | Variant H (`2026-11-20_gate_miss_note.md`) + ADSET-3 clause + criterion-2 line | no |
-| ✅ | ✅ | ❌ | Variant H + tripped rule, re-check 11/23 | no (if ❌ only because Ad015 active: re-send ask #1(a)) |
+| ✅ | ✅ | ❌ | Variant H + tripped rule, re-check 11/23 | no (if ❌ only because Ad015 active: re-send ask #2(a) (pause Ad015)) |
 | ❌ | any | any | W1/W2 not live → **M1**; live → **M2** (+ P6 numbers); both + criterion-2 line | no new ad ask (rule-3 pause / Ad015 fallback only if Step 3 fired) |
 
 Extra asks only if Step 3 fired, ranked under the 3-ask cap: (1) site fix if still open, (2) rule-3 / rule-2 ADSET-3 pause or min-spend, (3) Ad015 fallback. Anything else → Parked.

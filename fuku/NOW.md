@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-15 10:02 WIB (cloud heartbeat: groundwork, 11/16 skeleton budget block + ask-number fixes)_
+_Last updated: 2026-11-15 11:02 WIB (cloud heartbeat: groundwork, stale OUTBOX-ref sweep in 11/20 + 12/05 staged files)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -20,7 +20,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **Wave 1 / shoot card vs ADSET-3 photos:** list which shoot-card v2 shots ADSET-3 already covers (photos ask is parked).
 2. **Cap-vs-target note:** if "intended", draft the cap question (105k cap > 95k target → blend ≈ 102–104k at ≥ Rp 1M/day *(calc)*); hold until the 11/18 read.
-3. **OUTBOX-ref sweep:** grep `OUTBOX #` across other pre-staged files (11/20 readout, gate-miss note, S1 card) and fix stale numbers after the 07:05 renumber.
+3. **G-a/G-b one-command check:** small script in `fuku/bin/` that prints PEIKIRA day spend, CPL and the guard verdict from pasted ad-set rows, so the 13:00/19:00 polls fill OUTBOX #1's line without hand math.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Budget Rp 3M/day intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.

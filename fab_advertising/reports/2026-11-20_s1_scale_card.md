@@ -11,7 +11,7 @@ _Sources: `2026-11-12_scale_plan_v2.md` (capacity, +25% rule), `2026-11-13_adset
 
 - G1 ✅ but G2 ❌ (the CPL came from the site fix, not from a new winner) → **don't scale**: send "hold at Rp 300k, CPL fixed, volume needs a winning wave" instead. Reason: scale plan v2, budget alone fails (KENJI Rp 741k/day → 185k CPL). [account data]
 - G1 ❌ → this card is not used; the gate-miss note goes out instead.
-- G1 ✅ G2 ✅ but G3 ❌ **only because Ad015 is still active and tripped** (its CPL trigger already fired 11/14: 7d 166.1k) → don't scale into it: ~90% of control spend would ride a fading ad. Re-send OUTBOX ask #1(a) (pause Ad015) as the one ask; S1 follows on the first readout after the pause where G1–G2 still pass. *(added 11/14 19:02 dry-run)*
+- G1 ✅ G2 ✅ but G3 ❌ **only because Ad015 is still active and tripped** (its CPL trigger already fired 11/14: 7d 166.1k) → don't scale into it: ~90% of control spend would ride a fading ad. Re-send OUTBOX ask #2(a) (pause Ad015) as the one ask; S1 follows on the first readout after the pause where G1–G2 still pass. *(added 11/14 19:02 dry-run)*
 
 ## The change (one field, one campaign)
 **PEIKIRA-BID-CAP-LEADS-CAMPAIGN** `120254051672440572` → campaign daily budget **Rp 300,000 → Rp 375,000** (+25%).

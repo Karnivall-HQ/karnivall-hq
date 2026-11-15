@@ -41,7 +41,7 @@
 **Break-even ADSET-3 CPL (opens the gate with no site fix)** *(calc)*: share 1/3 → **≤ Rp 83.5k**; share 60% → ≤ 95.7k; share 80% → ≤ 100.1k. It is easier than the 11/11 "≤ 70k" bar because the other two PEIKIRA ad sets now run 116k (control 124.9k, PEIKIRA2 109.6k): any new ad set that merely hits target pulls the blend down.
 
 ### What changed vs 11/11
-1. **ADSET-3 is now a second independent path** (team-launched, not Wave 1). Its photos are new (15 images, INFERRED), so its CPL is unknown; the read card (`2026-11-13_adset3_read_card.md`) decides keep/kill. Wave 1 (scenario D) is on hold behind ask #2, so D is dropped from this table.
+1. **ADSET-3 is now a second independent path** (team-launched, not Wave 1). Its photos are new (15 images, INFERRED), so its CPL is unknown; the read card (`2026-11-13_adset3_read_card.md`) decides keep/kill. Wave 1 (scenario D) is on hold behind the parked photos ask, so D is dropped from this table.
 2. **The site fix has a deadline inside the window:** at +0.5pt it must be live by **11/14 evening** (5 days) to open the gate on its own; from 11/16 it no longer does (97.9k). At +1pt it still works if live by 11/16.
 3. **Item 4 / scenario B is retired** (11/12 card). Not modelled.
 4. W1/W2 still the only lever that does not depend on an untested ad set; with ADSET-3 at target, C+E gives ~6k of margin below 95k against the ±10% weekly noise *(calc)*.
@@ -79,7 +79,7 @@ _2026-11-11 08:02 WIB, Fuku cloud heartbeat (groundwork). Read-only, no ad-accou
 | C+D | Site fixes + Wave 1 at 70k | **~Rp 83.9k** *(calc)* | ✅ | Best case; opens S1–S3 |
 
 ## What Fuku does with this
-1. **Ranking stays:** OUTBOX ask #1 (W1+W2) is the only single lever that can open the gate. Ask #2 (photos + 750/800) is the second, and its price fact also unlocks W2.
+1. **Ranking stays:** OUTBOX ask #3 (site W1+W2; #1 until 11/14) is the only single lever that can open the gate. The parked photos + 750/800 ask is the second, and its price fact also unlocks W2.
 2. **11/12 07:00 (asks > 48h):** shrink to one line: *"Fix the 2 site lines today (location → Kuningan/Sudirman, price → whichever is true: 750 or 800)?"*. This covers W1, W2 and the price fact in one yes/no.
 2b. **Volume half (added 11/12 11:01):** a winning creative wave adds only Rp 100–185k/day at ≤ 95k (8-wk ad-set data). Rp 1M/day needs 4–7 winners; best realistic 12/05 case with W1/W2 + Wave 1 ≈ Rp 450–520k/day *(calc)*. Use the scenario table in `2026-11-12_scale_plan_v2.md` for the criterion-2 call.
 3. **11/20 readout:** compare the real 7d CPL to this table. If the gate is shut and none of B/C/D was applied, tell Alvian plainly that criterion 2 (Rp 1M/day by 12/05) is out of reach, as `scale_plan.md` commits to.

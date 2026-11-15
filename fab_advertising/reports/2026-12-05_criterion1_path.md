@@ -23,7 +23,7 @@ The 11/20 gate is likely ❌ (gate brief, 11/14 08:01). That gate is about **cri
 
 **Break-even PEIKIRA CPL** (BC flat): no site fix ≤ **108.8k**; with site +0.5pt ≤ 128.1k; +1pt ≤ 149.1k. PEIKIRA runs 144.0k today, PEIKIRA2 115.6k.
 
-## Deadline for the two open asks (OUTBOX #1 + #2)
+## Deadline for the two open asks (OUTBOX #2 Ad015 + ADSET-3 min, #3 site W1+W2; numbered as of 11/15)
 | Both live by | Days in window | F+C (+0.5pt) | F alone | C (+0.5pt) alone |
 |---|---|---|---|---|
 | 11/27 eve | 7 | **88.1k ✅** | 99.4k | 103.3k |
@@ -32,13 +32,13 @@ The 11/20 gate is likely ❌ (gate brief, 11/14 08:01). That gate is about **cri
 | 12/03 eve | 1 | 111.4k ❌ | 113.7k | 114.4k |
 
 ## What this means (INFERRED from the table)
-1. **Criterion 1 is still reachable for 12/05, with ~7k of margin, if asks #1 + #2 are both live by 11/27.** The last workable date is **11/29 evening**; after that no combination of today's levers gets there.
+1. **Criterion 1 is still reachable for 12/05, with ~7k of margin, if asks #2 + #3 are both live by 11/27.** The last workable date is **11/29 evening**; after that no combination of today's levers gets there.
 2. **Neither lever is enough alone** at +0.5pt. The site fix alone works only in the +1pt case; the Ad015 pause alone only if PEIKIRA's rest drops below ~108.8k.
 3. **ADSET-3 is the independent path:** if it gets a 1/3 share and runs ≤ ~95k (with Ad015 paused) it carries criterion 1 even without the site fix. It is untested (Rp 0 for its first day); verdict 11/27.
 4. Noise: ~20–25 leads/week, so ±2 leads ≈ ±10% *(calc)*. 88.1k only just survives a bad week (≈ 95.3k at −2 leads *(calc)*); 94.7k does not. So 11/27 is the real deadline, 11/29 is a coin flip.
 
 ## Use on 11/20 (gate-miss message)
-- The gate-miss note keeps "criterion 1 stays the 12/05 goal" and now adds one sentence: "Criterion 1 is still reachable for 12/05: asks #1 + #2 live by 11/27 ≈ 88k; last workable date 11/29." It is a fact line, not a new ask.
+- The gate-miss note keeps "criterion 1 stays the 12/05 goal" and now adds one sentence: "Criterion 1 is still reachable for 12/05: asks #2 + #3 live by 11/27 ≈ 88k; last workable date 11/29." It is a fact line, not a new ask.
 
 ## Re-plan option if nothing moves by 11/27 (for the 11/27 readout, not before)
-If on 11/27 neither ask is live and ADSET-3 is not a winner, criterion 1 is out of reach for 12/05 (best case ≈ 102k+). Then the single ❓ is: **"Move criterion 1 to 12/19 (window 12/12–12/18), same Rp 95k target?"** Recommendation then: yes, on the condition that asks #1 + #2 go live that week; a deadline move without a lever just reschedules the miss. Do not send this before 11/27 (stalled-asks rule: no new decision while 3 are open).
+If on 11/27 neither ask is live and ADSET-3 is not a winner, criterion 1 is out of reach for 12/05 (best case ≈ 102k+). Then the single ❓ is: **"Move criterion 1 to 12/19 (window 12/12–12/18), same Rp 95k target?"** Recommendation then: yes, on the condition that asks #2 + #3 go live that week; a deadline move without a lever just reschedules the miss. Do not send this before 11/27 (stalled-asks rule: no new decision while 3 are open).
