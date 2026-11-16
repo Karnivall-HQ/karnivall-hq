@@ -75,7 +75,7 @@ Decay check (WINNER/PROMISING only; n/a if wk1 had 0 leads or < Rp 95k spend): w
 
 ## Step 5b: criterion-1 re-run (added 2026-11-14 13:01, same readout)
 _The 11/27 readout is also the last clean date for criterion 1 (7d ≤ 95k on the 12/05 window 11/28–12/04). Source: `2026-12-05_criterion1_path.md`._
-1. Run `python3 fuku/bin/criterion1_model_1205.py --peik <S> <L> --bc <S> <L> --p2 <S> <L> --today 2026-11-27` with the V8 base (PEIKIRA2 < 2 leads → keep the default p2, as in the 11/20 Step 4b). Lock actuals per `meta-modelling-and-planning.md` §A2.
+1. Run `python3 fuku/bin/criterion1_model_1205.py --peik <S> <L> --bc <S> <L> --p2 <S> <L> --today 2026-11-27 [--budget <PEIKIRA daily spend>] [--cap-throttled]` (report the LWD line **and** the CRITERION 2 line) with the V8 base (PEIKIRA2 < 2 leads → keep the default p2, as in the 11/20 Step 4b). Lock actuals per `meta-modelling-and-planning.md` §A2.
 2. Fill one line: base ⟨⟩ · with what is **already live** (Ad015 paused ☐ V5 / site W1+W2 ☐ V6 / ADSET-3 verdict ⟨⟩ Step 3) ⟨⟩ *(calc)* · gap to 95k ⟨⟩.
 3. Branch (pick one, replaces nothing in the 3-ask cap unless stated):
 | State on 11/27 | Projected 12/04 7d | Action |

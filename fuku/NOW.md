@@ -1,24 +1,24 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-16 07:20 WIB (cloud heartbeat: weekly report #2 + 07:00 readout done)_
+_Last updated: 2026-11-16 08:05 WIB (cloud heartbeat: groundwork, criterion-1 script now prints both halves)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
 - **⚠️ PEIKIRA Rp 3M CBO + Rp 105k cap (11/15 00:41, Rudi MCP 61594758338050, not an ask):** 11/15 full day Rp 153,555 / 1 = 5.1% of budget, ≈ half the old 300k pace *(calc)*; all 3 ad sets LEARNING. Risk = volume, not overspend. OUTBOX #1 ("intended" / "revert") + 11/16 status line.
 - **11/18 read:** S3 = 11/15–11/17; S3 < Rp 600k → STARVED branch only; STARVED-worse (C3 > 130.9k) → send the pre-drafted one-liner + 4-item undo list (card). Likeliest outcome (INFERRED).
-- **M-001 (P0, at risk):** 7d 11/09–11/15 Rp 2,375,724 / 21 = **113.1k** *(calc)* ❌. Control 175.7k (Ad015 161.3k), PEIKIRA2 102.5k, ADSET-3 Rp 0, BC 61.2k. 11/20 model 116.7k → gate ❌; criterion 1 LWD 12/02 (CPL only; Rp 1M/day leg blocked while the cap holds).
+- **M-001 (P0, at risk):** 7d 11/09–11/15 Rp 2,375,724 / 21 = **113.1k** *(calc)* ❌. Control 175.7k (Ad015 161.3k), PEIKIRA2 102.5k, ADSET-3 Rp 0, BC 61.2k. 11/20 model 116.7k → gate ❌; criterion 1 LWD 12/02 at 214.7k/day account spend = 21% of the 1M leg; at Rp 1M/day: nothing 129.1k ❌, asks F+C 87.2k (flat-CPL, INFERRED) *(calc)*; 1M leg blocked while the cap holds.
 - **M-002 (P1):** ✅ weekly #2 delivered 11/16 (`reports/weekly/2026-11-16.md`). Next Monday 11/23.
 
 ## Next actions (dated or triggered)
 1. **Every run:** INBOX/OUTBOX for "intended"/"revert", "done" on #2, "W1 W2 done", Kuningan answer.
 2. **11/16 ~13:00 + ~19:00 polls:** activity log + PEIKIRA today (guards from the 11/18 card); one status line only if spend/edits move.
-3. **11/17 07:00:** readout (log first; lock 11/16 PEIKIRA day; models with `--budget <11/16 spend>`; report both criterion halves).
+3. **11/17 07:00:** readout (log first; lock 11/16 PEIKIRA day; criterion-1 with `--budget <11/16 spend> --cap-throttled`; copy LWD + CRITERION 2 lines).
 4. **11/18 07:00:** fill `2026-11-18_budget_change_read_card.md` (precedence section). **11/20:** readout template + criterion-2 re-plan becomes live. **11/27:** ADSET-3 verdict.
 5. **Retro #4:** at > 15 lessons (now 13) or 11/21.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **Criterion-1 script:** print the assumed spend/day + a "Rp 1M/day leg" line next to the LWD (lesson 11/16).
-2. **11/20 gate-miss note + criterion-2 re-plan:** re-check against the 11/16 numbers (113.1k, cap state) so 11/20 is a send job.
-3. **Weekly 11/23 skeleton:** pre-fill from `2026-11-16.md` (prior-week columns, run sheet, IDs, pixel epochs 11/16–11/23).
+1. **11/20 gate-miss note + criterion-2 re-plan:** re-check against the 11/16 numbers (113.1k, cap state, new CRITERION 2 line) so 11/20 is a send job.
+2. **Weekly 11/23 skeleton:** pre-fill from `2026-11-16.md` (prior-week columns, run sheet, IDs, pixel epochs 11/16–11/23).
+3. **`gate_model_1120.py`:** print the assumed spend/day line too (same lesson as the criterion-1 fix).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Budget Rp 3M/day + cap intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.

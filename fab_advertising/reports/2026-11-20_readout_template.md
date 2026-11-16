@@ -52,7 +52,7 @@ _No model today: the 11/13–11/19 window is closed, so G1 is the actual 7d CPL 
 ## Step 4b: criterion-1 last workable date (added 2026-11-14 16:01; the 12/05 window is 11/28–12/04)
 _Whatever the gate says, the 11/20 note must carry criterion 1's date. Source: `2026-12-05_criterion1_path.md`; method `meta-modelling-and-planning.md` §A1–A2._
 1. Run with the P1/P2 numbers (7d 11/13–11/19):
-   `python3 fuku/bin/criterion1_model_1205.py --peik ⟨PEIKIRA spend⟩ ⟨leads⟩ --bc ⟨BC spend⟩ ⟨leads⟩ --p2 ⟨PEIKIRA2 spend⟩ ⟨leads⟩ --today 2026-11-20`
+   `python3 fuku/bin/criterion1_model_1205.py --peik ⟨PEIKIRA spend⟩ ⟨leads⟩ --bc ⟨BC spend⟩ ⟨leads⟩ --p2 ⟨PEIKIRA2 spend⟩ ⟨leads⟩ --today 2026-11-20 [--budget <PEIKIRA daily spend>] [--cap-throttled]` (report the LWD line **and** the CRITERION 2 line)
    - PEIKIRA2 with < 2 leads → keep the default `--p2 924806 8` and write "p2 = 11/07–11/13 base" next to the line (one lead can't set the freed-spend CPL).
    - A lever **already live** for the whole window is inside the base: read row **A** as "with what's live", and ignore the rows that add that lever again (e.g. W1/W2 live since ≤ 11/13 → ignore every "C" row).
 2. Fill one line: base row A ⟨⟩ · F+C +0.5pt ⟨⟩ · **last workable date ⟨mm/dd⟩, days left ⟨n⟩** *(calc)*. If the script prints "NONE" (even 11/27 misses) → write "criterion 1 needs ADSET-3 to win (row F+E) or a move to 12/19", and put the 12/19 question on the 11/27 readout (Step 5b there), not in this note.
