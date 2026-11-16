@@ -87,3 +87,20 @@ Window: full days **11/15, 11/16, 11/17** (read at the 11/18 07:00 readout). Pul
 - Do it as **one edit session**: every bid edit resets learning on that ad set (11/15 showed it: all 3 LEARNING from 00:42), so batching = 1 reset.
 - **Read rule after the undo (fixed now):** window starts the full day after the undo; 7d read. Success = PEIKIRA back to ≥ 2 leads/day at ≤ 130.9k (the pre-change baseline) within 7 days; fail = < 1.5 leads/day *(calc threshold)* → re-check the activity log for other edits before blaming the undo.
 - **Do not use** if the case is anything other than STARVED-worse (precedence above), or if Alvian has already answered OUTBOX #1.
+
+## Dry run with 11/15–11/16 actuals (written 11/16 15:02 WIB; groundwork, not the read)
+**Inputs (account data, already pulled; no new poll):** 11/15 full day Rp 153,555 / 1 lead; 11/16 to 13:00 Rp 7,959 / 0. Steady capped pace ≈ Rp 15–21k/day → **S3 ≈ Rp 170–210k** *(calc, projection)*; L so far = 1.
+**Branch walk (precedence above):** S3 < Rp 600k → STARVED branch. Then C3 by L:
+| L (11/15–11/17) | C3 at S3 170k / 190k / 210k *(calc)* | Branch as written | Message |
+|---|---|---|---|
+| 0 | undefined (÷ 0) | **gap** | none |
+| 1 | 170k / 190k / 210k | STARVED-worse | undo one-liner ✅ |
+| 2 | 85k / 95k / 105k | STARVED-cheap or -middle | **no ask** |
+| 3+ | ≤ 70k | STARVED-cheap | **no ask** |
+
+**Two gaps found and fixed (rules below override the precedence rows for S3 < Rp 392.7k):**
+1. **L = 0:** C3 is undefined. Rule: L = 0 → treat as C3 = ∞ → STARVED-worse (undo line, with "0 leads").
+2. **The CPL is unreadable at this spend.** At the baseline CPL 130.9k, Rp 170–210k buys λ = 1.3–1.6 expected leads; P(L ≥ 2) = 37–48% *(calc, Poisson)*. So one lucky lead would flip the verdict to "cheap, no ask" while volume sits at ≈ 0.7 leads/day vs 2.29 (−71%) *(calc)*. Rule: **if S3 < Rp 392,700 (= 3 × 130.9k, i.e. < 3 expected leads at baseline) *(calc)*, judge on volume only:** L < 3.4 (< 50% of 3 × 2.29) *(calc)* → **STARVED-volume → the same undo one-liner**, with the CPL clause replaced by "too little spend to read CPL; the volume loss is the reason". L ≥ 3.4 (i.e. 4+ leads) → no ask, re-read 11/21.
+   - Honesty note: this rule was added after seeing 1⅓ of the 3 days. It only follows the card's own basis ("the volume loss is certain; the CPL gap alone is not"); it does not change any threshold for S3 ≥ Rp 392.7k.
+
+**Result:** every L now resolves to exactly one message. Likeliest 11/18 line *(INFERRED)*: "❓ Undo the 11/15 PEIKIRA change: budget back to Rp 300k/day + remove the Rp 105k bid caps (back to Highest volume) on all 3 ad sets? 3 days under the cap: Rp ⟨≈180k⟩ / ⟨1–2⟩ leads vs 6.9 leads and 130.9k at baseline. Too little spend to read CPL; the volume loss (≈ −70%) is the reason. Reply 'undo' or 'keep'."
