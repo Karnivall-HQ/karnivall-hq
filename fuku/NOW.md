@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-16 17:05 WIB (cloud heartbeat: 11/20 readout undo branch wired)_
+_Last updated: 2026-11-16 18:05 WIB (cloud heartbeat: 11/23 skeleton covers every 11/18 outcome)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -18,7 +18,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **11/23 skeleton dry-run (~11/21):** map every `⟨…⟩` cell to a run-sheet call; add rows for whatever 11/18–11/20 decided.
 2. **Criterion-2 re-plan vs cap:** check `2026-11-20_criterion2_replan.md` wave dates still hold if new ads stay starved under the 105k cap (ADSET-3 precedent); add a "caps stay" variant line. (Template sweep done 12:01.)
-3. **11/18 card ↔ 11/23 skeleton:** check the 11/23 weekly skeleton has rows for each 11/18 outcome (undo / keep / STARVED-worse) and the undo-day split; add only what's missing.
+3. **Undo pointer sweep dry-run:** list the exact line in each of the 6 files in post-undo pack §0.4 where the "undo applied ⟨date⟩" pointer goes, so the undo run is copy-paste.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Budget Rp 3M/day + cap intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.

@@ -152,6 +152,7 @@
 - **Status:** in progress
 - **Strategy:** The cloud heartbeat runs it on the first Monday run (07:00 WIB). Turn it into a playbook after the first report.
 - **Progress:**
+  - 2026-11-16 18:02: 11/23 skeleton now covers every 11/18 card label (incl. STARVED-volume), an undo-week PEIKIRA split rule (capped / undo day / post-undo), the post-undo read rule (≥ 2 leads/day ≤ 130.9k; fail < 1.5), model flags by state (row 10a), and the post-undo 11/20 range. No strategy change.
   - 2026-11-16 10:02: 11/23 skeleton pre-filled (`reports/weekly/2026-11-23.md`): prior-week columns from 11/16, log-first run sheet (10 calls), pixel epochs 1794762000→1795366800, new rows for the 3M+cap state (cap/min check, ADSET-3 per look, 11/18 + 11/20 outcomes). No strategy change.
   - 2026-11-16 07:20: ✅ Weekly report #2 delivered → `fab_advertising/reports/weekly/2026-11-16.md` (Fab 113.1k +8.1% WoW; Incess 26.4k −24.9%; 0 fatigue flags; same 4 disabled; Copy 5 keep, 019 no flag). [REPORT] in OUTBOX. Next: pre-fill 11/23 skeleton on a quiet run.
   - 2026-11-15 10:02: 11/16 skeleton updated for the 11/15 budget change (3M CBO + 105k caps line, activity-log rows, `--budget` on the model row, Top-3 item 0 for a revert) and stale ask numbers fixed after the 07:05 renumber. No strategy change.
