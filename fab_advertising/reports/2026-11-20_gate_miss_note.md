@@ -2,6 +2,17 @@
 _Pre-staged 2026-11-13 12:02 WIB by Fuku (cloud heartbeat, groundwork). Dry-run vs readout pulls 2026-11-14 20:02: every ⟨⟩ maps to readout Step 0 / P1–P6 / Step 2–4b. Read-only, nothing changed in the ad account. Propose-only._
 _Sister card: `2026-11-20_s1_scale_card.md` (used when G1–G3 all pass). Gate numbers: `2026-11-20_gate_brief.md` (11/14 08:01 refresh). Volume math: `2026-11-12_scale_plan_v2.md`._
 
+## 11/16 09:01 refresh (read this first; overrides stale numbers below)
+_Fuku cloud heartbeat, groundwork. Base: 11/16 07:03 readout (locks 11/13 293,851/0 · 11/14 309,404/3 · 11/15 153,555/1; 7d PEIKIRA 1,947,508/14, BC 428,216/7, P2 717,275/7; `--budget 153555`)._
+- **Expected message: Variant M1** (site not applied as of 11/16 07:03). G1 ✅ needs ≤ 95k; model with nothing changed **116.7k** *(calc)*. Even Ad015 pause + site +1pt live tonight (11/16 eve) = **97.1k ❌** *(calc)*. Only ALL levers + ADSET-3 at 60% share @ Rp 70k live tonight reaches 94.8k, and ADSET-3 is at Rp 0, so treat G1 ❌ as settled unless the 11/17 readout shows a lever went live.
+- **M1 stale clause → replace** "(≈ 94–103k if both live by 11/14 eve, 11/14 08:01 model)" with: "(≈ 97–102k even if both had gone live on 11/16; the window was lost by 11/14)" *(calc, `gate_model_1120.py` 11/16 run)*.
+- **Budget context sentence (new, add after the headline in M1/M2):** pick by OUTBOX #1 state on 11/19:
+  - no answer / "intended", cap still 105k: "PEIKIRA is set to Rp 3M/day but the Rp 105k bid cap holds it at ≈ Rp ⟨7d PEIKIRA spend ÷ 7⟩/day, so the account spends ≈ ⟨x⟩% of the Rp 1M leg."
+  - "revert" applied: "PEIKIRA is back at Rp 300k/day, no cap, since ⟨date⟩."
+- **ADSET-3 clause:** at 11/16 the only fillable row is **"< Rp 10k spent (still starved)"** (Rp 0 since 11/13). Pre-pick it; re-check at the 11/20 pull.
+- **Criterion-1 line:** 11/16 values LWD **12/02**, F+C live by 11/27 ≈ 76.2k, nothing changes 102.1k *(calc, criterion1 model)*. Paste Step 4b on 11/20, don't reuse these.
+- **Criterion-2 line: the "5 budget steps of +25%" sentence is void** (CBO is already Rp 3M). Use the 11/16 version in `2026-11-20_criterion2_replan.md` (section "11/16 refresh"). The binding limit is now the bid cap + no winner, not the budget.
+
 ## Which message goes out on 11/20 (pick one at the 07:00 readout)
 | Gate result (S1 card G1–G3) | Message | Ad ask? |
 |---|---|---|

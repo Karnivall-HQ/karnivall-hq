@@ -1,4 +1,4 @@
-# 11/20 gate scenario model (Fuku, 2026-11-14; CLI added 2026-11-14 21:01).
+# 11/20 gate scenario model (Fuku, 2026-11-14; CLI added 2026-11-14 21:01; spend/day line 2026-11-16).
 # Window 11/13-11/19 (7 days). Gate = 7d Fab CPL <= Rp 95,000.
 # Each 07:00 readout: lock every finished PEIKIRA day in the window with --lock (in date order, 11/13 first),
 # and pass the fresh 7d bases. No flags = the 11/14 07:02 base with 11/13 locked (original output).
@@ -50,6 +50,9 @@ def k(x): return f"{x/1000:.1f}k"
 locked_to = START + dt.timedelta(days=len(LOCKED) - 1)
 print(f"Locked PEIKIRA days: 11/13 -> {locked_to:%m/%d} ({len(LOCKED)}), open days: {N_OPEN}. "
       f"Base PEIKIRA {k(P_CPL)} at {k(P_DAY)}/day{' (--budget)' if a.budget else ''}, P2 {k(P2_CPL)}, BC {k(BC_S/BC_L)}")
+_win_s = sum(x[0] for x in LOCKED) + P_DAY * N_OPEN + BC_S
+print(f"ASSUMED SPEND: PEIKIRA {k(P_DAY)}/day on open days + BC {k(BC_S/7)}/day; window avg account "
+      f"{k(_win_s/7)}/day = {_win_s/7/1e6:.0%} of the Rp 1M/day leg *(calc)* (added 2026-11-16: CPL reads better as spend falls)")
 print("A nothing:", [round(x, 1) for x in run(0, P_CPL)])
 for days in [x for x in (N_OPEN - 1, N_OPEN - 2, N_OPEN - 3) if x >= 1]:
     live = START + dt.timedelta(days=7 - days - 1)

@@ -2,6 +2,17 @@
 _Draft 2026-11-13 15:02 WIB, Fuku cloud heartbeat (groundwork). Read-only, nothing changed in the ad account. Propose-only._
 _Used only if the 11/20 readout sends Variant M or H (`2026-11-20_gate_miss_note.md`): this is the plan behind its "move Rp 1M/day to 01/15" line. Inputs: `2026-11-12_scale_plan_v2.md` (account data). Not an ask yet: the date is Alvian's call._
 
+## 11/16 refresh (overrides the base and budget-step sections below)
+_Fuku cloud heartbeat 11/16 09:01. Reason: on 11/15 00:41 PEIKIRA went to Rp 3M/day CBO + Rp 105k bid cap on all 3 ad sets (OUTBOX #1, unanswered)._
+- **Base is ≈ Rp 215k/day, not 340k:** PEIKIRA 153.6k (11/15 actual under the cap) + BC 61.2k = 214.7k = 21% of the leg *(calc, criterion1 model 11/16)*.
+- **Budget is no longer the limit; the cap and winners are.** At Rp 1M/day with today's CPLs: nothing changes 129.1k ❌; Ad015 pause + site +0.5pt 87.2k (flat-CPL, INFERRED) *(calc)*. But PEIKIRA can't reach that spend while the 105k cap sits below its 139.1k 7d CPL → leg **BLOCKED**.
+- **Budget-step rule, re-stated for both #1 answers:**
+  - "revert" (Rp 300k, no cap): the original plan below holds as written (base 340k, +Rp 100k per verified winner).
+  - "intended" / no answer (Rp 3M + 105k cap): no budget steps are needed or possible; each verified winner raises spend only if its CPL sits under the cap. Steps become **cap steps** on the PEIKIRA ad sets (105k → 115k max, one at a time, 3-day read, same ≤ 110k / > 125k rules), proposed only after a winner is verified. Low case at 01/15 falls from ≈ 700k to ≈ 575k/day (215k + 3.6 × 100k) *(calc)*.
+- **Shared criterion-2 line for 11/20 (replaces the one in the gate-miss note):**
+  > 📊 **Criterion 2 (Rp 1M/day at ~95k by 12/05) is out of reach.** The account spends ≈ Rp ⟨x⟩k/day (⟨y⟩% of the target) ⟨cap state: "because the Rp 105k bid cap holds PEIKIRA back" / "on the Rp 300k budget"⟩, and there is no new winning ad set yet. Each winner adds Rp 100–185k/day at ≤ 95k (8 weeks of data), so Rp 1M/day needs 4–7 at once. ❓ **Move criterion 2 to 01/15, with 3 new phone photos from the Fab team every Saturday from 11/21?** (Criterion 1, CPL ≤ 95k, stays the 12/05 goal.) My recommendation: **yes**; 01/15 holds in the mid case (≈ 1 winner per 4 ads); I re-forecast on 12/14. Reply "ok" or a new date. Plan: `fab_advertising/reports/2026-11-20_criterion2_replan.md`.
+  - Fill: ⟨x⟩ = 11/20 tracker 7d account spend ÷ 7; ⟨y⟩ = ⟨x⟩ ÷ 1,000 *(calc)*. Wave 1 date check: the calendar says photos on 11/21, so the first verdict (12/07) and 12/14 re-forecast don't move.
+
 ## TL;DR
 1. **Rp 1M/day needs 4–7 winning ad sets/waves at once** (each adds Rp 100–185k/day at ≤ 95k; base ≈ Rp 340k/day) *(calc, scale plan v2)*.
 2. **One 3-ad phone-photo wave per week from 11/23, six waves by 12/28** = 18 ads with a day-14 verdict by 01/11. At 1 winner per 3–5 ads that is **3.6–6.0 winners** (+ ADSET-3: 0–1) *(calc; hit rate INFERRED)*.
