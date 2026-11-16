@@ -18,7 +18,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **11/23 skeleton dry-run (~11/21):** map every `⟨…⟩` cell to a run-sheet call; add rows for whatever 11/18–11/20 decided.
 2. **Criterion-2 re-plan vs cap:** check `2026-11-20_criterion2_replan.md` wave dates still hold if new ads stay starved under the 105k cap (ADSET-3 precedent); add a "caps stay" variant line. (Template sweep done 12:01.)
-3. **11/20 readout template ↔ post-undo pack:** add an "if undo applied" branch line in `2026-11-20_readout_template.md` pointing at the pack's §1–§4 (only once an undo is seen? no: pre-wire now, 2 lines).
+3. **11/20 readout template ↔ post-undo pack:** add an "if undo applied" branch line in `2026-11-20_readout_template.md` pointing at the pack's §1–§4 (2 lines, pre-wired so an undo needs no hunting).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Budget Rp 3M/day + cap intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
