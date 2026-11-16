@@ -25,7 +25,7 @@
 - **Priority:** P0
 - **Deadline:** 2026-12-05 (30 days from 2026-11-05)
 - **Constraints:** **Propose-only.** Fuku never touches the ad account (no pauses, budget changes, or launches). Every change is proposed to Alvian as an apply-ready checklist, and **Alvian applies it himself**. The metric is the 7-day average CPL, never a single day.
-- **Status:** at risk (7d CPL 116.4k on 11/15; PEIKIRA budget raised to Rp 3M/day + Rp 105k bid caps at 00:41 by the Rudi MCP actor, intent unconfirmed; Ad015 still on; ADSET-3 Rp 0 day 3; site unfixed)
+- **Status:** at risk (7d CPL 113.1k on 11/16; PEIKIRA Rp 3M CBO + Rp 105k cap delivered only Rp 153.6k on 11/15, intent unconfirmed; Ad015 still on at 161.3k; ADSET-3 Rp 0 for 3 full days; site unfixed; 11/20 gate ❌ by model)
 - **Strategy (Fuku, 2026-11-05):**
   1. *Diagnose* (now): ad-set/ad/placement/audience breakdown; find which ads, audiences, and placements produce leads ≤ Rp 95k.
   2. *Cut waste*: propose to Alvian which CTR-collapsed FAB ads and losing ad sets to pause, so spend concentrates in the winners (BC CBObass005-type setups at ~Rp 83k).
@@ -33,6 +33,7 @@
   4. *Scale*: propose budget raises of ~20–30% every 3–4 days, only while the 7d CPL ≤ Rp 95k. Alvian applies them. Fuku verifies the effect in the next readouts. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
+  - 2026-11-16 07:20: 07:00 readout: 7d 11/09–11/15 Rp 2,375,724 / 21 = 113.1k ❌ *(calc)*. 11/15 full day Rp 153,555 / 1 (5.1% of 3M; cap throttles). Models re-based (`--budget 153555`): 11/20 nothing 116.7k → gate ❌; criterion 1 LWD 12/02 (CPL only; the Rp 1M/day leg needs the cap answered). No new ask; status line on OUTBOX #1. Tracker row + 11/15 snapshot written.
   - 2026-11-15 21:01: Groundwork: overlap check (playbook C.1) on the 11/27 ADSET-3 verdict + 11/20 readout templates. 11/27: 408 double-labelled cells *(calc)*, 333 of them WINNER+UNDER-TESTED (a 4-lead win always costs ≤ 380k), which would have sent a min-spend ask instead of a budget step. Precedence written (rule 2 → WIN → PROM → UNDER → LOSER → NEUTRAL), one label per cell. 11/20: 0-lead gap in rule 3 closed; S1 budget ask gated on the CBO being back at Rp 300k; a budget-state gate added to 11/27 too.
   - 2026-11-15 20:01: Groundwork: 11/18 read card dry-run + overlap check (playbook C.1). At the likely S3 (Rp 450–570k) STARVED and the comparative REVERT co-fire at ≤ 3–4 leads and contradict (budget revert moot below Rp 300k/day). Precedence fixed: S3 < 600k → STARVED only, split worse/middle/cheap; STARVED-worse proposes undoing the whole 11/15 change (old bidding + Rp 300k) on the certain volume loss. Weekly skeleton: L1a benchmark, 11/15 stall line, `old_value` pull step.
   - 2026-11-15 18:01: Groundwork: AKIRA-016 history check (read-only). Its 2 images + copy ran before only as a PEIKIRA2 ad paused 2 min after creation on 11/05 (Rp 0 lifetime) → no prior PEIKIRA CPL; L1a has no benchmark but the BC Image087 formula. KENJI-016 (311.3k) is a different image. No new ask.
@@ -142,6 +143,7 @@
 - **Status:** in progress
 - **Strategy:** The cloud heartbeat runs it on the first Monday run (07:00 WIB). Turn it into a playbook after the first report.
 - **Progress:**
+  - 2026-11-16 07:20: ✅ Weekly report #2 delivered → `fab_advertising/reports/weekly/2026-11-16.md` (Fab 113.1k +8.1% WoW; Incess 26.4k −24.9%; 0 fatigue flags; same 4 disabled; Copy 5 keep, 019 no flag). [REPORT] in OUTBOX. Next: pre-fill 11/23 skeleton on a quiet run.
   - 2026-11-15 10:02: 11/16 skeleton updated for the 11/15 budget change (3M CBO + 105k caps line, activity-log rows, `--budget` on the model row, Top-3 item 0 for a revert) and stale ask numbers fixed after the 07:05 renumber. No strategy change.
   - 2026-11-14 17:01: 11/16 dry-run: found 3 unmapped cell groups (Incess 019 2-wk / Copy 5 3-wk windows, ADSET-3 break-even, photos answer) → run-sheet rows 11–13 + a pre-data window rule (windows end 11/15, the last complete day at 07:00 Mon).
   - 2026-11-14 12:01: Retro #3 score: on track. 11/16 skeleton holds the 11/09–11/13 pre-pull + fatigue table; only the Mon 07:00 final pull remains. No strategy change.

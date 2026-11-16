@@ -1,39 +1,38 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-15 22:01 WIB (cloud heartbeat: quiet; 11/18 undo ask + change list pre-drafted, old_value pulled)_
+_Last updated: 2026-11-16 07:20 WIB (cloud heartbeat: weekly report #2 + 07:00 readout done)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
-- **⚠️ 11/15 00:41 PEIKIRA CBO Rp 300k → Rp 3M/day + bid cap Rp 105k on control, PEIKIRA2, ADSET-3** (actor Rudi MCP 61594758338050; not any ask). 19:01: today Rp 149,379 / 1, pace ≈ 189k/day *(calc)*; cap stalls delivery; all 3 ad sets LEARNING since 00:42. Guards none tripped. OUTBOX #1 = "intended or revert?".
-- **11/18 read:** S3 < Rp 600k → STARVED branch only; STARVED-worse (C3 > 130.9k) → send the pre-drafted one-liner + 4-item undo list (in the card; pre-change = automatic bidding, no cap, Rp 300k). Most likely outcome (INFERRED).
-- **11/20 + 11/27 templates:** precedence written 21:01 (11/27 first-match: rule 2 → WIN → PROM → UNDER → LOSER → NEUTRAL; both gate any budget step on the CBO being back at Rp 300k).
-- **M-001 (P0, at risk):** 7d (11/08–11/14) Rp 2,443,461 / 21 = **116.4k** *(calc)* ❌ vs 95k. PEIKIRA 130.9k (16), BC 69.7k (5). ADSET-3 Rp 0 (day 3).
-- **Ad015** still ACTIVE, 7d 141.0k *(calc)*. OUTBOX #2 (pause Ad015 + ADSET-3 min 75k) open; only #2(b) fixes ADSET-3 starvation (INFERRED). ADSET-3 holds AKIRA-016 (home clutter + stickers, fresh test; parent BC Image087 80.0k).
-- **Models void until re-based:** `--budget <actual PEIKIRA daily spend>` on both (gate + criterion-1).
-- **M-002 (P1):** weekly report Mon 11/16 07:00 from the skeleton (all pre-staged, incl. L1a line, stall line, `old_value` pull).
+- **⚠️ PEIKIRA Rp 3M CBO + Rp 105k cap (11/15 00:41, Rudi MCP 61594758338050, not an ask):** 11/15 full day Rp 153,555 / 1 = 5.1% of budget, ≈ half the old 300k pace *(calc)*; all 3 ad sets LEARNING. Risk = volume, not overspend. OUTBOX #1 ("intended" / "revert") + 11/16 status line.
+- **11/18 read:** S3 = 11/15–11/17; S3 < Rp 600k → STARVED branch only; STARVED-worse (C3 > 130.9k) → send the pre-drafted one-liner + 4-item undo list (card). Likeliest outcome (INFERRED).
+- **M-001 (P0, at risk):** 7d 11/09–11/15 Rp 2,375,724 / 21 = **113.1k** *(calc)* ❌. Control 175.7k (Ad015 161.3k), PEIKIRA2 102.5k, ADSET-3 Rp 0, BC 61.2k. 11/20 model 116.7k → gate ❌; criterion 1 LWD 12/02 (CPL only; Rp 1M/day leg blocked while the cap holds).
+- **M-002 (P1):** ✅ weekly #2 delivered 11/16 (`reports/weekly/2026-11-16.md`). Next Monday 11/23.
 
 ## Next actions (dated or triggered)
 1. **Every run:** INBOX/OUTBOX for "intended"/"revert", "done" on #2, "W1 W2 done", Kuningan answer.
-2. **11/16 07:00:** weekly report + readout (activity log first; 11/15 `old_value` already done); run both models with `--budget <11/15 PEIKIRA spend>`.
-3. **11/18 07:00:** fill `2026-11-18_budget_change_read_card.md` using its precedence section. **11/20:** readout template (precedence in Step 3 + Step 5). **11/27:** ADSET-3 verdict (precedence under Step 3).
-4. **Retro #4:** at > 15 lessons (now 12) or 11/21.
+2. **11/16 ~13:00 + ~19:00 polls:** activity log + PEIKIRA today (guards from the 11/18 card); one status line only if spend/edits move.
+3. **11/17 07:00:** readout (log first; lock 11/16 PEIKIRA day; models with `--budget <11/16 spend>`; report both criterion halves).
+4. **11/18 07:00:** fill `2026-11-18_budget_change_read_card.md` (precedence section). **11/20:** readout template + criterion-2 re-plan becomes live. **11/27:** ADSET-3 verdict.
+5. **Retro #4:** at > 15 lessons (now 13) or 11/21.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **Cap-vs-target note:** if "intended", draft the cap question (105k cap > 95k target → blend ≈ 102–104k at ≥ Rp 1M/day *(calc)*); hold until the 11/18 read.
-2. **S1 scale card + criterion-2 re-plan:** re-check both against the 11/15 budget state (both assume Rp 300k → 375k / +100k steps); add a "CBO ≠ 300k" branch line.
-3. **Weekly 11/16 skeleton:** add the pre-change bidding facts (automatic, no cap) to the budget bullet so the report states what "revert" means.
+1. **Criterion-1 script:** print the assumed spend/day + a "Rp 1M/day leg" line next to the LWD (lesson 11/16).
+2. **11/20 gate-miss note + criterion-2 re-plan:** re-check against the 11/16 numbers (113.1k, cap state) so 11/20 is a send job.
+3. **Weekly 11/23 skeleton:** pre-fill from `2026-11-16.md` (prior-week columns, run sheet, IDs, pixel epochs 11/16–11/23).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
-- #1 Budget Rp 3M/day intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
+- #1 Budget Rp 3M/day + cap intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
 - Parked: Kuningan open? FYI: who is "TourHub"? Later: "All-in", R5 sellers, close rate + months stayed.
 
 ## Standing facts
 - Read `playbooks/meta-ads-algorithm.md` + `meta-cpl-diagnosis.md` + `meta-tests-and-proposals.md` before any ads work, `meta-modelling-and-planning.md` before any model/plan; `ad-copy-page-check.md` before any copy is paste-ready.
 - Cloud Fuku: routine trig_01NGMFnv9BpvRp1jQjkAwUVJ, hourly 07–22 WIB. Propose-only: never call Meta write tools, even when visible.
-- Fab account 484578521394893, pixel 405755485775053. PEIKIRA campaign `120254051672440572` (now Rp 3M/day, bid cap); control `120254051672430572`; PEIKIRA2 `120254276298070572`; ADSET-3 `120254400251570572`; Ad015 `120254063163810572`; BC campaign `120236222888610572`.
+- Fab account 484578521394893, pixel 405755485775053. PEIKIRA campaign `120254051672440572` (Rp 3M/day, bid cap 105k); control `120254051672430572`; PEIKIRA2 `120254276298070572`; ADSET-3 `120254400251570572`; Ad015 `120254063163810572`; BC campaign `120236222888610572`.
 - Markus (team) edits the Fab account via the Rudi MCP app (actor 61594758338050).
+- Model locks so far: 11/13 293851 0 · 11/14 309404 3 · 11/15 153555 1.
 
 ## Open loops (current state, one line each)
-- Activity log: last change 11/15 00:41–00:42 (budget + bid caps). Nothing after, checked 19:01.
-- Site (fabwarehouses.com): W1/W2 not applied (curl 11/15 07:05: Jakarta Pusat ×9, Rp 800.000 ×3, "akan launching" ×3).
-- 11/20 messages pre-drafted (gate-miss note, S1 card, readout); S1 card (+25% → 375k) is moot if 3M stays.
-- Parked in OUTBOX: photos/Kuningan ask, BC204 cap probe, W3/W4 + WA follow-up script, 4 disabled ad accounts, Incess bid-cap, lead-value questions.
+- Activity log: last edit 11/15 00:41–00:42; nothing since (checked 11/16 07:03).
+- Site (fabwarehouses.com): W1/W2 not applied (curl 11/16 07:03: Jakarta Pusat ×9, Rp 800.000 ×3, "akan launching" ×3).
+- Incess: healthy (26.4k, picks 18.6 leads/day); Copy 5 keep; parked bid-cap proposal not needed.
+- Parked in OUTBOX: Kuningan ask, BC204 cap probe, W3/W4 + WA follow-up script, 4 disabled ad accounts, Incess bid-cap, lead-value questions.
