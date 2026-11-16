@@ -25,7 +25,7 @@
 - **Priority:** P0
 - **Deadline:** 2026-12-05 (30 days from 2026-11-05)
 - **Constraints:** **Propose-only.** Fuku never touches the ad account (no pauses, budget changes, or launches). Every change is proposed to Alvian as an apply-ready checklist, and **Alvian applies it himself**. The metric is the 7-day average CPL, never a single day.
-- **Status:** at risk (7d CPL 113.1k on 11/16; PEIKIRA Rp 3M CBO + Rp 105k cap delivered only Rp 153.6k on 11/15, intent unconfirmed; Ad015 still on at 161.3k; ADSET-3 Rp 0 for 3 full days; site unfixed; 11/20 gate ❌ by model)
+- **Status:** at risk (7d CPL 113.1k on 11/16; PEIKIRA Rp 3M CBO + Rp 105k cap delivered Rp 153.6k on 11/15 (mostly an overnight burst) and only Rp 7,959 to 13:00 on 11/16, intent unconfirmed; Ad015 still on at 161.3k; ADSET-3 Rp 0 for 3 full days; site unfixed; 11/20 gate ❌ by model)
 - **Strategy (Fuku, 2026-11-05):**
   1. *Diagnose* (now): ad-set/ad/placement/audience breakdown; find which ads, audiences, and placements produce leads ≤ Rp 95k.
   2. *Cut waste*: propose to Alvian which CTR-collapsed FAB ads and losing ad sets to pause, so spend concentrates in the winners (BC CBObass005-type setups at ~Rp 83k).
@@ -34,6 +34,7 @@
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
   - 2026-11-16 11:01: Groundwork: S1 scale card got a G0 gate (budget step only if the budget binds: 3-day spend ≥ 90% of budget when caps stay; at 11/15's 5.1% it's cosmetic) + branch table per 11/18 outcome; Wave 1 read template got a capped-delivery block (own-baseline, starvation step 2 off while capped, ADSET-3 precedent). Readout Step 5 S1 row now requires G0.
+  - 2026-11-16 13:02: 13:00 poll: PEIKIRA nearly stopped under the 105k cap: today to 13:00 Rp 7,959 / 0 (152 impressions); post-burst pace ≈ Rp 15–21k/day = 5–7% of the old 300k *(calc)*. No edits since 11/15 00:42; guards none. OUTBOX #1 status line: rec now "revert" today (≈ 2 leads/day lost while waiting, calc). No new ask.
   - 2026-11-16 12:01: Groundwork: template sweep finished. All 6 wave build sheets (Wave 1 one-pager, launch checklist, Wave 1/2/3–4/5–6 sheets) now carry a bid-cap pointer to the 11/18 card + Wave 1 read template 11/16 block; Wave 5–6 "own ad set with a cap" starvation step marked off while capped.
   - 2026-11-16 09:01: Groundwork: 11/20 gate-miss note + criterion-2 re-plan refreshed for the Rp 3M + 105k cap state (expected message = M1; even Ad015 + site +1pt live tonight = 97.1k ❌ *(calc)*; criterion-2 line rewritten: base ≈ 215k/day, "5 budget steps" void, cap steps replace budget steps if "intended"). `gate_model_1120.py` now prints window account spend/day (257.0k = 26% of the leg *(calc)*).
   - 2026-11-16 08:02: Groundwork: criterion-1 model now reports both halves. On the 11/16 base the account runs 214.7k/day = 21% of the Rp 1M/day leg; at Rp 1M/day doing nothing gives 129.1k ❌, Ad015 pause + site fix 87.2k (flat-CPL, INFERRED) *(calc)*. The 1M leg stays blocked while the 105k cap holds.
