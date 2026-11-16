@@ -6,6 +6,18 @@ _Written 2026-11-16 16:02 WIB, before any undo. Use only if the activity log sho
 2. Undo day = the day it happened. **Read window starts the next full day** (undo 11/18 → window from 11/19). Split the undo day at the undo time, as on 11/15 (§D3): don't project pace from that day.
 3. Add a tracker change-log row (date, change, actor, "effect read on" = undo day + 7).
 4. Same run, grep the staged files for "3M", "105k", "cap-throttled", "STARVED" (§E1) and add a one-line "undo applied ⟨date⟩" pointer to: `2026-11-18_budget_change_read_card.md`, `2026-11-20_readout_template.md`, `2026-11-20_gate_miss_note.md`, `2026-11-20_criterion2_replan.md`, `wave1_read_template.md`, `reports/weekly/2026-11-23.md`.
+   **4a. Pointer sweep, dry-run 11/16 20:03 (copy-paste on the undo run; anchors are exact text, grep them, line numbers drift).** P = `> **Undo applied ⟨date HH:MM⟩ WIB (⟨actor⟩, ⟨full / budget-only⟩).**` Full undo = budget → 300k **and** bid strategy → logged `old_value` on 3/3 ad sets; anything less = budget-only (this pack doesn't apply, §0.1).
+
+| File | Anchor (insert the pointer on a new line right after it) | Pointer after P: full undo | Pointer after P: budget-only |
+|---|---|---|---|
+| `2026-11-18_budget_change_read_card.md` | line 2, `_Written 2026-11-15 08:01 WIB` | "Read table closed; post-undo read = pack §3; if 11/18 not yet filled, record S3/L/C3 up to the undo time only." | "Card still runs; use the 'Budget-only revert' branch (CAP-BOUND/WIN scaled)." |
+| `2026-11-20_readout_template.md` | no new line: tick the 3rd box in Step 0 (`- **Undo of the 11/15 change`) and fill ⟨date HH:MM⟩ | tick "full undo" | tick "budget only, caps kept" |
+| `2026-11-20_gate_miss_note.md` | line 6, `_Fuku cloud heartbeat, groundwork. Base: 11/16 07:03` | "Budget sentence = 'full undo applied'; model value = pack §1 row for the undo time." | "Budget sentence = 'budget-only revert'; 11/16 capped model stays." |
+| `2026-11-20_criterion2_replan.md` | line 6, `_Fuku cloud heartbeat 11/16 09:01. Reason:` | "Base 361.2k/day; budget-step plan back on; criterion-2 line cap state = 'on the Rp 300k budget'." | "Cap steps, base = actual spend; cap state = 'because the Rp 105k bid cap holds PEIKIRA back'." |
+| `wave1_read_template.md` | line 43 (blank line before `> **11/16 11:01 refresh (bid cap since 11/15).**`): put P above the block | "→ skip the capped block below; template as written." | "→ capped block below applies; baseline = control's 3 full days after the revert." |
+| `reports/weekly/2026-11-23.md` | line 117, `_State at week start (11/16 07:03)` | "Run-sheet 10a full-undo flags; apply the PEIKIRA split rule (Fab per campaign)." | "Run-sheet 10a budget-only flags (`--cap-throttled`); no split rule needed unless spend/day moved > 2×." |
+
+   Verify on the undo run: `grep -c 'Undo applied' <the 5 files>` = 1 each (readout template = ticked box, not a pointer).
 
 ## 1. 11/20 gate (window 11/13–11/19): still ❌ after an undo
 Run on 11/16 bases, 11/16 and 11/17 locked at the capped pace (≈ Rp 20k / 0), 11/19 at Rp 300k *(calc, `gate_model_1120.py`)*:

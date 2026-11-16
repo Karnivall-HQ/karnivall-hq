@@ -44,7 +44,8 @@ Window: full days **11/15, 11/16, 11/17** (read at the 11/18 07:00 readout). Pul
 - Use full days only; never judge intraday (playbook §A.5).
 
 ## Branches by Alvian's answer to OUTBOX #1
-- **"revert" (back to Rp 300k, caps kept):** read window starts the day after the revert. Same table, but CAP-BOUND / WIN thresholds scale down: WIN = C3 ≤ 95k on S3 ≥ Rp 600k. Re-base the 11/20 gate model + criterion-1 model with `--budget 300000`: pre-run in `2026-11-19_post_undo_rebase_pack.md` (11/20 gate 117–120k ❌; criterion-1 LWD 11/30, ask #2 alone 92.0k *(calc)*).
+- **"revert", full undo (Rp 300k + caps removed, the 11/16 rec):** read window starts the full day after the undo; re-base the 11/20 gate + criterion-1 models with `--budget 300000`, no `--cap-throttled`: pre-run in `2026-11-19_post_undo_rebase_pack.md` (11/20 gate 117–120k ❌; criterion-1 LWD 11/30, ask #2 alone 92.0k *(calc)*); post-undo read rule = pack §3.
+- **Budget-only revert (Rp 300k, caps kept, the 11/15 rec):** the pack does **not** apply (pack §0.1). Same table, CAP-BOUND / WIN thresholds scale down (WIN = C3 ≤ 95k on S3 ≥ Rp 600k); keep `--cap-throttled` with `--budget <actual daily spend>`; STARVED rules stay. _(Branch split 11/16 20:03: the old line said "caps kept" but pointed to the full-undo pack.)_
 - **"intended" (3M stays):** this card runs as written; G-a becomes the standing stop rule. Re-base the models on the 3-day average spend, not on 3M.
 - **No answer by 11/18:** run the card anyway; send only the one verdict line as the re-ask of #1 (stalled-ask rule).
 

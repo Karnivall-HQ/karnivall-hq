@@ -8,7 +8,8 @@ _Fuku cloud heartbeat, groundwork. Base: 11/16 07:03 readout (locks 11/13 293,85
 - **M1 stale clause → replace** "(≈ 94–103k if both live by 11/14 eve, 11/14 08:01 model)" with: "(≈ 97–102k even if both had gone live on 11/16; the window was lost by 11/14)" *(calc, `gate_model_1120.py` 11/16 run)*.
 - **Budget context sentence (new, add after the headline in M1/M2):** pick by OUTBOX #1 state on 11/19:
   - no answer / "intended", cap still 105k: "PEIKIRA is set to Rp 3M/day but the Rp 105k bid cap holds it at ≈ Rp ⟨7d PEIKIRA spend ÷ 7⟩/day, so the account spends ≈ ⟨x⟩% of the Rp 1M leg."
-  - "revert" applied: "PEIKIRA is back at Rp 300k/day, no cap, since ⟨date⟩."
+  - full undo applied (300k + caps removed): "PEIKIRA is back at Rp 300k/day, no cap, since ⟨date⟩." Model line from the post-undo pack §1/§4.
+  - budget-only revert (300k, caps kept): "PEIKIRA is back at Rp 300k/day since ⟨date⟩, but the Rp 105k bid cap still holds it at ≈ Rp ⟨7d PEIKIRA spend ÷ 7⟩/day." Capped models stay.
 - **ADSET-3 clause:** at 11/16 the only fillable row is **"< Rp 10k spent (still starved)"** (Rp 0 since 11/13). Pre-pick it; re-check at the 11/20 pull.
 - **Criterion-1 line:** 11/16 values LWD **12/02**, F+C live by 11/27 ≈ 76.2k, nothing changes 102.1k *(calc, criterion1 model)*. Paste Step 4b on 11/20, don't reuse these.
 - **Criterion-2 line: the "5 budget steps of +25%" sentence is void** (CBO is already Rp 3M). Use the 11/16 version in `2026-11-20_criterion2_replan.md` (section "11/16 refresh"). The binding limit is now the bid cap + no winner, not the budget.

@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-16 19:05 WIB (cloud heartbeat: 19:00 poll, PEIKIRA still ≈ stopped, no edits)_
+_Last updated: 2026-11-16 20:05 WIB (cloud heartbeat: undo pointer sweep dry-run + full/budget-only branch split)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -12,13 +12,13 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 1. **Every run:** INBOX/OUTBOX for "intended"/"revert", "done" on #2, "W1 W2 done", Kuningan answer.
 2. **Polls:** today's 3 done (07:00, 13:00, 19:00). Next poll inside the 11/17 07:00 readout.
 3. **11/17 07:00:** readout (log first; lock 11/16 PEIKIRA day; criterion-1 with `--budget <11/16 spend> --cap-throttled`; copy LWD + CRITERION 2 lines).
-4. **Undo seen in the log:** run `2026-11-19_post_undo_rebase_pack.md` §0 the same run (post-undo: 11/20 gate 117–120k ❌, LWD 11/30, ask #2 alone 92.0k *(calc)*). **11/18 07:00:** fill `2026-11-18_budget_change_read_card.md` (precedence section). **11/20:** readout + Variant M1 (read the "11/16 refresh" blocks in the gate-miss note + criterion-2 re-plan first). **11/27:** ADSET-3 verdict.
+4. **Undo seen in the log:** run `2026-11-19_post_undo_rebase_pack.md` §0 the same run (§0.4a = paste-ready pointer table for 6 files; full vs budget-only decided by the bid strategy rows) (post-undo: 11/20 gate 117–120k ❌, LWD 11/30, ask #2 alone 92.0k *(calc)*). **11/18 07:00:** fill `2026-11-18_budget_change_read_card.md` (precedence section). **11/20:** readout + Variant M1 (read the "11/16 refresh" blocks in the gate-miss note + criterion-2 re-plan first). **11/27:** ADSET-3 verdict.
 5. **Retro #5:** ~11/21 or at 15 new lessons (Retro #4 done 11/16 14:02; structural-change rules now in `meta-modelling-and-planning.md` §D–§E).
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **11/23 skeleton dry-run (~11/21):** map every `⟨…⟩` cell to a run-sheet call; add rows for whatever 11/18–11/20 decided.
 2. **Criterion-2 re-plan vs cap:** check `2026-11-20_criterion2_replan.md` wave dates still hold if new ads stay starved under the 105k cap (ADSET-3 precedent); add a "caps stay" variant line. (Template sweep done 12:01.)
-3. **Undo pointer sweep dry-run:** list the exact line in each of the 6 files in post-undo pack §0.4 where the "undo applied ⟨date⟩" pointer goes, so the undo run is copy-paste.
+3. **Variant M1 text refresh (~11/19):** re-read `2026-11-20_gate_miss_note.md` M1 + ADSET-3 clause against the 11/18 card verdict; one fill-ready message per #1 state (none / full undo / budget-only).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Budget Rp 3M/day + cap intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
