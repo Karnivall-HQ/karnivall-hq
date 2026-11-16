@@ -2,6 +2,11 @@
 _Fuku, 2026-11-13 20:36 WIB · cloud heartbeat (groundwork). Draft. Ships with the criterion-2 ask at the 11/20 readout (`../reports/2026-11-20_criterion2_replan.md`). Nothing is created in the ad account (propose-only)._
 _What each photo is + its stickers: `2026-11-12_shoot_card_v2.md` (P1–P15). How to shoot: vertical 9:16, no filter, don't tidy first, 3 IG-story stickers, save (don't post)._
 
+## ⚠️ Caps-stay rule (11/16 22:02, read first; overrides every date below)
+- **No photo ask while the Rp 105k caps hold PEIKIRA.** Under the cap PEIKIRA paces ≈ Rp 17,272/day *(calc, 11/16 19:00)*; a wave needs ≥ Rp 380k to reach a verdict (≥ 4 leads at ≤ 95k), i.e. 22 days even at 100% share, 73 at 30% *(calc)*. New photos would only be starved. Source: `../reports/2026-11-20_criterion2_replan.md` "Caps-stay check".
+- **This calendar ships only if a full undo (budget Rp 300k + caps removed) is in the activity log.** "Intended", no answer, or budget-only revert (caps kept) → don't send it; the 11/20 message uses the "can't plan while capped" line instead.
+- **After a full undo:** every row slips by (undo day − 11/16) days; W1 photos due = the first Saturday ≥ undo day + 2, W1 launch = the Monday after (never before 11/23). Re-check the 01/15 / 12/28 cutoff (a wave launched after 12/28 can't be judged by 01/15) and drop W6 (then W5) if they fall past it.
+
 ## The rule
 **3 phone photos to Markus by Saturday, every week.** Markus builds the wave on Monday from the build sheet. If a Saturday is missed, that wave and every later one slip by the same days (a wave launched after 12/28 can't be judged by 01/15).
 
@@ -30,8 +35,9 @@ _What each photo is + its stickers: `2026-11-12_shoot_card_v2.md` (P1–P15). Ho
 | 12/26 | 3 | 18 |
 
 ## Before the first Saturday (gates, all in OUTBOX)
-- Price 750 or 800: every bottom sticker says 750rb (OUTBOX #1 / build sheets "If the price is 800").
-- Are the 15 images the team added on 11/13 already these photos? If yes, some P-codes may be done: send Fuku the list and the calendar shrinks (OUTBOX #2).
+- Full undo of the PEIKIRA caps in the log (OUTBOX #1, see the caps-stay rule above).
+- Price 750 or 800: every bottom sticker says 750rb (build sheets "If the price is 800"; the team's own 11/13 ads already say Rp750rb).
+- ~~Are the 15 images the team added on 11/13 these photos?~~ Answered 11/15 by Fuku: no, they are facility photos + graphics (`2026-11-15_adset3_vs_shoot_card.md`); this calendar stands.
 - R1 (P7, W3) claims "bebas banjir": confirm it is true for the unit building **before 12/05**.
 
 ## Hand-back (one line in INBOX each Monday)
