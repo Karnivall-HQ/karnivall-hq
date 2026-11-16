@@ -1,12 +1,12 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-16 09:05 WIB (cloud heartbeat: groundwork, 11/20 gate-miss + criterion-2 cards refreshed for the 3M + cap state)_
+_Last updated: 2026-11-16 10:05 WIB (cloud heartbeat: groundwork, 11/23 weekly skeleton pre-filled)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
 - **⚠️ PEIKIRA Rp 3M CBO + Rp 105k cap (11/15 00:41, Rudi MCP 61594758338050, not an ask):** 11/15 full day Rp 153,555 / 1 = 5.1% of budget, ≈ half the old 300k pace *(calc)*; all 3 ad sets LEARNING. Risk = volume, not overspend. OUTBOX #1 ("intended" / "revert") + 11/16 status line.
 - **11/18 read:** S3 = 11/15–11/17; S3 < Rp 600k → STARVED branch only; STARVED-worse (C3 > 130.9k) → send the pre-drafted one-liner + 4-item undo list (card). Likeliest outcome (INFERRED).
 - **M-001 (P0, at risk):** 7d 11/09–11/15 Rp 2,375,724 / 21 = **113.1k** *(calc)* ❌. Control 175.7k (Ad015 161.3k), PEIKIRA2 102.5k, ADSET-3 Rp 0, BC 61.2k. 11/20 model 116.7k → gate ❌; criterion 1 LWD 12/02 at 214.7k/day account spend = 21% of the 1M leg; at Rp 1M/day: nothing 129.1k ❌, asks F+C 87.2k (flat-CPL, INFERRED) *(calc)*; 1M leg blocked while the cap holds.
-- **M-002 (P1):** ✅ weekly #2 delivered 11/16 (`reports/weekly/2026-11-16.md`). Next Monday 11/23.
+- **M-002 (P1):** ✅ weekly #2 delivered 11/16. 11/23 skeleton ready (`reports/weekly/2026-11-23.md`); fill Mon 07:00.
 
 ## Next actions (dated or triggered)
 1. **Every run:** INBOX/OUTBOX for "intended"/"revert", "done" on #2, "W1 W2 done", Kuningan answer.
@@ -16,9 +16,9 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 5. **Retro #4:** at > 15 lessons (now 14) or 11/21.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **Weekly 11/23 skeleton:** pre-fill from `2026-11-16.md` (prior-week columns, run sheet, IDs, pixel epochs 11/16–11/23).
-2. **Template sweep (11/16 lesson):** grep the remaining pre-staged cards (S1 scale card, 11/20 readout template, 11/27 verdict template, wave build sheets) for "300k"/"Rp 300,000" and add 11/16 refresh blocks where the 3M + cap state changes the math.
-3. **Wave 1 build sheet vs cap:** check the 105k bid cap against the Wave 1 read rules (starvation rule assumes an uncapped CBO).
+1. **Template sweep (11/16 lesson):** grep the remaining pre-staged cards (S1 scale card, 11/20 readout template, 11/27 verdict template, wave build sheets) for "300k"/"Rp 300,000" and add 11/16 refresh blocks where the 3M + cap state changes the math.
+2. **Wave 1 build sheet vs cap:** check the 105k bid cap against the Wave 1 read rules (starvation rule assumes an uncapped CBO).
+3. **11/23 skeleton dry-run (~11/21):** map every `⟨…⟩` cell to a run-sheet call; add rows for whatever 11/18–11/20 decided.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Budget Rp 3M/day + cap intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
