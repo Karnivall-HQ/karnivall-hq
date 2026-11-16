@@ -61,7 +61,7 @@ _Whatever the gate says, the 11/20 note must carry criterion 1's date. Source: `
 ## Step 5: pick the message (exactly one M-001 "Latest report" in OUTBOX; replaces whichever M-001 report is current)
 | G1 | G2 | G3 | Send | Ad ask in "Needs you"? |
 |---|---|---|---|---|
-| ✅ | ✅ | ✅ | S1 line (`2026-11-20_s1_scale_card.md` bottom) + a short report, **only if Step 0 shows the CBO back at Rp 300k**; CBO still Rp 3M/day or bid caps on → short report, no budget ask (the 11/18 card result stands) | yes only at Rp 300k: PEIKIRA CBO 300k → 375k |
+| ✅ | ✅ | ✅ | S1 line (`2026-11-20_s1_scale_card.md` bottom) + a short report, **only if Step 0 shows the CBO back at Rp 300k and the card's G0 passes (3-day spend ≥ 90% of budget if caps kept)**; CBO still Rp 3M/day or bid caps on → short report, no budget ask (the 11/18 card result stands) | yes only at Rp 300k: PEIKIRA CBO 300k → 375k |
 | ✅ | ❌ | any | Variant H (`2026-11-20_gate_miss_note.md`) + ADSET-3 clause + criterion-2 line | no |
 | ✅ | ✅ | ❌ | Variant H + tripped rule, re-check 11/23 | no (if ❌ only because Ad015 active: re-send ask #2(a) (pause Ad015)) |
 | ❌ | any | any | W1/W2 not live → **M1**; live → **M2** (+ P6 numbers); both + criterion-2 line | no new ad ask (rule-3 pause / Ad015 fallback only if Step 3 fired) |

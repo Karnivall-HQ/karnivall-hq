@@ -2,6 +2,16 @@
 _Pre-staged 2026-11-13 11:01 WIB by Fuku (cloud heartbeat, groundwork). Read-only: nothing in the ad account was changed. Propose-only: Alvian applies._
 _Sources: `2026-11-12_scale_plan_v2.md` (capacity, +25% rule), `2026-11-13_adset3_read_card.md` (ADSET-3 rules), `2026-11-20_gate_brief.md` (gate). Labels per `fuku/memory/playbooks/meta-ads-algorithm.md`._
 
+> **11/16 11:01 refresh (budget/cap state, from `2026-11-18_budget_change_read_card.md`).** This card was written for an *uncapped* PEIKIRA CBO at Rp 300k ("Highest volume"). Since 11/15 00:41 the CBO is Rp 3M/day with a Rp 105k bid cap on all 3 ad sets, and 11/15 spent only Rp 153,555 = 5.1% of budget (control 100,930 / 0, PEIKIRA2 52,625 / 1, ADSET-3 0) [account data]. A budget step only adds spend when the budget, not the cap, is binding. So before G1–G3, check **G0** (Step 0 activity log + last 3 full days, level=campaign):
+> | 11/18 outcome → state on 11/20 | G0 | This card |
+> |---|---|---|
+> | "undo": Rp 300k, caps removed | ✅ | use as written |
+> | "revert": Rp 300k, 105k caps kept | ✅ only if PEIKIRA 3-day avg spend ≥ 90% of budget (≥ Rp 270k/day) | if < 90%: **not sent**; the cap sets spend, +25% budget is cosmetic [INFERRED, BC precedent: caps held spend at ~1.4% of budget, 11/05]. Line instead: "CPL met; spend is cap-bound at Rp ⟨avg⟩/day, so a budget step adds nothing. Volume lever = winners, not budget." |
+> | still Rp 3M + caps | ❌ | not sent (readout Step 5 already says no budget ask) |
+> | other budget X | as row 2 with 90% of X | step = X → 1.25 × X; replace every "300k" / "375k" below with X / 1.25X, and the revert target with X |
+> - Never propose a **cap raise** as the scale step: the cap (105k) is already above the 95k target, so a raise trades CPL for volume (`meta-tests-and-proposals.md`; cap proposals need ≥ 8 weekly rows at the cap, and this setup has 1). [account data + playbook]
+> - Honest-framing numbers below assume a Rp 300k start + ~40k BC (≈ Rp 340k/day). The 11/16 base is ≈ **Rp 215k/day account** (criterion-1 model, 21% of the Rp 1M leg) *(calc)*, so S1→S4 from 11/20 reaches less than the Rp 730k quoted unless the cap stops binding. Quote the criterion-2 line from readout Step 4b instead of the 730k figure.
+
 ## When this card is sent (all three, checked at the 11/20 07:00 readout)
 | # | Condition | Source | Pass? (fill 11/20) |
 |---|---|---|---|

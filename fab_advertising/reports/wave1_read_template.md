@@ -41,6 +41,13 @@ Catches a build slip before stages 1–2 judge an ad that wasn't built to spec. 
 
 A slipped ad's stage-1/2 numbers are read but labelled "built off-spec"; if it's fixed by editing, its read restarts from the fix date (activity log gives the time).
 
+> **11/16 11:01 refresh (bid cap since 11/15).** This template assumes the uncapped Rp 300k PEIKIRA CBO. If Wave 1 launches while the Rp 105k bid caps are on (check the activity log first, per `2026-11-18_budget_change_read_card.md`):
+> - **Baseline:** replace "≈ Rp 150k/day" with the control ad set's own average over the 3 full days before launch (11/15 under the cap: Rp 100,930 [account data]). The 30% drop line uses that baseline.
+> - **The 10% share line stays** (it is relative), but starvation is now expected rather than a fault: under the cap, ADSET-3 (same audience, no history) got **Rp 0 for 3+ full days** [account data]. New ads with no conversions have nothing for Meta to bid on under a cap [INFERRED].
+> - **Starvation step 2 is off while capped:** a new ad set "with a cap" would just repeat ADSET-3. Instead: step 1 (tidy the 5 dead ads) stays; then the Wave 1 read waits on the 11/18 card verdict (undo/keep the caps). Don't propose a separate Wave 1 ad set or a min spend while the 11/18 decision is open.
+> - **Kill rules unchanged** (spend multiples of 95k); they just take longer to reach at lower spend. Extend the Stage 2 window to day 7 if pooled Wave 1 spend < Rp 95k by day 5.
+> - If the caps are removed ("undo"), ignore this block and use the template as written.
+
 ## Stage 1 — delivery check (day 2–3)
 Question: is Meta giving the new ads any spend at all? (Ad007 got Rp 1,487 in 7d while Ad015 ate the ad set.)
 | Signal | Rule |

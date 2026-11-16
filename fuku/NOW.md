@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-16 10:05 WIB (cloud heartbeat: groundwork, 11/23 weekly skeleton pre-filled)_
+_Last updated: 2026-11-16 11:05 WIB (cloud heartbeat: groundwork, S1 card + Wave 1 read template refreshed for the cap)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -13,11 +13,11 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 2. **11/16 ~13:00 + ~19:00 polls:** activity log + PEIKIRA today (guards from the 11/18 card); one status line only if spend/edits move.
 3. **11/17 07:00:** readout (log first; lock 11/16 PEIKIRA day; criterion-1 with `--budget <11/16 spend> --cap-throttled`; copy LWD + CRITERION 2 lines).
 4. **11/18 07:00:** fill `2026-11-18_budget_change_read_card.md` (precedence section). **11/20:** readout + Variant M1 (read the "11/16 refresh" blocks in the gate-miss note + criterion-2 re-plan first). **11/27:** ADSET-3 verdict.
-5. **Retro #4:** at > 15 lessons (now 14) or 11/21.
+5. **Retro #4:** at > 15 lessons (now 15) or 11/21.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **Template sweep (11/16 lesson):** grep the remaining pre-staged cards (S1 scale card, 11/20 readout template, 11/27 verdict template, wave build sheets) for "300k"/"Rp 300,000" and add 11/16 refresh blocks where the 3M + cap state changes the math.
-2. **Wave 1 build sheet vs cap:** check the 105k bid cap against the Wave 1 read rules (starvation rule assumes an uncapped CBO).
+1. **Template sweep, remainder:** wave build sheets (Wave 1 one-pager, Wave 2, 3–4, 5–6) still say "build into control ad set" with uncapped delivery assumptions; add a one-line pointer to the `wave1_read_template.md` 11/16 block. (S1 card + Wave 1 read template done 11:01; readout + 11/27 templates already gate on caps.)
+2. **11/18 card dry-run:** fill it with 11/15–11/16 actuals (2 of 3 days) to check every branch resolves to one message; fix gaps.
 3. **11/23 skeleton dry-run (~11/21):** map every `⟨…⟩` cell to a run-sheet call; add rows for whatever 11/18–11/20 decided.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
