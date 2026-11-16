@@ -35,7 +35,7 @@ def week(days_on=7, rest=P_CPL, site=1.0, a3_share=0.0, a3_cpl=95000, p_day=None
     return s/l
 def f(x): return f"{x/1000:.1f}k"
 rows=[("A  nothing changes", week(0)),
-      ("F  Ad015 paused (freed at 115.6k)", week(rest=P2_CPL)),
+      (f"F  Ad015 paused (freed at {f(P2_CPL)})", week(rest=P2_CPL)),
       ("F' Ad015 paused (freed at 130k)", week(rest=130000)),
       ("C  site +0.5pt", week(site=SITE['+0.5pt'])),
       ("C  site +1pt", week(site=SITE['+1pt'])),

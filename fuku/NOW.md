@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-16 15:05 WIB (cloud heartbeat: 11/18 card dry-run, 2 gaps fixed)_
+_Last updated: 2026-11-16 16:05 WIB (cloud heartbeat: post-undo re-base pack)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -12,13 +12,13 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 1. **Every run:** INBOX/OUTBOX for "intended"/"revert", "done" on #2, "W1 W2 done", Kuningan answer.
 2. **11/16 ~19:00 poll:** activity log + PEIKIRA today; status line only if spend/edits move (13:00 done).
 3. **11/17 07:00:** readout (log first; lock 11/16 PEIKIRA day; criterion-1 with `--budget <11/16 spend> --cap-throttled`; copy LWD + CRITERION 2 lines).
-4. **11/18 07:00:** fill `2026-11-18_budget_change_read_card.md` (precedence section). **11/20:** readout + Variant M1 (read the "11/16 refresh" blocks in the gate-miss note + criterion-2 re-plan first). **11/27:** ADSET-3 verdict.
+4. **Undo seen in the log:** run `2026-11-19_post_undo_rebase_pack.md` §0 the same run (post-undo: 11/20 gate 117–120k ❌, LWD 11/30, ask #2 alone 92.0k *(calc)*). **11/18 07:00:** fill `2026-11-18_budget_change_read_card.md` (precedence section). **11/20:** readout + Variant M1 (read the "11/16 refresh" blocks in the gate-miss note + criterion-2 re-plan first). **11/27:** ADSET-3 verdict.
 5. **Retro #5:** ~11/21 or at 15 new lessons (Retro #4 done 11/16 14:02; structural-change rules now in `meta-modelling-and-planning.md` §D–§E).
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **11/23 skeleton dry-run (~11/21):** map every `⟨…⟩` cell to a run-sheet call; add rows for whatever 11/18–11/20 decided.
 2. **Criterion-2 re-plan vs cap:** check `2026-11-20_criterion2_replan.md` wave dates still hold if new ads stay starved under the 105k cap (ADSET-3 precedent); add a "caps stay" variant line. (Template sweep done 12:01.)
-3. **Post-undo re-base pack:** pre-write the 7d model + 11/20 gate lines for "undo applied 11/18" (read window from 11/19; `--budget 300000`, no cap) so the readout after an undo is a fill-in.
+3. **11/20 readout template ↔ post-undo pack:** add an "if undo applied" branch line in `2026-11-20_readout_template.md` pointing at the pack's §1–§4 (only once an undo is seen? no: pre-wire now, 2 lines).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Budget Rp 3M/day + cap intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
