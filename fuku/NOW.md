@@ -1,11 +1,11 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-16 20:05 WIB (cloud heartbeat: undo pointer sweep dry-run + full/budget-only branch split)_
+_Last updated: 2026-11-16 21:02 WIB (cloud heartbeat: criterion-2 caps-stay check)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
 - **⚠️ PEIKIRA Rp 3M CBO + Rp 105k cap (11/15 00:41, Rudi MCP 61594758338050, not an ask):** 11/15 Rp 153,555 / 1 was mostly the 00:41–07:05 burst (138,427); 11/16 to 19:00 **Rp 13,674 / 0** (249 impr; control 12,740, PEIKIRA2 934, ADSET-3 0); post-burst pace ≈ Rp 15–21k/day = 5–7% of old 300k *(calc)*. All 3 ad sets LEARNING. PEIKIRA ≈ stopped. OUTBOX #1 rec now "revert" today (13:02 line); notified.
 - **11/18 read:** S3 = 11/15–11/17; S3 < Rp 600k → STARVED branch; **S3 < Rp 392.7k → judge on volume only (L ≤ 3 → undo line)**; L = 0 → STARVED-worse. Dry-run 15:02: every L → one message; likeliest = undo one-liner + 4-item list (card).
-- **M-001 (P0, at risk):** 7d 11/09–11/15 Rp 2,375,724 / 21 = **113.1k** *(calc)* ❌. Control 175.7k (Ad015 161.3k), PEIKIRA2 102.5k, ADSET-3 Rp 0, BC 61.2k. 11/20 model 116.7k → gate ❌; criterion 1 LWD 12/02 at 214.7k/day account spend = 21% of the 1M leg; at Rp 1M/day: nothing 129.1k ❌, asks F+C 87.2k (flat-CPL, INFERRED) *(calc)*; 1M leg blocked while the cap holds.
+- **M-001 (P0, at risk):** 7d 11/09–11/15 Rp 2,375,724 / 21 = **113.1k** *(calc)* ❌. Control 175.7k (Ad015 161.3k), PEIKIRA2 102.5k, ADSET-3 Rp 0, BC 61.2k. 11/20 model 116.7k → gate ❌; criterion 1 LWD 12/02 at 214.7k/day account spend = 21% of the 1M leg; at Rp 1M/day: nothing 129.1k ❌, asks F+C 87.2k (flat-CPL, INFERRED) *(calc)*; 1M leg blocked while the cap holds; under caps no wave can reach the Rp 380k verdict spend → 01/15 ask only after a full undo (re-plan 21:02 block).
 - **M-002 (P1):** ✅ weekly #2 delivered 11/16. 11/23 skeleton ready (`reports/weekly/2026-11-23.md`); fill Mon 07:00.
 
 ## Next actions (dated or triggered)
@@ -17,7 +17,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **11/23 skeleton dry-run (~11/21):** map every `⟨…⟩` cell to a run-sheet call; add rows for whatever 11/18–11/20 decided.
-2. **Criterion-2 re-plan vs cap:** check `2026-11-20_criterion2_replan.md` wave dates still hold if new ads stay starved under the 105k cap (ADSET-3 precedent); add a "caps stay" variant line. (Template sweep done 12:01.)
+2. **Weekly photo calendar vs undo date (~11/19):** `creatives/2026-11-13_weekly_photo_calendar.md` assumes 11/21 photos; add the caps-stay rule (no photo ask while capped) so it matches the re-plan's 11/16 21:02 block.
 3. **Variant M1 text refresh (~11/19):** re-read `2026-11-20_gate_miss_note.md` M1 + ADSET-3 clause against the 11/18 card verdict; one fill-ready message per #1 state (none / full undo / budget-only).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")

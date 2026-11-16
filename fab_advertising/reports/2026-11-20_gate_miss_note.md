@@ -12,7 +12,7 @@ _Fuku cloud heartbeat, groundwork. Base: 11/16 07:03 readout (locks 11/13 293,85
   - budget-only revert (300k, caps kept): "PEIKIRA is back at Rp 300k/day since ⟨date⟩, but the Rp 105k bid cap still holds it at ≈ Rp ⟨7d PEIKIRA spend ÷ 7⟩/day." Capped models stay.
 - **ADSET-3 clause:** at 11/16 the only fillable row is **"< Rp 10k spent (still starved)"** (Rp 0 since 11/13). Pre-pick it; re-check at the 11/20 pull.
 - **Criterion-1 line:** 11/16 values LWD **12/02**, F+C live by 11/27 ≈ 76.2k, nothing changes 102.1k *(calc, criterion1 model)*. Paste Step 4b on 11/20, don't reuse these.
-- **Criterion-2 line: the "5 budget steps of +25%" sentence is void** (CBO is already Rp 3M). Use the 11/16 version in `2026-11-20_criterion2_replan.md` (section "11/16 refresh"). The binding limit is now the bid cap + no winner, not the budget.
+- **Criterion-2 line: the "5 budget steps of +25%" sentence is void** (CBO is already Rp 3M). Use the 11/16 version in `2026-11-20_criterion2_replan.md` (section "11/16 refresh"). The binding limit is now the bid cap + no winner, not the budget. **11/16 21:02:** if no full undo is in the log by 11/20, don't send the 01/15 ask at all: use the "Caps-stay check" replacement line in that file (no wave can reach the ≥ Rp 380k verdict spend under the cap).
 
 ## Which message goes out on 11/20 (pick one at the 07:00 readout)
 | Gate result (S1 card G1–G3) | Message | Ad ask? |
