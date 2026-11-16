@@ -8,6 +8,7 @@ Window 11/13 00:00 → 11/20 07:00 WIB, account `484578521394893`. Fill one line
 - ADSET-3 min daily spend (Rp 75k) applied? ☐ n/a ☐ no ☐ yes ⟨date⟩
 - Ad015 (`120254063163810572`) paused? ☐ no, still ACTIVE ☐ yes, since ⟨date HH:MM⟩ (feeds gate-miss M1 "neither / only Ad015", Variant H cause, G3)
 - Any budget / status / bid edit on PEIKIRA or BC: ⟨list or "none"⟩. A change inside the window → note it next to the number it moves; don't "correct" the CPL for it.
+- **Undo of the 11/15 change (3M → 300k and/or 105k caps removed)?** ☐ no → rest of this card as written (capped: `--cap-throttled`, 11/18 card STARVED rules) ☐ budget only, caps kept → `2026-11-19_post_undo_rebase_pack.md` does **not** apply (§0.1); stay on capped models ☐ **full undo at ⟨date HH:MM⟩** → before Step 2 open the pack: §0 trigger check (if not already run on the undo day), §1 gate table (117–120k ❌) = the "model 11/20" value in Step 4's model-error check (G1 is still the actual 7d CPL; the §1 command is only for a pre-11/20 run), §2 criterion-1 command (no `--cap-throttled`, LWD 11/30) **replaces Step 4b's flags**, §3 read rule, §4 "11/20 readout" status line **replaces the Step 5 M-001 line**. _(Branch pre-wired 2026-11-16 17:02.)_
 
 ## Step 1: pulls (copy numbers from tool output; anything derived gets *(calc)*)
 | # | Pull | Args | Fill |
