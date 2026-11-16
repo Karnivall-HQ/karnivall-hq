@@ -22,6 +22,8 @@ Any new ad, ad set, creative wave, bid-cap or structure change that Fuku propose
 - **One ad > 80% of an ad set's spend = no backup.** The hedge is new creative; write CTR/CPL/freq triggers before fatigue shows.
 
 ## C. Writing a proposal
+- **A budget step is a lever only when the budget binds.** Check 3-day spend ÷ budget first; < 90% → no budget ask, name the real limiter (cap or creatives). Under a cap spend is set by the cap (PEIKIRA 11/15: 5.1% of 3M; BC 11/05: 1.4% of 5M). (Retro #4)
+- **Undo lists name the exact pre-change state from the log** (`old_value`), pulled when drafting, translated into Ads Manager words ("Automatically bid for…" → "Highest volume"); flag anything INFERRED. (Retro #4)
 - **Sort levers:** "adds volume at ~target CPL" (cap raises, budget) vs "lowers CPL on current spend" (site conversion, cheaper creative). For a CPL gate push the second kind; for a scale gate the first.
 - **Bid caps:** pull ≥ 8 weekly rows + the bid-category activity log; spend can swing −30% at a fixed cap from the auction alone. Raise only ad sets with CPL ÷ cap < ~0.85, with a raised-vs-untouched comparative rule. Never write a cap or scale proposal on < 8 weekly rows; a first diagnosis version is a hypothesis until re-pulled on the full window (item 4: 30d ratio 0.889 → 8-wk 1.02, 11/12).
 - **Copy consistency:** join `ads_get_ad_entities` (spend > 0, creative_id) with `ads_get_creatives` and size by spend share; an Ad Library sample undercounts (8 vs all 59).
@@ -33,6 +35,7 @@ Any new ad, ad set, creative wave, bid-cap or structure change that Fuku propose
 - **Before re-raising a parked ask, re-pull the same breakdown on the latest 7d** and recompute "CPL without it". If the gain is gone, retire the ask (IG Stories, 11/11).
 - **For a "pause the losers" ask, also check the losers' 7d spend share.** In CBO, Meta often starves 0-lead ads within a week; if they're < 5% of the parent's 7d spend, the pause has ~0 CPL effect, so retire it as an ask (BC tail 11/11: Rp 22.7k/day; PEIKIRA item 5 11/11: 0.9%).
 - **When the team ships something on its own** (new ad set in the activity log): write its read card (kill + comparative + verdict + break-even, see `meta-modelling-and-planning.md` §B) and its page check the same run, then re-frame open asks around what shipped instead of repeating them (ADSET-3, 11/13).
+- **Look before asking what an asset *is*.** `ads_get_ad_images` + download answered "are these the new photos?" in one run (11/15: facility photos, not the shoot). Ask Alvian only what can't be seen (e.g. "is the site open?"). (Retro #4)
 - **When the team applies a partial version**, measure where the money went at the next readout and shrink or drop the ask instead of repeating it (ad 006 pause, 11/09–11/10).
 - Stalled > 24h → one-line yes/no re-ask (CLAUDE.md Evolving rule); one push notification per re-ask per day.
 
@@ -40,4 +43,4 @@ Any new ad, ad set, creative wave, bid-cap or structure change that Fuku propose
 Every proposal names: the lever type, the read rules (absolute + comparative), the window, and labels each number account data / *(calc)* / INFERRED.
 
 ## Last validated
-2026-11-14 (Retro #3 additions) · 2026-11-11 · M-001 (Wave 1 template, 11/20 gate brief, IG Stories retirement) and M-002 (Incess 019 split).
+2026-11-16 (Retro #4 additions) · 2026-11-14 (Retro #3 additions) · 2026-11-11 · M-001 (Wave 1 template, 11/20 gate brief, IG Stories retirement) and M-002 (Incess 019 split).

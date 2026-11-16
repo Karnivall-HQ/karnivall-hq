@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-16 13:05 WIB (cloud heartbeat: 13:00 poll — PEIKIRA nearly stopped under the cap)_
+_Last updated: 2026-11-16 14:05 WIB (cloud heartbeat: Retro #4 done)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -13,7 +13,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 2. **11/16 ~19:00 poll:** activity log + PEIKIRA today; status line only if spend/edits move (13:00 done).
 3. **11/17 07:00:** readout (log first; lock 11/16 PEIKIRA day; criterion-1 with `--budget <11/16 spend> --cap-throttled`; copy LWD + CRITERION 2 lines).
 4. **11/18 07:00:** fill `2026-11-18_budget_change_read_card.md` (precedence section). **11/20:** readout + Variant M1 (read the "11/16 refresh" blocks in the gate-miss note + criterion-2 re-plan first). **11/27:** ADSET-3 verdict.
-5. **Retro #4: due now (16 lessons)** → next quiet run (before 19:00 poll).
+5. **Retro #5:** ~11/21 or at 15 new lessons (Retro #4 done 11/16 14:02; structural-change rules now in `meta-modelling-and-planning.md` §D–§E).
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **11/18 card dry-run:** fill it with 11/15–11/16 actuals (2 of 3 days) to check every branch resolves to one message; fix gaps.

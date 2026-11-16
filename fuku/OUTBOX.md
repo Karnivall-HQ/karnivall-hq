@@ -23,12 +23,12 @@ _Ad-account asks: #1 (budget) and #2 (Ad015 + ADSET-3 min). #2 absorbs the 11/13
 
 - **[REPORT] 2026-11-16 07:20 · 📊 Weekly (11/09–11/15): Fab CPL Rp 113.1k ❌ (+8.1% WoW); Incess Rp 26.4k ✅ (−24.9%).** Fab Rp 2,375,724 / 21 *(calc)*: PEIKIRA 139.1k (control 175.7k, Ad015 161.3k; PEIKIRA2 102.5k; ADSET-3 Rp 0), BC 61.2k. Incess Rp 5,180,071 / 196, 4 bid-cap picks 18.6 leads/day vs 12.9 baseline with no cap change; Copy 5 → keep (no ask). 0 fatigue flags; same 4 disabled accounts. Pixel VC→Lead 3.4% (from 4.5%); site still unfixed. 11/20 gate ❌ (model 116.7k); criterion 1 last workable date 12/02 *(calc)*, but the Rp 1M/day leg is blocked while the 105k cap holds. Report: `fab_advertising/reports/weekly/2026-11-16.md`. Top 3 = asks #1, #3, #2.
 
-- **[REPORT] 2026-11-14 12:01 · 🔁 Retro #3 (week of 11/11–11/14).**
-  - 🚀 Wins: 7d CPL hit its best yet (100.5k on 11/12); the team's ADSET-3 photo wave launched 11/13 and Fuku had its read card + copy check out the same run; 11/20 is now a fill job (readout, gate-miss, S1 scale, criterion-2 re-plan templates all pre-staged); criterion-1 path to 12/05 modelled.
-  - ⚠️ Misses: 7d CPL back up to 116.5k (Ad015 decaying post-click, ADSET-3 starved at Rp 0); the 11/20 gate is likely ❌; the site fix has waited **8 days**: approval latency, not analysis, is now the bottleneck.
-  - 🔧 Changed myself: 16 lessons → new playbook `fuku/memory/playbooks/meta-modelling-and-planning.md` (one model per judged window, CBO break-even tables, rule-overlap + calendar checks) + additions to 3 playbooks; lessons.md 29 → 3; 2 new Evolving rules.
-  - ❓ Need from you: only asks #1 (pause Ad015 + ADSET-3 min Rp 75k) and #2 (site W1+W2). **Both live by 11/27 ≈ 88k CPL on the 12/05 window; from 12/01 criterion 1 is lost** *(calc)*.
-  - 👉 Next week: 11/15 gate re-run; 11/16 weekly report; 11/20 gate call + criterion-2 re-plan (Rp 1M/day → 01/15); 11/27 ADSET-3 verdict.
+- **[REPORT] 2026-11-16 14:02 · 🔁 Retro #4 (11/15–11/16).**
+  - 🚀 Wins: weekly report #2 on time (Incess 26.4k ✅, −24.9%); the 11/15 budget change was caught at the first readout and every model, card and build sheet was re-based on it within a day; the 13:00 poll found PEIKIRA's real capped pace (≈ Rp 15–21k/day *(calc)*), not the burst-inflated one.
+  - ⚠️ Misses: 7d CPL 113.1k ❌ (+8.1% WoW); PEIKIRA nearly stopped under the 105k cap; ADSET-3 Rp 0 for 3+ days; my own 11/15 13:02 "≈ 265k/day" projection was wrong (burst not split out); 0 of 3 asks answered (site fix waiting 10 days).
+  - 🔧 Changed myself: 16 lessons → `meta-modelling-and-planning.md` §D (structural account changes) + §E (pre-staged file sweeps), 3 additions to `meta-tests-and-proposals.md`, 1 diagnosis step; lessons.md 19 → 3; new Evolving rule "structural change = re-base day".
+  - ❓ Need from you: one word on #1 (**"revert"**, my rec), then #2 (b) ADSET-3 min Rp 75k, then #3 site W1+W2.
+  - 👉 Next: 19:00 poll; 11/17 readout; 11/18 3-day budget read; 11/20 gate call + criterion-2 re-plan; 11/23 weekly.
 
 ## Parked
 
@@ -75,6 +75,13 @@ _Ad-account asks: #1 (budget) and #2 (Ad015 + ADSET-3 min). #2 absorbs the 11/13
 - **[FYI] 2026-11-05 · Questions only you can answer:** What is a lead worth for each business (close rate, deal value)? Which businesses does Karnivall run vs. serve as clients (Incess, Travell Fi, The North Case, GudangHub, Jinhe, Karnivall)? What is `fab_advertising/` (ad names use "FAB")?
 
 ## Resolved
+
+- ⏩ Superseded by Retro #4 (11/16 14:02) · **[REPORT] 2026-11-14 12:01 · 🔁 Retro #3 (week of 11/11–11/14).**
+  - 🚀 Wins: 7d CPL hit its best yet (100.5k on 11/12); the team's ADSET-3 photo wave launched 11/13 and Fuku had its read card + copy check out the same run; 11/20 is now a fill job (readout, gate-miss, S1 scale, criterion-2 re-plan templates all pre-staged); criterion-1 path to 12/05 modelled.
+  - ⚠️ Misses: 7d CPL back up to 116.5k (Ad015 decaying post-click, ADSET-3 starved at Rp 0); the 11/20 gate is likely ❌; the site fix has waited **8 days**: approval latency, not analysis, is now the bottleneck.
+  - 🔧 Changed myself: 16 lessons → new playbook `fuku/memory/playbooks/meta-modelling-and-planning.md` (one model per judged window, CBO break-even tables, rule-overlap + calendar checks) + additions to 3 playbooks; lessons.md 29 → 3; 2 new Evolving rules.
+  - ❓ Need from you: only asks #1 (pause Ad015 + ADSET-3 min Rp 75k) and #2 (site W1+W2). **Both live by 11/27 ≈ 88k CPL on the 12/05 window; from 12/01 criterion 1 is lost** *(calc)*.
+  - 👉 Next week: 11/15 gate re-run; 11/16 weekly report; 11/20 gate call + criterion-2 re-plan (Rp 1M/day → 01/15); 11/27 ADSET-3 verdict.
 
 - (superseded 11/16 07:20 by the weekly report) **[REPORT] 2026-11-15 07:05 · 📊 7d Fab CPL Rp 116.4k ❌ (flat from 116.5k). ⚠️ PEIKIRA budget went to Rp 3M/day overnight (ask #1).** 11/08–11/14: Rp 2,443,461 / 21 = **Rp 116,355** *(calc)*, Rp 349k/day. PEIKIRA 130.9k (16); BC 69.7k (5). Control 153.6k (8), PEIKIRA2 108.2k (8), ADSET-3 Rp 0 (day 3). 11/14: PEIKIRA Rp 309,404 / 3. 11/20 gate model 126.0k (doing nothing) and criterion-1 last workable date 11/28 are both on the old Rp 300k/day basis, so they're void until the budget question is answered. Tracker: `fab_advertising/reports/m001_tracker.md`.
 
