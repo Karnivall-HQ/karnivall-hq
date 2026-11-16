@@ -2,6 +2,8 @@
 _Fuku, 2026-11-13 18:02 WIB · cloud heartbeat (groundwork backlog #2). Draft for Markus. Nothing is created in the ad account (propose-only)._
 _Plan: `../reports/2026-11-20_criterion2_replan.md` (W5 launch 12/21 → verdict 01/04; W6 launch 12/28 → verdict 01/11). Format and build settings = `2026-11-12_wave3-4_build_sheet.md`. Claims checked with `fuku/memory/playbooks/ad-copy-page-check.md` against the live landing page `/sewa-gudang-self-storage-jakarta/` (curl 11/13 18:02, HTTP 200)._
 
+> **11/16 12:01 bid-cap pointer.** Since 11/15 00:41 the PEIKIRA CBO runs Rp 3M/day with a **Rp 105k bid cap on all 3 ad sets** (11/15: Rp 153,555 spent = 5.1% of budget; ADSET-3 Rp 0 for 3+ days) [account data]. Every "budget unchanged / inside the control ad set" line below assumes the old uncapped Rp 300k CBO. Before building, check the activity log and the 11/18 verdict (`../reports/2026-11-18_budget_change_read_card.md`); while the caps are on, read with the **11/16 block** in `../reports/wave1_read_template.md` (own 3-day control baseline, starvation expected, no separate capped ad set or min spend while the 11/18 decision is open). If the caps are removed, this sheet stands as written.
+
 ## Why this shape
 By 12/21 the W1–W3 day-14 verdicts exist (12/07, 12/14, 12/21); by 12/28 W4's too. Writing W5–W6 as fixed angles today would ignore that data. So each wave = **2 iteration slots** (filled by rule from the verdicts) + **1 fresh slot** (from the pool below). If W1–W4 give no winner, all 3 slots come from the pool. *(INFERRED: iterating a proven angle beats a new angle on hit rate; Ad015 itself is an iteration of the "bersih, aman" angle. Untested in this account.)*
 
@@ -10,7 +12,7 @@ By 12/21 the W1–W3 day-14 verdicts exist (12/07, 12/14, 12/21); by 12/28 W4's 
 2. **How to iterate:** same stickers + primary text, **new phone photo of the same scene type in a different home** (P-code of the winner, re-shot), name `WAVE5-FAB-<YYYYMMDD>-<code>v2`. Change only the photo, so the read tells us whether the angle or the picture won. Second iteration of the same winner in W6 may also swap the hook sticker (one change at a time).
 3. **Never iterate:** a LOSER (> 1.3× control CPL), an ad still UNDER-TESTED (< Rp 380k spend *(calc)*), or a winner labelled "decaying" (week-2 CPL > 1.5× week-1, decay check in the same template).
 4. **Fresh slot (1):** next row from the pool in rank order, skipping any row whose gate is not ✅. If iteration slots are empty, take the top 3 pool rows instead.
-5. **Delivery:** waves go into the PEIKIRA control ad set `120254051672430572` as ads, so the ADSET-3 ad-set minimum-spend fix does **not** apply; use the Wave 1 starvation rule (new ads < 10% of the ad set's spend by day 3 → tidy first, then their own ad set with a cap; `../reports/wave1_read_template.md`). Never pause Ad015 to force delivery.
+5. **Delivery:** waves go into the PEIKIRA control ad set `120254051672430572` as ads, so the ADSET-3 ad-set minimum-spend fix does **not** apply; use the Wave 1 starvation rule (new ads < 10% of the ad set's spend by day 3 → tidy first, then their own ad set with a cap; `../reports/wave1_read_template.md`). *(11/16: the "own ad set with a cap" step is off while the Rp 105k PEIKIRA caps are on; see the pointer at the top.)* Never pause Ad015 to force delivery.
 
 ## Fresh pool (ranked; `\n` = line break; 750 case)
 | Rank | Code | Photo | Stickers (top · middle · bottom, yellow on bottom) | Primary text (hook + body) | Headline |

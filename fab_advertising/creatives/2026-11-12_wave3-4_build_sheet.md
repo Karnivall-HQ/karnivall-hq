@@ -2,6 +2,8 @@
 _Fuku, 2026-11-12 17:02 WIB · cloud heartbeat (groundwork backlog #2). Draft for Markus. Nothing is created in the ad account (propose-only)._
 _Source copy: `2026-11-12_creative_batch_03_waves3-4.md` (13:01). Photos: `2026-11-12_shoot_card_v2.md` (P7–P12). Format: same as `2026-11-12_wave1_build_sheet.md` / `2026-11-12_wave2_build_sheet.md`. Claims re-checked with `fuku/memory/playbooks/ad-copy-page-check.md` against the live landing page `/sewa-gudang-self-storage-jakarta/` (curl 11/12 17:02, HTTP 200)._
 
+> **11/16 12:01 bid-cap pointer.** Since 11/15 00:41 the PEIKIRA CBO runs Rp 3M/day with a **Rp 105k bid cap on all 3 ad sets** (11/15: Rp 153,555 spent = 5.1% of budget; ADSET-3 Rp 0 for 3+ days) [account data]. Every "budget unchanged / inside the control ad set" line below assumes the old uncapped Rp 300k CBO. Before building, check the activity log and the 11/18 verdict (`../reports/2026-11-18_budget_change_read_card.md`); while the caps are on, read with the **11/16 block** in `../reports/wave1_read_template.md` (own 3-day control baseline, starvation expected, no separate capped ad set or min spend while the 11/18 decision is open). If the caps are removed, this sheet stands as written.
+
 ## How to use
 Build inside PEIKIRA control ad set `120254051672430572`, budget unchanged, single image 9:16, placements as Ad015, pixel `405755485775053` / Lead, names `WAVE3-FAB-<YYYYMMDD>-R1` / `WAVE4-FAB-<YYYYMMDD>-R4` etc.
 Wave 3 = R1 · R2 · R3, only after Wave 2 passes its day-7 rule. Wave 4 = best 3 of **R4 → K1 → S3** (my order, see change 3), only after Wave 3 passes. R5 runs only if Alvian answers its gate.

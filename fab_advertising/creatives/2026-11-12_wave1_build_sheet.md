@@ -2,6 +2,8 @@
 _Fuku, 2026-11-12 15:02 WIB · cloud heartbeat (groundwork). Draft for Markus. Nothing is created in the ad account (propose-only)._
 _Sources: `2026-11-06_batch01_v2_home_clutter_shotlist.md` (S1 stickers), `2026-11-05_creative_batch_01.md` (A1→S1 copy), `2026-11-10_creative_batch_02.md` (B1, B2), `2026-11-12_shoot_card_v2.md` (P-photos), `2026-11-12_wave1_price_wording_check.md` (price line). Claims re-checked against the live landing page `/sewa-gudang-self-storage-jakarta/` (curl 11/12 15:02, HTTP 200)._
 
+> **11/16 12:01 bid-cap pointer.** Since 11/15 00:41 the PEIKIRA CBO runs Rp 3M/day with a **Rp 105k bid cap on all 3 ad sets** (11/15: Rp 153,555 spent = 5.1% of budget; ADSET-3 Rp 0 for 3+ days) [account data]. Every "budget unchanged / inside the control ad set" line below assumes the old uncapped Rp 300k CBO. Before building, check the activity log and the 11/18 verdict (`../reports/2026-11-18_budget_change_read_card.md`); while the caps are on, read with the **11/16 block** in `../reports/wave1_read_template.md` (own 3-day control baseline, starvation expected, no separate capped ad set or min spend while the 11/18 decision is open). If the caps are removed, this sheet stands as written.
+
 ## How to use
 Build = `2026-11-11_wave1_launch_checklist.md` §C (inside PEIKIRA control ad set `120254051672430572`, budget unchanged, single image 9:16, placements as Ad015, pixel `405755485775053` / Lead). This sheet replaces "stickers + copy: see the 3 source docs" with rows you can paste.
 If free pickup / no deposit are **not** confirmed (checklist §A), run **S1 + S6 + S2** instead: S6/S2 rows are in `2026-11-12_wave2_build_sheet.md` (same format).

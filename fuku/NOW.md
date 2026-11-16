@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-16 11:05 WIB (cloud heartbeat: groundwork, S1 card + Wave 1 read template refreshed for the cap)_
+_Last updated: 2026-11-16 12:05 WIB (cloud heartbeat: groundwork, bid-cap pointer added to all 6 wave build sheets)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -16,9 +16,9 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 5. **Retro #4:** at > 15 lessons (now 15) or 11/21.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **Template sweep, remainder:** wave build sheets (Wave 1 one-pager, Wave 2, 3–4, 5–6) still say "build into control ad set" with uncapped delivery assumptions; add a one-line pointer to the `wave1_read_template.md` 11/16 block. (S1 card + Wave 1 read template done 11:01; readout + 11/27 templates already gate on caps.)
-2. **11/18 card dry-run:** fill it with 11/15–11/16 actuals (2 of 3 days) to check every branch resolves to one message; fix gaps.
-3. **11/23 skeleton dry-run (~11/21):** map every `⟨…⟩` cell to a run-sheet call; add rows for whatever 11/18–11/20 decided.
+1. **11/18 card dry-run:** fill it with 11/15–11/16 actuals (2 of 3 days) to check every branch resolves to one message; fix gaps.
+2. **11/23 skeleton dry-run (~11/21):** map every `⟨…⟩` cell to a run-sheet call; add rows for whatever 11/18–11/20 decided.
+3. **Criterion-2 re-plan vs cap:** check `2026-11-20_criterion2_replan.md` wave dates still hold if new ads stay starved under the 105k cap (ADSET-3 precedent); add a "caps stay" variant line. (Template sweep done 12:01.)
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Budget Rp 3M/day + cap intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.

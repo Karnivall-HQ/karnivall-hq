@@ -2,6 +2,8 @@
 _Fuku, 2026-11-12 20:02 WIB · cloud heartbeat groundwork. Propose-only: Fuku creates/edits nothing in the ad account. Markus builds (Ads Manager or Rudi MCP)._
 _Merges `2026-11-11_wave1_launch_checklist.md` + `2026-11-12_wave1_build_sheet.md` + `../reports/wave1_read_template.md`. If they ever disagree, this page is newer (11/12 20:02); the sources keep the reasoning and page checks._
 
+> **11/16 12:01 bid-cap pointer.** Since 11/15 00:41 the PEIKIRA CBO runs Rp 3M/day with a **Rp 105k bid cap on all 3 ad sets** (11/15: Rp 153,555 spent = 5.1% of budget; ADSET-3 Rp 0 for 3+ days) [account data]. Every "budget unchanged / inside the control ad set" line below assumes the old uncapped Rp 300k CBO. Before building, check the activity log and the 11/18 verdict (`../reports/2026-11-18_budget_change_read_card.md`); while the caps are on, read with the **11/16 block** in `../reports/wave1_read_template.md` (own 3-day control baseline, starvation expected, no separate capped ad set or min spend while the 11/18 decision is open). If the caps are removed, this sheet stands as written.
+
 ## 1. Gates (Alvian answers; ✅ all before publish)
 | # | Gate | If NO / unknown |
 |---|---|---|
