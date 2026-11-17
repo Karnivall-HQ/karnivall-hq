@@ -33,6 +33,7 @@
   4. *Scale*: propose budget raises of ~20–30% every 3–4 days, only while the 7d CPL ≤ Rp 95k. Alvian applies them. Fuku verifies the effect in the next readouts. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
+  - 2026-11-17 10:01: 11/18 read card pre-filled: locked 11/15–11/16 rows (Rp 169,951 / 1; control 68.5%, PEIKIRA2 31.5%, ADSET-3 0% *(calc)*); verdict pre-resolved: volume-only unless 11/17 spends > Rp 222,749 → undo line unless 11/17 brings ≥ 3 leads. Fill-ready line added. No strategy change.
   - 2026-11-17 09:01: Undo-pack dry run: all 6 §0.4a anchors still match exactly once (0 'Undo applied' yet); §1 gate command pre-filled with the 11/16 lock (16396 0). Pack is ready for the 11/18 readout.
   - 2026-11-17 08:01: Gate-miss note criterion-2 line: pre-cap version (340k base, "5 budget steps by 11/20") retired; now Branch A (full undo → 01/15 ask) / Branch B (caps stay → no date ask, ask #1 is the ❓). Stale band fill rules struck. No strategy change.
   - 2026-11-17 07:04: Readout: 7d (11/10–11/16) Rp 2,170,572 / 19 = **114.2k** ❌ *(calc)*; 11/16 PEIKIRA full day Rp 16,396 / 0 (5.5% of old pace) → PEIKIRA ≈ off for 2 days. Model 11/20 113.0k ❌. Criterion 1 LWD 12/03 but only at 82k/day account spend (8% of 1M leg); criterion 2 blocked by the cap. Site unchanged. No new ask; 11/18 card decides the undo line.

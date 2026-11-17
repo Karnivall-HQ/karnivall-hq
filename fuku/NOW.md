@@ -1,10 +1,10 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-17 09:01 WIB (cloud heartbeat: undo-pack dry run passed, 6/6 anchors)_
+_Last updated: 2026-11-17 10:01 WIB (cloud heartbeat: 11/18 read card pre-filled)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
 - **⚠️ PEIKIRA Rp 3M CBO + Rp 105k cap (11/15 00:41, Rudi MCP 61594758338050, not an ask):** 11/15 Rp 153,555 / 1 (burst 138,427); **11/16 full day Rp 16,396 / 0, 300 impr** (control 15,450, PEIKIRA2 946, ADSET-3 0) = 5.5% of old 300k *(calc)*. PEIKIRA ≈ off. OUTBOX #1 rec "revert" (11/16 13:02 push; 11/17 line added, no push).
-- **11/18 read:** S3 = 11/15–11/17; S3 so far Rp 169,951 + 11/17 → surely < Rp 392.7k → **judge on volume only (L ≤ 3 → undo line)**; L = 0 on 11/17 too → STARVED-worse. Card: `2026-11-18_budget_change_read_card.md`. Push the undo one-liner tomorrow.
+- **11/18 read:** card pre-filled (11/15–11/16 locked, Rp 169,951 / 1; fill-ready line at the end). 11/18 adds only the 11/17 row: volume-only unless 11/17 > Rp 222,749 → undo line unless 11/17 has ≥ 3 leads *(calc)*. Card: `2026-11-18_budget_change_read_card.md`. Push the undo one-liner tomorrow.
 - **M-001 (P0, at risk):** 7d 11/10–11/16 Rp 2,170,572 / 19 = **114.2k** *(calc)* ❌. Control 160.4k, PEIKIRA2 98.1k, ADSET-3 Rp 0 (day 4), BC 65.6k. 11/20 model 113.0k → gate ❌ (reads better only because PEIKIRA barely spends). Criterion 1 LWD 12/03 at 82.0k/day account spend = 8% of the 1M leg; CRITERION 2: PEIKIRA needs 934.4k/day (57×), at 1M/day nothing 132.4k MISS, F+C+0.5pt 84.2k (INFERRED) *(calc)*; BLOCKED by the cap. Benchmark: both ad sets CPR ~37–40% worse than peers.
 - **M-002 (P1):** ✅ weekly #2 delivered 11/16. 11/23 skeleton ready (`reports/weekly/2026-11-23.md`); fill Mon 07:00.
 
@@ -18,7 +18,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **11/23 skeleton dry-run (~11/21):** map every `⟨…⟩` cell to a run-sheet call; add rows for whatever 11/18–11/20 decided.
 2. **Variant M1 text refresh (~11/19):** re-read `2026-11-20_gate_miss_note.md` M1 + ADSET-3 clause against the 11/18 card verdict; one fill-ready message per #1 state (none / full undo / budget-only).
-3. **Read-card pre-fill (~11/17 eve):** put 11/15–11/16 rows (S3 Rp 169,951 / L 1) into `2026-11-18_budget_change_read_card.md` so 11/18 07:00 only adds the 11/17 row and the verdict.
+3. **ADSET-3 11/20 day-7 pre-fill (~11/19):** put ADSET-3's 0-spend days 11/13–11/18 into `2026-11-13_adset3_read_card.md` so 11/20 only adds 11/19 + the verdict branch.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Budget Rp 3M/day + cap intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.

@@ -105,3 +105,17 @@ Window: full days **11/15, 11/16, 11/17** (read at the 11/18 07:00 readout). Pul
    - Honesty note: this rule was added after seeing 1⅓ of the 3 days. It only follows the card's own basis ("the volume loss is certain; the CPL gap alone is not"); it does not change any threshold for S3 ≥ Rp 392.7k.
 
 **Result:** every L now resolves to exactly one message. Likeliest 11/18 line *(INFERRED)*: "❓ Undo the 11/15 PEIKIRA change: budget back to Rp 300k/day + remove the Rp 105k bid caps (back to Highest volume) on all 3 ad sets? 3 days under the cap: Rp ⟨≈180k⟩ / ⟨1–2⟩ leads vs 6.9 leads and 130.9k at baseline. Too little spend to read CPL; the volume loss (≈ −70%) is the reason. Reply 'undo' or 'keep'."
+
+## Pre-fill: locked 11/15–11/16 rows (written 11/17 10:01 WIB; groundwork, the read is 11/18 07:00)
+**Locked full days (account data, copied from the 11/16 07:03 + 11/17 07:04 tracker rows; no new pull):**
+| Day | PEIKIRA spend | Leads | Control | PEIKIRA2 | ADSET-3 | Guard G-a / G-b |
+|---|---|---|---|---|---|---|
+| 11/15 | Rp 153,555 | 1 | Rp 100,930 / 0 | Rp 52,625 / 1 | Rp 0 | none / none (< Rp 285k) |
+| 11/16 | Rp 16,396 | 0 | Rp 15,450 / 0 | Rp 946 / 0 | Rp 0 | none / none |
+| **11/15–11/16** | **Rp 169,951** *(calc)* | **1** | Rp 116,380 (68.5%) *(calc)* | Rp 53,571 (31.5%) *(calc)* | Rp 0 (0%) | none |
+| 11/17 | ⟨pull 11/18 07:00⟩ | ⟨⟩ | ⟨⟩ | ⟨⟩ | ⟨⟩ | ⟨⟩ |
+
+**What 11/18 adds:** one `ads_get_ad_entities` level=adset, campaign `120254051672440572`, **time_range 11/17 only** (or 11/15→11/17 and check it equals the rows above + 11/17). Then S3 = 169,951 + ⟨11/17 spend⟩.
+**Pre-resolved verdict (precedence + 11/16 15:02 gap rules):** S3 < Rp 392,700 unless 11/17 spends > Rp 222,749 *(calc)*, i.e. > 13× the 11/16 day; at the 11/16–17 pace (Rp 15–25k) S3 ≈ Rp 185–195k = 2.1–2.2% of the Rp 9M 3-day budget *(calc)* → **volume-only rule**: L = 1 + ⟨11/17 leads⟩; undo line unless 11/17 brings **≥ 3 leads** (L ≥ 4 > 3.4 *(calc)*). If 11/17 spends > Rp 222,749, fall back to the precedence rows (S3 vs Rp 600k) as written.
+**Share rule already met:** ADSET-3 Rp 0 on 11/15–11/16 (and 0 impressions since launch 11/13) → OUTBOX #2(b) stays valid unless 11/17 shows ADSET-3 spend.
+**Fill-ready line (swap ⟨⟩ only):** "❓ Undo the 11/15 PEIKIRA change: budget back to Rp 300k/day + remove the Rp 105k bid caps (back to Highest volume) on all 3 ad sets? 3 days under the cap: Rp ⟨S3⟩ (⟨S3/3⟩/day, ⟨S3/9M⟩% of budget) / ⟨L⟩ lead(s) vs 6.9 leads and 130.9k at baseline. Too little spend to read CPL; the volume loss is the reason. Split: control ⟨⟩ / PEIKIRA2 ⟨⟩ / ADSET-3 ⟨⟩. Guards: none. Reply 'undo' or 'keep'."
