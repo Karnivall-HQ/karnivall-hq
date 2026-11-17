@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-17 20:02 WIB (cloud heartbeat: 11/20 readout template dry run, 4 fixes)_
+_Last updated: 2026-11-17 21:01 WIB (cloud heartbeat: Ad015 Rp 600k spend-floor sweep, 4 files)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -18,7 +18,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **Variant M1 text refresh (~11/19):** re-read `2026-11-20_gate_miss_note.md` M1 + ADSET-3 clause against the 11/18 card verdict; one fill-ready message per #1 state (none / full undo / budget-only).
 2. **11/23 weekly partial pre-pull (~11/21):** lock 11/16–11/20 Fab+Incess ad-set rows into `reports/weekly/2026-11-23.md` so Monday is a delta; also add run-sheet rows for what 11/18–11/20 decided (dry run 11/17 18:02 done: +call 7a ADSET-3 no spend filter, learning_stage_info on call 4, call 10 must pass 7d bases, row 0 = file sources). (ADSET-3 day-7 card pre-filled 11/17: 11/13–11/16 locked, verdict branches A/B/C; 11/20 adds 11/17–11/19.)
-3. **Ad015 fallback file sweep (~11/19):** `2026-11-10_ad015_fallback.md` + S1 card G3 row + gate-miss "only Ad015" clause: same Rp 600k spend floor as the fixed readout Step 3 (11/17 20:02 dry run found it missing there); under the cap Ad015 ≈ Rp 449k/7d *(calc)* → CPL rule n/a.
+3. **Post-undo pack pointer check (~11/18, only if undo seen):** `2026-11-19_post_undo_rebase_pack.md` §0.4a table vs the Ad015 floor now in fallback/S1/gate-miss/11-23 files (11/17 21:01 sweep); with the cap gone, Ad015 7d may cross Rp 600k again → CPL rule live.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Budget Rp 3M/day + cap intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.

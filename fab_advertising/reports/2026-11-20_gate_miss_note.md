@@ -19,8 +19,8 @@ _Fuku cloud heartbeat, groundwork. Base: 11/16 07:03 readout (locks 11/13 293,85
 |---|---|---|
 | G1 ✅ G2 ✅ G3 ✅ | S1 card line (not this file) | yes: PEIKIRA CBO 300k → 375k |
 | G1 ✅ G2 ❌ (CPL under 95k, but no proven new winner) | **Variant H: hold** | no |
-| G1 ✅ G2 ✅ G3 ❌ (ADSET-3 rule 1–2 cumulative, or Ad015 7d trigger while ACTIVE: readout Step 4 G3) | **Variant H** + name the tripped rule; re-check on 11/23 | no |
-| G1 ✅ G2 ✅ G3 ❌ **only because Ad015 is still active and tripped** | **Variant H** + "S1 waits on ask #2(a) (pause Ad015)"; re-send ask #2(a) (pause Ad015) as the one ad ask (S1 card, G3 row) | yes: #1(a) only |
+| G1 ✅ G2 ✅ G3 ❌ (ADSET-3 rule 1–2 cumulative, or Ad015 7d trigger while ACTIVE, CPL rule only with ≥ Rp 600k Ad015 spend in the window: readout Step 4 G3) | **Variant H** + name the tripped rule; re-check on 11/23 | no |
+| G1 ✅ G2 ✅ G3 ❌ **only because Ad015 is still active and tripped** | **Variant H** + "S1 waits on ask #2(a) (pause Ad015)"; re-send ask #2(a) (pause Ad015) as the one ad ask (S1 card, G3 row) | yes: #2(a) only |
 | G1 ❌ | **Variant M: miss** (pick M1 or M2 below) | no |
 
 ## Variant H: "CPL fixed, hold the budget" (fill ⟨⟩)

@@ -17,11 +17,11 @@ _Sources: `2026-11-12_scale_plan_v2.md` (capacity, +25% rule), `2026-11-13_adset
 |---|---|---|---|
 | G1 | Fab 7d CPL (11/13–11/19) **≤ Rp 95,000** | tracker | ☐ |
 | G2 | **A winning engine is present in PEIKIRA**: ADSET-3 day-7 CPL ≤ control CPL (read-card rule 3) **and** ≤ 95k, on ≥ 3 leads; *or* control/PEIKIRA2 7d ≤ 95k on ≥ 4 leads. ADSET-3 < Rp 10k in 7d = starved → only the control/PEIKIRA2 branch can pass | readout P2 (7d 11/13–11/19, `object_ids`) | ☐ |
-| G3 | **No kill rule tripped**: ADSET-3 rules 1–2 (cumulative, P2 + P5 11/17–11/19) · Ad015 triggers CTR < 1.30% / CPL > 120k / freq > 2.5 on its **own 7d window** (P4), counted **only if Ad015 is ACTIVE** on 11/20 (paused → n/a) | readout P2, P4, P5 + activity log | ☐ |
+| G3 | **No kill rule tripped**: ADSET-3 rules 1–2 (cumulative, P2 + P5 11/17–11/19) · Ad015 triggers CTR < 1.30% / CPL > 120k **with ≥ Rp 600k spent in the window** (< 600k → CPL rule n/a) / freq > 2.5 on its **own 7d window** (P4), counted **only if Ad015 is ACTIVE** on 11/20 (paused → n/a) | readout P2, P4, P5 + activity log | ☐ |
 
 - G1 ✅ but G2 ❌ (the CPL came from the site fix, not from a new winner) → **don't scale**: send "hold at Rp 300k, CPL fixed, volume needs a winning wave" instead. Reason: scale plan v2, budget alone fails (KENJI Rp 741k/day → 185k CPL). [account data]
 - G1 ❌ → this card is not used; the gate-miss note goes out instead.
-- G1 ✅ G2 ✅ but G3 ❌ **only because Ad015 is still active and tripped** (its CPL trigger already fired 11/14: 7d 166.1k) → don't scale into it: ~90% of control spend would ride a fading ad. Re-send OUTBOX ask #2(a) (pause Ad015) as the one ask; S1 follows on the first readout after the pause where G1–G2 still pass. *(added 11/14 19:02 dry-run)*
+- G1 ✅ G2 ✅ but G3 ❌ **only because Ad015 is still active and tripped** (its CPL trigger fired 11/14: 7d 166.1k on Rp 996.6k; on 11/20 it counts only if the 11/13–11/19 window again has ≥ Rp 600k Ad015 spend, ≈ Rp 450k under the cap *(calc, INFERRED)* → n/a unless the cap is undone by ~11/18; the 11/14 firing alone does not trip G3. Ask #2(a) stays open either way) → don't scale into it: ~90% of control spend would ride a fading ad. Re-send OUTBOX ask #2(a) (pause Ad015) as the one ask; S1 follows on the first readout after the pause where G1–G2 still pass. *(added 11/14 19:02 dry-run)*
 
 ## The change (one field, one campaign)
 **PEIKIRA-BID-CAP-LEADS-CAMPAIGN** `120254051672440572` → campaign daily budget **Rp 300,000 → Rp 375,000** (+25%).
