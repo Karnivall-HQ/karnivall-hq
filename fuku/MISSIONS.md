@@ -33,6 +33,7 @@
   4. *Scale*: propose budget raises of ~20–30% every 3–4 days, only while the 7d CPL ≤ Rp 95k. Alvian applies them. Fuku verifies the effect in the next readouts. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
+  - 2026-11-17 07:04: Readout: 7d (11/10–11/16) Rp 2,170,572 / 19 = **114.2k** ❌ *(calc)*; 11/16 PEIKIRA full day Rp 16,396 / 0 (5.5% of old pace) → PEIKIRA ≈ off for 2 days. Model 11/20 113.0k ❌. Criterion 1 LWD 12/03 but only at 82k/day account spend (8% of 1M leg); criterion 2 blocked by the cap. Site unchanged. No new ask; 11/18 card decides the undo line.
   - 2026-11-16 22:02: Photo calendar (`creatives/2026-11-13_weekly_photo_calendar.md`) now opens with the caps-stay rule: ships only after a full undo; rows slip by (undo day − 11/16); stale OUTBOX gate pointers fixed. No strategy change.
   - 2026-11-16 21:02: Caps-stay check on the criterion-2 re-plan: under the 105k cap a wave gets ≤ Rp 241.8k in 14 days (needs ≥ Rp 380k for a ≥ 4-lead verdict; 22 days at 100% share, 73 at 30%) *(calc)* → 0 verifiable winners, cap steps can't trigger, base ≈ Rp 78.5k/day. 11/20: send the 01/15 ask only after a full undo; otherwise a 'can't plan while capped' line. Strengthens ask #1 'revert'. No new ask.
   - 2026-11-16 17:02: 11/20 readout template Step 0 now has an undo branch (no / budget-only / full undo → post-undo pack §0–§4, which line each section replaces). No strategy change.
