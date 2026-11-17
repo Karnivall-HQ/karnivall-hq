@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-17 13:02 WIB (cloud heartbeat: 13:00 poll, no edits, PEIKIRA Rp 4,253/0 today)_
+_Last updated: 2026-11-17 18:02 WIB (cloud heartbeat: 11/23 run-sheet dry run, 4 gaps fixed)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -16,9 +16,9 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 5. **Retro #5:** ~11/21 or at 15 new lessons (Retro #4 done 11/16 14:02; structural-change rules now in `meta-modelling-and-planning.md` §D–§E).
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **11/23 skeleton dry-run (~11/21):** map every `⟨…⟩` cell to a run-sheet call; add rows for whatever 11/18–11/20 decided.
-2. **Variant M1 text refresh (~11/19):** re-read `2026-11-20_gate_miss_note.md` M1 + ADSET-3 clause against the 11/18 card verdict; one fill-ready message per #1 state (none / full undo / budget-only).
-3. **11/23 weekly partial pre-pull (~11/21):** lock 11/16–11/20 Fab+Incess ad-set rows into `reports/weekly/2026-11-23.md` so Monday is a delta. (ADSET-3 day-7 card pre-filled 11/17: 11/13–11/16 locked, verdict branches A/B/C; 11/20 adds 11/17–11/19.)
+1. **Variant M1 text refresh (~11/19):** re-read `2026-11-20_gate_miss_note.md` M1 + ADSET-3 clause against the 11/18 card verdict; one fill-ready message per #1 state (none / full undo / budget-only).
+2. **11/23 weekly partial pre-pull (~11/21):** lock 11/16–11/20 Fab+Incess ad-set rows into `reports/weekly/2026-11-23.md` so Monday is a delta; also add run-sheet rows for what 11/18–11/20 decided (dry run 11/17 18:02 done: +call 7a ADSET-3 no spend filter, learning_stage_info on call 4, call 10 must pass 7d bases, row 0 = file sources). (ADSET-3 day-7 card pre-filled 11/17: 11/13–11/16 locked, verdict branches A/B/C; 11/20 adds 11/17–11/19.)
+3. **11/20 readout dry run (~11/19):** walk `2026-11-20_readout_template.md` cell by cell against the 11/18 card verdict (same method as the 11/17 18:02 run-sheet dry run).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Budget Rp 3M/day + cap intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
