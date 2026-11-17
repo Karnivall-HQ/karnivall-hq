@@ -1,5 +1,6 @@
 # 11/20 07:00 readout: one-page fill-in (gate + ADSET-3 day-7 + message pick)
 _Pre-staged 2026-11-13 14:02 WIB by Fuku (cloud heartbeat, groundwork). Read-only, propose-only. Goal: the 11/20 readout is a ~15-minute fill job, no re-thinking._
+_Dry run 2026-11-17 20:02 (cell by cell, expected path: caps on, no undo, ADSET-3 starved, G1 ❌ → M1 + Branch B): 4 fixes: P5 now daily (feeds `--budget`), Ad015 CPL trigger got its Rp 600k spend floor, `--budget` day named, criterion-2 branch pointer in Step 5._
 _Uses: `2026-11-20_s1_scale_card.md` (G1–G3, S1 line), `2026-11-20_gate_miss_note.md` (variants H / M1 / M2 + criterion-2 line), `2026-11-13_adset3_read_card.md` (rules 1–6), `m001_tracker.md`. Playbooks first: `meta-ads-algorithm.md`, `meta-cpl-diagnosis.md`, `meta-tests-and-proposals.md`._
 
 ## Step 0: what changed in the week (activity log, by actor_id)
@@ -17,7 +18,7 @@ Window 11/13 00:00 → 11/20 07:00 WIB, account `484578521394893`. Fill one line
 | P2 | PEIKIRA ad sets 7d | level=adset, `object_ids` control `120254051672430572`, PEIKIRA2 `120254276298070572`, ADSET-3 `120254400251570572`, same window | see Step 2 table |
 | P3 | ADSET-3 ads 7d | level=ad, parent ADSET-3, same window, spend / leads / CTR | for rules 5–6 |
 | P4 | Ad015 7d | level=ad, same window: CTR, CPL, frequency | Step 3 |
-| P5 | Last 3 days | P2 again with time_range **11/17 → 11/19** | G3 + rule 1 |
+| P5 | Last 3 days | P2 again with time_range **11/17 → 11/19**, **daily** (time_increment 1; one row per ad set per day) | G3 + rule 1 + the 11/19 full-day PEIKIRA spend for Step 4b `--budget` |
 | P6 | Pixel funnel (only if W1/W2 live) | dataset 405755485775053: LP views → Lead, before vs after the live date | M2 / `w1w2_lift_template.md` |
 
 ## Step 2: numbers
@@ -39,7 +40,7 @@ Window 11/13 00:00 → 11/20 07:00 WIB, account `484578521394893`. Fill one line
   - **Precedence (overlap check 11/15 21:01):** starved (< Rp 10k) → stop here · rule 2 fired → pause, skip rule 3 (a ratio ≤ 1.00 can't save it: under the 11/15 cap the control CPL may itself be high) · ADSET-3 **0 leads with Rp 10k–189k** → no ratio (CPL undefined): "keep, judge 11/27" (this gap had no row) · else rule 3 as written.
 - Rule 5–6 per-ad: ads with ≥ Rp 95k spend: ⟨list CPLs⟩; ads < Rp 5k: ⟨list⟩ = untested.
 
-**Ad015:** CTR ⟨⟩ (< 1.30% = trigger) · CPL ⟨⟩ (> 120k = trigger) · freq ⟨⟩ (> 2.5 = trigger) → ☐ none ☐ ⟨which⟩ → fallback `2026-11-10_ad015_fallback.md`
+**Ad015:** spend 7d Rp ⟨⟩ · CTR ⟨⟩ (< 1.30% = trigger) · CPL ⟨⟩ (> 120k **with ≥ Rp 600k spent in the window** = trigger; < Rp 600k → CPL rule can't fire, write "CPL rule n/a (spend ⟨⟩ < 600k)"; source `2026-11-10_ad015_fallback.md` l.47) · freq ⟨⟩ (> 2.5 = trigger). _Dry run 11/17 20:02: under the 105k cap Ad015's 11/13–11/19 spend is ≈ Rp 450k (control ≈ 491k × ~91%, INFERRED from tracker locks + 11/17 polls), so expect "n/a": G3 can't go ❌ on Ad015 CPL alone._ → ☐ none ☐ ⟨which⟩ → fallback `2026-11-10_ad015_fallback.md`
 
 ## Step 4: gate (copy into the S1 card table)
 _No model today: the 11/13–11/19 window is closed, so G1 is the actual 7d CPL from P1 (`gate_model_1120.py` stops on purpose with 7 locked days). Model check: 11/19 tracker Notes "model 11/20" ⟨⟩ vs actual ⟨x⟩ → error ⟨⟩ *(calc)*. If the gap is > Rp 10k, add one line to `lessons.md` with the cause (BC flat-rate assumption, the ADSET-3 share, or the PEIKIRA daily rate)._
@@ -53,7 +54,7 @@ _No model today: the 11/13–11/19 window is closed, so G1 is the actual 7d CPL 
 ## Step 4b: criterion-1 last workable date (added 2026-11-14 16:01; the 12/05 window is 11/28–12/04)
 _Whatever the gate says, the 11/20 note must carry criterion 1's date. Source: `2026-12-05_criterion1_path.md`; method `meta-modelling-and-planning.md` §A1–A2._
 1. Run with the P1/P2 numbers (7d 11/13–11/19):
-   `python3 fuku/bin/criterion1_model_1205.py --peik ⟨PEIKIRA spend⟩ ⟨leads⟩ --bc ⟨BC spend⟩ ⟨leads⟩ --p2 ⟨PEIKIRA2 spend⟩ ⟨leads⟩ --today 2026-11-20 [--budget <PEIKIRA daily spend>] [--cap-throttled]` (report the LWD line **and** the CRITERION 2 line)
+   `python3 fuku/bin/criterion1_model_1205.py --peik ⟨PEIKIRA spend⟩ ⟨leads⟩ --bc ⟨BC spend⟩ ⟨leads⟩ --p2 ⟨PEIKIRA2 spend⟩ ⟨leads⟩ --today 2026-11-20 [--budget <PEIKIRA daily spend>] [--cap-throttled]` (`--budget` = **11/19 full-day** PEIKIRA spend from P5 daily, same convention as the 11/17 run's `--budget 16396`; `--cap-throttled` whenever Step 0 says the 105k caps are still on) (report the LWD line **and** the CRITERION 2 line)
    - PEIKIRA2 with < 2 leads → keep the default `--p2 924806 8` and write "p2 = 11/07–11/13 base" next to the line (one lead can't set the freed-spend CPL).
    - A lever **already live** for the whole window is inside the base: read row **A** as "with what's live", and ignore the rows that add that lever again (e.g. W1/W2 live since ≤ 11/13 → ignore every "C" row).
 2. Fill one line: base row A ⟨⟩ · F+C +0.5pt ⟨⟩ · **last workable date ⟨mm/dd⟩, days left ⟨n⟩** *(calc)*. If the script prints "NONE" (even 11/27 misses) → write "criterion 1 needs ADSET-3 to win (row F+E) or a move to 12/19", and put the 12/19 question on the 11/27 readout (Step 5b there), not in this note.
@@ -65,7 +66,7 @@ _Whatever the gate says, the 11/20 note must carry criterion 1's date. Source: `
 | ✅ | ✅ | ✅ | S1 line (`2026-11-20_s1_scale_card.md` bottom) + a short report, **only if Step 0 shows the CBO back at Rp 300k and the card's G0 passes (3-day spend ≥ 90% of budget if caps kept)**; CBO still Rp 3M/day or bid caps on → short report, no budget ask (the 11/18 card result stands) | yes only at Rp 300k: PEIKIRA CBO 300k → 375k |
 | ✅ | ❌ | any | Variant H (`2026-11-20_gate_miss_note.md`) + ADSET-3 clause + criterion-2 line | no |
 | ✅ | ✅ | ❌ | Variant H + tripped rule, re-check 11/23 | no (if ❌ only because Ad015 active: re-send ask #2(a) (pause Ad015)) |
-| ❌ | any | any | W1/W2 not live → **M1**; live → **M2** (+ P6 numbers); both + criterion-2 line | no new ad ask (rule-3 pause / Ad015 fallback only if Step 3 fired) |
+| ❌ | any | any | W1/W2 not live → **M1**; live → **M2** (+ P6 numbers); both + criterion-2 line (**Branch A** if Step 0 = full undo, else **Branch B**: gate-miss note l.54/l.57) | no new ad ask (rule-3 pause / Ad015 fallback only if Step 3 fired) |
 
 Extra asks only if Step 3 fired, ranked under the 3-ask cap (an open 11/18 "undo the 11/15 change" ask sits above all of these): (1) site fix if still open, (2) rule-3 / rule-2 ADSET-3 pause or min-spend, (3) Ad015 fallback. Anything else → Parked.
 
