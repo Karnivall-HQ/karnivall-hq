@@ -12,7 +12,7 @@ _Fuku cloud heartbeat, groundwork. Base: 11/16 07:03 readout (locks 11/13 293,85
   - budget-only revert (300k, caps kept): "PEIKIRA is back at Rp 300k/day since ⟨date⟩, but the Rp 105k bid cap still holds it at ≈ Rp ⟨7d PEIKIRA spend ÷ 7⟩/day." Capped models stay.
 - **ADSET-3 clause:** at 11/16 the only fillable row is **"< Rp 10k spent (still starved)"** (Rp 0 since 11/13). Pre-pick it; re-check at the 11/20 pull.
 - **Criterion-1 line:** 11/16 values LWD **12/02**, F+C live by 11/27 ≈ 76.2k, nothing changes 102.1k *(calc, criterion1 model)*. Paste Step 4b on 11/20, don't reuse these.
-- **Criterion-2 line: the "5 budget steps of +25%" sentence is void** (CBO is already Rp 3M). Use the 11/16 version in `2026-11-20_criterion2_replan.md` (section "11/16 refresh"). The binding limit is now the bid cap + no winner, not the budget. **11/16 21:02:** if no full undo is in the log by 11/20, don't send the 01/15 ask at all: use the "Caps-stay check" replacement line in that file (no wave can reach the ≥ Rp 380k verdict spend under the cap).
+- **Criterion-2 line: the "5 budget steps of +25%" sentence is void** (CBO is already Rp 3M). Swapped in below 11/17 08:01 (Branch A = full undo, Branch B = caps stay). The binding limit is now the bid cap + no winner, not the budget. **11/16 21:02:** if no full undo is in the log by 11/20, don't send the 01/15 ask at all: use the "Caps-stay check" replacement line in that file (no wave can reach the ≥ Rp 380k verdict spend under the cap).
 
 ## Which message goes out on 11/20 (pick one at the 07:00 readout)
 | Gate result (S1 card G1–G3) | Message | Ad ask? |
@@ -45,20 +45,28 @@ _ADSET-3 was at Rp 0 / 0 impressions for its first ~39h (11/14 19:02; min spend 
 _Rp 380k = the under-tested line of the 11/27 verdict template (4 × 95k). If the clause is the "starved" row, it is the reason the gate has no new winner: say so before the criterion-2 line, not after._
 
 ## Shared criterion-2 line (H, M1 and M2 all end with it; send as is)
-_Updated 11/13 22:34 to match the re-plan's one-line ask and link the photo calendar. It is the single ❓ in the 11/20 message._
+_Updated 11/13 22:34; replaced 11/17 08:01 by the two cap branches below. Branch A is the single ❓ in the 11/20 message; in Branch B the ❓ is ask #1._
 > ⟨Criterion-1 line from readout Step 4b, pasted unchanged. Default shape: "✅ Criterion 1 (CPL ≤ 95k) is still reachable for 12/05 (window 11/28–12/04): with what's live, ⟨row A⟩; asks #2 (Ad015 + ADSET-3 min) + #3 (site W1+W2) live by ⟨date⟩ ≈ ⟨F+C⟩k; last workable date ⟨mm/dd⟩, ⟨n⟩ days left *(calc, `2026-12-05_criterion1_path.md`)*." If Step 4b printed NONE: "⚠️ Criterion 1 for 12/05 now needs ADSET-3 to win; I'll put a move to 12/19 to you on 11/27."⟩
 > _(11/14 values, for reference only, don't paste: both live by 11/27 ≈ 88k; last workable 11/29.)_
 
-> 📊 **Criterion 2 (Rp 1M/day at ~95k by 12/05) is out of reach.** To get there, 5 budget steps of +25% had to start by 11/20. A winning wave adds only ~Rp 100–185k/day at ≤ 95k (8 weeks of ad-set data), so Rp 1M/day needs 4–7 winners at once; we have ⟨0/1⟩. Realistic 12/05 ≈ **Rp ⟨340–400 / 440–520⟩k/day** *(calc)*. ❓ **Move criterion 2 to 01/15, with 3 new phone photos from the Fab team every Saturday from 11/21?** (Keep criterion 1, CPL ≤ 95k, as the 12/05 goal.) My recommendation: **yes**; 01/15 holds in the mid case (≈ 1 winner per 4 ads), and I re-forecast on 12/14 after the first two waves are judged. Reply "ok" or give me a new date. Plan: `fab_advertising/reports/2026-11-20_criterion2_replan.md` · team calendar (6 photos on 11/21, then 3 per Saturday): `fab_advertising/creatives/2026-11-13_weekly_photo_calendar.md`.
+_11/17 08:01 swap (cloud heartbeat): the pre-cap line (base 340k, "5 budget steps by 11/20") is retired. This is now the only version; source = `2026-11-20_criterion2_replan.md` "11/16 refresh" l.13–21. Pick the branch from the 11/20 readout Step 0 log check._
+
+**Branch A: full undo in the log (budget back to Rp 300k AND the 105k caps removed).** Send:
+> 📊 **Criterion 2 (Rp 1M/day at ~95k by 12/05) is out of reach.** The account spends ≈ Rp ⟨d⟩k/day (⟨e⟩% of the target) on the Rp 300k budget, and there is no new winning ad set yet. Each winner adds Rp 100–185k/day at ≤ 95k (8 weeks of data), so Rp 1M/day needs 4–7 at once. ❓ **Move criterion 2 to 01/15, with 3 new phone photos from the Fab team every Saturday from ⟨max(11/21, undo day + photos)⟩?** (Criterion 1, CPL ≤ 95k, stays the 12/05 goal.) My recommendation: **yes**; 01/15 holds in the mid case (≈ 1 winner per 4 ads); I re-forecast on 12/14. Reply "ok" or a new date. Plan: `fab_advertising/reports/2026-11-20_criterion2_replan.md`.
+
+**Branch B: caps still on ("intended", no answer, or budget-only revert).** Send instead (no date ask, no photo-calendar ask):
+> 📊 **Criterion 2 (Rp 1M/day at ~95k by 12/05) is out of reach**, and it can't be re-planned yet: the Rp 105k bid caps hold PEIKIRA at ≈ Rp ⟨p⟩k/day, so the account spends ≈ Rp ⟨d⟩k/day (⟨e⟩% of the target). No new ad can collect the ≥ 4 leads needed to prove it. I'll re-plan the day the caps come off (ask #1).
+
+- Fill: ⟨d⟩ = 11/20 tracker 7d account spend ÷ 7; ⟨e⟩ = ⟨d⟩ ÷ 1,000; ⟨p⟩ = PEIKIRA 7d spend ÷ 7 *(calc)*. In Branch B the message has no ❓ for criterion 2; the single ❓ is ask #1 (re-raise as a one-liner).
 
 _If Variant S1 (gate passed) goes out instead, the criterion-2 line still goes with it, with "out of reach" softened only if the S1 step plus winners on hand reach ≥ Rp 1M/day by 12/05 in the scale plan math (they won't with ≤ 1 winner)._
 
 ## Fill rules (so 11/20 is a 5-minute job)
 - ⟨x⟩ = tracker 7d CPL for 11/13–11/19 *(calc)*, copied from the 11/20 readout row.
 - ⟨spend⟩ = ADSET-3 7d spend; ⟨y⟩ = its CPL (spend ÷ leads); ⟨n⟩ leads; ⟨s⟩ share of PEIKIRA spend; ⟨c⟩ control CPL; ⟨r⟩ = ⟨y⟩ ÷ ⟨c⟩ (readout Step 3 rule 3). All from readout P2 / Step 2: ad sets by `object_ids` (control `120254051672430572`, PEIKIRA2 `120254276298070572`, ADSET-3 `120254400251570572`).
-- Realistic 12/05 band: 300k PEIKIRA + ~40k BC + Rp 100–185k per proven winner present on 11/20 *(calc)*; 0 winners → ≈ Rp 340–400k, 1 winner → ≈ Rp 440–520k. [account data: scale plan v2]
+- ~~Realistic 12/05 band (pre-cap: 340–400k / 440–520k)~~ retired 11/17: the line now uses the measured 7d spend/day ⟨d⟩, not a modelled band (base under the cap ≈ Rp 78.5k/day, re-plan l.14 *(calc)*).
 - The 01/15 date is a proposal, not a commitment: it's Alvian's mission, he sets the deadline. Rule: if he doesn't answer within 24h, keep working toward both criteria unchanged.
 - Only one message goes to OUTBOX "Latest report" for M-001 on 11/20 (replace whichever M-001 report is current; on 11/14 that was the 11/14 07:02 one). The criterion-2 line is the single ❓ in it.
-- Realistic band pick: 0 winners → 340–400; 1 winner → 440–520 (same rule as above, written into the line so it's a delete, not a calc). **"Winner present on 11/20" = readout Step 4 G2 ✅** (name which ad set); G2 ❌ → ⟨0⟩.
+- ~~Realistic band pick~~ retired 11/17 (see above). **"Winner present on 11/20" = readout Step 4 G2 ✅** still decides "there is no new winning ad set yet" (G2 ✅ → name the ad set instead).
 - ⟨neither was / only Ad015 was⟩ (M1) and the min-spend sub-clause = readout Step 0 checkboxes (Ad015 status, min spend).
 - Order inside the message: headline → cause → ADSET-3 clause → 👉 next step → criterion-1 line (Step 4b) → criterion-2 line. ≤ 120 words before the criterion-2 line.
