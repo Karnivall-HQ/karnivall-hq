@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-17 08:01 WIB (cloud heartbeat: gate-miss criterion-2 line swapped to cap branches)_
+_Last updated: 2026-11-17 09:01 WIB (cloud heartbeat: undo-pack dry run passed, 6/6 anchors)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -18,7 +18,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **11/23 skeleton dry-run (~11/21):** map every `⟨…⟩` cell to a run-sheet call; add rows for whatever 11/18–11/20 decided.
 2. **Variant M1 text refresh (~11/19):** re-read `2026-11-20_gate_miss_note.md` M1 + ADSET-3 clause against the 11/18 card verdict; one fill-ready message per #1 state (none / full undo / budget-only).
-3. **Undo-pack dry run (~11/18, before the readout):** grep the 6 files in `2026-11-19_post_undo_rebase_pack.md` §0.4a for "105" / "3,000,000" / "3M" and confirm each pointer row still matches the live text.
+3. **Read-card pre-fill (~11/17 eve):** put 11/15–11/16 rows (S3 Rp 169,951 / L 1) into `2026-11-18_budget_change_read_card.md` so 11/18 07:00 only adds the 11/17 row and the verdict.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Budget Rp 3M/day + cap intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.

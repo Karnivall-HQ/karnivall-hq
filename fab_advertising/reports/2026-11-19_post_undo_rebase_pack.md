@@ -6,7 +6,7 @@ _Written 2026-11-16 16:02 WIB, before any undo. Use only if the activity log sho
 2. Undo day = the day it happened. **Read window starts the next full day** (undo 11/18 → window from 11/19). Split the undo day at the undo time, as on 11/15 (§D3): don't project pace from that day.
 3. Add a tracker change-log row (date, change, actor, "effect read on" = undo day + 7).
 4. Same run, grep the staged files for "3M", "105k", "cap-throttled", "STARVED" (§E1) and add a one-line "undo applied ⟨date⟩" pointer to: `2026-11-18_budget_change_read_card.md`, `2026-11-20_readout_template.md`, `2026-11-20_gate_miss_note.md`, `2026-11-20_criterion2_replan.md`, `wave1_read_template.md`, `reports/weekly/2026-11-23.md`.
-   **4a. Pointer sweep, dry-run 11/16 20:03 (copy-paste on the undo run; anchors are exact text, grep them, line numbers drift).** P = `> **Undo applied ⟨date HH:MM⟩ WIB (⟨actor⟩, ⟨full / budget-only⟩).**` Full undo = budget → 300k **and** bid strategy → logged `old_value` on 3/3 ad sets; anything less = budget-only (this pack doesn't apply, §0.1).
+   **4a. Pointer sweep, dry-run 11/16 20:03, re-checked 11/17 09:01: all 6 anchors found exactly once, 0 'Undo applied' yet (copy-paste on the undo run; anchors are exact text, grep them, line numbers drift).** P = `> **Undo applied ⟨date HH:MM⟩ WIB (⟨actor⟩, ⟨full / budget-only⟩).**` Full undo = budget → 300k **and** bid strategy → logged `old_value` on 3/3 ad sets; anything less = budget-only (this pack doesn't apply, §0.1).
 
 | File | Anchor (insert the pointer on a new line right after it) | Pointer after P: full undo | Pointer after P: budget-only |
 |---|---|---|---|
@@ -29,7 +29,7 @@ Run on 11/16 bases, 11/16 and 11/17 locked at the capped pace (≈ Rp 20k / 0), 
 | Rp 300k / 2 (undo overnight) | **120.4k** ❌ |
 
 The undo makes the 11/20 number slightly **worse**, not better: more PEIKIRA spend at 139.1k (above the 95k target) dilutes the cheap BC leads (§D4). Say so in the 11/20 line so the undo isn't blamed: "Gate ❌ at ⟨actual⟩; the undo was for volume, not for this window."
-Command (fill the real 11/16–11/18 locks): `python3 fuku/bin/gate_model_1120.py --lock 293851 0 --lock 309404 3 --lock 153555 1 --lock ⟨11/16⟩ --lock ⟨11/17⟩ --lock ⟨11/18⟩ --peik ⟨7d⟩ --bc ⟨7d⟩ --p2 ⟨7d⟩ --budget 300000`
+Command (fill the real 11/16–11/18 locks): `python3 fuku/bin/gate_model_1120.py --lock 293851 0 --lock 309404 3 --lock 153555 1 --lock 16396 0 --lock ⟨11/17⟩ --lock ⟨11/18⟩ --peik ⟨7d⟩ --bc ⟨7d⟩ --p2 ⟨7d⟩ --budget 300000`
 
 ## 2. Criterion 1 (12/05, judged window 11/28–12/04) after an undo
 `python3 fuku/bin/criterion1_model_1205.py --peik 1947508 14 --bc 428216 7 --p2 717275 7 --today 2026-11-19 --budget 300000` (no `--cap-throttled`) *(calc)*:
