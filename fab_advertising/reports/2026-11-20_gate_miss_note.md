@@ -2,7 +2,25 @@
 _Pre-staged 2026-11-13 12:02 WIB by Fuku (cloud heartbeat, groundwork). Dry-run vs readout pulls 2026-11-14 20:02: every ⟨⟩ maps to readout Step 0 / P1–P6 / Step 2–4b. Read-only, nothing changed in the ad account. Propose-only._
 _Sister card: `2026-11-20_s1_scale_card.md` (used when G1–G3 all pass). Gate numbers: `2026-11-20_gate_brief.md` (11/14 08:01 refresh). Volume math: `2026-11-12_scale_plan_v2.md`._
 
-## 11/16 09:01 refresh (read this first; overrides stale numbers below)
+## 11/18 08:01 refresh: Variant M1, one fill-ready text per OUTBOX #1 state (read this first)
+_Fuku cloud heartbeat, groundwork (backlog #1). Base: 11/18 07:01 readout + read card verdict **STARVED-volume** (S3 11/15–11/17 Rp 181,676 / 1). Model `gate_model_1120.py` with locks 11/13–11/17 and 7d bases 11/11–11/17 (peik 1437590/9, bc 551394/7, p2 490623/4). Read-only; propose-only. Overrides the 11/16 block's numbers and its "budget context sentence"._
+- **Expected 11/20 7d CPL by #1 state** *(calc, PEIKIRA spend on the 2 open days 11/18–11/19)*: caps stay ≈ Rp 11.7k/day → **122.0k**; undo live by ~noon 11/18 (≈ 150k/day avg) → **127.1k**; undo live 11/18 00:00 (300k/day) → **131.2k**. Every branch is ❌; best lever set (Ad015 off + site +1pt) 118.8k; no ADSET-3 break-even. So **M1 is settled; G1 ✅ is not reachable**. An undo makes the 11/20 number *worse*, not better (more spend at PEIKIRA's ≈ 160k base): say so, so it doesn't read as the undo failing. (The post-undo pack §1's 117–120k is on 11/16 bases; on 11/18 bases it's 127–131k. Re-run pack §1 with the real undo time before pasting either.)
+- **ADSET-3 clause:** pre-pick the **"< Rp 10k spent (still starved)"** row (Rp 0 for 11/13–11/17, 5 full days). Re-check at the 11/20 pull; an undo can move it to the Rp 10k–379k row.
+- **⟨neither was / only Ad015 was⟩:** "neither was" (Ad015 ACTIVE, site not applied, curl 11/18 07:01).
+- Fill on 11/20: ⟨x⟩ 7d CPL 11/13–11/19; ⟨p⟩ PEIKIRA 7d spend ÷ 7 ÷ 1,000; ⟨e⟩ account 7d spend ÷ 7 ÷ 10,000 (= % of Rp 1M); ⟨spend⟩ ADSET-3 7d; ⟨date⟩ = activity-log time of the undo. Then append the criterion-1 line (Step 4b) + the criterion-2 branch (A for full undo, B otherwise). ≤ 120 words before criterion 2 (each text below ≈ 85–100).
+
+**M1-N: no answer / "keep" (3M + 105k caps still on). Criterion-2 = Branch B.**
+> ⚠️ **[REPORT] 11/20 · Gate missed: 7d CPL Rp ⟨x⟩ ❌ (target 95k).** The window closed on 11/14: even the site fix + pausing Ad015 live by 11/16 gave ≈ 97–102k *(calc)*; neither was applied. Volume is the bigger problem now: PEIKIRA is set to Rp 3M/day, but the Rp 105k bid caps hold it at ≈ Rp ⟨p⟩k/day, so the account spends ≈ ⟨e⟩% of the Rp 1M leg. ADSET-3 (the team's 6 new ads) got Rp ⟨spend⟩ in 7 days: untested, not a loser. 👉 #1 ask is still: **undo the 11/15 change (Rp 300k, no caps)**, then the site fix (`fab_advertising/reports/2026-11-11_w1w2_paste_ready.md`).
+
+**M1-A: full undo in the log (Rp 300k + caps removed). Criterion-2 = Branch A.**
+> ⚠️ **[REPORT] 11/20 · Gate missed: 7d CPL Rp ⟨x⟩ ❌ (target 95k), as expected.** The window closed on 11/14 (site fix + Ad015 pause by 11/16 ≈ 97–102k *(calc)*; neither applied). PEIKIRA is back at Rp 300k/day with no cap since ⟨date⟩; that adds spend at PEIKIRA's ≈ 160k recent CPL, so this week's number reads worse (≈ 127–131k modelled) even though the undo was right: it's about volume, and learning restarts *(calc, INFERRED)*. ADSET-3: ⟨ADSET-3 clause⟩. 👉 #1 ask now: **the site fix, today** (`fab_advertising/reports/2026-11-11_w1w2_paste_ready.md`). First clean post-undo read: ⟨date + 7⟩ (post-undo pack §1/§4).
+
+**M1-B: budget-only revert (Rp 300k, caps kept). Criterion-2 = Branch B.**
+> ⚠️ **[REPORT] 11/20 · Gate missed: 7d CPL Rp ⟨x⟩ ❌ (target 95k).** The window closed on 11/14 (site fix + Ad015 pause by 11/16 ≈ 97–102k *(calc)*; neither applied). PEIKIRA is back at Rp 300k/day since ⟨date⟩, but the Rp 105k bid caps still hold it at ≈ Rp ⟨p⟩k/day (≈ ⟨e⟩% of the Rp 1M leg): the budget was never the brake. ADSET-3 got Rp ⟨spend⟩ in 7 days: untested, not a loser. 👉 #1 ask: **remove the 105k caps on the 3 PEIKIRA ad sets (back to Highest volume)**, then the site fix.
+
+_Pick rule: the 11/20 Step 0 activity-log rows for `120254051672440572` + its 3 ad sets since 11/15 00:42 (budget row → 300k? bid_strategy rows → old_value restored?). Both = A; budget only = B; none = N. If Alvian answered in OUTBOX but the log shows nothing, use N and say "not in the account yet"._
+
+## 11/16 09:01 refresh (superseded by 11/18 above where they differ)
 _Fuku cloud heartbeat, groundwork. Base: 11/16 07:03 readout (locks 11/13 293,851/0 · 11/14 309,404/3 · 11/15 153,555/1; 7d PEIKIRA 1,947,508/14, BC 428,216/7, P2 717,275/7; `--budget 153555`)._
 - **Expected message: Variant M1** (site not applied as of 11/16 07:03). G1 ✅ needs ≤ 95k; model with nothing changed **116.7k** *(calc)*. Even Ad015 pause + site +1pt live tonight (11/16 eve) = **97.1k ❌** *(calc)*. Only ALL levers + ADSET-3 at 60% share @ Rp 70k live tonight reaches 94.8k, and ADSET-3 is at Rp 0, so treat G1 ❌ as settled unless the 11/17 readout shows a lever went live.
 - **M1 stale clause → replace** "(≈ 94–103k if both live by 11/14 eve, 11/14 08:01 model)" with: "(≈ 97–102k even if both had gone live on 11/16; the window was lost by 11/14)" *(calc, `gate_model_1120.py` 11/16 run)*.

@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-18 07:01 WIB (cloud heartbeat: 11/18 readout + budget read card → undo re-ask)_
+_Last updated: 2026-11-18 08:01 WIB (cloud heartbeat: groundwork, 11/20 M1 texts per #1 state)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -11,13 +11,13 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 1. **Every run:** INBOX/OUTBOX for "undo"/"keep", "done" on #2, "W1 W2 done", Kuningan answer.
 2. **Polls:** 07:00 done (no edits since 11/15 00:42). Next: ~13:00, ~19:00 (log + PEIKIRA ad sets today).
 3. **Undo seen in the log:** run `2026-11-19_post_undo_rebase_pack.md` §0 the same run (§0.4a pointer table, 6 files; full vs budget-only by the bid strategy rows). Budget-only → card "Branches" (pack does not apply).
-4. **11/20 07:00:** readout + Variant M1 (gate-miss note "11/16 refresh" blocks + criterion-2 re-plan first). **11/27:** ADSET-3 verdict.
+4. **11/20 07:00:** readout + Variant M1: gate-miss note "11/18 refresh" (texts N/A/B, pick by log rows) + criterion-2 branch A/B. **11/27:** ADSET-3 verdict.
 5. **Retro #5:** ~11/21 or at 15 new lessons.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **Variant M1 text refresh (~11/19):** re-read `2026-11-20_gate_miss_note.md` M1 + ADSET-3 clause against the 11/18 card verdict; one fill-ready message per #1 state (none / full undo / budget-only).
-2. **11/23 weekly partial pre-pull (~11/21):** lock 11/16–11/20 Fab+Incess ad-set rows into `reports/weekly/2026-11-23.md` so Monday is a delta; also add run-sheet rows for what 11/18–11/20 decided (dry run 11/17 18:02 done: +call 7a ADSET-3 no spend filter, learning_stage_info on call 4, call 10 must pass 7d bases, row 0 = file sources). (ADSET-3 day-7 card pre-filled 11/17: 11/13–11/16 locked, verdict branches A/B/C; 11/20 adds 11/17–11/19.)
-3. **Post-undo pack pointer check (~11/18, only if undo seen):** `2026-11-19_post_undo_rebase_pack.md` §0.4a table vs the Ad015 floor now in fallback/S1/gate-miss/11-23 files (11/17 21:01 sweep); with the cap gone, Ad015 7d may cross Rp 600k again → CPL rule live.
+1. **11/23 weekly partial pre-pull (~11/21):** lock 11/16–11/20 Fab+Incess ad-set rows into `reports/weekly/2026-11-23.md` so Monday is a delta; also add run-sheet rows for what 11/18–11/20 decided (dry run 11/17 18:02 done: +call 7a ADSET-3 no spend filter, learning_stage_info on call 4, call 10 must pass 7d bases, row 0 = file sources). (ADSET-3 day-7 card pre-filled 11/17: 11/13–11/16 locked, verdict branches A/B/C; 11/20 adds 11/17–11/19.)
+2. **Post-undo pack pointer check (~11/18, only if undo seen):** `2026-11-19_post_undo_rebase_pack.md` §0.4a table vs the Ad015 floor now in fallback/S1/gate-miss/11-23 files (11/17 21:01 sweep); with the cap gone, Ad015 7d may cross Rp 600k again → CPL rule live.
+3. **ADSET-3 day-7 card branch A text (~11/19):** with ADSET-3 still Rp 0 for 6 days, pre-write the 11/20 "UNTESTED" line + the 11/27 verdict-template row it feeds, so both match the M1 ADSET-3 clause.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Undo the 11/15 change (Rp 300k + no caps)? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
