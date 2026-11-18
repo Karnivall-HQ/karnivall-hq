@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-18 19:02 WIB (cloud heartbeat: 19:00 poll, no change)_
+_Last updated: 2026-11-18 20:02 WIB (cloud heartbeat: backlog #3, 11/23 weekly wired to the STATE line)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -17,7 +17,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **11/23 weekly pre-pull part 2 (~11/21):** extend the 18:02 block (11/16–11/17 locked) with 11/18–11/20; add run-sheet rows for what 11/18–11/20 decided (call 7a, learning_stage_info, call 10 7d bases already in). Incess: if 11/16–11/20 CPL > 30k, run a pick-level split (042 40.5k, 030 91.9k on 2 days).
 2. **Post-undo pack pointer check (~11/18, only if undo seen):** `2026-11-19_post_undo_rebase_pack.md` §0.4a table vs the Ad015 floor now in fallback/S1/gate-miss/11-23 files (11/17 21:01 sweep); with the cap gone, Ad015 7d may cross Rp 600k again → CPL rule live.
-3. **11/23 weekly ← 11/20 STATE line (~11/20 eve):** weekly template's "what changed" + asks sections should read the tracker's `STATE 11/20 07:00` line + log 11/20→11/23 (same baseline gap the 11/27 card had); fill any missing pointer.
+3. **Incess bid-cap re-validation (~11/20, after the readout):** parked-asks rule: re-check `2026-11-10_incess_bidcap_proposal.md` on fresh 7d 11/13–11/19 (picks at 46k/45k caps vs non-picks); retire it or re-word as a one-liner, ready for the 11/23 weekly Proposal-status row.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Undo the 11/15 change (Rp 300k + no caps)? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
