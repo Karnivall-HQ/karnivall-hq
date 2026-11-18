@@ -4,7 +4,8 @@ _Dry-run 2026-11-14 18:01 WIB: every ⟨⟩ / ☐ now maps to a pull row V1–V8
 _Rules come from `2026-11-13_adset3_read_card.md` (rules 2–6) and `fuku/memory/playbooks/meta-tests-and-proposals.md`. Read those first, plus `meta-ads-algorithm.md`. Copy every number from tool output; anything derived gets *(calc)*._
 
 ## Step 0: context since the 11/20 read
-- 11/20 outcome (V7): ☐ S1 ☐ H ☐ M1 ☐ M2 · rule 3 result: ☐ KEEP ☐ pause proposed ☐ applied ⟨date⟩
+- 11/20 outcome (V7 = the `STATE 11/20 07:00` line in the tracker's 11/20 row, written by readout Step 6): ☐ S1 ☐ H ☐ M1-N ☐ M1-A ☐ M1-B ☐ M2 · ADSET-3 day-7: ☐ starved ☐ untested < 95k ☐ keep, judge 11/27 ☐ KEEP ☐ keep (1.0–1.3) ☐ pause proposed ☐ rule 2 fired · pause applied ☐ no ☐ ⟨date⟩
+- **Baseline = the same STATE line** (undo / CBO / caps / min spend / Ad015 / W1-W2 as of 11/20 07:00); V5 only adds changes after it. A box below with no V5 row keeps its STATE value (hand-off check 11/18 11:01: an undo or min spend applied 11/18–11/19 sits before V5's window, so V5 alone would read "never").
 - Activity log 11/20 → 11/27 (V5, by actor_id): min-spend Rp 75k ☐ never ☐ on ⟨date⟩ ☐ removed ⟨date⟩ · CBO budget ⟨300k / other⟩ · ads added/paused in ADSET-3 ⟨list⟩ · site W1/W2 live since ⟨date / no⟩ (V6).
 - **If ADSET-3 was paused at or before 11/20:** skip to Step 4 and write "verdict = loser (rule 2/3)"; per-ad reads only for ads that met rule 5.
 - **If V1 shows ADSET-3 14d spend < Rp 10k (still starved): use Branch A below** and skip Steps 2–4 except the V1 row + V4 D.
@@ -31,7 +32,7 @@ _Matches the 11/20 gate-miss note's "< Rp 10k spent (still starved)" clause, so 
 | V4 | Delivery start | V1 for ADSET-3 only with `time_increment` 1, 11/13→11/26 → first day spend > Rp 5k; D = days with spend > Rp 5k |
 | V5 | Activity log | `ads_account_get_activity_logs` Fab `484578521394893`, since 2026-11-20 00:00 WIB, limit ≤ 40 → group by actor_id (Markus 61594758338050, TourHub 61557670947597): Ad015 status, min spend, CBO budget, ads added/paused in ADSET-3 |
 | V6 | Site status | `curl -sL` `/sewa-gudang-self-storage-jakarta/`, grep "Jakarta Pusat", "Rp 800.000" (W1 done = 0 Pusat; W2 done = 0 × 800) |
-| V7 | 11/20 outcome | the filled `2026-11-20_readout_template.md` result + MISSIONS M-001 progress line of 11/20 (S1/H/M1/M2, rule 3) |
+| V7 | 11/20 outcome + state | the `STATE 11/20 07:00:` line at the start of the tracker's 11/20 weekly-row Notes (readout Step 6); fallback: MISSIONS M-001 progress line of 11/20 + the read card "Day-7 read 11/20" line. Missing both → pull the activity log from 11/15 00:00 instead of 11/20 for V5 |
 | V8 | Account 7d base | the 11/27 07:00 row in `m001_tracker.md` (routine step 1: 7d 11/20–11/26 by campaign + PEIKIRA ad sets). Run it first; Step 5 and 5b read from it |
 | V1+ | PEIKIRA 14d total | V1 at level=campaign, id `120254051672440572`, same window → denominator of the share line (don't sum ad sets: a 4th ad set may exist) |
 
@@ -61,7 +62,7 @@ _Matches the 11/20 gate-miss note's "< Rp 10k spent (still starved)" clause, so 
 5. CPL > 1.3× control → **LOSER**.
 6. Else → **NEUTRAL**.
 Check rows at control 130.9k *(calc)*: 0–1 lead: 100k UNDER, ≥ 300k LOSER(r2) · 2 leads: 100k PROM, 300k UNDER, ≥ 500k LOSER · 4 leads: ≤ 300k WIN, 500k PROM, ≥ 800k LOSER · 6 leads: ≤ 500k WIN, 800k NEUTRAL, 1.2M LOSER. One label in every cell.
-**Budget-state gate (added 11/15):** Step 5's "+Rp 100k/day" step assumes the CBO is ~Rp 300k. If V5 shows the CBO still at Rp 3M/day (11/15 change) or a bid cap on ADSET-3, a WINNER gets **no budget ask**; the line becomes "ADSET-3 won under the cap; keep setup" and any open 11/18 undo ask outranks it.
+**Budget-state gate (added 11/15):** Step 5's "+Rp 100k/day" step assumes the CBO is ~Rp 300k. If the STATE line + V5 show the CBO still at Rp 3M/day (11/15 change) or a bid cap on ADSET-3, a WINNER gets **no budget ask**; the line becomes "ADSET-3 won under the cap; keep setup" and any open 11/18 undo ask outranks it.
 
 Decay check (WINNER/PROMISING only; n/a if wk1 had 0 leads or < Rp 95k spend): wk2 CPL > 1.5× wk1 CPL → label "decaying", count it as a winner for ≤ 1 more week (control went 81k → 173k in one week, scale plan v2) [account data].
 

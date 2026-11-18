@@ -104,14 +104,14 @@ Window = full days 11/13–11/19. Locked so far (account data via tracker; ADSET
 | 11/14 | 309,404 | 166,269 / 3 | 143,135 / 0 | 0 / 0 | CBO Rp 300k, no cap |
 | 11/15 | 153,555 | 100,930 / 0 | 52,625 / 1 | 0 / 0 | Rp 3M CBO + Rp 105k cap from 00:41 |
 | 11/16 | 16,396 | 15,450 / 0 | 946 / 0 | 0 / 0 | capped, PEIKIRA ≈ off |
-| 11/17 | ⟨⟩ | ⟨⟩ | ⟨⟩ | ⟨⟩ | lock at 11/18 07:00 |
+| 11/17 | 11,725 | 10,439 / 0 | 1,286 / 0 | 0 / 0 | capped (locked 11/18 07:01) |
 | 11/18 | ⟨⟩ | ⟨⟩ | ⟨⟩ | ⟨⟩ | lock at 11/19 07:00 |
 | 11/19 | ⟨⟩ | ⟨⟩ | ⟨⟩ | ⟨⟩ | pull at 11/20 07:00 |
 
-Control 11/13–11/16: Rp 451,054 / 3 = **150.4k** *(calc)*. ADSET-3: Rp 0 on 4 of 7 days.
+Control 11/13–11/17: Rp 461,493 / 3 = **153.8k** *(calc)*. ADSET-3: Rp 0 on 5 of 7 days.
 
 **Pre-resolved verdict branches (rules 1–6 above, unchanged):**
 - **A. ADSET-3 still Rp 0 (or < Rp 5k) through 11/19** → rule 6: **UNTESTED, not a loser.** Rules 2–3 cannot fire. No keep/pause call; the 11/27 day-14 verdict is also void unless it spends ≥ Rp 95k by then. Message: "ADSET-3 got no delivery in 7 days (cap + overlap with PEIKIRA2, 11/15 diagnosis); it was never tested. Fix = ask #2(b) min spend, or ask #1 undo." Do not add a new ask; point to the existing ones.
 - **B. Spends Rp 5k–94k** → still untested (rule 5/8 floor Rp 95k); report spend + leads only.
-- **C. Spends ≥ Rp 95k** → rule 3: CPL vs control's full-window CPL (control base so far 150.4k): ≤ control → KEEP; > 1.3× control on ≥ Rp 400k → propose pause; rule 2 early-kill check first (≥ 190k / 0 leads).
+- **C. Spends ≥ Rp 95k** → rule 3: CPL vs control's full-window CPL (control base so far 153.8k, 11/13–11/17): ≤ control → KEEP; > 1.3× control on ≥ Rp 400k → propose pause; rule 2 early-kill check first (≥ 190k / 0 leads).
 - If ask #1 undo lands mid-window: split the window at the change day (re-base rule §D) and judge ADSET-3 only on post-undo days.

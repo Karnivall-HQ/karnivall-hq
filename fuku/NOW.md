@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-18 10:02 WIB (cloud heartbeat: groundwork, 11/20 readout dry run → N/A/B wiring)_
+_Last updated: 2026-11-18 11:01 WIB (cloud heartbeat: groundwork, 11/20 → 11/27 hand-off check → STATE line)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -11,13 +11,13 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 1. **Every run:** INBOX/OUTBOX for "undo"/"keep", "done" on #2, "W1 W2 done", Kuningan answer.
 2. **Polls:** 07:00 done (no edits since 11/15 00:42). Next: ~13:00, ~19:00 (log + PEIKIRA ad sets today).
 3. **Undo seen in the log:** run `2026-11-19_post_undo_rebase_pack.md` §0 the same run (§0.4a pointer table, 6 files; full vs budget-only by the bid strategy rows). Budget-only → card "Branches" (pack does not apply).
-4. **11/20 07:00:** readout + Variant M1: gate-miss note "11/18 refresh" (texts N/A/B, pick by log rows) + criterion-2 branch A/B. **11/27:** ADSET-3 verdict.
+4. **11/20 07:00:** readout (Step 6 writes the `STATE 11/20 07:00` line first) + Variant M1: gate-miss note "11/18 refresh" (texts N/A/B, pick by log rows) + criterion-2 branch A/B. **11/27:** ADSET-3 verdict.
 5. **Retro #5:** ~11/21 or at 15 new lessons.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **11/23 weekly partial pre-pull (~11/21):** lock 11/16–11/20 Fab+Incess ad-set rows into `reports/weekly/2026-11-23.md` so Monday is a delta; also add run-sheet rows for what 11/18–11/20 decided (dry run 11/17 18:02 done: +call 7a ADSET-3 no spend filter, learning_stage_info on call 4, call 10 must pass 7d bases, row 0 = file sources). (ADSET-3 day-7 card pre-filled 11/17: 11/13–11/16 locked, verdict branches A/B/C; 11/20 adds 11/17–11/19.)
 2. **Post-undo pack pointer check (~11/18, only if undo seen):** `2026-11-19_post_undo_rebase_pack.md` §0.4a table vs the Ad015 floor now in fallback/S1/gate-miss/11-23 files (11/17 21:01 sweep); with the cap gone, Ad015 7d may cross Rp 600k again → CPL rule live.
-3. **11/27 verdict ← 11/20 readout hand-off check (~11/19):** the 11/20 Step 6 record lines (tracker weekly row, read card "Day-7 read") must give the 11/27 template's V1–V8 rows what they need (11/13–11/19 ADSET-3 locks, starved flag); fill any missing field name in Step 6.
+3. **11/23 weekly ← 11/20 STATE line (~11/20 eve):** weekly template's "what changed" + asks sections should read the tracker's `STATE 11/20 07:00` line + log 11/20→11/23 (same baseline gap the 11/27 card had); fill any missing pointer.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 Undo the 11/15 change (Rp 300k + no caps)? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
