@@ -55,5 +55,5 @@ Window = full days after the undo, 7d read. **Success:** PEIKIRA ≥ 2 leads/day
 
 ## 4. Pre-filled status lines
 - **Undo day:** "✅ PEIKIRA undo seen at ⟨HH:MM⟩ (⟨actor⟩): budget Rp 3M → ⟨300k⟩, bid strategy → ⟨old_value⟩ on ⟨n⟩/3 ad sets. Read window from ⟨date+1⟩; success = ≥ 2 leads/day at ≤ 130.9k over 7 days."
-- **11/20 readout:** "📊 7d ⟨actual⟩ ❌ vs 95k (model 117–120k). The undo restores volume; it was never going to open this window. Criterion 1 LWD now 11/30 at Rp 300k/day; ask #2 alone gets 92.0k *(calc)*."
+- **11/20 readout** _(NOW/MISSIONS only; OUTBOX uses gate-miss M1-A. Model + LWD numbers are 11/16-based: replace with the §1/§2 re-run, ≈ 127–131k on 11/18 bases)_: "📊 7d ⟨actual⟩ ❌ vs 95k (model ⟨§1 re-run⟩). The undo restores volume; it was never going to open this window. Criterion 1 LWD now 11/30 at Rp 300k/day; ask #2 alone gets 92.0k *(calc)*."
 - **If the 11/18 answer is 'keep':** this pack doesn't apply; keep the capped models and the 11/18 card's STARVED rules.
