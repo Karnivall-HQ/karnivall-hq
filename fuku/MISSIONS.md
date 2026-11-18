@@ -25,7 +25,7 @@
 - **Priority:** P0
 - **Deadline:** 2026-12-05 (30 days from 2026-11-05)
 - **Constraints:** **Propose-only.** Fuku never touches the ad account (no pauses, budget changes, or launches). Every change is proposed to Alvian as an apply-ready checklist, and **Alvian applies it himself**. The metric is the 7-day average CPL, never a single day.
-- **Status:** at risk (7d CPL 113.1k on 11/16; PEIKIRA Rp 3M CBO + Rp 105k cap delivered Rp 153.6k on 11/15 (mostly an overnight burst) and only Rp 7,959 to 13:00 on 11/16, intent unconfirmed; Ad015 still on at 161.3k; ADSET-3 Rp 0 for 3 full days; site unfixed; 11/20 gate ❌ by model)
+- **Status:** at risk (7d CPL 124.3k on 11/18, worst since 11/07; PEIKIRA under the Rp 3M CBO + Rp 105k cap spent Rp 181,676 / 1 lead in 3 days (2.0% of budget) → undo re-asked 11/18; ADSET-3 Rp 0 for 5 full days; Ad015 + site asks open; 11/20 gate ❌ by model 122.0k)
 - **Strategy (Fuku, 2026-11-05):**
   1. *Diagnose* (now): ad-set/ad/placement/audience breakdown; find which ads, audiences, and placements produce leads ≤ Rp 95k.
   2. *Cut waste*: propose to Alvian which CTR-collapsed FAB ads and losing ad sets to pause, so spend concentrates in the winners (BC CBObass005-type setups at ~Rp 83k).
@@ -33,6 +33,7 @@
   4. *Scale*: propose budget raises of ~20–30% every 3–4 days, only while the 7d CPL ≤ Rp 95k. Alvian applies them. Fuku verifies the effect in the next readouts. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
+  - 2026-11-18 07:01: 11/18 readout + budget read card. 11/17 full day PEIKIRA Rp 11,725 / 0; S3 11/15–11/17 Rp 181,676 / 1 *(calc)* → STARVED-volume → OUTBOX #1 replaced by the one-line "undo" re-ask (old thread → Resolved). 7d 124.3k ❌; 11/20 model 122.0k ❌; criterion 1 LWD 12/03; criterion 2 blocked by the cap. No edits since 11/15 00:42; site unchanged.
   - 2026-11-17 21:01: Ad015 spend-floor sweep: the ≥ Rp 600k floor is now in the fallback plan (item 2 + 11/17 note), S1 card G3 row + "only Ad015" line, gate-miss G3 rows, 11/23 weekly Ad015 check. Under the cap the 11/20 Ad015 CPL rule reads "n/a" (≈ Rp 450k *(calc, INFERRED)*), so G3 can't go ❌ on the stale 11/14 firing; ask #2(a) stays open. Also fixed a stale "#1(a)" → "#2(a)" in the gate-miss table.
   - 2026-11-17 20:02: 11/20 readout template dry run (expected path: caps on, ADSET-3 starved, G1 ❌ → M1 + Branch B): 4 fixes. Ad015 CPL trigger had lost its ≥ Rp 600k spend floor; under the cap Ad015's 11/13–11/19 spend ≈ Rp 449k *(calc, INFERRED)*, so without the fix G3 could have gone ❌ falsely. Also P5 now daily (feeds `--budget` = 11/19 full day), criterion-2 Branch A/B pointer in Step 5.
   - 2026-11-17 10:01: 11/18 read card pre-filled: locked 11/15–11/16 rows (Rp 169,951 / 1; control 68.5%, PEIKIRA2 31.5%, ADSET-3 0% *(calc)*); verdict pre-resolved: volume-only unless 11/17 spends > Rp 222,749 → undo line unless 11/17 brings ≥ 3 leads. Fill-ready line added. No strategy change.

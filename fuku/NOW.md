@@ -1,19 +1,18 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-17 21:01 WIB (cloud heartbeat: Ad015 Rp 600k spend-floor sweep, 4 files)_
+_Last updated: 2026-11-18 07:01 WIB (cloud heartbeat: 11/18 readout + budget read card → undo re-ask)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
-- **⚠️ PEIKIRA Rp 3M CBO + Rp 105k cap (11/15 00:41, Rudi MCP 61594758338050, not an ask):** 11/15 Rp 153,555 / 1 (burst 138,427); **11/16 full day Rp 16,396 / 0, 300 impr** (control 15,450, PEIKIRA2 946, ADSET-3 0) = 5.5% of old 300k *(calc)*. **11/17 to 19:02: Rp 10,198 / 0, 196 impr** (control 8,989, PEIKIRA2 1,209, ADSET-3 0) *(calc)*; on track to close below 11/16's 16,396. PEIKIRA ≈ off. OUTBOX #1 rec "revert" (11/16 13:02 push; 11/17 line added, no push).
-- **11/18 read:** card pre-filled (11/15–11/16 locked, Rp 169,951 / 1; fill-ready line at the end). 11/18 adds only the 11/17 row: volume-only unless 11/17 > Rp 222,749 → undo line unless 11/17 has ≥ 3 leads *(calc)*. Card: `2026-11-18_budget_change_read_card.md`. Push the undo one-liner tomorrow.
-- **M-001 (P0, at risk):** 7d 11/10–11/16 Rp 2,170,572 / 19 = **114.2k** *(calc)* ❌. Control 160.4k, PEIKIRA2 98.1k, ADSET-3 Rp 0 (day 4), BC 65.6k. 11/20 model 113.0k → gate ❌ (reads better only because PEIKIRA barely spends). Criterion 1 LWD 12/03 at 82.0k/day account spend = 8% of the 1M leg; CRITERION 2: PEIKIRA needs 934.4k/day (57×), at 1M/day nothing 132.4k MISS, F+C+0.5pt 84.2k (INFERRED) *(calc)*; BLOCKED by the cap. Benchmark: both ad sets CPR ~37–40% worse than peers.
-- **M-002 (P1):** ✅ weekly #2 delivered 11/16. 11/23 skeleton ready (`reports/weekly/2026-11-23.md`); fill Mon 07:00.
+- **⚠️ PEIKIRA Rp 3M CBO + Rp 105k cap (11/15 00:41, Rudi MCP 61594758338050):** 11/18 read card done: **S3 11/15–11/17 Rp 181,676 / 1 lead (2.0% of budget)** *(calc)* → STARVED-volume → **OUTBOX #1 = one-line "undo" re-ask (pushed 11/18 07:01)**. 11/17 full day Rp 11,725 / 0 (control 10,439, PEIKIRA2 1,286, ADSET-3 0). All 3 still LEARNING.
+- **M-001 (P0, at risk):** 7d 11/11–11/17 Rp 1,988,984 / 16 = **124.3k** *(calc)* ❌ (worst since 11/07). Control 189.4k, PEIKIRA2 122.7k, ADSET-3 Rp 0 (5 full days), BC 78.8k. 11/20 model 122.0k → gate ❌ (best levers 118.8k). Criterion 1 LWD 12/03 at 90.5k/day account spend; CRITERION 2: at 1M/day nothing 147.8k, F+C+0.5pt 104.1k MISS (INFERRED) *(calc)*; BLOCKED by the cap.
+- **M-002 (P1):** 11/23 skeleton ready (`reports/weekly/2026-11-23.md`); fill Mon 07:00.
 
 ## Next actions (dated or triggered)
-1. **Every run:** INBOX/OUTBOX for "intended"/"revert", "done" on #2, "W1 W2 done", Kuningan answer.
-2. **Polls:** today's 3 done (07:00, 13:00, 19:00: no edits). Next poll inside the 11/18 07:00 readout.
-3. **11/18 07:00:** readout (log first; lock 11/17; `--budget <11/17 spend> --cap-throttled`) + fill the read card → likely undo one-liner as #1 re-ask + push.
-4. **Undo seen in the log:** run `2026-11-19_post_undo_rebase_pack.md` §0 the same run (§0.4a = paste-ready pointer table for 6 files; full vs budget-only decided by the bid strategy rows) (post-undo: 11/20 gate 117–120k ❌, LWD 11/30, ask #2 alone 92.0k *(calc)*). **11/18 07:00:** fill `2026-11-18_budget_change_read_card.md` (precedence section). **11/20:** readout + Variant M1 (read the "11/16 refresh" blocks in the gate-miss note + criterion-2 re-plan first). **11/27:** ADSET-3 verdict.
-5. **Retro #5:** ~11/21 or at 15 new lessons (Retro #4 done 11/16 14:02; structural-change rules now in `meta-modelling-and-planning.md` §D–§E).
+1. **Every run:** INBOX/OUTBOX for "undo"/"keep", "done" on #2, "W1 W2 done", Kuningan answer.
+2. **Polls:** 07:00 done (no edits since 11/15 00:42). Next: ~13:00, ~19:00 (log + PEIKIRA ad sets today).
+3. **Undo seen in the log:** run `2026-11-19_post_undo_rebase_pack.md` §0 the same run (§0.4a pointer table, 6 files; full vs budget-only by the bid strategy rows). Budget-only → card "Branches" (pack does not apply).
+4. **11/20 07:00:** readout + Variant M1 (gate-miss note "11/16 refresh" blocks + criterion-2 re-plan first). **11/27:** ADSET-3 verdict.
+5. **Retro #5:** ~11/21 or at 15 new lessons.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **Variant M1 text refresh (~11/19):** re-read `2026-11-20_gate_miss_note.md` M1 + ADSET-3 clause against the 11/18 card verdict; one fill-ready message per #1 state (none / full undo / budget-only).
@@ -21,7 +20,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 3. **Post-undo pack pointer check (~11/18, only if undo seen):** `2026-11-19_post_undo_rebase_pack.md` §0.4a table vs the Ad015 floor now in fallback/S1/gate-miss/11-23 files (11/17 21:01 sweep); with the cap gone, Ad015 7d may cross Rp 600k again → CPL rule live.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
-- #1 Budget Rp 3M/day + cap intended? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
+- #1 Undo the 11/15 change (Rp 300k + no caps)? #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
 - Parked: Kuningan open? FYI: who is "TourHub"? Later: "All-in", R5 sellers, close rate + months stayed.
 
 ## Standing facts
@@ -29,10 +28,10 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - Cloud Fuku: routine trig_01NGMFnv9BpvRp1jQjkAwUVJ, hourly 07–22 WIB. Propose-only: never call Meta write tools, even when visible.
 - Fab account 484578521394893, pixel 405755485775053. PEIKIRA campaign `120254051672440572` (Rp 3M/day, bid cap 105k); control `120254051672430572`; PEIKIRA2 `120254276298070572`; ADSET-3 `120254400251570572`; Ad015 `120254063163810572`; BC campaign `120236222888610572`.
 - Markus (team) edits the Fab account via the Rudi MCP app (actor 61594758338050).
-- Model locks so far: 11/13 293851 0 · 11/14 309404 3 · 11/15 153555 1 (post-burst 15,128) · 11/16 16396 0. 7d bases 11/10–11/16: peik 1711387 12, bc 459185 7, p2 588504 6.
+- Model locks so far: 11/13 293851 0 · 11/14 309404 3 · 11/15 153555 1 (post-burst 15,128) · 11/16 16396 0 · 11/17 11725 0. 7d bases 11/11–11/17: peik 1437590 9, bc 551394 7, p2 490623 4.
 
 ## Open loops (current state, one line each)
-- Activity log: last edit 11/15 00:41–00:42; nothing since (checked 11/17 19:02).
-- Site (fabwarehouses.com): W1/W2 not applied (curl 11/17 07:04: Jakarta Pusat ×9, Rp 800.000 ×3, "akan launching" ×3).
+- Activity log: last edit 11/15 00:41–00:42; nothing since (checked 11/18 07:01).
+- Site (fabwarehouses.com): W1/W2 not applied (curl 11/18 07:01: Jakarta Pusat ×9, Rp 800.000 ×3, "akan launching" ×3).
 - Incess: healthy (26.4k, picks 18.6 leads/day); Copy 5 keep; parked bid-cap proposal not needed.
 - Parked in OUTBOX: Kuningan ask, BC204 cap probe, W3/W4 + WA follow-up script, 4 disabled ad accounts, Incess bid-cap, lead-value questions.
