@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-18 13:01 WIB (cloud heartbeat: 13:00 poll, no change)_
+_Last updated: 2026-11-18 15:02 WIB (cloud heartbeat: post-undo pack re-based on 11/18 bases)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -32,6 +32,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Open loops (current state, one line each)
 - Activity log: last edit 11/15 00:41–00:42; nothing since (checked 11/18 13:01). 11/18 to 13:01: Rp 6,228 / 0 (control 6,053, P2 175, A3 0).
+- Post-undo models on 11/18 bases (15:02) *(calc)*: 11/20 gate 127–131k; criterion 1 LWD **NONE** at Rp 300k/day (Ad015 off alone 109.9k; needs ADSET-3 ≤ ~95k + site fix). Pack §1/§2 + read card + weekly l.133 marked STALE.
 - Meta benchmark tool (11/18, STATED): control CPR 42.5% and PEIKIRA2 45.7% worse than lead-gen peer median.
 - Site (fabwarehouses.com): W1/W2 not applied (curl 11/18 07:01: Jakarta Pusat ×9, Rp 800.000 ×3, "akan launching" ×3).
 - Incess: healthy (26.4k, picks 18.6 leads/day); Copy 5 keep; parked bid-cap proposal not needed.
