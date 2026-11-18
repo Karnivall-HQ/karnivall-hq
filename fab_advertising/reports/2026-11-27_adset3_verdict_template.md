@@ -7,6 +7,20 @@ _Rules come from `2026-11-13_adset3_read_card.md` (rules 2–6) and `fuku/memory
 - 11/20 outcome (V7): ☐ S1 ☐ H ☐ M1 ☐ M2 · rule 3 result: ☐ KEEP ☐ pause proposed ☐ applied ⟨date⟩
 - Activity log 11/20 → 11/27 (V5, by actor_id): min-spend Rp 75k ☐ never ☐ on ⟨date⟩ ☐ removed ⟨date⟩ · CBO budget ⟨300k / other⟩ · ads added/paused in ADSET-3 ⟨list⟩ · site W1/W2 live since ⟨date / no⟩ (V6).
 - **If ADSET-3 was paused at or before 11/20:** skip to Step 4 and write "verdict = loser (rule 2/3)"; per-ad reads only for ads that met rule 5.
+- **If V1 shows ADSET-3 14d spend < Rp 10k (still starved): use Branch A below** and skip Steps 2–4 except the V1 row + V4 D.
+
+## Branch A: still starved (pre-written 2026-11-18 09:01 WIB; ADSET-3 Rp 0 for 11/13–11/17, 5 full days)
+_Matches the 11/20 gate-miss note's "< Rp 10k spent (still starved)" clause, so the 11/20 and 11/27 messages say the same thing._
+- **Verdict = UNDER-TESTED (starved)**, precedence row 4 (rule 2 can't fire at < Rp 190k). Not a loser, not a test result: the 6 ads never entered the auction. Per-ad table, per-look layer, decay check: all **n/a** (every ad < Rp 5k = untested, rule 6). Hit-rate line: "ADSET-3 winners 0 of 0 judged".
+- **Cause line (pick by V5):**
+  - caps still on (no undo): "Rp 105k bid caps + CBO picking the 2 old ad sets; ADSET-3 shares PEIKIRA2's audience, so it loses every shared auction (INFERRED, 11/15 14:01)."
+  - undo applied ⟨date⟩, no min spend: "No cap since ⟨date⟩, but the CBO still put ≈ 0 on it: a starvation problem, not a cap problem (account data from ⟨date⟩)."
+  - min spend Rp 75k set and still < Rp 10k: ⚠️ this is a delivery error, not a verdict → run `meta-cpl-diagnosis.md` (ads_get_errors on the 6 ads, review status) before writing anything.
+- **Step 5 for Branch A:** no budget step. The 11/20 → 11/27 asks merge into one line; pick by #1 state:
+  - #1 still open: no new ask; #1 (undo) stays first. Add to the report: "ADSET-3: Rp ⟨spend⟩ in 14 days, still untested; the min-spend fix waits behind the undo."
+  - #1 applied, min spend not set: "❓ Give ADSET-3 (the team's 6 new ads) a Rp 75k daily minimum for 7 days? It got Rp ⟨spend⟩ in 14 days, so it was never tested. Read 12/04 with the same rules. My recommendation: yes; else move the 6 ads into their own ad set with a Rp 75k minimum from day 1." (Replaces #2(b); #2(a) Ad015 goes to Parked if not re-validated on fresh 7d data.)
+  - Day-21 re-read 12/04 only if a min spend or own ad set went live; otherwise close the test as "never delivered" and carry the 6 ads into Wave 1 (`2026-11-20_criterion2_replan.md`).
+- **Step 5b still runs** with ADSET-3 = not a WINNER (picks the "> 95k, ... ADSET-3 not WINNER" row if projected > 95k).
 
 ## Step 1: pulls (window = 14 full days ADSET-3 was live: **2026-11-13 → 2026-11-26**)
 | # | Pull | Args |
