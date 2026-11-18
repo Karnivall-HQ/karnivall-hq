@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-18 11:01 WIB (cloud heartbeat: groundwork, 11/20 → 11/27 hand-off check → STATE line)_
+_Last updated: 2026-11-18 13:01 WIB (cloud heartbeat: 13:00 poll, no change)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -9,7 +9,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Next actions (dated or triggered)
 1. **Every run:** INBOX/OUTBOX for "undo"/"keep", "done" on #2, "W1 W2 done", Kuningan answer.
-2. **Polls:** 07:00 done (no edits since 11/15 00:42). Next: ~13:00, ~19:00 (log + PEIKIRA ad sets today).
+2. **Polls:** 07:00 + 13:00 done (no edits since 11/15 00:42). Next: ~19:00 (log + PEIKIRA ad sets today).
 3. **Undo seen in the log:** run `2026-11-19_post_undo_rebase_pack.md` §0 the same run (§0.4a pointer table, 6 files; full vs budget-only by the bid strategy rows). Budget-only → card "Branches" (pack does not apply).
 4. **11/20 07:00:** readout (Step 6 writes the `STATE 11/20 07:00` line first) + Variant M1: gate-miss note "11/18 refresh" (texts N/A/B, pick by log rows) + criterion-2 branch A/B. **11/27:** ADSET-3 verdict.
 5. **Retro #5:** ~11/21 or at 15 new lessons.
@@ -31,7 +31,8 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - Model locks so far: 11/13 293851 0 · 11/14 309404 3 · 11/15 153555 1 (post-burst 15,128) · 11/16 16396 0 · 11/17 11725 0. 7d bases 11/11–11/17: peik 1437590 9, bc 551394 7, p2 490623 4.
 
 ## Open loops (current state, one line each)
-- Activity log: last edit 11/15 00:41–00:42; nothing since (checked 11/18 07:01).
+- Activity log: last edit 11/15 00:41–00:42; nothing since (checked 11/18 13:01). 11/18 to 13:01: Rp 6,228 / 0 (control 6,053, P2 175, A3 0).
+- Meta benchmark tool (11/18, STATED): control CPR 42.5% and PEIKIRA2 45.7% worse than lead-gen peer median.
 - Site (fabwarehouses.com): W1/W2 not applied (curl 11/18 07:01: Jakarta Pusat ×9, Rp 800.000 ×3, "akan launching" ×3).
 - Incess: healthy (26.4k, picks 18.6 leads/day); Copy 5 keep; parked bid-cap proposal not needed.
 - Parked in OUTBOX: Kuningan ask, BC204 cap probe, W3/W4 + WA follow-up script, 4 disabled ad accounts, Incess bid-cap, lead-value questions.
