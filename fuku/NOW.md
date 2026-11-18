@@ -1,11 +1,11 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-18 15:02 WIB (cloud heartbeat: post-undo pack re-based on 11/18 bases)_
+_Last updated: 2026-11-18 18:02 WIB (cloud heartbeat: 11/16–11/17 weekly pre-pull)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
 - **⚠️ PEIKIRA Rp 3M CBO + Rp 105k cap (11/15 00:41, Rudi MCP 61594758338050):** 11/18 read card done: **S3 11/15–11/17 Rp 181,676 / 1 lead (2.0% of budget)** *(calc)* → STARVED-volume → **OUTBOX #1 = one-line "undo" re-ask (pushed 11/18 07:01)**. 11/17 full day Rp 11,725 / 0 (control 10,439, PEIKIRA2 1,286, ADSET-3 0). All 3 still LEARNING.
 - **M-001 (P0, at risk):** 7d 11/11–11/17 Rp 1,988,984 / 16 = **124.3k** *(calc)* ❌ (worst since 11/07). Control 189.4k, PEIKIRA2 122.7k, ADSET-3 Rp 0 (5 full days), BC 78.8k. 11/20 model 122.0k → gate ❌ (best levers 118.8k). Criterion 1 LWD 12/03 at 90.5k/day account spend; CRITERION 2: at 1M/day nothing 147.8k, F+C+0.5pt 104.1k MISS (INFERRED) *(calc)*; BLOCKED by the cap.
-- **M-002 (P1):** 11/23 skeleton ready (`reports/weekly/2026-11-23.md`); fill Mon 07:00.
+- **M-002 (P1):** 11/23 skeleton ready + 11/16–11/17 block locked; fill Mon 07:00. ⚠️ Incess 2-day CPL 37.1k vs 26.4k prior wk *(calc)*: check 7d at the 11/20 readout.
 
 ## Next actions (dated or triggered)
 1. **Every run:** INBOX/OUTBOX for "undo"/"keep", "done" on #2, "W1 W2 done", Kuningan answer.
@@ -15,7 +15,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 5. **Retro #5:** ~11/21 or at 15 new lessons.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **11/23 weekly partial pre-pull (~11/21):** lock 11/16–11/20 Fab+Incess ad-set rows into `reports/weekly/2026-11-23.md` so Monday is a delta; also add run-sheet rows for what 11/18–11/20 decided (dry run 11/17 18:02 done: +call 7a ADSET-3 no spend filter, learning_stage_info on call 4, call 10 must pass 7d bases, row 0 = file sources). (ADSET-3 day-7 card pre-filled 11/17: 11/13–11/16 locked, verdict branches A/B/C; 11/20 adds 11/17–11/19.)
+1. **11/23 weekly pre-pull part 2 (~11/21):** extend the 18:02 block (11/16–11/17 locked) with 11/18–11/20; add run-sheet rows for what 11/18–11/20 decided (call 7a, learning_stage_info, call 10 7d bases already in). Incess: if 11/16–11/20 CPL > 30k, run a pick-level split (042 40.5k, 030 91.9k on 2 days).
 2. **Post-undo pack pointer check (~11/18, only if undo seen):** `2026-11-19_post_undo_rebase_pack.md` §0.4a table vs the Ad015 floor now in fallback/S1/gate-miss/11-23 files (11/17 21:01 sweep); with the cap gone, Ad015 7d may cross Rp 600k again → CPL rule live.
 3. **11/23 weekly ← 11/20 STATE line (~11/20 eve):** weekly template's "what changed" + asks sections should read the tracker's `STATE 11/20 07:00` line + log 11/20→11/23 (same baseline gap the 11/27 card had); fill any missing pointer.
 
@@ -35,5 +35,5 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - Post-undo models on 11/18 bases (15:02) *(calc)*: 11/20 gate 127–131k; criterion 1 LWD **NONE** at Rp 300k/day (Ad015 off alone 109.9k; needs ADSET-3 ≤ ~95k + site fix). Pack §1/§2 + read card + weekly l.133 marked STALE.
 - Meta benchmark tool (11/18, STATED): control CPR 42.5% and PEIKIRA2 45.7% worse than lead-gen peer median.
 - Site (fabwarehouses.com): W1/W2 not applied (curl 11/18 07:01: Jakarta Pusat ×9, Rp 800.000 ×3, "akan launching" ×3).
-- Incess: healthy (26.4k, picks 18.6 leads/day); Copy 5 keep; parked bid-cap proposal not needed.
+- Incess: 11/16–11/17 Rp 2,191,376 / 59 = 37.1k (prior wk 26.4k) ⚠️ watch; picks 20.0 leads/day at 33.7k; Copy 5 Rp 85k / 0. Bid-cap proposal still parked.
 - Parked in OUTBOX: Kuningan ask, BC204 cap probe, W3/W4 + WA follow-up script, 4 disabled ad accounts, Incess bid-cap, lead-value questions.
