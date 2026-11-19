@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-19 10:01 WIB (cloud heartbeat: 11/18 delta locked into 11/23 pre-pull)_
+_Last updated: 2026-11-19 13:02 WIB (cloud heartbeat: 13:00 poll, no edits; PEIKIRA Rp 100 by 13:00)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -9,7 +9,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Next actions (dated or triggered)
 1. **Every run:** INBOX/OUTBOX for "undo"/"keep", "done" on #2, "W1 W2 done", Kuningan answer.
-2. **Polls:** 11/19 07:00 readout done (no edits since 11/15 00:42). Next: ~13:00 and ~19:00 polls.
+2. **Polls:** 11/19 07:00 + 13:00 done (no edits since 11/15 00:42). Next: ~19:00 poll, then 11/20 07:00 readout.
 3. **Undo seen in the log:** run `2026-11-19_post_undo_rebase_pack.md` §0 the same run (§0.4a pointer table, 6 files; full vs budget-only by the bid strategy rows). Budget-only → card "Branches" (pack does not apply).
 4. **11/20 07:00:** readout (Step 6 writes the `STATE 11/20 07:00` line first) + Variant M1: gate-miss note "11/18 refresh" (texts N/A/B, pick by log rows) + criterion-2 branch A/B. **11/27:** ADSET-3 verdict.
 5. **Retro #5:** ~11/21 or at 15 new lessons.
@@ -31,7 +31,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - Model locks so far: 11/13 293851 0 · 11/14 309404 3 · 11/15 153555 1 (post-burst 15,128) · 11/16 16396 0 · 11/17 11725 0 · 11/18 8238 0. 7d bases 11/12–11/18: peik 1169087 6, bc 622964 10, p2 422641 2.
 
 ## Open loops (current state, one line each)
-- Activity log: last edit 11/15 00:41–00:42; nothing since (checked 11/19 07:01). Caps 105k, all ACTIVE.
+- Activity log: last edit 11/15 00:41–00:42; nothing since (checked 11/19 13:02). Caps 105k, all ACTIVE. 11/19 part-day to 13:02: PEIKIRA Rp 100 / 0 (control 93, P2 7, A3 0).
 - Post-undo models on 11/18 bases (11/18 15:02; re-run on 11/19 bases if undo seen) *(calc)*: 11/20 gate 127–131k; criterion 1 LWD **NONE** at Rp 300k/day (Ad015 off alone 109.9k; needs ADSET-3 ≤ ~95k + site fix). Pack §1/§2 + read card + weekly l.133 marked STALE.
 - Meta benchmark tool (11/18, STATED): control CPR 42.5% and PEIKIRA2 45.7% worse than lead-gen peer median.
 - Site (fabwarehouses.com): W1/W2 not applied (curl 11/18 07:01: Jakarta Pusat ×9, Rp 800.000 ×3, "akan launching" ×3).
