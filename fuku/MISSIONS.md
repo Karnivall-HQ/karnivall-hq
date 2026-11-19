@@ -169,6 +169,7 @@
 - **Status:** in progress
 - **Strategy:** The cloud heartbeat runs it on the first Monday run (07:00 WIB). Turn it into a playbook after the first report.
 - **Progress:**
+  - 2026-11-19 09:01: Incess bid-cap proposal re-checked on 7d 11/12–11/18 and **retired**: no bid edits, campaign Rp 1.01M/day, 215 leads @ 33.0k; picks 18.6 leads/day @ 33.5k *(calc)*. New watch: CPL up +34% WoW on the picks at constant caps (030 Kotak 47.5k); the 11/23 weekly decides.
   - 2026-11-18 20:02: 11/23 skeleton wired to the `STATE 11/20 07:00` line (run-sheet row 0, "What changed" mid-week snapshot bullet with log cross-check + fallback, Changes table note), so Monday's report starts from the 11/20 state and only adds later changes.
   - 2026-11-18 18:02: 11/16–11/17 pre-pull locked into the 11/23 skeleton: Fab Rp 239,631 / 2 (PEIKIRA 28,121 / 0, BC 211,510 / 2); Incess Rp 2,191,376 / 59 = 37.1k *(calc)* vs 26.4k prior wk → ⚠️ watch (2 days, no verdict); 4 picks 20.0 leads/day at 33.7k; Copy 5 Rp 85,479 / 0.
   - 2026-11-17 18:02: 11/23 run-sheet dry run: every `⟨…⟩` cell mapped to a source; 4 gaps fixed (new call 7a = ADSET-3 ads with no spend filter; call 4 + bid_strategy/learning_stage_info; call 10 must pass the 11/16–11/22 7d bases; row 0 = file-only cells). Pixel epochs + call-10 command verified. No strategy change.
