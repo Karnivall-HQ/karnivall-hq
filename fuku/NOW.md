@@ -1,11 +1,11 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-19 09:01 WIB (cloud heartbeat: Incess bid-cap proposal retired)_
+_Last updated: 2026-11-19 10:01 WIB (cloud heartbeat: 11/18 delta locked into 11/23 pre-pull)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
 - **⚠️ PEIKIRA Rp 3M CBO + Rp 105k cap (11/15 00:41, Rudi MCP 61594758338050):** STARVED-volume, day 4: 11/18 full day **Rp 8,238 / 0** (control 8,020, P2 218, A3 0) = 0.27% of budget *(calc)*. OUTBOX #1 "undo" asked 11/18 07:01, follow-up line 11/19 07:01. All 3 LEARNING.
 - **M-001 (P0, at risk):** 7d 11/12–11/18 Rp 1,792,051 / 16 = **112.0k** *(calc)* ❌ (better by mix only: 11/11 out, BC 10 leads @ 62.3k; PEIKIRA 194.8k). Control 186.6k, PEIKIRA2 211.3k, ADSET-3 Rp 0 (6 full days). 11/20 model 101.4k → gate ❌. Criterion 1 LWD 12/03 at 97.2k/day account spend; CRITERION 2: at 1M/day nothing 163.8k, F+C+0.5pt 154.4k MISS (INFERRED); BLOCKED by the cap.
-- **M-002 (P1):** 11/23 skeleton ready + 11/16–11/17 block locked; fill Mon 07:00. ⚠️ Incess 7d 11/12–11/18 33.0k at Rp 1.01M/day (picks +34% CPL WoW, constant caps) *(calc)*; bid-cap proposal retired 11/19; 11/23 weekly decides.
+- **M-002 (P1):** 11/23 skeleton ready; 11/16–11/18 locked (11/18 delta 11/19 10:01). ⚠️ Incess 3-day 11/16–11/18 **41.2k**, picks 42.1k, 042 3-day 51.0k *(calc)* (7d 11/12–11/18 33.0k); pick split trigger met → Monday 11/23 runs it (042 + 030 first).
 
 ## Next actions (dated or triggered)
 1. **Every run:** INBOX/OUTBOX for "undo"/"keep", "done" on #2, "W1 W2 done", Kuningan answer.
@@ -15,7 +15,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 5. **Retro #5:** ~11/21 or at 15 new lessons.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **11/23 weekly pre-pull part 2 (~11/21):** extend the 18:02 block (11/16–11/17 locked) with 11/18–11/20; add run-sheet rows for what 11/18–11/20 decided (call 7a, learning_stage_info, call 10 7d bases already in). Incess: if 11/16–11/20 CPL > 30k, run a pick-level split (042 40.5k, 030 91.9k on 2 days).
+1. **11/23 weekly pre-pull part 3 (~11/21):** add the 11/19–11/20 delta to the block (same call shape) + run-sheet rows for what 11/18–11/20 decided. Incess pick-level split pre-pull (042, 030: 14d daily CPL vs cap) if 11/16–11/20 still > 30k.
 2. **Post-undo pack pointer check (~11/18, only if undo seen):** `2026-11-19_post_undo_rebase_pack.md` §0.4a table vs the Ad015 floor now in fallback/S1/gate-miss/11-23 files (11/17 21:01 sweep); with the cap gone, Ad015 7d may cross Rp 600k again → CPL rule live.
 3. **Refill (from M-001 criteria, needs data ≥ 11/20):** after the 11/20 readout, re-run the criterion-1 LWD on 11/13–11/19 bases for both branches (cap kept / undo), so the 11/23 weekly has one line per branch.
 
