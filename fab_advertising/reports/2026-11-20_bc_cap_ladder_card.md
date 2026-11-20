@@ -45,6 +45,7 @@ Why 105k and not "remove the cap": PEIKIRA's ad sets at 105k still starve, so 10
 - **Day-7 verdict (group):** keep if group CPL ≤ 95k on ≥ Rp 285k spend; spend < Rp 285k = "cap wasn't the limiter" → revert nothing, close the lever, record it.
 - **Account guard:** if Fab 7d CPL crosses 95k during the window and the ladder group is the cause (group CPL > 95k), revert all four.
 - Read on full-day data at the 07:00 readout; day 1 split at the edit time (playbook §D3).
+- **One command (11/20 16:02):** `python3 fuku/bin/bc_ladder_read.py --day N --row KEY:SPEND:LEADS ×4 --rest SPEND:LEADS --fab7d SPEND:LEADS` applies all four rules above (exit 0 run/keep/close, 1 revert one, 2 revert all) and prints the proposed change list. Thresholds live only here; the script copies them.
 
 ## When to ask
 Not now. Raise it as a one-line ask only when #2 or #3 moves, or at the 11/23 weekly if both are still stalled (swap it in for the weaker ask). Before asking, re-pull this table on the then-latest 7d (§D).
