@@ -79,13 +79,67 @@ Don't copy from the parents: "dari 800rb" (all 3 parent bodies; page says Promo 
 | "labirin" (hook) | 0 | ⚠️ hook word only, backed by BC208 live ad data (Rp 363,096 / 6, 60.5k) → keep, INFERRED |
 | Kuningan, "datang & lihat sendiri", "siap hari ini" | not used | page says "akan launching" ×1 → deliberately left out |
 
+## 2c. N3 · 201D refresh with the apartment hook (build only on the N2 winner trigger, §4)
+_Added 2026-11-20 13:02. Creatives re-read today (account data): 201D = creative `965339026357938`, 208 = `980979054320303`; both use Page `321292677733040`, IG `17841466480733343`, CTA Learn more, same landing page._
+
+**Ad set:** §2a exactly (duplicate BC208 `120247180846830572`, delete the copied ad, cap 94,250), name `BC-W0-N3 201D Apartemen JKTcity NoExcl`.
+**Ad** `BC-W0-N3-<YYYYMMDD>`: single image, **201D's image by hash `1bf532b9a01eeda4334da99ef6bf3005`** (unit row photo; its burned-in price already says "(Harga Promo) 750rb/bulan", so no edit). Link `https://fabwarehouses.com/sewa-gudang-self-storage-jakarta/?ad={{ad.name}}`.
+
+**Primary text** (paste as is):
+```
+Apartemen malah jadi gudang? 😣
+Sayang kalau kamar cuma dipakai buat simpan barang.
+Gudang Self-storage Fab di Jakarta Selatan (Sudirman):
+📦 Muat barang besar: lemari, kulkas, sofa, tempat tidur, sepeda.
+🔒 Bersih, aman, CCTV.
+🚚 Barangmu bisa kami pickup juga.
+💰 Harga Promo Launching: Rp750rb/bulan.
+```
+**Headline:** `Sewa Gudang Self Storage Jakarta (Promo: Rp750.000 /bulan)` (= 201D's live headline).
+**Advantage+ creative:** keep **the same as 201D** (image_animation, product_extensions, reveal_details_over_time, cv_transformation on). *INFERRED:* N3 is read against 201D, so the only difference should be the body (201D says "hanya dari 800rb" ×1 and "mulai dari Rp 800rb" ×1; N3 says the page's Promo Launching 750).
+- Change vs the 10:01 brief: dropped "kamar yang **mahal**" (page 0×, an unbacked value claim) → "Sayang kalau kamar cuma dipakai buat simpan barang" (kamar 5× on page).
+
+## 2d. N1 · Parents' hook on BC208's real photo (rank last; build after N3, or with N3 if the site gets a family line)
+**Ad set:** §2a, name `BC-W0-N1 Ortu RealPhoto JKTcity NoExcl`.
+**Ad** `BC-W0-N1-<YYYYMMDD>`: single image, **BC208's photo by hash `55399a85bf180fa15460c3fa5232af05`** (real photo: room packed with boxes, toys, stroller).
+- **Default (no new upload): hook in text only.** The 208 image's own stickers say "Kamar di rumah udah kayak labirin?", which is fine with this body. 
+- *Optional:* burn 3-21's line onto a clean copy of the 208 photo = a **new image upload** (Markus has the original). Only if it's quick; note it in the handback.
+
+**Primary text** (paste as is):
+```
+Semua orang tua di Jakarta tahu rasanya: rumah penuh, tapi tidak ada yang mau dibuang… 😅
+Ada solusinya: Gudang Self-storage Fab, Jakarta Selatan (Sudirman).
+📦 Muat stroller, sepeda, lemari, kotak-kotak barang.
+🔒 Bersih, aman, CCTV.
+🚚 Barangmu bisa kami pickup juga.
+💰 Harga Promo Launching: Rp750rb/bulan.
+```
+**Headline:** `Rumah penuh barang? Gudang Self-storage Fab (Promo Rp750rb/bulan)`
+**Advantage+ creative:** same as BC208 (all 4 on), so N1 vs 3-21 differs in image (real vs staged), not in settings.
+Don't copy from 208: "hanya dari 800rb" ×2, headline "dari Rp800.000", "(link ada di bio)", the hashtags.
+
+### Page check N3 + N1 (curl 2026-11-20 13:02, scripts/styles/tags stripped)
+| Claim | Page | Verdict |
+|---|---|---|
+| Harga Promo Launching Rp750rb/bulan | "promo launching" ×10, 750 ×9 (800 ×1 FAQ) | ✔ |
+| Jakarta Selatan (Sudirman) | 2 / 9 | ✔ (Jakarta Pusat ×9 still on the page = W1 site bug, not copied) |
+| apartemen / kamar | 9 / 5 | ✔ N3 hook backed |
+| lemari / kulkas / sofa / tempat tidur / sepeda | 3 / 3 / 2 / 2 / 3 | ✔ |
+| bersih / aman / CCTV / pickup | 6 / 14 / 6 / 9 | ✔ |
+| stroller / mainan | 0 / 0 | ⚠️ physical fact (a stroller is in the 208 photo, units fit bikes and wardrobes) → keep, INFERRED |
+| orang tua / anak / keluarga | 0 / 0 / 0 | ⚠️ message-match risk → N1 stays rank last; fix = one FAQ line "untuk keluarga dengan anak kecil" with W1/W2 |
+| mahal | 0 | ❌ removed from N3 |
+| Kuningan, "datang & lihat sendiri", "siap hari ini" | not used | page "akan launching" ×1 → left out |
+
+**Read rules N3 / N1:** same as N2 in §4 (kill, starvation), but the day-14 comparative parent is **201D** for N3 and **BC Image 3-21** for N1 (keep if CPL ≤ parent × 1.15 or ≤ 70k, same window).
+
 ## 3. Handback (one line in `fuku/INBOX.md`)
 `BC W0 done <date time>: ladder <4/4 | which>, N2 ad set <ID>, overlays <burned | headlines>, enhancements off <yes|no>`
 
 ## 4. Read rules (fixed now, from the two source cards)
 - **Day 1:** split at the edit time (playbook §D3); read on full days at the 07:00 readout.
 - **Ladder kill, per ad set:** back to 94,250 at ≥ Rp 190k with 0 leads, or ≥ Rp 285k with ≤ 1 lead. **Comparative:** revert all 4 if group 7d CPL > 1.3× the rest of BC **and** > 95k. **Day 7:** keep if group ≤ 95k on ≥ Rp 285k; spend < Rp 285k = cap wasn't the limiter → close the lever.
-- **N2 kill:** pause at ≥ Rp 190k / 0 leads or ≥ Rp 285k / ≤ 1 lead. **Starvation:** < Rp 50k in 7 days = cap-limited, no creative verdict. **Day 14 comparative:** keep if CPL ≤ 204F × 1.15 or ≤ 70k, same window. **Winner (criterion 2):** ≥ Rp 285k in 7 days at ≤ 70k → N3 + N1 next, same template (§2a duplicate, §2b one ad).
+- **N2 kill:** pause at ≥ Rp 190k / 0 leads or ≥ Rp 285k / ≤ 1 lead. **Starvation:** < Rp 50k in 7 days = cap-limited, no creative verdict. **Day 14 comparative:** keep if CPL ≤ 204F × 1.15 or ≤ 70k, same window. **Winner (criterion 2):** ≥ Rp 285k in 7 days at ≤ 70k → N3 (§2c) then N1 (§2d), rows ready since 11/20 13:02.
 - **Account guard:** Fab 7d CPL > 95k with the ladder group or N2 as the cause → revert the cause only.
 
 ## 5. Template for later BC waves (N3, N1, Wave 1–6 photos)
