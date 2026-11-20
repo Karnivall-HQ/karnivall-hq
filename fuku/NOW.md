@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-20 16:02 WIB (cloud heartbeat: quiet run, ladder read script)_
+_Last updated: 2026-11-20 17:01 WIB (cloud heartbeat: quiet run, Retro #5 prep)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -13,12 +13,12 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 2. **Poll 11/20:** ~19:00 (13:00 done: clean) (activity log; PEIKIRA spend; watch for a sudden uncap/undo: CBO is still Rp 3M).
 3. **Undo seen in the log anyway:** `2026-11-19_post_undo_rebase_pack.md` §0 the same run.
 4. **11/23 weekly:** run `bc_swapin_precheck.py` (§0b pulls) before any swap-in ask; first 7d 11/16–11/22 (PEIKIRA ≈ 0 all window → expect BC-only CPL); re-check the parked undo with it. **11/27:** ADSET-3 verdict (starved branch A unless it spends ≥ Rp 95k).
-5. **Retro #5:** ~11/21 or at 15 new lessons.
+5. **Retro #5:** ~11/21: one pass from `fuku/memory/retro5_prep.md` (12 lessons mapped, new `meta-creative-build.md` drafted).
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **11/23 weekly pre-pull part 3 (~11/21):** 11/19–11/20 delta + run-sheet rows for the 11/20 gate + strategy shift + cap ladder + Wave 0 sheet + criterion-2 branch C line (replan l.18); Incess pick split pre-pull (042, 030).
 2. **Waves 2–6 page re-check as BC rows:** run the 14:02 page count on `2026-11-12_wave2_build_sheet.md`, `wave3-4`, `wave5-6` copy; mark each line ✔/rewrite like §2e, so any photo drop builds without a re-check.
-3. **Retro #5 prep:** list lessons since Retro #4 (lessons.md) and draft which go to playbooks, so the ~11/21 retro is one pass.
+3. **M-002 groundwork:** Incess pick-level split pre-pull for 11/23 (042, 030: 8-wk CPL rows) so Monday is read-only + one table.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
