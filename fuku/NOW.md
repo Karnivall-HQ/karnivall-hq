@@ -1,10 +1,11 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-20 09:01 WIB (cloud heartbeat: groundwork, criterion-2 branch C)_
+_Last updated: 2026-11-20 10:01 WIB (cloud heartbeat: groundwork, BC creative angle scan)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
 - **M-001 (P0):** 11/20 gate **7d 11/13–11/19 Rp 1,473,060 / 16 = 92.1k ✅** *(calc)*: criterion 1 met this week, by mix (BC 679,253 / 12 = 56.6k; PEIKIRA 793,807 / 4 = 198.5k, ≈ off under the 105k caps). G2 ❌ (no winner), G3 ✅. Variant H sent, no budget ask.
 - **Strategy shift 11/20:** undo rec reversed (undo ≈ 114k ❌ *(calc, INFERRED)*) → old OUTBOX #1 parked. Volume lever = BC (52–79k across 7 readouts) + new winners. BC cap ladder card ready (201/204/208/BC3-21 c10 → 105k, group 8-wk 60.3k), held: adds only ≈ Rp 20–100k/day *(calc, INFERRED)*. Criterion 2 branch C (caps stay, BC leads): 01/15 ≈ 217–567k/day → MISS while caps hold; waves must be own BC ad sets; honest date ≈ Feb (INFERRED) *(calc)*.
+- **BC creative (11/20 10:01):** real facility photos convert best in BC (201D + 204F 54.0k vs clutter scenes 66.7k *(calc)*). 3 new BC ads briefed from existing photos (N2 labirin→facility carousel first): `creatives/2026-11-20_bc_angle_scan_brief.md`, held, ships with the ladder.
 - **M-002 (P1):** 11/23 skeleton ready; Incess 3-day 11/16–11/18 41.2k ⚠️ → Monday 11/23 pick-level split (042 + 030 first).
 
 ## Next actions (dated or triggered)
@@ -15,9 +16,9 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 5. **Retro #5:** ~11/21 or at 15 new lessons.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **11/23 weekly pre-pull part 3 (~11/21):** 11/19–11/20 delta + run-sheet rows for the 11/20 gate + strategy shift + cap ladder + criterion-2 branch C line (replan l.18); Incess pick split pre-pull (042, 030).
-2. **BC creative angle scan:** which BC concepts (Manny/UGC/Anak Tele) carry the 4 ladder ad sets → brief 2–3 new BC ads on those angles (real photos, per R1/R11).
-3. **BC variant header for the wave build sheets:** campaign `120236222888610572`, own ad set, cap 94,250, JKTcity audience as 201/204/208; day-21 fallback read (replan branch C).
+1. **11/23 weekly pre-pull part 3 (~11/21):** 11/19–11/20 delta + run-sheet rows for the 11/20 gate + strategy shift + cap ladder + angle brief + criterion-2 branch C line (replan l.18); Incess pick split pre-pull (042, 030).
+2. **BC variant header for the wave build sheets:** campaign `120236222888610572`, own ad set, cap 94,250, JKTcity audience as 201/204/208; day-21 fallback read (replan branch C). Fold N1–N3 in as the first BC wave.
+3. **Combined 11/23 swap-in ask:** one line "Build N2 in BC + apply the cap ladder?" with one Markus checklist (ladder 4 fields + N2 ad set/ad build spec), ready to replace the weaker of #2/#3.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
