@@ -1,10 +1,10 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-20 07:05 WIB (cloud heartbeat: 11/20 gate readout, G1 ✅ 92.1k)_
+_Last updated: 2026-11-20 08:02 WIB (cloud heartbeat: groundwork, BC cap ladder card)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
 - **M-001 (P0):** 11/20 gate **7d 11/13–11/19 Rp 1,473,060 / 16 = 92.1k ✅** *(calc)*: criterion 1 met this week, by mix (BC 679,253 / 12 = 56.6k; PEIKIRA 793,807 / 4 = 198.5k, ≈ off under the 105k caps). G2 ❌ (no winner), G3 ✅. Variant H sent, no budget ask.
-- **Strategy shift 11/20:** undo rec reversed (undo ≈ 114k ❌ *(calc, INFERRED)*) → old OUTBOX #1 parked. Volume lever = BC (52–79k across 7 readouts) + new winners. Criterion 2 at ≈ Rp 98k/day = 10% of the leg; at 1M/day 159.6k MISS.
+- **Strategy shift 11/20:** undo rec reversed (undo ≈ 114k ❌ *(calc, INFERRED)*) → old OUTBOX #1 parked. Volume lever = BC (52–79k across 7 readouts) + new winners. BC cap ladder card ready (201/204/208/BC3-21 c10 → 105k, group 8-wk 60.3k), held: adds only ≈ Rp 20–100k/day *(calc, INFERRED)*. Criterion 2 at ≈ Rp 98k/day = 10% of the leg; at 1M/day 159.6k MISS.
 - **M-002 (P1):** 11/23 skeleton ready; Incess 3-day 11/16–11/18 41.2k ⚠️ → Monday 11/23 pick-level split (042 + 030 first).
 
 ## Next actions (dated or triggered)
@@ -15,13 +15,13 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 5. **Retro #5:** ~11/21 or at 15 new lessons.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **BC volume lever (new, top):** re-validate the parked BC204 bid-cap probe + BC ad sets on fresh 7d (11/13–11/19): which BC ad sets deliver ≤ 95k and are cap-throttled? Output = one apply-ready card, held until #2/#3 move (stalled-ask rule).
-2. **11/23 weekly pre-pull part 3 (~11/21):** 11/19–11/20 delta + run-sheet rows for the 11/20 gate + strategy shift; Incess pick split pre-pull (042, 030).
-3. **Criterion-2 re-plan on a BC-led path:** `2026-11-20_criterion2_replan.md` assumes PEIKIRA uncapped; add a "caps stay, BC scales" branch with BC spend steps at 56.6k base.
+1. **11/23 weekly pre-pull part 3 (~11/21):** 11/19–11/20 delta + run-sheet rows for the 11/20 gate + strategy shift + cap ladder card; Incess pick split pre-pull (042, 030).
+2. **Criterion-2 re-plan on a BC-led path:** `2026-11-20_criterion2_replan.md` assumes PEIKIRA uncapped; add a "caps stay, BC scales" branch: BC base 56.6k + ladder ≈ +20–100k/day; the rest must come from new creative.
+3. **BC creative angle scan:** which BC concepts (Manny/UGC/Anak Tele) carry the 4 ladder ad sets → brief 2–3 new BC ads on those angles (real photos, per R1/R11).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
-- Parked: undo the 11/15 change (re-check 11/23), Kuningan open?, BC204 probe, "TourHub" FYI, close rate + months stayed.
+- Parked: undo the 11/15 change (re-check 11/23), Kuningan open?, BC cap ladder (`2026-11-20_bc_cap_ladder_card.md`, swap in at 11/23 if #2/#3 still stalled), "TourHub" FYI, close rate + months stayed.
 
 ## Standing facts
 - Read `playbooks/meta-ads-algorithm.md` + `meta-cpl-diagnosis.md` + `meta-tests-and-proposals.md` before any ads work, `meta-modelling-and-planning.md` before any model/plan; `ad-copy-page-check.md` before any copy is paste-ready.
@@ -35,4 +35,4 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - Ad015 7d Rp 444,234 / 3 = 148.1k, CTR 2.13%, freq 1.13 → CPL rule n/a (< 600k).
 - Site (fabwarehouses.com): W1/W2 not applied (curl 11/20 07:05: Jakarta Pusat ×9, Rp 800.000 ×3, "akan launching" ×3).
 - Incess 7d 11/12–11/18: 33.0k; picks +34% CPL WoW ⚠️ watch; bid-cap proposal retired 11/19.
-- Parked in OUTBOX: undo, Kuningan, BC204 cap probe, W3/W4 + WA script, 4 disabled ad accounts, lead-value questions.
+- BC: Rp 97k/day = 1.94% of 5M, no edits since 11/12; caps 94,250. Parked in OUTBOX: undo, Kuningan, BC cap ladder, W3/W4 + WA script, 4 disabled ad accounts, lead-value questions.
