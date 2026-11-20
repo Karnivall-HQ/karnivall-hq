@@ -1,11 +1,11 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-20 11:01 WIB (cloud heartbeat: groundwork, BC Wave 0 Markus sheet)_
+_Last updated: 2026-11-20 12:02 WIB (cloud heartbeat: groundwork, old wave sheets re-pointed to BC)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
 - **M-001 (P0):** 11/20 gate **7d 11/13–11/19 Rp 1,473,060 / 16 = 92.1k ✅** *(calc)*: criterion 1 met this week, by mix (BC 679,253 / 12 = 56.6k; PEIKIRA 793,807 / 4 = 198.5k, ≈ off under the 105k caps). G2 ❌ (no winner), G3 ✅. Variant H sent, no budget ask.
 - **Strategy shift 11/20:** undo rec reversed (undo ≈ 114k ❌ *(calc, INFERRED)*) → old OUTBOX #1 parked. Volume lever = BC (52–79k across 7 readouts) + new winners. BC cap ladder card ready (201/204/208/BC3-21 c10 → 105k, group 8-wk 60.3k), held: adds only ≈ Rp 20–100k/day *(calc, INFERRED)*. Criterion 2 branch C (caps stay, BC leads): 01/15 ≈ 217–567k/day → MISS while caps hold; waves must be own BC ad sets; honest date ≈ Feb (INFERRED) *(calc)*.
-- **BC Wave 0 (11/20 11:01):** ladder + N2 carousel in one Markus sheet, no new photos (all 5 images in the account by hash): `creatives/2026-11-20_bc_wave0_markus_sheet.md`. Held; = the 11/23 swap-in ask. Also the BC header for all later waves (brief: `2026-11-20_bc_angle_scan_brief.md`).
+- **BC Wave 0 (11/20 11:01):** ladder + N2 carousel in one Markus sheet, no new photos (all 5 images in the account by hash): `creatives/2026-11-20_bc_wave0_markus_sheet.md`. Held; = the 11/23 swap-in ask. Also the BC header for all later waves (brief: `2026-11-20_bc_angle_scan_brief.md`); all 6 old wave sheets now point to it (12:02).
 - **M-002 (P1):** 11/23 skeleton ready; Incess 3-day 11/16–11/18 41.2k ⚠️ → Monday 11/23 pick-level split (042 + 030 first).
 
 ## Next actions (dated or triggered)
@@ -17,8 +17,8 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **11/23 weekly pre-pull part 3 (~11/21):** 11/19–11/20 delta + run-sheet rows for the 11/20 gate + strategy shift + cap ladder + Wave 0 sheet + criterion-2 branch C line (replan l.18); Incess pick split pre-pull (042, 030).
-2. **Re-point old wave build sheets:** add a one-line "where = BC Wave 0 header §5 while PEIKIRA caps hold" pointer to `2026-11-12_wave1/2/3-4` + `2026-11-13_wave5-6` sheets (grep for "control ad set").
-3. **N3 + N1 rows for the Wave 0 sheet:** same §2a/§2b format, 201D hash `1bf532b9…`, 208 hash, page-checked, ready for the N2 winner trigger.
+2. **N3 + N1 rows for the Wave 0 sheet:** same §2a/§2b format, 201D hash `1bf532b9…`, 208 hash, page-checked, ready for the N2 winner trigger.
+3. **Wave 1 one-pager as a BC build:** turn `2026-11-12_wave1_markus_onepager.md` S1/B1/B2 into §2a/§2b rows of the Wave 0 format (names `BC-W1-…`), so the photo drop needs zero re-assembly.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
