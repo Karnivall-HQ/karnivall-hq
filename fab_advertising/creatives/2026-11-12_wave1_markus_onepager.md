@@ -6,6 +6,8 @@ _Merges `2026-11-11_wave1_launch_checklist.md` + `2026-11-12_wave1_build_sheet.m
 
 > **11/20 12:02 where-pointer (supersedes the 11/16 "where" above while the PEIKIRA caps hold).** Build every ad from this sheet as its **own BC ad set**, not inside PEIKIRA: `2026-11-20_bc_wave0_markus_sheet.md` §2a (duplicate `BC208 UGC JKTcity NoExcl` `120247180846830572`, rename `BC-W<n>-<code> … JKTcity NoExcl`, delete the copied ad, cap Rp 94,250) + §2b (one ad, enhancements off, `?ad={{ad.name}}`), read with its §4 rules. Why: the 105k caps hold PEIKIRA to ≈ Rp 0.6k–8k/day since 11/17 and ADSET-3 got Rp 33 in 7 days, so a PEIKIRA wave can't reach a readable spend; BC ran Rp 679,253 / 12 = 56.6k on 11/13–11/19 *(calc)* [account data]. Copy, stickers, price lines and page checks below stand (re-check the page at build time). "Pause the 5 dead ads" / "never touch Ad015" lines apply only if the caps are removed. Plan: `../reports/2026-11-20_criterion2_replan.md` (branch C).
 
+> **11/20 14:02 BC rows ready.** S1/B1/B2 are now pre-built as BC rows in `2026-11-20_bc_wave0_markus_sheet.md` §2e (ad-set names, identity, re-checked copy). On a photo drop, build from §2e, not from §3 below: 5 copy lines changed after today's page check (no "mahal", no FAB750 code, no ITC Kuningan line, "pickup gratis" for "dijemput", "bisa tanpa deposit").
+
 ## 1. Gates (Alvian answers; ✅ all before publish)
 | # | Gate | If NO / unknown |
 |---|---|---|

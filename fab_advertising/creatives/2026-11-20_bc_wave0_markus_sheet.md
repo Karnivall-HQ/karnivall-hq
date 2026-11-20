@@ -133,6 +133,61 @@ Don't copy from 208: "hanya dari 800rb" ×2, headline "dari Rp800.000", "(link a
 
 **Read rules N3 / N1:** same as N2 in §4 (kill, starvation), but the day-14 comparative parent is **201D** for N3 and **BC Image 3-21** for N1 (keep if CPL ≤ parent × 1.15 or ≤ 70k, same window).
 
+## 2e. Wave 1 (S1 / B1 / B2) as BC rows: build on the photo drop, zero re-assembly
+_Added 2026-11-20 14:02. Source: `2026-11-12_wave1_markus_onepager.md` (gates G1–G6, photos P1/P2, stickers stand). This section replaces its §2–§3 "where/how" while the PEIKIRA caps hold; its copy was re-checked against the page today and **5 lines changed** (table below)._
+**Needs:** the new phone photos P1 (apartment/bedroom corner) + P2 (suitcases + boxes by the door) from `2026-11-06_batch01_v2_home_clutter_shotlist.md`, stickers burned in (9:16). This is the only wave that needs a **new upload**.
+
+**3 ad sets, each = §2a** (duplicate BC208 `120247180846830572`, delete the copied ad, cap Rp 94,250), one ad each:
+| Ad set | Ad | Photo | Stickers (top · middle · bottom) | Headline |
+|---|---|---|---|---|
+| `BC-W1-S1 Apartemen P1 JKTcity NoExcl` | `BC-W1-S1-<YYYYMMDD>` | P1 | `Kamar apartemen jadi gudang? 😣` · `Pindahin aja ke Gudang Fab` · `mulai 750rb/bulan 👇` | Kamar Kembali Lega, Barang Tetap Aman |
+| `BC-W1-B1 Pickup P2 JKTcity NoExcl` | `BC-W1-B1-<YYYYMMDD>` | P2 | `Mau beresin barang tapi males angkut?` · `Tim Fab yang pickup 🚚` · `Gudang mulai 750rb/bln 👇` | Sewa Gudang Jakarta, Pickup Barang Gratis |
+| `BC-W1-B2 TanpaDeposit P1 JKTcity NoExcl` | `BC-W1-B2-<YYYYMMDD>` | P1 | `Kamar penuh barang? 😩` · `Bisa tanpa deposit, pickup gratis` · `mulai 750rb/bulan 👇` | Bisa Tanpa Deposit, Pickup Gratis, Mulai Rp750rb |
+
+Identity = BC parent, not Ad015 (*INFERRED:* the read is against BC ads on the same Page): Page `321292677733040` · IG `17841466480733343` · CTA **Learn more** · link `https://fabwarehouses.com/sewa-gudang-self-storage-jakarta/?ad={{ad.name}}`.
+**Advantage+ creative:** as BC208 except **`cv_transformation` off** and `image_text_translation` off if shown (the stickers are the copy; a crop/re-render or a translation would change the test, INFERRED, same reason as the 11/12 onepager).
+
+**Primary text** (paste as is):
+
+S1
+```
+😣 Kamar apartemen malah jadi gudang?
+Sayang kalau satu kamar cuma buat numpuk barang.
+📦 Pindahkan barang yang jarang dipakai ke gudang pribadi di Fab Self-storage. Private & tertutup, bersih, aman, CCTV.
+📍 Sudirman, Jakarta Selatan
+💰 Harga Promo Launching Rp750rb/bulan.
+```
+B1
+```
+🚚 Gudang self-storage yang barangnya bisa kami pickup gratis.
+Nggak perlu sewa mobil, nggak perlu repot. Tim Fab pickup barang dari apartemen, rumah, atau kantormu, dan staff kami bantu loading.
+🔒 Gudang pribadi, private & tertutup, CCTV
+📍 Sudirman, Jakarta Selatan
+💰 Harga Promo Launching Rp750rb/bulan.
+```
+B2
+```
+📦 Sewa gudang self-storage, bisa tanpa deposit, pickup barang gratis.
+Bayar per 1 bulan, tanpa ikatan minimal lama sewa. Barangmu kami pickup dari rumah dan disimpan di gudang pribadi yang private & tertutup.
+📍 Sudirman, Jakarta Selatan
+💰 Harga Promo Launching Rp750rb/bulan.
+```
+
+### Changes vs the 11/12 copy (page curl 2026-11-20 14:02, scripts/styles/tags stripped)
+| 11/12 line | Page count | Change |
+|---|---|---|
+| "Sewa apartemen di Jakarta itu **mahal**" (S1) | mahal 0 | ❌ dropped (same call as N3) |
+| "(**kode FAB750** via WhatsApp)" (all 3) | FAB750 0, kode 0 | ❌ dropped (G2 never answered; page offers "Promo Launching" with no code) |
+| "📍 **ITC Kuningan Ambasador**, Sudirman" (all 3) | 1×, inside "saat ini Fab **akan launching** di ITC Kuningan Ambasador" | → "Sudirman, Jakarta Selatan" (Sudirman 9, Jakarta Selatan 2); G6 stays open in parked OUTBOX |
+| "**terkunci**", "**unit** pribadi" | terkunci 0, unit pribadi 0 | → "gudang pribadi, private & tertutup" (pribadi 15) |
+| "**dijemput / jemput**", "angkat-angkat" | jemput 0, angkat 0 | → "pickup gratis" (gratis 7, all "Gratis: pickup barang dari tempatmu") + "staff bantu loading" |
+| "**Tanpa deposit**" (B2) | tanpa deposit 0; comparison table: Fab "bisa tanpa uang deposit/jaminan" | → "**bisa** tanpa deposit" (STATED, hedged as the page is); G4 still asks if it's always true |
+
+Kept as backed: apartemen 9, kamar 5, bersih 6, aman 14, CCTV 6, "per 1 bulan" + "tanpa ikatan minimal lama sewa" ✔, Promo Launching ×10 / 750 ×9 (800 ×1 FAQ = W2 site bug).
+
+**Gates (from the onepager §1, re-mapped):** G1 price → C3 above. G2 → gone (no code). G3/G4 pickup + deposit: page-backed now (STATED), so B1/B2 no longer wait on Alvian; a "no" from him still swaps in S6/S2 (`2026-11-12_wave2_build_sheet.md`). G5 site: launch anyway. G6: not needed (no Kuningan line).
+**Read rules:** §4 N2 rules per ad set; day-14 comparative parent = **BC208** (same home-clutter angle, real photo): keep if CPL ≤ BC208 × 1.15 or ≤ 70k, same window. Handback: `BC W1 done <date time>: S1/B1/B2 ad set IDs <…>, stickers burned <yes|no>, cv_transformation off <yes|no>`.
+
 ## 3. Handback (one line in `fuku/INBOX.md`)
 `BC W0 done <date time>: ladder <4/4 | which>, N2 ad set <ID>, overlays <burned | headlines>, enhancements off <yes|no>`
 
