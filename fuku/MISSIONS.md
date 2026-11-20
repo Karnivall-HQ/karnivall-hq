@@ -179,6 +179,7 @@
 - **Status:** in progress
 - **Strategy:** The cloud heartbeat runs it on the first Monday run (07:00 WIB). Turn it into a playbook after the first report.
 - **Progress:**
+  - 2026-11-20 19:02: split part 2 (047 + 026) in the same pre-pull file: 8-wk 047 27.3k, 026 26.8k *(calc)*. 047 = volume expansion (spend ×2.20, 35.6k); 026 spend shrinking (×0.74) at the cheapest CPL (27.4k): Meta moving spend off 026 (INFERRED). Flag lines set; all 4 picks covered for Monday. No ask.
   - 2026-11-20 18:02: Incess 042 + 030 split pre-pull (8 weekly rows 09/25–11/19) → `fab_advertising/reports/2026-11-20_incess_pick_split_prepull.md`. 042 8-wk 35.8k, 030 35.2k *(calc)*; 11/13–11/19 042 34.1k (spend ×1.55), 030 43.5k (×2.41): volume expansion at constant 46k caps, not fatigue (freq ≤ 1.56, CTR in band). Monday flag lines pre-set. No ask.
   - 2026-11-19 10:01: 11/18 delta locked into the 11/23 pre-pull: Fab Rp 119,437 / 4 (BC 111,199 / 4; PEIKIRA 8,238 / 0); Incess Rp 1,232,085 / 24 = 51.3k on the day, picks 755,389 / 10 = 75.5k (042 110.7k). 3-day 11/16–11/18 Incess 41.2k, picks 42.1k *(calc)* → ⚠️ the pick-level split trigger (> 30k) is met; Monday runs it (042 + 030 first). No verdict on < 7d.
   - 2026-11-19 09:01: Incess bid-cap proposal re-checked on 7d 11/12–11/18 and **retired**: no bid edits, campaign Rp 1.01M/day, 215 leads @ 33.0k; picks 18.6 leads/day @ 33.5k *(calc)*. New watch: CPL up +34% WoW on the picks at constant caps (030 Kotak 47.5k); the 11/23 weekly decides.

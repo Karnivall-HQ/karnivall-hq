@@ -27,3 +27,32 @@ Caps unchanged on every row: 46,000 (bid_amount). 030 last week CPL ÷ cap = 0.9
 2. **Flag** an ad set only if its 7d CPL > its 8-wk max (042 > 46.9k, 030 > 46.7k) **or** CTR < its 8-wk min (042 < 2.49%, 030 < 1.79%) **or** freq > 2.0.
 3. No flag → weekly says "Incess CPL up on volume, not fatigue; caps stay; no ask". A flag on 030 alone → note only (030 = 18 of the 82 leads 042+030 got last week; small counts swing); a flag on 042 → ad-level split of 042 (one live ad) + creative refresh idea in Top 3, still no ad-account ask before lead value is known.
 4. Peer benchmarks: none (empty peer set); trend tool: no data. Don't wait for them.
+
+---
+
+## Part 2 (19:02 WIB): 047 + 026, the other 2 picks (same call shape, read-only)
+`OMObatch047 UGC 1Ad IND-Bali NoExcl – Copy` `120239723303450222` (cap 46,000) · `OMObatch3 026 Manny5Ads ALLindo NoExc MaP` `120244551313580222` (cap 45,000). CPL per row *(calc)* from tool spend/leads.
+
+| Week | 047 spend / leads | 047 CPL | 047 CTR · freq | 026 spend / leads | 026 CPL | 026 CTR · freq |
+|---|---|---|---|---|---|---|
+| 09/25–10/01 | 166,437 / 3 | 55,479 | 3.12% · 1.37 | 867,689 / 31 | 27,990 | 2.19% · 1.61 |
+| 10/02–10/08 | 604,688 / 22 | 27,486 | 2.46% · 1.69 | 803,168 / 26 | 30,891 | 2.07% · 1.61 |
+| 10/09–10/15 | 523,578 / 15 | 34,905 | 2.93% · 1.74 | 840,807 / 40 | 21,020 | 2.54% · 1.84 |
+| 10/16–10/22 | 499,633 / 18 | 27,757 | 2.95% · 1.65 | 856,875 / 30 | 28,562 | 2.15% · 1.88 |
+| 10/23–10/29 | 586,852 / 25 | 23,474 | 3.14% · 1.67 | 651,780 / 20 | 32,589 | 2.56% · 1.65 |
+| 10/30–11/05 | 752,945 / 26 | 28,959 | 2.29% · 1.76 | 411,225 / 13 | 31,633 | 2.36% · 1.67 |
+| 11/06–11/12 | 713,209 / 42 | 16,981 | 2.88% · 1.76 | 198,554 / 13 | 15,273 | 2.64% · 1.40 |
+| 11/13–11/19 | **1,209,951 / 34** | **35,587** | 2.87% · 1.66 | **492,697 / 18** | **27,372** | 2.38% · 1.56 |
+| **8-wk** *(calc)* | 5,057,293 / 185 | **27,337** | | 5,122,795 / 191 | **26,821** | |
+
+Caps unchanged on every row (047 46,000; 026 45,000). Last week CPL ÷ cap: 047 0.77, 026 0.61 *(calc)*.
+
+### What it says
+- **047 = same pattern as 042/030:** spend ×2.20 vs its prior 7-wk avg *(calc)*, CPL 17.0k → 35.6k, CTR 2.87% (in band), freq 1.66. Volume expansion, not fatigue (INFERRED). Its 35.6k is the highest week with ≥ 10 leads; the 55.5k week 1 is 3 leads (noise).
+- **026 is the odd one out:** spend ×0.74 of its prior avg *(calc)* (Rp 867k/wk in Sept → 199–493k since 11/06), CPL 27.4k = cheapest of the 4 picks last week. Meta is shifting the campaign's spend away from 026 toward 042/047/030 (INFERRED; caps unchanged, so not a human edit).
+- **All 4 picks, 8-wk** *(calc)*: 042 35.8k · 030 35.2k · 047 27.3k · 026 26.8k.
+
+### Monday flag lines (047 + 026; same rules as part 1, small-count weeks < 10 leads excluded from the max)
+- **047:** flag if 7d CPL > 35.6k, CTR < 2.29%, or freq > 2.0.
+- **026:** flag if 7d CPL > 32.6k, CTR < 2.07%, or freq > 2.0. Also note (no flag) if spend < Rp 199k (keeps shrinking).
+- Same outcome rules as part 1 rule 3: a flag means an ad-level split + creative idea in Top 3, **no ad-account ask** before lead value is known.
