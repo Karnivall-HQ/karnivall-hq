@@ -1,10 +1,10 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-20 08:02 WIB (cloud heartbeat: groundwork, BC cap ladder card)_
+_Last updated: 2026-11-20 09:01 WIB (cloud heartbeat: groundwork, criterion-2 branch C)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
 - **M-001 (P0):** 11/20 gate **7d 11/13–11/19 Rp 1,473,060 / 16 = 92.1k ✅** *(calc)*: criterion 1 met this week, by mix (BC 679,253 / 12 = 56.6k; PEIKIRA 793,807 / 4 = 198.5k, ≈ off under the 105k caps). G2 ❌ (no winner), G3 ✅. Variant H sent, no budget ask.
-- **Strategy shift 11/20:** undo rec reversed (undo ≈ 114k ❌ *(calc, INFERRED)*) → old OUTBOX #1 parked. Volume lever = BC (52–79k across 7 readouts) + new winners. BC cap ladder card ready (201/204/208/BC3-21 c10 → 105k, group 8-wk 60.3k), held: adds only ≈ Rp 20–100k/day *(calc, INFERRED)*. Criterion 2 at ≈ Rp 98k/day = 10% of the leg; at 1M/day 159.6k MISS.
+- **Strategy shift 11/20:** undo rec reversed (undo ≈ 114k ❌ *(calc, INFERRED)*) → old OUTBOX #1 parked. Volume lever = BC (52–79k across 7 readouts) + new winners. BC cap ladder card ready (201/204/208/BC3-21 c10 → 105k, group 8-wk 60.3k), held: adds only ≈ Rp 20–100k/day *(calc, INFERRED)*. Criterion 2 branch C (caps stay, BC leads): 01/15 ≈ 217–567k/day → MISS while caps hold; waves must be own BC ad sets; honest date ≈ Feb (INFERRED) *(calc)*.
 - **M-002 (P1):** 11/23 skeleton ready; Incess 3-day 11/16–11/18 41.2k ⚠️ → Monday 11/23 pick-level split (042 + 030 first).
 
 ## Next actions (dated or triggered)
@@ -15,9 +15,9 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 5. **Retro #5:** ~11/21 or at 15 new lessons.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **11/23 weekly pre-pull part 3 (~11/21):** 11/19–11/20 delta + run-sheet rows for the 11/20 gate + strategy shift + cap ladder card; Incess pick split pre-pull (042, 030).
-2. **Criterion-2 re-plan on a BC-led path:** `2026-11-20_criterion2_replan.md` assumes PEIKIRA uncapped; add a "caps stay, BC scales" branch: BC base 56.6k + ladder ≈ +20–100k/day; the rest must come from new creative.
-3. **BC creative angle scan:** which BC concepts (Manny/UGC/Anak Tele) carry the 4 ladder ad sets → brief 2–3 new BC ads on those angles (real photos, per R1/R11).
+1. **11/23 weekly pre-pull part 3 (~11/21):** 11/19–11/20 delta + run-sheet rows for the 11/20 gate + strategy shift + cap ladder + criterion-2 branch C line (replan l.18); Incess pick split pre-pull (042, 030).
+2. **BC creative angle scan:** which BC concepts (Manny/UGC/Anak Tele) carry the 4 ladder ad sets → brief 2–3 new BC ads on those angles (real photos, per R1/R11).
+3. **BC variant header for the wave build sheets:** campaign `120236222888610572`, own ad set, cap 94,250, JKTcity audience as 201/204/208; day-21 fallback read (replan branch C).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
