@@ -57,3 +57,17 @@ Verified 21:02: each Find string occurs on the live page exactly as listed (pyth
 
 ## E. Pre-written 11/12 07:00 re-ask (if ask #1 is still unanswered, > 48h)
 > ❓ ~10 min on the site: fix the location (Jakarta Pusat → Jakarta Selatan, 9 lines) and the price (800 → 750: 1 FAQ line on the page all Fab ads land on + 1 line on the WA form page)? Paste-ready: `fab_advertising/reports/2026-11-11_w1w2_paste_ready.md`. My recommendation: yes, today. It's the only lever that can bring 7d CPL under Rp 95k by 11/20 on its own.
+
+## F. v2 (2026-11-20 22:02 WIB): re-verified + 3 optional one-line fixes
+
+**Re-verified on the live page (curl 22:02, HTTP 200, visible text):** every Find string in A and B still occurs exactly as listed (rows 1/2/3/7/8/9 ×1, row 4–6 string ×4 incl. row 1, B ×1). "Jakarta Pusat" ×9, "Rp 800" ×1, "Kelapa Gading" ×2. The page has not changed since 11/11, so A + B remain one paste.
+
+Optional extra lines (same edit session; each is independent, skip any you're unsure of):
+
+| # | Find (exact visible text) | Replace with | Why |
+|---|---|---|---|
+| F1 | `Saat ini Fab Self Storage akan launching di ITC Kuningan Ambasador Sudirman, Jakarta Selatan.` | `Fab Self Storage sudah buka di ITC Kuningan Ambasador Sudirman, Jakarta Selatan.` | **Only if the site is open now** (parked Kuningan question). Ads say "datang dan lihat sendiri"; the FAQ says "will launch". |
+| F2 | `Satpam Komplek Ruko yang aktif 24/7 + Staff Kemanana di dalam gudang.` | `Satpam yang aktif 24/7 + Staff Keamanan di dalam gudang.` | Page calls the site both "di dalam Building" (×2) and "Komplek Ruko" (×1); this drops the conflicting word and fixes the typo "Kemanana". If it really is a ruko complex, instead change the 2 "Building" lines. |
+| F3 | `Berlokasi di dalam Building dengan security 1×24 jam.` | (no change if F2 is applied) | Listed so the editor sees both "building" lines (the other is row 7) stay consistent. |
+
+After saving, §D checks add: `akan launching` = 0 (if F1), `Komplek Ruko` = 0 and `Kemanana` = 0 (if F2).

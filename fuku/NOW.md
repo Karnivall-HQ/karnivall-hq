@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-20 21:02 WIB (cloud heartbeat: Waves 2–6 BC rows page-checked)_
+_Last updated: 2026-11-20 22:02 WIB (cloud heartbeat: site-fix sheet v2)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -18,10 +18,10 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **11/23 weekly pre-pull part 3 (~11/21):** 11/19–11/20 delta + run-sheet rows for the 11/20 gate + strategy shift + cap ladder + Wave 0 sheet + criterion-2 branch C line (replan l.18).
 2. **Retro #5 dry pass (~11/21 if quiet):** apply `memory/retro5_prep.md` lines to the playbooks in one run; rewrite the Evolving section with the "groundwork that needs no ad-account change first" rule.
-3. **Site-fix sheet v2 (no ask):** fold the 11/20 21:02 page notes ("Sudirman Jakarta Pusat", Building vs Komplek Ruko) into `2026-11-11_w1w2_paste_ready.md` as exact find → replace lines, so #3 stays one paste.
+3. **11/23 OUTBOX #3 re-word (no new ask):** if #3 is still open at the weekly, re-ask it as one line pointing to §F (A+B re-verified 11/20 22:02; F1 rides on the Kuningan answer).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
-- #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits.
+- #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits (sheet re-verified 11/20 22:02, §F optional F1/F2).
 - Parked: undo the 11/15 change (re-check 11/23), Kuningan open?, BC cap ladder (`2026-11-20_bc_cap_ladder_card.md`, swap in at 11/23 if #2/#3 still stalled), "TourHub" FYI, close rate + months stayed.
 
 ## Standing facts
