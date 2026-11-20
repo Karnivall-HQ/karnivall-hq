@@ -11,6 +11,14 @@ _Status: **held, not asked** (stalled-ask rule). Becomes the single swap-in ask 
 | C3 | Landing page still says "Harga Promo Launching Rp750.000/bulan" (11/20 11:01 curl: "Promo Launching" ×10, "800" ×1 FAQ) | page moved to 800 → swap card 5 + body to "mulai Rp800rb/bulan" |
 | C4 | Ladder table re-pulled on the latest 7d (CPL ÷ cap still < 0.85 per ad set) | an ad set fails → drop that row only |
 
+### 0b. Fuku's one-pass re-check (added 11/20 15:02): `fuku/bin/bc_swapin_precheck.py`
+Read-only pulls, then one command; it prints C1–C4 + a budget-binding check + the ready one-line ask (or HOLD):
+1. **C1:** `ads_account_get_activity_logs` on account `484578521394893`, since 2026-11-12 → count human (non-Meta) entries on BC `120236222888610572` → `--log-edits N`.
+2. **C2 + C4:** `ads_get_ad_entities` on the 4 ladder ad set IDs, `time_increment 7`, 8 weekly rows to the latest full day → per ad set `--row KEY:CAP:SPEND:LEADS` (KEY = 201 / 204 / 208 / 3-21; CAP = current bid).
+3. **Budget:** BC campaign 7d spend + leads → `--bc7d SPEND:LEADS`.
+4. **C3:** the script curls the landing page itself (or `--page file.html`).
+Dry run on the card's 11/19 data: all ✅, group Rp 1,988,883 / 33 = Rp 60,269 *(calc)*, matches the card. Exit 1 = HOLD.
+
 ## 1. Cap ladder (4 fields, ~3 min) · campaign BC CBObass005 `120236222888610572`
 Ads Manager → each ad set → Bid control → `105000` → Publish. Budget untouched (CBO Rp 5M, it doesn't bind: 1.94% used).
 
