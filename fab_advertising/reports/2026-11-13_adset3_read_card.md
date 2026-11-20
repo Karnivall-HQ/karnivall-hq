@@ -105,8 +105,8 @@ Window = full days 11/13–11/19. Locked so far (account data via tracker; ADSET
 | 11/15 | 153,555 | 100,930 / 0 | 52,625 / 1 | 0 / 0 | Rp 3M CBO + Rp 105k cap from 00:41 |
 | 11/16 | 16,396 | 15,450 / 0 | 946 / 0 | 0 / 0 | capped, PEIKIRA ≈ off |
 | 11/17 | 11,725 | 10,439 / 0 | 1,286 / 0 | 0 / 0 | capped (locked 11/18 07:01) |
-| 11/18 | ⟨⟩ | ⟨⟩ | ⟨⟩ | ⟨⟩ | lock at 11/19 07:00 |
-| 11/19 | ⟨⟩ | ⟨⟩ | ⟨⟩ | ⟨⟩ | pull at 11/20 07:00 |
+| 11/18 | 8,238 | 8,020 / 0 | 218 / 0 | 0 / 0 | capped (locked 11/19 07:01) |
+| 11/19 | 628 | 588 / 0 | 7 / 0 | 33 / 1 | capped (pulled 11/20 07:05) |
 
 Control 11/13–11/17: Rp 461,493 / 3 = **153.8k** *(calc)*. ADSET-3: Rp 0 on 5 of 7 days.
 
@@ -115,3 +115,5 @@ Control 11/13–11/17: Rp 461,493 / 3 = **153.8k** *(calc)*. ADSET-3: Rp 0 on 5 
 - **B. Spends Rp 5k–94k** → still untested (rule 5/8 floor Rp 95k); report spend + leads only.
 - **C. Spends ≥ Rp 95k** → rule 3: CPL vs control's full-window CPL (control base so far 153.8k, 11/13–11/17): ≤ control → KEEP; > 1.3× control on ≥ Rp 400k → propose pause; rule 2 early-kill check first (≥ 190k / 0 leads).
 - If ask #1 undo lands mid-window: split the window at the change day (re-base rule §D) and judge ADSET-3 only on post-undo days.
+
+**Day-7 read 11/20 (07:05):** ADSET-3 7d spend Rp 33 · leads 0 · impr 1 · delivery days d 0 · CPL n/a · no ratio: starved (< Rp 10k) · label **starved** (branch A: UNTESTED, not a loser) · untested ads: all 6 (AKIRA-016 started delivery 11/19 22:35, Rp 33). Control 7d Rp 470,109 / 3 = 156.7k *(calc)*. 11/27 V3 wk1 cross-check: spend must be ≈ Rp 33.
