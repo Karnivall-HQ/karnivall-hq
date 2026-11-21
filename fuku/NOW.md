@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-21 12:01 WIB (cloud heartbeat: site §F F4 pickup line)_
+_Last updated: 2026-11-21 13:01 WIB (cloud heartbeat: 13:00 poll, no change)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -9,7 +9,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Next actions (dated or triggered)
 1. **Every run:** INBOX/OUTBOX for "done" on #2, "W1 W2 done", Kuningan answer, any reply on the parked undo.
-2. **Poll 11/21:** ~13:00, ~19:00 left (activity log; PEIKIRA spend; watch for a sudden uncap/undo: CBO is still Rp 3M).
+2. **Poll 11/21:** ~19:00 left (activity log; PEIKIRA spend; watch for a sudden uncap/undo: CBO is still Rp 3M).
 3. **Undo seen in the log:** `2026-11-19_post_undo_rebase_pack.md` §0 the same run.
 4. **11/23 weekly:** run `bc_swapin_precheck.py` (§0b pulls) before any swap-in ask; 7d 11/16–11/22; re-check the parked undo. **11/27:** ADSET-3 verdict (starved branch A unless it spends ≥ Rp 95k).
 
@@ -30,7 +30,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - Locks PEIKIRA: 11/14 309404 3 · 11/15 153555 1 · 11/16 16396 0 · 11/17 11725 0 · 11/18 8238 0 · 11/19 628 0 · 11/20 41 0. BC 11/20 86251 0. 7d bases 11/14–11/20: peik 499997 4, bc 691442 10 (p2: use 924806 8 in models). Criterion 1 LWD 12/03, nothing 69.2k; criterion 2 MISS (cap) *(calc)*.
 
 ## Open loops (current state, one line each)
-- Activity log (11/21 07:01): last human edit 11/15 00:41–00:42. Caps 105k, all ACTIVE.
+- Activity log (11/21 13:01): no entries since 11/21 00:00; last human edit 11/15 00:41–00:42. Caps 105k, all ACTIVE. Today 13:01: PEIKIRA Rp 0, BC Rp 37,790.
 - Ad015 7d Rp 444,234 / 3 = 148.1k → CPL rule n/a (< 600k).
 - Site (fabwarehouses.com, 11/21 10:01): W1/W2 not applied (Jakarta Pusat ×9, "800" ×1 FAQ, "akan launching" ×1). WA script aligned 11/21 ("bisa tanpa deposit"); still NOT sent, gates 800/G6/All-in.
 - Undo dry run 11/21: 104.2k MISS vs caps-held 69.2k → stays parked (weekly row 12). Incess picks +34% CPL WoW ⚠️ watch (11/23; 030 flag lines fixed to 46.1k / 2.27%). BC Rp 97k/day = 1.94% of 5M, caps 94,250.
