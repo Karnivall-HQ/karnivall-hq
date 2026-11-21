@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-21 10:01 WIB (cloud heartbeat: WA script page re-check)_
+_Last updated: 2026-11-21 11:01 WIB (cloud heartbeat: M-002 playbook v2)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -15,9 +15,8 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **11/23 OUTBOX #3 re-word (no new ask):** if #3 is still open at the weekly, re-ask as one line pointing to §F of `2026-11-11_w1w2_paste_ready.md`.
-2. **M-002 playbook draft:** turn the 11/09–11/16 weekly runs + 11/23 run-sheet into `playbooks/weekly-health-report.md` (M-002 strategy says: playbook after first report; not done yet).
-
-3. **Site copy W3 draft (no ad-account change):** one paste-ready line fixing the page's security contradiction ("Building" line 68 vs "Komplek Ruko" line 155) + pickup-area line; add to §F of `2026-11-11_w1w2_paste_ready.md` as optional, not a new ask.
+2. **Site copy W3 draft (no ad-account change):** one paste-ready line fixing the page's security contradiction ("Building" line 68 vs "Komplek Ruko" line 155) + pickup-area line; add to §F of `2026-11-11_w1w2_paste_ready.md` as optional, not a new ask.
+3. **11/30 weekly skeleton:** first quiet run after the 11/23 report, per `playbooks/weekly_ads_health_report.md` §A1–§A2 (needs the 11/23 numbers).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits (§F optional F1/F2).

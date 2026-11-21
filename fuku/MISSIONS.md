@@ -186,6 +186,7 @@
 - **Status:** in progress
 - **Strategy:** The cloud heartbeat runs it on the first Monday run (07:00 WIB). Turn it into a playbook after the first report.
 - **Progress:**
+  - 2026-11-21 11:01: Playbook v2 `fuku/memory/playbooks/weekly_ads_health_report.md` (strategy item "playbook after first report" done): §A week-before skeleton/run-sheet/dry-run/pre-pull/pre-set rules, §B Monday 11-step log-first run incl. mix-shift guard + ≥ 10-lead flag lines, §C write + OUTBOX. No ask.
   - 2026-11-21 09:02: Flag-line audit (tests A10, ≥ 10-lead weeks only): 042/047/026 lines hold; 030 fixed 46.7k → 46.1k CPL and 1.79% → 2.27% CTR (old values came from 7-lead weeks). Pre-pull file + weekly 11/23 updated. No ask.
   - 2026-11-20 19:02: split part 2 (047 + 026) in the same pre-pull file: 8-wk 047 27.3k, 026 26.8k *(calc)*. 047 = volume expansion (spend ×2.20, 35.6k); 026 spend shrinking (×0.74) at the cheapest CPL (27.4k): Meta moving spend off 026 (INFERRED). Flag lines set; all 4 picks covered for Monday. No ask.
   - 2026-11-20 18:02: Incess 042 + 030 split pre-pull (8 weekly rows 09/25–11/19) → `fab_advertising/reports/2026-11-20_incess_pick_split_prepull.md`. 042 8-wk 35.8k, 030 35.2k *(calc)*; 11/13–11/19 042 34.1k (spend ×1.55), 030 43.5k (×2.41): volume expansion at constant 46k caps, not fatigue (freq ≤ 1.56, CTR in band). Monday flag lines pre-set. No ask.
