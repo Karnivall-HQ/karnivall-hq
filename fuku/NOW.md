@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-21 09:02 WIB (cloud heartbeat: undo dry run + M-002 flag audit)_
+_Last updated: 2026-11-21 10:01 WIB (cloud heartbeat: WA script page re-check)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -14,9 +14,10 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 4. **11/23 weekly:** run `bc_swapin_precheck.py` (§0b pulls) before any swap-in ask; 7d 11/16–11/22; re-check the parked undo. **11/27:** ADSET-3 verdict (starved branch A unless it spends ≥ Rp 95k).
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **WA follow-up script re-check (no ad-account change):** re-curl the page; align `creatives/2026-11-06_wa_followup_script.md` facts table to the 11/20 page wording ("pickup gratis", "bisa tanpa deposit", Building vs Komplek Ruko); mark each line STATED/open.
-2. **11/23 OUTBOX #3 re-word (no new ask):** if #3 is still open at the weekly, re-ask as one line pointing to §F of `2026-11-11_w1w2_paste_ready.md`.
-3. **M-002 playbook draft:** turn the 11/09–11/16 weekly runs + 11/23 run-sheet into `playbooks/weekly-health-report.md` (M-002 strategy says: playbook after first report; not done yet).
+1. **11/23 OUTBOX #3 re-word (no new ask):** if #3 is still open at the weekly, re-ask as one line pointing to §F of `2026-11-11_w1w2_paste_ready.md`.
+2. **M-002 playbook draft:** turn the 11/09–11/16 weekly runs + 11/23 run-sheet into `playbooks/weekly-health-report.md` (M-002 strategy says: playbook after first report; not done yet).
+
+3. **Site copy W3 draft (no ad-account change):** one paste-ready line fixing the page's security contradiction ("Building" line 68 vs "Komplek Ruko" line 155) + pickup-area line; add to §F of `2026-11-11_w1w2_paste_ready.md` as optional, not a new ask.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits (§F optional F1/F2).
@@ -32,5 +33,5 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Open loops (current state, one line each)
 - Activity log (11/21 07:01): last human edit 11/15 00:41–00:42. Caps 105k, all ACTIVE.
 - Ad015 7d Rp 444,234 / 3 = 148.1k → CPL rule n/a (< 600k).
-- Site (fabwarehouses.com): W1/W2 not applied (Jakarta Pusat ×9, "800" ×1 FAQ, "akan launching" ×1).
+- Site (fabwarehouses.com, 11/21 10:01): W1/W2 not applied (Jakarta Pusat ×9, "800" ×1 FAQ, "akan launching" ×1). WA script aligned 11/21 ("bisa tanpa deposit"); still NOT sent, gates 800/G6/All-in.
 - Undo dry run 11/21: 104.2k MISS vs caps-held 69.2k → stays parked (weekly row 12). Incess picks +34% CPL WoW ⚠️ watch (11/23; 030 flag lines fixed to 46.1k / 2.27%). BC Rp 97k/day = 1.94% of 5M, caps 94,250.

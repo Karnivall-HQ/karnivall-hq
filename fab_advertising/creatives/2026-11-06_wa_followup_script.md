@@ -3,7 +3,7 @@ _2026-11-06 08:02 WIB · Fuku draft · NOT sent. Nothing goes out until Alvian a
 
 **Why:** 7d pixel shows 101 Form events vs 61 Lead events (~40% gap) [data, `2026-11-06_landing_page_audit.md`]. If Lead fires only when WhatsApp opens, the gap = people who left a name + WA number in Fluent Form #10 but never sent the chat. They raised a hand; a same-day reply is the cheapest lead Fab can get (no ad spend). [INFERRED until W4 confirms how Lead fires.]
 
-**Facts used (only those already on the live site/ads):** "Harga Promo Launching" Rp750.000/bulan (the site's own wording; the site never mentions a code, the PEIKIRA ads say "kode FAB750") (⚠️ the WA form page + 1 FAQ line still say Rp800.000 = W2; confirm before sending) · ITC Kuningan Ambasador, Sudirman, Jakarta Selatan · no minimum rental, monthly payment, no deposit, free pickup · Small 3.8 m³ / Medium 7.6 m³ / Large 15.2 m³ (ad landing page, 11/12 curl; an older read said 4.75/9.5/19). ⚠️ Confirm all with Alvian before use.
+**Facts used (only those already on the live site/ads):** "Harga Promo Launching" Rp750.000/bulan (the site's own wording; the site never mentions a code, the PEIKIRA ads say "kode FAB750") (⚠️ the WA form page + 1 FAQ line still say Rp800.000 = W2; confirm before sending) · ITC Kuningan Ambasador, Sudirman, Jakarta Selatan · no minimum rental, monthly payment, **can be** no deposit (page: "Bisa tanpa uang deposit/ jaminan"), free pickup · Small 3.8 m³ / Medium 7.6 m³ / Large 15.2 m³ (ad landing page, 11/12 curl; an older read said 4.75/9.5/19). ⚠️ Confirm all with Alvian before use.
 
 ## How to run it (for the Fab team)
 1. Daily, export Fluent Form #10 entries from WP admin (Fluent Forms → Entries).
@@ -17,7 +17,7 @@ Placeholders: `{nama}`, `{kebutuhan}` (from the form's "Kebutuhan" field), `{rua
 
 **Message 1 (≤ 2 h after submit)**
 > Halo Kak {nama}, ini Fab Self-storage 👋 Tadi Kakak isi form di website kami untuk {kebutuhan}. Mau kami bantu cek ukuran unit yang pas?
-> Unit kami di ITC Kuningan Ambasador (Sudirman, Jaksel), lagi harga promo launching Rp750rb/bulan. Tanpa deposit, tanpa minimal sewa, pickup gratis.
+> Unit kami di ITC Kuningan Ambasador (Sudirman, Jaksel), lagi harga promo launching Rp750rb/bulan. Bisa tanpa deposit, tanpa minimal sewa, pickup gratis.
 > Barangnya kira-kira apa aja, Kak? 😊
 
 **Message 2 (+24 h, no reply)**
@@ -47,12 +47,29 @@ Placeholders: `{nama}`, `{kebutuhan}` (from the form's "Kebutuhan" field), `{rua
 **Fixed (18:02):** M3 "survei langsung ke Kuningan" → "ke gudang Fab di ITC Kuningan Ambasador" (one named site, same line as the ads).
 **New gate (G6), before any message that offers a survey or a move-in:** the page says the site **"akan launching"** (will launch). If units are not open yet, M3's survey offer and "unit gudangmu siap dipakai" (Wave 2 B5) can't be kept. Confirm with Alvian: is ITC Kuningan Ambasador open for survey and move-in now? If not, M3 becomes "Mau kami kabari begitu unit siap disurvei?" and B5's last line drops "siap dipakai".
 
+## Page re-check 11/21 10:01 (playbook step 8: sheet > 3 days old; live `/sewa-gudang-self-storage-jakarta/`, HTTP 200, 271 visible lines)
+| Claim in the script | On page 11/21 (visible lines) | Verdict |
+|---|---|---|
+| harga promo launching Rp750rb/bulan (M1, M3) | 750 ×9, "Promo Launching" ×10; FAQ still "mulai dari Rp 800.000" ×1 (W2 unapplied) | ✔ STATED; 800 gate stays |
+| ITC Kuningan Ambasador (Sudirman, Jaksel) (M1, M3) | ITC Kuningan ×1, FAQ: "**akan launching** di ITC Kuningan Ambasador Sudirman, Jakarta Selatan"; "Jakarta Pusat" ×9 (W1 unapplied) | ⚠️ G6 open (open for survey?) |
+| tanpa deposit (M1, Reply A) | only "**Bisa** tanpa uang deposit/ jaminan" (comparison table) | ❌→ fixed to "bisa tanpa deposit" |
+| tanpa minimal sewa · per bulan (M1) | "tanpa minimal lama sewa" ×6, "per 1 bulan" ×6 | ✔ STATED |
+| pickup gratis (M1, Reply A) | "Gratis: Pickup" ×6 + "Bantu Pickup barang dari Apartemen/ Rumah/ Kantor-mu" | ✔ STATED; **no area or Rp cap on page** (150 ×0): the ads' Rp150k pickup cap must not appear in WA until Alvian confirms it |
+| Small 3,8 / Medium 7,6 / Large 15,2 m³ (M2) | each ×1 | ✔ STATED |
+| "± isi 1 kamar kos" (M2) | 0 (all 6 "kos" hits = "kosong/Kosongkan") | ⚠️ INFERRED, unchanged |
+| survei ke gudang (M3) | "Datang survey ke warehouse Fab" ×1 | ✔ STATED (G6 still applies) |
+| "cuma Rp750rb … aja" (Reply A) | "Harga sudah All-in" ×1 (table) | ⚠️ All-in gate unchanged |
+
+**Don't claim (page contradicts itself, 11/21):** security setting. Line 68 "Berlokasi di dalam Building … security 1×24 jam" vs line 155 "Satpam **Komplek Ruko** yang aktif 24/7". No message mentions security; if a lead asks, the team answers from the real site, not the page. Access hours: 0× on page, don't promise any.
+**If a lead asks "Jakarta Pusat?"** (page says it ×9): "Lokasinya di ITC Kuningan Ambasador, area Sudirman, Jakarta Selatan Kak" (= the page FAQ's own wording, STATED).
+**What changed and why:** "tanpa deposit" → "bisa tanpa deposit" in M1 + Reply A: the page only says deposit-free is *possible*; a flat promise could break if the team asks a deposit for some units. Everything else still matches. Script stays **NOT sent**; gates left: 750 vs 800 (W2), open for survey (G6), All-in (Reply A).
+
 ## Objection reply: "Kok lebih mahal dari yang 400rb?" (added 2026-11-10 18:02, draft, NOT sent)
 **Context:** SpaceHub (Thamrin, ~10 min away) advertises "From Rp 400k / month" for its smallest unit, but asks a **security deposit**, needs **online self-booking + pay first**, and you **move your stuff yourself** (its own FAQ, `fab_advertising/research/2026-11-10_competitor_angles.md`). Rule: compare **total cost and effort**, never knock the competitor by name, never discount on the spot.
 **Gate:** use only after Alvian confirms 750 vs 800, no deposit, free pickup (+ pickup area), and the Small unit size. Unit size of SpaceHub's 400k unit is **unknown**, so the reply does not claim "ours is bigger".
 
 **Reply A (default, short)**
-> Betul Kak, ada yang mulai 400rb 🙏 Bedanya di Fab: barang Kakak **kami jemput gratis**, **tanpa deposit**, dan **tanpa minimal sewa**, jadi bayarnya cuma Rp750rb bulan ini aja.
+> Betul Kak, ada yang mulai 400rb 🙏 Bedanya di Fab: barang Kakak **kami jemput gratis**, **bisa tanpa deposit**, dan **tanpa minimal sewa**, jadi bayarnya cuma Rp750rb bulan ini aja.
 > Jadi Kakak nggak perlu sewa mobil bak, cari tenaga angkut, atau siapkan uang deposit di depan. Tinggal tunjuk barangnya 😊
 > Barangnya kira-kira berapa banyak, Kak? Biar kami cek unit yang pas.
 
