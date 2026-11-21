@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-21 11:01 WIB (cloud heartbeat: M-002 playbook v2)_
+_Last updated: 2026-11-21 12:01 WIB (cloud heartbeat: site §F F4 pickup line)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -15,11 +15,11 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **11/23 OUTBOX #3 re-word (no new ask):** if #3 is still open at the weekly, re-ask as one line pointing to §F of `2026-11-11_w1w2_paste_ready.md`.
-2. **Site copy W3 draft (no ad-account change):** one paste-ready line fixing the page's security contradiction ("Building" line 68 vs "Komplek Ruko" line 155) + pickup-area line; add to §F of `2026-11-11_w1w2_paste_ready.md` as optional, not a new ask.
-3. **11/30 weekly skeleton:** first quiet run after the 11/23 report, per `playbooks/weekly_ads_health_report.md` §A1–§A2 (needs the 11/23 numbers).
+2. **11/30 weekly skeleton:** first quiet run after the 11/23 report, per `playbooks/weekly_ads_health_report.md` §A1–§A2 (needs the 11/23 numbers).
+3. **M-002 Incess report prep (no ad-account change):** after the 11/23 run, check the +34% WoW CPL watch on the picks against ≥ 10-lead flag lines.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
-- #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits (§F optional F1/F2).
+- #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits (§F optional F1/F2/F4; F4 = pickup cap line).
 - Parked: undo the 11/15 change (re-check 11/23), Kuningan open?, BC cap ladder (swap in at 11/23 if #2/#3 still stalled), "TourHub" FYI, close rate + months stayed.
 
 ## Standing facts

@@ -69,5 +69,8 @@ Optional extra lines (same edit session; each is independent, skip any you're un
 | F1 | `Saat ini Fab Self Storage akan launching di ITC Kuningan Ambasador Sudirman, Jakarta Selatan.` | `Fab Self Storage sudah buka di ITC Kuningan Ambasador Sudirman, Jakarta Selatan.` | **Only if the site is open now** (parked Kuningan question). Ads say "datang dan lihat sendiri"; the FAQ says "will launch". |
 | F2 | `Satpam Komplek Ruko yang aktif 24/7 + Staff Kemanana di dalam gudang.` | `Satpam yang aktif 24/7 + Staff Keamanan di dalam gudang.` | Page calls the site both "di dalam Building" (×2) and "Komplek Ruko" (×1); this drops the conflicting word and fixes the typo "Kemanana". If it really is a ruko complex, instead change the 2 "Building" lines. |
 | F3 | `Berlokasi di dalam Building dengan security 1×24 jam.` | (no change if F2 is applied) | Listed so the editor sees both "building" lines (the other is row 7) stay consistent. |
+| F4 | `Gratis: Pickup barang dari tempat-mu.` | `Gratis: Pickup barang 1x dari tempat-mu (hingga Rp150.000).` | **Only if the Rp150k cap is real.** 5 of the team's 6 new ads say "pickup 1× ≤ Rp150rb"; the page says free pickup with no cap (`150` ×0), so a lead meets a limit the page never showed. Was P3 in `2026-11-13_adset3_copy_check.md`; moved here so all optional lines are one paste. |
 
-After saving, §D checks add: `akan launching` = 0 (if F1), `Komplek Ruko` = 0 and `Kemanana` = 0 (if F2).
+After saving, §D checks add: `akan launching` = 0 (if F1), `Komplek Ruko` = 0 and `Kemanana` = 0 (if F2), `Rp150.000` = 1 (if F4).
+
+**F re-verified 2026-11-21 12:01 WIB** (curl, 272 visible lines): F1, F2, F4 find strings ×1 each; "Berlokasi di dalam Building" ×1; "Jakarta Pusat" ×9, "Rp 800" ×1. The page is unchanged, so A + B + F still paste as one session.
