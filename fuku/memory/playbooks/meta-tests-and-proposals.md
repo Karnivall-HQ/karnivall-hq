@@ -12,6 +12,9 @@ Any new ad, ad set, creative wave, bid-cap or structure change that Fuku propose
 5. **Evaluate lead thresholds on full-day data** (first readout after 07:00 WIB), never intraday.
 6. **Check the detectable effect before promising a funnel read.** Compute z for the hoped-for lift at the real weekly volume. Fab pixel (~1,300 VC/wk, base 3.72%): +1pt is readable in 7 d, +0.5pt needs ~14 d (11/11). Pin one stats call (aggregation) for before and after: different aggregations give different counts.
 7. Write all of it into the pre-stage doc **before** the read date, then apply it as written.
+8. **Readability floor + L = 0 row.** Spend < 3 × baseline CPL → judge volume only; dry-run every lead count L, incl. 0 (11/16: one extra lead flipped "undo" to "no ask" at Rp 180k). Every comparative/guard CPL rule also gets a spend floor (the kill line, 2× target) before a 0-lead side counts: CPL = ∞ on day 1 fires falsely (`bc_ladder_read.py`, 11/20). (Retro #5)
+9. **Size the probe to reach its own floor.** Projected 7d spend ≥ the kill/verdict floor; if one object can't (BC204 at Rp 2k/day), pool every object passing the same gate and read the group with one comparative rule (BC ladder: 4 ad sets, 33 leads pooled, 11/20). (Retro #5)
+10. **Flag-line maxima/minima use only weeks with ≥ 10 leads**, and the line says so (047's 8-wk max was a 3-lead week that would never fire, 11/20). (Retro #5)
 
 ## B. Reading the account before claiming a trend
 - **Split by campaign first** when 2+ campaigns spend: account totals hide mix shifts (11/06: "CPM +16%" was spend moving from cheap BC to PEIKIRA).
@@ -24,10 +27,11 @@ Any new ad, ad set, creative wave, bid-cap or structure change that Fuku propose
 ## C. Writing a proposal
 - **A budget step is a lever only when the budget binds.** Check 3-day spend ÷ budget first; < 90% → no budget ask, name the real limiter (cap or creatives). Under a cap spend is set by the cap (PEIKIRA 11/15: 5.1% of 3M; BC 11/05: 1.4% of 5M). (Retro #4)
 - **Undo lists name the exact pre-change state from the log** (`old_value`), pulled when drafting, translated into Ads Manager words ("Automatically bid for…" → "Highest volume"); flag anything INFERRED. (Retro #4)
+- **Model a structural ask on each criterion separately** and state the trade in the ask (see `meta-modelling-and-planning.md` A5). (Retro #5)
 - **Sort levers:** "adds volume at ~target CPL" (cap raises, budget) vs "lowers CPL on current spend" (site conversion, cheaper creative). For a CPL gate push the second kind; for a scale gate the first.
 - **Bid caps:** pull ≥ 8 weekly rows + the bid-category activity log; spend can swing −30% at a fixed cap from the auction alone. Raise only ad sets with CPL ÷ cap < ~0.85, with a raised-vs-untouched comparative rule. Never write a cap or scale proposal on < 8 weekly rows; a first diagnosis version is a hypothesis until re-pulled on the full window (item 4: 30d ratio 0.889 → 8-wk 1.02, 11/12).
 - **Copy consistency:** join `ads_get_ad_entities` (spend > 0, creative_id) with `ads_get_creatives` and size by spend share; an Ad Library sample undercounts (8 vs all 59).
-- **Build specs:** read the reference ad's creative settings (CTA, IG account, Advantage+ text translation / cv_transformation) and state which to copy and which to turn off; they can alter sticker copy and the raw-photo look (11/12).
+- **Build specs:** see `meta-creative-build.md` §B for build rows. Read the reference ad's creative settings (CTA, IG account, Advantage+ text translation / cv_transformation) and state which to copy and which to turn off; they can alter sticker copy and the raw-photo look (11/12).
 - **Competitors:** Ad Library tells *who* advertises and how often; their website tells the offer. Comparison copy claims only checked differences.
 - **Creative briefs:** view the top winner at full size first and copy its *subject*; size the ask to what it needed (Image087 = home clutter, no warehouse).
 
@@ -43,4 +47,4 @@ Any new ad, ad set, creative wave, bid-cap or structure change that Fuku propose
 Every proposal names: the lever type, the read rules (absolute + comparative), the window, and labels each number account data / *(calc)* / INFERRED.
 
 ## Last validated
-2026-11-16 (Retro #4 additions) · 2026-11-14 (Retro #3 additions) · 2026-11-11 · M-001 (Wave 1 template, 11/20 gate brief, IG Stories retirement) and M-002 (Incess 019 split).
+2026-11-21 (Retro #5: A8–A10, C per-criterion) · 2026-11-16 (Retro #4 additions) · 2026-11-14 (Retro #3 additions) · 2026-11-11 · M-001 (Wave 1 template, 11/20 gate brief, IG Stories retirement) and M-002 (Incess 019 split).

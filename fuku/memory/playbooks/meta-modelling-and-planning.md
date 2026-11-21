@@ -9,6 +9,7 @@ Any scenario table ("if X goes live by date D, 7d CPL ≈ …"), break-even for 
 2. **Once a window is open, lock known days as actuals** and re-run on every daily readout (07:00), not on later quiet runs. One 0-lead day flipped "site fix alone opens the gate" to "no single lever works" (11/14).
 3. **Sanity-check direction** before writing numbers: every improving lever must lower CPL vs "nothing" (11/14: first run had the site lift inverted). Hand-check one row.
 4. Keep the model as a script in `fuku/bin/` so re-runs are reproducible; mark every output *(calc)*.
+5. **Model a structural ask on each criterion separately** and state the trade in the ask. When a cheap leg carries the blend, test "throttle the expensive leg + scale the cheap one" as an option (11/20: the undo helped volume but hurt CPL, 92.1k → ≈ 114k *(calc)*; I'd pushed it 5 days on volume alone). (Retro #5)
 
 ## B. New ad set inside a CBO
 1. **Break-even vs what it displaces,** not vs target: compute against the CPL of the ad sets it takes spend from (11/13: bar moved ≤ 70k → ≤ 83.5k once the incumbent 116k was used).
@@ -19,6 +20,7 @@ Any scenario table ("if X goes live by date D, 7d CPL ≈ …"), break-even for 
 1. **Tabulate outcomes by result count** for every pre-staged read and check each rule pair for overlap (11/13: "pause if 3-wk > 105k" and "keep if week ≤ 50k" both fired at +2 leads). Write precedence before the data lands. **Order: kill rules → success → sample size.** A minimum-spend "too early" bucket (e.g. spend < 4 × target) overlaps every success bucket, because a win at target always costs less than that (11/27 verdict: 333 of 408 cells WINNER + UNDER-TESTED, 11/15).
 2. **Check the object level** when reusing a fix (campaign / ad set / ad): an ad-set minimum can't help waves built as ads inside an existing ad set (11/13).
 3. **Plans that need other people's inputs → dates × who × what calendar.** A decision on the same day as the input it selects is a gap; front-load those inputs (11/13: W2 pick on W2 launch day → shoot P1–P6 together).
+4. **Every step trigger must be reachable under the current constraint** (verdict spend ≤ capped pace × days × share). If not, the plan is void until the constraint lifts (11/16: "cap steps after a verified winner" under a cap that stops any winner). (Retro #5)
 
 ## D. When the account structure changes (budget, cap, bid strategy, objective)
 1. **Activity log before any model.** A change since the last run voids the model output even though it still prints clean numbers (11/15: overnight 300k → 3M + 105k cap). Re-base first (tracker routine step 0).
@@ -31,6 +33,9 @@ Any scenario table ("if X goes live by date D, 7d CPL ≈ …"), break-even for 
 1. **The run after any structural change, grep every staged file for the old value** (budget, cap, "budget steps") and add a dated refresh block that overrides it (11/16: 11/20 gate-miss note still said Rp 300k + "5 budget steps"; S1 scale card would have sent a cosmetic +25%).
 2. **Name asks by content + number** in staged files ("ask #2 (pause Ad015)"), and when OUTBOX asks are renumbered or parked, grep `OUTBOX #` across `fab_advertising/reports/` the same run (11/15: 6 files pointed at the wrong asks).
 3. **No unmapped rows.** A "map at read time" row gets mapped the same day; it hid the most important ad in ADSET-3 (AKIRA-016, 11/15).
+4. **Parking or dropping an ask = grep for plans triggered by it** and write their "ask never happens" branch the same run (criterion-2 plan sat unplanned 11/16–11/20). (Retro #5)
+5. **Branch labels carry the target's entry condition** ("revert (caps removed)"); re-check every label the run a recommendation changes (11/16). (Retro #5)
+6. **Chained templates hand off a dated state snapshot** (every setting the next card branches on); the downstream log window starts at it, not at the next readout (11/18). (Retro #5)
 
 ## Last validated
-2026-11-16 (Retro #4: §D, §E, C1 order) · 2026-11-14 · M-001 (11/20 gate brief, 12/05 criterion-1 path, ADSET-3 read card, weekly photo calendar).
+2026-11-21 (Retro #5: A5, C4, E4–E6) · 2026-11-16 (Retro #4: §D, §E, C1 order) · 2026-11-14 · M-001 (11/20 gate brief, 12/05 criterion-1 path, ADSET-3 read card, weekly photo calendar).

@@ -17,6 +17,12 @@ _Ad-account ask: #2 (Ad015 + ADSET-3 min). #1 (undo) parked 11/20 07:05 after th
 
 ### Latest report
 
+- **[REPORT] 2026-11-21 08:01 · 🔧 Retro #5 (self-improvement, week 11/16–11/21).**
+  - 🚀 Win: 7d CPL 85.1k ✅ (11/14–11/20) and 92.1k ✅ at the 11/20 gate: criterion 1 met, by mix (BC ≈ 57k carried).
+  - ⚠️ Miss: criterion 2 (Rp 1M/day) off track, ≈ 10–17% of the leg; I pushed the undo 5 days on volume only before modelling its CPL cost.
+  - 🔧 Changed: 13 lessons → 4 playbooks (new `meta-creative-build.md`); new rule: no more staged sheets for unapplied asks, groundwork goes to work that needs no ad-account change.
+  - ❓ Need: asks #2 and #3 below (7–8 days open). The fastest unblock is #3 (site, 10 min).
+  - 👉 Next week: 11/23 weekly + BC Wave 0 swap-in check, 11/27 ADSET-3 verdict, M-002 Incess report.
 - **[REPORT] 2026-11-20 07:05 · ✅ M-001 11/20 gate: 7d CPL Rp 92.1k, under 95k for the first time (criterion 1 met this week), but on low volume.** 11/13–11/19: Rp 1,473,060 / 16 leads *(calc)*. PEIKIRA Rp 793,807 / 4 (198.5k); **BC Rp 679,253 / 12 (56.6k)**. It came from the mix, not from a new winner: the 105k caps held PEIKIRA to ≈ Rp 0.6k–8k/day since 11/17, so the cheap BC campaign carried the week. ADSET-3 (the team's 6 new ads) got Rp 33 in 7 days: never tested, not a loser. Ad015 Rp 444,234 / 3: CPL rule n/a (< Rp 600k spent). So I'm **not** asking for more budget. Site still unfixed (Jakarta Pusat ×9 today).
   - 🔄 **I changed my mind on the undo (old ask #1 → Parked).** Undo puts Rp 300k/day back on PEIKIRA at its ≈ 157–199k CPL → account ≈ 114k ❌ *(calc, INFERRED)*, and it still wouldn't reach Rp 1M/day. BC has held 52–79k for 7 weekly readouts in a row. Volume should come from BC + new winners, not PEIKIRA. Re-check at the 11/23 weekly.
   - ✅ Criterion 1 holds to 12/05 in every branch with the caps on (model 56.9k doing nothing) *(calc)*, but only at ≈ Rp 98k/day = 10% of the Rp 1M leg.
