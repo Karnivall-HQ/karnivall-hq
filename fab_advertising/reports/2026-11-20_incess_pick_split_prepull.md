@@ -24,7 +24,8 @@ Caps unchanged on every row: 46,000 (bid_amount). 030 last week CPL ÷ cap = 0.9
 
 ## Monday rules (pre-set, so 11/23 is read-only + one table)
 1. Add the 11/16–11/22 row for each (same call, `time_range` 11/16–11/22, no increment).
-2. **Flag** an ad set only if its 7d CPL > its 8-wk max (042 > 46.9k, 030 > 46.7k) **or** CTR < its 8-wk min (042 < 2.49%, 030 < 1.79%) **or** freq > 2.0.
+2. **Flag** an ad set only if its 7d CPL > its 8-wk max (042 > 46.9k, 030 > 46.1k) **or** CTR < its 8-wk min (042 < 2.49%, 030 < 2.27%) **or** freq > 2.0. Maxima/minima use only weeks with ≥ 10 leads (playbook tests A10).
+   - _Audit 11/21 09:02:_ 042 all 8 weeks ≥ 25 leads → lines unchanged. 030 old lines (46.7k, 1.79%) came from 7-lead weeks (10/02–10/08); its ≥ 10-lead weeks are 10/09, 10/16, 10/23, 10/30, 11/13 → max 46,075 (10/16, 10 leads), CTR min 2.27% (10/16). 047 (thin week 09/25 excluded) and 026 (all ≥ 13 leads) re-derived: lines unchanged.
 3. No flag → weekly says "Incess CPL up on volume, not fatigue; caps stay; no ask". A flag on 030 alone → note only (030 = 18 of the 82 leads 042+030 got last week; small counts swing); a flag on 042 → ad-level split of 042 (one live ad) + creative refresh idea in Top 3, still no ad-account ask before lead value is known.
 4. Peer benchmarks: none (empty peer set); trend tool: no data. Don't wait for them.
 
