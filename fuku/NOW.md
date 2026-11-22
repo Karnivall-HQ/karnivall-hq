@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-22 14:02 WIB (cloud heartbeat: 13:00 poll)_
+_Last updated: 2026-11-22 19:01 WIB (cloud heartbeat: 19:00 poll)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -9,9 +9,9 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Next actions (dated or triggered)
 1. **Every run:** INBOX/OUTBOX for "done" on #2, "W1 W2 done", Kuningan answer, any reply on the parked undo.
-2. **Poll 11/22:** ~19:00 (activity log; watch for a sudden uncap/undo: CBO is still Rp 3M). 07:00 + 13:00 done.
+2. **Polls 11/22 done (07/13/19).** Next poll = 11/23 07:00 readout.
 3. **Undo seen in the log:** `2026-11-19_post_undo_rebase_pack.md` §0 the same run.
-4. **11/23 weekly:** flag BC if 11/22 is a 3rd 0-lead day (11/20–11/21 = 0, ≈ 3 expected *(calc)*); run `bc_swapin_precheck.py` (§0b pulls) before any swap-in ask; 7d 11/16–11/22; re-check the parked undo. **11/27:** ADSET-3 verdict (starved branch A unless it spends ≥ Rp 95k).
+4. **11/23 weekly:** BC 0-lead streak broken (11/22 part-day 19:01: Rp 70,621 / 3), so no BC flag unless the full-day lock says otherwise; run `bc_swapin_precheck.py` (§0b pulls) before any swap-in ask; 7d 11/16–11/22; re-check the parked undo. **11/27:** ADSET-3 verdict (starved branch A unless it spends ≥ Rp 95k).
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
 1. **11/23 OUTBOX #3 re-word (no new ask):** if #3 is still open at the weekly, re-ask as one line pointing to §F of `2026-11-11_w1w2_paste_ready.md`.
@@ -30,7 +30,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - Locks PEIKIRA: 11/14 309404 3 · 11/15 153555 1 · 11/16 16396 0 · 11/17 11725 0 · 11/18 8238 0 · 11/19 628 0 · 11/20 41 0. 11/21 26 0. BC 11/20 86251 0, 11/21 85395 0. 7d bases 11/15–11/21: peik 190609 1, bc 694090 10 (p2: use 924806 8 in models). Criterion 1 LWD 12/03, nothing 69.4k; criterion 2 MISS (cap), 99.2k/day *(calc)*.
 
 ## Open loops (current state, one line each)
-- Activity log (11/22 14:02: empty since 06:55; earlier 07:01): only Meta system "Started delivery" events on ADSET-3 ads (010 v03 11/21 18:04, 018 11/21 20:02); ADSET-3 still ≈ unspent. Last human edit 11/15 00:41–00:42. Caps 105k, all ACTIVE.
+- Activity log (11/22 19:01: empty since 06:55 WIB; earlier 07:01): only Meta system "Started delivery" events on ADSET-3 ads (010 v03 11/21 18:04, 018 11/21 20:02); ADSET-3 still ≈ unspent. Last human edit 11/15 00:41–00:42. Caps 105k, all ACTIVE.
 - Ad015 7d Rp 444,234 / 3 = 148.1k → CPL rule n/a (< 600k).
 - Site (fabwarehouses.com, 11/21 10:01): W1/W2 not applied (Jakarta Pusat ×9, "800" ×1 FAQ, "akan launching" ×1). WA script aligned 11/21 ("bisa tanpa deposit"); still NOT sent, gates 800/G6/All-in.
 - Undo dry run 11/21: 104.2k MISS vs caps-held 69.2k → stays parked (weekly row 12). Incess picks +34% CPL WoW ⚠️ watch (11/23; 030 flag lines fixed to 46.1k / 2.27%). BC Rp 97k/day = 1.94% of 5M, caps 94,250.
