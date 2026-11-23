@@ -1,23 +1,23 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-23 08:01 WIB (cloud heartbeat: groundwork, Incess drift decomposition)_
+_Last updated: 2026-11-23 09:01 WIB (cloud heartbeat: groundwork, Incess LP + placement check)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
 - **M-001 (P0):** 7d 11/16–11/22 **Rp 714,937 / 11 = 65.0k ✅** *(calc)*, BC 94.8% of spend (61.6k); PEIKIRA Rp 37k/week under the 105k caps. Criterion 1 met by mix, LWD 12/03. Criterion 2 off track (Rp 97k/day = 10% of the leg; honest date ≈ Feb).
 - **Volume lever now asked:** OUTBOX #1 = BC Wave 0 (cap 94,250 → 105,000 on 201/204/3-21 + N2), group 8-wk 60.1k *(calc)*. Old #2 (Ad015 + ADSET-3 min) parked as moot under the caps.
-- **M-002 (P1):** ✅ weekly #3 delivered. ⚠️ Incess 37.8k (+42.9% WoW) is **not auction** (CPM +4%): ≈ 65% post-click, and LPV ÷ click slid to 78–83% *(calc)* (`2026-11-23_incess_drift_decomposition.md`). Watch, no ask.
+- **M-002 (P1):** ✅ weekly #3 delivered. ⚠️ Incess 37.8k (+42.9% WoW) is **not auction** (CPM +4%): site unchanged since 2024 (curl 200, 0 redirects); ≈ 45% of the rise is placement mix (more spend on FB reels/feed/Threads), ≈ 55% decline inside IG + FB reels *(calc)* (`2026-11-23_incess_lp_and_placement_check.md`). Watch, no ask.
 
 ## Next actions (dated or triggered)
 1. **Every run:** INBOX/OUTBOX for "W0 done", "W1 W2 done", Kuningan answer.
 2. **Polls 11/23:** 07:00 done; next ≈ 13:00 and 19:00 (activity log only).
 3. **"W0 done" seen in the log:** re-base day (playbook §D–§E): split day 1 at the change time, read the 3 ad sets on spend ÷ old pace + CPL; read rules in `2026-11-20_bc_cap_ladder_card.md`.
 4. **11/27:** ADSET-3 verdict (`2026-11-27_adset3_verdict_template.md`; spent Rp 45 in 7d → expect "starved, branch A").
-5. **11/30 weekly:** Incess LPV ÷ click 7d < 85% → site-check [FYI] (no ad change); ≥ 88% and CPL ≤ 35k → close the watch. No cut list (cuts don't fix post-click).
+5. **11/30 weekly:** Incess 7d CPL > 35k and FB reels + feed CPL > 1.4× IG feed for a 2nd week → placement-exclusion proposal (propose-only); IG reels CPL ≤ 25k or 7d ≤ 35k → close the watch. No cut list, no site check (site cleared 11/23).
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **Incess landing page check (read-only):** URL from one 042 creative (`ads_get_creatives`), curl load time, redirects, form. Explains the LPV ÷ click slide.
-2. **11/30 weekly skeleton** per `playbooks/weekly_ads_health_report.md` §A1–§A2, prior columns from 11/23; add an Incess funnel row (CPM · CTR · LPV÷click · Lead÷LPV).
-3. **BC3-13 check:** Rp 77,281 / 0 in 7d (2nd week, largest 0-lead BC ad set): 8-wk read; only a pause line if 8-wk CPL > 120k (no ask until W0 moves).
+1. **11/30 weekly skeleton** per `playbooks/weekly_ads_health_report.md` §A1–§A2, prior columns from 11/23; add an Incess placement table (spend · LPV÷click · Lead÷LPV · CPL for IG feed/reels/stories, FB reels/feed, Threads; call = campaign + `publisher_platform,platform_position`, `time_increment` 7).
+2. **BC3-13 check:** Rp 77,281 / 0 in 7d (2nd week, largest 0-lead BC ad set): 8-wk read; only a pause line if 8-wk CPL > 120k (no ask until W0 moves).
+3. **Fab site WA-script / M-001 site copy** groundwork that needs no ad-account change (stage-less rule): refresh `w1w2_paste_ready.md` §F against a fresh curl only if the page changed.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 BC Wave 0. #2 Site W1 + W2 + who edits.
