@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-23 09:01 WIB (cloud heartbeat: groundwork, Incess LP + placement check)_
+_Last updated: 2026-11-23 10:02 WIB (cloud heartbeat: groundwork, 11/30 weekly skeleton)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -12,12 +12,12 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 2. **Polls 11/23:** 07:00 done; next ≈ 13:00 and 19:00 (activity log only).
 3. **"W0 done" seen in the log:** re-base day (playbook §D–§E): split day 1 at the change time, read the 3 ad sets on spend ÷ old pace + CPL; read rules in `2026-11-20_bc_cap_ladder_card.md`.
 4. **11/27:** ADSET-3 verdict (`2026-11-27_adset3_verdict_template.md`; spent Rp 45 in 7d → expect "starved, branch A").
-5. **11/30 weekly:** Incess 7d CPL > 35k and FB reels + feed CPL > 1.4× IG feed for a 2nd week → placement-exclusion proposal (propose-only); IG reels CPL ≤ 25k or 7d ≤ 35k → close the watch. No cut list, no site check (site cleared 11/23).
+5. **11/30 weekly:** fill `reports/weekly/2026-11-30.md` (skeleton + rules R1–R6 ready). Incess 7d CPL > 35k and FB reels + feed CPL > 1.4× IG feed for a 2nd week → placement-exclusion proposal (propose-only); IG reels CPL ≤ 25k or 7d ≤ 35k → close the watch. No cut list, no site check (site cleared 11/23).
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **11/30 weekly skeleton** per `playbooks/weekly_ads_health_report.md` §A1–§A2, prior columns from 11/23; add an Incess placement table (spend · LPV÷click · Lead÷LPV · CPL for IG feed/reels/stories, FB reels/feed, Threads; call = campaign + `publisher_platform,platform_position`, `time_increment` 7).
-2. **BC3-13 check:** Rp 77,281 / 0 in 7d (2nd week, largest 0-lead BC ad set): 8-wk read; only a pause line if 8-wk CPL > 120k (no ask until W0 moves).
-3. **Fab site WA-script / M-001 site copy** groundwork that needs no ad-account change (stage-less rule): refresh `w1w2_paste_ready.md` §F against a fresh curl only if the page changed.
+1. **BC3-13 check (= skeleton call 4a):** Rp 77,281 / 0 in 7d (2nd week). Pull 8 weekly rows 10/05–11/22 for 201/204/3-21/3-13 now; fill R3 (pause line only if 8-wk CPL > 120k). No ask while W0 sits.
+2. **Fab site WA-script / M-001 site copy** groundwork that needs no ad-account change: refresh `w1w2_paste_ready.md` §F only if a fresh curl shows the page changed.
+3. **≈ 11/27 quiet run: Incess placement pre-pull 11/23–11/26** (skeleton call 6a shape) → cross-check only, no verdict < 7d.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 BC Wave 0. #2 Site W1 + W2 + who edits.
