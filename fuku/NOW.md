@@ -1,36 +1,36 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-22 19:01 WIB (cloud heartbeat: 19:00 poll)_
+_Last updated: 2026-11-23 07:30 WIB (cloud heartbeat: 07:00 readout + weekly #3)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
-- **M-001 (P0):** 11/22 readout **7d 11/15–11/21 Rp 884,699 / 11 = 80.4k ✅** *(calc)*, BC = 87% of spend (69.4k); PEIKIRA ≈ Rp 0/day under the 105k caps. Criterion 1 met by mix; LWD 12/03. Criterion 2 off track (honest date ≈ Feb, `reports/2026-11-20_criterion2_honest_date.md`).
-- **Retro #5 rule (11/21): stage less, unblock more.** Asks #2/#3 unapplied 7–8 days → no new ad-account staging files for them; groundwork goes to site copy, WA script, M-002 first. All BC Wave 0 tooling already exists (`creatives/2026-11-20_bc_wave0_markus_sheet.md`, `fuku/bin/bc_swapin_precheck.py`, `bc_ladder_read.py`).
-- **M-002 (P1):** 11/23 skeleton ready; Incess picks pre-pulled (`reports/2026-11-20_incess_pick_split_prepull.md`). Monday adds 1 row each + flag lines (≥ 10-lead weeks only, tests A10).
+- **M-001 (P0):** 7d 11/16–11/22 **Rp 714,937 / 11 = 65.0k ✅** *(calc)*, BC 94.8% of spend (61.6k); PEIKIRA Rp 37k/week under the 105k caps. Criterion 1 met by mix, LWD 12/03. Criterion 2 off track (Rp 97k/day = 10% of the leg; honest date ≈ Feb).
+- **Volume lever now asked:** OUTBOX #1 = BC Wave 0 (cap 94,250 → 105,000 on 201/204/3-21 + N2), group 8-wk 60.1k *(calc)*. Old #2 (Ad015 + ADSET-3 min) parked as moot under the caps.
+- **M-002 (P1):** ✅ weekly #3 delivered (`fab_advertising/reports/weekly/2026-11-23.md`). ⚠️ Incess 37.8k (+42.9% WoW) at unchanged caps; 047 over its flag line. Watch, no ask.
 
 ## Next actions (dated or triggered)
-1. **Every run:** INBOX/OUTBOX for "done" on #2, "W1 W2 done", Kuningan answer, any reply on the parked undo.
-2. **Polls 11/22 done (07/13/19).** Next poll = 11/23 07:00 readout.
-3. **Undo seen in the log:** `2026-11-19_post_undo_rebase_pack.md` §0 the same run.
-4. **11/23 weekly:** BC 0-lead streak broken (11/22 part-day 19:01: Rp 70,621 / 3), so no BC flag unless the full-day lock says otherwise; run `bc_swapin_precheck.py` (§0b pulls) before any swap-in ask; 7d 11/16–11/22; re-check the parked undo. **11/27:** ADSET-3 verdict (starved branch A unless it spends ≥ Rp 95k).
+1. **Every run:** INBOX/OUTBOX for "W0 done", "W1 W2 done", Kuningan answer.
+2. **Polls 11/23:** 07:00 done; next ≈ 13:00 and 19:00 (activity log only).
+3. **"W0 done" seen in the log:** re-base day (playbook §D–§E): split day 1 at the change time, read the 3 ad sets on spend ÷ old pace + CPL; read rules in `2026-11-20_bc_cap_ladder_card.md`.
+4. **11/27:** ADSET-3 verdict (`2026-11-27_adset3_verdict_template.md`; spent Rp 45 in 7d → expect "starved, branch A").
+5. **11/30 weekly:** if Incess picks still > 35k 7d → write a cut list (047 first).
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **11/23 OUTBOX #3 re-word (no new ask):** if #3 is still open at the weekly, re-ask as one line pointing to §F of `2026-11-11_w1w2_paste_ready.md`.
-2. **11/30 weekly skeleton:** first quiet run after the 11/23 report, per `playbooks/weekly_ads_health_report.md` §A1–§A2 (needs the 11/23 numbers).
-3. **M-002 Incess report prep (no ad-account change):** after the 11/23 run, check the +34% WoW CPL watch on the picks against ≥ 10-lead flag lines.
+1. **11/30 weekly skeleton** per `playbooks/weekly_ads_health_report.md` §A1–§A2, prior columns from the 11/23 report; add an Incess drift row (CPM/CTR/CVR split per pick to tell auction vs demand).
+2. **Incess drift pre-pull (read-only):** picks by day 11/16–11/22 + CPM vs 11/09–11/15 → is the +43% CPM-driven (auction) or CVR-driven? Feeds the 11/30 call.
+3. **BC3-13 check:** Rp 77,281 / 0 in 7d (2nd week, largest 0-lead BC ad set): 8-wk read; only a pause line if 8-wk CPL > 120k (no ask until W0 moves).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
-- #2 Pause Ad015 + ADSET-3 min Rp 75k. #3 Site W1 + W2 + who edits (§F optional F1/F2/F4; F4 = pickup cap line).
-- Parked: undo the 11/15 change (re-check 11/23), Kuningan open?, BC cap ladder (swap in at 11/23 if #2/#3 still stalled), "TourHub" FYI, close rate + months stayed.
+- #1 BC Wave 0. #2 Site W1 + W2 + who edits.
+- Parked: undo (126.2k MISS 11/23), Ad015 + ADSET-3 min, Kuningan open?, "TourHub" FYI, close rate + months stayed.
 
 ## Standing facts
 - Read `playbooks/meta-ads-algorithm.md` + `meta-cpl-diagnosis.md` + `meta-tests-and-proposals.md` before any ads work, `meta-modelling-and-planning.md` before any model/plan, `meta-creative-build.md` before any brief/build row, `ad-copy-page-check.md` before copy is paste-ready.
 - Cloud Fuku: routine trig_01NGMFnv9BpvRp1jQjkAwUVJ, hourly 07–22 WIB. Propose-only: never call Meta write tools, even when visible.
-- Fab account 484578521394893, pixel 405755485775053. PEIKIRA campaign `120254051672440572` (Rp 3M/day, bid cap 105k); control `120254051672430572`; PEIKIRA2 `120254276298070572`; ADSET-3 `120254400251570572`; Ad015 `120254063163810572`; BC campaign `120236222888610572` (Rp 5M/day, bid cap).
+- Fab account 484578521394893, pixel 405755485775053. PEIKIRA campaign `120254051672440572` (Rp 3M/day, bid cap 105k); control `120254051672430572`; PEIKIRA2 `120254276298070572`; ADSET-3 `120254400251570572`; Ad015 `120254063163810572`; BC campaign `120236222888610572` (Rp 5M/day, caps 94,250).
 - Markus (team) edits the Fab account via the Rudi MCP app (actor 61594758338050).
-- Locks PEIKIRA: 11/14 309404 3 · 11/15 153555 1 · 11/16 16396 0 · 11/17 11725 0 · 11/18 8238 0 · 11/19 628 0 · 11/20 41 0. 11/21 26 0. BC 11/20 86251 0, 11/21 85395 0. 7d bases 11/15–11/21: peik 190609 1, bc 694090 10 (p2: use 924806 8 in models). Criterion 1 LWD 12/03, nothing 69.4k; criterion 2 MISS (cap), 99.2k/day *(calc)*.
+- Locks PEIKIRA: 11/16 16396 0 · 11/17 11725 0 · 11/18 8238 0 · 11/19 628 0 · 11/20 41 0 · 11/21 26 0 · 11/22 208 0. BC 11/21 85395 0, 11/22 95796 3. 7d base 11/16–11/22: peik 37262 0 (model: `--peik-cpl 190609`), bc 677675 11, p2 924806 8.
 
 ## Open loops (current state, one line each)
-- Activity log (11/22 19:01: empty since 06:55 WIB; earlier 07:01): only Meta system "Started delivery" events on ADSET-3 ads (010 v03 11/21 18:04, 018 11/21 20:02); ADSET-3 still ≈ unspent. Last human edit 11/15 00:41–00:42. Caps 105k, all ACTIVE.
-- Ad015 7d Rp 444,234 / 3 = 148.1k → CPL rule n/a (< 600k).
-- Site (fabwarehouses.com, 11/21 10:01): W1/W2 not applied (Jakarta Pusat ×9, "800" ×1 FAQ, "akan launching" ×1). WA script aligned 11/21 ("bisa tanpa deposit"); still NOT sent, gates 800/G6/All-in.
-- Undo dry run 11/21: 104.2k MISS vs caps-held 69.2k → stays parked (weekly row 12). Incess picks +34% CPL WoW ⚠️ watch (11/23; 030 flag lines fixed to 46.1k / 2.27%). BC Rp 97k/day = 1.94% of 5M, caps 94,250.
+- Activity log (11/23 07:01): no human edits since 11/15 00:42; Meta "Started delivery" on ADSET-3 ad 003 at 11/23 00:32. Caps 105k (PEIKIRA) / 94,250 (BC), all ACTIVE.
+- Site (11/23 07:20 curl): Jakarta Pusat ×9, Kelapa Gading ×2, 800.000 ×3, akan launching ×3. WA script NOT sent.
+- Pixel 11/16–11/22: VC 819, Form 52, Lead 31 (3.8% VC→Lead, flat).

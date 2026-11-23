@@ -16,11 +16,12 @@ ap.add_argument('--bc',nargs=2,type=float,default=[313500,6],metavar=('SPEND','L
 ap.add_argument('--p2',nargs=2,type=float,default=[924806,8],metavar=('SPEND','LEADS'))
 ap.add_argument('--today',default=None)
 ap.add_argument('--budget',type=float,default=None,metavar='PEIKIRA_DAILY_SPEND')
+ap.add_argument('--peik-cpl',type=float,default=None,help='PEIKIRA CPL to use when the 7d window has 0 PEIKIRA leads (added 11/23: pass the last 7d CPL that had leads)')
 ap.add_argument('--cap-throttled',action='store_true',help='bid cap holds PEIKIRA spend below the 1M leg need')
 A=ap.parse_args()
 P_S,P_L=A.peik; BC_S,BC_L=A.bc
 P2_CPL=A.p2[0]/A.p2[1]         # freed spend runs at PEIKIRA2's 7d CPL
-P_DAY=A.budget if A.budget else P_S/7; P_CPL=P_S/P_L; BC_DAY=BC_S/7; BC_CPL=BC_S/BC_L
+P_DAY=A.budget if A.budget else P_S/7; P_CPL=(P_S/P_L if P_L else (A.peik_cpl or ap.error('PEIKIRA has 0 leads in the 7d base: pass --peik-cpl <last 7d CPL with leads>'))); BC_DAY=BC_S/7; BC_CPL=BC_S/BC_L
 SITE={'none':1.0,'+0.5pt':4.4/3.9,'+1pt':4.9/3.9}
 def week(days_on=7, rest=P_CPL, site=1.0, a3_share=0.0, a3_cpl=95000, p_day=None):
     P_DAY_=P_DAY if p_day is None else p_day

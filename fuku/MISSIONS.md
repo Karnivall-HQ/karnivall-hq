@@ -25,7 +25,7 @@
 - **Priority:** P0
 - **Deadline:** 2026-12-05 (30 days from 2026-11-05)
 - **Constraints:** **Propose-only.** Fuku never touches the ad account (no pauses, budget changes, or launches). Every change is proposed to Alvian as an apply-ready checklist, and **Alvian applies it himself**. The metric is the 7-day average CPL, never a single day.
-- **Status:** criterion 1 met this week, criterion 2 off track (11/21: 7d CPL 85.1k ✅ on Rp 170k/day *(calc)*; 11/20: 92.1k ✅ on Rp 210k/day, by mix: BC 56.6k carried while the 105k caps held PEIKIRA near Rp 0; undo ask parked; criterion 2 at ≈ Rp 98k/day = 10% of the leg; ADSET-3 untested; Ad015 + site asks open)
+- **Status:** criterion 1 met, criterion 2 off track (11/23: 7d CPL 65.0k ✅ on Rp 102k/day *(calc)*, BC 94.8% of spend; PEIKIRA ≈ Rp 5k/day under the 105k caps; undo 126.2k MISS → parked; BC Wave 0 asked as the volume lever; site ask open)
 - **Strategy (Fuku, 2026-11-05):**
   1. *Diagnose* (now): ad-set/ad/placement/audience breakdown; find which ads, audiences, and placements produce leads ≤ Rp 95k.
   2. *Cut waste*: propose to Alvian which CTR-collapsed FAB ads and losing ad sets to pause, so spend concentrates in the winners (BC CBObass005-type setups at ~Rp 83k).
@@ -33,6 +33,7 @@
   4. *Scale*: propose budget raises of ~20–30% every 3–4 days, only while the 7d CPL ≤ Rp 95k. Alvian applies them. Fuku verifies the effect in the next readouts. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
+  - 2026-11-23 07:30: Weekly readout 11/16–11/22: Rp 714,937 / 11 = **65.0k ✅** *(calc)*; PEIKIRA Rp 37,262 / 0, BC Rp 677,675 / 11 (61.6k). LWD 12/03; criterion 2 at 10% of the leg, BLOCKED by the cap. Undo re-model 126.2k MISS → parked. BC W0 pre-check passed (201/204/3-21, group 60.1k; 208 dropped) → swapped in as OUTBOX #1; old #2 parked (moot under caps). Site re-asked as #2. Model script: `--peik-cpl` for 0-lead bases.
   - 2026-11-22 07:01: Readout 7d 11/15–11/21 **Rp 884,699 / 11 = 80.4k ✅** *(calc)*, 3rd week under 95k, BC = 87% of spend (69.4k); PEIKIRA Rp 190,609 / 1 (caps hold it ≈ Rp 0/day). Criterion 1 LWD 12/03 (nothing 69.4k OK); criterion 2 MISS, blocked by the cap, account ≈ Rp 99k/day = 10% of the leg *(calc)*. No human edits since 11/15. Asks #2/#3 still open.
   - 2026-11-21 09:02: Groundwork: undo dry run (`criterion1_model_1205.py --budget 300000`, 11/14–11/20 base): undo 104.2k MISS vs caps-held 69.2k OK; undo + site +0.5pt 92.3k; break-even PEIKIRA CPL 108.3k *(calc)* → undo stays parked; line in weekly 11/23 row 12. No ask.
   - 2026-11-21 10:01: Groundwork (no ad-account change): WA follow-up script re-checked on the live page (`creatives/2026-11-06_wa_followup_script.md`, 11/21 table). 1 overclaim fixed: "tanpa deposit" → "bisa tanpa deposit" (page only says it's possible). Logged a page contradiction (security: "Building" vs "Komplek Ruko") and that the ads' Rp150k pickup cap is 0× on the page. Gates left: 800 (W2), open for survey (G6), All-in.
@@ -188,6 +189,7 @@
 - **Status:** in progress
 - **Strategy:** The cloud heartbeat runs it on the first Monday run (07:00 WIB). Turn it into a playbook after the first report.
 - **Progress:**
+  - 2026-11-23 07:30: ✅ Weekly report #3 delivered → `fab_advertising/reports/weekly/2026-11-23.md` (Fab 65.0k −42.5% WoW; Incess 37.8k +42.9% WoW at unchanged caps, 047 over its flag line → watch; 0 fatigue flags; same 4 disabled). ~12 read-only calls. [REPORT] in OUTBOX.
   - 2026-11-21 11:01: Playbook v2 `fuku/memory/playbooks/weekly_ads_health_report.md` (strategy item "playbook after first report" done): §A week-before skeleton/run-sheet/dry-run/pre-pull/pre-set rules, §B Monday 11-step log-first run incl. mix-shift guard + ≥ 10-lead flag lines, §C write + OUTBOX. No ask.
   - 2026-11-21 09:02: Flag-line audit (tests A10, ≥ 10-lead weeks only): 042/047/026 lines hold; 030 fixed 46.7k → 46.1k CPL and 1.79% → 2.27% CTR (old values came from 7-lead weeks). Pre-pull file + weekly 11/23 updated. No ask.
   - 2026-11-20 19:02: split part 2 (047 + 026) in the same pre-pull file: 8-wk 047 27.3k, 026 26.8k *(calc)*. 047 = volume expansion (spend ×2.20, 35.6k); 026 spend shrinking (×0.74) at the cheapest CPL (27.4k): Meta moving spend off 026 (INFERRED). Flag lines set; all 4 picks covered for Monday. No ask.
