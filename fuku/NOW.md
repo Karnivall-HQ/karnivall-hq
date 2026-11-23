@@ -1,22 +1,22 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-23 07:30 WIB (cloud heartbeat: 07:00 readout + weekly #3)_
+_Last updated: 2026-11-23 08:01 WIB (cloud heartbeat: groundwork, Incess drift decomposition)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
 - **M-001 (P0):** 7d 11/16–11/22 **Rp 714,937 / 11 = 65.0k ✅** *(calc)*, BC 94.8% of spend (61.6k); PEIKIRA Rp 37k/week under the 105k caps. Criterion 1 met by mix, LWD 12/03. Criterion 2 off track (Rp 97k/day = 10% of the leg; honest date ≈ Feb).
 - **Volume lever now asked:** OUTBOX #1 = BC Wave 0 (cap 94,250 → 105,000 on 201/204/3-21 + N2), group 8-wk 60.1k *(calc)*. Old #2 (Ad015 + ADSET-3 min) parked as moot under the caps.
-- **M-002 (P1):** ✅ weekly #3 delivered (`fab_advertising/reports/weekly/2026-11-23.md`). ⚠️ Incess 37.8k (+42.9% WoW) at unchanged caps; 047 over its flag line. Watch, no ask.
+- **M-002 (P1):** ✅ weekly #3 delivered. ⚠️ Incess 37.8k (+42.9% WoW) is **not auction** (CPM +4%): ≈ 65% post-click, and LPV ÷ click slid to 78–83% *(calc)* (`2026-11-23_incess_drift_decomposition.md`). Watch, no ask.
 
 ## Next actions (dated or triggered)
 1. **Every run:** INBOX/OUTBOX for "W0 done", "W1 W2 done", Kuningan answer.
 2. **Polls 11/23:** 07:00 done; next ≈ 13:00 and 19:00 (activity log only).
 3. **"W0 done" seen in the log:** re-base day (playbook §D–§E): split day 1 at the change time, read the 3 ad sets on spend ÷ old pace + CPL; read rules in `2026-11-20_bc_cap_ladder_card.md`.
 4. **11/27:** ADSET-3 verdict (`2026-11-27_adset3_verdict_template.md`; spent Rp 45 in 7d → expect "starved, branch A").
-5. **11/30 weekly:** if Incess picks still > 35k 7d → write a cut list (047 first).
+5. **11/30 weekly:** Incess LPV ÷ click 7d < 85% → site-check [FYI] (no ad change); ≥ 88% and CPL ≤ 35k → close the watch. No cut list (cuts don't fix post-click).
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **11/30 weekly skeleton** per `playbooks/weekly_ads_health_report.md` §A1–§A2, prior columns from the 11/23 report; add an Incess drift row (CPM/CTR/CVR split per pick to tell auction vs demand).
-2. **Incess drift pre-pull (read-only):** picks by day 11/16–11/22 + CPM vs 11/09–11/15 → is the +43% CPM-driven (auction) or CVR-driven? Feeds the 11/30 call.
+1. **Incess landing page check (read-only):** URL from one 042 creative (`ads_get_creatives`), curl load time, redirects, form. Explains the LPV ÷ click slide.
+2. **11/30 weekly skeleton** per `playbooks/weekly_ads_health_report.md` §A1–§A2, prior columns from 11/23; add an Incess funnel row (CPM · CTR · LPV÷click · Lead÷LPV).
 3. **BC3-13 check:** Rp 77,281 / 0 in 7d (2nd week, largest 0-lead BC ad set): 8-wk read; only a pause line if 8-wk CPL > 120k (no ask until W0 moves).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")

@@ -189,6 +189,7 @@
 - **Status:** in progress
 - **Strategy:** The cloud heartbeat runs it on the first Monday run (07:00 WIB). Turn it into a playbook after the first report.
 - **Progress:**
+  - 2026-11-23 08:01: Groundwork (Incess drift): CPL ×1.43 split *(calc)*: CPM ×1.04 (11%), CTR ×1.09 (24%), click→LPV ×1.08 (21%), LPV→Lead ×1.17 (44%). **Not auction; ≈ 65% is after the click.** CVR −29 to −42% on 042/047/026 together; LPV ÷ click slid 87–97% → 78–83% (11/19–11/22). The cut-list idea is weakened (it would not fix a page problem). 11/30 rule set. `fab_advertising/reports/2026-11-23_incess_drift_decomposition.md`. No ask.
   - 2026-11-23 07:30: ✅ Weekly report #3 delivered → `fab_advertising/reports/weekly/2026-11-23.md` (Fab 65.0k −42.5% WoW; Incess 37.8k +42.9% WoW at unchanged caps, 047 over its flag line → watch; 0 fatigue flags; same 4 disabled). ~12 read-only calls. [REPORT] in OUTBOX.
   - 2026-11-21 11:01: Playbook v2 `fuku/memory/playbooks/weekly_ads_health_report.md` (strategy item "playbook after first report" done): §A week-before skeleton/run-sheet/dry-run/pre-pull/pre-set rules, §B Monday 11-step log-first run incl. mix-shift guard + ≥ 10-lead flag lines, §C write + OUTBOX. No ask.
   - 2026-11-21 09:02: Flag-line audit (tests A10, ≥ 10-lead weeks only): 042/047/026 lines hold; 030 fixed 46.7k → 46.1k CPL and 1.79% → 2.27% CTR (old values came from 7-lead weeks). Pre-pull file + weekly 11/23 updated. No ask.
