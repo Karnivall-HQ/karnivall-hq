@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-24 07:05 WIB (cloud heartbeat: 07:00 readout)_
+_Last updated: 2026-11-24 14:03 WIB (cloud heartbeat: 13:00 poll)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -9,7 +9,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Next actions (dated or triggered)
 1. **Every run:** INBOX/OUTBOX for "W0 done", "W1 W2 done", Kuningan answer.
-2. **Polls 11/24:** 07:00 done. Next ≈ 13:00, then ≈ 19:00 (activity log only; no re-pull of insights unless the log shows a human edit).
+2. **Polls 11/24:** 07:00 + 13:00 done. Next ≈ 19:00 (activity log only; no re-pull of insights unless the log shows a human edit).
 3. **"W0 done" seen in the log:** re-base day (playbook §D–§E): split day 1 at the change time, read the 3 ad sets on spend ÷ old pace + CPL; read rules in `2026-11-20_bc_cap_ladder_card.md` + `fuku/bin/bc_ladder_read.py`.
 4. **11/25 07:00 readout:** if W0 still unapplied (> 48h), re-ask stays one line; no new pack (stalled-asks rule).
 5. **11/27:** ADSET-3 verdict (`2026-11-27_adset3_verdict_template.md`); Meta started delivery on ads 003, 010 v03, S30 v04 → check real spend, don't assume "starved".
@@ -32,7 +32,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - Locks PEIKIRA: 11/17 11725 0 · 11/18 8238 0 · 11/19 628 0 · 11/20 41 0 · 11/21 26 0 · 11/22 208 0 · 11/23 650 0. BC: 11/17 135969 1 · 11/18 111199 4 · 11/19 87495 2 · 11/20 86268 0 · 11/21 85407 0 · 11/22 96167 3 · 11/23 166190 1. Model: `--peik 21516 0 --peik-cpl 190609 --bc 768695 11 --p2 924806 8 --budget 650 --cap-throttled`.
 
 ## Open loops (current state, one line each)
-- Activity log (11/24 07:01): no human edits since 11/15 00:42; Meta "Started delivery" on ADSET-3 ads 003, 010 v03, S30 v04 (11/23). Caps 105k / 94,250, all ACTIVE.
+- Activity log (11/24 14:02): 0 entries since 07:00; no human edits since 11/15 00:42; Meta "Started delivery" on ADSET-3 ads 003, 010 v03, S30 v04 (11/23). Caps 105k / 94,250, all ACTIVE.
 - BC 11/23 Rp 166k (201 49k / 1, 087 39k / 0) at unchanged caps: one-day auction swing; recheck 11/25 that BC is back ≈ 90k or still higher.
-- Site (11/23 13:02 curl, unchanged): Jakarta Pusat ×9, Kelapa Gading ×2, 800.000 ×3, akan launching ×3. WA script NOT sent.
+- Site (11/24 14:02 curl, unchanged): Jakarta Pusat ×9, Kelapa Gading ×2, 800.000 ×3, akan launching ×3. WA script NOT sent.
 - Pixel 11/16–11/22: VC 819, Form 52, Lead 31 (3.8% VC→Lead, flat).
