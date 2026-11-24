@@ -25,7 +25,7 @@
 - **Priority:** P0
 - **Deadline:** 2026-12-05 (30 days from 2026-11-05)
 - **Constraints:** **Propose-only.** Fuku never touches the ad account (no pauses, budget changes, or launches). Every change is proposed to Alvian as an apply-ready checklist, and **Alvian applies it himself**. The metric is the 7-day average CPL, never a single day.
-- **Status:** criterion 1 met, criterion 2 off track (11/23: 7d CPL 65.0k ✅ on Rp 102k/day *(calc)*, BC 94.8% of spend; PEIKIRA ≈ Rp 5k/day under the 105k caps; undo 126.2k MISS → parked; BC Wave 0 asked as the volume lever; site ask open)
+- **Status:** criterion 1 met, criterion 2 off track (11/24: 7d 11/17–11/23 CPL 71.8k ✅ on Rp 113k/day *(calc)*, BC 97.3% of spend; PEIKIRA ≈ Rp 0.7k/day under the 105k caps; undo parked; BC Wave 0 asked as the volume lever (unapplied ~24h); site ask open)
 - **Strategy (Fuku, 2026-11-05):**
   1. *Diagnose* (now): ad-set/ad/placement/audience breakdown; find which ads, audiences, and placements produce leads ≤ Rp 95k.
   2. *Cut waste*: propose to Alvian which CTR-collapsed FAB ads and losing ad sets to pause, so spend concentrates in the winners (BC CBObass005-type setups at ~Rp 83k).
@@ -33,6 +33,7 @@
   4. *Scale*: propose budget raises of ~20–30% every 3–4 days, only while the 7d CPL ≤ Rp 95k. Alvian applies them. Fuku verifies the effect in the next readouts. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
+  - 2026-11-24 07:01: 07:00 readout: 7d 11/17–11/23 **Rp 790,211 / 11 = 71.8k ✅** *(calc)*, 5th 7d under 95k; BC Rp 768,695 / 11 (69.9k), PEIKIRA Rp 21,516 / 0. 11/23 BC Rp 166,190 / 1 (201 + 087 spent ~2.5× their 11/22, caps unchanged: auction variation, one day). Criterion 1 LWD 12/03 (nothing 70.1k OK); criterion 2 MISS at 11% of the leg, blocked by the cap. Log: Meta only (ADSET-3 S30 v04 started delivery 11/23 23:45); no human edits since 11/15; W0 not applied. No new ask.
   - 2026-11-23 11:01: BC 8-wk pre-pull (09/28–11/22): W0 group 60,095 re-confirmed by an independent pull; BC3-13 c2 321,360 / 2 = 160.7k *(calc)* → R3 pause line pre-read for the 11/30 weekly (no ask while W0 sits). `fab_advertising/reports/2026-11-23_bc_8wk_prepull.md`
   - 2026-11-23 07:30: Weekly readout 11/16–11/22: Rp 714,937 / 11 = **65.0k ✅** *(calc)*; PEIKIRA Rp 37,262 / 0, BC Rp 677,675 / 11 (61.6k). LWD 12/03; criterion 2 at 10% of the leg, BLOCKED by the cap. Undo re-model 126.2k MISS → parked. BC W0 pre-check passed (201/204/3-21, group 60.1k; 208 dropped) → swapped in as OUTBOX #1; old #2 parked (moot under caps). Site re-asked as #2. Model script: `--peik-cpl` for 0-lead bases.
   - 2026-11-22 07:01: Readout 7d 11/15–11/21 **Rp 884,699 / 11 = 80.4k ✅** *(calc)*, 3rd week under 95k, BC = 87% of spend (69.4k); PEIKIRA Rp 190,609 / 1 (caps hold it ≈ Rp 0/day). Criterion 1 LWD 12/03 (nothing 69.4k OK); criterion 2 MISS, blocked by the cap, account ≈ Rp 99k/day = 10% of the leg *(calc)*. No human edits since 11/15. Asks #2/#3 still open.
