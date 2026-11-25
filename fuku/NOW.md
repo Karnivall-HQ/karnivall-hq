@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-25 07:01 WIB (cloud heartbeat: 07:00 readout)_
+_Last updated: 2026-11-25 13:01 WIB (cloud heartbeat: 13:00 poll)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -9,10 +9,10 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Next actions (dated or triggered)
 1. **Every run:** INBOX/OUTBOX for "W0 done", "W1 W2 done", Kuningan answer.
-2. **Polls 11/25:** 07:00 done. Next ≈ 13:00 (log + site curl), ≈ 19:00 (log).
+2. **Polls 11/25:** 07:00 + 13:00 done. Next ≈ 19:00 (log only).
 3. **"W0 done" seen in the log:** re-base day (playbook §D–§E): split day 1 at the change time, read the 3 ad sets on spend ÷ old pace + CPL; read rules in `2026-11-20_bc_cap_ladder_card.md` + `fuku/bin/bc_ladder_read.py`. Note 201's pre-change pace is now ~49–60k/day (11/23–11/24), not ~17k: use the 7d average as the baseline.
 4. **11/26 07:00 readout:** W0 at ~72h → stalled-asks rule: re-ask stays one line, no new pack.
-5. **11/27:** ADSET-3 verdict (`2026-11-27_adset3_verdict_template.md`); Meta started delivery on ads 003, 010 v03, S30 v04, 007 → read real spend per ad, don't assume "starved".
+5. **11/27:** ADSET-3 verdict (`2026-11-27_adset3_verdict_template.md`); Meta started delivery on ads 003, 010 v03, S30 v04, 007, 018 (11/25 07:20) → read real spend per ad, don't assume "starved".
 6. **11/30 weekly:** fill `reports/weekly/2026-11-30.md` (skeleton + rules R1–R6). Incess 7d CPL > 35k and FB reels + feed CPL > 1.4× IG feed for a 2nd week → placement-exclusion proposal (propose-only); IG reels CPL ≤ 25k or 7d ≤ 35k → close the watch. BC3-13 c2 R3 pause line pre-read (`2026-11-23_bc_8wk_prepull.md`).
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
@@ -32,7 +32,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - Locks PEIKIRA: 11/18 8238 0 · 11/19 628 0 · 11/20 41 0 · 11/21 26 0 · 11/22 208 0 · 11/23 650 0 · 11/24 242 0. BC: 11/18 111199 4 · 11/19 87495 2 · 11/20 86268 0 · 11/21 85407 0 · 11/22 96167 3 · 11/23 166269 1 · 11/24 145442 4. Model: `--peik 10033 0 --peik-cpl 190609 --bc 778247 14 --p2 924806 8 --budget 650 --cap-throttled`.
 
 ## Open loops (current state, one line each)
-- Activity log (11/25 07:01): no human edits since 11/15 00:42; last Meta entry ADSET-3 ad 007 "Started delivery" 11/24 16:55. Caps 105k / 94,250, all ACTIVE.
+- Activity log (11/25 13:01): no human edits since 11/15 00:42; last Meta entry ADSET-3 ad 018 "Started delivery" 11/25 07:20. Caps 105k / 94,250, all ACTIVE.
 - BC 11/23–11/24 Rp 166k / 145k at unchanged caps (201 49k → 60k): recheck 11/26 whether the rise holds (7d BC avg now 111k/day).
-- Site (11/24 14:02 curl, unchanged): Jakarta Pusat ×9, Kelapa Gading ×2, 800.000 ×3, akan launching ×3. WA script NOT sent.
+- Site (11/25 13:01 curl, unchanged): Jakarta Pusat ×9, Kelapa Gading ×2, 800.000 ×3, akan launching ×3. WA script NOT sent.
 - Pixel 11/16–11/22: VC 819, Form 52, Lead 31 (3.8% VC→Lead, flat).
