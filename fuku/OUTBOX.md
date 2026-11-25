@@ -7,6 +7,7 @@
 
 ### Needs you (max 3, ranked)
 1. ❓ **[DECISION] 2026-11-23 07:30 · BC Wave 0 (Markus, ~15 min): raise the bid cap 94,250 → 105,000 on 3 BC ad sets (201, 204, 3-21) + build N2 (5 existing card images, no photos) as its own BC ad set?** 8-week CPL of the 3 = **Rp 60,095** *(calc)*; BC runs at 1.94% of its Rp 5M budget, so the cap is what holds volume. It's the only volume lever that runs under 95k. Pre-check passed today (no BC edits, page still 750, BC208 dropped at 0.98). Sheet: `fab_advertising/creatives/2026-11-20_bc_wave0_markus_sheet.md` (skip row 3). My recommendation: **yes**. Reply "W0 done" or "no".
+   → **11/25 07:01 (no new ask, ~48h open):** 7d now **56.3k ✅** (14 leads). Honest caveat: BC spent Rp 166k (11/23) and Rp 145k (11/24) at the *unchanged* 94,250 caps, and 201 alone Rp 60k on 11/24 (~3.4× its 11/22), so the cap binds a bit less this week. Still 2.9% of the 5M budget; case for W0 stands. Still **yes**.
 2. ❓ **[DECISION] 2026-11-13 → re-asked 11/23 · Site W1+W2 (10 min): "Jakarta Pusat" → "Jakarta Selatan" ×9 + FAQ "Rp 800.000" → 750?** Still unchanged today (curl 07:20). Paste-ready: §F of `fab_advertising/reports/2026-11-11_w1w2_paste_ready.md`. My recommendation: **yes**. Reply "W1 W2 done" + who edits.
 
 _Ad-account ask: #1 (W0). Old #2 (Ad015 + ADSET-3 min) parked 11/23: moot while the caps hold PEIKIRA at Rp 5k/day._
