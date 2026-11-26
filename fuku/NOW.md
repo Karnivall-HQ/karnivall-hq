@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-26 17:01 WIB (cloud heartbeat: W0 shrunk, 201 dropped)_
+_Last updated: 2026-11-26 19:01 WIB (cloud heartbeat: 19:00 poll, no change)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -10,7 +10,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Next actions (dated or triggered)
 1. **Every run:** INBOX/OUTBOX for "W0 done", "W1 W2 done", Kuningan answer.
-2. **Polls 11/26:** 07:00 + 13:00 done. Next ≈ 19:00 (activity log + site curl only). Next W0 re-ask (not before 11/27 07:00) = 2-field line in the sheet §1 note.
+2. **Polls 11/26:** all 3 done (07:00, 13:00, 19:00). Next = 11/27 07:00 readout. Next W0 re-ask (not before 11/27 07:00) = 2-field line in the sheet §1 note.
 3. **"W0 done" seen in the log:** re-base day (playbook §D–§E): split day 1 at the change time, read the 3 ad sets on spend ÷ old pace + CPL; rules in `2026-11-20_bc_cap_ladder_card.md` + `fuku/bin/bc_ladder_read.py`. 201 is out of the ladder = control reading.
 4. **11/27 07:00:** ADSET-3 verdict (`2026-11-27_adset3_verdict_template.md`); read real spend per ad (003, 010 v03, S30 v04, 007, 018 started delivery). 201 re-enters W0 only if < Rp 20k/day for 3 days.
 5. **11/30 weekly:** fill `reports/weekly/2026-11-30.md` (rules R1–R6). Incess placement rule + BC3-13 c2 R3 pause line (`2026-11-23_bc_8wk_prepull.md`).
@@ -32,7 +32,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - Locks PEIKIRA: 11/19 628 0 · 11/20 41 0 · 11/21 26 0 · 11/22 208 0 · 11/23 650 0 · 11/24 242 0 · 11/25 28 0. BC: 11/19 87495 2 · 11/20 86268 0 · 11/21 85407 0 · 11/22 96167 3 · 11/23 166269 1 · 11/24 145539 4 · 11/25 186060 2. Model: `--peik 1823 0 --peik-cpl 190609 --bc 853205 12 --p2 924806 8 --budget 650 --cap-throttled`.
 
 ## Open loops (current state, one line each)
-- Activity log (11/26 13:02): 0 entries since 11/25 19:00; no human edits since 11/15 00:42. Caps 105k / 94,250, all ACTIVE.
+- Activity log (11/26 19:01): 0 entries since 11/25 19:00; no human edits since 11/15 00:42. Caps 105k / 94,250, all ACTIVE.
 - BC 3-day rise at unchanged caps (166k → 146k → 186k), 201-led: 7d BC avg 121.9k/day *(calc)*.
-- Site (11/26 13:02 curl, unchanged): Jakarta Pusat ×9, Kelapa Gading ×2, 800.000 ×3, akan launching ×3. WA script NOT sent.
+- Site (11/26 19:01 curl, unchanged): Jakarta Pusat ×9, Kelapa Gading ×2, 800.000 ×3, akan launching ×3. WA script NOT sent.
 - Pixel 11/16–11/22: VC 819, Form 52, Lead 31 (3.8% VC→Lead, flat).
