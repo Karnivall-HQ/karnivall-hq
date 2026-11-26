@@ -29,6 +29,19 @@ Ads Manager → each ad set → Bid control → `105000` → Publish. Budget unt
 | 3 | BC208 UGC JKTcity NoExcl | `120247180846830572` | 94,250 → **105,000** |
 | 4 | BC3-21 Anak Tele JKTcity – Copy 10 | `120250479689810572` | 94,250 → **105,000** |
 
+**11/26 17:01 re-check → skip row 1 (201) too; the ladder is now rows 2 + 4 (2 fields).** Daily pull 11/19–11/25 at unchanged 94,250 caps (account data):
+
+| Ad set | 7d spend / leads | Rp/day *(calc)* | CPL *(calc)* | CPL ÷ cap *(calc)* | 11/26 part-day (17:01) |
+|---|---|---|---|---|---|
+| 201 | 245,876 / 5 | 35,125 (last 3 days 65,149) | 49,175 | 0.52 | 56,340 / 1 |
+| 204 | 16,598 / 0 | 2,371 | n/a | n/a | 626 / 0 |
+| 3-21 | 39,250 / 1 | 5,607 | 39,250 | 0.42 | 5,683 / 1 |
+
+- 201 went from ≈ 12.6k/day (11/19–11/22) to 49–86k/day (11/23–11/25) **at the same cap**, CPL ≈ 0.5× cap. The cap isn't what's holding it back right now, so raising it would mostly let Meta bid higher for the same volume (INFERRED). Keep 201 at 94,250. Re-add the row only if 201 drops back under Rp 20k/day for 3 days in a row.
+- 204 and 3-21 still get almost nothing (Rp 2–6k/day = 0.05–0.1% of the BC budget *(calc)*): the raise still targets them. Meta benchmark (tool window): 3-21 CPR 30.9k vs peer median 67.2k (better); 204 85.4k (worse); 201 52.6k (better).
+- **Shrunk W0 ask (for the next re-ask, not sent now):** "Markus: bid cap 94,250 → 105,000 on BC204 + BC3-21 (2 fields) + build N2 (§2)? yes/no."
+- Read baseline if applied: 201 isn't in the ladder, so the `bc_ladder_read.py` day-1 split covers 204 + 3-21 only; 201 stays the control reading.
+
 ## 2. N2 carousel: new ad set + 1 ad
 
 ### 2a. Ad set = duplicate `BC208 UGC JKTcity NoExcl` (`120247180846830572`), then change only name + bid
