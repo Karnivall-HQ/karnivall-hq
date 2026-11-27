@@ -2,6 +2,15 @@
 _2026-11-20 08:02 WIB · cloud heartbeat · read-only · account `484578521394893`, campaign BC CBObass005 `120236222888610572` (Rp 5M/day CBO)_
 _Rules applied: `meta-tests-and-proposals.md` §C (≥ 8 weekly rows + bid log; raise only CPL ÷ cap < ~0.85; budget must bind), §A (kill = spend multiples + one comparative rule). Status: **held, not asked** (stalled-ask rule: OUTBOX #2/#3 still open). Ads are propose-only: Alvian/Markus apply._
 
+## ⚠️ Scope refresh + runbook: the day "W0 done" lands (2026-11-27 21:01 WIB; overrides everything below)
+**Scope now = OUTBOX #1 as re-asked 11/27 07:01:** cap 94,250 → 105,000 on **BC204 (`120246071060620572`) + BC3-21 c10 (`120250479689810572`) only**, plus N2 as its own BC ad set (markus sheet §2). Row 1 (201) dropped 11/26 17:01 (runs free at ≈ 0.5× cap → **201 = control**, part of "rest of BC"); row 3 (208) dropped 11/23 (ratio 0.98). The 4-row table and "all four" lines below are the 11/20 history. Thresholds are unchanged (they are target multiples, not group-size based).
+1. **Same run, activity log** (`ads_account_get_activity_logs`, since the last poll): confirm which caps moved to 105,000, by whom, and the edit time in WIB. Any cap on 201/208/087 or a budget change too → note it; the read script warns if 201/208 are passed as rows.
+2. **Same run, re-base (playbook §D–§E):** day 1 = the edit day, split at the edit time (post-edit hours only). Void the criterion-1 model output until re-run with `--budget` = actual daily spend; grep `fab_advertising/reports/` + `fuku/NOW.md` for "94,250" lines that assume 204/3-21 still capped and add a dated note.
+3. **Same run, N2 check:** `ads_get_ad_entities` on campaign `120236222888610572` → find `BC-W0-N2 …`; check bid 94,250, 1 ad, landing URL with `?ad=`. No N2 → OUTBOX one-liner "N2 not built yet?" (no new ask).
+4. **Each 07:00 readout, day 1–7:** pull 204, 3-21, N2, 204F (ad), BC campaign total and Fab 7d → `python3 fuku/bin/bc_ladder_read.py --day N --row 204:S:L --row 3-21:S:L --rest S:L --fab7d S:L --n2 S:L` (rest = BC total − 204 − 3-21 − N2). Exit 1/2 → the printed change list goes to OUTBOX as a proposal for Alvian/Markus (never applied by Fuku).
+5. **Day 7:** ladder verdict (KEEP / CLOSE LEVER / REVERT ALL) → MISSIONS + journal; 🚀 N2 winner trigger → stage N3 (§2c) then N1 (§2d).
+6. **Day 14:** add `--parent <204F S:L same window>` → N2 KEEP / PAUSE; criterion-2 line via `c1_closeout.py --w1`.
+
 ## Verdict
 1. **BC's limiter is the cap, not the budget.** 7d 11/13–11/19 BC spent Rp 679,253 = Rp 97.0k/day = **1.94% of the Rp 5M budget** *(calc)*. Bid-category + all activity on the BC campaign since 11/12: **none** (log empty). Every top ad set still sits at Rp 94,250 (account data).
 2. **The BC204-only probe is retired in favour of a 4-ad-set ladder.** BC204 alone went 0 leads in its last 4 weeks of 3 (4-wk Rp 86,591 / 1) and delivers Rp 1.9k/day; it can't read on its own. Four ad sets pass the 8-week ratio test and together hold 33 leads.
@@ -41,11 +50,11 @@ Why 105k and not "remove the cap": PEIKIRA's ad sets at 105k still starve, so 10
 
 ## Read rules (written before launch)
 - **Kill, per ad set:** revert that ad set to Rp 94,250 if it spends ≥ Rp 190k (2× target) with 0 leads, or ≥ Rp 285k (3×) with ≤ 1 lead.
-- **Comparative:** ladder group 7d CPL vs the untouched rest of BC, same window. Revert all four if the group is > 1.3× the rest **and** > 95k.
+- **Comparative:** ladder group 7d CPL vs the untouched rest of BC, same window. Revert all four (11/27: every ladder set = 204 + 3-21) if the group is > 1.3× the rest **and** > 95k.
 - **Day-7 verdict (group):** keep if group CPL ≤ 95k on ≥ Rp 285k spend; spend < Rp 285k = "cap wasn't the limiter" → revert nothing, close the lever, record it.
-- **Account guard:** if Fab 7d CPL crosses 95k during the window and the ladder group is the cause (group CPL > 95k), revert all four.
+- **Account guard:** if Fab 7d CPL crosses 95k during the window and the ladder group is the cause (group CPL > 95k), revert all four (11/27: every ladder set).
 - Read on full-day data at the 07:00 readout; day 1 split at the edit time (playbook §D3).
-- **One command (11/20 16:02):** `python3 fuku/bin/bc_ladder_read.py --day N --row KEY:SPEND:LEADS ×4 --rest SPEND:LEADS --fab7d SPEND:LEADS` applies all four rules above (exit 0 run/keep/close, 1 revert one, 2 revert all) and prints the proposed change list. Thresholds live only here; the script copies them.
+- **One command (11/20 16:02):** `python3 fuku/bin/bc_ladder_read.py --day N --row KEY:SPEND:LEADS ×4 (11/27: ×2, 204 + 3-21, plus --n2) --rest SPEND:LEADS --fab7d SPEND:LEADS` applies all four rules above (exit 0 run/keep/close, 1 revert one, 2 revert all) and prints the proposed change list. Thresholds live only here; the script copies them.
 
 ## When to ask
 Not now. Raise it as a one-line ask only when #2 or #3 moves, or at the 11/23 weekly if both are still stalled (swap it in for the weaker ask). Before asking, re-pull this table on the then-latest 7d (§D).

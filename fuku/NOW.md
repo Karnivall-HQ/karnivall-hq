@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-27 20:02 WIB (cloud heartbeat: "W1 W2 done" runbook + `w1w2_read.py`)_
+_Last updated: 2026-11-27 21:01 WIB (cloud heartbeat: W0 scope sweep + "W0 done" runbook, N2 rules in `bc_ladder_read.py`)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -12,14 +12,14 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 1. **Every run:** INBOX/OUTBOX for "W0 done", "W1 W2 done", Kuningan answer.
 2. **Polls 11/27:** 07:00 + 13:01 + 19:01 done (budget spent). Next = 11/28 07:00 readout (incl. W0 re-ask check).
 3. **"W1 W2 done" seen:** follow the 6-step runbook at the top of `w1w2_lift_template.md` (snapshot PASS → log → `w1w2_read.py dates` → d7/d14 reads).
-4. **"W0 done" seen in the log:** re-base day (playbook §D–§E): split day 1 at the change time; rules in `2026-11-20_bc_cap_ladder_card.md` + `fuku/bin/bc_ladder_read.py`. 201 = control reading.
+4. **"W0 done" seen in the log:** follow the 6-step runbook at the top of `2026-11-20_bc_cap_ladder_card.md` (log → re-base §D–§E → N2 check → daily `bc_ladder_read.py --row 204 --row 3-21 --n2` → d7 ladder / d14 N2). 201 = control (in `--rest`).
 5. **11/29–12/05 07:00 readouts:** after locking, run `fuku/bin/c1_closeout.py --locked <window spend> <leads> <days>` (12/05: add `--w1 <date|none>` → criterion-2 line, rules 5–6) (window 11/28–12/04; rules in `2026-12-05_criterion1_path.md` close-out). Needs ≥ 10 leads at ~945k; P(miss) now 17% *(calc)*.
 6. **11/30 weekly:** fill `reports/weekly/2026-11-30.md` (rules R1–R7; run sheet dry-run 11/27 18:02, calls 0–10b, pixel prior row re-pulled in call 8).
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **Pre-filled-file grep for revised numbers:** grep `reports/` cards + templates dated ≥ 11/20 for 819 / 201-in-W0 / other superseded values (lesson 11/27 18:02) and fix in place. Start: other 11/11-era rule lines in `w1w2_lift_template.md` + `2026-11-20_gate_brief.md`.
-2. **M-002 cut-list fill check:** dry-run the Incess cut-list skeleton (11/27 15:01) against R2/R7 so 11/30 needs only numbers.
-3. **W0 "done" day-1 runbook:** same 6-step format at the top of `2026-11-20_bc_cap_ladder_card.md` (log split, `bc_ladder_read.py`, model re-base), so the re-base day needs no reading.
+1. **M-002 cut-list fill check:** dry-run the Incess cut-list skeleton (11/27 15:01) against R2/R7 so 11/30 needs only numbers.
+2. **Superseded-value grep, part 2:** 11/11-era rule lines in `2026-11-20_gate_brief.md` + `2026-11-20_readout_template.md` (W0 scope + 819 swept 11/27 21:01: clean).
+3. **`--rest` input helper:** one read-only entities call on BC campaign → print the `bc_ladder_read.py` inputs (BC total − 204 − 3-21 − N2, 204F ad) so the W0 daily read is one paste.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 BC Wave 0 (204 + 3-21 + N2). #2 Site W1 + W2 + who edits.

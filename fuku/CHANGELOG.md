@@ -28,3 +28,4 @@
 - 2026-11-23 07:30 · fuku/bin/criterion1_model_1205.py: added --peik-cpl fallback for 0-lead PEIKIRA bases (errors clearly instead of ZeroDivisionError).
 - 2026-11-27 16:02 · New script `fuku/bin/c1_closeout.py` (criterion-1 window close-out: leads needed, P(miss), paste line).
 - 2026-11-27 19:01 · `fuku/bin/c1_closeout.py`: new `--w1 <date|none>` flag prints the 12/05 criterion-2 line from the same window numbers (honest date = W1 + 49/77/119 days).
+- 2026-11-27 21:01 · `fuku/bin/bc_ladder_read.py`: ladder scope → 204 + 3-21 (warns on 201/208 rows); new `--n2` / `--parent` apply the N2 read rules (kill, starvation, day-14 comparative, winner trigger).

@@ -4,8 +4,10 @@
 #
 # Fuku pulls inputs with read-only calls at the 07:00 readout (full days only; day 1 split at the edit time, §D3):
 #   python3 fuku/bin/bc_ladder_read.py --day 3 \
-#     --row 201:120000:2 --row 204:60000:1 --row 208:40000:0 --row 3-21:90000:1 \
-#     --rest 400000:6 --fab7d 1500000:17
+#     --row 204:60000:1 --row 3-21:90000:1 \
+#     --rest 400000:6 --fab7d 1500000:17 [--n2 40000:0] [--parent 204F_SPEND:LEADS]
+# Scope (W0 as re-asked 2026-11-27 07:01): ladder = 204 + 3-21 only; 201 = control (part of --rest), 208 dropped 11/23.
+# --n2     SPEND:LEADS of the new BC-W0-N2 ad set since launch (N2 rules, markus sheet §4); day 14 needs --parent
 # --day    full days since the cap change (1..7); verdict only on day >= 7
 # --row    KEY:SPEND:LEADS per ladder ad set, cumulative since the change (post-change part of day 1 only)
 # --rest   SPEND:LEADS of the untouched rest of BC, same window
@@ -13,8 +15,9 @@
 # --reverted KEY  optional, repeatable: ad sets already reverted (excluded from the group)
 import argparse, sys
 
-LADDER = {"201": "BCbatch201 Manny5 `120245708232080572`", "204": "BC204 Manny6 `120246071060620572`",
-          "208": "BC208 UGC `120247180846830572`", "3-21": "BC3-21 Anak Tele c10 `120250479689810572`"}
+LADDER = {"204": "BC204 Manny6 `120246071060620572`", "3-21": "BC3-21 Anak Tele c10 `120250479689810572`"}
+OUT_OF_SCOPE = {"201": "201 is the control reading since 11/26 (re-add only if < Rp 20k/day 3 days running)",
+                "208": "208 dropped 11/23 (CPL ÷ cap 0.98)"}
 TARGET, OLD_CAP = 95_000, 94_250
 KILL0, KILL1 = 2 * TARGET, 3 * TARGET          # >= 190k with 0 leads; >= 285k with <= 1 lead
 COMP_X, VERDICT_SPEND = 1.3, 3 * TARGET        # comparative 1.3x and > 95k; day-7 needs >= 285k group spend
@@ -28,6 +31,8 @@ ap.add_argument("--row", action="append", required=True)
 ap.add_argument("--rest", required=True)
 ap.add_argument("--fab7d", required=True)
 ap.add_argument("--reverted", action="append", default=[])
+ap.add_argument("--n2")
+ap.add_argument("--parent", help="204F SPEND:LEADS, same window as N2 (day-14 comparative)")
 a = ap.parse_args()
 
 pair = lambda t: (float(t.split(":")[0]), int(t.split(":")[1]))
@@ -39,6 +44,9 @@ for raw in a.row:
     k, s, l = raw.split(":")
     s, l = float(s), int(l)
     name = LADDER.get(k, k)
+    if k in OUT_OF_SCOPE:
+        out.append(f"Scope ⚠️ {k}: {OUT_OF_SCOPE[k]}. Counted only because it was passed; check the activity log "
+                   "shows its cap at 105,000 before trusting this row.")
     if k in a.reverted:
         out.append(f"Kill ➖ {name}: already reverted, out of the group")
         continue
@@ -63,18 +71,40 @@ else:
     ratio = g_cpl / r_cpl
     bad = ratio > COMP_X and g_cpl > TARGET
     out.append(f"Comparative {'❌' if bad else '✅'} group {fmt(gs, gl)} vs rest {fmt(rs, rl)} → {ratio:.2f}× *(calc)*"
-               + (" → revert all four" if bad else ""))
+               + (" → revert every ladder set" if bad else ""))
     if bad:
         revert_all.append("comparative")
 
 # 3. Account guard
 guard = readable and f_cpl > TARGET and g_cpl > TARGET
 out.append(f"Guard {'❌' if guard else '✅'} Fab 7d {fmt(fs, fl)} *(calc)*; group {rp(g_cpl) if gl else 'n/a'}"
-           + (" → both > 95k, the ladder is the cause → revert all four" if guard else ""))
+           + (" → both > 95k, the ladder is the cause → revert every ladder set" if guard else ""))
 if guard:
     revert_all.append("account guard")
 
-print(f"BC cap ladder read, day {a.day}/7 (full days since the change)")
+# 5. N2 (new creative ad set; never reverts the ladder, only pauses itself)
+n2_line = None
+if a.n2:
+    ns, nl = pair(a.n2)
+    if (nl == 0 and ns >= KILL0) or (nl <= 1 and ns >= KILL1):
+        n2_line = f"N2 ❌ {fmt(ns, nl)} → proposed change: pause BC-W0-N2 (kill rule)"
+    elif a.day >= 7 and ns < 50_000:
+        n2_line = f"N2 ➖ {fmt(ns, nl)} < Rp 50,000 by day {a.day} → starved (cap-limited), no creative verdict"
+    elif a.day >= 14:
+        if not a.parent:
+            n2_line = f"N2 ⚠️ day {a.day}: pass --parent 204F_SPEND:LEADS (same window) for the comparative"
+        else:
+            ps, pl = pair(a.parent)
+            lim = min(cpl(ps, pl) * 1.15, float("inf"))
+            ok = nl > 0 and (cpl(ns, nl) <= lim or cpl(ns, nl) <= 70_000)
+            n2_line = (f"N2 {'✅ KEEP' if ok else '❌ PAUSE'} {fmt(ns, nl)} vs 204F {fmt(ps, pl)} × 1.15 or 70k *(calc)*")
+    else:
+        n2_line = f"N2 ✅ {fmt(ns, nl)} *(calc)*: running, verdict at day 14"
+    if nl and ns >= KILL1 and cpl(ns, nl) <= 70_000 and a.day <= 7:
+        n2_line += " · 🚀 WINNER trigger (≥ Rp 285k in 7d at ≤ 70k) → stage N3 (§2c) then N1 (§2d)"
+    out.append(n2_line)
+
+print(f"BC W0 read, day {a.day} (full days since the change; ladder verdict day 7, N2 verdict day 14)")
 print("\n".join(out))
 print()
 

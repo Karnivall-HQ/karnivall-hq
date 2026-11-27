@@ -214,8 +214,9 @@ Kept as backed: apartemen 9, kamar 5, bersih 6, aman 14, CCTV 6, "per 1 bulan" +
 
 ## 4. Read rules (fixed now, from the two source cards)
 - **Day 1:** split at the edit time (playbook §D3); read on full days at the 07:00 readout.
-- **Ladder kill, per ad set:** back to 94,250 at ≥ Rp 190k with 0 leads, or ≥ Rp 285k with ≤ 1 lead. **Comparative:** revert all 4 if group 7d CPL > 1.3× the rest of BC **and** > 95k. **Day 7:** keep if group ≤ 95k on ≥ Rp 285k; spend < Rp 285k = cap wasn't the limiter → close the lever.
+- **Ladder kill, per ad set:** back to 94,250 at ≥ Rp 190k with 0 leads, or ≥ Rp 285k with ≤ 1 lead. **Comparative:** revert both ladder sets (204 + 3-21; 201 = control since 11/26) if group 7d CPL > 1.3× the rest of BC **and** > 95k. **Day 7:** keep if group ≤ 95k on ≥ Rp 285k; spend < Rp 285k = cap wasn't the limiter → close the lever.
 - **N2 kill:** pause at ≥ Rp 190k / 0 leads or ≥ Rp 285k / ≤ 1 lead. **Starvation:** < Rp 50k in 7 days = cap-limited, no creative verdict. **Day 14 comparative:** keep if CPL ≤ 204F × 1.15 or ≤ 70k, same window. **Winner (criterion 2):** ≥ Rp 285k in 7 days at ≤ 70k → N3 (§2c) then N1 (§2d), rows ready since 11/20 13:02.
+- **One command (11/27 21:01):** `fuku/bin/bc_ladder_read.py` now applies the ladder **and** N2 rules (`--n2`, `--parent` at day 14); runbook at the top of `reports/2026-11-20_bc_cap_ladder_card.md`.
 - **Account guard:** Fab 7d CPL > 95k with the ladder group or N2 as the cause → revert the cause only.
 
 ## 5. Template for later BC waves (N3, N1, Wave 1–6 photos)
