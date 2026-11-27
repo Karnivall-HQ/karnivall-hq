@@ -2,6 +2,21 @@
 _Draft 2026-11-13 15:02 WIB, Fuku cloud heartbeat (groundwork). Read-only, nothing changed in the ad account. Propose-only._
 _Used only if the 11/20 readout sends Variant M or H (`2026-11-20_gate_miss_note.md`): this is the plan behind its "move Rp 1M/day to 01/15" line. Inputs: `2026-11-12_scale_plan_v2.md` (account data). Not an ask yet: the date is Alvian's call._
 
+## 11/27 09:02 · ADSET-3 closed → Wave 1 carry-over (groundwork; no ask while 2 asks sit open)
+ADSET-3 day-14 verdict (11/27 07:01): **UNDER-TESTED (starved)**, Rp 277 / 0 in 14 days, all 6 ads < Rp 5k [account data]. So 0 of its ads are judged; none is a loser. W1 (calendar 11/23) also did not launch: no phone photos arrived. Every calendar row below slips by ≥ 4 days until a wave goes live.
+The 6 ads' images are **already in the account** (mapping 11/15 17:02, `2026-11-13_adset3_read_card.md` l.80–88), so they are a photo-free Wave 1. Build = BC rows pattern (`../creatives/2026-11-20_waves2-6_bc_rows.md` §1: own BC ad set, cap Rp 94,250, BC identity, `?ad={{ad.name}}`), one ad per ad set, page check at build time. Ranked by our look history (11/05 review + BC look split, INFERRED):
+| Rank | Ad (look) | Images | Carry? | Why |
+|---|---|---|---|---|
+| 1 | AKIRA-016 (L1a home photo + stickers) | 749b0f… 9:16 + 708088… 4:5 | **yes, first** | the BC Image087 formula (lifetime 80.0k *(calc)*); never delivered anywhere (Rp 0 in PEIKIRA2 11/05, Rp 33 here) |
+| 2 | 018 (L2 real facility, unit C1) | v01 + v02 + 4:5 | **yes** | real facility photos run 54.0k in BC vs 66.7k clutter *(calc, 11/20)*; ⚠️ its "bukan gambar render" line is fine only without 010 next to it |
+| 3 | S30 v04 (L1b home photo, big text) | 1 image | yes, if a 3rd slot | home clutter without stickers; one image, so 9:16 crop must be checked |
+| 4 | 007 (L3 WA chat mock-up) | 3 images | hold | graphics: no account win yet; only after 1–3 are read |
+| 5 | 003 (L3 size chart) | 3 images | hold | same; S2 (size-copy row) covers the angle with a photo |
+| 6 | 010 (L4 render-look) | v03 + v04 + 4:5 v02 | **no** | expected loser (renders 200–372k, 11/05); doors don't match the real panels |
+- **Read:** Wave 0 sheet §4 per ad set; day-14 parent BC208 (≤ BC208 × 1.15 or ≤ 70k). A rank-1 "look works" (≤ 95k on ≥ 2 leads) is the first real hit-rate number for this plan.
+- **When to ask:** only after W0 lands or is refused (stall rule: 2 asks open since 11/23 / 11/13). Then as one line: "Build 016 + 018 as 2 BC ad sets (existing images, ~10 min)?" Until then this table is the whole staging; no new sheet.
+- **Hit-rate ledger:** ADSET-3 = 0 of 0 judged. Forecast table below is unchanged until a wave gets ≥ Rp 95k per ad.
+
 ## 11/20 branch C: caps stay, BC leads (overrides 11/16 "caps-stay" + the TL;DR/forecast below while the 105k caps hold)
 _Fuku cloud heartbeat 11/20 09:01, read-only, no new pulls (inputs: 11/20 tracker row, `2026-11-20_bc_cap_ladder_card.md`). Why: the undo ask was parked 11/20 07:05 (it trades criterion 1 back at ≈ 114k, INFERRED), so the "re-plan the day the caps come off" rule may never trigger. This branch plans criterion 2 with the caps kept._
 - **Base:** BC Rp 679,253 / 7 = **Rp 97.0k/day** + PEIKIRA ≈ 0 (Rp 628 on 11/19) → ≈ **9.7% of the Rp 1M leg** *(calc)*. Gap = **Rp 903k/day**.
@@ -41,7 +56,7 @@ _Fuku cloud heartbeat 11/16 09:01. Reason: on 11/15 00:41 PEIKIRA went to Rp 3M/
 ## Wave calendar (verdict = day-14 read, rule from scale plan v2)
 | Wave | Launch | Day-14 verdict | Phone ads judged (cum.) | Winners expected *(calc, 1/5–1/3)* | Build sheet |
 |---|---|---|---|---|---|
-| ADSET-3 (team) | 11/13 (0 delivery so far) | 11/27 | — | 0–1 (not phone-photo; untested) | team-built |
+| ADSET-3 (team) | 11/13 (Rp 277 in 14d) | 11/27: **UNDER-TESTED (starved)** | 0 | 0 (6 ads carry, see 11/27 section) | team-built |
 | W1 | 11/23 | 12/07 | 3 | 0.6–1.0 | `creatives/2026-11-12_wave1_build_sheet.md` |
 | W2 | 11/30 | 12/14 | 6 | 1.2–2.0 | `creatives/2026-11-12_wave2_build_sheet.md` |
 | W3 | 12/07 | 12/21 | 9 | 1.8–3.0 | `creatives/2026-11-12_wave3-4_build_sheet.md` |
