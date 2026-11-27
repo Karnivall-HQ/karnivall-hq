@@ -45,7 +45,9 @@ Required follow-ups ran: trend (ad level, full history) + peers ("No benchmark d
 - **Two watch lines for 11/30 (no ask on < 7d):** 047 (post-click drop; trend tool agrees: CVR −30%, CTR up) and 030 (Rp 249k / 2; its ≥ 10-lead flag line is 46.1k; small counts).
 
 ### Cut list — fill only if R7 fires on 11/30 (4-pick 7d > 35k). Propose-only: Alvian applies.
-Pick rule (pre-set now): cut the pick with the highest 7d CPL among picks with **spend ≥ 2× the 46k cap (Rp 92k)**; if its 7d leads < 3, cut only if spend ≥ 3× cap (Rp 138k) (spend-multiple kill, `meta-tests-and-proposals.md`). Never cut 2 picks in one go.
+> **Dry-run 11/27 22:01:** the rules below now live in `fuku/bin/incess_r7.py` (`--pick 042 S L --pick 047 S L --pick 030 S L --pick 026 S L --ctr 047=<pct>`; exit 0 = R7 closed, 2 = cut list printed). 2 fixes: (1) 026 has 6 live ads, so "its only live ad" was wrong for 026 → the script names all 6; (2) 026's cap is 45,000, not 46k → spend multiples use each pick's own cap. 4 dry runs (closed on the 4d numbers, 030 cut, 030 skipped at 2.5× cap with 1 lead → 047 cut, 026 cut) ✓.
+
+Pick rule (pre-set now): cut the pick with the highest 7d CPL among picks with **spend ≥ 2× its own bid cap (46k; 026 45k)**; if its 7d leads < 3, cut only if spend ≥ 3× cap (Rp 138k) (spend-multiple kill, `meta-tests-and-proposals.md`). Never cut 2 picks in one go.
 ```
 Proposed changes for Alvian to apply (Incess, OMO ADVLeads 120233576079370222):
 1. Pause ad set ⟨name⟩ ⟨id⟩ (its only live ad ⟨ad id⟩). 7d 11/23–11/29: Rp ⟨spend⟩ / ⟨leads⟩ = ⟨CPL⟩ (flag line ⟨line⟩); 4-pick 7d ⟨x⟩ > 35k.
