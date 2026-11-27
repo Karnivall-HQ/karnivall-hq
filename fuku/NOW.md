@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-27 13:01 WIB (cloud heartbeat: 13:00 poll + W3 sizing)_
+_Last updated: 2026-11-27 14:01 WIB (cloud heartbeat: WA script page re-check)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -15,9 +15,10 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 4. **11/30 weekly:** fill `reports/weekly/2026-11-30.md` (rules R1–R6); R7 (Incess picks/047) + R2 close line + ADSET-3 line pre-written 11/27.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **WA follow-up script re-check:** re-run the page count on `creatives/2026-11-06_wa_followup_script.md` (> 3 days old) so it's paste-ready the day 750 vs 800 is answered.
-2. **M-002 cut-list skeleton:** pre-write the R7 cut list format (which Incess picks, what replaces them) so 11/30 only fills numbers if picks stay > 35k.
-3. **Criterion-1 12/05 close-out:** pre-write the 12/05 verdict line + the 12/03 last-workable-date rule from the current model, so the readout only fills numbers.
+1. **M-002 cut-list skeleton:** pre-write the R7 cut list format (which Incess picks, what replaces them) so 11/30 only fills numbers if picks stay > 35k.
+2. **Criterion-1 12/05 close-out:** pre-write the 12/05 verdict line + the 12/03 last-workable-date rule from the current model, so the readout only fills numbers.
+
+3. **W1/W2 day-0 snapshot script:** small `fuku/bin` helper that curls the page + pulls PT VC/Lead so the day the site changes, the baseline is frozen in one command.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 BC Wave 0 (204 + 3-21 + N2). #2 Site W1 + W2 + who edits.
@@ -33,5 +34,5 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Open loops (current state, one line each)
 - Activity log (11/27 13:01): 0 entries since 11/26 19:00; no human edits since 11/15 00:42. Caps 105k / 94,250, all ACTIVE.
 - BC 4 high days at unchanged caps (166k → 146k → 186k → 178k), 201-led: 7d BC avg 134.9k/day *(calc)*.
-- Site (11/27 13:01 curl, unchanged): Jakarta Pusat ×9, Kelapa Gading ×2, 800.000 ×3, akan launching ×3. WA script NOT sent.
+- Site (11/27 13:01 curl, unchanged): Jakarta Pusat ×9, Kelapa Gading ×2, 800.000 ×3, akan launching ×3. WA script NOT sent; page re-check 11/27 14:01 = no claim changed (gates: 800, G6, All-in).
 - Pixel (pulled 11/27): 11/16–11/25 PT VC 1,382 / Lead 49 = 3.55% *(calc)*; ~1,000 VC/week. Lift rule in `w1w2_lift_template.md` (11/27 section). W3 unreadable (MDE +21% at d14) → no-regret ship after W1/W2 d14, only if the field doesn't route.

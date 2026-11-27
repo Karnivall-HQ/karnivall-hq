@@ -64,6 +64,22 @@ Placeholders: `{nama}`, `{kebutuhan}` (from the form's "Kebutuhan" field), `{rua
 **If a lead asks "Jakarta Pusat?"** (page says it ×9): "Lokasinya di ITC Kuningan Ambasador, area Sudirman, Jakarta Selatan Kak" (= the page FAQ's own wording, STATED).
 **What changed and why:** "tanpa deposit" → "bisa tanpa deposit" in M1 + Reply A: the page only says deposit-free is *possible*; a flat promise could break if the team asks a deposit for some units. Everything else still matches. Script stays **NOT sent**; gates left: 750 vs 800 (W2), open for survey (G6), All-in (Reply A).
 
+## Page re-check 11/27 14:01 (playbook step 8: 11/21 check > 3 days old; live `/sewa-gudang-self-storage-jakarta/`, HTTP 200, 288,285 B, 272 visible lines)
+| Claim in the script | On page 11/27 | Verdict vs 11/21 |
+|---|---|---|
+| harga promo launching Rp750rb/bulan (M1, M3) | 750 ×9, "Promo Launching" ×10; FAQ line 250 still "mulai dari Rp 800.000" | = unchanged; W2 gate stays |
+| ITC Kuningan Ambasador (M1, M3) | ×1, line 248 "**akan launching** di ITC Kuningan Ambasador Sudirman, Jakarta Selatan"; "Jakarta Pusat" ×9 | = G6 open |
+| bisa tanpa deposit (M1, Reply A) | line 200 "Bisa tanpa uang deposit/ jaminan" (only deposit wording) | = ✔ STATED as "bisa" |
+| tanpa minimal sewa · per bulan (M1) | "tanpa minimal (lama) sewa" lines 65/93/131/148/224/245 + "Tidak ada Kontrak Minimal Sewa" | = ✔ STATED |
+| pickup gratis (M1, Reply A) | "Gratis: Pickup" lines 81/244 + "Bisa & Gratis" table; 150 ×0 | = ✔; still no Rp150k cap in WA |
+| Small 3,8 / Medium 7,6 / Large 15,2 m³ (M2) | each ×1 | = ✔ STATED |
+| "± isi 1 kamar kos" (M2) | 0 (all "kos" hits = kosong) | = ⚠️ INFERRED |
+| survei ke gudang (M3) | line 206 "Datang survey ke warehouse Fab Self-storage" | = ✔ (G6 applies) |
+| "cuma Rp750rb … aja" (Reply A) | line 185 "sudah All-in" ×1 | = ⚠️ All-in gate |
+
+**Security (don't claim, unchanged):** line 139 "di dalam building dengan security 1x24 jam di area Sudirman, Jakarta Pusat" vs line 154 "Satpam Komplek Ruko yang aktif 24/7". Still contradictory; no message mentions security.
+**What changed and why:** nothing. Page text identical on every script claim since 11/21, so no copy edit. Script stays **NOT sent** and is paste-ready the moment 3 gates close: 750 vs 800 (W2), Kuningan open for survey (G6), what "All-in" covers (Reply A only). Next re-check due ≥ 11/30 if still unsent.
+
 ## Objection reply: "Kok lebih mahal dari yang 400rb?" (added 2026-11-10 18:02, draft, NOT sent)
 **Context:** SpaceHub (Thamrin, ~10 min away) advertises "From Rp 400k / month" for its smallest unit, but asks a **security deposit**, needs **online self-booking + pay first**, and you **move your stuff yourself** (its own FAQ, `fab_advertising/research/2026-11-10_competitor_angles.md`). Rule: compare **total cost and effort**, never knock the competitor by name, never discount on the spot.
 **Gate:** use only after Alvian confirms 750 vs 800, no deposit, free pickup (+ pickup area), and the Small unit size. Unit size of SpaceHub's 400k unit is **unknown**, so the reply does not claim "ours is bigger".
