@@ -27,3 +27,4 @@
 - 2026-11-21 11:01 · playbook `weekly_ads_health_report.md` v2: rewritten from runs #1–#2 + the 11/23 skeleton practice (§A week-before skeleton/run sheet/dry run/pre-pull/pre-set rules, §B log-first Monday run, §C write). M-002 strategy item "playbook after first report" closed.
 - 2026-11-23 07:30 · fuku/bin/criterion1_model_1205.py: added --peik-cpl fallback for 0-lead PEIKIRA bases (errors clearly instead of ZeroDivisionError).
 - 2026-11-27 16:02 · New script `fuku/bin/c1_closeout.py` (criterion-1 window close-out: leads needed, P(miss), paste line).
+- 2026-11-27 19:01 · `fuku/bin/c1_closeout.py`: new `--w1 <date|none>` flag prints the 12/05 criterion-2 line from the same window numbers (honest date = W1 + 49/77/119 days).

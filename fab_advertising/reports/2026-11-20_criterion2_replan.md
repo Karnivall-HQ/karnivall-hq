@@ -41,6 +41,7 @@ _Fill-in sheet for the 12/14 re-forecast (risk line l.91). Re-based on the 11/27
   | 12/15 | 02/02 | 03/02 | 04/13 |
   BC's own organic growth (97k → 135k/day at unchanged caps) ≈ offsets the ladder not being applied: dates move ≈ +1 week vs 11/20, all from the late start. **01/15 is now a MISS in every case.**
 - **12/14 fill rule:** (1) base = 12/07–12/13 7d spend ÷ 7; (2) ledger = ads with ≥ Rp 380k spent, ≤ 95k = win, > 95k × 1.3 on ≥ Rp 190k = loss (Wave 0 sheet §4); (3) if 0 waves live on 12/14 → the date is "not set" (no photo-free wave either), say so in one line, no date ask; (4) if W1 is live but < 14 days old → report spend share per new ad set vs the Rp 25–35k/day the d14 read needs (this settles the 14 vs 21-day lag, the biggest INFERRED input).
+- **12/05 line (added 11/27 19:01):** printed by `fuku/bin/c1_closeout.py --locked <window> --w1 <date|none>` from the same 11/28–12/04 window as criterion 1 (offsets W1 + 49/77/119 days = this table). Rules 5–6 in `2026-12-05_criterion1_path.md` close-out.
 - **Pre-written 12/14 line (fill ⟨⟩):** _"📊 Criterion 2: base Rp ⟨x⟩k/day (⟨y⟩%), ⟨n⟩ new BC ad sets live, ⟨w⟩ of ⟨j⟩ judged. Honest date ⟨mid⟩ (good ⟨good⟩, low ⟨low⟩). It moves only when photo ads go live."_
 
 ## 11/20 branch C: caps stay, BC leads (overrides 11/16 "caps-stay" + the TL;DR/forecast below while the 105k caps hold)

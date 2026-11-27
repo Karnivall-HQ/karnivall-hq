@@ -64,6 +64,7 @@ It prints the leads still needed, the expected leads, P(miss), and the status/ve
 2. **P(miss) ≥ 50% on 12/02 or 12/03:** one-line ❓ re-ask of the cheapest open lever (W0 if still open, else site), with the number. No new levers, no deadline-move ask before 12/05.
 3. **12/05 MISSED:** the only ❓ is then "Move criterion 1 to 12/19 (window 12/12–12/18), same 95k?" with the ≥ 1 lever that must be live that week. Not before 12/05.
 4. **12/05 MET:** mark criterion 1 ✅ in MISSIONS, keep tracking the 7d (a met criterion that slips over 95k later is reported, not re-opened).
-5. Criterion 2 is judged the same day: paste the 12/05 criterion-2 line from `2026-11-20_criterion2_replan.md` (11/27 12:01 section): MISS, honest date mid 02/16 if W1 lives 12/01.
+5. Criterion 2 is judged the same day, from the **same window numbers**: add `--w1 <W1 launch date | none>` to the 12/05 run; it prints a CRITERION 2 LINE (base = window spend ÷ 7, % of Rp 1M, honest date = W1 + 49 / 77 / 119 days, the 11/27 12:01 replan table). Paste it under the verdict line. _(11/27 19:01 fix: the replan file only held a 12/14 line, no 12/05 line, and its "02/16" assumed W1 on 12/01.)_
+6. **12/05 deadline ask (one ❓ max that day):** if criterion 1 MISSED → rule 3's ask only. If MET → the one ❓ is "Set criterion 2's new deadline = ⟨mid date from the line⟩?" with the W1 date it depends on; if W1 is `none`, no date ask (date not set), the ask stays the open W0/W1 lever.
 
 **Dry runs (11/27, script output):** 0 locked → needs 10, exp 13.0, P(miss) 17%. 4d 540k / 5 → 89.4k proj, 35%. 4d 540k / 9 → 0%. 5d 700k / 6 → needs 5 in 2d, 68%. 7d 945,317 / 9 → MISSED 105.0k; / 13 → MET 72.7k ✓.
