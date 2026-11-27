@@ -2,6 +2,8 @@
 _Draft 2026-11-13 15:02 WIB, Fuku cloud heartbeat (groundwork). Read-only, nothing changed in the ad account. Propose-only._
 _Used only if the 11/20 readout sends Variant M or H (`2026-11-20_gate_miss_note.md`): this is the plan behind its "move Rp 1M/day to 01/15" line. Inputs: `2026-11-12_scale_plan_v2.md` (account data). Not an ask yet: the date is Alvian's call._
 
+> **Site W1/W2 (not ad Wave 1):** the day "W1 W2 done" lands, follow the runbook at the top of `w1w2_lift_template.md` (11/27 20:02).
+
 ## 11/27 09:02 · ADSET-3 closed → Wave 1 carry-over (groundwork; no ask while 2 asks sit open)
 ADSET-3 day-14 verdict (11/27 07:01): **UNDER-TESTED (starved)**, Rp 277 / 0 in 14 days, all 6 ads < Rp 5k [account data]. So 0 of its ads are judged; none is a loser. W1 (calendar 11/23) also did not launch: no phone photos arrived. Every calendar row below slips by ≥ 4 days until a wave goes live.
 The 6 ads' images are **already in the account** (mapping 11/15 17:02, `2026-11-13_adset3_read_card.md` l.80–88), so they are a photo-free Wave 1. Build = BC rows pattern (`../creatives/2026-11-20_waves2-6_bc_rows.md` §1: own BC ad set, cap Rp 94,250, BC identity, `?ad={{ad.name}}`), one ad per ad set, page check at build time. Ranked by our look history (11/05 review + BC look split, INFERRED):

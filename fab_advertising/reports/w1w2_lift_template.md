@@ -3,6 +3,15 @@ _2026-11-11 11:02 WIB, Fuku cloud heartbeat (groundwork). Read-only. Use it the 
 
 **Question:** did fixing the 2 site lines (location → Kuningan/Sudirman, price → the true 750/800) lift post-click conversion enough to open the 11/20 gate? The gate brief (`2026-11-20_gate_brief.md`) assumes +0.5pt (→ 94.6k) or +1pt (→ 85.0k) *(calc)*.
 
+## Runbook: the day "W1 W2 done" lands (2026-11-27 20:02 WIB; no reading needed)
+1. **Same run:** `python3 fuku/bin/w1w2_snapshot.py` → must print **DAY-0 GATE PASS** (diff vs `snapshots/w1w2_2026-11-27_1702.json`). NOT MET → one-line reply naming the string still live; no day 0.
+2. **Same run:** activity log since the edit (confounders: any ad change by Markus, Wave 1, budget). Note the edit time in WIB.
+3. **Day 0** = first full PT day after the edit (PT = WIB − 15 h). `python3 fuku/bin/w1w2_read.py dates <day0>` prints the read calendar; put the 2 read dates in NOW "Next actions".
+4. **Day-7 read** (≥ day 0 + 9): `ads_get_dataset_stats` 405755485775053, aggregation=`event`, granularity=`day`, baseline + post-fix in the **same call** → `w1w2_read.py read --vc <VC> --lead <Lead> --days 7` (directional only).
+5. **Day-14 read** (≥ day 0 + 16): same call → `--days 14` = the verdict. Add Meta 7d CPL + leads/LPV cross-check, then OUTBOX one-line report (not an ask).
+6. **After d14 locked:** W3 as no-regret change (guardrail Form/VC ≥ 4.2%), only if the form's conditional logic doesn't route on that field. WA script: send-ready once W2 closes (`creatives/2026-11-06_wa_followup_script.md`).
+- Rule numbers = the 11/27 baseline refresh below (3.55%, 1.28σ). The 11/11 "3.72% / 58 per 1,300" lines further down are **superseded**.
+
 ## Baseline refresh 2026-11-27 10:02 WIB (use this one; replaces the 11/11 rule numbers)
 Same call (`ads_get_dataset_stats`, aggregation=`event`, granularity=`day`, PT days). 11/26 PT left out (partial day at pull time).
 
@@ -65,7 +74,7 @@ Week-to-week noise is already ±0.5pt (3.29–4.25%) with no change made. ⚠️
 **Rule written before the fix (per `meta-tests-and-proposals.md`):**
 - Day 0 = first full PT day after Alvian confirms the edit (curl the 3 Jakarta pages first: 0 × "Kelapa Gading", 0 × "Jakarta Pusat", price line matches the true price).
   - **One command (11/27 17:01):** `python3 fuku/bin/w1w2_snapshot.py --vc <PT VC> --lead <Lead> --pixel-window <window>` curls landing + WA form, counts the gate strings (visible + raw/schema), saves `fab_advertising/snapshots/w1w2_<date>.json`, diffs vs the last one, prints DAY-0 GATE PASS/NOT MET. Pre-change baseline frozen: `snapshots/w1w2_2026-11-27_1702.json` (NOT MET: Pusat ×9, 800 ×1 visible landing + ×1 WA form). Kelapa Gading is info-only (footer/schema address, not W1 scope).
-- **Day 7 read:** post-fix leads at the observed VC count vs `VC × 3.72%`. **≥ +1.28σ (≈ 58 leads per 1,300 VC) → "lift confirmed"**. Between 0 and +1.28σ → "unproven, extend to 14 d". Below baseline → "no lift; site wasn't the leak, look upstream (cost per LPV)".
+- ~~superseded 11/27: use the runbook + 3.55% rule above~~ **Day 7 read:** post-fix leads at the observed VC count vs `VC × 3.72%`. **≥ +1.28σ (≈ 58 leads per 1,300 VC) → "lift confirmed"**. Between 0 and +1.28σ → "unproven, extend to 14 d". Below baseline → "no lift; site wasn't the leak, look upstream (cost per LPV)".
 - **Day 14 read:** same test on 14 d; this one can see +0.5pt.
 - **Cross-check on the ad side (same window):** Meta 7d CPL and Meta leads ÷ landing-page views for PEIKIRA + BC vs the 11/04–11/10 base (CPL 106,779). A pixel lift with flat Meta CPL = the gain went to organic traffic, not the ads.
 - **Confounders to log:** any ad change by Markus (activity log), Wave 1 launch date, budget change. If Wave 1 starts inside the window, the pixel read still holds (site-wide) but the Meta CPL cross-check doesn't isolate the site.
