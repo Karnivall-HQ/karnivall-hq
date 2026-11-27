@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-27 12:01 WIB (cloud heartbeat: groundwork, criterion-2 re-forecast inputs)_
+_Last updated: 2026-11-27 13:01 WIB (cloud heartbeat: 13:00 poll + W3 sizing)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -10,15 +10,14 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 
 ## Next actions (dated or triggered)
 1. **Every run:** INBOX/OUTBOX for "W0 done", "W1 W2 done", Kuningan answer.
-2. **Polls 11/27:** 07:00 done. Next ≈ 13:00, then 19:00. No W0 re-ask before 11/28 07:00.
+2. **Polls 11/27:** 07:00 + 13:01 done. Next ≈ 19:00. No W0 re-ask before 11/28 07:00.
 3. **"W0 done" seen in the log:** re-base day (playbook §D–§E): split day 1 at the change time; rules in `2026-11-20_bc_cap_ladder_card.md` + `fuku/bin/bc_ladder_read.py`. 201 = control reading.
 4. **11/30 weekly:** fill `reports/weekly/2026-11-30.md` (rules R1–R6); R7 (Incess picks/047) + R2 close line + ADSET-3 line pre-written 11/27.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **W3/W4 site follow-ups:** with traffic ~1,000 VC/week, size what the W3 field drop must lift to be readable in 14 d (feeds the site ask).
-2. **WA follow-up script re-check:** re-run the page count on `creatives/2026-11-06_wa_followup_script.md` (> 3 days old) so it's paste-ready the day 750 vs 800 is answered.
-
-3. **M-002 cut-list skeleton:** pre-write the R7 cut list format (which Incess picks, what replaces them) so 11/30 only fills numbers if picks stay > 35k.
+1. **WA follow-up script re-check:** re-run the page count on `creatives/2026-11-06_wa_followup_script.md` (> 3 days old) so it's paste-ready the day 750 vs 800 is answered.
+2. **M-002 cut-list skeleton:** pre-write the R7 cut list format (which Incess picks, what replaces them) so 11/30 only fills numbers if picks stay > 35k.
+3. **Criterion-1 12/05 close-out:** pre-write the 12/05 verdict line + the 12/03 last-workable-date rule from the current model, so the readout only fills numbers.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 BC Wave 0 (204 + 3-21 + N2). #2 Site W1 + W2 + who edits.
@@ -32,7 +31,7 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - Locks PEIKIRA: 11/20 41 0 · 11/21 26 0 · 11/22 208 0 · 11/23 650 0 · 11/24 242 0 · 11/25 28 0 · 11/26 143 0. BC: 11/20 86268 0 · 11/21 85407 0 · 11/22 96167 3 · 11/23 166269 1 · 11/24 145539 4 · 11/25 186123 2 · 11/26 178206 3. Model: `--peik 1338 0 --peik-cpl 190609 --bc 943979 13 --p2 924806 8 --budget 650 --cap-throttled`.
 
 ## Open loops (current state, one line each)
-- Activity log (11/27 07:01): 0 entries since 11/26 19:00; no human edits since 11/15 00:42. Caps 105k / 94,250, all ACTIVE.
+- Activity log (11/27 13:01): 0 entries since 11/26 19:00; no human edits since 11/15 00:42. Caps 105k / 94,250, all ACTIVE.
 - BC 4 high days at unchanged caps (166k → 146k → 186k → 178k), 201-led: 7d BC avg 134.9k/day *(calc)*.
-- Site (11/27 07:01 curl, unchanged): Jakarta Pusat ×9, Kelapa Gading ×2, 800.000 ×3, akan launching ×3. WA script NOT sent.
-- Pixel (pulled 11/27): 11/16–11/25 PT VC 1,382 / Lead 49 = 3.55% *(calc)*; ~1,000 VC/week. Lift rule in `w1w2_lift_template.md` (11/27 section).
+- Site (11/27 13:01 curl, unchanged): Jakarta Pusat ×9, Kelapa Gading ×2, 800.000 ×3, akan launching ×3. WA script NOT sent.
+- Pixel (pulled 11/27): 11/16–11/25 PT VC 1,382 / Lead 49 = 3.55% *(calc)*; ~1,000 VC/week. Lift rule in `w1w2_lift_template.md` (11/27 section). W3 unreadable (MDE +21% at d14) → no-regret ship after W1/W2 d14, only if the field doesn't route.

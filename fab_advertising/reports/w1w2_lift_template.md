@@ -25,6 +25,22 @@ Same call (`ads_get_dataset_stats`, aggregation=`event`, granularity=`day`, PT d
 - **New rule (written before the fix):** day-7 "lift confirmed" = **≥ VC × 3.55% + 1.28·√(VC × 3.55%)** (≈ 43 leads per 1,000 VC). Day 14 is the main read now (≈ 82 per 2,000 VC); day 7 is directional only. Counts are browser + server events, so true noise is ~√2 larger (11/11 note) → treat both reads as upper bounds on confidence.
 - ⚠️ **Counts get revised up after the day:** 11/16–11/22 read 819 VC / 31 Leads on 11/23 and 888 / 35 today. Lock each window ≥ 3 days after it ends, and re-pull baseline + post-fix in the same call.
 
+## W3 (drop the "Pernah chat WA?" field): can a test read it? 2026-11-27 13:01 WIB
+Same pixel rows as above (11/11–11/24, 14 PT days): **Form 117 / VC 2,279 = 5.13%**, Lead/Form 73/117 = 62% *(calc)*. One-sided 1.28σ rule, 80% power *(calc, Poisson)*:
+
+| Read | VC | Expected Forms | "Lift" line | Min. detectable lift | Same, ×√2 (browser+server) |
+|---|---|---|---|---|---|
+| Day 7 | 1,000 | 51 | ≥ 61 | +1.52pt (+30%) | +2.15pt (+42%) |
+| Day 14 | 2,000 | 103 | ≥ 116 | +1.07pt (+21%) | +1.52pt (+30%) |
+| Day 21 | 3,000 | 154 | ≥ 170 | +0.88pt (+17%) | +1.24pt (+24%) |
+
+- Dropping 1 of 4 fields typically lifts completion by a single-digit to low-teens % (INFERRED, general CRO experience, not account data). That is **below the day-21 detectable line**, so at ~1,000 VC/week **W3 can't be proven by the pixel**.
+- **Decision rule (written before the change):** ship W3 as a **no-regret change, not a test**. Guardrail only: at day 14, Form/VC must not fall below **4.2%** (≈ baseline − 1.28σ×√2 *(calc)*). If it does, restore the field. No lift claim either way.
+- **Don't bundle W3 into the W1/W2 window:** W1/W2 is judged on Lead/VC; a W3 change inside it would blur that read. Order: W1/W2 day 14 locked → then W3.
+- ⚠️ **Gate from 11/11 still stands:** `2026-11-11_w4_lead_trigger.md` found Form #10 routes some answers to a non-self-storage thank-you page (no Lead), and W3 is **on hold because this field may drive that routing**. Before W3 ships, whoever edits the site checks the form's conditional logic: if "Pernah chat WA?" routes, W3 is dropped (removing it would change what counts as a Lead).
+- **W4:** the ~1 in 3 Form → no-Lead gap is mostly by design (11/11), so it isn't a lever. Nothing to size.
+- Ask stays inside the existing site ask (#2): no new OUTBOX line (stall rule).
+
 ## Pre-fix baseline (refreshed 11/11, replaces the 11/06 row for this test)
 Call: `ads_get_dataset_stats` dataset `405755485775053`, aggregation=`event`, granularity=`day`. Buckets are **Pacific-time days**. (This aggregation returns smaller counts than `event_total_counts` in the 11/06 file, so compare like with like: always this call.)
 
