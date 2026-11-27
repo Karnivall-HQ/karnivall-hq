@@ -23,6 +23,26 @@ The 6 ads' images are **already in the account** (mapping 11/15 17:02, `2026-11-
   - **Paste-ready ask (after W0 moves):** _"Build 016 + 018 as 2 BC ad sets (existing images, cap 94,250, ~10 min)? If Kuningan isn't open for visits yet, use S30 instead of 018."_ One line, no fact gate left open.
 - **Hit-rate ledger:** ADSET-3 = 0 of 0 judged. Forecast table below is unchanged until a wave gets ≥ Rp 95k per ad.
 
+## 11/27 12:01 · 12/14 re-forecast inputs (re-based; groundwork, no pulls, no ask)
+_Fill-in sheet for the 12/14 re-forecast (risk line l.91). Re-based on the 11/27 07:01 readout; replaces the 11/20 base in `2026-11-20_criterion2_honest_date.md` §3 until a wave reads._
+| Input | 11/20 value | 11/27 value | Source |
+|---|---|---|---|
+| Base (7d account spend ÷ 7) | 97.0k + ladder 20–100k (157k mid) | **135.0k**, ladder not applied *(calc: 945,317 ÷ 7)* | 07:01 readout, BC 99.9% |
+| Gap to Rp 1M/day | 803–883k | **865k** *(calc)* | |
+| Winners needed (good/mid/low) | 4.3 / 5.9 / 8.8 | **4.7 / 6.1 / 8.6** *(calc)* | (1,000 − 135) ÷ 185/142/100 |
+| Waves live | 0 | **0** (W1 11/23 never launched; ADSET-3 starved) | account data |
+| Ads judged / hit-rate ledger | 0 of 0 | **0 of 0** | ADSET-3 verdict 11/27 |
+| Photo-free ads left in the account | N2 (5 cards) | N2 + 016, 018, S30 (+007, 003 held) = **≤ 6 ads**, then photos are the limit | 11/27 09:02 table |
+- **Date table re-run** *(calc, same formula as honest-date §3; W1 = 2 photo-free ads (016 + 018), then 3 ads/week, which needs photos from W2)*:
+  | W1 (016 + 018) launches | Good (1/3, 185k, d14) | Mid (1/4, 142k, d21) | Low (1/5, 100k, d21) |
+  |---|---|---|---|
+  | 12/01 (W0 applied by 11/30) | 01/19 | 02/16 | 03/30 |
+  | 12/08 | 01/26 | 02/23 | 04/06 |
+  | 12/15 | 02/02 | 03/02 | 04/13 |
+  BC's own organic growth (97k → 135k/day at unchanged caps) ≈ offsets the ladder not being applied: dates move ≈ +1 week vs 11/20, all from the late start. **01/15 is now a MISS in every case.**
+- **12/14 fill rule:** (1) base = 12/07–12/13 7d spend ÷ 7; (2) ledger = ads with ≥ Rp 380k spent, ≤ 95k = win, > 95k × 1.3 on ≥ Rp 190k = loss (Wave 0 sheet §4); (3) if 0 waves live on 12/14 → the date is "not set" (no photo-free wave either), say so in one line, no date ask; (4) if W1 is live but < 14 days old → report spend share per new ad set vs the Rp 25–35k/day the d14 read needs (this settles the 14 vs 21-day lag, the biggest INFERRED input).
+- **Pre-written 12/14 line (fill ⟨⟩):** _"📊 Criterion 2: base Rp ⟨x⟩k/day (⟨y⟩%), ⟨n⟩ new BC ad sets live, ⟨w⟩ of ⟨j⟩ judged. Honest date ⟨mid⟩ (good ⟨good⟩, low ⟨low⟩). It moves only when photo ads go live."_
+
 ## 11/20 branch C: caps stay, BC leads (overrides 11/16 "caps-stay" + the TL;DR/forecast below while the 105k caps hold)
 _Fuku cloud heartbeat 11/20 09:01, read-only, no new pulls (inputs: 11/20 tracker row, `2026-11-20_bc_cap_ladder_card.md`). Why: the undo ask was parked 11/20 07:05 (it trades criterion 1 back at ≈ 114k, INFERRED), so the "re-plan the day the caps come off" rule may never trigger. This branch plans criterion 2 with the caps kept._
 - **Base:** BC Rp 679,253 / 7 = **Rp 97.0k/day** + PEIKIRA ≈ 0 (Rp 628 on 11/19) → ≈ **9.7% of the Rp 1M leg** *(calc)*. Gap = **Rp 903k/day**.
