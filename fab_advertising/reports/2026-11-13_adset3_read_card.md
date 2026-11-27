@@ -117,3 +117,10 @@ Control 11/13–11/17: Rp 461,493 / 3 = **153.8k** *(calc)*. ADSET-3: Rp 0 on 5 
 - If ask #1 undo lands mid-window: split the window at the change day (re-base rule §D) and judge ADSET-3 only on post-undo days.
 
 **Day-7 read 11/20 (07:05):** ADSET-3 7d spend Rp 33 · leads 0 · impr 1 · delivery days d 0 · CPL n/a · no ratio: starved (< Rp 10k) · label **starved** (branch A: UNTESTED, not a loser) · untested ads: all 6 (AKIRA-016 started delivery 11/19 22:35, Rp 33). Control 7d Rp 470,109 / 3 = 156.7k *(calc)*. 11/27 V3 wk1 cross-check: spend must be ≈ Rp 33.
+
+## Verdict 11/27 07:01 WIB (day 14, template `2026-11-27_adset3_verdict_template.md` Branch A)
+- V1 (11/13–11/26): ADSET-3 **Rp 277 / 0 leads**, CTR 0.00%, freq 1.07 · control Rp 470,927 / 3 *(calc 157.0k)* · PEIKIRA2 Rp 323,941 / 1.
+- V5: activity log 11/26 19:00 → 11/27 07:00 = 0 entries; no human edits since 11/15 00:42 → caps 105k on, CBO Rp 3M, no min spend, Ad015 on. V6: site W1/W2 not live (Jakarta Pusat ×9, 800.000 ×3).
+- **Verdict = UNDER-TESTED (starved)**, precedence row 4. Cause: Rp 105k bid caps + ADSET-3 shares PEIKIRA2's audience, so it loses every shared auction (INFERRED, 11/15 14:01). Per-ad table / per-look / decay: n/a (all 6 ads < Rp 5k = untested). Hit rate: ADSET-3 winners 0 of 0 judged.
+- Step 5: undo parked, no min spend live → **test closed as "never delivered"**; the 6 ads carry into Wave 1. No day-21 re-read. No ask.
+- Step 5b: account 7d 11/20–11/26 Rp 945,317 / 13 = 72.7k *(calc)*; model nothing 72.7k OK, LWD 12/03 → "criterion 1 on track for 12/05", FYI only.

@@ -1,38 +1,37 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-26 19:01 WIB (cloud heartbeat: 19:00 poll, no change)_
+_Last updated: 2026-11-27 07:01 WIB (cloud heartbeat: 07:00 readout + ADSET-3 verdict)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
-- **M-001 (P0):** 7d 11/19–11/25 **Rp 855,028 / 12 = 71.3k ✅** *(calc)* (up from 56.3k: 11/18's 4 leads left the window); BC 99.8% of spend (71.1k). Criterion 1 met by mix, LWD 12/03 (model 71.3k OK). Criterion 2 off track (Rp 122k/day = 12% of the leg).
-- **BC rising on its own, 201-led:** 201's 7d is Rp 245,876 / 5 = 49.2k at 0.52× cap (65k/day 11/23–11/25) → **201 dropped from W0** (11/26 17:01). W0 = cap raise on 204 (Rp 2.4k/day) + 3-21 (Rp 5.6k/day) + N2.
-- **Volume lever asked:** OUTBOX #1 = BC Wave 0, ~72h open, re-asked as one line today (stalled-asks rule).
-- **M-002 (P1):** Incess 37.8k (+42.9% WoW) = placement mix + in-placement decline. Watch, no ask.
+- **M-001 (P0):** 7d 11/20–11/26 **Rp 945,317 / 13 = 72.7k ✅** *(calc)*; BC 99.9% of spend (72.6k, 134.9k/day). Criterion 1 on track for 12/05 (model 72.7k OK, LWD 12/03). Criterion 2 off track (14% of the leg).
+- **ADSET-3 closed:** day-14 verdict UNDER-TESTED (starved), Rp 277 in 14 days → "never delivered"; 6 ads carry into Wave 1. No ask.
+- **Volume lever asked:** OUTBOX #1 = BC W0 as 2 fields (204 + 3-21 + N2), re-asked 11/27 07:01. 11/26: 204 Rp 993, 3-21 Rp 7,497 / 1, 201 Rp 71,795 / 2.
+- **M-002 (P1):** Incess 37.8k (+42.9% WoW). Watch, no ask; weekly 11/30.
 
 ## Next actions (dated or triggered)
 1. **Every run:** INBOX/OUTBOX for "W0 done", "W1 W2 done", Kuningan answer.
-2. **Polls 11/26:** all 3 done (07:00, 13:00, 19:00). Next = 11/27 07:00 readout. Next W0 re-ask (not before 11/27 07:00) = 2-field line in the sheet §1 note.
-3. **"W0 done" seen in the log:** re-base day (playbook §D–§E): split day 1 at the change time, read the 3 ad sets on spend ÷ old pace + CPL; rules in `2026-11-20_bc_cap_ladder_card.md` + `fuku/bin/bc_ladder_read.py`. 201 is out of the ladder = control reading.
-4. **11/27 07:00:** ADSET-3 verdict (`2026-11-27_adset3_verdict_template.md`); read real spend per ad (003, 010 v03, S30 v04, 007, 018 started delivery). 201 re-enters W0 only if < Rp 20k/day for 3 days.
-5. **11/30 weekly:** fill `reports/weekly/2026-11-30.md` (rules R1–R6). Incess placement rule + BC3-13 c2 R3 pause line (`2026-11-23_bc_8wk_prepull.md`).
+2. **Polls 11/27:** 07:00 done. Next ≈ 13:00, then 19:00. No W0 re-ask before 11/28 07:00.
+3. **"W0 done" seen in the log:** re-base day (playbook §D–§E): split day 1 at the change time; rules in `2026-11-20_bc_cap_ladder_card.md` + `fuku/bin/bc_ladder_read.py`. 201 = control reading.
+4. **11/30 weekly:** fill `reports/weekly/2026-11-30.md` (rules R1–R6); add ADSET-3 closed line, Incess placement rule, BC3-13 c2 R3 pause line (`2026-11-23_bc_8wk_prepull.md`).
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **≈ 11/27 quiet run: Incess placement pre-pull 11/23–11/26** (skeleton call 6a shape) → cross-check only, no verdict < 7d.
+1. **Today: Incess placement pre-pull 11/23–11/26** (skeleton call 6a shape) → cross-check only, no verdict < 7d.
 2. **M-002 refill:** Incess 047 flag (40.1k > 35.6k) on 11/23–11/26 daily rows with the same call; note only.
-3. **Fab site / WA script:** refresh `w1w2_paste_ready.md` §F only if a fresh curl shows the page changed.
+3. **Wave 1 carry-over:** list ADSET-3's 6 ads (looks L1–L4) as Wave 1 rows in `2026-11-20_criterion2_replan.md`; no new staging sheet (stage-less rule), one line per ad.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
-- #1 BC Wave 0 (now 204 + 3-21 + N2). #2 Site W1 + W2 + who edits.
-- Parked: undo (126.2k MISS 11/23), Ad015 + ADSET-3 min, Kuningan open?, "TourHub" FYI, close rate + months stayed.
+- #1 BC Wave 0 (204 + 3-21 + N2). #2 Site W1 + W2 + who edits.
+- Parked: undo (126.2k MISS 11/23), Ad015 + ADSET-3 min (now moot: ADSET-3 closed), Kuningan open?, "TourHub" FYI, close rate + months stayed.
 
 ## Standing facts
 - Read `playbooks/meta-ads-algorithm.md` + `meta-cpl-diagnosis.md` + `meta-tests-and-proposals.md` before any ads work, `meta-modelling-and-planning.md` before any model/plan, `meta-creative-build.md` before any brief/build row, `ad-copy-page-check.md` before copy is paste-ready.
 - Cloud Fuku: routine trig_01NGMFnv9BpvRp1jQjkAwUVJ, hourly 07–22 WIB. Propose-only: never call Meta write tools, even when visible.
 - Fab account 484578521394893, pixel 405755485775053. Site page https://fabwarehouses.com/sewa-gudang-self-storage-jakarta/. PEIKIRA campaign `120254051672440572` (Rp 3M/day, bid cap 105k); control `120254051672430572`; PEIKIRA2 `120254276298070572`; ADSET-3 `120254400251570572`; Ad015 `120254063163810572`; BC campaign `120236222888610572` (Rp 5M/day, caps 94,250).
 - Markus (team) edits the Fab account via the Rudi MCP app (actor 61594758338050).
-- Locks PEIKIRA: 11/19 628 0 · 11/20 41 0 · 11/21 26 0 · 11/22 208 0 · 11/23 650 0 · 11/24 242 0 · 11/25 28 0. BC: 11/19 87495 2 · 11/20 86268 0 · 11/21 85407 0 · 11/22 96167 3 · 11/23 166269 1 · 11/24 145539 4 · 11/25 186060 2. Model: `--peik 1823 0 --peik-cpl 190609 --bc 853205 12 --p2 924806 8 --budget 650 --cap-throttled`.
+- Locks PEIKIRA: 11/20 41 0 · 11/21 26 0 · 11/22 208 0 · 11/23 650 0 · 11/24 242 0 · 11/25 28 0 · 11/26 143 0. BC: 11/20 86268 0 · 11/21 85407 0 · 11/22 96167 3 · 11/23 166269 1 · 11/24 145539 4 · 11/25 186123 2 · 11/26 178206 3. Model: `--peik 1338 0 --peik-cpl 190609 --bc 943979 13 --p2 924806 8 --budget 650 --cap-throttled`.
 
 ## Open loops (current state, one line each)
-- Activity log (11/26 19:01): 0 entries since 11/25 19:00; no human edits since 11/15 00:42. Caps 105k / 94,250, all ACTIVE.
-- BC 3-day rise at unchanged caps (166k → 146k → 186k), 201-led: 7d BC avg 121.9k/day *(calc)*.
-- Site (11/26 19:01 curl, unchanged): Jakarta Pusat ×9, Kelapa Gading ×2, 800.000 ×3, akan launching ×3. WA script NOT sent.
+- Activity log (11/27 07:01): 0 entries since 11/26 19:00; no human edits since 11/15 00:42. Caps 105k / 94,250, all ACTIVE.
+- BC 4 high days at unchanged caps (166k → 146k → 186k → 178k), 201-led: 7d BC avg 134.9k/day *(calc)*.
+- Site (11/27 07:01 curl, unchanged): Jakarta Pusat ×9, Kelapa Gading ×2, 800.000 ×3, akan launching ×3. WA script NOT sent.
 - Pixel 11/16–11/22: VC 819, Form 52, Lead 31 (3.8% VC→Lead, flat).
