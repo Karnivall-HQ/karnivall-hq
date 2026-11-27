@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-27 09:02 WIB (cloud heartbeat: groundwork, Wave 1 carry-over + weekly R7)_
+_Last updated: 2026-11-27 10:02 WIB (cloud heartbeat: groundwork, W1/W2 lift baseline refresh)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -15,9 +15,9 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 4. **11/30 weekly:** fill `reports/weekly/2026-11-30.md` (rules R1–R6); R7 (Incess picks/047) + R2 close line + ADSET-3 line pre-written 11/27.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **Site W1 lift template refresh:** re-check `reports/w1w2_lift_template.md` baseline against pixel 11/23–11/26 (VC/Form/Lead).
-2. **016 + 018 page check:** run `ad-copy-page-check.md` on the 2 carry-over ads' live copy (`ads_get_creatives`, read-only) so the post-W0 ask is paste-ready in one line.
-3. **Criterion 2 re-forecast prep:** calendar slipped (no photos, W1 not live); write the 12/14 re-forecast inputs (waves live, ads judged, hit-rate ledger = 0 of 0) into `criterion2_replan.md`.
+1. **016 + 018 page check:** run `ad-copy-page-check.md` on the 2 carry-over ads' live copy (`ads_get_creatives`, read-only) so the post-W0 ask is paste-ready in one line.
+2. **Criterion 2 re-forecast prep:** calendar slipped (no photos, W1 not live); write the 12/14 re-forecast inputs (waves live, ads judged, hit-rate ledger = 0 of 0) into `2026-11-20_criterion2_replan.md`.
+3. **W3/W4 site follow-ups:** with traffic ~1,000 VC/week, size what the W3 field drop must lift to be readable in 14 d (feeds the site ask).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 BC Wave 0 (204 + 3-21 + N2). #2 Site W1 + W2 + who edits.
@@ -34,4 +34,4 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 - Activity log (11/27 07:01): 0 entries since 11/26 19:00; no human edits since 11/15 00:42. Caps 105k / 94,250, all ACTIVE.
 - BC 4 high days at unchanged caps (166k → 146k → 186k → 178k), 201-led: 7d BC avg 134.9k/day *(calc)*.
 - Site (11/27 07:01 curl, unchanged): Jakarta Pusat ×9, Kelapa Gading ×2, 800.000 ×3, akan launching ×3. WA script NOT sent.
-- Pixel 11/16–11/22: VC 819, Form 52, Lead 31 (3.8% VC→Lead, flat).
+- Pixel (pulled 11/27): 11/16–11/25 PT VC 1,382 / Lead 49 = 3.55% *(calc)*; ~1,000 VC/week. Lift rule in `w1w2_lift_template.md` (11/27 section).

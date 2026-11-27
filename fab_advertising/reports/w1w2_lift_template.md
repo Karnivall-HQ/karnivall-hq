@@ -3,6 +3,28 @@ _2026-11-11 11:02 WIB, Fuku cloud heartbeat (groundwork). Read-only. Use it the 
 
 **Question:** did fixing the 2 site lines (location → Kuningan/Sudirman, price → the true 750/800) lift post-click conversion enough to open the 11/20 gate? The gate brief (`2026-11-20_gate_brief.md`) assumes +0.5pt (→ 94.6k) or +1pt (→ 85.0k) *(calc)*.
 
+## Baseline refresh 2026-11-27 10:02 WIB (use this one; replaces the 11/11 rule numbers)
+Same call (`ads_get_dataset_stats`, aggregation=`event`, granularity=`day`, PT days). 11/26 PT left out (partial day at pull time).
+
+| Window (PT days) | ViewContent | Form | Lead | VC→Lead *(calc)* |
+|---|---|---|---|---|
+| 11/11–11/17 | 1,285 | 60 | 39 | 3.04% |
+| 11/18–11/24 | 994 | 57 | 34 | 3.42% |
+| **11/16–11/25 (10 d, caps regime)** | **1,382** | — | **49** | **3.55%** |
+
+- **Baseline for the test = 3.55%** (11/16–11/25: same ad regime as the post-fix window will be, caps on, BC ≈ 99% of spend). Close to the old 3.72%, so no conversion drift; the site still leaks the same.
+- ⚠️ **Traffic fell:** ~1,000 VC/week now *(calc, 138/day)* vs ~1,300 when the rule was written. The day-7 read is weaker:
+
+| True post-fix VC→Lead | Leads per 1,000 VC | Day-7 power *(calc)* | Day-14 power (2,000 VC) *(calc)* |
+|---|---|---|---|
+| 3.55% (no lift) | 35 | 10% false alarm | — |
+| 4.05% (+0.5pt) | 40 | 34% | 47% |
+| 4.55% (+1pt) | 45 | 64% | 83% |
+| 5.05% (+1.5pt) | 50 | 85% | — |
+
+- **New rule (written before the fix):** day-7 "lift confirmed" = **≥ VC × 3.55% + 1.28·√(VC × 3.55%)** (≈ 43 leads per 1,000 VC). Day 14 is the main read now (≈ 82 per 2,000 VC); day 7 is directional only. Counts are browser + server events, so true noise is ~√2 larger (11/11 note) → treat both reads as upper bounds on confidence.
+- ⚠️ **Counts get revised up after the day:** 11/16–11/22 read 819 VC / 31 Leads on 11/23 and 888 / 35 today. Lock each window ≥ 3 days after it ends, and re-pull baseline + post-fix in the same call.
+
 ## Pre-fix baseline (refreshed 11/11, replaces the 11/06 row for this test)
 Call: `ads_get_dataset_stats` dataset `405755485775053`, aggregation=`event`, granularity=`day`. Buckets are **Pacific-time days**. (This aggregation returns smaller counts than `event_total_counts` in the 11/06 file, so compare like with like: always this call.)
 
