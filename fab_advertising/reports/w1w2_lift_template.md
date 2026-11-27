@@ -64,6 +64,7 @@ Week-to-week noise is already ±0.5pt (3.29–4.25%) with no change made. ⚠️
 
 **Rule written before the fix (per `meta-tests-and-proposals.md`):**
 - Day 0 = first full PT day after Alvian confirms the edit (curl the 3 Jakarta pages first: 0 × "Kelapa Gading", 0 × "Jakarta Pusat", price line matches the true price).
+  - **One command (11/27 17:01):** `python3 fuku/bin/w1w2_snapshot.py --vc <PT VC> --lead <Lead> --pixel-window <window>` curls landing + WA form, counts the gate strings (visible + raw/schema), saves `fab_advertising/snapshots/w1w2_<date>.json`, diffs vs the last one, prints DAY-0 GATE PASS/NOT MET. Pre-change baseline frozen: `snapshots/w1w2_2026-11-27_1702.json` (NOT MET: Pusat ×9, 800 ×1 visible landing + ×1 WA form). Kelapa Gading is info-only (footer/schema address, not W1 scope).
 - **Day 7 read:** post-fix leads at the observed VC count vs `VC × 3.72%`. **≥ +1.28σ (≈ 58 leads per 1,300 VC) → "lift confirmed"**. Between 0 and +1.28σ → "unproven, extend to 14 d". Below baseline → "no lift; site wasn't the leak, look upstream (cost per LPV)".
 - **Day 14 read:** same test on 14 d; this one can see +0.5pt.
 - **Cross-check on the ad side (same window):** Meta 7d CPL and Meta leads ÷ landing-page views for PEIKIRA + BC vs the 11/04–11/10 base (CPL 106,779). A pixel lift with flat Meta CPL = the gain went to organic traffic, not the ads.

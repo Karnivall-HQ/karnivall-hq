@@ -1,0 +1,55 @@
+{
+ "taken_wib": "2026-11-27 17:02",
+ "pages": {
+  "landing": {
+   "url": "https://fabwarehouses.com/sewa-gudang-self-storage-jakarta/",
+   "http": "200",
+   "bytes": 288218,
+   "visible_lines": 272,
+   "visible": {
+    "Jakarta Pusat": 9,
+    "Jakarta Selatan": 2,
+    "800.000": 1,
+    "750": 9,
+    "Kelapa Gading": 2,
+    "akan launching": 1
+   },
+   "raw": {
+    "Jakarta Pusat": 9,
+    "Jakarta Selatan": 4,
+    "800.000": 3,
+    "750": 33,
+    "Kelapa Gading": 2,
+    "akan launching": 3
+   }
+  },
+  "wa_form": {
+   "url": "https://fabwarehouses.com/form-chat-fab-storage-via-whatsapp/",
+   "http": "200",
+   "bytes": 150445,
+   "visible_lines": 92,
+   "visible": {
+    "Jakarta Pusat": 0,
+    "Jakarta Selatan": 0,
+    "800.000": 1,
+    "750": 2,
+    "Kelapa Gading": 2,
+    "akan launching": 0
+   },
+   "raw": {
+    "Jakarta Pusat": 0,
+    "Jakarta Selatan": 0,
+    "800.000": 1,
+    "750": 17,
+    "Kelapa Gading": 4,
+    "akan launching": 0
+   }
+  }
+ },
+ "pixel": {
+  "window": "11/16-11/25",
+  "pt_vc": 1382,
+  "lead": 49,
+  "vc_to_lead_pct_calc": 3.55
+ }
+}

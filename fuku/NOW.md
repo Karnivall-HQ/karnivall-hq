@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-27 16:02 WIB (cloud heartbeat: criterion-1 12/05 close-out + c1_closeout.py)_
+_Last updated: 2026-11-27 17:01 WIB (cloud heartbeat: W1/W2 day-0 snapshot script)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -11,15 +11,15 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Next actions (dated or triggered)
 1. **Every run:** INBOX/OUTBOX for "W0 done", "W1 W2 done", Kuningan answer.
 2. **Polls 11/27:** 07:00 + 13:01 done. Next ≈ 19:00. No W0 re-ask before 11/28 07:00.
-3. **"W0 done" seen in the log:** re-base day (playbook §D–§E): split day 1 at the change time; rules in `2026-11-20_bc_cap_ladder_card.md` + `fuku/bin/bc_ladder_read.py`. 201 = control reading.
-4. **11/29–12/05 07:00 readouts:** after locking, run `fuku/bin/c1_closeout.py --locked <window spend> <leads> <days>` (window 11/28–12/04; rules in `2026-12-05_criterion1_path.md` close-out). Needs ≥ 10 leads at ~945k; P(miss) now 17% *(calc)*.
-5. **11/30 weekly:** fill `reports/weekly/2026-11-30.md` (rules R1–R6); R7 (Incess picks/047) + R2 close line + ADSET-3 line pre-written 11/27.
+3. **"W1 W2 done" seen:** run `fuku/bin/w1w2_snapshot.py --vc --lead` (gate must PASS; baseline `snapshots/w1w2_2026-11-27_1702.json`), then day 0 per `w1w2_lift_template.md`.
+4. **"W0 done" seen in the log:** re-base day (playbook §D–§E): split day 1 at the change time; rules in `2026-11-20_bc_cap_ladder_card.md` + `fuku/bin/bc_ladder_read.py`. 201 = control reading.
+5. **11/29–12/05 07:00 readouts:** after locking, run `fuku/bin/c1_closeout.py --locked <window spend> <leads> <days>` (window 11/28–12/04; rules in `2026-12-05_criterion1_path.md` close-out). Needs ≥ 10 leads at ~945k; P(miss) now 17% *(calc)*.
+6. **11/30 weekly:** fill `reports/weekly/2026-11-30.md` (rules R1–R6); R7 (Incess picks/047) + R2 close line + ADSET-3 line pre-written 11/27.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **W1/W2 day-0 snapshot script:** small `fuku/bin` helper that curls the page + pulls PT VC/Lead so the day the site changes, the baseline is frozen in one command.
-2. **11/30 weekly dry run:** walk the run sheet once against today's files (R7 cut-list rule, R2 close line, ADSET-3 line) and fix any cell with no source.
-
-3. **Criterion-2 12/05 line check:** re-read the 11/27 12:01 criterion-2 line against the close-out rules so 12/05 pastes both verdicts with one set of numbers.
+1. **11/30 weekly dry run:** walk the run sheet once against today's files (R7 cut-list rule, R2 close line, ADSET-3 line) and fix any cell with no source.
+2. **Criterion-2 12/05 line check:** re-read the 11/27 12:01 criterion-2 line against the close-out rules so 12/05 pastes both verdicts with one set of numbers.
+3. **"W1 W2 done" runbook line:** one step list in `criterion2_replan.md` (snapshot → PASS → day 0 → d7/d14 reads) so the day it lands needs no reading.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 BC Wave 0 (204 + 3-21 + N2). #2 Site W1 + W2 + who edits.
