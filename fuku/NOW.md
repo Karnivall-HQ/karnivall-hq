@@ -1,10 +1,10 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-27 10:02 WIB (cloud heartbeat: groundwork, W1/W2 lift baseline refresh)_
+_Last updated: 2026-11-27 11:01 WIB (cloud heartbeat: groundwork, 016 + 018 page check)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
 - **M-001 (P0):** 7d 11/20–11/26 **Rp 945,317 / 13 = 72.7k ✅** *(calc)*; BC 99.9% of spend (72.6k, 134.9k/day). Criterion 1 on track for 12/05 (model 72.7k OK, LWD 12/03). Criterion 2 off track (14% of the leg).
-- **ADSET-3 closed:** UNDER-TESTED (starved), Rp 277 / 14d. 6 ads = photo-free Wave 1 (`criterion2_replan.md` 11/27 table: 016 + 018 first). Ask only after W0 moves.
+- **ADSET-3 closed:** UNDER-TESTED (starved), Rp 277 / 14d. Photo-free Wave 1 = 016 + 018 (S30 if Kuningan not visitable); page-checked 11/27 11:01, ask line paste-ready in `criterion2_replan.md`. Ask only after W0 moves.
 - **Volume lever asked:** OUTBOX #1 = BC W0 as 2 fields (204 + 3-21 + N2), re-asked 11/27 07:01. 11/26: 204 Rp 993, 3-21 Rp 7,497 / 1, 201 Rp 71,795 / 2.
 - **M-002 (P1):** Incess 4d 11/23–11/26 **31.1k** *(calc)* (prior wk 37.8k) → R2 heading to "close the watch"; 047 4d 47.1k (post-click, not fatigue). Weekly 11/30.
 
@@ -15,9 +15,9 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 4. **11/30 weekly:** fill `reports/weekly/2026-11-30.md` (rules R1–R6); R7 (Incess picks/047) + R2 close line + ADSET-3 line pre-written 11/27.
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **016 + 018 page check:** run `ad-copy-page-check.md` on the 2 carry-over ads' live copy (`ads_get_creatives`, read-only) so the post-W0 ask is paste-ready in one line.
-2. **Criterion 2 re-forecast prep:** calendar slipped (no photos, W1 not live); write the 12/14 re-forecast inputs (waves live, ads judged, hit-rate ledger = 0 of 0) into `2026-11-20_criterion2_replan.md`.
-3. **W3/W4 site follow-ups:** with traffic ~1,000 VC/week, size what the W3 field drop must lift to be readable in 14 d (feeds the site ask).
+1. **Criterion 2 re-forecast prep:** calendar slipped (no photos, W1 not live); write the 12/14 re-forecast inputs (waves live, ads judged, hit-rate ledger = 0 of 0) into `2026-11-20_criterion2_replan.md`.
+2. **W3/W4 site follow-ups:** with traffic ~1,000 VC/week, size what the W3 field drop must lift to be readable in 14 d (feeds the site ask).
+3. **WA follow-up script re-check:** re-run the page count on `creatives/2026-11-06_wa_followup_script.md` (> 3 days old) so it's paste-ready the day 750 vs 800 is answered.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 BC Wave 0 (204 + 3-21 + N2). #2 Site W1 + W2 + who edits.

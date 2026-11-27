@@ -15,6 +15,12 @@ The 6 ads' images are **already in the account** (mapping 11/15 17:02, `2026-11-
 | 6 | 010 (L4 render-look) | v03 + v04 + 4:5 v02 | **no** | expected loser (renders 200–372k, 11/05); doors don't match the real panels |
 - **Read:** Wave 0 sheet §4 per ad set; day-14 parent BC208 (≤ BC208 × 1.15 or ≤ 70k). A rank-1 "look works" (≤ 95k on ≥ 2 leads) is the first real hit-rate number for this plan.
 - **When to ask:** only after W0 lands or is refused (stall rule: 2 asks open since 11/23 / 11/13). Then as one line: "Build 016 + 018 as 2 BC ad sets (existing images, ~10 min)?" Until then this table is the whole staging; no new sheet.
+- **Page check 11/27 11:01 (playbook `ad-copy-page-check.md` step 8, re-run because the 11/13 check is 14 days old):** curl 200, 288,285 B, scripts/styles stripped. Counts **identical to 11/13** [STATED, site]: 750 ×9, Rp 800.000 ×1, Jakarta Selatan ×2, Jakarta Pusat ×9, pickup ×9, 150.000/150rb ×0, CCTV ×6, 24 jam ×10, kunci ×0, panel ×0, 07.00 ×0, renovasi ×0, karyawan ×0, kantor ×14, apartemen ×9, akan launching ×1, sudah buka ×0, "datang survey" ×1. Ad copy taken from the 11/13 check (`2026-11-13_adset3_copy_check.md`); 0 human edits in the activity log since 11/15 → copy unchanged (INFERRED).
+  | Ad | Claim | Page | Verdict |
+  |---|---|---|---|
+  | 016 | Rp750rb · Jaksel · pickup 1× ≤ Rp150rb · apartemen/kantor/rumah · renovasi | 750 ✔ · Jaksel ×2 vs Pusat ×9 (W1, page side) · pickup ✔, cap ×0 · ✔ · renovasi ×0 | **ships as-is** (⚠️ cap + renovasi low risk, 1 of 4 bullets) |
+  | 018 | "penampakan aslinya, bukan render" · own key · CCTV · **"datang dan lihat sendiri"** · 750 · pickup ≤150rb | photos are real ✔ (INFERRED) · kunci ×0 ⚠️ · ✔ · **FAQ "akan launching" ×1** vs step "datang survey" ×1 · ✔ · ⚠️ | **ships if the site is visitable** (team wrote the line; page step 02 supports it). Without a Kuningan answer → **swap 018 for S30 v04** (own key, 750, pickup, Jaksel: no visit promise) |
+  - **Paste-ready ask (after W0 moves):** _"Build 016 + 018 as 2 BC ad sets (existing images, cap 94,250, ~10 min)? If Kuningan isn't open for visits yet, use S30 instead of 018."_ One line, no fact gate left open.
 - **Hit-rate ledger:** ADSET-3 = 0 of 0 judged. Forecast table below is unchanged until a wave gets ≥ Rp 95k per ad.
 
 ## 11/20 branch C: caps stay, BC leads (overrides 11/16 "caps-stay" + the TL;DR/forecast below while the 105k caps hold)
