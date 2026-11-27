@@ -1,4 +1,6 @@
 # M-001 criterion 1 (7d CPL ≤ Rp 95k) by the 12/05 deadline: what still gets there
+
+> **11/27 16:02: sections below 11/27 are superseded (old levers, old LWD 11/29). Use "12/05 close-out" at the bottom + `fuku/bin/c1_closeout.py`.**
 _2026-11-14 11:02 WIB, Fuku cloud heartbeat (groundwork). Read-only, nothing changed in the ad account. Propose-only._
 _Script: `fuku/bin/criterion1_model_1205.py` (re-run with fresh base numbers at each readout). Sister files: `2026-11-20_gate_brief.md`, `2026-11-20_gate_miss_note.md`, `2026-11-20_criterion2_replan.md`._
 
@@ -42,3 +44,26 @@ The 11/20 gate is likely ❌ (gate brief, 11/14 08:01). That gate is about **cri
 
 ## Re-plan option if nothing moves by 11/27 (for the 11/27 readout, not before)
 If on 11/27 neither ask is live and ADSET-3 is not a winner, criterion 1 is out of reach for 12/05 (best case ≈ 102k+). Then the single ❓ is: **"Move criterion 1 to 12/19 (window 12/12–12/18), same Rp 95k target?"** Recommendation then: yes, on the condition that asks #2 + #3 go live that week; a deadline move without a lever just reschedules the miss. Do not send this before 11/27 (stalled-asks rule: no new decision while 3 are open).
+
+## 12/05 close-out (written 11/27 16:02, cloud heartbeat)
+Window judged: **11/28–12/04** (7 days, locked at each 07:00 readout). Base 7d 11/20–11/26: Rp 945,317 / 13 = 72.7k, Rp 135,045/day *(calc)*, BC 99.9% of spend. Model (`criterion1_model_1205.py`, 11/27 locks): nothing changes 72.8k OK; LWD for any lever 12/03 eve.
+
+**The real risk is lead count, not CPL drift.** At Rp ~945k the window needs **≥ 10 leads** (945,315 ÷ 95,000 = 9.95 *(calc)*). Expected 13.0 at 72.7k → P(≤ 9 leads) ≈ **17%** (Poisson, INFERRED; real daily lead counts are lumpier, so treat 17% as a floor). No lever can be applied by Fuku; the only levers are the open asks (W0 raises BC volume at ≈ 60–72k, the site fix lifts LP→Lead), both of which only lower the miss chance.
+
+**Run each 07:00 readout 11/29–12/05** (after locking yesterday):
+`python3 fuku/bin/c1_closeout.py --locked <window spend so far> <window leads> <locked days>`
+It prints the leads still needed, the expected leads, P(miss), and the status/verdict line to paste.
+
+| Readout | Locked days | Paste |
+|---|---|---|
+| 11/29 – 12/04 | 1–6 | STATUS LINE into the M-001 progress row (no OUTBOX line unless P(miss) ≥ 50%) |
+| 12/05 07:00 | 7 | VERDICT LINE → MISSIONS status, OUTBOX [REPORT] (replace M-001 latest report), journal |
+
+**Rules (written before the window, 11/27):**
+1. **Spend jump:** if spend/day in the window > 1.3× 135k (≈ Rp 176k *(calc)*), re-run with `--rate` = the 3-day average; a structural change in the log = re-base day (playbook §D–§E), split the day at the change time.
+2. **P(miss) ≥ 50% on 12/02 or 12/03:** one-line ❓ re-ask of the cheapest open lever (W0 if still open, else site), with the number. No new levers, no deadline-move ask before 12/05.
+3. **12/05 MISSED:** the only ❓ is then "Move criterion 1 to 12/19 (window 12/12–12/18), same 95k?" with the ≥ 1 lever that must be live that week. Not before 12/05.
+4. **12/05 MET:** mark criterion 1 ✅ in MISSIONS, keep tracking the 7d (a met criterion that slips over 95k later is reported, not re-opened).
+5. Criterion 2 is judged the same day: paste the 12/05 criterion-2 line from `2026-11-20_criterion2_replan.md` (11/27 12:01 section): MISS, honest date mid 02/16 if W1 lives 12/01.
+
+**Dry runs (11/27, script output):** 0 locked → needs 10, exp 13.0, P(miss) 17%. 4d 540k / 5 → 89.4k proj, 35%. 4d 540k / 9 → 0%. 5d 700k / 6 → needs 5 in 2d, 68%. 7d 945,317 / 9 → MISSED 105.0k; / 13 → MET 72.7k ✓.
