@@ -6,7 +6,7 @@
 ## Open
 
 ### Needs you (max 3, ranked)
-1. ❓ **[DECISION] 2026-11-27 07:01 · BC Wave 0, shrunk to 2 fields (Markus, ~10 min): raise the bid cap 94,250 → 105,000 on BC204 + BC3-21 + build N2 (5 existing card images) as its own BC ad set?** 11/26: 204 Rp 993 / 0, 3-21 Rp 7,497 / 1 (7d 3-21 ≈ 39k CPL): both still starved under the cap, while 201 runs free at Rp 71,795 / 2 → 201 dropped. Account 7d **72.7k ✅**, so there's room under 95k to buy volume. Sheet: `fab_advertising/creatives/2026-11-20_bc_wave0_markus_sheet.md` (§1 note, skip rows 201 + 3). My recommendation: **yes**. Reply "W0 done" or "no".
+1. ❓ **[DECISION] 2026-11-27 07:01 · BC Wave 0, shrunk to 2 fields (Markus, ~10 min): raise the bid cap 94,250 → 105,000 on BC204 + BC3-21 + build N2 (5 existing card images) as its own BC ad set?** 11/26: 204 Rp 993 / 0, 3-21 Rp 7,497 / 1 (7d 3-21 ≈ 39k CPL): both still starved under the cap, while 201 runs free at Rp 71,795 / 2 → 201 dropped. Account 7d **72.7k ✅**, so there's room under 95k to buy volume. _11/28 07:01: still not applied; 11/27 204 Rp 2,628, 3-21 Rp 3,073 (starved), 201 Rp 45,154 / 0; 7d now **65.8k ✅** → even more room._ Sheet: `fab_advertising/creatives/2026-11-20_bc_wave0_markus_sheet.md` (§1 note, skip rows 201 + 3). My recommendation: **yes**. Reply "W0 done" or "no".
 2. ❓ **[DECISION] 2026-11-13 → re-asked 11/23 · Site W1+W2 (10 min): "Jakarta Pusat" → "Jakarta Selatan" ×9 + FAQ "Rp 800.000" → 750?** Still unchanged today (curl 07:20). Paste-ready: §F of `fab_advertising/reports/2026-11-11_w1w2_paste_ready.md`. My recommendation: **yes**. Reply "W1 W2 done" + who edits.
 
 _Ad-account ask: #1 (W0). Old #2 (Ad015 + ADSET-3 min) parked 11/23: moot while the caps hold PEIKIRA at Rp 5k/day._

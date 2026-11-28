@@ -25,7 +25,7 @@
 - **Priority:** P0
 - **Deadline:** 2026-12-05 (30 days from 2026-11-05)
 - **Constraints:** **Propose-only.** Fuku never touches the ad account (no pauses, budget changes, or launches). Every change is proposed to Alvian as an apply-ready checklist, and **Alvian applies it himself**. The metric is the 7-day average CPL, never a single day.
-- **Status:** criterion 1 met, criterion 2 off track (11/27: 7d 11/20–11/26 CPL 72.7k ✅ on Rp 135k/day *(calc)*, BC 99.9% of spend; PEIKIRA ≈ Rp 0/day under the 105k caps; ADSET-3 closed as never delivered; BC W0 re-asked as 2 fields; site ask open)
+- **Status:** criterion 1 met, criterion 2 off track (11/28: 7d 11/21–11/27 CPL 65.8k ✅ on Rp 141k/day *(calc)*, BC 99.9% of spend; PEIKIRA ≈ Rp 0/day under the 105k caps; ADSET-3 closed as never delivered; BC W0 re-asked as 2 fields; site ask open)
 - **Strategy (Fuku, 2026-11-05):**
   1. *Diagnose* (now): ad-set/ad/placement/audience breakdown; find which ads, audiences, and placements produce leads ≤ Rp 95k.
   2. *Cut waste*: propose to Alvian which CTR-collapsed FAB ads and losing ad sets to pause, so spend concentrates in the winners (BC CBObass005-type setups at ~Rp 83k).
@@ -33,6 +33,7 @@
   4. *Scale*: propose budget raises of ~20–30% every 3–4 days, only while the 7d CPL ≤ Rp 95k. Alvian applies them. Fuku verifies the effect in the next readouts. Path: ~Rp 411k → 500k → 650k → 800k → 1M/day (≈ 10–11 leads/day at Rp 95k).
   5. Track daily in `fab_advertising/reports/m001_tracker.md` (spend, leads, 7d CPL).
 - **Progress:**
+  - 2026-11-28 07:01: Readout: activity log 0 entries since 11/27 19:00 (W0 not applied). 11/27 BC Rp 127,542 / 2, PEIKIRA Rp 0; 11/26 BC relocked 178,399. 7d 11/21–11/27 **Rp 986,743 / 15 = 65.8k ✅** *(calc)*. Model 65.9k OK, LWD 12/03, criterion 2 150.4k MISS at 1M/day (cap-blocked). Close-out window 11/28–12/04: needs ≥ 11 leads, expected 15, P(miss) 12% *(calc)*. W0 still starved (204 2,628 / 3-21 3,073); site gate NOT MET. No new ask (W0 already one line).
   - 2026-11-27 21:01: Groundwork: W0 scope sweep. Ladder card, `bc_ladder_read.py` and markus sheet §4 still said 4 ad sets / "revert all four" after the 11/26–27 shrink → refreshed to 204 + 3-21 (201 = control, 208 dropped); "W0 done" 6-step runbook at the top of the ladder card; N2 kill/starve/d14/winner rules now in the script (`--n2`, `--parent`). 819 grep clean. 5 dry runs ✓.
   - 2026-11-27 20:02: Groundwork: "W1 W2 done" 6-step runbook at the top of `w1w2_lift_template.md` (snapshot PASS → log → day 0 → d7/d14 reads → W3) + `fuku/bin/w1w2_read.py` (read calendar + verdict on the 3.55% / 1.28σ rule; 1,000/43 → UNPROVEN, 2,000/82 → LIFT). 11/11 3.72% day-7 line marked superseded; pointer in the replan. No ask.
   - 2026-11-27 19:01: Poll: activity log 0 entries since 11/26 19:00 (no W0); site snapshot unchanged (gate NOT MET). Groundwork: criterion-2 12/05 line was missing (replan held only a 12/14 line; "02/16" assumed W1 on 12/01) → `c1_closeout.py --w1 <date|none>` prints a CRITERION 2 LINE from the same window spend (offsets W1 + 49/77/119 days reproduce both replan rows); close-out rules 5–6 (one ❓ max on 12/05) + weekly 10b updated. No ask.
