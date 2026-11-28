@@ -6,9 +6,9 @@ _2026-11-11 11:02 WIB, Fuku cloud heartbeat (groundwork). Read-only. Use it the 
 ## Runbook: the day "W1 W2 done" lands (2026-11-27 20:02 WIB; no reading needed)
 1. **Same run:** `python3 fuku/bin/w1w2_snapshot.py` → must print **DAY-0 GATE PASS** (diff vs `snapshots/w1w2_2026-11-27_1702.json`). NOT MET → one-line reply naming the string still live; no day 0.
 2. **Same run:** activity log since the edit (confounders: any ad change by Markus, Wave 1, budget). Note the edit time in WIB.
-3. **Day 0** = first full PT day after the edit (PT = WIB − 15 h). `python3 fuku/bin/w1w2_read.py dates <day0>` prints the read calendar; put the 2 read dates in NOW "Next actions".
-4. **Day-7 read** (≥ day 0 + 9): `ads_get_dataset_stats` 405755485775053, aggregation=`event`, granularity=`day`, baseline + post-fix in the **same call** → `w1w2_read.py read --vc <VC> --lead <Lead> --days 7` (directional only).
-5. **Day-14 read** (≥ day 0 + 16): same call → `--days 14` = the verdict. Add Meta 7d CPL + leads/LPV cross-check, then OUTBOX one-line report (not an ask).
+3. **Day 0:** `python3 fuku/bin/w1w2_read.py day0 "<edit time WIB, YYYY-MM-DD HH:MM>"` converts WIB → PT (zoneinfo, DST-safe), prints day 0 + the read calendar; put the 2 read dates in NOW "Next actions". _(11/28 12:01: no hand PT math any more.)_
+4. **Day-7 read** (≥ day 0 + 9): ONE `ads_get_dataset_stats` 405755485775053, aggregation=`event`, granularity=`day`, covering PT 11/16 → day 0 + 6. Copy one line per PT day into a file as `YYYY-MM-DD,VC,Lead` (copy, don't sum) → `w1w2_read.py read --rows <file> --day0 <day0> --days 7` (directional only). The script sums both windows, refuses a window < 3 days old or with a missing day, and uses bar = max(3.55%, same-call baseline). Exit 0 lift / 2 unproven / 3 no lift / 1 error.
+5. **Day-14 read** (≥ day 0 + 16): same call through day 0 + 13 → `--rows <file> --day0 <day0> --days 14` = the verdict. Add Meta 7d CPL + leads/LPV cross-check, then OUTBOX one-line report (not an ask).
 6. **After d14 locked:** W3 as no-regret change (guardrail Form/VC ≥ 4.2%), only if the form's conditional logic doesn't route on that field. WA script: send-ready once W2 closes (`creatives/2026-11-06_wa_followup_script.md`).
 - Rule numbers = the 11/27 baseline refresh below (3.55%, 1.28σ). The 11/11 "3.72% / 58 per 1,300" lines further down are **superseded**.
 
