@@ -1,12 +1,12 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-28 09:01 WIB (cloud heartbeat: groundwork — bc_rest_inputs.py built, wired into ladder runbook)_
+_Last updated: 2026-11-28 10:02 WIB (cloud heartbeat: groundwork — 11/30 Incess full dry-run on real 5d data)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
 - **M-001 (P0):** 7d 11/21–11/27 **Rp 986,743 / 15 = 65.8k ✅** *(calc)*; BC 99.9% of spend (140.8k/day). Criterion 1 on track for 12/05 (model 65.9k OK, LWD 12/03; window 11/28–12/04 needs ≥ 11 leads, expected 15, P(miss) 12% *(calc)*). Criterion 2 off track (14% of the leg); re-based 12:01: honest date mid 02/16 if W1 (016 + 018) is live 12/01, 01/15 MISS in every case *(calc)*.
 - **ADSET-3 closed:** UNDER-TESTED (starved), Rp 277 / 14d. Photo-free Wave 1 = 016 + 018 (S30 if Kuningan not visitable); page-checked 11/27 11:01, ask line paste-ready in `criterion2_replan.md`. Ask only after W0 moves.
 - **Volume lever asked:** OUTBOX #1 = BC W0 as 2 fields (204 + 3-21 + N2), re-asked 11/27 07:01 (not re-asked again: already one line). 11/27: 204 Rp 2,628, 3-21 Rp 3,073, 201 Rp 45,154 / 0; BC day 127.5k / 2 (4-08 22,890 / 1, 3-30 1,234 / 1).
-- **M-002 (P1):** Incess 4d 11/23–11/26 **31.1k** *(calc)* (prior wk 37.8k) → R2 heading to close; 4 picks 30.7k → R7 heading to close; watch 047 (47.1k, post-click) + 030 (Rp 249k / 2). Cut-list skeleton ready. Weekly 11/30.
+- **M-002 (P1):** Incess 5d 11/23–11/27 **31.7k** *(calc)* (prior wk 37.8k) → R2 CLOSE (FB 1.99× IG feed, 10 leads); 4 picks 30.5k → R7 CLOSED; watch 047 39.6k (post-click) + 030 98.8k (3 leads). Both scripts dry-run end-to-end 11/28. Weekly 11/30.
 
 ## Next actions (dated or triggered)
 1. **Every run:** INBOX/OUTBOX for "W0 done", "W1 W2 done", Kuningan answer.
@@ -17,9 +17,9 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 6. **11/30 weekly:** fill `reports/weekly/2026-11-30.md` (rules R1–R7; R2 = `fuku/bin/incess_r2.py`, R7 = `fuku/bin/incess_r7.py`; run sheet dry-run 11/27 18:02, calls 0–10b, pixel prior row re-pulled in call 8).
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **11/30 weekly full dry-run with both scripts:** R2 (`incess_r2.py`) + R7 (`incess_r7.py`) outputs pasted into the skeleton on the 4d pre-pull, check no ⟨⟩ left without a named source.
-2. **M-001 criterion-2 honesty note:** one-page "what 12/05 looks like" (criterion 1 likely ✅, criterion 2 MISS in every case) so the 12/05 close-out text is pre-agreed, not improvised.
-3. **W1/W2 runbook one-paste check:** same treatment as BC (does `w1w2_read.py` need a hand-computed input? if yes, a helper).
+1. **M-001 criterion-2 honesty note:** one-page "what 12/05 looks like" (criterion 1 likely ✅, criterion 2 MISS in every case) so the 12/05 close-out text is pre-agreed, not improvised.
+2. **W1/W2 runbook one-paste check:** same treatment as BC (does `w1w2_read.py` need a hand-computed input? if yes, a helper).
+3. **11/30 Fab-side dry-run:** call 10/10a/10b commands on the 11/28 07:00 bases (model + c1_closeout `--w1`) → confirm the 3 criterion lines print; no MCP call.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 BC Wave 0 (204 + 3-21 + N2). #2 Site W1 + W2 + who edits.

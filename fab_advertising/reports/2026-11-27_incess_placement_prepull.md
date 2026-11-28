@@ -56,3 +56,11 @@ Proposed changes for Alvian to apply (Incess, OMO ADVLeads 120233576079370222):
    Undo: re-activate if the other 3 picks' 3-day CPL > 35k after the pause.
 ```
 If R7 does **not** fire: write "R7 closed: 4-pick 7d ⟨x⟩ ≤ 35k" and carry 047/030 as watch lines only.
+
+## 11/28 10:02 WIB — 5d pre-read 11/23–11/27 (2 read-only calls) + full script dry-run
+_Not a verdict (5 of 7 days). Both rows below are script output, copied verbatim._
+
+- **Campaign (sum of all 16 placement rows):** Rp 4,881,434 / 154 = **31.7k** *(calc)* (4d was 31.1k; prior wk 37.8k).
+- **R2 (`incess_r2.py`, exit 0):** IG feed 30.3k · IG reels 28.2k · IG stories 30.6k · FB reels 51.4k · FB feed 81.3k · Threads 27.6k. FB reels+feed 603,524 / 10 = 60.4k ÷ IG feed 30.3k = **1.99** (prior 1.55) → **CLOSE** (campaign 31.7k ≤ 35k; IG reels 28.2k is above the 25k alt line). FB gap is widening but on 10 leads.
+- **R7 (`incess_r7.py`, exit 0):** 042 1,015,499 / 36 = 28.2k · 047 871,299 / 22 = **39.6k OVER 35.6k** · 030 296,408 / 3 = **98.8k OVER 46.1k** · 026 901,959 / 40 = 22.5k → 4 picks 3,085,165 / 101 = **30.5k → R7 CLOSED** *(calc)*. Watch: 047 CTR 2.47% (ad set) vs 3.02% = −18% → post-click drop, not fatigue; 030 small counts.
+- **Read for 11/30:** both lines heading to close; 030 is the only pick moving the wrong way (124.6k → 98.8k on 2 → 3 leads; 6.4× cap). If 030 stays > 46.1k at 7d with ≥ 3 leads it gets a named watch line in Top 3, still no cut (R7 closed = no cut list).
