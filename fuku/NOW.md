@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-28 19:01 WIB (cloud heartbeat: 19:00 poll no change; 047/030 daily rows locked; next retro ≈ 12/05)_
+_Last updated: 2026-11-28 20:02 WIB (cloud heartbeat: 11/30 weekly Fab 5d pre-read written; next poll 11/29 07:00; next retro ≈ 12/05)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -17,10 +17,10 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 6. **11/30 weekly:** fill `reports/weekly/2026-11-30.md` (rules R1–R7; R2 = `fuku/bin/incess_r2.py`, R7 = `fuku/bin/incess_r7.py`; run sheet dry-run 11/27 18:02, calls 0–10b, pixel prior row re-pulled in call 8).
 
 ## Groundwork backlog (for quiet runs; must be useful even if no ask is ever applied)
-1. **11/30 weekly fixed rows:** prior-week columns already filled in the 11/27 dry-run; only remaining fixed item = copy the 11/23–11/27 Fab locks (NOW "Locks") into a 5d pre-read line so 11/30 adds just 11/28–11/29.
-2. **WA script (M-001 site copy):** send-ready check vs live claims (800 / G6 / All-in). Page claims unchanged per 11/28 19:01 snapshot, so re-run only after any site change.
-3. **M-002 Incess 11/28–11/29 rows for 030:** at the 11/30 pull, read 030 as a count line vs the locked 11/21–11/27 rows (watch line if ≤ 1 lead in 11/28–11/29).
-_(Done 11/28 19:01: 047/030 daily rows → 030 P(≤3) 4% real drop, 047 noise. Done 17:01: zero-action floor → BC drift ≈ Rp 100–160k/day at ≤ 95k, line in the 12/05 facts. Done 16:01: 12/05 one-paste `--paste`. Done 15:01: stale-default sweep. Dropped 11/28 retro: W3 guardrail one-paste = staging for the unapplied site ask.)_
+1. **WA script (M-001 site copy):** send-ready check vs live claims (800 / G6 / All-in). Page claims unchanged per 11/28 19:01 snapshot, so re-run only after any site change.
+2. **M-002 Incess 11/28–11/29 rows for 030:** at the 11/30 pull, read 030 as a count line vs the locked 11/21–11/27 rows (watch line if ≤ 1 lead in 11/28–11/29).
+3. **Research (M-001, no ask needed):** Jakarta Selatan self-storage price scan (public list prices vs Fab 750/800) → one table in `fab_advertising/reports/`, feeds the weekly + 12/05 copy facts.
+_(Done 11/28 20:02: 11/30 weekly Fab 5d pre-read 804,935 / 12 = 67.1k, R4 safe unless 11/28–11/29 spend > 335k. Done 19:01: 047/030 daily rows → 030 P(≤3) 4% real drop, 047 noise. Done 17:01: zero-action floor → BC drift ≈ Rp 100–160k/day at ≤ 95k, line in the 12/05 facts. Done 16:01: 12/05 one-paste `--paste`. Done 15:01: stale-default sweep. Dropped 11/28 retro: W3 guardrail one-paste = staging for the unapplied site ask.)_
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 BC Wave 0 (204 + 3-21 + N2). #2 Site W1 + W2 + who edits.
