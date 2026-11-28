@@ -64,3 +64,20 @@ _Not a verdict (5 of 7 days). Both rows below are script output, copied verbatim
 - **R2 (`incess_r2.py`, exit 0):** IG feed 30.3k · IG reels 28.2k · IG stories 30.6k · FB reels 51.4k · FB feed 81.3k · Threads 27.6k. FB reels+feed 603,524 / 10 = 60.4k ÷ IG feed 30.3k = **1.99** (prior 1.55) → **CLOSE** (campaign 31.7k ≤ 35k; IG reels 28.2k is above the 25k alt line). FB gap is widening but on 10 leads.
 - **R7 (`incess_r7.py`, exit 0):** 042 1,015,499 / 36 = 28.2k · 047 871,299 / 22 = **39.6k OVER 35.6k** · 030 296,408 / 3 = **98.8k OVER 46.1k** · 026 901,959 / 40 = 22.5k → 4 picks 3,085,165 / 101 = **30.5k → R7 CLOSED** *(calc)*. Watch: 047 CTR 2.47% (ad set) vs 3.02% = −18% → post-click drop, not fatigue; 030 small counts.
 - **Read for 11/30:** both lines heading to close; 030 is the only pick moving the wrong way (124.6k → 98.8k on 2 → 3 leads; 6.4× cap). If 030 stays > 46.1k at 7d with ≥ 3 leads it gets a named watch line in Top 3, still no cut (R7 closed = no cut list).
+
+## 11/28 19:01 WIB — 047 + 030 daily rows 11/21–11/27 (1 read-only call, ad-set level, `time_increment=1`)
+_Locked prior for the 11/30 watch lines. Not a verdict; no ask (R7 closed on the 5d pre-read)._
+
+| Day | 030 spend / leads · LPV · CTR | 047 spend / leads · LPV · CTR |
+|---|---|---|
+| 11/21 | 78,077 / 3 · 61 · 2.37% | 196,203 / 4 · 125 · 3.37% |
+| 11/22 | 64,234 / 3 · 56 · 2.79% | 184,416 / 3 · 101 · 3.32% |
+| 11/23 | 66,244 / 2 · 41 · 2.43% | 225,043 / 6 · 84 · 2.25% |
+| 11/24 | 68,658 / 0 · 52 · 2.43% | 156,950 / 5 · 62 · 2.13% |
+| 11/25 | 61,030 / 0 · 31 · 2.04% | 159,005 / 3 · 58 · 2.51% |
+| 11/26 | 53,306 / 0 · 43 · 2.38% | 165,725 / 1 · 81 · 2.68% |
+| 11/27 | 47,170 / 1 · 29 · 2.01% | 164,725 / 7 · 71 · 3.02% |
+| **7d** | **438,719 / 9 = 48.7k** · Lead÷LPV 2.88% *(calc)* | **1,252,067 / 29 = 43.2k** · Lead÷LPV 4.98% *(calc)* |
+
+- **030 (small counts → count line, not CPL):** 11/23–11/27 = **3 leads** on Rp 296,408; at its prior-week CPL 36.6k we'd expect 8.1 → P(≤ 3) **4%** *(calc, Poisson)*. CTR steady (2.0–2.8%), spend sliding 78k → 47k/day as Meta shrinks it, LPV sliding too. Reads as a real post-click/lead-rate drop, not chance (INFERRED). The 11/30 Top-3 watch line is justified if 11/28–11/29 add ≤ 1 lead; still no cut while R7 is closed.
+- **047:** 5d 22 leads vs 21.7 expected at prior 40.1k → P(≤ 22) 58% *(calc)* = **noise, not a drop**. 11/27 alone 7 leads, CTR back to 3.02% (= the prior 3.02%). The 11/28 "post-click drop" label is weaker than it looked; on 11/30 call it "back in range" if the 7d lands ≤ 40.1k.

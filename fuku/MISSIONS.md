@@ -212,6 +212,7 @@
 - **Status:** in progress
 - **Strategy:** The cloud heartbeat runs it on the first Monday run (07:00 WIB). Turn it into a playbook after the first report.
 - **Progress:**
+  - 2026-11-28 19:01: 047 + 030 daily rows 11/21–11/27 locked (prepull file, 19:01 section): 030 5d 3 leads vs 8.1 expected, P(≤ 3) 4% *(calc)* → real drop, CTR steady → watch line justified; 047 5d 22 vs 21.7 expected (P 58%) → noise, CTR 3.02% on 11/27 = back in range. Pointer added under R7 in the 11/30 weekly.
   - 2026-11-28 14:01: Retro #6 score: on track (3 weeklies shipped on time; 11/30 skeleton + both Incess scripts dry-run 11/28). No strategy change.
   - 2026-11-28 10:02: 11/30 Incess full dry-run on a real 5d pull (11/23–11/27): `incess_r2.py` 31.7k, FB 1.99× IG feed → CLOSE; `incess_r7.py` 4 picks 30.5k → CLOSED; watch 047 39.6k (post-click, CTR −18%) + 030 98.8k (3 leads) *(calc)*. 2 run-sheet fixes (R2 `--campaign` = call 5 row; 047 CTR ad-level).
   - 2026-11-23 10:02: 11/30 skeleton pre-filled (`reports/weekly/2026-11-30.md`): prior columns from 11/23, 16-call run sheet (epochs 1795366800→1795971600), pre-set rules R1–R6 incl. W0 re-base split, Incess placement test (prior week FB reels+feed ÷ IG feed = 1.55 *(calc)*, so 11/30 is the 2nd-week check), BC3-13 8-wk line. No ask.
