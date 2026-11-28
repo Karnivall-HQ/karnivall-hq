@@ -1,4 +1,6 @@
 # 11/20 07:00 readout: one-page fill-in (gate + ADSET-3 day-7 + message pick)
+
+> **ARCHIVED 2026-11-28 08:02 (cloud heartbeat).** Historical: the 11/20 gate is closed and every rule line here (11/11–11/20 bases, ADSET-3, Ad015, undo, 105k caps on PEIKIRA) is superseded. Do not copy numbers or rules from this file. Current: `2026-12-05_criterion1_path.md` (criterion 1), `2026-11-20_bc_cap_ladder_card.md` (W0), `w1w2_lift_template.md` (site), `fuku/NOW.md` standing facts.
 _Pre-staged 2026-11-13 14:02 WIB by Fuku (cloud heartbeat, groundwork). Read-only, propose-only. Goal: the 11/20 readout is a ~15-minute fill job, no re-thinking._
 _Dry run 2026-11-17 20:02 (cell by cell, expected path: caps on, no undo, ADSET-3 starved, G1 ❌ → M1 + Branch B): 4 fixes: P5 now daily (feeds `--budget`), Ad015 CPL trigger got its Rp 600k spend floor, `--budget` day named, criterion-2 branch pointer in Step 5._
 _Dry run 2026-11-18 10:02 (Step 0 → gate-miss 11/18 texts N/A/B): 3 fixes: Step 5 M1 row now picks N/A/B by the Step 0 undo box; full-undo branch no longer pastes the stale 117–120k or lets pack §4 replace M1-A; gate-miss ⟨p⟩/⟨e⟩ use capped days 11/17–11/19 (P1 ÷ 7 would print ≈ 115.5k/day *(calc)*). Every ⟨⟩ in N/A/B has a named source (P1, P2, P5, Step 0, Step 4b)._

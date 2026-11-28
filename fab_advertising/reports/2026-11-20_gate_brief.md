@@ -1,5 +1,7 @@
 # M-001: 11/20 gate brief (what gets the 7d CPL to ≤ Rp 95k by 11/20)
 
+> **ARCHIVED 2026-11-28 08:02 (cloud heartbeat).** Historical: the 11/20 gate is closed and every rule line here (11/11–11/20 bases, ADSET-3, Ad015, undo, 105k caps on PEIKIRA) is superseded. Do not copy numbers or rules from this file. Current: `2026-12-05_criterion1_path.md` (criterion 1), `2026-11-20_bc_cap_ladder_card.md` (W0), `w1w2_lift_template.md` (site), `fuku/NOW.md` standing facts.
+
 ## 🔄 Refresh 2026-11-14 08:01 WIB (base 116.5k, 11/13 locked in). Supersedes everything below.
 **Base:** 7d 11/07–11/13: PEIKIRA Rp 2,016,453 / 14 (**144.0k**), BC Rp 313,500 / 6 (52.3k) → 116.5k *(calc)*. Inside PEIKIRA: control Rp 1,091,647 / 6 (all 6 from Ad015), PEIKIRA2 Rp 924,806 / 8 (**115.6k**), ADSET-3 Rp 0.
 **Window 11/13–11/19, day 1 is already known:** 11/13 PEIKIRA Rp 293,851 / **0 leads**. Method: PEIKIRA Rp 288k/day (7d rate) at 144.0k unless changed; BC flat at its 7d rate; a change counts from the day after it goes live; site lift = LP→Lead 3.9% → 4.4% (+0.5pt) or 4.9% (+1pt), applied to PEIKIRA + BC. "Ad015 paused" = the freed spend runs at PEIKIRA2's 115.6k (optimistic; at 130k the numbers rise ~8k). Script: computed this run, numbers below are all *(calc)*.
