@@ -15,6 +15,8 @@ Any new ad, ad set, creative wave, bid-cap or structure change that Fuku propose
 8. **Readability floor + L = 0 row.** Spend < 3 × baseline CPL → judge volume only; dry-run every lead count L, incl. 0 (11/16: one extra lead flipped "undo" to "no ask" at Rp 180k). Every comparative/guard CPL rule also gets a spend floor (the kill line, 2× target) before a 0-lead side counts: CPL = ∞ on day 1 fires falsely (`bc_ladder_read.py`, 11/20). (Retro #5)
 9. **Size the probe to reach its own floor.** Projected 7d spend ≥ the kill/verdict floor; if one object can't (BC204 at Rp 2k/day), pool every object passing the same gate and read the group with one comparative rule (BC ladder: 4 ad sets, 33 leads pooled, 11/20). (Retro #5)
 10. **Flag-line maxima/minima use only weeks with ≥ 10 leads**, and the line says so (047's 8-wk max was a 3-lead week that would never fire, 11/20). (Retro #5)
+11. **Pixel before/after reads: baseline and test window come from the same `ads_get_dataset_stats` call;** day counts are revised up after the day ends (+8% VC / +13% Lead on 11/16–11/22 between 11/23 and 11/27). Windows < 3 days old are provisional. (Retro #6)
+12. **Low lead counts → read as a lead-count line + P(miss).** When a CPL target sits on < 20 leads, convert it to "≥ N leads at projected spend" and report the Poisson miss chance next to the point forecast (11/27: 72.8k "OK" was really P(miss) 17%). Script: `fuku/bin/c1_closeout.py`. (Retro #6)
 
 ## B. Reading the account before claiming a trend
 - **Split by campaign first** when 2+ campaigns spend: account totals hide mix shifts (11/06: "CPM +16%" was spend moving from cheap BC to PEIKIRA).
@@ -23,6 +25,7 @@ Any new ad, ad set, creative wave, bid-cap or structure change that Fuku propose
 - **Capacity:** the highest spend an engine ever held at target CPL in its 8-week history is its ceiling on current creative; the gap above it is a creative problem, not a budget one (Fab: Rp 919k/day week cost 201k/lead).
 - **CPL up with flat or rising CTR = post-click problem** (page/offer mismatch), not creative fatigue; a CTR fatigue rule never fires on it (Ad015 11/14: CPL 114.5k → 166.1k, CTR 1.4% → 2.3%). Pair the ad fix with the page fix in the ask. (Retro #3)
 - **One ad > 80% of an ad set's spend = no backup.** The hedge is new creative; write CTR/CPL/freq triggers before fatigue shows.
+- **A spend jump at unchanged settings is "pending", not "swing",** until the next full day confirms it (BC 11/23 → 11/24 was a 2-day rise). When a capped ad set rises on its own, add it as a caveat on any open cap-raise ask the same run. (Retro #6)
 
 ## C. Writing a proposal
 - **A budget step is a lever only when the budget binds.** Check 3-day spend ÷ budget first; < 90% → no budget ask, name the real limiter (cap or creatives). Under a cap spend is set by the cap (PEIKIRA 11/15: 5.1% of 3M; BC 11/05: 1.4% of 5M). (Retro #4)
@@ -34,6 +37,7 @@ Any new ad, ad set, creative wave, bid-cap or structure change that Fuku propose
 - **Build specs:** see `meta-creative-build.md` §B for build rows. Read the reference ad's creative settings (CTA, IG account, Advantage+ text translation / cv_transformation) and state which to copy and which to turn off; they can alter sticker copy and the raw-photo look (11/12).
 - **Competitors:** Ad Library tells *who* advertises and how often; their website tells the offer. Comparison copy claims only checked differences.
 - **Creative briefs:** view the top winner at full size first and copy its *subject*; size the ask to what it needed (Image087 = home clutter, no warehouse).
+- **Check the structure before naming the cut unit:** pull ads-per-ad-set before writing a per-ad rule (3 of 4 Incess picks run one ad → the unit is the ad set). (Retro #6)
 
 ## D. Re-asking and following up
 - **Before re-raising a parked ask, re-pull the same breakdown on the latest 7d** and recompute "CPL without it". If the gain is gone, retire the ask (IG Stories, 11/11).
@@ -42,9 +46,10 @@ Any new ad, ad set, creative wave, bid-cap or structure change that Fuku propose
 - **Look before asking what an asset *is*.** `ads_get_ad_images` + download answered "are these the new photos?" in one run (11/15: facility photos, not the shoot). Ask Alvian only what can't be seen (e.g. "is the site open?"). (Retro #4)
 - **When the team applies a partial version**, measure where the money went at the next readout and shrink or drop the ask instead of repeating it (ad 006 pause, 11/09–11/10).
 - Stalled > 24h → one-line yes/no re-ask (CLAUDE.md Evolving rule); one push notification per re-ask per day.
+- **Before re-asking a bid-cap change, check it per ad set:** each row's 7d Rp/day and CPL ÷ cap. Drop a row whose spend jumped ≥ 3× at the same cap or whose CPL ÷ cap < 0.6 while it spends: the cap no longer binds there (BC201, 11/26). A campaign-level "spends 2–4% of budget" test is not enough. (Retro #6)
 
 ## Quality bar
 Every proposal names: the lever type, the read rules (absolute + comparative), the window, and labels each number account data / *(calc)* / INFERRED.
 
 ## Last validated
-2026-11-21 (Retro #5: A8–A10, C per-criterion) · 2026-11-16 (Retro #4 additions) · 2026-11-14 (Retro #3 additions) · 2026-11-11 · M-001 (Wave 1 template, 11/20 gate brief, IG Stories retirement) and M-002 (Incess 019 split).
+2026-11-28 (Retro #6: A11–A12, B pending, C cut unit, D per-ad-set cap check) · 2026-11-21 (Retro #5: A8–A10, C per-criterion) · 2026-11-16 (Retro #4 additions) · 2026-11-14 (Retro #3 additions) · 2026-11-11 · M-001 (Wave 1 template, 11/20 gate brief, IG Stories retirement) and M-002 (Incess 019 split).

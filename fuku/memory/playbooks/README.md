@@ -11,3 +11,4 @@ Each playbook: **When to use** · **Steps** · **Quality bar** · **Pitfalls** �
 - `ad-copy-page-check.md`: check every ad/sticker/script claim against the live landing page before it is paste-ready
 - `meta-modelling-and-planning.md`: scenario models per judged window, CBO break-even tables, rule-overlap and calendar checks for plans
 - `meta-creative-build.md`: find the carrying ad + angle, reuse existing image hashes, build rows with Adv+ = parent (Retro #5)
+- `fuku-scripts-and-runbooks.md`: Fuku's own scripts/runbooks/pre-written text: explicit 7d args, verdict tense, `sweep.sh` on every revision (Retro #6)

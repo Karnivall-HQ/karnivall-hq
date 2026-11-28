@@ -17,13 +17,12 @@ _Ad-account ask: #1 (W0). Old #2 (Ad015 + ADSET-3 min) parked 11/23: moot while 
   - ⚠️ Incess: Rp 7.14M / 189 = **37.8k (+42.9% WoW)** at unchanged caps; CTR down 10–16% on most ads, freq ≤ 1.63 → account-wide drift, not one tired ad (INFERRED). Only 047 crossed its flag line (40.1k > 35.6k). Watch, no ask; if the picks stay > 35k next week I'll write a cut list.
   - 👉 Asks now: #1 BC Wave 0 (volume at ~60k), #2 site. Next: 11/27 ADSET-3 verdict. Report: `fab_advertising/reports/weekly/2026-11-23.md`.
 
-- **[REPORT] 2026-11-21 08:01 · 🔧 Retro #5 (self-improvement, week 11/16–11/21).**
-  - 🚀 Win: 7d CPL 85.1k ✅ (11/14–11/20) and 92.1k ✅ at the 11/20 gate: criterion 1 met, by mix (BC ≈ 57k carried).
-  - ⚠️ Miss: criterion 2 (Rp 1M/day) off track, ≈ 10–17% of the leg; I pushed the undo 5 days on volume only before modelling its CPL cost.
-  - 🔧 Changed: 13 lessons → 4 playbooks (new `meta-creative-build.md`); new rule: no more staged sheets for unapplied asks, groundwork goes to work that needs no ad-account change.
-  - ❓ Need: asks #2 and #3 below (7–8 days open). The fastest unblock is #3 (site, 10 min).
-  - 👉 Next week: 11/23 weekly + BC Wave 0 swap-in check, 11/27 ADSET-3 verdict, M-002 Incess report.
-
+- **[REPORT] 2026-11-28 14:01 · 🔧 Retro #6 (self-improvement, week 11/22–11/28).**
+  - 🚀 Win: 7d CPL **65.8k ✅** (11/21–11/27, best yet); criterion 1 on track for 12/05: window needs ≥ 11 leads, expected 15, P(miss) 12% *(calc)*.
+  - ⚠️ Miss: criterion 2 will miss 12/05 in every case (Rp 141k/day = 14% of the Rp 1M leg *(calc)*). And my own miss: I kept building read scripts for asks that weren't applied (broke my "stage less" rule).
+  - 🔧 Changed: 12 lessons → playbooks (new `fuku-scripts-and-runbooks.md`); new `fuku/bin/sweep.sh` finds stale numbers in live files (caught 1 in the 11/30 weekly today); "stage less" now bans helper scripts too.
+  - ❓ Need: **one** of the 2 asks above applied. #1 (W0, Markus ~10 min) is the only volume lever left before 12/05. 0 asks applied and no human edit since 11/15.
+  - 👉 Next week: 11/29–12/05 daily close-out readouts, 11/30 weekly, 12/05 verdict + criterion-2 re-date message (pre-written).
 ## Parked
 
 > Still valid, not being pushed right now. Full detail kept so an ask can be re-raised as one line.
@@ -186,4 +185,9 @@ _Ad-account ask: #1 (W0). Old #2 (Ad015 + ADSET-3 min) parked 11/23: moot while 
   - **M-002 (P1): Weekly ads health report every Monday** (spend, CPL, fatigue, disabled accounts) across all accounts. I can run this fully on my own.
   → Reply "yes" / edit them in `MISSIONS.md`. My recommendation: yes to both.
   → **Resolved 2026-11-05:** M-002 yes. M-001 approved in modified form (≤ Rp 95k 7d CPL + scale to Rp 1M/day). See MISSIONS.md.
-
+- _(resolved 11/28 14:01: superseded by Retro #6 report)_ **[REPORT] 2026-11-21 08:01 · 🔧 Retro #5 (self-improvement, week 11/16–11/21).**
+  - 🚀 Win: 7d CPL 85.1k ✅ (11/14–11/20) and 92.1k ✅ at the 11/20 gate: criterion 1 met, by mix (BC ≈ 57k carried).
+  - ⚠️ Miss: criterion 2 (Rp 1M/day) off track, ≈ 10–17% of the leg; I pushed the undo 5 days on volume only before modelling its CPL cost.
+  - 🔧 Changed: 13 lessons → 4 playbooks (new `meta-creative-build.md`); new rule: no more staged sheets for unapplied asks, groundwork goes to work that needs no ad-account change.
+  - ❓ Need: asks #2 and #3 below (7–8 days open). The fastest unblock is #3 (site, 10 min).
+  - 👉 Next week: 11/23 weekly + BC Wave 0 swap-in check, 11/27 ADSET-3 verdict, M-002 Incess report.

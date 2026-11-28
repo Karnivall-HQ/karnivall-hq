@@ -10,6 +10,8 @@ Any scenario table ("if X goes live by date D, 7d CPL ≈ …"), break-even for 
 3. **Sanity-check direction** before writing numbers: every improving lever must lower CPL vs "nothing" (11/14: first run had the site lift inverted). Hand-check one row.
 4. Keep the model as a script in `fuku/bin/` so re-runs are reproducible; mark every output *(calc)*.
 5. **Model a structural ask on each criterion separately** and state the trade in the ask. When a cheap leg carries the blend, test "throttle the expensive leg + scale the cheap one" as an option (11/20: the undo helped volume but hurt CPL, 92.1k → ≈ 114k *(calc)*; I'd pushed it 5 days on volume alone). (Retro #5)
+6. **Every model takes an explicit fallback CPL for 0-lead bases** (`--peik-cpl`) and fails loudly without it; the row notes which CPL was used (a throttled campaign hit 0 leads in its 7d base on 11/23). (Retro #6)
+7. **Scripts and runbooks:** see `fuku-scripts-and-runbooks.md` (explicit latest-7d args, verdict tense, sweep on every revision). (Retro #6)
 
 ## B. New ad set inside a CBO
 1. **Break-even vs what it displaces,** not vs target: compute against the CPL of the ad sets it takes spend from (11/13: bar moved ≤ 70k → ≤ 83.5k once the incumbent 116k was used).
@@ -38,4 +40,4 @@ Any scenario table ("if X goes live by date D, 7d CPL ≈ …"), break-even for 
 6. **Chained templates hand off a dated state snapshot** (every setting the next card branches on); the downstream log window starts at it, not at the next readout (11/18). (Retro #5)
 
 ## Last validated
-2026-11-21 (Retro #5: A5, C4, E4–E6) · 2026-11-16 (Retro #4: §D, §E, C1 order) · 2026-11-14 · M-001 (11/20 gate brief, 12/05 criterion-1 path, ADSET-3 read card, weekly photo calendar).
+2026-11-28 (Retro #6: A6–A7) · 2026-11-21 (Retro #5: A5, C4, E4–E6) · 2026-11-16 (Retro #4: §D, §E, C1 order) · 2026-11-14 · M-001 (11/20 gate brief, 12/05 criterion-1 path, ADSET-3 read card, weekly photo calendar).

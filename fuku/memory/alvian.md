@@ -11,3 +11,4 @@
 
 ## Context
 - **Response pattern (retro 2026-11-14):** across 11/06–11/14, 0 of Fuku's site/photo asks were answered in OUTBOX; the team acted on its own instead (ADSET-3 photo wave, 11/13). Implication: one push per new/re-asked ask, frame asks around what the team already shipped, and never let a mission plan depend on a same-day answer.
+  - **Update (retro 2026-11-28):** 11/15–11/28 the same: 0 OUTBOX asks answered or applied (W0 open 5 days, site W1+W2 open 15 days), no human edit in the Fab account since 11/15. Implication: plans and the 12/05 message assume nothing gets applied; groundwork must not depend on an ask moving.

@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-28 13:01 WIB (cloud heartbeat: 13:00 poll = no change; 11/30 Fab-side dry-run done, criterion-2 line now says "projected" until 12/05)_
+_Last updated: 2026-11-28 14:01 WIB (cloud heartbeat: Retro #6 done; next retro ≈ 12/05 after the verdict)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -11,22 +11,23 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 ## Next actions (dated or triggered)
 1. **Every run:** INBOX/OUTBOX for "W0 done", "W1 W2 done", Kuningan answer.
 2. **Polls 11/28:** 07:00 + 13:00 done (no change). Next ≈ 19:00 (activity log + `w1w2_snapshot.py --no-save`).
-2a. **14:00 run: Retro #6** (weekly, last 11/21; 12 lessons since #5) → `protocols/retro.md`.
 3. **"W1 W2 done" seen:** follow the 6-step runbook at the top of `w1w2_lift_template.md` (snapshot PASS → log → `w1w2_read.py day0 "<edit WIB>"` → d7/d14 `read --rows`).
 4. **"W0 done" seen in the log:** follow the 6-step runbook at the top of `2026-11-20_bc_cap_ladder_card.md` (log → re-base §D–§E → N2 check → daily: one BC ad-set pull → `bc_rest_inputs.py` → paste its `bc_ladder_read.py` line → d7 ladder / d14 N2). 201 = control (in `--rest`).
 5. **11/29–12/05 07:00 readouts** (11/28 run: 0 locked, status line 11 needed / 15 expected): after locking, run `fuku/bin/c1_closeout.py --locked <window spend> <leads> <days> --rate <latest 7d spend/day> --cpl <latest 7d CPL>` (12/05: add `--w1 <date|none>` → criterion-2 line, rules 5–6; then fill the pre-written branch A/B/C text in the path file) (window 11/28–12/04; rules in `2026-12-05_criterion1_path.md` close-out). Needs ≥ 11 leads at ~987k; P(miss) 12% *(calc)*.
 6. **11/30 weekly:** fill `reports/weekly/2026-11-30.md` (rules R1–R7; R2 = `fuku/bin/incess_r2.py`, R7 = `fuku/bin/incess_r7.py`; run sheet dry-run 11/27 18:02, calls 0–10b, pixel prior row re-pulled in call 8).
 
-## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **Stale-default sweep in `fuku/bin/`:** other scripts with hard-coded 7d bases (model, ladder, R2/R7) → bump or make them required args.
-2. **W3 guardrail one-paste:** `w1w2_read.py` (or sibling) mode for Form/VC ≥ 4.2% at W3 d14, same `--rows` file format + Form column.
-3. **12/05 pre-written text vs script wording:** check branch A/B/C text in `2026-12-05_criterion1_path.md` against the exact `c1_closeout.py` verdict strings (MET/MISSED/projected) so the paste needs no hand edit.
+## Groundwork backlog (for quiet runs; must be useful even if no ask is ever applied)
+1. **Stale-default sweep in `fuku/bin/`:** other scripts with hard-coded 7d bases (model, ladder, R2/R7) → bump or make them required args (playbook `fuku-scripts-and-runbooks.md` step 1).
+2. **12/05 pre-written text vs script wording:** check branch A/B/C text in `2026-12-05_criterion1_path.md` against the exact `c1_closeout.py` verdict strings (MET/MISSED/projected) so the paste needs no hand edit.
+3. **Criterion-2 "zero-action" path:** from BC 8-week rows, what Rp/day BC reaches with no team action (drift at fixed caps) → the floor for the 12/05 re-date text.
+_(Dropped 11/28 retro: W3 guardrail one-paste = staging for the unapplied site ask.)_
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 BC Wave 0 (204 + 3-21 + N2). #2 Site W1 + W2 + who edits.
 - Parked: undo (126.2k MISS 11/23), Ad015 + ADSET-3 min (now moot: ADSET-3 closed), Kuningan open?, "TourHub" FYI, close rate + months stayed.
 
 ## Standing facts
+- Re-scope or revised number → `fuku/bin/sweep.sh "<old>"` same run. Scripts/runbooks → `playbooks/fuku-scripts-and-runbooks.md`.
 - Read `playbooks/meta-ads-algorithm.md` + `meta-cpl-diagnosis.md` + `meta-tests-and-proposals.md` before any ads work, `meta-modelling-and-planning.md` before any model/plan, `meta-creative-build.md` before any brief/build row, `ad-copy-page-check.md` before copy is paste-ready.
 - Cloud Fuku: routine trig_01NGMFnv9BpvRp1jQjkAwUVJ, hourly 07–22 WIB. Propose-only: never call Meta write tools, even when visible.
 - Fab account 484578521394893, pixel 405755485775053. Site page https://fabwarehouses.com/sewa-gudang-self-storage-jakarta/. PEIKIRA campaign `120254051672440572` (Rp 3M/day, bid cap 105k); control `120254051672430572`; PEIKIRA2 `120254276298070572`; ADSET-3 `120254400251570572`; Ad015 `120254063163810572`; BC campaign `120236222888610572` (Rp 5M/day, caps 94,250).
