@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-28 08:02 WIB (cloud heartbeat: groundwork — incess_r2.py built, 11/20 files archived)_
+_Last updated: 2026-11-28 09:01 WIB (cloud heartbeat: groundwork — bc_rest_inputs.py built, wired into ladder runbook)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -12,14 +12,14 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 1. **Every run:** INBOX/OUTBOX for "W0 done", "W1 W2 done", Kuningan answer.
 2. **Polls 11/28:** 07:00 done. Next ≈ 13:00 + 19:00 (activity log + `w1w2_snapshot.py --no-save`).
 3. **"W1 W2 done" seen:** follow the 6-step runbook at the top of `w1w2_lift_template.md` (snapshot PASS → log → `w1w2_read.py dates` → d7/d14 reads).
-4. **"W0 done" seen in the log:** follow the 6-step runbook at the top of `2026-11-20_bc_cap_ladder_card.md` (log → re-base §D–§E → N2 check → daily `bc_ladder_read.py --row 204 --row 3-21 --n2` → d7 ladder / d14 N2). 201 = control (in `--rest`).
+4. **"W0 done" seen in the log:** follow the 6-step runbook at the top of `2026-11-20_bc_cap_ladder_card.md` (log → re-base §D–§E → N2 check → daily: one BC ad-set pull → `bc_rest_inputs.py` → paste its `bc_ladder_read.py` line → d7 ladder / d14 N2). 201 = control (in `--rest`).
 5. **11/29–12/05 07:00 readouts** (11/28 run: 0 locked, status line 11 needed / 15 expected): after locking, run `fuku/bin/c1_closeout.py --locked <window spend> <leads> <days>` (12/05: add `--w1 <date|none>` → criterion-2 line, rules 5–6) (window 11/28–12/04; rules in `2026-12-05_criterion1_path.md` close-out). Needs ≥ 10 leads at ~945k; P(miss) now 17% *(calc)*.
 6. **11/30 weekly:** fill `reports/weekly/2026-11-30.md` (rules R1–R7; R2 = `fuku/bin/incess_r2.py`, R7 = `fuku/bin/incess_r7.py`; run sheet dry-run 11/27 18:02, calls 0–10b, pixel prior row re-pulled in call 8).
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **`--rest` input helper:** one read-only entities call on BC campaign → print the `bc_ladder_read.py` inputs (BC total − 204 − 3-21 − N2, 204F ad) so the W0 daily read is one paste.
-2. **11/30 weekly full dry-run with both scripts:** R2 (`incess_r2.py`) + R7 (`incess_r7.py`) outputs pasted into the skeleton on the 4d pre-pull, check no ⟨⟩ left without a named source.
-3. **M-001 criterion-2 honesty note:** one-page "what 12/05 looks like" (criterion 1 likely ✅, criterion 2 MISS in every case) so the 12/05 close-out text is pre-agreed, not improvised.
+1. **11/30 weekly full dry-run with both scripts:** R2 (`incess_r2.py`) + R7 (`incess_r7.py`) outputs pasted into the skeleton on the 4d pre-pull, check no ⟨⟩ left without a named source.
+2. **M-001 criterion-2 honesty note:** one-page "what 12/05 looks like" (criterion 1 likely ✅, criterion 2 MISS in every case) so the 12/05 close-out text is pre-agreed, not improvised.
+3. **W1/W2 runbook one-paste check:** same treatment as BC (does `w1w2_read.py` need a hand-computed input? if yes, a helper).
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 BC Wave 0 (204 + 3-21 + N2). #2 Site W1 + W2 + who edits.
