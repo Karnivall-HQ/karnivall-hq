@@ -80,6 +80,17 @@ Placeholders: `{nama}`, `{kebutuhan}` (from the form's "Kebutuhan" field), `{rua
 **Security (don't claim, unchanged):** line 139 "di dalam building dengan security 1x24 jam di area Sudirman, Jakarta Pusat" vs line 154 "Satpam Komplek Ruko yang aktif 24/7". Still contradictory; no message mentions security.
 **What changed and why:** nothing. Page text identical on every script claim since 11/21, so no copy edit. Script stays **NOT sent** and is paste-ready the moment 3 gates close: 750 vs 800 (W2), Kuningan open for survey (G6), what "All-in" covers (Reply A only). Next re-check due ≥ 11/30 if still unsent.
 
+## Price-line check vs the 11/28 Jaksel price scan (11/28 22:02, `fab_advertising/reports/2026-11-28_jaksel_storage_price_scan.md`)
+| Check | In the script | Verdict |
+|---|---|---|
+| No "termurah / paling murah / hemat" claim | 0 hits in M1–M3, Reply A/B (only "cheapest" = the internal "Why" note, not sent) | ✔ keep it that way: SpaceHub's 388–400k headline beats any "cheapest" claim |
+| Leads with all-in / no deposit / free pickup, not price level | M1 = price + "bisa tanpa deposit, tanpa minimal sewa, pickup gratis"; Reply A = pickup + deposit + minimum | ✔ matches the scan's edge (no other source puts free pickup or no-deposit next to the price) |
+| "ada yang mulai 400rb" (Reply A) | Echoes the lead's own number; SpaceHub now "from 388k–400k" | ✔ OK: it repeats what the lead says, makes no claim of its own. Don't correct the lead to 388 |
+| Lead quotes ~700rb (Tiger-type 3.5 m³ unit) | No reply covers it | → use **Reply B** (size first: Small 3,8 m³), no new reply. Never name the operator, never say "lebih besar" unless the lead gives the other unit's size |
+| 750 vs 800 | M1, M3, Reply A use 750 | ⚠️ W2 gate unchanged; the scan makes it stronger (50k gap = 6.7%, same as the gap to Tiger) |
+
+**What changed and why:** no copy edit. Every price line already fits the scan; this table only adds the ~700rb route (→ Reply B). Script stays **NOT sent**; gates unchanged: W2 (750 vs 800), G6 (Kuningan open for survey), All-in (Reply A).
+
 ## Objection reply: "Kok lebih mahal dari yang 400rb?" (added 2026-11-10 18:02, draft, NOT sent)
 **Context:** SpaceHub (Thamrin, ~10 min away) advertises "From Rp 400k / month" for its smallest unit, but asks a **security deposit**, needs **online self-booking + pay first**, and you **move your stuff yourself** (its own FAQ, `fab_advertising/research/2026-11-10_competitor_angles.md`). Rule: compare **total cost and effort**, never knock the competitor by name, never discount on the spot.
 **Gate:** use only after Alvian confirms 750 vs 800, no deposit, free pickup (+ pickup area), and the Small unit size. Unit size of SpaceHub's 400k unit is **unknown**, so the reply does not claim "ours is bigger".
