@@ -25,6 +25,12 @@ REQUIRED = ("IG feed", "IG reels", "FB reels", "FB feed")
 PRIOR_RATIO = 1.55
 CAMPAIGN = "OMO ADVLeads 120233576079370222"
 
+# Stale-base guard (11/28 sweep): PRIOR = 11/16-11/22 and the rule wording are for the 11/30 weekly only.
+import datetime as _dt
+if _dt.datetime.now(_dt.timezone(_dt.timedelta(hours=7))).date() > _dt.date(2026, 11, 30) and "--allow-stale-prior" not in sys.argv:
+    sys.exit("ERROR: PRIOR is the 11/16-11/22 base (valid for the 11/30 weekly only). Update PRIOR + rules first, or pass --allow-stale-prior for a historical re-run.")
+sys.argv = [x for x in sys.argv if x != "--allow-stale-prior"]
+
 p = argparse.ArgumentParser()
 p.add_argument("--campaign", nargs=2, type=float, metavar=("SPEND", "LEADS"), required=True)
 p.add_argument("--row", nargs=5, action="append", metavar=("PLACEMENT", "SPEND", "CLICKS", "LPV", "LEADS"), required=True)

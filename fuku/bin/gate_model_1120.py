@@ -1,3 +1,5 @@
+# RETIRED 2026-11-20: the 11/13-11/19 gate window is closed; defaults are the 11/14 base and reproduce history only.
+#   Do not use for live decisions; use criterion1_model_1205.py / c1_closeout.py.
 # 11/20 gate scenario model (Fuku, 2026-11-14; CLI added 2026-11-14 21:01; spend/day line 2026-11-16).
 # Window 11/13-11/19 (7 days). Gate = 7d Fab CPL <= Rp 95,000.
 # Each 07:00 readout: lock every finished PEIKIRA day in the window with --lock (in date order, 11/13 first),

@@ -35,6 +35,12 @@ def kv(items):
         out[k] = float(v)
     return out
 
+# Stale-base guard (11/28 sweep): PRIOR = 11/16-11/22 and the rule wording are for the 11/30 weekly only.
+import datetime as _dt
+if _dt.datetime.now(_dt.timezone(_dt.timedelta(hours=7))).date() > _dt.date(2026, 11, 30) and "--allow-stale-prior" not in sys.argv:
+    sys.exit("ERROR: PRIOR is the 11/16-11/22 base (valid for the 11/30 weekly only). Update PRIOR + rules first, or pass --allow-stale-prior for a historical re-run.")
+sys.argv = [x for x in sys.argv if x != "--allow-stale-prior"]
+
 p = argparse.ArgumentParser()
 p.add_argument("--pick", nargs=3, action="append", metavar=("NAME", "SPEND", "LEADS"), required=True)
 p.add_argument("--ctr", action="append", help="NAME=pct, this week (047 line)")

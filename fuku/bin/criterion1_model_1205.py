@@ -2,18 +2,18 @@
 # Judged window: 7d 11/28-12/04 (12/05 07:00 readout). Base = 7d 11/07-11/13 rates (tracker 11/14 row).
 # A lever live by 11/27 eve counts all 7 days; live later -> fewer days. BC flat. Run: python3 fuku/bin/criterion1_model_1205.py
 # Daily use (07:00 readout): pass the fresh 7d base + today's date, e.g.
-#   python3 fuku/bin/criterion1_model_1205.py --peik 2016453 14 --bc 313500 6 --p2 924806 8 --today 2026-11-15
+#   python3 fuku/bin/criterion1_model_1205.py --peik 1297 0 --peik-cpl 190609 --bc 985446 15 --budget 650 --cap-throttled --today 2026-11-28   (11/28 base; bump every 07:00)
 # --budget = PEIKIRA daily SPEND for the window (re-base, added 2026-11-15): expected actual spend, not the CBO setting.
 #   CPLs stay the 7d CPLs (INFERRED: flat with spend under the bid cap). Default = PEIKIRA 7d spend / 7.
 # Added 2026-11-16 (lesson: two-part criterion): prints the assumed account spend/day next to the LWD
 #   and a criterion-2 line (account at Rp 1M/day, PEIKIRA fills the gap at the same CPLs; INFERRED: flat CPL).
 #   --cap-throttled flags that the bid cap currently holds PEIKIRA below that spend.
-# Defaults = 7d 11/07-11/13. Prints the last workable date (both asks live by eve of that date -> <= 95k).
+# 11/28 sweep: --peik and --bc are REQUIRED (no stale 11/07-11/13 defaults); --p2 keeps its fixed default. Prints the last workable date (both asks live by eve of that date -> <= 95k).
 import argparse, datetime as dt
 ap=argparse.ArgumentParser()
-ap.add_argument('--peik',nargs=2,type=float,default=[2016453,14],metavar=('SPEND','LEADS'))
-ap.add_argument('--bc',nargs=2,type=float,default=[313500,6],metavar=('SPEND','LEADS'))
-ap.add_argument('--p2',nargs=2,type=float,default=[924806,8],metavar=('SPEND','LEADS'))
+ap.add_argument('--peik',nargs=2,type=float,required=True,metavar=('SPEND','LEADS'),help='latest 7d PEIKIRA campaign spend + leads (required since 11/28: old default was the 11/07-11/13 base)')
+ap.add_argument('--bc',nargs=2,type=float,required=True,metavar=('SPEND','LEADS'),help='latest 7d BC campaign spend + leads (required since 11/28)')
+ap.add_argument('--p2',nargs=2,type=float,default=[924806,8],metavar=('SPEND','LEADS'),help='PEIKIRA2 CPL basis for the parked Ad015 rows; default = fixed 11/07-11/13 base, kept on purpose (Ad015 ask parked)')
 ap.add_argument('--today',default=None)
 ap.add_argument('--budget',type=float,default=None,metavar='PEIKIRA_DAILY_SPEND')
 ap.add_argument('--peik-cpl',type=float,default=None,help='PEIKIRA CPL to use when the 7d window has 0 PEIKIRA leads (added 11/23: pass the last 7d CPL that had leads)')
