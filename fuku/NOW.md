@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-28 15:01 WIB (cloud heartbeat: backlog #1 stale-default sweep done; next retro ≈ 12/05)_
+_Last updated: 2026-11-28 16:01 WIB (cloud heartbeat: backlog #1 12/05 one-paste done; next retro ≈ 12/05)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -13,14 +13,14 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 2. **Polls 11/28:** 07:00 + 13:00 done (no change). Next ≈ 19:00 (activity log + `w1w2_snapshot.py --no-save`).
 3. **"W1 W2 done" seen:** follow the 6-step runbook at the top of `w1w2_lift_template.md` (snapshot PASS → log → `w1w2_read.py day0 "<edit WIB>"` → d7/d14 `read --rows`).
 4. **"W0 done" seen in the log:** follow the 6-step runbook at the top of `2026-11-20_bc_cap_ladder_card.md` (log → re-base §D–§E → N2 check → daily: one BC ad-set pull → `bc_rest_inputs.py` → paste its `bc_ladder_read.py` line → d7 ladder / d14 N2). 201 = control (in `--rest`).
-5. **11/29–12/05 07:00 readouts** (11/28 run: 0 locked, status line 11 needed / 15 expected): after locking, run `fuku/bin/c1_closeout.py --locked <window spend> <leads> <days> --rate <latest 7d spend/day> --cpl <latest 7d CPL>` (12/05: add `--w1 <date|none>` → criterion-2 line, rules 5–6; then fill the pre-written branch A/B/C text in the path file) (window 11/28–12/04; rules in `2026-12-05_criterion1_path.md` close-out). Needs ≥ 11 leads at ~987k; P(miss) 12% *(calc)*.
+5. **11/29–12/05 07:00 readouts** (11/28 run: 0 locked, status line 11 needed / 15 expected): after locking, run `fuku/bin/c1_closeout.py --locked <window spend> <leads> <days> --rate <latest 7d spend/day> --cpl <latest 7d CPL>` (12/05: add `--w1 <date|none> --lever <W0|W1|site> --paste` → prints the filled A/B/C OUTBOX block + MISSIONS line; re-check the "facts in every branch" list by hand) (window 11/28–12/04; rules in `2026-12-05_criterion1_path.md` close-out). Needs ≥ 11 leads at ~987k; P(miss) 12% *(calc)*.
 6. **11/30 weekly:** fill `reports/weekly/2026-11-30.md` (rules R1–R7; R2 = `fuku/bin/incess_r2.py`, R7 = `fuku/bin/incess_r7.py`; run sheet dry-run 11/27 18:02, calls 0–10b, pixel prior row re-pulled in call 8).
 
 ## Groundwork backlog (for quiet runs; must be useful even if no ask is ever applied)
-1. **12/05 pre-written text vs script wording:** check branch A/B/C text in `2026-12-05_criterion1_path.md` against the exact `c1_closeout.py` verdict strings (MET/MISSED/projected) so the paste needs no hand edit.
-2. **Criterion-2 "zero-action" path:** from BC 8-week rows, what Rp/day BC reaches with no team action (drift at fixed caps) → the floor for the 12/05 re-date text.
-3. **WA script (M-001 site copy):** re-check the unsent WA script vs the live page claims (800 / G6 / All-in gates) so it is send-ready the day W1 lands.
-_(Done 11/28 15:01: stale-default sweep. Dropped 11/28 retro: W3 guardrail one-paste = staging for the unapplied site ask.)_
+1. **Criterion-2 "zero-action" path:** from BC 8-week rows, what Rp/day BC reaches with no team action (drift at fixed caps) → the floor for the 12/05 re-date text.
+2. **WA script (M-001 site copy):** re-check the unsent WA script vs the live page claims (800 / G6 / All-in gates) so it is send-ready the day W1 lands.
+3. **11/30 weekly skeleton numbers:** pre-fill the weekly's fixed rows (Incess prior-week base, Fab 11/21–11/27 base) from locked tool output so 11/30 only adds the new week.
+_(Done 11/28 16:01: 12/05 one-paste `--paste`. Done 15:01: stale-default sweep. Dropped 11/28 retro: W3 guardrail one-paste = staging for the unapplied site ask.)_
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 BC Wave 0 (204 + 3-21 + N2). #2 Site W1 + W2 + who edits.
