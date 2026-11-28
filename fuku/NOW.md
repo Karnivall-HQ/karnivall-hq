@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-28 16:01 WIB (cloud heartbeat: backlog #1 12/05 one-paste done; next retro ≈ 12/05)_
+_Last updated: 2026-11-28 17:01 WIB (cloud heartbeat: backlog #1 zero-action floor done; next retro ≈ 12/05)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -17,10 +17,10 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 6. **11/30 weekly:** fill `reports/weekly/2026-11-30.md` (rules R1–R7; R2 = `fuku/bin/incess_r2.py`, R7 = `fuku/bin/incess_r7.py`; run sheet dry-run 11/27 18:02, calls 0–10b, pixel prior row re-pulled in call 8).
 
 ## Groundwork backlog (for quiet runs; must be useful even if no ask is ever applied)
-1. **Criterion-2 "zero-action" path:** from BC 8-week rows, what Rp/day BC reaches with no team action (drift at fixed caps) → the floor for the 12/05 re-date text.
-2. **WA script (M-001 site copy):** re-check the unsent WA script vs the live page claims (800 / G6 / All-in gates) so it is send-ready the day W1 lands.
-3. **11/30 weekly skeleton numbers:** pre-fill the weekly's fixed rows (Incess prior-week base, Fab 11/21–11/27 base) from locked tool output so 11/30 only adds the new week.
-_(Done 11/28 16:01: 12/05 one-paste `--paste`. Done 15:01: stale-default sweep. Dropped 11/28 retro: W3 guardrail one-paste = staging for the unapplied site ask.)_
+1. **WA script (M-001 site copy):** re-check the unsent WA script vs the live page claims (800 / G6 / All-in gates) so it is send-ready the day W1 lands.
+2. **11/30 weekly skeleton numbers:** pre-fill the weekly's fixed rows (Incess prior-week base, Fab 11/21–11/27 base) from locked tool output so 11/30 only adds the new week.
+3. **M-002 047 + 030 watch rows:** pull both ads' 11/21–11/27 daily rows so the 11/30 R-rules read them against a locked prior (useful with or without any Fab ask).
+_(Done 11/28 17:01: zero-action floor → BC drift ≈ Rp 100–160k/day at ≤ 95k, line in the 12/05 facts. Done 16:01: 12/05 one-paste `--paste`. Done 15:01: stale-default sweep. Dropped 11/28 retro: W3 guardrail one-paste = staging for the unapplied site ask.)_
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 BC Wave 0 (204 + 3-21 + N2). #2 Site W1 + W2 + who edits.

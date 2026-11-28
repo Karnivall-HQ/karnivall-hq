@@ -20,3 +20,9 @@ Weekly rows (spend / leads), 09/28 → 11/16 week starts:
 - **R3 fires (pre-read):** BC3-13 c2 8-wk 160.7k > 120k line. Its last week (77,281 / 0) is its 3rd-largest week in 8 and 11.4% of BC 7d spend *(calc: 77,281 ÷ 677,675)*. Meta benchmark tool (own window): BC3-13 CPR 147,762 vs peer median 86,498 (STATED, tool); 3-21 30,910 and 201 70,261 beat the median.
 - **Action:** per R3 + stage-less rule → a **pause line** in the 11/30 weekly Top 3 only (propose-only, no new OUTBOX ask while W0 is unapplied). Re-pull on 11/30 (window 10/05–11/29) before it's written: if 11/23–11/29 adds ≥ 1 lead at < 80k, re-check the line.
 - Context (INFERRED): pausing 3-13 frees ≈ Rp 11k/day at the 94,250 cap — small; it's a tidy-up, not a volume lever. The W0 ask stays the lever.
+
+## 11/28 17:01 add-on: BC campaign weekly totals (all ad sets, campaign `120236222888610572`)
+Spend / leads by week start (pixel Lead, default attribution; 11/23 = 5 days to 11/27):
+09/28 2,127,194/21 · 10/05 1,463,407/14 · 10/12 270,195/1 · 10/19 1,044,639/18 · 10/26 694,768/8 · 11/02 373,956/3 · 11/09 428,264/7 · 11/16 678,046/11 · 11/23 803,975/12.
+Rp/day *(calc)*: 303.9k · 209.1k · 38.6k · 149.2k · 99.3k · 53.4k · 61.2k · 96.9k · 160.8k. Median of the 8 full weeks 98.1k/day. 11/23–11/27 matches the locks (803,872 + 103 relock drift, 12 leads ✓).
+Use: zero-action floor line in `2026-12-05_criterion1_path.md` (facts in every branch).
