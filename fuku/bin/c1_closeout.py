@@ -25,8 +25,8 @@ def poisson_cdf(k, mu):
 
 p = argparse.ArgumentParser()
 p.add_argument("--locked", nargs=3, type=float, metavar=("SPEND", "LEADS", "DAYS"), required=True)
-p.add_argument("--rate", type=float, default=135_045, help="spend/day for unlocked days (default 7d 11/20-11/26 = 945,317/7)")
-p.add_argument("--cpl", type=float, default=72_717, help="expected CPL for unlocked days (default 7d 72.7k)")
+p.add_argument("--rate", type=float, default=140_963, help="spend/day for unlocked days (default 7d 11/21-11/27 = 986,743/7; pass the latest 7d at each readout)")
+p.add_argument("--cpl", type=float, default=65_783, help="expected CPL for unlocked days (default 7d 11/21-11/27 65.8k; pass the latest 7d at each readout)")
 p.add_argument("--w1", default=None, help="W1 launch date YYYY-MM-DD, or 'none' if not live")
 a = p.parse_args()
 

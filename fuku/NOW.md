@@ -1,5 +1,5 @@
 # NOW — Fuku's working memory
-_Last updated: 2026-11-28 10:02 WIB (cloud heartbeat: groundwork — 11/30 Incess full dry-run on real 5d data)_
+_Last updated: 2026-11-28 11:01 WIB (cloud heartbeat: groundwork — 12/05 message pre-written, c1_closeout defaults re-based)_
 _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `protocols/heartbeat.md` (quiet-run rule)._
 
 ## Current focus
@@ -13,13 +13,13 @@ _Rules: rewrite, never append. Max 45 lines. History lives in the journal. See `
 2. **Polls 11/28:** 07:00 done. Next ≈ 13:00 + 19:00 (activity log + `w1w2_snapshot.py --no-save`).
 3. **"W1 W2 done" seen:** follow the 6-step runbook at the top of `w1w2_lift_template.md` (snapshot PASS → log → `w1w2_read.py dates` → d7/d14 reads).
 4. **"W0 done" seen in the log:** follow the 6-step runbook at the top of `2026-11-20_bc_cap_ladder_card.md` (log → re-base §D–§E → N2 check → daily: one BC ad-set pull → `bc_rest_inputs.py` → paste its `bc_ladder_read.py` line → d7 ladder / d14 N2). 201 = control (in `--rest`).
-5. **11/29–12/05 07:00 readouts** (11/28 run: 0 locked, status line 11 needed / 15 expected): after locking, run `fuku/bin/c1_closeout.py --locked <window spend> <leads> <days>` (12/05: add `--w1 <date|none>` → criterion-2 line, rules 5–6) (window 11/28–12/04; rules in `2026-12-05_criterion1_path.md` close-out). Needs ≥ 10 leads at ~945k; P(miss) now 17% *(calc)*.
+5. **11/29–12/05 07:00 readouts** (11/28 run: 0 locked, status line 11 needed / 15 expected): after locking, run `fuku/bin/c1_closeout.py --locked <window spend> <leads> <days> --rate <latest 7d spend/day> --cpl <latest 7d CPL>` (12/05: add `--w1 <date|none>` → criterion-2 line, rules 5–6; then fill the pre-written branch A/B/C text in the path file) (window 11/28–12/04; rules in `2026-12-05_criterion1_path.md` close-out). Needs ≥ 11 leads at ~987k; P(miss) 12% *(calc)*.
 6. **11/30 weekly:** fill `reports/weekly/2026-11-30.md` (rules R1–R7; R2 = `fuku/bin/incess_r2.py`, R7 = `fuku/bin/incess_r7.py`; run sheet dry-run 11/27 18:02, calls 0–10b, pixel prior row re-pulled in call 8).
 
 ## Groundwork backlog (for quiet runs; needs nothing from Alvian)
-1. **M-001 criterion-2 honesty note:** one-page "what 12/05 looks like" (criterion 1 likely ✅, criterion 2 MISS in every case) so the 12/05 close-out text is pre-agreed, not improvised.
-2. **W1/W2 runbook one-paste check:** same treatment as BC (does `w1w2_read.py` need a hand-computed input? if yes, a helper).
-3. **11/30 Fab-side dry-run:** call 10/10a/10b commands on the 11/28 07:00 bases (model + c1_closeout `--w1`) → confirm the 3 criterion lines print; no MCP call.
+1. **W1/W2 runbook one-paste check:** same treatment as BC (does `w1w2_read.py` need a hand-computed input? if yes, a helper).
+2. **11/30 Fab-side dry-run:** call 10/10a/10b commands on the 11/28 07:00 bases (model + c1_closeout `--w1`) → confirm the 3 criterion lines print; no MCP call.
+3. **Stale-default sweep in `fuku/bin/`:** other scripts with hard-coded 7d bases (model, ladder, R2/R7) → bump or make them required args.
 
 ## Waiting on Alvian (asks live in OUTBOX "Needs you")
 - #1 BC Wave 0 (204 + 3-21 + N2). #2 Site W1 + W2 + who edits.

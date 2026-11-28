@@ -68,3 +68,36 @@ It prints the leads still needed, the expected leads, P(miss), and the status/ve
 6. **12/05 deadline ask (one ❓ max that day):** if criterion 1 MISSED → rule 3's ask only. If MET → the one ❓ is "Set criterion 2's new deadline = ⟨mid date from the line⟩?" with the W1 date it depends on; if W1 is `none`, no date ask (date not set), the ask stays the open W0/W1 lever.
 
 **Dry runs (11/27, script output):** 0 locked → needs 10, exp 13.0, P(miss) 17%. 4d 540k / 5 → 89.4k proj, 35%. 4d 540k / 9 → 0%. 5d 700k / 6 → needs 5 in 2d, 68%. 7d 945,317 / 9 → MISSED 105.0k; / 13 → MET 72.7k ✓.
+
+## 12/05 message, pre-written (11/28 11:01, cloud heartbeat)
+Purpose: the 12/05 text is decided now, on today's facts, so on 12/05 only the numbers change. Fill `⟨…⟩` from the 12/05 `c1_closeout.py --locked … --w1 …` output (VERDICT + CRITERION 2 lines). Nothing here is sent anywhere; it goes into OUTBOX as the M-001 latest report (replaces the old one).
+
+**Facts that hold in every branch (re-check each on 12/05, delete any that changed):**
+- Criterion 2 is MISSED on 12/05 in every case: the account runs ≈ Rp 141k/day = 14% of the Rp 1M leg (7d to 11/27) *(calc)*. A Rp 1M/day week by 12/04 would need ~7× spend at ≤ 95k with no structural change applied (none is).
+- Cause (account data, not opinion): since the 11/15 change (PEIKIRA Rp 3M CBO + 105k bid caps, by the team) PEIKIRA spends ≈ Rp 0/day; BC runs under 94,250 caps that starve 204 + 3-21. Every volume lever (undo, W0, W1, site) is an unapplied ask; 0 asks applied since 11/15 (check the log on 12/05).
+- Criterion 1 was met by **mix**: BC carries ≈ 100% of spend at ≈ 60–70k. That is a real 7d CPL, but on a small base; it says nothing yet about CPL at Rp 1M/day.
+
+**Branch A · criterion 1 MET, W1 has a live date** (`--w1 <date>` prints an honest date)
+> 📊 **[REPORT] 12/05 · M-001 deadline: criterion 1 ✅, criterion 2 ❌.**
+> ✅ 7d 11/28–12/04 Rp ⟨spend⟩ / ⟨leads⟩ = **⟨cpl⟩** vs 95k *(calc)*. ❌ Spend ⟨Rp/day⟩ = ⟨%⟩ of Rp 1M. Reason: the 11/15 caps hold PEIKIRA at ≈ 0 and BC under 94,250; volume levers unapplied.
+> 👉 With W1 live ⟨date⟩: honest Rp 1M/day date mid **⟨mid⟩** (good ⟨good⟩, low ⟨low⟩) *(calc, INFERRED hit rates)*.
+> ❓ Set criterion 2's new deadline = ⟨mid⟩ (depends on W1 staying live)? My recommendation: yes.
+
+**Branch B · criterion 1 MET, W1 not live** (`--w1 none`)
+> Same first two lines as A, then:
+> 👉 No honest date while nothing that adds volume is live: each week W1 waits = +7 days (from a 12/08 start: mid ⟨02/23⟩).
+> ❓ = the open volume lever as one line (W0 if still open, else W1), **no date ask** (rule 6). My recommendation: yes.
+
+**Branch C · criterion 1 MISSED** (exit verdict MISSED)
+> ⚠️ **[REPORT] 12/05 · M-001 deadline: both criteria ❌.** 7d Rp ⟨spend⟩ / ⟨leads⟩ = ⟨cpl⟩ vs 95k *(calc)*; spend ⟨%⟩ of Rp 1M.
+> Why: ⟨lead count vs CPL drift: lead count if spend/day stayed within ±30% of 141k, else name the change from the log⟩.
+> ❓ Move criterion 1 to 12/19 (window 12/12–12/18), same 95k, with ⟨W0 | site⟩ live that week? My recommendation: yes, only with the lever (rule 3).
+
+**Mission status line on 12/05 (MISSIONS.md):**
+- A: `criterion 1 ✅ met 12/05 (⟨cpl⟩); criterion 2 ❌ (⟨%⟩ of leg), new date ⟨mid⟩ asked`. Status stays **in progress**; the mission is not done until criterion 2 holds or Alvian re-scopes it.
+- B: same, "date not set (W1 not live)".
+- C: `both ❌ on 12/05; criterion 1 re-date to 12/19 asked`.
+
+**What I will not write on 12/05:** "on track", "almost", or a criterion-2 % without the Rp/day next to it; no new lever, no second ❓ (rule 6); no claim that W0/W1 "would have" hit a number (models are INFERRED; say "modelled").
+
+**Dry runs (11/28 11:01, `c1_closeout.py --locked 986743 <leads> 7`, today's 7d used as a stand-in window):** 15 leads `--w1 2026-12-01` → MET 65.8k + mid 02/16 (A) ✓; 15 `--w1 none` → MET + "date not set … mid 02/23" (B) ✓; 9 `--w1 none` → MISSED 109.6k (C) ✓; 9 `--w1 2026-12-08` → MISSED + mid 02/23 ✓. All exit 0.
