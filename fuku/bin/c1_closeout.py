@@ -65,5 +65,8 @@ if a.w1 is not None:
         w1 = dt.date.fromisoformat(a.w1)
         d = {k: (w1 + dt.timedelta(days=v)).strftime("%m/%d") for k, v in OFFSETS.items()}
         date_txt = f"honest date mid {d['mid']} (good {d['good']}, low {d['low']}) with W1 live {w1.strftime('%m/%d')}"
-    verdict = "MISSED ❌" if base < LEG else "MET ✅ (check 7d CPL ~95k)"
-    print(f"CRITERION 2 LINE: M-001 criterion 2 {verdict} on 12/05: {tag} Rp {base:,.0f}/day = {base/LEG*100:.0f}% of Rp 1M *(calc)*; {date_txt} *(calc, INFERRED hit rates)*.")
+    if d_left == 0:
+        verdict = ("MISSED ❌" if base < LEG else "MET ✅ (check 7d CPL ~95k)") + " on 12/05"
+    else:  # before the window closes: a projection, never a past-tense verdict
+        verdict = ("projected MISS ❌" if base < LEG else "projected MET (check 7d CPL ~95k)") + " for 12/05"
+    print(f"CRITERION 2 LINE: M-001 criterion 2 {verdict}: {tag} Rp {base:,.0f}/day = {base/LEG*100:.0f}% of Rp 1M *(calc)*; {date_txt} *(calc, INFERRED hit rates)*.")
